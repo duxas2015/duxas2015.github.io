@@ -1,0 +1,841 @@
+<!doctype html>
+<html lang="en">
+<head>
+<script src="https://cdn.jsdelivr.net/npm/venom-player@latest"></script>
+<script src="managemovie.js"></script>
+<link rel="stylesheet" href="styles.css">
+</head>	
+<body>
+<div id="player"></div>
+<div id="subtitleOuterContainerId" class="subtitleOuterContainerCls">
+	<div id="subtitleContainerId" class="subtitleContainerCls"></div>
+</div>
+<script>
+    var player = VenomPlayer.make({
+        publicPath: 'https://cdn.jsdelivr.net/npm/venom-player@' + VenomPlayer.version + '/dist/',
+		container: document.getElementById('player'),
+
+               playlist: {
+                    open: false,
+                    autoNext: true,
+                    id: 14327,
+                    current: {
+                        season: 1,
+                        episode: "1"
+                    },
+                    seasons: [{
+                        "season": 1,
+                        "blocked": false,
+                        "episodes": [{
+                            "episode": "1",
+                            "id": 535049,
+                            "videoKey": 914649,
+                            "dash": "https://hye1eaipby4w.matham.ws/09_22/27/20/SSZCTBCU/914649.mpd?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=c35646607539952&hu=e6b36975279d2da&t=1738758471",
+                            "hls": "https://hye1eaipby4w.matham.ws/09_27_22/09/27/12/S5PPR56Q/OITINMB5.mp4/master.m3u8?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=c35646607539952&hu=e6b36975279d2da&t=1738758471",
+                            "audio": {
+                                "names": ["Цікава Ідея (укр)", "Eng.Original", "Amedia", "Iyuno-SDI", "JASKIER", "HDRezka Studio", "LostFilm", "DniproFilm (укр)", "delete"],
+                                "order": [5, 7, 0, 1, 2, 3, 4, 6, 8]
+                            },
+                            "cc": [{
+                                "url": "",
+                                "name": "Укр. форсовані - 1"
+                            }, {
+                                "url": "https://hye1eaipby4w.matham.ws/09_27_22/09/27/11/NJSQ6QP7/JULLUHI5.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=c35646607539952&hu=e6b36975279d2da&t=1738758471",
+                                "name": "Eng. full - 2"
+                            }, {
+                                "url": "https://hye1eaipby4w.matham.ws/09_27_22/09/27/11/CIFNM7XY/Q7OZ7WOK.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=c35646607539952&hu=e6b36975279d2da&t=1738758471",
+                                "name": "Рус. полные - 3"
+                            }, {
+                                "url": "https://hye1eaipby4w.matham.ws/09_27_22/09/27/11/ZYBGSUIM/M2M4TX5L.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=c35646607539952&hu=e6b36975279d2da&t=1738758471",
+                                "name": "Рус. форсированные - 4"
+                            }],
+                            "duration": 3936,
+                            "title": "Дом дракона (1 сезон) - 1 серия",
+                            "download": "",
+                            "sections": [{
+                                "end": 17.371,
+                                "skip": true,
+                                "type": "screen",
+                                "start": 0,
+                                "title": ""
+                            }, {
+                                "end": 153.911,
+                                "skip": true,
+                                "type": "screen",
+                                "start": 131.736,
+                                "title": ""
+                            }, {
+                                "title": "",
+                                "end": 3936.432,
+                                "skip": true,
+                                "type": "titer",
+                                "start": 3801.943
+                            }],
+                            "poster": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+                            "preview": {
+                                "src": "https://img.zcvh.net/914649/desktop/thumb-${spriteNum}.webp"
+                            }
+                        }, {
+                            "episode": "2",
+                            "id": 535051,
+                            "videoKey": 914651,
+                            "dash": "https://hye1eaipby4w.matham.ws/09_22/27/17/OIW2AY5Y/914651.mpd?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=c35646607539952&hu=e6b36975279d2da&t=1738758471",
+                            "hls": "https://hye1eaipby4w.matham.ws/09_27_22/09/27/12/6FW36V64/TXG3VCQ6.mp4/master.m3u8?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=c35646607539952&hu=e6b36975279d2da&t=1738758471",
+                            "audio": {
+                                "names": ["Цікава Ідея (укр)", "Eng.Original", "Amedia", "Iyuno-SDI", "JASKIER", "HDRezka Studio", "LostFilm", "DniproFilm (укр)", "delete"],
+                                "order": [5, 7, 0, 1, 2, 3, 4, 6, 8]
+                            },
+                            "cc": [{
+                                "url": "https://hye1eaipby4w.matham.ws/09_27_22/09/27/11/6TXMGDCP/57WI4G33.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=c35646607539952&hu=e6b36975279d2da&t=1738758471",
+                                "name": "Укр. форсовані - 1"
+                            }, {
+                                "url": "https://hye1eaipby4w.matham.ws/09_27_22/09/27/11/FKW5V5OR/3UFMJWRO.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=c35646607539952&hu=e6b36975279d2da&t=1738758471",
+                                "name": "Eng. full - 2"
+                            }, {
+                                "url": "https://hye1eaipby4w.matham.ws/09_27_22/09/27/11/GSKHLVC2/SS347WKV.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=c35646607539952&hu=e6b36975279d2da&t=1738758471",
+                                "name": "Рус. полные - 3"
+                            }, {
+                                "url": "https://hye1eaipby4w.matham.ws/09_27_22/09/27/11/UZ2G5FKB/GFMYFJ3T.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=c35646607539952&hu=e6b36975279d2da&t=1738758471",
+                                "name": "Рус. форсированные - 4"
+                            }],
+                            "duration": 3231,
+                            "title": "Дом дракона (1 сезон) - 2 серия",
+                            "download": "",
+                            "sections": [{
+                                "end": 104.752,
+                                "skip": true,
+                                "type": "screen",
+                                "start": 0,
+                                "title": ""
+                            }, {
+                                "type": "titer",
+                                "start": 3154.122,
+                                "title": "",
+                                "end": 3231.211,
+                                "skip": true
+                            }],
+                            "poster": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+                            "preview": {
+                                "src": "https://img.zcvh.net/914651/desktop/thumb-${spriteNum}.webp"
+                            }
+                        }, {
+                            "episode": "3",
+                            "id": 535318,
+                            "videoKey": 914674,
+                            "dash": "https://hye1eaipby4w.matham.ws/09_22/27/20/IVSZW7OC/914674.mpd?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=c35646607539952&hu=e6b36975279d2da&t=1738758471",
+                            "hls": "https://hye1eaipby4w.matham.ws/09_27_22/09/27/13/N75RLFW3/U47IEIOH.mp4/master.m3u8?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=c35646607539952&hu=e6b36975279d2da&t=1738758471",
+                            "audio": {
+                                "names": ["Amedia", "Iyuno-SDI", "JASKIER", "HDRezka Studio", "LostFilm", "DniproFilm (укр)", "Eng.Original", "Цікава Ідея (укр)", "delete"],
+                                "order": [0, 1, 2, 3, 4, 6, 7, 5, 8]
+                            },
+                            "cc": [{
+                                "url": "https://hye1eaipby4w.matham.ws/09_27_22/09/27/13/R4HQEMQ4/UOT3IX6G.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=c35646607539952&hu=e6b36975279d2da&t=1738758471",
+                                "name": "Eng. full - 1"
+                            }, {
+                                "url": "https://hye1eaipby4w.matham.ws/09_27_22/09/27/13/MRDE2D7I/DVPIAVIW.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=c35646607539952&hu=e6b36975279d2da&t=1738758471",
+                                "name": "Рус. полные - 2"
+                            }, {
+                                "url": "https://hye1eaipby4w.matham.ws/09_27_22/09/27/13/5KZ6GJ3N/S2LAV2PU.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=c35646607539952&hu=e6b36975279d2da&t=1738758471",
+                                "name": "Рус. форсированные - 3"
+                            }],
+                            "duration": 3792,
+                            "title": "Дом дракона (1 сезон) - 3 серия",
+                            "download": "",
+                            "sections": [{
+                                "end": 105.763,
+                                "skip": true,
+                                "type": "screen",
+                                "start": 0,
+                                "title": ""
+                            }, {
+                                "end": 3792.418,
+                                "skip": true,
+                                "type": "titer",
+                                "start": 3713.501,
+                                "title": ""
+                            }],
+                            "poster": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+                            "preview": {
+                                "src": "https://img.zcvh.net/914674/desktop/thumb-${spriteNum}.webp"
+                            }
+                        }, {
+                            "episode": "4",
+                            "id": 535360,
+                            "videoKey": 914872,
+                            "dash": "https://hye1eaipby4w.matham.ws/09_22/28/01/4BAMMGIH/914872.mpd?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=c35646607539952&hu=e6b36975279d2da&t=1738758471",
+                            "hls": "https://hye1eaipby4w.matham.ws/09_27_22/09/27/16/FBLTVTRM/PMMNXOQW.mp4/master.m3u8?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=c35646607539952&hu=e6b36975279d2da&t=1738758471",
+                            "audio": {
+                                "names": ["Цікава Ідея (укр)", "Eng.Original", "Amedia", "Iyuno-SDI", "JASKIER", "HDRezka Studio", "LostFilm", "DniproFilm (укр)", "delete"],
+                                "order": [5, 7, 0, 1, 2, 3, 4, 6, 8]
+                            },
+                            "cc": [{
+                                "url": "https://hye1eaipby4w.matham.ws/09_27_22/09/27/15/JB7KGPPC/ZD45RJRN.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=c35646607539952&hu=e6b36975279d2da&t=1738758471",
+                                "name": "Укр. форсовані - 1"
+                            }, {
+                                "url": "https://hye1eaipby4w.matham.ws/09_27_22/09/27/15/25I6PUB3/MDZQ2QDT.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=c35646607539952&hu=e6b36975279d2da&t=1738758471",
+                                "name": "Eng. full - 2"
+                            }, {
+                                "url": "https://hye1eaipby4w.matham.ws/09_27_22/09/27/15/MX5ND4G3/W26F3ZMF.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=c35646607539952&hu=e6b36975279d2da&t=1738758471",
+                                "name": "Рус. полные - 3"
+                            }, {
+                                "url": "https://hye1eaipby4w.matham.ws/09_27_22/09/27/15/LWKX3D7W/7FMKXIYG.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=c35646607539952&hu=e6b36975279d2da&t=1738758471",
+                                "name": "Рус. форсированные - 4"
+                            }],
+                            "duration": 3750,
+                            "title": "Дом дракона (1 сезон) - 4 серия",
+                            "download": "",
+                            "sections": [{
+                                "end": 105.892,
+                                "skip": true,
+                                "type": "screen",
+                                "start": 0,
+                                "title": ""
+                            }, {
+                                "start": 3673.067,
+                                "title": "",
+                                "end": 3750.004,
+                                "skip": true,
+                                "type": "titer"
+                            }],
+                            "poster": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+                            "preview": {
+                                "src": "https://img.zcvh.net/914872/desktop/thumb-${spriteNum}.webp"
+                            }
+                        }, {
+                            "episode": "5",
+                            "id": 535370,
+                            "videoKey": 914892,
+                            "dash": "https://hye1eaipby4w.matham.ws/09_22/27/22/TI4T5YK4/914892.mpd?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=c35646607539952&hu=e6b36975279d2da&t=1738758471",
+                            "hls": "https://hye1eaipby4w.matham.ws/09_27_22/09/27/16/U6G5UG7V/U2RVELVK.mp4/master.m3u8?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=c35646607539952&hu=e6b36975279d2da&t=1738758471",
+                            "audio": {
+                                "names": ["Цікава Ідея (укр)", "Eng.Original", "Amedia", "Iyuno-SDI", "JASKIER", "HDRezka Studio", "LostFilm", "DniproFilm (укр)", "delete"],
+                                "order": [5, 7, 0, 1, 2, 3, 4, 6, 8]
+                            },
+                            "cc": [{
+                                "url": "https://hye1eaipby4w.matham.ws/09_27_22/09/27/15/7ZQUP2GM/NGCWBVAC.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=c35646607539952&hu=e6b36975279d2da&t=1738758471",
+                                "name": "Укр. форсовані - 1"
+                            }, {
+                                "url": "https://hye1eaipby4w.matham.ws/09_27_22/09/27/15/FTSZ2PZF/UMOBWDPN.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=c35646607539952&hu=e6b36975279d2da&t=1738758471",
+                                "name": "Eng. full - 2"
+                            }, {
+                                "url": "https://hye1eaipby4w.matham.ws/09_27_22/09/27/15/TFTXLT4C/A7IUGRS3.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=c35646607539952&hu=e6b36975279d2da&t=1738758471",
+                                "name": "Рус. полные - 3"
+                            }, {
+                                "url": "https://hye1eaipby4w.matham.ws/09_27_22/09/27/15/WRIV2YYF/C5AEFDEJ.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=c35646607539952&hu=e6b36975279d2da&t=1738758471",
+                                "name": "Рус. форсированные - 4"
+                            }],
+                            "duration": 3588,
+                            "title": "Дом дракона (1 сезон) - 5 серия",
+                            "download": "",
+                            "sections": [{
+                                "skip": true,
+                                "type": "screen",
+                                "start": 0,
+                                "title": "",
+                                "end": 105.324
+                            }, {
+                                "end": 3588.979,
+                                "skip": true,
+                                "type": "titer",
+                                "start": 3513.59,
+                                "title": ""
+                            }],
+                            "poster": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+                            "preview": {
+                                "src": "https://img.zcvh.net/914892/desktop/thumb-${spriteNum}.webp"
+                            }
+                        }, {
+                            "episode": "6",
+                            "id": 535977,
+                            "videoKey": 915527,
+                            "dash": "https://hye1eaipby4w.matham.ws/09_22/29/23/KLJXUAAU/915527.mpd?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=c35646607539952&hu=e6b36975279d2da&t=1738758471",
+                            "hls": "https://hye1eaipby4w.matham.ws/09_29_22/09/29/16/HFU7XA6F/YYB77GB5.mp4/master.m3u8?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=c35646607539952&hu=e6b36975279d2da&t=1738758471",
+                            "audio": {
+                                "names": ["Цікава Ідея (укр)", "Eng.Original", "Amedia", "Iyuno-SDI", "JASKIER", "HDRezka Studio", "LostFilm", "DniproFilm (укр)", "delete"],
+                                "order": [5, 7, 0, 1, 2, 3, 4, 6, 8]
+                            },
+                            "cc": [{
+                                "url": "https://hye1eaipby4w.matham.ws/09_29_22/09/29/15/SH665Z2X/BZQLSAQ2.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=c35646607539952&hu=e6b36975279d2da&t=1738758471",
+                                "name": "Укр. форсовані - 1"
+                            }, {
+                                "url": "https://hye1eaipby4w.matham.ws/09_29_22/09/29/15/EVWP2JGA/IR2JJ5EA.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=c35646607539952&hu=e6b36975279d2da&t=1738758471",
+                                "name": "Eng. full - 2"
+                            }, {
+                                "url": "https://hye1eaipby4w.matham.ws/09_29_22/09/29/15/HGN6372H/SICQ6WST.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=c35646607539952&hu=e6b36975279d2da&t=1738758471",
+                                "name": "Рус. полные - 3"
+                            }, {
+                                "url": "https://hye1eaipby4w.matham.ws/09_29_22/09/29/15/UYSJR2E3/PO6B2REW.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=c35646607539952&hu=e6b36975279d2da&t=1738758471",
+                                "name": "Рус. форсированные - 4"
+                            }],
+                            "duration": 4046,
+                            "title": "Дом дракона (1 сезон) - 6 серия",
+                            "download": "",
+                            "sections": [{
+                                "end": 104.656,
+                                "skip": true,
+                                "type": "screen",
+                                "start": 0,
+                                "title": ""
+                            }, {
+                                "end": 4046.309,
+                                "skip": true,
+                                "type": "titer",
+                                "start": 3969.228,
+                                "title": ""
+                            }],
+                            "poster": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+                            "preview": {
+                                "src": "https://img.zcvh.net/915527/desktop/thumb-${spriteNum}.webp"
+                            }
+                        }, {
+                            "episode": "7",
+                            "id": 537265,
+                            "videoKey": 917086,
+                            "dash": "https://hye1eaipby4w.matham.ws/10_22/06/21/CK6Y5FNE/917086.mpd?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=c35646607539952&hu=e6b36975279d2da&t=1738758471",
+                            "hls": "https://hye1eaipby4w.matham.ws/10_06_22/10/06/16/C5BKZ37S/2HMKRRQW.mp4/master.m3u8?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=c35646607539952&hu=e6b36975279d2da&t=1738758471",
+                            "audio": {
+                                "order": [5, 7, 0, 1, 2, 3, 4, 6, 8],
+                                "names": ["Цікава Ідея (укр)", "Eng.Original", "Amedia", "Iyuno-SDI", "JASKIER", "HDRezka Studio", "LostFilm", "DniproFilm (укр)", "delete"]
+                            },
+                            "cc": [{
+                                "url": "https://hye1eaipby4w.matham.ws/10_06_22/10/06/15/G4AO2NCK/VHXDNIAQ.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=c35646607539952&hu=e6b36975279d2da&t=1738758471",
+                                "name": "Укр. форсовані - 1"
+                            }, {
+                                "url": "https://hye1eaipby4w.matham.ws/10_06_22/10/06/15/KCRXLGF5/NJA5UUKH.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=c35646607539952&hu=e6b36975279d2da&t=1738758471",
+                                "name": "Eng. full - 2"
+                            }, {
+                                "url": "https://hye1eaipby4w.matham.ws/10_06_22/10/06/15/IRT2V4R6/LDKOGVEK.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=c35646607539952&hu=e6b36975279d2da&t=1738758471",
+                                "name": "Рус. полные - 3"
+                            }, {
+                                "url": "https://hye1eaipby4w.matham.ws/10_06_22/10/06/15/6MW5V2VI/QCDL4446.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=c35646607539952&hu=e6b36975279d2da&t=1738758471",
+                                "name": "Рус. форсированные - 4"
+                            }],
+                            "duration": 3521,
+                            "title": "Дом дракона (1 сезон) - 7 серия",
+                            "download": "",
+                            "sections": [{
+                                "start": 0,
+                                "title": "",
+                                "end": 114.841,
+                                "skip": true,
+                                "type": "screen"
+                            }, {
+                                "end": 3521.255,
+                                "skip": true,
+                                "type": "titer",
+                                "start": 3445.733,
+                                "title": ""
+                            }],
+                            "poster": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+                            "preview": {
+                                "src": "https://img.zcvh.net/917086/desktop/thumb-${spriteNum}.webp"
+                            }
+                        }, {
+                            "episode": "8",
+                            "id": 538834,
+                            "videoKey": 918591,
+                            "dash": "https://hye1eaipby4w.matham.ws/10_22/14/19/MF2XPVMW/918591.mpd?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=c35646607539952&hu=e6b36975279d2da&t=1738758471",
+                            "hls": "https://hye1eaipby4w.matham.ws/10_14_22/10/14/13/OMAC2XDM/P6QVYKK6.mp4/master.m3u8?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=c35646607539952&hu=e6b36975279d2da&t=1738758471",
+                            "audio": {
+                                "names": ["Цікава Ідея (укр)", "Eng.Original", "Amedia", "Iyuno-SDI", "JASKIER", "HDRezka Studio", "LostFilm", "DniproFilm (укр)", "delete"],
+                                "order": [5, 7, 0, 1, 2, 3, 4, 6, 8]
+                            },
+                            "cc": [{
+                                "url": "https://hye1eaipby4w.matham.ws/10_14_22/10/14/12/E2FRYUHP/4CKPDLCT.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=c35646607539952&hu=e6b36975279d2da&t=1738758471",
+                                "name": "Укр. форсовані - 1"
+                            }, {
+                                "url": "https://hye1eaipby4w.matham.ws/10_14_22/10/14/12/UB5URGPP/OTZZJQTX.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=c35646607539952&hu=e6b36975279d2da&t=1738758471",
+                                "name": "Eng. full - 2"
+                            }, {
+                                "url": "https://hye1eaipby4w.matham.ws/10_14_22/10/14/12/FOXROPAE/LXXVPDEM.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=c35646607539952&hu=e6b36975279d2da&t=1738758471",
+                                "name": "Рус. полные - 3"
+                            }, {
+                                "url": "https://hye1eaipby4w.matham.ws/10_14_22/10/14/12/DBYVRI5Z/FCE3THLT.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=c35646607539952&hu=e6b36975279d2da&t=1738758471",
+                                "name": "Рус. форсированные - 4"
+                            }],
+                            "duration": 4050,
+                            "title": "Дом дракона (1 сезон) - 8 серия",
+                            "download": "",
+                            "sections": [{
+                                "start": 0,
+                                "title": "",
+                                "end": 107.643,
+                                "skip": true,
+                                "type": "screen"
+                            }, {
+                                "skip": true,
+                                "type": "titer",
+                                "start": 3975.431,
+                                "title": "",
+                                "end": 4050.647
+                            }],
+                            "poster": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+                            "preview": {
+                                "src": "https://img.zcvh.net/918591/desktop/thumb-${spriteNum}.webp"
+                            }
+                        }, {
+                            "episode": "9",
+                            "id": 540080,
+                            "videoKey": 919925,
+                            "dash": "https://hye1eaipby4w.matham.ws/10_22/20/18/U63QJRSE/919925.mpd?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=c35646607539952&hu=e6b36975279d2da&t=1738758471",
+                            "hls": "https://hye1eaipby4w.matham.ws/10_20_22/10/20/12/SHDJBGXK/XFRPGNWU.mp4/master.m3u8?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=c35646607539952&hu=e6b36975279d2da&t=1738758471",
+                            "audio": {
+                                "names": ["Цікава Ідея (укр)", "Eng.Original", "Amedia", "Iyuno-SDI", "JASKIER", "HDRezka Studio", "LostFilm", "DniproFilm (укр)", "delete"],
+                                "order": [5, 7, 0, 1, 2, 3, 4, 6, 8]
+                            },
+                            "cc": [{
+                                "url": "https://hye1eaipby4w.matham.ws/10_20_22/10/20/12/3X7OFDOO/L45RJKOS.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=c35646607539952&hu=e6b36975279d2da&t=1738758471",
+                                "name": "Eng. full - 1"
+                            }, {
+                                "url": "https://hye1eaipby4w.matham.ws/10_20_22/10/20/12/YKS367WP/3UGS5P3Q.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=c35646607539952&hu=e6b36975279d2da&t=1738758471",
+                                "name": "Рус. полные - 2"
+                            }, {
+                                "url": "https://hye1eaipby4w.matham.ws/10_20_22/10/20/12/KZS2GG6X/DRVBNWK2.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=c35646607539952&hu=e6b36975279d2da&t=1738758471",
+                                "name": "Рус. форсированные - 3"
+                            }],
+                            "duration": 3471,
+                            "title": "Дом дракона (1 сезон) - 9 серия",
+                            "download": "",
+                            "sections": [{
+                                "type": "screen",
+                                "start": 0,
+                                "title": "",
+                                "end": 104.685,
+                                "skip": true
+                            }, {
+                                "type": "titer",
+                                "start": 3393.73,
+                                "title": "",
+                                "end": 3471.796,
+                                "skip": true
+                            }],
+                            "poster": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+                            "preview": {
+                                "src": "https://img.zcvh.net/919925/desktop/thumb-${spriteNum}.webp"
+                            }
+                        }, {
+                            "episode": "10",
+                            "id": 541634,
+                            "videoKey": 921723,
+                            "dash": "https://hye1eaipby4w.matham.ws/10_22/27/14/VEFRP65P/921723.mpd?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=c35646607539952&hu=e6b36975279d2da&t=1738758471",
+                            "hls": "https://hye1eaipby4w.matham.ws/10_27_22/10/27/11/EEMJH6LV/IOSZLYKZ.mp4/master.m3u8?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=c35646607539952&hu=e6b36975279d2da&t=1738758471",
+                            "audio": {
+                                "names": ["Amedia", "Iyuno-SDI", "JASKIER", "HDRezka Studio", "LostFilm", "DniproFilm (укр)", "delete", "Цікава Ідея (укр)", "Eng.Original"],
+                                "order": [0, 1, 2, 3, 4, 6, 8, 5, 7]
+                            },
+                            "cc": [{
+                                "url": "https://hye1eaipby4w.matham.ws/10_27_22/10/27/10/2XZUJLVQ/IENV35BK.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=c35646607539952&hu=e6b36975279d2da&t=1738758471",
+                                "name": "Eng. full - 1"
+                            }, {
+                                "url": "https://hye1eaipby4w.matham.ws/10_27_22/10/27/10/4VRDOJ45/SPVEILCH.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=c35646607539952&hu=e6b36975279d2da&t=1738758471",
+                                "name": "Рус. полные - 2"
+                            }, {
+                                "url": "https://hye1eaipby4w.matham.ws/10_27_22/10/27/10/3SNZFF45/AZZ3VTAS.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=c35646607539952&hu=e6b36975279d2da&t=1738758471",
+                                "name": "Рус. форсированные - 3"
+                            }, {
+                                "url": "https://hye1eaipby4w.matham.ws/10_27_22/10/27/10/PNH7W3MX/EJSFA4ON.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=c35646607539952&hu=e6b36975279d2da&t=1738758471",
+                                "name": "Укр. форсовані - 4"
+                            }],
+                            "duration": 3544,
+                            "title": "Дом дракона (1 сезон) - 10 серия",
+                            "download": "",
+                            "sections": [{
+                                "end": 105.104,
+                                "skip": true,
+                                "type": "screen",
+                                "start": 0,
+                                "title": ""
+                            }, {
+                                "title": "",
+                                "end": 3544.69,
+                                "skip": true,
+                                "type": "titer",
+                                "start": 3467.049
+                            }],
+                            "poster": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+                            "preview": {
+                                "src": "https://img.zcvh.net/921723/desktop/thumb-${spriteNum}.webp"
+                            }
+                        }]
+                    }, {
+                        "season": 2,
+                        "blocked": false,
+                        "episodes": [{
+                            "episode": "1",
+                            "id": 695111,
+                            "videoKey": 1092980,
+                            "dash": "https://hye1eaipby4w.matham.ws/06_24/25/17/RXJBTCBY/1092980.mpd?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=c35646607539952&hu=e6b36975279d2da&t=1738758471",
+                            "hls": "https://hye1eaipby4w.matham.ws/06_25_24/06/25/11/GJVA65WM/MX2NEYU7.mp4/master.m3u8?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=c35646607539952&hu=e6b36975279d2da&t=1738758471",
+                            "audio": {
+                                "names": ["Megogo (укр)", "Eng.Original", "Кравец-Рекордз", "HDRezka Studio", "LostFilm", "JASKIER", "TVShows", "NewComers", "delete"],
+                                "order": [6, 7, 0, 1, 2, 3, 4, 5, 8]
+                            },
+                            "cc": [{
+                                "url": "https://hye1eaipby4w.matham.ws/06_25_24/06/25/10/ILUFDKOW/NMYPW5EN.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=c35646607539952&hu=e6b36975279d2da&t=1738758471",
+                                "name": "Eng. full - 1"
+                            }, {
+                                "url": "https://hye1eaipby4w.matham.ws/06_25_24/06/25/10/I4BRYEJA/X6DTWMIU.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=c35646607539952&hu=e6b36975279d2da&t=1738758471",
+                                "name": "Eng. full - 2"
+                            }, {
+                                "url": "https://hye1eaipby4w.matham.ws/06_25_24/06/25/10/VQ3OZOVW/TM4SU43E.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=c35646607539952&hu=e6b36975279d2da&t=1738758471",
+                                "name": "Укр. повні - 3"
+                            }],
+                            "duration": 3483,
+                            "title": "Дом дракона (2 сезон) - 1 серия",
+                            "download": "",
+                            "sections": [{
+                                "end": 113.877,
+                                "skip": true,
+                                "type": "screen",
+                                "start": 0,
+                                "title": ""
+                            }, {
+                                "title": "",
+                                "end": 3483.637,
+                                "skip": true,
+                                "type": "titer",
+                                "start": 3406.21
+                            }],
+                            "poster": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+                            "preview": {
+                                "src": "https://img.zcvh.net/1092980/desktop/thumb-${spriteNum}.webp"
+                            }
+                        }, {
+                            "episode": "2",
+                            "id": 700413,
+                            "videoKey": 1098960,
+                            "dash": "https://hye1eaipby4w.matham.ws/07_24/28/08/BZSMCPG4/1098960.mpd?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=c35646607539952&hu=e6b36975279d2da&t=1738758471",
+                            "hls": "https://hye1eaipby4w.matham.ws/07_28_24/07/28/06/L35EJNRW/HOAT5XYH.mp4/master.m3u8?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=c35646607539952&hu=e6b36975279d2da&t=1738758471",
+                            "audio": {
+                                "names": ["MGG (укр)", "delete", "Кравец-Рекордз", "HDRezka Studio", "LostFilm", "TVShows", "NewComers", "Eng.Original"],
+                                "order": [5, 7, 0, 1, 2, 3, 4, 6]
+                            },
+                            "cc": [{
+                                "url": "https://hye1eaipby4w.matham.ws/07_28_24/07/28/01/2LGXGAGW/UVY4LXTS.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=c35646607539952&hu=e6b36975279d2da&t=1738758471",
+                                "name": "Eng. full - 1"
+                            }, {
+                                "url": "https://hye1eaipby4w.matham.ws/07_28_24/07/28/01/Y2KPQCH2/XR3BYE7Z.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=c35646607539952&hu=e6b36975279d2da&t=1738758471",
+                                "name": "Eng. full - 2"
+                            }, {
+                                "url": "https://hye1eaipby4w.matham.ws/07_28_24/07/28/01/C5GGKV2J/3AODVGPP.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=c35646607539952&hu=e6b36975279d2da&t=1738758471",
+                                "name": "Укр. повні - 3"
+                            }],
+                            "duration": 4137,
+                            "title": "Дом дракона (2 сезон) - 2 серия",
+                            "download": "",
+                            "sections": [{
+                                "type": "screen",
+                                "start": 0,
+                                "title": "",
+                                "end": 113.7,
+                                "skip": true
+                            }, {
+                                "start": 4059.828,
+                                "title": "",
+                                "end": 4137.306,
+                                "skip": true,
+                                "type": "titer"
+                            }],
+                            "poster": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+                            "preview": {
+                                "src": "https://img.zcvh.net/1098960/desktop/thumb-${spriteNum}.webp"
+                            }
+                        }, {
+                            "episode": "3",
+                            "id": 700478,
+                            "videoKey": 1099028,
+                            "dash": "https://hye1eaipby4w.matham.ws/07_24/29/19/REX2U2KF/1099028.mpd?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=c35646607539952&hu=e6b36975279d2da&t=1738758471",
+                            "hls": "https://hye1eaipby4w.matham.ws/07_29_24/07/29/11/ZHEQBHDB/HZUN5NU3.mp4/master.m3u8?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=c35646607539952&hu=e6b36975279d2da&t=1738758471",
+                            "audio": {
+                                "names": ["MGG (укр)", "Eng.Original", "Кравец-Рекордз", "HDRezka Studio", "LostFilm", "TVShows", "NewComers", "delete"],
+                                "order": [5, 6, 0, 1, 2, 3, 4, 7]
+                            },
+                            "cc": [{
+                                "url": "https://hye1eaipby4w.matham.ws/07_29_24/07/29/10/CCSSNRLG/LROFFPT6.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=c35646607539952&hu=e6b36975279d2da&t=1738758471",
+                                "name": "Eng. full - 1"
+                            }, {
+                                "url": "https://hye1eaipby4w.matham.ws/07_29_24/07/29/10/OH37O7FT/VFHDQZJ3.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=c35646607539952&hu=e6b36975279d2da&t=1738758471",
+                                "name": "Eng. full - 2"
+                            }, {
+                                "url": "https://hye1eaipby4w.matham.ws/07_29_24/07/29/10/OB5ZCJRX/PJQ62G6U.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=c35646607539952&hu=e6b36975279d2da&t=1738758471",
+                                "name": "Укр. повні - 3"
+                            }],
+                            "duration": 3976,
+                            "title": "Дом дракона (2 сезон) - 3 серия",
+                            "download": "",
+                            "sections": [{
+                                "title": "",
+                                "end": 113.7,
+                                "skip": true,
+                                "type": "screen",
+                                "start": 0
+                            }, {
+                                "skip": true,
+                                "type": "titer",
+                                "start": 3899.774,
+                                "title": "",
+                                "end": 3976.923
+                            }],
+                            "poster": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+                            "preview": {
+                                "src": "https://img.zcvh.net/1099028/desktop/thumb-${spriteNum}.webp"
+                            }
+                        }, {
+                            "episode": "4",
+                            "id": 700537,
+                            "videoKey": 1099084,
+                            "dash": "https://hye1eaipby4w.matham.ws/07_24/30/00/42CQNY5K/1099084.mpd?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=c35646607539952&hu=e6b36975279d2da&t=1738758471",
+                            "hls": "https://hye1eaipby4w.matham.ws/07_29_24/07/29/13/UXUY6VSO/7TDUEPYH.mp4/master.m3u8?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=c35646607539952&hu=e6b36975279d2da&t=1738758471",
+                            "audio": {
+                                "names": ["Кравец-Рекордз", "HDRezka Studio", "LostFilm", "TVShows", "Eng.Original", "MGG (укр)", "delete"],
+                                "order": [0, 1, 2, 3, 5, 4, 6]
+                            },
+                            "cc": [{
+                                "url": "https://hye1eaipby4w.matham.ws/07_29_24/07/29/12/BOXHKYJC/IPA3ZESB.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=c35646607539952&hu=e6b36975279d2da&t=1738758471",
+                                "name": "Eng. full - 1"
+                            }, {
+                                "url": "https://hye1eaipby4w.matham.ws/07_29_24/07/29/12/GMP3WVLL/BOWWQO5W.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=c35646607539952&hu=e6b36975279d2da&t=1738758471",
+                                "name": "Eng. full - 2"
+                            }, {
+                                "url": "https://hye1eaipby4w.matham.ws/07_29_24/07/29/12/WRQKUZC3/RPYW7W54.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=c35646607539952&hu=e6b36975279d2da&t=1738758471",
+                                "name": "Укр. повні - 3"
+                            }, {
+                                "url": "https://hye1eaipby4w.matham.ws/07_29_24/07/29/12/ZKJV5VYE/FEVIJ2JO.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=c35646607539952&hu=e6b36975279d2da&t=1738758471",
+                                "name": "Укр. форсовані - 4"
+                            }, {
+                                "url": "https://hye1eaipby4w.matham.ws/07_29_24/07/29/12/TAJSDQ7K/D6DCUXPF.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=c35646607539952&hu=e6b36975279d2da&t=1738758471",
+                                "name": "Eng. full - 5"
+                            }, {
+                                "url": "https://hye1eaipby4w.matham.ws/07_29_24/07/29/12/YGLDCMVW/DORRUYDQ.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=c35646607539952&hu=e6b36975279d2da&t=1738758471",
+                                "name": "Eng. full - 6"
+                            }, {
+                                "url": "https://hye1eaipby4w.matham.ws/07_29_24/07/29/12/237XJMYY/AT6I2X4K.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=c35646607539952&hu=e6b36975279d2da&t=1738758471",
+                                "name": "Рус. полные - 7"
+                            }, {
+                                "url": "https://hye1eaipby4w.matham.ws/07_29_24/07/29/12/PWMLNJQE/GMOK2LYU.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=c35646607539952&hu=e6b36975279d2da&t=1738758471",
+                                "name": "Рус. полные - 8"
+                            }, {
+                                "url": "https://hye1eaipby4w.matham.ws/07_29_24/07/29/12/JEUTFXJU/A3HYVT4Q.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=c35646607539952&hu=e6b36975279d2da&t=1738758471",
+                                "name": "Рус. полные - 9"
+                            }, {
+                                "url": "https://hye1eaipby4w.matham.ws/07_29_24/07/29/12/CEOK6YWV/6V4DY6T6.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=c35646607539952&hu=e6b36975279d2da&t=1738758471",
+                                "name": "Рус. форсированные - 10"
+                            }],
+                            "duration": 3328,
+                            "title": "Дом дракона (2 сезон) - 4 серия",
+                            "download": "",
+                            "sections": [{
+                                "skip": true,
+                                "type": "screen",
+                                "start": 0,
+                                "title": "",
+                                "end": 113.7
+                            }, {
+                                "end": 3328.856,
+                                "skip": true,
+                                "type": "titer",
+                                "start": 3253.287,
+                                "title": ""
+                            }],
+                            "poster": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+                            "preview": {
+                                "src": "https://img.zcvh.net/1099084/desktop/thumb-${spriteNum}.webp"
+                            }
+                        }, {
+                            "episode": "5",
+                            "id": 701760,
+                            "videoKey": 1100407,
+                            "dash": "https://hye1eaipby4w.matham.ws/08_24/04/04/AH3VBF3P/1100407.mpd?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=c35646607539952&hu=e6b36975279d2da&t=1738758471",
+                            "hls": "https://hye1eaipby4w.matham.ws/08_04_24/08/04/00/V4EPLAWQ/RDZSLBSA.mp4/master.m3u8?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=c35646607539952&hu=e6b36975279d2da&t=1738758471",
+                            "audio": {
+                                "names": ["Кравец-Рекордз", "HDRezka Studio", "LostFilm", "TVShows", "NewComers", "Eng.Original", "MGG (укр)", "delete"],
+                                "order": [0, 1, 2, 3, 4, 6, 5, 7]
+                            },
+                            "duration": 3770,
+                            "title": "Дом дракона (2 сезон) - 5 серия",
+                            "download": "",
+                            "sections": [{
+                                "start": 0,
+                                "title": "",
+                                "end": 113.7,
+                                "skip": true,
+                                "type": "screen"
+                            }, {
+                                "type": "titer",
+                                "start": 3692.867,
+                                "title": "",
+                                "end": 3771.504,
+                                "skip": true
+                            }],
+                            "poster": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+                            "preview": {
+                                "src": "https://img.zcvh.net/1100407/desktop/thumb-${spriteNum}.webp"
+                            }
+                        }, {
+                            "episode": "6",
+                            "id": 703082,
+                            "videoKey": 1101796,
+                            "dash": "https://hye1eaipby4w.matham.ws/08_24/07/10/AETAQB5V/1101796.mpd?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=c35646607539952&hu=e6b36975279d2da&t=1738758471",
+                            "hls": "https://hye1eaipby4w.matham.ws/08_06_24/08/06/18/4INZ3AZ4/2PHWGIMX.mp4/master.m3u8?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=c35646607539952&hu=e6b36975279d2da&t=1738758471",
+                            "audio": {
+                                "names": ["Кравец-Рекордз", "HDRezka Studio", "LostFilm", "TVShows", "NewComers", "Eng.Original"],
+                                "order": [0, 1, 2, 3, 4, 5]
+                            },
+                            "cc": [{
+                                "url": "https://hye1eaipby4w.matham.ws/08_06_24/08/06/17/H732CBMB/FXJLJDMQ.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=c35646607539952&hu=e6b36975279d2da&t=1738758471",
+                                "name": "Eng. full - 1"
+                            }, {
+                                "url": "https://hye1eaipby4w.matham.ws/08_06_24/08/06/17/2KA2P3ND/KUCRMMFL.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=c35646607539952&hu=e6b36975279d2da&t=1738758471",
+                                "name": "Eng. full - 2"
+                            }, {
+                                "url": "https://hye1eaipby4w.matham.ws/08_06_24/08/06/17/ABHM5FL7/XCUB4UUL.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=c35646607539952&hu=e6b36975279d2da&t=1738758471",
+                                "name": "Рус. полные - 3"
+                            }, {
+                                "url": "https://hye1eaipby4w.matham.ws/08_06_24/08/06/17/2U437XKT/LQ7YZQKG.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=c35646607539952&hu=e6b36975279d2da&t=1738758471",
+                                "name": "Рус. полные - 4"
+                            }, {
+                                "url": "https://hye1eaipby4w.matham.ws/08_06_24/08/06/17/U3N4T4XE/ZU5N3VOG.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=c35646607539952&hu=e6b36975279d2da&t=1738758471",
+                                "name": "Рус. полные - 5"
+                            }, {
+                                "url": "https://hye1eaipby4w.matham.ws/08_06_24/08/06/17/EZZUXBHV/ORZCTMQ4.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=c35646607539952&hu=e6b36975279d2da&t=1738758471",
+                                "name": "Рус. форсированные - 6"
+                            }],
+                            "duration": 4036,
+                            "title": "Дом дракона (2 сезон) - 6 серия",
+                            "download": "",
+                            "sections": [{
+                                "end": 115.352,
+                                "skip": true,
+                                "type": "screen",
+                                "start": 0.001,
+                                "title": ""
+                            }, {
+                                "start": 3957.447,
+                                "title": "",
+                                "end": 4036.056,
+                                "skip": true,
+                                "type": "titer"
+                            }],
+                            "poster": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+                            "preview": {
+                                "src": "https://img.zcvh.net/1101796/desktop/thumb-${spriteNum}.webp"
+                            }
+                        }, {
+                            "episode": "7",
+                            "id": 703083,
+                            "videoKey": 1101797,
+                            "dash": "https://hye1eaipby4w.matham.ws/08_24/07/11/2DR2QH62/1101797.mpd?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=c35646607539952&hu=e6b36975279d2da&t=1738758471",
+                            "hls": "https://hye1eaipby4w.matham.ws/08_06_24/08/06/19/K4265KLW/XB7LDRJS.mp4/master.m3u8?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=c35646607539952&hu=e6b36975279d2da&t=1738758471",
+                            "audio": {
+                                "order": [0, 1, 2, 3, 4],
+                                "names": ["Кравец-Рекордз", "HDRezka Studio", "LostFilm", "TVShows", "Eng.Original"]
+                            },
+                            "cc": [{
+                                "url": "https://hye1eaipby4w.matham.ws/08_06_24/08/06/17/7NFVQ7MV/WA7NY3KK.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=c35646607539952&hu=e6b36975279d2da&t=1738758471",
+                                "name": "Eng. full - 1"
+                            }, {
+                                "url": "https://hye1eaipby4w.matham.ws/08_06_24/08/06/17/U2HNYCSL/IANPOI3S.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=c35646607539952&hu=e6b36975279d2da&t=1738758471",
+                                "name": "Eng. full - 2"
+                            }, {
+                                "url": "https://hye1eaipby4w.matham.ws/08_06_24/08/06/17/7SMB3IPK/WBFYRBVF.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=c35646607539952&hu=e6b36975279d2da&t=1738758471",
+                                "name": "Рус. полные - 3"
+                            }, {
+                                "url": "https://hye1eaipby4w.matham.ws/08_06_24/08/06/17/BBQH7NOT/7PQWV2RW.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=c35646607539952&hu=e6b36975279d2da&t=1738758471",
+                                "name": "Рус. полные - 4"
+                            }, {
+                                "url": "https://hye1eaipby4w.matham.ws/08_06_24/08/06/17/NL4U4Y4Y/5RZMFQIG.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=c35646607539952&hu=e6b36975279d2da&t=1738758471",
+                                "name": "Рус. форсированные - 5"
+                            }],
+                            "duration": 3821,
+                            "title": "Дом дракона (2 сезон) - 7 серия",
+                            "download": "",
+                            "sections": [{
+                                "start": 0.001,
+                                "title": "",
+                                "end": 115.269,
+                                "skip": true,
+                                "type": "screen"
+                            }, {
+                                "title": "",
+                                "end": 3821.35,
+                                "skip": true,
+                                "type": "titer",
+                                "start": 3744.601
+                            }],
+                            "poster": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+                            "preview": {
+                                "src": "https://img.zcvh.net/1101797/desktop/thumb-${spriteNum}.webp"
+                            }
+                        }, {
+                            "episode": "8",
+                            "id": 702009,
+                            "videoKey": 1100680,
+                            "dash": "https://hye1eaipby4w.matham.ws/08_24/05/20/VCPHCRNF/1100680.mpd?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=c35646607539952&hu=e6b36975279d2da&t=1738758471",
+                            "hls": "https://hye1eaipby4w.matham.ws/08_05_24/08/05/11/7L4HI4YM/S3Y22Y2O.mp4/master.m3u8?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=c35646607539952&hu=e6b36975279d2da&t=1738758471",
+                            "audio": {
+                                "names": ["Syncmer", "Рус. Люб. многоголосый", "Megogo (укр)", "Eng.Original"],
+                                "order": [0, 1, 2, 3]
+                            },
+                            "cc": [{
+                                "url": "https://hye1eaipby4w.matham.ws/08_05_24/08/05/11/S32LBGV2/H7JZCUJR.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=c35646607539952&hu=e6b36975279d2da&t=1738758471",
+                                "name": "Укр. форсовані - 1"
+                            }, {
+                                "url": "https://hye1eaipby4w.matham.ws/08_05_24/08/05/11/75GRV7A4/E76CRDRQ.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=c35646607539952&hu=e6b36975279d2da&t=1738758471",
+                                "name": "Укр. повні - 2"
+                            }, {
+                                "url": "https://hye1eaipby4w.matham.ws/08_05_24/08/05/11/7LT4GX5O/MZMK3WWD.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=c35646607539952&hu=e6b36975279d2da&t=1738758471",
+                                "name": "Eng. full - 3"
+                            }, {
+                                "url": "https://hye1eaipby4w.matham.ws/08_05_24/08/05/11/ZT37WDBN/3YEHZTYK.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=c35646607539952&hu=e6b36975279d2da&t=1738758471",
+                                "name": "Eng. full - 4"
+                            }, {
+                                "url": "https://hye1eaipby4w.matham.ws/08_05_24/08/05/11/RKQU3V3N/4TKKM74I.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=c35646607539952&hu=e6b36975279d2da&t=1738758471",
+                                "name": "Рус. полные - 5"
+                            }, {
+                                "url": "https://hye1eaipby4w.matham.ws/08_05_24/08/05/11/4SJQMW4G/C4LCYSG3.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=c35646607539952&hu=e6b36975279d2da&t=1738758471",
+                                "name": "Рус. форсированные - 6"
+                            }],
+                            "duration": 4146,
+                            "title": "Дом дракона (2 сезон) - 8 серия",
+                            "download": "",
+                            "sections": [{
+                                "start": 0,
+                                "title": "",
+                                "end": 114.335,
+                                "skip": true,
+                                "type": "screen"
+                            }, {
+                                "skip": true,
+                                "type": "titer",
+                                "start": 4065.814,
+                                "title": "",
+                                "end": 4146.756
+                            }],
+                            "poster": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+                            "preview": {
+                                "src": "https://img.zcvh.net/1100680/desktop/thumb-${spriteNum}.webp"
+                            }
+                        }]
+                    }]
+
+                },
+                qualityByWidth: {
+                    "1280": 720,
+                    "1920": 1080,
+                    "864": 480
+                },
+                p2p: {
+                    geo: ["ES", "", "AS57269"],
+                    tolerance: 4,
+                    tracker: "wss://t8.zcvh.net/v1/ws",
+                    longDownload: 30 * 1000
+                }
+
+
+
+    })
+</script>	
+
+</body>
+
+</html>	

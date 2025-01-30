@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<script src="https://cdn.jsdelivr.net/npm/venom-player@latest"></script>
+<link rel="stylesheet" href="styles.css">
+<script src="managemovie.js"></script>
+</head>	
+<body>
+<div id="player"></div>
+<div id="subtitleOuterContainerId" class="subtitleOuterContainerCls">
+	<div id="subtitleContainerId" class="subtitleContainerCls"></div>
+</div>
+<script>
+    VenomPlayer.make({
+        publicPath: 'https://cdn.jsdelivr.net/npm/venom-player@' + VenomPlayer.version + '/dist/',
+		container: document.getElementById('player'),
+
+                playlist: {
+                    open: true,
+                    autoNext: true,
+                    id: 309,
+					flat: [	
+					{	id:"matrix", title:"Matrix",
+						source: {
+							dash: "https://hye1eaipby4w.matham.ws/08_24/16/05/TLQ2HTB3/1104118.mpd?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=e630dca6d7f1f89&hu=e6b36975279d2da&t=1738681879",
+							hls: "https://hye1eaipby4w.matham.ws/08_15_24/08/15/20/RWGT6MKR/UW7BFJL5.mp4/master.m3u8?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=e630dca6d7f1f89&hu=e6b36975279d2da&t=1738681879",
+							audio: {"names":["Рус. Дублированный","Рус. Проф. многоголосый","РТР","1+1","П.Гланц и И.Королёва","Рус. Проф. двухголосый","Рус. Проф. двухголосый","А. Гаврилов","Ю. Живов","Рус. Одноголосый","Дмитрий \"Goblin\" Пучков","Д. Есарев","C. Визгунов","А. Дольский","delete","А.Кашкин","Рус. Одноголосый","Eng.Original","Так Треба Продакшн","НЛО-ТВ (укр)","Новий канал","delete"],"order":[0,1,2,17,3,4,5,6,7,8,9,10,11,12,20,13,14,19,15,16,18,21]},
+							cc: [{"url":"https://hye1eaipby4w.matham.ws/08_15_24/08/15/13/MUSRFKLC/ZGXLOEGK.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=e630dca6d7f1f89&hu=e6b36975279d2da&t=1738681879","name":"Eng. full - 1"},{"url":"https://hye1eaipby4w.matham.ws/08_15_24/08/15/13/3SHVSAGS/X23UYUT3.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=e630dca6d7f1f89&hu=e6b36975279d2da&t=1738681879","name":"Укр. повні - 2"},{"url":"./matrix_cc_ru/Matrix_RUS_1999a.vtt","name":"Русские"}]
+								}
+					},{
+					    id:"matrix_reload", title:"Matrix Reload",
+			source: {
+				dash: "https://hye1eaipby4w.matham.ws/08_24/16/23/MIHARURJ/1104268.mpd?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=b9ce5f73af0a69e&hu=e6b36975279d2da&t=1738682764",
+				hls: "https://hye1eaipby4w.matham.ws/08_15_24/08/15/20/Q7SM3SVH/ZBVYXB6T.mp4/master.m3u8?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=b9ce5f73af0a69e&hu=e6b36975279d2da&t=1738682764",
+				audio: {"names":["Рус. Дублированный","Рус. Дублированный","SDI Media","C. Визгунов","П.Гланц и И.Королёва","Рус. Проф. двухголосый","А. Гаврилов","Е. Рудой","Ю. Живов","Так Треба Продакшн","НЛО-ТВ (укр)","Новий канал","Інтер (укр)","Eng.Original"],"order":[0,1,2,3,4,5,6,7,8,9,10,11,12,13]},
+				cc: [{"url":"https://hye1eaipby4w.matham.ws/08_15_24/08/15/18/AVMDVK3A/KNFGUTO5.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=b9ce5f73af0a69e&hu=e6b36975279d2da&t=1738682764","name":"Eng. full - 1"},{"url":"https://hye1eaipby4w.matham.ws/08_15_24/08/15/18/BE4XI2MW/2TNBTEX6.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=b9ce5f73af0a69e&hu=e6b36975279d2da&t=1738682764","name":"Eng. full - 2"},{"url":"https://hye1eaipby4w.matham.ws/08_15_24/08/15/18/IJ7OOBWP/32XAOFAX.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=b9ce5f73af0a69e&hu=e6b36975279d2da&t=1738682764","name":"Eng. full - 3"},{"url":"https://hye1eaipby4w.matham.ws/08_15_24/08/15/18/WSMAQP4O/FRRRRARV.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=b9ce5f73af0a69e&hu=e6b36975279d2da&t=1738682764","name":"Укр. повні - 4"},{"url":"https://hye1eaipby4w.matham.ws/08_15_24/08/15/18/ONRKDCOW/DXJOZLPV.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=b9ce5f73af0a69e&hu=e6b36975279d2da&t=1738682764","name":"Рус. полные - 5"}]
+
+			}						
+					},
+					{id:"matrix_revolution",title:"Matrix Revolution",
+			source: {
+				dash: "https://hye1eaipby4w.matham.ws/08_24/16/12/CAORBV6J/1104109.mpd?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=54f6c01b9e509e0&hu=e6b36975279d2da&t=1738682824",
+				hls: "https://hye1eaipby4w.matham.ws/08_15_24/08/15/13/M5KBDHTX/CEKPMHEC.mp4/master.m3u8?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=54f6c01b9e509e0&hu=e6b36975279d2da&t=1738682824",
+				audio: {"names":["Рус. Дублированный","Рус. Проф. многоголосый","П.Гланц и И.Королёва","А. Гаврилов","Ю. Живов","Eng.Original","Так Треба Продакшн","НЛО-ТВ (укр)","Новий канал","1+1","delete"],"order":[0,1,2,3,4,9,5,6,7,8,10]},
+				cc: [{"url":"https://hye1eaipby4w.matham.ws/08_15_24/08/15/11/GZEHI6JF/DJANBHVO.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=54f6c01b9e509e0&hu=e6b36975279d2da&t=1738682824","name":"Eng. full - 1"},{"url":"https://hye1eaipby4w.matham.ws/08_15_24/08/15/11/5JSALSRH/WSJHK3WG.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=54f6c01b9e509e0&hu=e6b36975279d2da&t=1738682824","name":"Eng. full - 2"},{"url":"https://hye1eaipby4w.matham.ws/08_15_24/08/15/11/AZ6ADRGB/YUHZ5GUR.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=54f6c01b9e509e0&hu=e6b36975279d2da&t=1738682824","name":"Рус. полные - 3"}]
+
+			}					
+					}, {
+					id:"matrix_resurrections",title:"Matrix Resurrections",
+			source: {
+				dash: "https://hye1eaipby4w.matham.ws/08_24/16/12/AR7C4IZV/1104095.mpd?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=ed88f4ac730e5f5&hu=e6b36975279d2da&t=1738682885",
+				hls: "https://hye1eaipby4w.matham.ws/08_15_24/08/15/13/EB3KK4MT/RZRVJM7I.mp4/master.m3u8?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=ed88f4ac730e5f5&hu=e6b36975279d2da&t=1738682885",
+				audio: {"names":["Рус. Дублированный","КиноПоиск HD","HDRezka Studio","JASKIER","Д. Есарев","DniproFilm (укр)","Eng.Original","Postmodern (укр)","delete","delete"],"order":[0,1,2,3,4,6,7,5,8,9]},
+				cc: [{"url":"https://hye1eaipby4w.matham.ws/08_15_24/08/15/11/XWY6YCID/ESAVQOBE.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=ed88f4ac730e5f5&hu=e6b36975279d2da&t=1738682885","name":"Eng. SDH - 1"},{"url":"https://hye1eaipby4w.matham.ws/08_15_24/08/15/11/OYIIZFXT/Q5RSY5O5.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=ed88f4ac730e5f5&hu=e6b36975279d2da&t=1738682885","name":"Eng. SDH - 2"},{"url":"https://hye1eaipby4w.matham.ws/08_15_24/08/15/11/QB4YRAK4/6SXRHQCG.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=ed88f4ac730e5f5&hu=e6b36975279d2da&t=1738682885","name":"Укр. форсовані - 3"},{"url":"https://hye1eaipby4w.matham.ws/08_15_24/08/15/11/IOQEKZCP/BVOTYEBV.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=ed88f4ac730e5f5&hu=e6b36975279d2da&t=1738682885","name":"Рус. SDH - 4"},{"url":"https://hye1eaipby4w.matham.ws/08_15_24/08/15/11/6JEBOH55/4JW3WULC.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=ed88f4ac730e5f5&hu=e6b36975279d2da&t=1738682885","name":"Рус. полные - 5"},{"url":"https://hye1eaipby4w.matham.ws/08_15_24/08/15/11/5KMZZWFJ/WTHGXW47.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=ed88f4ac730e5f5&hu=e6b36975279d2da&t=1738682885","name":"Рус. форсированные - 6"}]
+
+			}					
+					}
+					
+					],
+                },
+                qualityByWidth: {
+                    "1280": 1080,
+                    "864": 480
+                },
+                p2p: {
+                    geo: ["ES", "", "AS57269"],
+                    tolerance: 4,
+                    tracker: "wss://t6.zcvh.net/v1/ws",
+                    longDownload: 30 * 1000
+                }
+
+    })
+</script>	
+</body>
+
+</html>	

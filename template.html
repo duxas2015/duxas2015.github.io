@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+<script src="https://cdn.jsdelivr.net/npm/venom-player@latest"></script>
+<script src="managemovie.js"></script>
+<link rel="stylesheet" href="styles.css">
+</head>	
+<body>
+<div id="player"></div>
+<div id="subtitleOuterContainerId" class="subtitleOuterContainerCls">
+	<div id="subtitleContainerId" class="subtitleContainerCls"></div>
+</div>
+<script>
+    VenomPlayer.make({
+        publicPath: 'https://cdn.jsdelivr.net/npm/venom-player@' + VenomPlayer.version + '/dist/',
+		container: document.getElementById('player'),
+
+
+
+
+    })
+</script>	
+
+</body>
+
+</html>	

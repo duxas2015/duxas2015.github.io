@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+<script src="https://cdn.jsdelivr.net/npm/venom-player@latest"></script>
+</head>	
+<style>
+body {
+  overflow: hidden;
+  margin: 0px;
+  padding: 0px;
+}
+#player {
+    position:absolute;
+    width:960px!important;
+    height:540px!important;
+}
+</style>
+<body>
+<div id="player"></div>
+<script>
+    VenomPlayer.make({
+        publicPath: 'https://cdn.jsdelivr.net/npm/venom-player@' + VenomPlayer.version + '/dist/',
+		container: document.getElementById('player'),
+
+			playlist: {
+				open: true ,
+				autoNext: true ,
+				id: 251 ,
+				current: {
+					season:  1 ,
+					episode: "1"
+				},
+				seasons:[
+	{
+		"season": 1,
+		"blocked": false,
+		"episodes": [
+			{
+				"episode": "1",
+				"id": 216462,
+				"videoKey": 563850,
+				"hls": "https://serv1.freehat.cc/cdn_oilsnctw/gf/101/101_en.m3u8",
+/*				
+				"audio": {
+					"names": [
+						"Первый Канал",
+						"1+1",
+						"Eng.Original",
+						"Eng. Orig. with Commentary"
+					],
+					"order": [
+						0,
+						1,
+						2,
+						3
+					]
+				},
+*/				
+
+				"cc": [
+					{"url":"./familyguy_cc/Family Guy - 1x01 - Death Has a Shadow.en.vtt", "name":"English"}
+				],
+
+//				"duration": 5286,
+				"title": "Family Guy S01 E01",
+			}
+			,			{
+				"episode": "2",
+				"id": 216462,
+				"videoKey": 563850,
+				"hls": "https://serv1.freehat.cc/cdn_oilsnctw/gf/102/102_en.m3u8",
+				"cc": [
+					{"url":"./familyguy_cc/Family Guy - 1x02 - I Never Met the Dead Man.en.vtt", "name":"English"}
+				],
+				"title": "Family Guy S01 E02",
+			}
+
+			
+		]
+	}
+]
+
+			},
+			qualityByWidth: {"1280":1080,"640":480,"864":720},
+			p2p: {
+				geo: ["ES","","AS57269"],
+				tolerance:  4 ,
+				tracker: "wss://t4.zcvh.net/v1/ws",
+				longDownload: 30 * 1000
+			}
+
+    })
+</script>	
+
+<script>
+var video;
+var track;
+
+function findClosestSubtitle ( video, track ) {
+    var diff = 1000;
+    var foundTime;
+    var currentTime = video.currentTime;
+    Array.from(track.cues).forEach( function ( item, index ) {
+    	if ( item.startTime > currentTime && foundTime === undefined ) {
+            console.log ( currentTime );
+            console.log( item.startTime );
+            foundTime = item.startTime;
+        } 
+    });
+	return foundTime;
+}
+
+function getToTheClosestSubtitle() { video.currentTime = findClosestSubtitle (video, track) - 0.5; }
+
+function handle(e) {
+
+	if ( e.code === 'Numpad1' ) { backMoving (2); }
+    else if ( e.code === 'Numpad2' ) { backMoving (3); }
+	else if ( e.code === 'Numpad3' ) { backMoving (4); }
+	else if ( e.code === 'Numpad4' ) { getToTheClosestSubtitle(); }
+	else if ( e.code === 'Numpad9' ) { 
+	  video = document.getElementsByTagName('video')[0];
+      track = document.getElementsByTagName('video')[0].textTracks[0];
+	}	
+	else if ( e.code === 'Numpad5' ) { 
+  	  shiftTextTrack(track, -0.1 );
+	}
+	else if ( e.code === 'Numpad6' ) { 
+  	  shiftTextTrack(track, 0.1 );
+	}
+}
+
+function backMoving( shift ){
+	var video = document.getElementsByTagName('video')[0];
+	video.currentTime = video.currentTime - shift;
+}
+
+function shiftTextTrack ( textTrack, shift ) {
+	textTrack.mode = 'hidden';
+	Array.from(textTrack.cues).forEach( function ( item, index ) {
+		textTrack.cues[index].startTime = textTrack.cues[index].startTime + shift;
+		textTrack.cues[index].endTime = textTrack.cues[index].endTime + shift;
+		});
+	textTrack.mode = 'showing';
+}
+
+window.onload = function() {
+  window.onkeydown = handle;
+};
+
+</script>
+
+</body>
+
+</html>	

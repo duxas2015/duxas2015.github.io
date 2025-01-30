@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<script src="https://cdn.jsdelivr.net/npm/venom-player@latest"></script>
+<script src="managemovie.js"></script>
+<link rel="stylesheet" href="styles.css">
+</head>	
+<body>
+<div id="player"></div>
+<div id="subtitleOuterContainerId" class="subtitleOuterContainerCls">
+	<div id="subtitleContainerId" class="subtitleContainerCls"></div>
+</div>
+<script>
+    VenomPlayer.make({
+        publicPath: 'https://cdn.jsdelivr.net/npm/venom-player@' + VenomPlayer.version + '/dist/',
+		container: document.getElementById('player'),	
+	playlist: {
+			blocked: false ,
+			title: "Мег: Монстр глубины",
+			id: 615822 ,
+			poster: "https://img.imgilall.me/movies/video/6/1/5/8/2/2/0/0/0/0/800x450_615822.jpg?t=1693862973",
+			flat: [ { id:'meg',title:'The Meg',
+			source: {
+				dash: "https://hye1eaipby4w.matham.ws/09_23/05/00/5IZCLOLT/1005930.mpd?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=4309bb2fd3ad59a&hu=e6b36975279d2da&t=1738955559",
+				hls: "https://hye1eaipby4w.matham.ws/09_04_23/09/04/12/6QIKEN2F/IEZ5DRAR.mp4/master.m3u8?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=4309bb2fd3ad59a&hu=e6b36975279d2da&t=1738955559",
+				audio: {"names":["Рус. Дублированный","Укр. Дубльований","Eng.Original"],"order":[0,1,2]},
+				cc: [{"url":"https://hye1eaipby4w.matham.ws/09_04_23/09/04/10/AXOMZHLA/637ZDLJW.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=4309bb2fd3ad59a&hu=e6b36975279d2da&t=1738955559","name":"Eng. full - 1"},{"url":"https://hye1eaipby4w.matham.ws/09_04_23/09/04/10/5VPODIS4/5XQBFEXH.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=4309bb2fd3ad59a&hu=e6b36975279d2da&t=1738955559","name":"Укр. форсовані - 2"},{"url":"https://hye1eaipby4w.matham.ws/09_04_23/09/04/10/GR7D3MDY/XW2TFHMY.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=4309bb2fd3ad59a&hu=e6b36975279d2da&t=1738955559","name":"Рус. полные - 3"},{"url":"https://hye1eaipby4w.matham.ws/09_04_23/09/04/10/DW5S2YKL/GICLPNXK.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=4309bb2fd3ad59a&hu=e6b36975279d2da&t=1738955559","name":"Рус. форсированные - 4"}]
+
+			}
+			}]},
+			qualityByWidth: {"1280":720,"1920":1080,"864":480},
+			p2p: {
+				geo: ["ES","","AS57269"],
+				tolerance:  4 ,
+				tracker: "wss://t2.zcvh.net/v1/ws",
+				longDownload: 300 * 1000
+			}
+		});
+</script>	
+
+</body>
+
+</html>	
