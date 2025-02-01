@@ -143,8 +143,9 @@ function listen(player) {
       track = document.getElementsByTagName('video')[0].textTracks[findEnglishSubtitleTrackIndex()];
 	  if ( (typeof versionMobile !== 'undefined') && versionMobile === true ) { // mobile mode
         document.getElementsByTagName('video')[0].textTracks[findEnglishSubtitleTrackIndex()].oncuechange = f_eng;
+		track.mode = "hidden";		
 	  } else { // desctop mode
-		track.mode = "showing"; 		  
+		track.mode = "showing";
 	  }
       document.getElementsByTagName('video')[0].textTracks[findRussianSubtitleTrackIndex()].oncuechange = f;
 	});
