@@ -1,0 +1,899 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <style type="text/css">
+		table { width:100%;border-collapse:collapse; margin-top: 10px;}
+		table td, table th { padding:0; width:50%; padding:5px; }
+		table tr td{ border: solid 1px black; }
+	</style>
+    <script>
+      function increaseFontSizeBySomepx( p_increment ) {
+        var id = document.body;
+        var style = window.getComputedStyle(id, null).getPropertyValue('font-size');
+        var currentSize = parseInt(style);
+        currentSize += p_increment;
+        if (currentSize < 10) { currentSize = 10;}
+        document.body.style.fontSize = currentSize.toString() + "px";
+
+        var elems = document.getElementsByTagName('td');
+        for(i=0; i < elems.length; i++) {
+          elems[i].style.fontSize = currentSize.toString() + "px";
+        }
+      }
+    </script>
+</head>
+<body>
+
+<input type="button" value="Increase Font Size 10px" onclick="increaseFontSizeBySomepx(1)">
+<input type="button" value="Decrease Font Size 10px" onclick="increaseFontSizeBySomepx(-1)">
+
+<table>
+<tbody>
+<tr><td>Chapter 1</td><td>Глава 1</td></tr>
+<tr><td>thing in the morning</td><td>дело с утра</td></tr>
+<tr><td>Dan's alarm clock rings and he wakes up</td><td>У Дэна звонит будильник, и он просыпается.</td></tr>
+<tr><td>He gets out of bed</td><td>Он встает с постели</td></tr>
+<tr><td>he goes into the bathroom after using the toilet and flushing it</td><td>он идет в ванную после того, как сходил в туалет и смыл его</td></tr>
+<tr><td>he washes his hands</td><td>он моет руки</td></tr>
+<tr><td>he brushes his teeth, shaves, and takes a shower</td><td>он чистит зубы, бреется и принимает душ</td></tr>
+<tr><td>he dries himself off with a towel</td><td>он вытирается полотенцем</td></tr>
+<tr><td>then he brushes his hair</td><td>потом он расчесывает волосы</td></tr>
+<tr><td>he gets dressed</td><td>он одевается</td></tr>
+<tr><td>he makes breakfast and eats it</td><td>он готовит завтрак и ест его</td></tr>
+<tr><td>then he leaves the apartment</td><td>затем он выходит из квартиры</td></tr>
+<tr><td></td><td></td></tr>
+<tr><td>Chapter 2</td><td>Глава 2</td></tr>
+<tr><td>Brushing your teeth and flossing</td><td>Чистить зубы и пользоваться зубной нитью</td></tr>
+<tr><td>Jenny runs some water over her toothbrush</td><td>Дженни промывает зубную щетку водой.</td></tr>
+<tr><td>she squeezes toothpaste onto her toothbrush</td><td>она выдавливает зубную пасту на зубную щетку</td></tr>
+<tr><td>she moves her toothbrush up and down, and back and forth </td><td>она двигает зубной щеткой вверх-вниз и вперед-назад</td></tr>
+<tr><td>to rinse her mouth, she takes some water, swishes it back and forth in her mouth, and spits it into the sink </td><td>чтобы прополоскать рот, она берет немного воды, полоскает ею рот туда-сюда и выплевывает в раковину.</td></tr>
+<tr><td>she rinses off her toothbrush</td><td>она смывает зубную щетку</td></tr>
+<tr><td>then she puts it back in the toothbrush rack</td><td>затем она кладет его обратно в стойку для зубных щеток</td></tr>
+<tr><td>she flosses her teeth by pulling out a long piece of floss, slipping it between her teeth, and moving it back and forth and up and down</td><td>она чистит зубы, вытаскивая длинный кусок нити, просовывая его между зубами и двигая вперед-назад и вверх-вниз</td></tr>
+<tr><td></td><td></td></tr>
+<tr><td>Chapter 3</td><td>Глава 3</td></tr>
+<tr><td>taking a shower</td><td>принимать душ</td></tr>
+<tr><td>Dan pulls the shower curtain shot</td><td>Дэн дергает занавеску для душа.</td></tr>
+<tr><td>by turning the knob he turns the water on</td><td>повернув ручку он включает воду</td></tr>
+<tr><td>he washes his hair with shampoo and the rest of his body with soap</td><td>он моет волосы шампунем, а остальное тело мылом</td></tr>
+<tr><td>then he rinses off with water</td><td>потом смывает водой</td></tr>
+<tr><td>after turning the water off he steps out of the shower</td><td>после выключения воды он выходит из душа</td></tr>
+<tr><td>he takes a towel from the towel rack</td><td>он берет полотенце с вешалки для полотенец</td></tr>
+<tr><td>then he dries himself off</td><td>потом он вытирается</td></tr>
+<tr><td>he wraps a towel around himself and he dries his hair</td><td>он обматывает себя полотенцем и сушит волосы</td></tr>
+<tr><td>he puts some deodorant [dɪ'əud(ə)r(ə)nt] under his arms</td><td>он кладет дезодорант [dɪ'əud(ə)r(ə)nt] под мышки</td></tr>
+<tr><td></td><td></td></tr>
+<tr><td>Chapter 4</td><td>Глава 4</td></tr>
+<tr><td>getting dressed ( a man )</td><td>одеваться (мужчина)</td></tr>
+<tr><td>Tom puts on some underwear, a t-shirt, some socks, some pants, and a shirt</td><td>Том надевает нижнее белье, футболку, носки, штаны и рубашку.</td></tr>
+<tr><td>putting on a pair of pants</td><td>надеть штаны</td></tr>
+<tr><td>Tom steps into his pants</td><td>Том шагает в штаны</td></tr>
+<tr><td>then he pulls them up</td><td>потом он их подтягивает</td></tr>
+<tr><td>he fastens the waistband and zips up the fly</td><td>он застегивает пояс и застегивает ширинку</td></tr>
+<tr><td>he slips a belt through the belt loops and buckles it</td><td>он просовывает ремень через шлевки и застегивает его</td></tr>
+<tr><td>putting on a shirt </td><td>надевать рубашку</td></tr>
+<tr><td>Tom slips an arm into each sleeve</td><td>Том просовывает руку в каждый рукав</td></tr>
+<tr><td>he buttons the shirt and the cuffs</td><td>он застегивает рубашку и манжеты</td></tr>
+<tr><td>he straightens his collar</td><td>он поправляет воротник</td></tr>
+<tr><td>he tucks his shirt into his pants</td><td>он заправляет рубашку в штаны</td></tr>
+<tr><td></td><td></td></tr>
+<tr><td>Chapter 5</td><td>Глава 5</td></tr>
+<tr><td>getting dressed (a woman)</td><td>одеваться (женщина)</td></tr>
+<tr><td>Pam puts on some panties, a bra, a dress or a blouse or a shirt, and a skirt or some pants and some socks or some nylons or some pantyhose</td><td>Пэм надевает трусики, бюстгальтер, платье, или блузку, или рубашку, и юбку, или штаны, и носки, или нейлон, или колготки.</td></tr>
+<tr><td>dressing for hot weather</td><td>одежда для жаркой погоды</td></tr>
+<tr><td>if it's hot Pam wears light clothes: a short-sleeved cotton shirt and a pair of cotton shorts</td><td>если жарко, Пэм носит легкую одежду: хлопчатобумажную рубашку с короткими рукавами и хлопчатобумажные шорты.</td></tr>
+<tr><td>she goes barefoot indoors and wears sandals outdoors </td><td>она ходит босиком в помещении и носит сандалии на улице</td></tr>
+<tr><td>dressing this way keeps her cool </td><td>одеваясь таким образом, она сохраняет хладнокровие</td></tr>
+<tr><td>dressing for cold weather</td><td>одежда на холодную погоду</td></tr>
+<tr><td>if it's cold Pam wears heavy clothes a long-sleeved shirt, a wool sweater, long pants and thick wool socks before going outdoors</td><td>если холодно, перед выходом на улицу Пэм носит тяжелую одежду: рубашку с длинными рукавами, шерстяной свитер, длинные брюки и толстые шерстяные носки.</td></tr>
+<tr><td>she puts on a heavy coat and some gloves or mittens</td><td>она надевает тяжелое пальто и перчатки или варежки</td></tr>
+<tr><td>she wraps a scarf around her neck and puts on a hat and some boots</td><td>она повязывает шарф на шею и надевает шляпу и сапоги</td></tr>
+<tr><td>dressing this way keeps her warm</td><td>одеваясь таким образом, она согревается</td></tr>
+<tr><td></td><td></td></tr>
+<tr><td>Chapter 6</td><td>Глава 6</td></tr>
+<tr><td>making a bed</td><td>застилать постель</td></tr>
+<tr><td>I put a bottom sheet on the mattress</td><td>Я положил простыню на матрас</td></tr>
+<tr><td>if I have a fitted sheet I slip it over the mattress</td><td>если у меня есть простыня, я надеваю ее на матрас</td></tr>
+<tr><td>if I have a flat sheet I tuck it under the mattress</td><td>если у меня есть простыня, я засовываю ее под матрас</td></tr>
+<tr><td>then I tuck the top sheet under the mattress at the foot of the bed</td><td>затем я заправляю верхнюю простыню под матрац в изножье кровати</td></tr>
+<tr><td>I pull the top sheet tight and spread a blanket over the bed and smooth it out</td><td>Я плотно натягиваю верхнюю простыню, расстилаю одеяло на кровати и разглаживаю его.</td></tr>
+<tr><td>I spread a bedspread over the bed</td><td>Я расстилаю покрывало на кровати</td></tr>
+<tr><td>I fluff up the pillows and lay them at the head of the bed</td><td>Взбиваю подушки и кладу их у изголовья</td></tr>
+<tr><td>I pull the bedspread over the pillows and smooth it out</td><td>Я натягиваю покрывало на подушки и разглаживаю</td></tr>
+<tr><td></td><td></td></tr>
+<tr><td>Chapter 7</td><td>Глава 7</td></tr>
+<tr><td>making breakfast 1</td><td>готовлю завтрак 1</td></tr>
+<tr><td>making coffee making tea</td><td>приготовление кофе приготовление чая</td></tr>
+<tr><td>making coffee with an electric coffee maker</td><td>приготовление кофе с помощью электрической кофеварки</td></tr>
+<tr><td>Pam scoops some ground coffee into the filter</td><td>Пэм насыпает в фильтр немного молотого кофе.</td></tr>
+<tr><td>then she pours some water into the coffee maker</td><td>затем она наливает немного воды в кофеварку</td></tr>
+<tr><td>she turns the coffee maker on by pressing the switch</td><td>она включает кофеварку, нажав на выключатель</td></tr>
+<tr><td>The water heats up and drips through the ground coffee and into the coffee pot</td><td>Вода нагревается и капает через молотый кофе в кофейник.</td></tr>
+<tr><td>making tea</td><td>приготовление чая</td></tr>
+<tr><td>Dan boils water in a tea kettle</td><td>Дэн кипятит воду в чайнике</td></tr>
+<tr><td>He pours the hot water into a tea pot and adds some tea leaves </td><td>Он наливает горячую воду в чайник и добавляет немного чайных листьев.</td></tr>
+<tr><td>As the tea leaves soaked in the water the water becomes tea</td><td>Когда чайные листья замачиваются в воде, вода становится чаем.</td></tr>
+<tr><td>Dan strains the tea</td><td>Дэн процеживает чай</td></tr>
+<tr><td>Then he adds sugar and milk and stirs his tea</td><td>Затем он добавляет сахар и молоко и размешивает чай.</td></tr>
+<tr><td></td><td></td></tr>
+<tr><td>Chapter 8</td><td>Глава 8</td></tr>
+<tr><td>making breakfast</td><td>приготовление завтрака</td></tr>
+<tr><td>preparing cold cereal, making toast</td><td>приготовление холодных хлопьев, приготовление тостов</td></tr>
+<tr><td>Pam pours some cereal from the box into her bowl</td><td>Пэм насыпает хлопья из коробки в свою миску.</td></tr>
+<tr><td>She pours in some milk and sprinkles some sugar on her cereal</td><td>Она наливает немного молока и посыпает хлопья сахаром.</td></tr>
+<tr><td>Then she peels a banana, slices it, and puts the slices on her cereal</td><td>Затем она чистит банан, нарезает его ломтиками и кладет ломтики на хлопья.</td></tr>
+<tr><td>making toast</td><td>сделать тост</td></tr>
+<tr><td>Dan puts two slices of bread into the toaster </td><td>Дэн кладет в тостер два ломтика хлеба.</td></tr>
+<tr><td>By pressing the starter he lowers the bread into the toaster.</td><td>Нажав на стартер, он опускает хлеб в тостер.</td></tr>
+<tr><td>Hot wires inside the toaster toast the bread </td><td>Горячие провода внутри тостера поджаривают хлеб</td></tr>
+<tr><td>The toast pops up</td><td>Тост всплывает</td></tr>
+<tr><td>When it's done Dan spread some butter and jam on his toast</td><td>Когда все будет готово, Дэн намазал тост маслом и джемом.</td></tr>
+<tr><td></td><td></td></tr>
+<tr><td>Chapter 9</td><td>Глава 9</td></tr>
+<tr><td>making breakfast 3 : frying an egg </td><td>приготовление завтрака 3 : пожарить яйцо</td></tr>
+<tr><td>There are four burners on Dan’s stove</td><td>На плите Дэна четыре горелки.</td></tr>
+<tr><td>He turns on the gas and one of the burners lights</td><td>Он включает газ, и одна из конфорок загорается.</td></tr>
+<tr><td>He puts a frying pan on the burner and melts some butter in the pan</td><td>Он ставит сковороду на огонь и растапливает в ней немного масла.</td></tr>
+<tr><td>He cracks an egg into the pan and throws the shell into the garbage</td><td>Он разбивает яйцо на сковороду и выбрасывает скорлупу в мусор</td></tr>
+<tr><td>The egg fries</td><td>Яйцо фри</td></tr>
+<tr><td>Dan flips it over once with a spatula and then takes it out of the pan</td><td>Дэн переворачивает его один раз лопаткой, а затем достает из кастрюли.</td></tr>
+<tr><td>He puts the egg on a plate</td><td>Он кладет яйцо на тарелку</td></tr>
+<tr><td></td><td></td></tr>
+<tr><td>Сhapter 10</td><td>Глава 10</td></tr>
+<tr><td>eating breakfast</td><td>завтракать</td></tr>
+<tr><td>Pam and Dan sit down at the table</td><td>Пэм и Дэн садятся за стол</td></tr>
+<tr><td>Pam drinks some coffee from her mug and eat some cereal.</td><td>Пэм пьет кофе из кружки и ест хлопья.</td></tr>
+<tr><td>Dan drinks some tea and has an egg with bacon and toast</td><td>Дэн пьет чай и ест яйцо с беконом и тостами.</td></tr>
+<tr><td>Sometimes he dips his toast into the yolk of his egg as he eats. </td><td>Иногда он макает свой тост в желток яйца, когда ест.</td></tr>
+<tr><td>They read the paper and talk a little bit.</td><td>Они читают газету и немного разговаривают.</td></tr>
+<tr><td>It says here that taxes are going up</td><td>Здесь написано, что налоги растут</td></tr>
+<tr><td>As usual after eating they wipe their lips with their napkins and leave the table</td><td>Как обычно после еды вытирают губы салфетками и уходят из-за стола</td></tr>
+<tr><td></td><td></td></tr>
+<tr><td>Chapter 11 leaving the house</td><td>Глава 11выходя из дома</td></tr>
+<tr><td>Tom puts on a jacket and zips it up</td><td>Том надевает куртку и застегивает молнию.</td></tr>
+<tr><td>He puts on his shoes and ties them</td><td>Он надевает туфли и завязывает их</td></tr>
+<tr><td>He picks up his keys and wallet and puts them in his pockets</td><td>Он берет ключи и бумажник и кладет их в карманы.</td></tr>
+<tr><td>He picks up his backpack</td><td>Он поднимает свой рюкзак</td></tr>
+<tr><td>Then he says “goodbye” to Jenny</td><td>Затем он прощается с Дженни.</td></tr>
+<tr><td>“See you later, Jen”</td><td>«Увидимся позже, Джен»</td></tr>
+<tr><td>“Bye, Tom”</td><td>«Пока, Том»</td></tr>
+<tr><td>He opens the door, steps outside and shuts the door</td><td>Он открывает дверь, выходит наружу и закрывает дверь</td></tr>
+<tr><td></td><td></td></tr>
+<tr><td>Chapter 12</td><td>Глава 12</td></tr>
+<tr><td>taking a bus</td><td>на автобусе</td></tr>
+<tr><td>Jenny checked her bus schedule</td><td>Дженни проверила расписание автобусов.</td></tr>
+<tr><td>Her bus (a) number 77 was due at 8:20 ( number 77 bus )</td><td>Ее автобус (а) номер 77 должен был прибыть в 8:20 (автобус номер 77)</td></tr>
+<tr><td>She walked to the bus stop and sat on a bench to wait for the bus</td><td>Она подошла к автобусной остановке и села на скамейку, чтобы дождаться автобуса.</td></tr>
+<tr><td>The bus arrived on time at 8:20 , the driver opened the door and Jenny got on the bus</td><td>Автобус прибыл вовремя в 8:20, водитель открыл дверь, и Дженни села в автобус.</td></tr>
+<tr><td>She showed the driver her bus pass, other passengers paid their fare</td><td>Она показала водителю свой проездной билет, другие пассажиры оплатили проезд</td></tr>
+<tr><td>All the seats were full so Jenny stood in the aisle</td><td>Все места были заняты, поэтому Дженни стояла в проходе.</td></tr>
+<tr><td>She held onto a strap on the overhead bars</td><td>Она держалась за ремешок на перекладине</td></tr>
+<tr><td>Soon someone got off the bus so a seat was empty.</td><td>Вскоре кто-то вышел из автобуса, так что место было пустым.</td></tr>
+<tr><td>Jenny sat down and read a book while she rode the bus</td><td>Дженни села и читала книгу, пока ехала в автобусе.</td></tr>
+<tr><td>Near her stop she pressed a button to ring the stop signal</td><td>Возле своей остановки она нажала кнопку, чтобы прозвенел стоп-сигнал.</td></tr>
+<tr><td>She walked to the exit and got off at her stop</td><td>Она подошла к выходу и вышла на своей остановке.</td></tr>
+<tr><td></td><td></td></tr>
+<tr><td>Chapter 13 driving a car</td><td>Глава 13водить машину</td></tr>
+<tr><td>starting out</td><td>начиная</td></tr>
+<tr><td>Kate sat in the driver's seat and her friends sat in the passenger seats</td><td>Кейт села на водительское сиденье, а ее друзья — на пассажирские.</td></tr>
+<tr><td>Kate adjusted her seat and the rear-view mirror</td><td>Кейт поправила сиденье и зеркало заднего вида.</td></tr>
+<tr><td>She buckled her seatbelt</td><td>Она пристегнула ремень безопасности</td></tr>
+<tr><td>She put the key into the ignition, turned the key and started the car</td><td>Она вставила ключ в зажигание, повернула ключ и завела машину</td></tr>
+<tr><td>She looked over her shoulder and backed out of the driveway</td><td>Она оглянулась через плечо и отступила от подъездной дорожки</td></tr>
+<tr><td></td><td></td></tr>
+<tr><td>Chapter 14</td><td>Глава 14</td></tr>
+<tr><td>driving a car</td><td>водить машину</td></tr>
+<tr><td>operating a car, shifting gears</td><td>управлять автомобилем, переключать передачи</td></tr>
+<tr><td>Kate stepped on the clutch pedal, shifted into gear, and took her foot off the clutch</td><td>Кейт нажала на педаль сцепления, включила передачу и убрала ногу со сцепления.</td></tr>
+<tr><td>speeding up, slowing down</td><td>ускорение, замедление</td></tr>
+<tr><td>to go faster kate pressed the accelerator as the car speeded up, she shifted into a higher gear</td><td>чтобы ехать быстрее кейт нажала на акселератор когда машина набрала скорость она переключилась на более высокую передачу</td></tr>
+<tr><td>to slow down Kate let up on the accelerator and shifted into a lower gear.</td><td>Чтобы замедлить движение, Кейт отпустила педаль газа и переключилась на более низкую передачу.</td></tr>
+<tr><td>The car slowed down.</td><td>Машина замедлилась.</td></tr>
+<tr><td>Kate stepped on the brake </td><td>Катя нажала на тормоз</td></tr>
+<tr><td>Kate put her turn signal on and turned the steering wheel </td><td>Кейт включила поворотник и повернула руль.</td></tr>
+<tr><td>When it got dark she turned on the lights </td><td>Когда стемнело, она включила свет</td></tr>
+<tr><td>When it rained she turned on the windshield wipers</td><td>Когда шел дождь, она включила дворники</td></tr>
+<tr><td></td><td></td></tr>
+<tr><td>Chapter 15 </td><td>Глава 15</td></tr>
+<tr><td>driving along </td><td>вождение</td></tr>
+<tr><td>At an intersection Kate stopped for a red light</td><td>На перекресткеКейт остановилась на красный свет</td></tr>
+<tr><td>When the light turned green, she went ahead</td><td>Когда загорелся зеленый свет, она пошла вперед</td></tr>
+<tr><td>Once she went over the speed limit </td><td>Однажды она превысила скорость</td></tr>
+<tr><td>A police officer stopped her and gave her a ticket</td><td>Полицейский остановил ее и выписал ей штраф.</td></tr>
+<tr><td>You were speeding, ma'am</td><td>Вы превышали скорость, мэм</td></tr>
+<tr><td>Really officer, sorry</td><td>Действительно офицер, извините</td></tr>
+<tr><td>At the end of her trip she parked and turned the car off</td><td>В конце поездки она припарковалась и выключила машину.</td></tr>
+<tr><td>Kate and her friends got out of the car and Kate locked it </td><td>Кейт и ее друзья вышли из машины, и Кейт заперла ее.</td></tr>
+<tr><td>some things drivers do</td><td>некоторые вещи, которые делают водители</td></tr>
+<tr><td>changing lanes </td><td>перестроение</td></tr>
+<tr><td>turning left </td><td>поворот налево</td></tr>
+<tr><td>turning right </td><td>поворот направо</td></tr>
+<tr><td>going straight </td><td>прямо</td></tr>
+<tr><td>getting on (entering) a freeway</td><td>выезжать (выезжать) на автостраду</td></tr>
+<tr><td>getting off (exiting) a freeway</td><td>съезд (выезд) с автострады</td></tr>
+<tr><td>yielding right-of-way </td><td>уступая дорогу</td></tr>
+<tr><td>passing someone</td><td>мимо кого-то</td></tr>
+<tr><td>pulling over to the side of the road</td><td>съезд на обочину дороги</td></tr>
+<tr><td>Stopping for gas</td><td>Остановка для газа</td></tr>
+<tr><td>Kate pulled into a gas station and pulled up to a pump</td><td>Кейт заехала на заправку и подъехала к насосу</td></tr>
+<tr><td>she told the attendant what kind of gas she wanted and how much</td><td>она сказала дежурному, какой газ ей нужен и сколько</td></tr>
+<tr><td>“yes, ma'am”</td><td>"Да, мэм"</td></tr>
+<tr><td>“Unleaded. fill it up please”</td><td>«Неэтилированный. Полный бак, пожалуйста"</td></tr>
+<tr><td>He pumped the gas for her and checked the oil </td><td>Он закачал для нее газ и проверил масло</td></tr>
+<tr><td>“oil’s okay, ma'am”</td><td>«с маслом все в порядке, мэм»</td></tr>
+<tr><td>then she paid him</td><td>потом она заплатила ему</td></tr>
+<tr><td>“that'll be $15”</td><td>«это будет 15 долларов»</td></tr>
+<tr><td>“here you go”</td><td>"Ну вот"</td></tr>
+<tr><td></td><td></td></tr>
+<tr><td>Chapter 16</td><td>Глава 16</td></tr>
+<tr><td>taking a train </td><td>сесть на поезд</td></tr>
+<tr><td>Tom bought a ticket from the ticket machine, other passengers bought tickets at the ticket window</td><td>Том купил билет в автомате, другие пассажиры купили билеты в кассе</td></tr>
+<tr><td>Tom inserted his ticket into the slot in the turnstile, the gate opened and Tom walked through</td><td>Том вставил свой билет в прорезь турникета, ворота открылись, и Том прошел внутрь.</td></tr>
+<tr><td>He followed the signs to his gate</td><td>Он следовал указателям к своим воротам</td></tr>
+<tr><td>He waited on the platform next to the track</td><td>Он ждал на платформе рядом с трассой</td></tr>
+<tr><td>After his train arrived he got on</td><td>После того, как его поезд прибыл, он сел в</td></tr>
+<tr><td>The train was crowded so he had to stand </td><td>Поезд был переполнен, поэтому ему пришлось стоять</td></tr>
+<tr><td>His station was announced and he got off the train</td><td>Его станция была объявлена, и он вышел из поезда</td></tr>
+<tr><td></td><td></td></tr>
+<tr><td>Chapter 17</td><td>Глава 17</td></tr>
+<tr><td>taking a taxi</td><td>взять такси</td></tr>
+<tr><td>Pam hailed a taxi</td><td>Пэм поймала такси</td></tr>
+<tr><td>she got into the backseat and told the driver where she wanted to go</td><td>она села на заднее сиденье и сказала водителю, куда она хочет ехать</td></tr>
+<tr><td>“I need to go to Riverside Square”</td><td>«Мне нужно на Риверсайд-сквер»</td></tr>
+<tr><td>“okay”</td><td>"Ладно"</td></tr>
+<tr><td>he started the meter</td><td>он запустил счетчик</td></tr>
+<tr><td>She checked the meter a few times</td><td>Она проверила счетчик несколько раз</td></tr>
+<tr><td>“hmm 450 </td><td>«хм 450</td></tr>
+<tr><td>That's about right“</td><td>Это примерно так“</td></tr>
+<tr><td>during the ride</td><td>во время поездки</td></tr>
+<tr><td>She gave the driver directions: </td><td>Она дала указания водителю:</td></tr>
+<tr><td>“turn left at the next traffic light all right”</td><td>«Повернуть налево на следующем светофоре можно»</td></tr>
+<tr><td>She told him where to stop </td><td>Она сказала ему, где остановиться</td></tr>
+<tr><td>“pull over by that red car”</td><td>«остановись у этой красной машины»</td></tr>
+<tr><td>“yes ma'am”</td><td>"Да, мэм"</td></tr>
+<tr><td>She paid the fare and gave him a tip</td><td>Она заплатила за проезд и дала ему чаевые</td></tr>
+<tr><td>“Here's 620 plus a little extra for you”</td><td>«Вот вам 620 плюс немного больше»</td></tr>
+<tr><td>“thank you”</td><td>"Спасибо"</td></tr>
+<tr><td></td><td></td></tr>
+<tr><td>Chapter 18</td><td>Глава 18</td></tr>
+<tr><td>walking somewhere </td><td>ходить куда-то</td></tr>
+<tr><td>Dan walked on the sidewalk</td><td>Дэн шел по тротуару</td></tr>
+<tr><td>Sometimes he stepped over dirt or puddles</td><td>Иногда он переступал через грязь или лужи</td></tr>
+<tr><td>Nnce he tripped on a crack in the sidewalk </td><td>Потом он споткнулся о трещину в тротуаре</td></tr>
+<tr><td>At a corner he stopped at the curb and waited for traffic to pass</td><td>На углу он остановился у обочины и подождал, пока проедет транспорт.</td></tr>
+<tr><td>Then he crossed the street by walking in the crosswalk</td><td>Затем он перешел улицу, идя по пешеходному переходу</td></tr>
+<tr><td>Once he took a shortcut across a parking lot</td><td>Однажды он срезал путь через парковку</td></tr>
+<tr><td>When he could he ran because he was late</td><td>Когда он мог, он бежал, потому что он опоздал</td></tr>
+<tr><td>He crossed a busy street by using a pedestrian overpass</td><td>Он пересек оживленную улицу по пешеходной эстакаде.</td></tr>
+<tr><td></td><td></td></tr>
+<tr><td>Chapter 21</td><td>Глава 21</td></tr>
+<tr><td>making dinner </td><td>готовить ужин</td></tr>
+<tr><td>making a salad</td><td>приготовление салата</td></tr>
+<tr><td>Paul rinsed some lettuce by running water over it and drained it in a colander</td><td>Пол промыл немного салата под струей воды и откинул на дуршлаг.</td></tr>
+<tr><td>He also rinsed some tomatoes and cucumbers and sliced them with a knife on a cutting board</td><td>Он также промыл несколько помидоров и огурцов и нарезал их ножом на разделочной доске.</td></tr>
+<tr><td>He mixed the lettuce and the cucumber in a salad bowl and laid the tomato slices on top</td><td>Он смешал листья салата и огурец в салатнице, а сверху положил ломтики помидора.</td></tr>
+<tr><td>Then he sprinkled some grated cheese on the salad</td><td>Затем он посыпал салат тертым сыром.</td></tr>
+<tr><td>He poured some dressing on his salad</td><td>Он налил немного заправки на свой салат</td></tr>
+<tr><td></td><td></td></tr>
+<tr><td>Chapter 19</td><td>Глава 19</td></tr>
+<tr><td>riding a bicycle</td><td>поездка на велосипеде</td></tr>
+<tr><td>I put on my helmet.</td><td>Я надел шлем.</td></tr>
+<tr><td>I held the handlebars and swung my leg over the bike</td><td>Я держал руль и перекинул ногу через велосипед</td></tr>
+<tr><td>I started pedaling and the bike moved to go up hill</td><td>Я начал крутить педали, и велосипед двинулся в гору</td></tr>
+<tr><td>I shifted into a lower gear to slow down</td><td>Я переключился на более низкую передачу, чтобы замедлить</td></tr>
+<tr><td>I squeezed the brakes finally</td><td>наконец-то я нажал на тормоза</td></tr>
+<tr><td>I got off my bike and locked it up in a bike rack </td><td>Я слез с велосипеда и запер его в велосипедной стойке.</td></tr>
+<tr><td></td><td></td></tr>
+<tr><td>Chapter 20</td><td>Глава 20</td></tr>
+<tr><td>returning home </td><td>возвращаясь домой</td></tr>
+<tr><td>Dan got back to his building</td><td>Дэн вернулся в свое здание</td></tr>
+<tr><td>He checked his mailbox and took out his mail</td><td>Он проверил свой почтовый ящик и достал почту</td></tr>
+<tr><td>Then he took an elevator up to his floor</td><td>Затем он поднялся на лифте на свой этаж</td></tr>
+<tr><td>He walked down the hall to his apartment</td><td>Он прошел по коридору в свою квартиру</td></tr>
+<tr><td>He opened his door and went inside</td><td>Он открыл дверь и вошел внутрь</td></tr>
+<tr><td>“Hi Pam I'm back”</td><td>«Привет, Пэм, я вернулся»</td></tr>
+<tr><td>“Hi Dan”</td><td>«Привет Дэн»</td></tr>
+<tr><td></td><td></td></tr>
+<tr><td>taking an elevator</td><td>в лифте</td></tr>
+<tr><td>pressing the UP button, </td><td>нажав кнопку ВВЕРХ,</td></tr>
+<tr><td>waiting for the elevator, </td><td>ожидание лифта,</td></tr>
+<tr><td>getting on the elevator, </td><td>вход в лифт,</td></tr>
+<tr><td>choosing a floor, </td><td>выбор этажа,</td></tr>
+<tr><td>getting off the elevator </td><td>выход из лифта</td></tr>
+<tr><td>I got back to my house</td><td>я вернулся в свой дом</td></tr>
+<tr><td>I walked up the steps to my front door</td><td>Я поднялся по ступенькам к входной двери</td></tr>
+<tr><td>I unlocked it with my house key and then opened the door by turning the doorknob</td><td>Я открыл его своим ключом от дома, а затем открыл дверь, повернув дверную ручку.</td></tr>
+<tr><td>I set my bag down</td><td>я поставил свою сумку</td></tr>
+<tr><td>I hung my coat up in the front closet and took off my shoes</td><td>Я повесил пальто в шкафу и снял обувь.</td></tr>
+<tr><td>I picked up my mail</td><td>я забрал почту</td></tr>
+<tr><td>Then I went into the living room and checked for messages on the answering machine </td><td>Затем я пошел в гостиную и проверил сообщения на автоответчике.</td></tr>
+<tr><td>“you have three messages”</td><td>«У вас есть три сообщения»</td></tr>
+<tr><td>Then I changed clothes</td><td>Затем я переоделся</td></tr>
+<tr><td>I took off my work clothes and changed into some casual clothes</td><td>Я снял рабочую одежду и переоделся в повседневную одежду</td></tr>
+<tr><td></td><td></td></tr>
+<tr><td>Chapter 22</td><td>Глава 22</td></tr>
+<tr><td>making dinner - preparing</td><td>приготовление ужина - приготовление</td></tr>
+<tr><td>Kate peeled some carrots and sliced them</td><td>Кейт очистила морковь и нарезала ее ломтиками.</td></tr>
+<tr><td>She also chopped up some broccoli</td><td>Она также нарезала немного брокколи.</td></tr>
+<tr><td>She threw the stalk away and rinsed the broccoli</td><td>Она выбросила стебель и промыла брокколи.</td></tr>
+<tr><td>She put some water in a saucepan and put a steamer basket inside</td><td>Она налила немного воды в кастрюлю и поставила внутрь корзину для пароварки.</td></tr>
+<tr><td>Then she put the vegetables in the basket</td><td>Затем она положила овощи в корзину</td></tr>
+<tr><td>She put a lid on the saucepan and lit the burner under it </td><td>Она накрыла кастрюлю крышкой и зажгла под ней горелку.</td></tr>
+<tr><td>The water boiled and steamed the vegetables</td><td>Вода закипела и пропарила овощи</td></tr>
+<tr><td></td><td></td></tr>
+<tr><td>Chapter 23</td><td>Глава 23</td></tr>
+<tr><td>making spaghetti</td><td>приготовление спагетти</td></tr>
+<tr><td>Kate diced an onion and fried it with some ground beef in a frying pan</td><td>Кейт нарезала лук и обжарила его с говяжьим фаршем на сковороде.</td></tr>
+<tr><td>As the beef and onion mixture fried she stirred it </td><td>Когда смесь говядины и лука поджарилась, она помешала ее.</td></tr>
+<tr><td>When the meat was brown she turned off the burner</td><td>Когда мясо было коричневым, она выключила горелку</td></tr>
+<tr><td>She poured the fat off into a can </td><td>Она слила жир в банку</td></tr>
+<tr><td>She heated two cans of tomato sauce in a saucepan</td><td>Она нагрела две банки томатного соуса в кастрюле.</td></tr>
+<tr><td>She added the mixture of beef and onions and stirred it into the sauce with some spices</td><td>Она добавила смесь говядины и лука и размешала в соусе со специями.</td></tr>
+<tr><td>When it started to boil she turned down the heat and let the sauce simmer in another pan</td><td>Когда он закипел, она убавила огонь и дала соусу закипеть в другой кастрюле.</td></tr>
+<tr><td>She boiled some water</td><td>Она вскипятила воды</td></tr>
+<tr><td>She put some spaghetti into the boiling water and boiled it until it was tender </td><td>Она положила в кипящую воду несколько спагетти и варила их, пока они не стали мягкими.</td></tr>
+<tr><td>In a colander, she drained the spaghetti </td><td>В дуршлаге она слила спагетти</td></tr>
+<tr><td>After putting the spaghetti on a plate </td><td>После выкладывания спагетти на тарелку</td></tr>
+<tr><td>She ladled some sauce over it</td><td>Она налила на него немного соуса</td></tr>
+<tr><td></td><td></td></tr>
+<tr><td>Chapter 24</td><td>Глава 24</td></tr>
+<tr><td>making dinner</td><td>готовить ужин</td></tr>
+<tr><td>for cooking rice Paul measured out one cup of rice and poured it into a pot to rinse the rice</td><td>для приготовления риса Пол отмерил одну чашку риса и высыпал ее в кастрюлю, чтобы промыть рис</td></tr>
+<tr><td>he put some water in the pot</td><td>он налил немного воды в кастрюлю</td></tr>
+<tr><td>he poured off the water to get rid of the dirt and husks</td><td>он слил воду, чтобы избавиться от грязи и шелухи</td></tr>
+<tr><td>then he measured out two cups of clean water and poured it into the pot</td><td>затем отмерил две чашки чистой воды и налил в кастрюлю</td></tr>
+<tr><td>he put a lid on the pot and heated the water </td><td>он накрыл кастрюлю крышкой и нагрел воду</td></tr>
+<tr><td>When it started boiling he turned down the flame </td><td>Когда он начал кипеть, он выключил пламя</td></tr>
+<tr><td>After about 15 minutes he checked the rice</td><td>Примерно через 15 минут он проверил рис.</td></tr>
+<tr><td>let's see if this is ready</td><td>посмотрим, готово ли это</td></tr>
+<tr><td>he decided it was ready to eat</td><td>он решил, что он готов к употреблению</td></tr>
+<tr><td>yep done</td><td>да сделано</td></tr>
+<tr><td></td><td></td></tr>
+<tr><td>chapter 25</td><td>глава 25</td></tr>
+<tr><td>eating dinner</td><td>обедает</td></tr>
+<tr><td>Paul and Kate set the table </td><td>Пол и Кейт накрывают на стол</td></tr>
+<tr><td>Everyone sat down at the table </td><td>Все сели за стол</td></tr>
+<tr><td>They put their napkins on their laps</td><td>Они кладут свои салфетки на колени</td></tr>
+<tr><td>Paul helped himself to some salad and past the serving dish</td><td>Пол налил себе немного салата и прошел мимо сервировочного блюда.</td></tr>
+<tr><td>“Pass the salad please”</td><td>“Передайте салат, пожалуйста”</td></tr>
+<tr><td>then they helped themselves to the food as they ate they talked </td><td>потом они набрасывались на еду пока ели они разговаривали</td></tr>
+<tr><td>so where did you go today </td><td>так куда ты ходил сегодня</td></tr>
+<tr><td>nowhere special</td><td>ничего особенного</td></tr>
+<tr><td>Paul had a second helping of spaghetti</td><td>У Пола была вторая порция спагетти.</td></tr>
+<tr><td>I'll have a bit more of this </td><td>у меня будет еще немного этого</td></tr>
+<tr><td>After the main course they had some dessert</td><td>После основного блюда у них был десерт.</td></tr>
+<tr><td>mmm ice cream </td><td>мороженое ммм</td></tr>
+<tr><td>looks good</td><td>выглядит хорошо</td></tr>
+<tr><td></td><td></td></tr>
+<tr><td>chapter 26</td><td>глава 26</td></tr>
+<tr><td>clearing the table</td><td>уборка со стола</td></tr>
+<tr><td>after everyone was done Paul and Kate offered to clear the table</td><td>после того, как все закончили, Пол и Кейт предложили убрать со стола</td></tr>
+<tr><td>Paul and I will clear up </td><td>Пол и я разберемся</td></tr>
+<tr><td>yeah the rest of you just sit and relax </td><td>да остальные просто сядьте и расслабьтесь</td></tr>
+<tr><td>they stacked up the dirty dishes</td><td>они сложили грязную посуду</td></tr>
+<tr><td>and carried them to the kitchen </td><td>и понес их на кухню</td></tr>
+<tr><td>They took the serving dishes off the table</td><td>Они убрали сервировочную посуду со стола</td></tr>
+<tr><td>and put the leftovers into containers which they put into the refrigerator</td><td>а остатки сложить в контейнеры, которые поставили в холодильник</td></tr>
+<tr><td>they scraped the scraps from the plates into the garbage</td><td>они соскребали объедки с тарелок в мусор</td></tr>
+<tr><td>then they wipe the table off and threw the scraps and crumbs from the table into the garbage</td><td>потом вытирают стол, а объедки и крошки со стола выбрасывают в мусор</td></tr>
+<tr><td></td><td></td></tr>
+<tr><td>chapter 27</td><td>глава 27</td></tr>
+<tr><td>doing dishes</td><td>мыть посуду</td></tr>
+<tr><td>Paul put the plug into the drain in the sink</td><td>Пол вставил заглушку в слив в раковине</td></tr>
+<tr><td>then he filled the sink with water</td><td>затем он наполнил раковину водой</td></tr>
+<tr><td>he put some dish soap into the water</td><td>он положил немного средства для мытья посуды в воду</td></tr>
+<tr><td>he washed the dirty dishes</td><td>он помыл грязную посуду</td></tr>
+<tr><td>he scrubbed some very dirty dishes</td><td>он вымыл очень грязную посуду</td></tr>
+<tr><td>then he rinsed the dishes</td><td>потом помыл посуду</td></tr>
+<tr><td>he put the wet dishes in the dish rack where the water dripped off them</td><td>он поставил мокрую посуду на подставку для посуды, где с нее капала вода</td></tr>
+<tr><td>then he pulled the plug from the sink and the dirty water went down the drain</td><td>потом он вытащил пробку из раковины и грязная вода ушла в канализацию</td></tr>
+<tr><td>he dried the dishes with a towel and then put the dishes away</td><td>он вытер посуду полотенцем, а затем убрал посуду</td></tr>
+<tr><td></td><td></td></tr>
+<tr><td>chapter 28</td><td>глава 28</td></tr>
+<tr><td>relaxing at home 1</td><td>отдых дома 1</td></tr>
+<tr><td>playing a CD</td><td>воспроизведение компакт-диска</td></tr>
+<tr><td>I chose a CD from the shelf </td><td>Я выбрал компакт-диск с полки</td></tr>
+<tr><td>Holding the disc at the edge I took it out of the case</td><td>Держа диск за край, я вынул его из футляра.</td></tr>
+<tr><td>then I loaded the disc into the tray</td><td>затем я загрузил диск в лоток</td></tr>
+<tr><td>I picked up the remote and punched in the number of the track</td><td>Я взял пульт и набрал номер трека</td></tr>
+<tr><td>I wanted to listen to</td><td>я хотел послушать</td></tr>
+<tr><td>I listened to the music</td><td>я слушал музыку</td></tr>
+<tr><td>finally I ejected the CD</td><td>наконец я выбросил компакт-диск</td></tr>
+<tr><td></td><td></td></tr>
+<tr><td>chapter 29</td><td>глава 29</td></tr>
+<tr><td>relaxing at home -</td><td>отдыхаете дома -</td></tr>
+<tr><td>using a personal cassette player</td><td>с помощью личного кассетного плеера</td></tr>
+<tr><td>I put a cassette into the player</td><td>Я вставил кассету в плеер</td></tr>
+<tr><td>I plugged the earphones into the jack and put them on</td><td>Я подключил наушники к разъему и надел их</td></tr>
+<tr><td>then I started the tape</td><td>затем я начал запись</td></tr>
+<tr><td>I adjusted the volume </td><td>я отрегулировал громкость</td></tr>
+<tr><td>Turned it up to make the music louder and turned it down to make the music softer </td><td>Увеличил громкость, чтобы сделать музыку громче, и уменьшил громкость, чтобы сделать музыку тише.</td></tr>
+<tr><td>When I was done listening I took the tape out and put it back in the case</td><td>Когда я закончил слушать, я вынул кассету и положил ее обратно в футляр.</td></tr>
+<tr><td></td><td></td></tr>
+<tr><td>chapter 30</td><td>глава 30</td></tr>
+<tr><td>relaxing at home 3</td><td>отдых дома 3</td></tr>
+<tr><td>reading a book</td><td>читая книгу</td></tr>
+<tr><td>Pam opened the book to her bookmark</td><td>Пэм открыла книгу на закладку</td></tr>
+<tr><td>she turned the pages as she read</td><td>она перелистывала страницы, пока читала</td></tr>
+<tr><td>when she saw a word she didn't know “bogus” what does that mean</td><td>когда она увидела слово, которое она не знала, "подделка", что это значит</td></tr>
+<tr><td>she looked it up in a dictionary</td><td>она посмотрела в словаре</td></tr>
+<tr><td>when she finished reading she closed the book</td><td>когда она закончила читать, она закрыла книгу</td></tr>
+<tr><td></td><td></td></tr>
+<tr><td>reading a magazine</td><td>читая журнал</td></tr>
+<tr><td>Pam picked up the latest issue of Everyone magazine</td><td>Пэм взяла последний номер журнала Everyone</td></tr>
+<tr><td>she looked at some of the ads</td><td>она посмотрела на некоторые объявления</td></tr>
+<tr><td>then she flipped through the magazine until she found an interesting article</td><td>потом полистала журнал пока не нашла интересную статью</td></tr>
+<tr><td>she read the article and looked at the pictures</td><td>она прочитала статью и посмотрела на картинки</td></tr>
+<tr><td></td><td></td></tr>
+<tr><td>chapter 31</td><td>глава 31</td></tr>
+<tr><td>relaxing at home</td><td>отдыхаете дома</td></tr>
+<tr><td>for watching television Tom picked up the remote for the TV and turned the TV on</td><td>для просмотра телевизора Том взял пульт от телевизора и включил телевизор</td></tr>
+<tr><td>a game show was on </td><td>было игровое шоу</td></tr>
+<tr><td>“now for fifty three dollars what's the name of ”</td><td>«теперь за пятьдесят три доллара как там имя»</td></tr>
+<tr><td>Tom didn't want to watch it </td><td>Том не хотел это смотреть</td></tr>
+<tr><td>“that's boring” </td><td>"это скучно"</td></tr>
+<tr><td>so he used the remote to change channels</td><td>поэтому он использовал пульт для переключения каналов</td></tr>
+<tr><td>he turned up the volume so he could hear better</td><td>он увеличил громкость, чтобы лучше слышать</td></tr>
+<tr><td>during a commercial he went to the kitchen for a snack</td><td>во время рекламы он пошел на кухню перекусить</td></tr>
+<tr><td>he watched the news and when it ended</td><td>он смотрел новости и когда они закончились</td></tr>
+<tr><td>that's the end of the news</td><td>это конец новости</td></tr>
+<tr><td>he turned the TV off</td><td>он выключил телевизор</td></tr>
+<tr><td></td><td></td></tr>
+<tr><td>chapter 32</td><td>глава 32</td></tr>
+<tr><td>relaxing at home</td><td>отдыхаете дома</td></tr>
+<tr><td>for watching a video jenny rented a video from a video store</td><td>для просмотра видео Дженни взяла видео напрокат в видеомагазине</td></tr>
+<tr><td>there you are ma'am</td><td>вот вы, мэм</td></tr>
+<tr><td>at home</td><td>дома</td></tr>
+<tr><td>she took the tape out of the case </td><td>она достала кассету из футляра</td></tr>
+<tr><td>with the remote she switched to the video setting and turned the VCR on</td><td>с помощью пульта она переключилась на настройку видео и включила видеомагнитофон</td></tr>
+<tr><td>she loaded the video into it and started the tape</td><td>она загрузила в него видео и запустила ленту</td></tr>
+<tr><td>she and Tom watched the video to see something again they rewound the tape</td><td>она и Том посмотрели видео, чтобы снова что-то увидеть они перемотали пленку</td></tr>
+<tr><td>I'd like to see that again</td><td>Я хотел бы увидеть это снова</td></tr>
+<tr><td>Jenny paused it when Tom left for a minute </td><td>Дженни поставила его на паузу, когда Том ушел на минуту</td></tr>
+<tr><td>at the end of the video she stopped the tape, rewound and ejected it</td><td>в конце видео она остановила кассету, перемотала и выбросила ее</td></tr>
+<tr><td>later she returned it to the store</td><td>позже она вернула его в магазин</td></tr>
+<tr><td></td><td></td></tr>
+<tr><td>Chapter 33</td><td>Глава 33</td></tr>
+<tr><td>babysitting</td><td>присмотр за детьми</td></tr>
+<tr><td>Tom babysat his cousins while their parents were gone</td><td>Том присматривал за своими двоюродными братьями, пока их родителей не было</td></tr>
+<tr><td>“took care of them”</td><td>«заботился о них»</td></tr>
+<tr><td>Tom's aunt and uncle dropped the children off at Tom's house </td><td>Тетя и дядя Тома подвезли детей к дому Тома.</td></tr>
+<tr><td>“Bye kids be good”</td><td>«Пока, дети, будьте хорошими»</td></tr>
+<tr><td>“they'll be fine aunt Rita”</td><td>«Все будет хорошо, тетя Рита»</td></tr>
+<tr><td>Tom took them to a playground back at Toms house</td><td>Том отвел их на детскую площадку в доме Тома.</td></tr>
+<tr><td>they played with blocks, drew pictures with crayons and put a puzzle together</td><td>они играли с кубиками, рисовали мелками и собирали пазлы</td></tr>
+<tr><td>Tom changed the baby's diaper and put him to bed in the crib </td><td>Том поменял ребенку подгузник и уложил спать в кроватку</td></tr>
+<tr><td>the other children took a bath</td><td>другие дети приняли ванну</td></tr>
+<tr><td>Tom read them a story and they watched a cartoon on TV</td><td>Том прочитал им сказку, и они посмотрели мультфильм по телевизору.</td></tr>
+<tr><td>later their parents picked the children up </td><td>позже их родители забрали детей</td></tr>
+<tr><td>“come on kids time to go”</td><td>«Давайте, дети, пора идти»</td></tr>
+<tr><td>thanks Tom</td><td>спасибо Том</td></tr>
+<tr><td>sure anytime</td><td>обязательно в любое время</td></tr>
+<tr><td></td><td></td></tr>
+<tr><td>chapter 34</td><td>глава 34</td></tr>
+<tr><td>going to bed</td><td>иду спать</td></tr>
+<tr><td>when it got late Jenny yawned</td><td>когда стало поздно Дженни зевнула</td></tr>
+<tr><td>she said good night to her parents</td><td>она пожелала спокойной ночи своим родителям</td></tr>
+<tr><td>good night Jen </td><td>спокойной ночи Джен</td></tr>
+<tr><td>good night mom dad</td><td>спокойной ночи мама папа</td></tr>
+<tr><td>she went upstairs to her room and changed into her nightgown</td><td>она поднялась наверх в свою комнату и переоделась в ночную рубашку</td></tr>
+<tr><td>she hung some of her clothes up in the closet and put her dirty clothes in the laundry basket</td><td>часть своей одежды она повесила в шкаф, а грязную положила в корзину для белья</td></tr>
+<tr><td>she brushed her teeth, washed her face and used the toilet</td><td>она почистила зубы, умылась и сходила в туалет</td></tr>
+<tr><td>after turning on her bedside lamp she turned off the room light</td><td>после включения прикроватной лампы она выключила свет в комнате</td></tr>
+<tr><td>she pulled back the covers and got into bed</td><td>она откинула одеяло и легла в постель</td></tr>
+<tr><td>she set her alarm clock and put it on her nightstand</td><td>она завела будильник и поставила его на тумбочку</td></tr>
+<tr><td>she read in bed for a while</td><td>она некоторое время читала в постели</td></tr>
+<tr><td>finally she turned off the lamp, lay down and fell asleep</td><td>наконец она выключила лампу, легла и заснула</td></tr>
+<tr><td></td><td></td></tr>
+<tr><td>chapter 35</td><td>глава 35</td></tr>
+<tr><td>doing laundry</td><td>стирка</td></tr>
+<tr><td>later today</td><td>позже сегодня</td></tr>
+<tr><td>I'm going to do my laundry</td><td>я собираюсь стирать</td></tr>
+<tr><td>I'll carry the laundry basket to the laundry room</td><td>Я понесу корзину для белья в прачечную</td></tr>
+<tr><td>I'll take the laundry out of the basket and then I'll sort it by separating dark colors from light</td><td>Я достану белье из корзины и рассортирую его, отделив темные цвета от светлых.</td></tr>
+<tr><td>I'll check the pockets of the pants and shirts and take out anything I find in them</td><td>Я проверю карманы брюк и рубашек и вытащу из них все, что найду.</td></tr>
+<tr><td>then I'll put a load of laundry into the washing machine</td><td>тогда я закину белье в стиральную машину</td></tr>
+<tr><td>I'll adjust the settings on the machine</td><td>Я отрегулирую настройки на машине</td></tr>
+<tr><td>then I'll put in some detergent and turn the machine on</td><td>затем я добавлю немного моющего средства и включу машину</td></tr>
+<tr><td>the machine will wash rinse and spin the laundry</td><td>машина будет стирать полоскать и отжимать белье</td></tr>
+<tr><td>I'll take the wet clothes out of the machine</td><td>Я достану мокрую одежду из машины</td></tr>
+<tr><td>I'll hang some of the laundry out to dry</td><td>Я повешу немного белья, чтобы высохнуть</td></tr>
+<tr><td>I'll put some other laundry into the dryer the dryer will dry it by heating and tumbling it</td><td>Я положу другое белье в сушилку, сушилка высушит его, нагревая и переворачивая.</td></tr>
+<tr><td>then I'll take it out of the machine</td><td>тогда я вытащу его из машины</td></tr>
+<tr><td>I'll fold some of the dry laundry and put it into drawers</td><td>Я сложим немного сухого белья и положу в ящики.</td></tr>
+<tr><td>I'll iron other things and hang them up in the closet</td><td>Я поглажу другие вещи и повешу их в шкаф</td></tr>
+<tr><td></td><td></td></tr>
+<tr><td>chapter 36</td><td>глава 36</td></tr>
+<tr><td>cleaning the house</td><td>уборка дома</td></tr>
+<tr><td>in the living room Pam picks up things that are lying around</td><td>в гостиной Пэм собирает валяющиеся вокруг вещи</td></tr>
+<tr><td>she dusts the furniture and the woodwork</td><td>она вытирает пыль с мебели и столярных изделий</td></tr>
+<tr><td>then she vacuums the carpet in the kitchen</td><td>потом она пылесосит ковер на кухне</td></tr>
+<tr><td>Dan cleans the refrigerator and throws out spoiled food </td><td>Дэн чистит холодильник и выбрасывает испорченные продукты</td></tr>
+<tr><td>yeah as cucumber is mushy</td><td>да как огурец мягкий</td></tr>
+<tr><td>Pam wipes the countertops and sweeps the floor in the bathroom</td><td>Пэм протирает столешницы и подметает пол в ванной.</td></tr>
+<tr><td>Dan scrubs the toilet with a toilet brush cleans the sink and scrubs the bathtub</td><td>Дэн чистит унитаз туалетной щеткой, чистит раковину и моет ванну.</td></tr>
+<tr><td>he washes the mirror on the medicine cabinet</td><td>он моет зеркало на аптечке</td></tr>
+<tr><td>then he sweeps the floor and mops it </td><td>потом подметает пол и моет шваброй</td></tr>
+<tr><td>Taking out the trash</td><td>Выносить мусор</td></tr>
+<tr><td>They bundle old newspapers and put empty bottles cans and jars into bags</td><td>Они связывают старые газеты и складывают в пакеты пустые бутылки, банки и банки.</td></tr>
+<tr><td>they set them out for recycling</td><td>они отправляют их на переработку</td></tr>
+<tr><td>then they empty waste baskets and the kitchen garbage into a big garbage bag and take it out to the garbage can</td><td>затем они высыпают мусорные корзины и кухонный мусор в большой мешок для мусора и выносят его в мусорное ведро.</td></tr>
+<tr><td></td><td></td></tr>
+<tr><td>Сhapter 37</td><td>Глава 37</td></tr>
+<tr><td>taking care of pets</td><td>уход за домашними животными</td></tr>
+<tr><td>taking care of a cat</td><td>уход за кошкой</td></tr>
+<tr><td>to feed his cat Tom opened a can of cat food and put it in the cat's dish</td><td>чтобы покормить своего кота, Том открыл банку с кошачьим кормом и положил его в кошачью миску</td></tr>
+<tr><td>he put some fresh water in the water dish</td><td>он налил немного свежей воды в миску с водой</td></tr>
+<tr><td>he also cleaned the litter box</td><td>он также почистил лоток</td></tr>
+<tr><td>he petted the cat good “kitty“ and she purred and rubbed against his leg</td><td>он хорошо погладил кошку "кошечка" а она мурлыкала и терлась о его ногу</td></tr>
+<tr><td>He played with the cat by moving a piece of string “come on kitty get the string” which the cat pounced on</td><td>Он играл с кошкой, передвигая кусок веревки «давай, котенок, возьми веревку», на которую кошка набросилась.</td></tr>
+<tr><td></td><td></td></tr>
+<tr><td>chapter 38</td><td>глава 38</td></tr>
+<tr><td>taking care of pets</td><td>уход за домашними животными</td></tr>
+<tr><td>to taking care of a dog I called my dog</td><td>ухаживать за собакой, которую я назвал своей собакой</td></tr>
+<tr><td>“here Blackie”</td><td>«Вот Блэки»</td></tr>
+<tr><td>“come on boy”</td><td>"Давай, парень"</td></tr>
+<tr><td>after he came I petted him he wagged his tail and barked</td><td>после того как он пришел я его погладила он завилял хвостом и залаял</td></tr>
+<tr><td>I put some dog food in his dish and filled his water dish</td><td>Я положил немного собачьего корма в его тарелку и наполнил миску водой.</td></tr>
+<tr><td>Later I clipped a leash to his collar and took him out for a walk </td><td>Позже я пристегнула поводок к его ошейнику и вывела на прогулку.</td></tr>
+<tr><td>after his walk I threw a stick for him </td><td>после его прогулки я бросил ему палку</td></tr>
+<tr><td>“go get it” </td><td>"иди возьми это"</td></tr>
+<tr><td>and he fetched it</td><td>и он принес это</td></tr>
+<tr><td></td><td></td></tr>
+<tr><td>chapter 39</td><td>глава 39</td></tr>
+<tr><td>taking care of a lawn</td><td>уход за газоном</td></tr>
+<tr><td>Pam filled her lawn mower’s gas tank</td><td>Пэм наполнила бензобак своей газонокосилки</td></tr>
+<tr><td>then started the mower by pulling the cord</td><td>затем запустил косилку, потянув за шнур</td></tr>
+<tr><td>she mowed the lawn by pushing the mower back and forth</td><td>она косила газон, толкая косилку вперед и назад</td></tr>
+<tr><td>where the mower couldn't reach she trimmed the grass by hand</td><td>там, где косилка не могла достать, она косила траву вручную</td></tr>
+<tr><td>she raked up the grass clippings and put them on a compost pile</td><td>она сгребла скошенную траву и сложила в компостную кучу</td></tr>
+<tr><td>she spread some grass seed on bare spots and then watered the lawn</td><td>она разбросала немного семян травы на оголенных участках, а затем полила газон</td></tr>
+<tr><td></td><td></td></tr>
+<tr><td>chapter 40</td><td>глава 40</td></tr>
+<tr><td>gardening planting a garden</td><td>садоводство посадка сада</td></tr>
+<tr><td>Tom will turn the soil with a spade</td><td>Том перевернет землю лопатой</td></tr>
+<tr><td>he'll plant some seeds and cover them with a mound of soil</td><td>он посадит несколько семян и покроет их насыпью земли</td></tr>
+<tr><td>he'll plant some seedlings and tie them to small stakes</td><td>он посадит несколько саженцев и привяжет их к небольшим кольям</td></tr>
+<tr><td>then he'll water the garden </td><td>тогда он будет поливать огород</td></tr>
+<tr><td>taking care of a garden </td><td>уход за садом</td></tr>
+<tr><td>Tom will weed the garden</td><td>Том будет пропалывать сад</td></tr>
+<tr><td>he'll prune extra leaves from some plants</td><td>он обрежет лишние листья с некоторых растений</td></tr>
+<tr><td>he'll check for harmful insects and spray insecticide on some plants</td><td>он проверит наличие вредных насекомых и распылит инсектицид на некоторые растения</td></tr>
+<tr><td>he'll put some fertilizer on the soil</td><td>он положит некоторое удобрение на почву</td></tr>
+<tr><td>finally he'll pick some flowers for the house</td><td>наконец он соберет цветы для дома</td></tr>
+<tr><td></td><td></td></tr>
+<tr><td>Сhapter 41 cleaning a car inside</td><td>Глава 41 чистка автомобиля внутри</td></tr>
+<tr><td>I washed the windows inside, </td><td>Я вымыл окна внутри,</td></tr>
+<tr><td>wipe off the dashboard and vacuumed the floor </td><td>протер приборную панель и пропылесосил пол</td></tr>
+<tr><td>I dip a sponge into soapy water and washed the car with it </td><td>Макаю губку в мыльную воду и мою ею машину</td></tr>
+<tr><td>to rinse the car I spray it with water</td><td>чтобы ополоснуть машину, я брызгаю на нее водой</td></tr>
+<tr><td>I dry it with some rags</td><td>Я высушиваю тряпками</td></tr>
+<tr><td>then I spread some wax on the car</td><td>затем я намазал машину воском</td></tr>
+<tr><td>after it has dried I wiped the wax off and buffed the car with a soft cloth</td><td>после высыхания я стер воск и отполировал машину мягкой тряпкой</td></tr>
+<tr><td>finally I washed the windows outside</td><td>наконец-то я вымыл окна снаружи</td></tr>
+<tr><td></td><td></td></tr>
+<tr><td>Chapter 42</td><td>Глава 42</td></tr>
+<tr><td>taking a car to a garage for repairs</td><td>отвезти машину в гараж на ремонт</td></tr>
+<tr><td>I called for an appointment to get my car fixed</td><td>Я позвонил, чтобы записаться на ремонт моей машины</td></tr>
+<tr><td>my car is making a strange noise</td><td>моя машина издает странный звук</td></tr>
+<tr><td>when can you look at it</td><td>когда ты сможешь посмотреть на это</td></tr>
+<tr><td>I took my car into the garage and the mechanic diagnosed the problem</td><td>Я отвез свою машину в гараж, и механик диагностировал проблему.</td></tr>
+<tr><td>yep sounds like a valve problem</td><td>да похоже на проблемы с клапаном</td></tr>
+<tr><td>I asked him for an estimate of the cost</td><td>Я попросил его оценить стоимость</td></tr>
+<tr><td>how much will it cost to fix</td><td>сколько будет стоить исправить</td></tr>
+<tr><td>probably about 250</td><td>наверное около 250</td></tr>
+<tr><td>he worked on the engine when I came back later to pick up the car and </td><td>он работал над двигателем, когда я вернулся позже, чтобы забрать машину и</td></tr>
+<tr><td>is it ready yet</td><td>он уже готов</td></tr>
+<tr><td>it's ready</td><td>готово</td></tr>
+<tr><td>he gave me the bill for the repair </td><td>он дал мне счет за ремонт</td></tr>
+<tr><td>“that'll be 294 for parts and labor” </td><td>«Это будет 294 за запчасти и работу»</td></tr>
+<tr><td>“two hundred ninety four dollars”</td><td>«двести девяносто четыре доллара»</td></tr>
+<tr><td></td><td></td></tr>
+<tr><td>Chapter 43</td><td>Глава 43</td></tr>
+<tr><td>changing a flat tire</td><td>замена спустившей шины</td></tr>
+<tr><td>my car had a flat tire so I had to change it</td><td>у моей машины спустило колесо, поэтому мне пришлось его поменять</td></tr>
+<tr><td>I jacked the car up</td><td>я поднял машину</td></tr>
+<tr><td>I took off the flat tire and took the spare tire out of the truck</td><td>Я снял спущенное колесо и вытащил запаску из грузовика.</td></tr>
+<tr><td>I put the spare on the wheel tightened the lug nuts by hand lowered the car to the ground and tightened the nuts some more with a lug wrench</td><td>Поставил запаску на колесо закрутил гайки от руки опустил машину на землю и еще немного затянул гайки гаечным ключом</td></tr>
+<tr><td>finally I put the hubcap on the wheel</td><td>наконец-то я поставил колпак на колесо</td></tr>
+<tr><td></td><td></td></tr>
+<tr><td>chapter 44</td><td>глава 44</td></tr>
+<tr><td>dealing with a power failure</td><td>работа с отключением питания</td></tr>
+<tr><td>during a thunderstorm our power went out</td><td>во время грозы отключили электричество</td></tr>
+<tr><td>I turned on a flashlight and my sister lit some candles</td><td>Я включил фонарик, а сестра зажгла свечи.</td></tr>
+<tr><td>we found the circuit breaker box and found the breakers that had tripped</td><td>мы нашли коробку с автоматическим выключателем и нашли выключатели, которые сработали</td></tr>
+<tr><td>we reset the breakers and the power came back on </td><td>мы сбрасывали выключатели, и питание вернулось</td></tr>
+<tr><td>good it worked</td><td>хорошо, это сработало</td></tr>
+<tr><td></td><td></td></tr>
+<tr><td>chapter 45</td><td>глава 45</td></tr>
+<tr><td>working with wood</td><td>работа с деревом</td></tr>
+<tr><td>before you cut a board you measure it and mark the places to cut </td><td>перед тем, как резать доску, вы измеряете ее и отмечаете места для пропила</td></tr>
+<tr><td>then you cut it with a saw to trim a piece of wood</td><td>затем вы разрезаете его пилой, чтобы обрезать кусок дерева</td></tr>
+<tr><td>you plane it to make the edges smooth </td><td>Вы строгаете его, чтобы края были гладкими</td></tr>
+<tr><td>you sand them to join two pieces of wood </td><td>вы шлифуете их, чтобы соединить два куска дерева</td></tr>
+<tr><td>you can glue them together, nail them together or join them with screws</td><td>их можно склеить, прибить гвоздями или соединить шурупами</td></tr>
+<tr><td></td><td></td></tr>
+<tr><td>chapter 46</td><td>глава 46</td></tr>
+<tr><td>joining things with bolts</td><td>соединение вещей болтами</td></tr>
+<tr><td>to bolt things together you put a bolt through some holes </td><td>чтобы скрепить вещи вместе, вы вставляете болт в некоторые отверстия</td></tr>
+<tr><td>put a washer onto the bolt and then tighten a nut by hand</td><td>наденьте шайбу на болт и затяните гайку от руки</td></tr>
+<tr><td>then you hold the nut with a pair of pliers and tighten the bolt with a wrench </td><td>затем зажимаешь гайку пассатижами и затягиваешь болт гаечным ключом</td></tr>
+<tr><td>to join things with screws you drill a hole for the screw</td><td>чтобы соединить вещи с помощью шурупов, вы просверлите отверстие для шурупа</td></tr>
+<tr><td>you put a screwdriver into the slot on the head of the screw</td><td>вы вставляете отвертку в паз на головке винта</td></tr>
+<tr><td>you tighten the screw by turning the screwdriver clockwise </td><td>вы затягиваете винт, поворачивая отвертку по часовой стрелке</td></tr>
+<tr><td>to loosen the screw you turn it counterclockwise</td><td>чтобы ослабить винт, вы поворачиваете его против часовой стрелки</td></tr>
+<tr><td></td><td></td></tr>
+<tr><td>Chapter 47</td><td>Глава 47</td></tr>
+<tr><td>shopping for groceries</td><td>покупка продуктов</td></tr>
+<tr><td>Tom gets a shopping cart</td><td>Том получает корзину</td></tr>
+<tr><td>some people use a basket instead of a cart</td><td>некоторые люди используют корзину вместо тележки</td></tr>
+<tr><td>he checks his shopping list to see what he should buy</td><td>он проверяет свой список покупок, чтобы увидеть, что он должен купить</td></tr>
+<tr><td>in the fresh produce section he checks the fruit and vegetables by feeling and smelling them</td><td>в отделе свежих продуктов он проверяет фрукты и овощи, осязая и нюхая их</td></tr>
+<tr><td>he puts some fruit in a plastic bag and weighs the fruit on a scale </td><td>он кладет фрукты в полиэтиленовый пакет и взвешивает фрукты на весах</td></tr>
+<tr><td>he picks up some fresh meat at the meat counter</td><td>он покупает свежее мясо на мясном прилавке</td></tr>
+<tr><td>I'll have four chicken breasts please</td><td>Мне четыре куриных грудки, пожалуйста</td></tr>
+<tr><td>then at the deli he gets some cold cuts </td><td>затем в гастрономе он получает мясное ассорти</td></tr>
+<tr><td>“some beef pastrami please six slices”</td><td>“пастрами из говядины, пожалуйста, шесть ломтиков”</td></tr>
+<tr><td>and cheese </td><td>и сыр</td></tr>
+<tr><td>“and a half pound of cheddar”</td><td>«полтора фунта чеддера»</td></tr>
+<tr><td>he goes through the canned goods aisle</td><td>он идет через проход консервов</td></tr>
+<tr><td>he checks the prices on two brands of canned peas and chooses the cheaper one</td><td>он проверяет цены на две марки консервированного горошка и выбирает более дешевый</td></tr>
+<tr><td>as he shops he looks for specials</td><td>когда он делает покупки, он ищет специальные предложения</td></tr>
+<tr><td>he picks up some toilet paper in the household goods section and gets some milk in the dairy section</td><td>он берет туалетную бумагу в отделе товаров для дома и покупает молоко в молочном отделе</td></tr>
+<tr><td>he tries a free sample of some pizza </td><td>он пробует бесплатный образец пиццы</td></tr>
+<tr><td>“try some sir it's on special ”</td><td>“попробуйте, сэр, это специально”</td></tr>
+<tr><td>and takes some frozen pizza from the frozen food case</td><td>и берет замороженную пиццу из ящика с замороженными продуктами</td></tr>
+<tr><td>finally he goes to the checkout counter</td><td>наконец он идет к кассе</td></tr>
+<tr><td></td><td></td></tr>
+<tr><td>Chapter 48</td><td>Глава 48</td></tr>
+<tr><td>paying for things</td><td>оплата вещей</td></tr>
+<tr><td>the cashier rings up Tom's purchases by scanning barcodes and pressing keys on the cash register</td><td>кассир прозванивает покупки Тома, сканируя штрих-коды и нажимая клавиши на кассе</td></tr>
+<tr><td>she tells him the total to pay </td><td>она говорит ему сумму, которую нужно заплатить</td></tr>
+<tr><td>“that'll be twenty three dollars and fifty cents” </td><td>«Это будет двадцать три доллара и пятьдесят центов»</td></tr>
+<tr><td>paying with cash</td><td>оплата наличными</td></tr>
+<tr><td>he takes some money out of his wallet and gives it to her</td><td>он достает деньги из кошелька и дает ей</td></tr>
+<tr><td>“here's 30 dollars”</td><td>«вот 30 долларов»</td></tr>
+<tr><td>she puts it into the register and takes out his change</td><td>она вносит его в регистр и достает сдачу</td></tr>
+<tr><td>She counts it out to him </td><td>Она считает это ему</td></tr>
+<tr><td>“twenty three dollars and fifty cents</td><td>«Двадцать три доллара и пятьдесят центов</td></tr>
+<tr><td>twenty four twenty five and five makes thirty “</td><td>двадцать четыре двадцать пять и пять равно тридцати».</td></tr>
+<tr><td>and gives it to him with his receipt </td><td>и отдает ему с распиской</td></tr>
+<tr><td>paying by check</td><td>оплата чеком</td></tr>
+<tr><td>he writes out a check </td><td>он выписывает чек</td></tr>
+<tr><td>after he signs the check the cashier checks his driver's license as identification</td><td>после того, как он подписывает чек, кассир проверяет его водительские права в качестве удостоверения личности</td></tr>
+<tr><td>“can I see some ID please” “sure”</td><td>«могу ли я увидеть какое-нибудь удостоверение личности, пожалуйста» «конечно»</td></tr>
+<tr><td>here's my driver's license</td><td>вот мои водительские права</td></tr>
+<tr><td>he records the check in his checkbook</td><td>он записывает чек в свою чековую книжку</td></tr>
+<tr><td>she returns his license and gives him a receipt</td><td>она возвращает ему лицензию и дает ему квитанцию</td></tr>
+<tr><td>thank you</td><td>Спасибо</td></tr>
+<tr><td>thanks bye</td><td>спасибо, пока</td></tr>
+<tr><td></td><td></td></tr>
+<tr><td>paying by credit</td><td>оплата в кредит</td></tr>
+<tr><td>he gives his card to the cashier</td><td>он дает свою карту кассиру</td></tr>
+<tr><td>she swipes the card through the reader when the approval code comes the payment slip is printed</td><td>она проводит картой через считывающее устройство, когда приходит код подтверждения, распечатывается платежная квитанция</td></tr>
+<tr><td>he signs the payment slip</td><td>он подписывает платежную квитанцию</td></tr>
+<tr><td>then she gives him a copy of the slip the receipt and his card back</td><td>затем она дает ему копию квитанции, квитанцию и его карту обратно</td></tr>
+<tr><td></td><td></td></tr>
+<tr><td>Chapter 49</td><td>Глава 49</td></tr>
+<tr><td>going to a bank</td><td>иду в банк</td></tr>
+<tr><td>Paul went to the bank at a counter</td><td>Павел пошел в банк за прилавком</td></tr>
+<tr><td>he filled out a deposit slip</td><td>он заполнил депозитную квитанцию</td></tr>
+<tr><td>he filled it out by writing</td><td>он заполнил его, написав</td></tr>
+<tr><td>his account number the amounts of his cash and checks and a total at the teller window</td><td>номер его счета суммы его наличных денег и чеков и общая сумма в окне кассира</td></tr>
+<tr><td>he endorsed the checks by signing them on the back</td><td>он подписал чеки, подписав их на обороте</td></tr>
+<tr><td>then he gave the teller his deposit</td><td>затем он отдал кассиру свой депозит</td></tr>
+<tr><td>she checked the amounts on the slip and printed the amount of deposit in his passbook and gave him back his passbook</td><td>она проверила суммы на квитанции, напечатала сумму депозита в его сберегательной книжке и вернула ему сберегательную книжку.</td></tr>
+<tr><td>thanks have a nice day</td><td>Спасибо хорошего дня</td></tr>
+<tr><td></td><td></td></tr>
+<tr><td>Сhapter 50</td><td>Глава 50</td></tr>
+<tr><td>using an ATM</td><td>с помощью банкомата</td></tr>
+<tr><td>Kate needed money </td><td>Кате нужны деньги</td></tr>
+<tr><td>oops I better find a cash machine so</td><td>ой, я лучше найду банкомат, так что</td></tr>
+<tr><td>she went to an ATM in the store</td><td>она подошла к банкомату в магазине</td></tr>
+<tr><td>she took her cash card out of her purse</td><td>она достала карту из сумочки</td></tr>
+<tr><td>she lined up the magnetic strip properly and inserted the card into the slot on the ATM</td><td>она правильно выровняла магнитную полосу и вставила карту в слот банкомата</td></tr>
+<tr><td>a message on the screen asked for her pin so she entered her PIN by pressing keys on the keypad</td><td>сообщение на экране запросило ее пин-код, поэтому она ввела свой пин-код, нажимая клавиши на клавиатуре</td></tr>
+<tr><td>then she entered the amount of money</td><td>затем она ввела сумму денег</td></tr>
+<tr><td>she needed the Machine returned her card and gave her her money</td><td>ей нужно было, чтобы Машина вернула ей карту и дала ей деньги</td></tr>
+<tr><td></td><td></td></tr>
+<tr><td></td><td></td></tr>
+<tr><td>keeping in touch</td><td>оставаться на связи</td></tr>
+<tr><td>using the telephone </td><td>по телефону</td></tr>
+<tr><td>making a phone call</td><td>сделать телефонный звонок</td></tr>
+<tr><td>Jenny looked up Kate's phone number in the phone book</td><td>Дженни нашла номер телефона Кейт в телефонной книге.</td></tr>
+<tr><td>she picked up the receiver and heard a dial tone</td><td>она взяла трубку и услышала гудок</td></tr>
+<tr><td>then she dialed the number </td><td>потом она набрала номер</td></tr>
+<tr><td>She heard Kate's phone ringing </td><td>Она услышала, как звонит телефон Кейт.</td></tr>
+<tr><td>when Kate answered</td><td>когда Кейт ответила</td></tr>
+<tr><td>hello </td><td>Привет</td></tr>
+<tr><td>Jenny said</td><td>Дженни сказала</td></tr>
+<tr><td>hello and identified herself</td><td>привет и представилась</td></tr>
+<tr><td>“hi Kate this is Jenny”</td><td>«Привет, Кейт, это Дженни»</td></tr>
+<tr><td>then she said why she called</td><td>затем она сказала, почему она позвонила</td></tr>
+<tr><td>I'm calling to see whether you'd like to go swimming</td><td>Я звоню узнать, не хочешь ли ты поплавать</td></tr>
+<tr><td></td><td></td></tr>
+<tr><td>Chapter 54</td><td>Глава 54</td></tr>
+<tr><td>using the telephone for</td><td>использование телефона для</td></tr>
+<tr><td>taking a message </td><td>получение сообщения</td></tr>
+<tr><td>Pam answered the phone</td><td>Пэм ответила на звонок</td></tr>
+<tr><td>hello </td><td>Привет</td></tr>
+<tr><td>and the caller asked for Dan</td><td>и звонивший спросил Дэна</td></tr>
+<tr><td>is a Dan there please</td><td>это Дэн, пожалуйста</td></tr>
+<tr><td>she said he wasn't available and offered to take a message</td><td>она сказала, что он недоступен и предложила принять сообщение</td></tr>
+<tr><td>sorry he can't come to the phone right now</td><td>жаль, что он не может сейчас подойти к телефону</td></tr>
+<tr><td>can I take a message</td><td>могу я принять сообщение</td></tr>
+<tr><td>the caller left a message for Dan</td><td>звонивший оставил сообщение для Дэна</td></tr>
+<tr><td>yes please tell him that Lester called Pam, wrote the message on some note paper and put it next to the phone </td><td>да, пожалуйста, скажи ему, что Лестер позвонил Пэм, написал сообщение на какой-то бумаге для заметок и положил ее рядом с телефоном.</td></tr>
+<tr><td>Later Dan got the message and returned Lester's call</td><td>Позже Дэн получил сообщение и ответил на звонок Лестера.</td></tr>
+<tr><td>hi Lester this is Dan you called</td><td>привет Лестер это Дэн ты звонил</td></tr>
+<tr><td></td><td></td></tr>
+<tr><td>Chapter 56</td><td>Глава 56</td></tr>
+<tr><td>using the telephone</td><td>по телефону</td></tr>
+<tr><td>using an answering machine</td><td>с помощью автоответчика</td></tr>
+<tr><td>Tom recorded an outgoing message on his machine </td><td>Том записал исходящее сообщение на свой компьютер</td></tr>
+<tr><td>“we can't come to the phone right now after the beep please leave a message”</td><td>«мы не можем сейчас подойти к телефону после гудка, пожалуйста, оставьте сообщение»</td></tr>
+<tr><td>when Jenny called</td><td>когда Дженни позвонила</td></tr>
+<tr><td>she heard the message </td><td>она услышала сообщение</td></tr>
+<tr><td>"to the phone right now”</td><td>"к телефону прямо сейчас"</td></tr>
+<tr><td>and left her own message for him</td><td>и оставила для него свое сообщение</td></tr>
+<tr><td></td><td></td></tr>
+<tr><td>Tom, this is Jenny please call me back at the office before 6 o'clock </td><td>Том, это Дженни, пожалуйста, перезвони мне в офис до 6 часов.</td></tr>
+<tr><td>when Tom got home he saw a light showing that he had a message</td><td>когда Том вернулся домой, он увидел свет, показывающий, что у него есть сообщение</td></tr>
+<tr><td>he pressed the button to play the message as he listened to it</td><td>он нажал кнопку, чтобы воспроизвести сообщение, пока он слушал его</td></tr>
+<tr><td>he took some notes</td><td>он сделал несколько заметок</td></tr>
+<tr><td>then he erased the message</td><td>потом стер сообщение</td></tr>
+<tr><td>“don't need that anymore”</td><td>“это больше не нужно”</td></tr>
+<tr><td></td><td></td></tr>
+<tr><td>Chapter 57</td><td>Глава 57</td></tr>
+<tr><td>mailing a letter</td><td>отправка письма</td></tr>
+<tr><td>I enclosed some pictures</td><td>Я приложил несколько фотографий</td></tr>
+<tr><td>I hope she likes the pictures</td><td>надеюсь ей понравятся фотографии</td></tr>
+<tr><td>I fold up my letter and put it in the envelope with the pictures</td><td>Я складываю письмо и кладу его в конверт с картинками.</td></tr>
+<tr><td>I write my friends address in the middle of the envelope and my return address at the upper left I seal the envelope</td><td>Я пишу адрес своих друзей в середине конверта и мой обратный адрес вверху слева я заклеиваю конверт</td></tr>
+<tr><td>I don't know how much postage I need</td><td>Я не знаю, сколько почтовых расходов мне нужно</td></tr>
+<tr><td>so I take the letter to the post office</td><td>поэтому я беру письмо на почту</td></tr>
+<tr><td>I stand in line </td><td>я стою в очереди</td></tr>
+<tr><td>when it's my turn I go to the window</td><td>когда моя очередь я подхожу к окну</td></tr>
+<tr><td>I asked the clerk how much postage I need</td><td>Я спросил клерка, сколько почтовых расходов мне нужно</td></tr>
+<tr><td>how much do I need on this</td><td>сколько мне нужно на это</td></tr>
+<tr><td></td><td></td></tr>
+<tr><td>he asks me how I want the letter to go </td><td>он спрашивает меня, как я хочу, чтобы письмо отправилось</td></tr>
+<tr><td>“regular mail or Express” </td><td>«обычная почта или экспресс»</td></tr>
+<tr><td>“regular” </td><td>"обычный"</td></tr>
+<tr><td>and weights the letter</td><td>и взвешивает письмо</td></tr>
+<tr><td>I buy enough stamps for the postage </td><td>Я покупаю достаточно марок для почтовых расходов</td></tr>
+<tr><td>“a dollar 20 okay”</td><td>“доллар 20 хорошо”</td></tr>
+<tr><td>I lick the stamps and stick them on the envelope</td><td>Я облизываю марки и наклеиваю их на конверт</td></tr>
+<tr><td>I put the letter in the mailbox</td><td>Я положил письмо в почтовый ящик</td></tr>
+<tr><td></td><td></td></tr>
+<tr><td>Chapter 52 using the telephone</td><td>Глава 52 Использование телефона</td></tr>
+<tr><td>to answering a telephone </td><td>отвечать на телефонные звонки</td></tr>
+<tr><td>Kate heard the phone ringing and picked up the receiver</td><td>Кейт услышала, как звонит телефон, и взяла трубку.</td></tr>
+<tr><td>she answered the phone by saying</td><td>она ответила на звонок, сказав</td></tr>
+<tr><td>hello</td><td>Привет</td></tr>
+<tr><td>hello and</td><td>Привет и</td></tr>
+<tr><td>then let the caller speak </td><td>затем позвольте звонящему говорить</td></tr>
+<tr><td>they talked for a while</td><td>они говорили какое-то время</td></tr>
+<tr><td>I'd love to Jenny</td><td>Я бы с удовольствием Дженни</td></tr>
+<tr><td>when and</td><td>когда и</td></tr>
+<tr><td>then she hung up if it's a wrong number</td><td>затем она повесила трубку, если это неправильный номер</td></tr>
+<tr><td>Kate didn't know the person the caller</td><td>Кейт не знала человека, звонившего</td></tr>
+<tr><td>asked for could I speak with Mike</td><td>спросил, могу ли я поговорить с Майком</td></tr>
+<tr><td>she told him that</td><td>она сказала ему, что</td></tr>
+<tr><td>he had a wrong number</td><td>он ошибся номером</td></tr>
+<tr><td>I'm sorry there's no one here by that name you have the wrong number</td><td>Мне жаль, что здесь нет никого с таким именем, вы ошиблись номером</td></tr>
+<tr><td>he apologized and hung up </td><td>он извинился и повесил трубку</td></tr>
+<tr><td>oops sorry</td><td>ой, извините</td></tr>
+<tr><td></td><td></td></tr>
+<tr><td>Chapter 53</td><td>Глава 53</td></tr>
+<tr><td>using the telephone</td><td>по телефону</td></tr>
+<tr><td>leaving a message</td><td>оставить сообщение</td></tr>
+<tr><td>I asked to speak to Dancan</td><td>Я попросил поговорить с Данканом</td></tr>
+<tr><td>I speak to Dan please</td><td>Я говорю с Дэном, пожалуйста</td></tr>
+<tr><td>but he wasn't available</td><td>но он был недоступен</td></tr>
+<tr><td>I'm sorry but he's not here right now</td><td>извините но его сейчас нет</td></tr>
+<tr><td>I identified myself and asked her to take a message</td><td>Я представился и попросил ее принять сообщение</td></tr>
+<tr><td>this is Alex. I work with Dan</td><td>это Алекс. я работаю с Дэном</td></tr>
+<tr><td>Сould you please take a message for him</td><td>Не могли бы вы принять сообщение для него</td></tr>
+<tr><td>she agreed and asked me to repeat my name</td><td>она согласилась и попросила меня повторить мое имя</td></tr>
+<tr><td>Sure. I'm sorry. I didn't catch your name.</td><td>Конечно. Мне жаль. Я не расслышал твоего имени.</td></tr>
+<tr><td>I repeated: it it's Alex</td><td>Я повторил: это Алекс</td></tr>
+<tr><td>Alex Rivera and spelled my last name</td><td>Алекс Ривера и написал мою фамилию</td></tr>
+<tr><td>could you spell that out please</td><td>не могли бы вы написать это, пожалуйста</td></tr>
+<tr><td>sure</td><td>Конечно</td></tr>
+<tr><td>that's our IV e ra</td><td>это наш IV e ra</td></tr>
+<tr><td>I also left my number</td><td>я тоже оставила свой номер</td></tr>
+<tr><td>and my number is five five five five nine five nine</td><td>и мой номер пять пять пять пять девять пять девять</td></tr>
+<tr><td>and asked that he call me back</td><td>и попросил, чтобы он перезвонил мне</td></tr>
+<tr><td>could you ask him to give me a call</td><td>не могли бы вы попросить его позвонить мне</td></tr>
+<tr><td>please thanks</td><td>пожалуйста спасибо</td></tr>
+<tr><td></td><td></td></tr>
+<tr><td>Chapter 56 writing a personal letter</td><td>Глава 56написание личного письма</td></tr>
+<tr><td>I took out some paper to write to my friend</td><td>Я взял бумагу, чтобы написать моему другу</td></tr>
+<tr><td>I wrote the date and a greeting at the top</td><td>Я написал дату и приветствие вверху</td></tr>
+<tr><td>I apologized for not writing sooner and</td><td>Я извинился, что не написал раньше и</td></tr>
+<tr><td>I wrote about what I'd been doing</td><td>Я написал о том, что я делал</td></tr>
+<tr><td>as I wrote I reread her last letter to me</td><td>Пока я писал, я перечитал ее последнее письмо ко мне.</td></tr>
+<tr><td>I answered questions she had asked and I asked her about herself</td><td>Я ответил на вопросы, которые она задавала, и я спросил ее о себе</td></tr>
+<tr><td>then I wrote a closing and signed the letter</td><td>затем я написал заключение и подписал письмо</td></tr>
+<tr><td></td><td></td></tr>
+<tr><td>Chapter 58</td><td>Глава 58</td></tr>
+<tr><td>going to a birthday party</td><td>иду на день рождения</td></tr>
+<tr><td>before the party</td><td>перед вечеринкой</td></tr>
+<tr><td>I wrap a present for my friend and sign a card for him at the party</td><td>Я заворачиваю подарок своему другу и подписываю открытку на вечеринке</td></tr>
+<tr><td>I give him the present and the card</td><td>Я даю ему подарок и открытку</td></tr>
+<tr><td>here you go leo</td><td>вот тебе Лео</td></tr>
+<tr><td>happy birthday thanks Alex come on in</td><td>с днем рождения спасибо Алекс заходи</td></tr>
+<tr><td>someone likes the candles on the birthday cake we all sing happy birthday</td><td>кому-то нравятся свечи на именинном торте мы все поем с днем рождения</td></tr>
+<tr><td>happy birthday dear Leo and Leo blows out the candles</td><td>с днем рождения дорогой Лео и Лео задувает свечи</td></tr>
+<tr><td>he opens his birthday presents</td><td>он открывает свои подарки на день рождения</td></tr>
+<tr><td>hey</td><td>Привет</td></tr>
+<tr><td>I've been wanting this CD Thanks and</td><td>Я давно хотел этот компакт-диск Спасибо и</td></tr>
+<tr><td>then everyone eats cake and ice cream</td><td>потом все едят торт и мороженое</td></tr>
+<tr><td>you</td><td>ты</td></tr>
+<tr><td>[Music]</td><td>[Музыка]</td></tr>
+<tr><td>English for everyday activities</td><td>Английский для повседневной деятельности</td></tr>
+<tr><td>LawrenceJays wire published by compass</td><td>Прослушка LawrenceJays опубликована компасом</td></tr>
+<tr><td>[Music]</td><td>[Музыка]</td></tr>
+<tr><td></td><td></td></tr>
+<tr><td>chapter 59</td><td>глава 59</td></tr>
+<tr><td>going to a dinner party</td><td>иду на званый обед</td></tr>
+<tr><td>Dan the host greets Tom and Jenny the guests at the door</td><td>Хозяин Дэн встречает Тома и Дженни гостей у дверей.</td></tr>
+<tr><td>hi Dan</td><td>привет Дэн</td></tr>
+<tr><td>hi Dan</td><td>привет Дэн</td></tr>
+<tr><td>hi Tom Jenny glad you could come</td><td>привет Том Дженни рад, что ты смог прийти</td></tr>
+<tr><td>they give him a bottle of wine they brought</td><td>они дают ему бутылку вина, которое они принесли</td></tr>
+<tr><td>thanks</td><td>Благодарность</td></tr>
+<tr><td>Jenny but you didn't have to bring anything inside</td><td>Дженни, но тебе не нужно было ничего приносить внутрь</td></tr>
+<tr><td>they say hello to some people</td><td>они здороваются с некоторыми людьми</td></tr>
+<tr><td>they know Leo</td><td>они знают Лео</td></tr>
+<tr><td>Kate good to see you</td><td>Кейт рада тебя видеть</td></tr>
+<tr><td>hi Tom hi Jenny</td><td>привет Том привет Дженни</td></tr>
+<tr><td>Dan introduces them to some people</td><td>Дэн знакомит их с некоторыми людьми</td></tr>
+<tr><td>Tom Jenny</td><td>Том Дженни</td></tr>
+<tr><td>I'd like you to meet Sharon</td><td>Я хочу, чтобы ты познакомился с Шэрон</td></tr>
+<tr><td>Melton and her husband John they shake hands</td><td>Мелтон и ее муж Джон пожимают друг другу руки</td></tr>
+<tr><td>glad to meet you John</td><td>рад познакомиться с тобой Джон</td></tr>
+<tr><td>same here</td><td>то же самое</td></tr>
+<tr><td>Tom and make some small talk</td><td>Том и немного поговорим</td></tr>
+<tr><td>sure was a hot one today yeah</td><td>сегодня было жарко, да</td></tr>
+<tr><td>they have their dinner</td><td>они ужинают</td></tr>
+<tr><td>at the end of the evening the guests say good night, and thank</td><td>в конце вечера гости прощаются и благодарят</td></tr>
+<tr><td>Dan thanks</td><td>Дэн спасибо</td></tr>
+<tr><td>Dan great party</td><td>Дэн отличная вечеринка</td></tr>
+<tr><td>glad you could come</td><td>рад, что ты смог прийти</td></tr>
+<tr><td>drive safely</td><td>ездить безопасно</td></tr>
+<tr><td></td><td></td></tr>
+<tr><td>Section six</td><td>Раздел шестой</td></tr>
+<tr><td>having fun with friends</td><td>веселиться с друзьями</td></tr>
+<tr><td></td><td></td></tr>
+<tr><td>chapter 60</td><td>глава 60</td></tr>
+<tr><td>going to a movie</td><td>иду в кино</td></tr>
+<tr><td>we found out where and when the movie was showing</td><td>мы узнали где и когда показывали фильм</td></tr>
+<tr><td>we bought tickets at the box office -</td><td>мы купили билеты в кассе -</td></tr>
+<tr><td>please for skull night</td><td>пожалуйста на ночь черепа</td></tr>
+<tr><td>$14 please</td><td>14 долларов, пожалуйста</td></tr>
+<tr><td>and some popcorn at the snack counter -</td><td>и немного попкорна на прилавке с закусками -</td></tr>
+<tr><td>large popcorns please okay the ticket taker tore our tickets and gave us back the stubs</td><td>большой попкорн, пожалуйста, кассир порвал наши билеты и вернул нам корешки</td></tr>
+<tr><td>we went to our seats</td><td>мы пошли на свои места</td></tr>
+<tr><td>we watched previews of coming attractions</td><td>мы смотрели анонсы предстоящих аттракционов</td></tr>
+<tr><td>then we saw the main feature at the end</td><td>затем мы увидели главную особенность в конце</td></tr>
+<tr><td>we watched the credits</td><td>мы смотрели титры</td></tr>
+<tr><td></td><td></td></tr>
+<tr><td>Chapter 61 eating at a fast-food restaurant</td><td> Глава 61еда в ресторане быстрого питания</td></tr>
+<tr><td>Jenny stood in line and read the menu at the counter</td><td>Дженни стояла в очереди и читала меню у стойки.</td></tr>
+<tr><td>she ordered her food and a drink</td><td>она заказала еду и напитки</td></tr>
+<tr><td>I'd like one big burger a small order fries and a medium Cola please</td><td>Я бы хотел один большой бургер, маленький заказ картофеля фри и среднюю колу, пожалуйста.</td></tr>
+<tr><td>for here or to go</td><td>здесь или на вынос</td></tr>
+<tr><td>for here please</td><td>сюда, пожалуйста</td></tr>
+<tr><td>the clerk put the food on Jenny's tray and Jenny paid</td><td>продавец положил еду на поднос Дженни, и Дженни заплатила</td></tr>
+<tr><td>her that'll be five twenty</td><td>ей будет пять двадцать</td></tr>
+<tr><td>right</td><td>правильно</td></tr>
+<tr><td>Jenny took some paper napkins and a straw from the dispensers</td><td>Дженни достала из диспенсеров несколько бумажных салфеток и соломинку.</td></tr>
+<tr><td>she ate her lunch at her table</td><td>она пообедала за своим столом</td></tr>
+<tr><td>other people got their food to go</td><td>другие люди получили свою еду, чтобы пойти</td></tr>
+<tr><td>when she finished eating she threw the empty wrappers in the trash</td><td>когда она закончила есть, она выбросила пустые обертки в мусорное ведро</td></tr>
+</tbody>
+</table>
+</body></html>
