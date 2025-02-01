@@ -1,0 +1,873 @@
+<!doctype html>
+<html lang="en">
+<head>
+<script src="https://cdn.jsdelivr.net/npm/venom-player@latest"></script>
+<link rel="stylesheet" href="styles.css">
+<script src="managemovie.js"></script>
+</head>	
+<body>
+
+<div id="outerContainer">
+	<div id="player"></div>
+	<div id="controlPanel">
+		<button class="clsButton" id="idRewind2Second" type="button">2</button>
+		<button class="clsButton" id="idRewind3Second" type="button">3</button>
+		<button class="clsButton" type="button">R</button>
+	</div>
+</div>
+
+<div id="engSubtitleOuterContainerId" class="subtitleOuterContainerCls">
+	<div id="engSubtitleContainerId" class="subtitleContainerCls"></div>
+</div>
+<div id="subtitleOuterContainerId" class="subtitleOuterContainerCls">
+	<div id="subtitleContainerId" class="subtitleContainerCls"></div>
+</div>
+
+<script>
+	var versionMobile = true;
+</script>
+
+<script>
+    VenomPlayer.make({
+        publicPath: 'https://cdn.jsdelivr.net/npm/venom-player@' + VenomPlayer.version + '/dist/',
+		container: document.getElementById('player'),
+                playlist: {
+                    open: false,
+                    ignoreLast: true,
+
+                    autoNext: true,
+                    id: 34964,
+                    current: {
+                        season: 1,
+                        episode: "1"
+                    },
+                    seasons: [{
+                        "season": 1,
+                        "blocked": false,
+                        "episodes": [{
+                            "episode": "1",
+                            "id": 444108,
+                            "videoKey": 804526,
+                            "dash": "https://hye1eaipby4w.matham.ws/10_21/19/08/WG2WFGOD/804526.mpd?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=f06965ee930ebe9&hu=e6b36975279d2da&t=1736697629",
+                            "hls": "https://hye1eaipby4w.matham.ws/10_18_21/10/18/17/4343YM3S/S2MH4K4C.mp4/master.m3u8?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=f06965ee930ebe9&hu=e6b36975279d2da&t=1736697629",
+                            "audio": {
+                                "names": ["Amedia", "LostFilm", "AlexFilm", "TVShows", "Eng.Original"],
+                                "order": [0, 1, 2, 3, 4]
+                            },
+                            "cc": [{
+                                "url": "https://hye1eaipby4w.matham.ws/10_18_21/10/18/15/YYDOM52H/OM43VRKT.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=f06965ee930ebe9&hu=e6b36975279d2da&t=1736697629",
+                                "name": "Рус. форсированные - 1"
+                            }
+							,{"url": "./foundation_cc/Foundation_S01E01.vtt","name":"English"}],
+                            "duration": 4155,
+                            "title": "Основание (1 сезон) - 1 серия",
+                            "download": "",
+                            "sections": [{
+                                "type": "screen",
+                                "start": 0,
+                                "title": "",
+                                "end": 81.877,
+                                "skip": true
+                            }, {
+                                "end": 4155.761,
+                                "skip": true,
+                                "type": "titer",
+                                "start": 4083.29,
+                                "title": ""
+                            }],
+                            "poster": "https://img.imgilall.me/movies/video/4/4/4/1/0/8/0/0/0/0/800x450_444108.jpg?t=1695049410",
+                            "preview": {
+                                "src": "https://img.zcvh.net/804526/desktop/thumb-${spriteNum}.webp"
+                            }
+                        }, {
+                            "episode": "2",
+                            "id": 444109,
+                            "videoKey": 804527,
+                            "dash": "https://hye1eaipby4w.matham.ws/10_21/19/03/2ZXEWTCF/804527.mpd?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=f06965ee930ebe9&hu=e6b36975279d2da&t=1736697629",
+                            "hls": "https://hye1eaipby4w.matham.ws/10_18_21/10/18/16/2LE3EHRU/PA5BU6GP.mp4/master.m3u8?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=f06965ee930ebe9&hu=e6b36975279d2da&t=1736697629",
+                            "audio": {
+                                "names": ["Amedia", "LostFilm", "AlexFilm", "TVShows", "Eng.Original"],
+                                "order": [0, 1, 2, 3, 4]
+                            },
+                            "cc": [{
+                                "url": "https://hye1eaipby4w.matham.ws/10_18_21/10/18/15/F5LE3PWU/I2ADO5XK.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=f06965ee930ebe9&hu=e6b36975279d2da&t=1736697629",
+                                "name": "Рус. форсированные - 1"
+                            },{"url": "./foundation_cc/Foundation_S01E02.vtt","name":"English"}],
+                            "duration": 3702,
+                            "title": "Основание (1 сезон) - 2 серия",
+                            "download": "",
+                            "sections": [{
+                                "type": "screen",
+                                "start": 0,
+                                "title": "",
+                                "end": 83.447,
+                                "skip": true
+                            }, {
+                                "end": 3702.495,
+                                "skip": true,
+                                "type": "titer",
+                                "start": 3639.281,
+                                "title": ""
+                            }],
+                            "poster": "https://img.imgilall.me/movies/video/4/4/4/1/0/9/0/0/0/0/800x450_444109.jpg?t=1695049469",
+                            "preview": {
+                                "src": "https://img.zcvh.net/804527/desktop/thumb-${spriteNum}.webp"
+                            }
+                        }, {
+                            "episode": "3",
+                            "id": 444110,
+                            "videoKey": 804528,
+                            "dash": "https://hye1eaipby4w.matham.ws/10_21/19/01/ZA32Q5G5/804528.mpd?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=f06965ee930ebe9&hu=e6b36975279d2da&t=1736697629",
+                            "hls": "https://hye1eaipby4w.matham.ws/10_18_21/10/18/16/KYTXBPHV/RX6JW76D.mp4/master.m3u8?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=f06965ee930ebe9&hu=e6b36975279d2da&t=1736697629",
+                            "audio": {
+                                "names": ["Amedia", "LostFilm", "AlexFilm", "TVShows", "Eng.Original"],
+                                "order": [0, 1, 2, 3, 4]
+                            },
+                            "cc": [{
+                                "url": "https://hye1eaipby4w.matham.ws/10_18_21/10/18/15/GMIGXLII/6KRFGG46.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=f06965ee930ebe9&hu=e6b36975279d2da&t=1736697629",
+                                "name": "Рус. форсированные - 1"
+                            },{"url": "./foundation_cc/Foundation_S01E03.vtt","name":"English"}],
+                            "duration": 2979,
+                            "title": "Основание (1 сезон) - 3 серия",
+                            "download": "",
+                            "sections": [{
+                                "type": "screen",
+                                "start": 0,
+                                "title": "",
+                                "end": 83.447,
+                                "skip": true
+                            }, {
+                                "skip": true,
+                                "type": "titer",
+                                "start": 2915.708,
+                                "title": "",
+                                "end": 2979.501
+                            }],
+                            "poster": "https://img.imgilall.me/movies/video/4/4/4/1/1/0/0/0/0/0/800x450_444110.jpg?t=1695049757",
+                            "preview": {
+                                "src": "https://img.zcvh.net/804528/desktop/thumb-${spriteNum}.webp"
+                            }
+                        }, {
+                            "episode": "4",
+                            "id": 444111,
+                            "videoKey": 804529,
+                            "dash": "https://hye1eaipby4w.matham.ws/10_21/19/02/VVSC2TDP/804529.mpd?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=f06965ee930ebe9&hu=e6b36975279d2da&t=1736697629",
+                            "hls": "https://hye1eaipby4w.matham.ws/10_18_21/10/18/15/UJDE4RGI/TVGEB7B3.mp4/master.m3u8?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=f06965ee930ebe9&hu=e6b36975279d2da&t=1736697629",
+                            "audio": {
+                                "names": ["Amedia", "LostFilm", "AlexFilm", "TVShows", "Eng.Original"],
+                                "order": [0, 1, 2, 3, 4]
+                            },
+                            "cc": [{
+                                "url": "https://hye1eaipby4w.matham.ws/10_18_21/10/18/14/Z5FA7EIV/RTYGOKT6.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=f06965ee930ebe9&hu=e6b36975279d2da&t=1736697629",
+                                "name": "Рус. форсированные - 1"
+                            },{"url": "./foundation_cc/Foundation_S01E04.vtt","name":"English"}],
+                            "duration": 2710,
+                            "title": "Основание (1 сезон) - 4 серия",
+                            "download": "",
+                            "sections": [{
+                                "skip": true,
+                                "type": "screen",
+                                "start": 0,
+                                "title": "",
+                                "end": 83.447
+                            }, {
+                                "end": 2710.922,
+                                "skip": true,
+                                "type": "titer",
+                                "start": 2644.532,
+                                "title": ""
+                            }],
+                            "poster": "https://img.imgilall.me/movies/video/4/4/4/1/1/1/0/0/0/0/800x450_444111.jpg?t=1695049611",
+                            "preview": {
+                                "src": "https://img.zcvh.net/804529/desktop/thumb-${spriteNum}.webp"
+                            }
+                        }, {
+                            "episode": "5",
+                            "id": 444112,
+                            "videoKey": 804530,
+                            "dash": "https://hye1eaipby4w.matham.ws/10_21/18/21/YVOBOZBF/804530.mpd?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=f06965ee930ebe9&hu=e6b36975279d2da&t=1736697629",
+                            "hls": "https://hye1eaipby4w.matham.ws/10_18_21/10/18/15/Y7FQWWMH/6Q7ETICW.mp4/master.m3u8?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=f06965ee930ebe9&hu=e6b36975279d2da&t=1736697629",
+                            "audio": {
+                                "names": ["Amedia", "LostFilm", "AlexFilm", "TVShows", "Eng.Original"],
+                                "order": [0, 1, 2, 3, 4]
+                            },
+                            "cc": [{
+                                "url": "https://hye1eaipby4w.matham.ws/10_18_21/10/18/14/EEN7QCMZ/MOMWCOQ5.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=f06965ee930ebe9&hu=e6b36975279d2da&t=1736697629",
+                                "name": "Рус. форсированные - 1"
+                            },{"url": "./foundation_cc/Foundation_S01E05.vtt","name":"English"}],
+                            "duration": 3208,
+                            "title": "Основание (1 сезон) - 5 серия",
+                            "download": "",
+                            "sections": [{
+                                "end": 83.447,
+                                "skip": true,
+                                "type": "screen",
+                                "start": 0,
+                                "title": ""
+                            }, {
+                                "start": 3144.74,
+                                "title": "",
+                                "end": 3208.793,
+                                "skip": true,
+                                "type": "titer"
+                            }],
+                            "poster": "https://img.imgilall.me/movies/video/4/4/4/1/1/2/0/0/0/0/800x450_444112.jpg?t=1695049635",
+                            "preview": {
+                                "src": "https://img.zcvh.net/804530/desktop/thumb-${spriteNum}.webp"
+                            }
+                        }, {
+                            "episode": "6",
+                            "id": 446185,
+                            "videoKey": 807024,
+                            "dash": "https://hye1eaipby4w.matham.ws/10_21/26/12/65FYGOL6/807024.mpd?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=f06965ee930ebe9&hu=e6b36975279d2da&t=1736697629",
+                            "hls": "https://hye1eaipby4w.matham.ws/10_26_21/10/26/10/44SQXJ3D/NK2HQBJK.mp4/master.m3u8?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=f06965ee930ebe9&hu=e6b36975279d2da&t=1736697629",
+                            "audio": {
+                                "names": ["Amedia", "LostFilm", "AlexFilm", "TVShows", "Eng.Original"],
+                                "order": [0, 1, 2, 3, 4]
+                            },
+                            "cc": [{
+                                "url": "https://hye1eaipby4w.matham.ws/10_26_21/10/26/09/YQANTFE7/SPWXSZDT.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=f06965ee930ebe9&hu=e6b36975279d2da&t=1736697629",
+                                "name": "Рус. форсированные - 1"
+                            },{"url": "./foundation_cc/Foundation_S01E06.vtt","name":"English"}],
+                            "duration": 3332,
+                            "title": "Основание (1 сезон) - 6 серия",
+                            "download": "",
+                            "sections": [{
+                                "type": "screen",
+                                "start": 0,
+                                "title": "",
+                                "end": 83.447,
+                                "skip": true
+                            }, {
+                                "end": 3332.13,
+                                "skip": true,
+                                "type": "titer",
+                                "start": 3268.84,
+                                "title": ""
+                            }],
+                            "poster": "https://img.imgilall.me/movies/video/4/4/6/1/8/5/0/0/0/0/800x450_446185.jpg?t=1695049659",
+                            "preview": {
+                                "src": "https://img.zcvh.net/807024/desktop/thumb-${spriteNum}.webp"
+                            }
+                        }, {
+                            "episode": "7",
+                            "id": 448433,
+                            "videoKey": 809194,
+                            "dash": "https://hye1eaipby4w.matham.ws/11_21/02/15/CAKCDSQX/809194.mpd?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=f06965ee930ebe9&hu=e6b36975279d2da&t=1736697629",
+                            "hls": "https://hye1eaipby4w.matham.ws/11_02_21/11/02/12/ISKRO5A2/PWT22IBE.mp4/master.m3u8?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=f06965ee930ebe9&hu=e6b36975279d2da&t=1736697629",
+                            "audio": {
+                                "names": ["Amedia", "LostFilm", "AlexFilm", "TVShows", "Eng.Original"],
+                                "order": [0, 1, 2, 3, 4]
+                            },
+                            "cc": [{
+                                "url": "https://hye1eaipby4w.matham.ws/11_02_21/11/02/11/ZTQ35DLH/PYPP2ICI.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=f06965ee930ebe9&hu=e6b36975279d2da&t=1736697629",
+                                "name": "Рус. форсированные - 1"
+                            },{"url": "./foundation_cc/Foundation_S01E07.vtt","name":"English"}],
+                            "duration": 2929,
+                            "title": "Основание (1 сезон) - 7 серия",
+                            "download": "",
+                            "sections": [{
+                                "title": "",
+                                "end": 83.447,
+                                "skip": true,
+                                "type": "screen",
+                                "start": 0
+                            }, {
+                                "start": 2868.145,
+                                "title": "",
+                                "end": 2929.465,
+                                "skip": true,
+                                "type": "titer"
+                            }],
+                            "poster": "https://img.imgilall.me/movies/video/4/4/8/4/3/3/0/0/0/0/800x450_448433.jpg?t=1695049680",
+                            "preview": {
+                                "src": "https://img.zcvh.net/809194/desktop/thumb-${spriteNum}.webp"
+                            }
+                        }, {
+                            "episode": "8",
+                            "id": 450381,
+                            "videoKey": 811390,
+                            "dash": "https://hye1eaipby4w.matham.ws/11_21/08/19/PGRWC7E6/811390.mpd?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=f06965ee930ebe9&hu=e6b36975279d2da&t=1736697629",
+                            "hls": "https://hye1eaipby4w.matham.ws/11_08_21/11/08/18/IWPGWXZY/RTBABLCM.mp4/master.m3u8?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=f06965ee930ebe9&hu=e6b36975279d2da&t=1736697629",
+                            "audio": {
+                                "names": ["Amedia", "LostFilm", "AlexFilm", "TVShows", "Eng.Original"],
+                                "order": [0, 1, 2, 3, 4]
+                            },
+                            "cc": [{
+                                "url": "https://hye1eaipby4w.matham.ws/11_08_21/11/08/15/Y5FYW3IW/JESOCUDF.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=f06965ee930ebe9&hu=e6b36975279d2da&t=1736697629",
+                                "name": "Рус. форсированные - 1"
+                            },{"url": "./foundation_cc/Foundation_S01E08.vtt","name":"English"}],
+                            "duration": 3377,
+                            "title": "Основание (1 сезон) - 8 серия",
+                            "download": "",
+                            "sections": [{
+                                "type": "screen",
+                                "start": 0,
+                                "title": "",
+                                "end": 83.447,
+                                "skip": true
+                            }, {
+                                "end": 3377.176,
+                                "skip": true,
+                                "type": "titer",
+                                "start": 3313.649,
+                                "title": ""
+                            }],
+                            "poster": "https://img.imgilall.me/movies/video/4/5/0/3/8/1/0/0/0/0/800x450_450381.jpg?t=1695049703",
+                            "preview": {
+                                "src": "https://img.zcvh.net/811390/desktop/thumb-${spriteNum}.webp"
+                            }
+                        }, {
+                            "episode": "9",
+                            "id": 453388,
+                            "videoKey": 815092,
+                            "dash": "https://hye1eaipby4w.matham.ws/11_21/18/15/2CIWOROS/815092.mpd?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=f06965ee930ebe9&hu=e6b36975279d2da&t=1736697629",
+                            "hls": "https://hye1eaipby4w.matham.ws/11_18_21/11/18/12/ZFMD2BF5/C3NC2LQM.mp4/master.m3u8?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=f06965ee930ebe9&hu=e6b36975279d2da&t=1736697629",
+                            "audio": {
+                                "order": [0, 1, 2, 3, 4],
+                                "names": ["Amedia", "LostFilm", "AlexFilm", "TVShows", "Eng.Original"]
+                            },
+                            "cc": [{
+                                "url": "https://hye1eaipby4w.matham.ws/11_18_21/11/18/12/D35HMSYW/E4L4I57F.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=f06965ee930ebe9&hu=e6b36975279d2da&t=1736697629",
+                                "name": "Рус. форсированные - 1"
+                            },{"url": "./foundation_cc/Foundation_S01E09.vtt","name":"English"}],
+                            "duration": 3422,
+                            "title": "Основание (1 сезон) - 9 серия",
+                            "download": "",
+                            "sections": [{
+                                "type": "screen",
+                                "start": 0,
+                                "title": "",
+                                "end": 83.447,
+                                "skip": true
+                            }, {
+                                "end": 3422.054,
+                                "skip": true,
+                                "type": "titer",
+                                "start": 3359.556,
+                                "title": ""
+                            }],
+                            "poster": "https://img.imgilall.me/movies/video/4/5/3/3/8/8/0/0/0/0/800x450_453388.jpg?t=1695049728",
+                            "preview": {
+                                "src": "https://img.zcvh.net/815092/desktop/thumb-${spriteNum}.webp"
+                            }
+                        }, {
+                            "episode": "10",
+                            "id": 454874,
+                            "videoKey": 816926,
+                            "dash": "https://hye1eaipby4w.matham.ws/11_21/22/22/SU372WS6/816926.mpd?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=f06965ee930ebe9&hu=e6b36975279d2da&t=1736697629",
+                            "hls": "https://hye1eaipby4w.matham.ws/11_22_21/11/22/12/H4KJ7RD7/BSX2CKZ7.mp4/master.m3u8?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=f06965ee930ebe9&hu=e6b36975279d2da&t=1736697629",
+                            "audio": {
+                                "names": ["Amedia", "LostFilm", "AlexFilm", "TVShows", "Eng.Original"],
+                                "order": [0, 1, 2, 3, 4]
+                            },
+                            "cc": [{
+                                "url": "https://hye1eaipby4w.matham.ws/11_22_21/11/22/11/ZQURMUWK/TZUICKWI.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=f06965ee930ebe9&hu=e6b36975279d2da&t=1736697629",
+                                "name": "Рус. форсированные - 1"
+                            },{"url": "./foundation_cc/Foundation_S01E10.vtt","name":"English"}],
+                            "duration": 3595,
+                            "title": "Основание (1 сезон) - 10 серия",
+                            "download": "",
+                            "sections": [{
+                                "end": 83.447,
+                                "skip": true,
+                                "type": "screen",
+                                "start": 0,
+                                "title": ""
+                            }, {
+                                "end": 3595.552,
+                                "skip": true,
+                                "type": "titer",
+                                "start": 3501.731,
+                                "title": ""
+                            }],
+                            "poster": "https://img.imgilall.me/movies/video/4/5/4/8/7/4/0/0/0/0/800x450_454874.jpg?t=1695049754",
+                            "preview": {
+                                "src": "https://img.zcvh.net/816926/desktop/thumb-${spriteNum}.webp"
+                            }
+                        }]
+                    }, {
+                        "season": 2,
+                        "blocked": false,
+                        "episodes": [{
+                            "episode": "1",
+                            "id": 624577,
+                            "videoKey": 1015542,
+                            "dash": "https://hye1eaipby4w.matham.ws/10_23/10/15/N2RWRFCA/1015542.mpd?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=f06965ee930ebe9&hu=e6b36975279d2da&t=1736697629",
+                            "hls": "https://hye1eaipby4w.matham.ws/10_10_23/10/10/10/G2BVL7YB/HCHXL7KZ.mp4/master.m3u8?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=f06965ee930ebe9&hu=e6b36975279d2da&t=1736697629",
+                            "audio": {
+                                "names": ["Цікава Ідея (укр)", "Eng.Original", "Невафильм", "LostFilm", "HDRezka Studio", "delete"],
+                                "order": [3, 4, 0, 1, 2, 5]
+                            },
+                            "cc": [{
+                                "url": "https://hye1eaipby4w.matham.ws/10_10_23/10/10/10/NGYEAF67/BMVWKQCD.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=f06965ee930ebe9&hu=e6b36975279d2da&t=1736697629",
+                                "name": "Eng. full - 1"
+                            }, {
+                                "url": "https://hye1eaipby4w.matham.ws/10_10_23/10/10/10/G6MSNHK4/ZDY72T2P.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=f06965ee930ebe9&hu=e6b36975279d2da&t=1736697629",
+                                "name": "Рус. полные - 2"
+                            }, {
+                                "url": "https://hye1eaipby4w.matham.ws/10_10_23/10/10/10/NLFYWBES/NJUCKO2G.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=f06965ee930ebe9&hu=e6b36975279d2da&t=1736697629",
+                                "name": "Рус. форсированные - 3"
+                            }, {
+                                "url": "https://hye1eaipby4w.matham.ws/10_10_23/10/10/10/LBYAYWOG/LYHZBPLG.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=f06965ee930ebe9&hu=e6b36975279d2da&t=1736697629",
+                                "name": "Укр. форсовані - 4"
+                            }],
+                            "duration": 2960,
+                            "title": "Основание (2 сезон) - 1 серия",
+                            "download": "",
+                            "sections": [],
+                            "poster": "https://img.imgilall.me/movies/video/6/2/4/5/7/7/0/0/0/0/800x450_624577.jpg?t=1696940373",
+                            "preview": {
+                                "src": "https://img.zcvh.net/1015542/desktop/thumb-${spriteNum}.webp"
+                            }
+                        }, {
+                            "episode": "2",
+                            "id": 606015,
+                            "videoKey": 994641,
+                            "dash": "https://hye1eaipby4w.matham.ws/08_23/08/14/WFMGUZWP/994641.mpd?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=f06965ee930ebe9&hu=e6b36975279d2da&t=1736697629",
+                            "hls": "https://hye1eaipby4w.matham.ws/08_08_23/08/08/11/77XYXOWF/7RI5FEEO.mp4/master.m3u8?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=f06965ee930ebe9&hu=e6b36975279d2da&t=1736697629",
+                            "audio": {
+                                "names": ["Невафильм", "HDRezka Studio", "LostFilm", "Eng.Original", "DniproFilm (укр)", "delete"],
+                                "order": [0, 1, 2, 4, 3, 5]
+                            },
+                            "cc": [{
+                                "url": "https://hye1eaipby4w.matham.ws/08_08_23/08/08/11/PZTHG6FS/FC2BXXPB.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=f06965ee930ebe9&hu=e6b36975279d2da&t=1736697629",
+                                "name": "Eng. full - 1"
+                            }, {
+                                "url": "https://hye1eaipby4w.matham.ws/08_08_23/08/08/11/7JWQPSEA/H37UD6ER.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=f06965ee930ebe9&hu=e6b36975279d2da&t=1736697629",
+                                "name": "Рус. полные - 2"
+                            }, {
+                                "url": "https://hye1eaipby4w.matham.ws/08_08_23/08/08/11/WUKMTOQM/BFL4G4VI.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=f06965ee930ebe9&hu=e6b36975279d2da&t=1736697629",
+                                "name": "Рус. форсированные - 3"
+                            }],
+                            "duration": 3232,
+                            "title": "Основание (2 сезон) - 2 серия",
+                            "download": "",
+                            "sections": [{
+                                "skip": true,
+                                "type": "screen",
+                                "start": 0,
+                                "title": "",
+                                "end": 84.871
+                            }, {
+                                "end": 3232.765,
+                                "skip": true,
+                                "type": "titer",
+                                "start": 3169.995,
+                                "title": ""
+                            }],
+                            "poster": "https://img.imgilall.me/movies/video/6/0/6/0/1/5/0/0/0/0/800x450_606015.jpg?t=1695049933",
+                            "preview": {
+                                "src": "https://img.zcvh.net/994641/desktop/thumb-${spriteNum}.webp"
+                            }
+                        }, {
+                            "episode": "3",
+                            "id": 603161,
+                            "videoKey": 991122,
+                            "dash": "https://hye1eaipby4w.matham.ws/07_23/29/18/C3QTULIF/991122.mpd?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=f06965ee930ebe9&hu=e6b36975279d2da&t=1736697629",
+                            "hls": "https://hye1eaipby4w.matham.ws/07_29_23/07/29/04/T5SYH72G/OKNMAJLP.mp4/master.m3u8?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=f06965ee930ebe9&hu=e6b36975279d2da&t=1736697629",
+                            "audio": {
+                                "names": ["Невафильм", "Eng.Original"],
+                                "order": [0, 1]
+                            },
+                            "cc": [{
+                                "url": "https://hye1eaipby4w.matham.ws/07_29_23/07/29/03/JQI77W7I/BXDUZ6F5.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=f06965ee930ebe9&hu=e6b36975279d2da&t=1736697629",
+                                "name": "Укр. повні - 1"
+                            }, {
+                                "url": "https://hye1eaipby4w.matham.ws/07_29_23/07/29/03/APNUUMLZ/RKEPVLXR.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=f06965ee930ebe9&hu=e6b36975279d2da&t=1736697629",
+                                "name": "Eng. SDH - 2"
+                            }, {
+                                "url": "https://hye1eaipby4w.matham.ws/07_29_23/07/29/03/6NBDFONT/MVC56FVO.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=f06965ee930ebe9&hu=e6b36975279d2da&t=1736697629",
+                                "name": "Eng. full - 3"
+                            }, {
+                                "url": "https://hye1eaipby4w.matham.ws/07_29_23/07/29/03/JSE6BK4B/JQCGVQ2B.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=f06965ee930ebe9&hu=e6b36975279d2da&t=1736697629",
+                                "name": "Рус. SDH - 4"
+                            }, {
+                                "url": "https://hye1eaipby4w.matham.ws/07_29_23/07/29/03/RXBQ36EW/A3CB4O4R.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=f06965ee930ebe9&hu=e6b36975279d2da&t=1736697629",
+                                "name": "Рус. полные - 5"
+                            }, {
+                                "url": "https://hye1eaipby4w.matham.ws/07_29_23/07/29/03/7FS5UJR6/YRLFCTEO.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=f06965ee930ebe9&hu=e6b36975279d2da&t=1736697629",
+                                "name": "Рус. форсированные - 6"
+                            }],
+                            "duration": 3265,
+                            "title": "Основание (2 сезон) - 3 серия",
+                            "download": "",
+                            "sections": [{
+                                "type": "screen",
+                                "start": 0,
+                                "title": "",
+                                "end": 84.871,
+                                "skip": true
+                            }, {
+                                "skip": true,
+                                "type": "titer",
+                                "start": 3200.697,
+                                "title": "",
+                                "end": 3265.211
+                            }],
+                            "poster": "https://img.imgilall.me/movies/video/6/0/3/1/6/1/0/0/0/0/800x450_603161.jpg?t=1695049887",
+                            "preview": {
+                                "src": "https://img.zcvh.net/991122/desktop/thumb-${spriteNum}.webp"
+                            }
+                        }, {
+                            "episode": "4",
+                            "id": 605330,
+                            "videoKey": 993655,
+                            "dash": "https://hye1eaipby4w.matham.ws/08_23/06/05/3M3ND6WR/993655.mpd?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=f06965ee930ebe9&hu=e6b36975279d2da&t=1736697629",
+                            "hls": "https://hye1eaipby4w.matham.ws/08_05_23/08/05/23/WG4QDUIL/PM4Z4FXD.mp4/master.m3u8?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=f06965ee930ebe9&hu=e6b36975279d2da&t=1736697629",
+                            "audio": {
+                                "names": ["Невафильм", "Eng.Original"],
+                                "order": [0, 1]
+                            },
+                            "cc": [{
+                                "url": "https://hye1eaipby4w.matham.ws/08_05_23/08/05/22/2Q6EDE2G/M5HIHIC3.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=f06965ee930ebe9&hu=e6b36975279d2da&t=1736697629",
+                                "name": "Укр. повні - 1"
+                            }, {
+                                "url": "https://hye1eaipby4w.matham.ws/08_05_23/08/05/22/S2XPZ5NI/NZ74ZUDA.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=f06965ee930ebe9&hu=e6b36975279d2da&t=1736697629",
+                                "name": "Eng. SDH - 2"
+                            }, {
+                                "url": "https://hye1eaipby4w.matham.ws/08_05_23/08/05/22/DPDTTCQO/GCWBS2VA.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=f06965ee930ebe9&hu=e6b36975279d2da&t=1736697629",
+                                "name": "Eng. full - 3"
+                            }, {
+                                "url": "https://hye1eaipby4w.matham.ws/08_05_23/08/05/22/TRAH2DIE/MNKM2QRL.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=f06965ee930ebe9&hu=e6b36975279d2da&t=1736697629",
+                                "name": "Рус. SDH - 4"
+                            }, {
+                                "url": "https://hye1eaipby4w.matham.ws/08_05_23/08/05/22/SUEEKAUQ/77EUZV33.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=f06965ee930ebe9&hu=e6b36975279d2da&t=1736697629",
+                                "name": "Рус. полные - 5"
+                            }, {
+                                "url": "https://hye1eaipby4w.matham.ws/08_05_23/08/05/22/MAB4KUD4/A6ECL463.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=f06965ee930ebe9&hu=e6b36975279d2da&t=1736697629",
+                                "name": "Рус. форсированные - 6"
+                            }],
+                            "duration": 3148,
+                            "title": "Основание (2 сезон) - 4 серия",
+                            "download": "",
+                            "sections": [{
+                                "end": 84.871,
+                                "skip": true,
+                                "type": "screen",
+                                "start": 0,
+                                "title": ""
+                            }, {
+                                "end": 3148.304,
+                                "skip": true,
+                                "type": "titer",
+                                "start": 3083.304,
+                                "title": ""
+                            }],
+                            "poster": "https://img.imgilall.me/movies/video/6/0/5/3/3/0/0/0/0/0/800x450_605330.jpg?t=1695049910",
+                            "preview": {
+                                "src": "https://img.zcvh.net/993655/desktop/thumb-${spriteNum}.webp"
+                            }
+                        }, {
+                            "episode": "5",
+                            "id": 607055,
+                            "videoKey": 995914,
+                            "dash": "https://hye1eaipby4w.matham.ws/08_23/11/17/OEPTRFSG/995914.mpd?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=f06965ee930ebe9&hu=e6b36975279d2da&t=1736697629",
+                            "hls": "https://hye1eaipby4w.matham.ws/08_11_23/08/11/12/LAD2AQE6/UNL23623.mp4/master.m3u8?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=f06965ee930ebe9&hu=e6b36975279d2da&t=1736697629",
+                            "audio": {
+                                "names": ["Невафильм", "Eng.Original"],
+                                "order": [0, 1]
+                            },
+                            "cc": [{
+                                "url": "https://hye1eaipby4w.matham.ws/08_11_23/08/11/12/64QURLSB/DQ2EE75G.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=f06965ee930ebe9&hu=e6b36975279d2da&t=1736697629",
+                                "name": "Укр. повні - 1"
+                            }, {
+                                "url": "https://hye1eaipby4w.matham.ws/08_11_23/08/11/12/REAJZIQB/CJCCSEQ2.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=f06965ee930ebe9&hu=e6b36975279d2da&t=1736697629",
+                                "name": "Eng. SDH - 2"
+                            }, {
+                                "url": "https://hye1eaipby4w.matham.ws/08_11_23/08/11/12/QE4ARDUR/4RQ4PFZ3.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=f06965ee930ebe9&hu=e6b36975279d2da&t=1736697629",
+                                "name": "Eng. full - 3"
+                            }, {
+                                "url": "https://hye1eaipby4w.matham.ws/08_11_23/08/11/12/X4ZXWFSC/5O2GI2GA.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=f06965ee930ebe9&hu=e6b36975279d2da&t=1736697629",
+                                "name": "Рус. SDH - 4"
+                            }, {
+                                "url": "https://hye1eaipby4w.matham.ws/08_11_23/08/11/12/CUKS6WB4/KZMSSNQB.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=f06965ee930ebe9&hu=e6b36975279d2da&t=1736697629",
+                                "name": "Рус. полные - 5"
+                            }, {
+                                "url": "https://hye1eaipby4w.matham.ws/08_11_23/08/11/12/63RESZMM/3HODRSJ5.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=f06965ee930ebe9&hu=e6b36975279d2da&t=1736697629",
+                                "name": "Рус. форсированные - 6"
+                            }],
+                            "duration": 2855,
+                            "title": "Основание (2 сезон) - 5 серия",
+                            "download": "",
+                            "sections": [{
+                                "title": "",
+                                "end": 84.871,
+                                "skip": true,
+                                "type": "screen",
+                                "start": 0
+                            }, {
+                                "end": 2855.75,
+                                "skip": true,
+                                "type": "titer",
+                                "start": 2789.872,
+                                "title": ""
+                            }],
+                            "poster": "https://img.imgilall.me/movies/video/6/0/7/0/5/5/0/0/0/0/800x450_607055.jpg?t=1695049957",
+                            "preview": {
+                                "src": "https://img.zcvh.net/995914/desktop/thumb-${spriteNum}.webp"
+                            }
+                        }, {
+                            "episode": "6",
+                            "id": 609301,
+                            "videoKey": 998752,
+                            "dash": "https://hye1eaipby4w.matham.ws/08_23/18/19/6K553IPB/998752.mpd?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=f06965ee930ebe9&hu=e6b36975279d2da&t=1736697629",
+                            "hls": "https://hye1eaipby4w.matham.ws/08_18_23/08/18/14/OQXTU5TV/J7IMDTYN.mp4/master.m3u8?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=f06965ee930ebe9&hu=e6b36975279d2da&t=1736697629",
+                            "audio": {
+                                "names": ["Невафильм", "Eng.Original"],
+                                "order": [0, 1]
+                            },
+                            "cc": [{
+                                "url": "https://hye1eaipby4w.matham.ws/08_18_23/08/18/13/SACPP76O/YZEBJK34.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=f06965ee930ebe9&hu=e6b36975279d2da&t=1736697629",
+                                "name": "Укр. повні - 1"
+                            }, {
+                                "url": "https://hye1eaipby4w.matham.ws/08_18_23/08/18/13/TV5LZ256/76R2XAJR.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=f06965ee930ebe9&hu=e6b36975279d2da&t=1736697629",
+                                "name": "Eng. SDH - 2"
+                            }, {
+                                "url": "https://hye1eaipby4w.matham.ws/08_18_23/08/18/13/6CFP5LS2/LDNN2VLZ.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=f06965ee930ebe9&hu=e6b36975279d2da&t=1736697629",
+                                "name": "Eng. full - 3"
+                            }, {
+                                "url": "https://hye1eaipby4w.matham.ws/08_18_23/08/18/13/VLVU74H6/IYMG54Y6.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=f06965ee930ebe9&hu=e6b36975279d2da&t=1736697629",
+                                "name": "Рус. SDH - 4"
+                            }, {
+                                "url": "https://hye1eaipby4w.matham.ws/08_18_23/08/18/13/5WRN7A4R/5Z3WULAJ.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=f06965ee930ebe9&hu=e6b36975279d2da&t=1736697629",
+                                "name": "Рус. полные - 5"
+                            }, {
+                                "url": "https://hye1eaipby4w.matham.ws/08_18_23/08/18/13/ZDPPQ77X/CNMYOWXH.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=f06965ee930ebe9&hu=e6b36975279d2da&t=1736697629",
+                                "name": "Рус. форсированные - 6"
+                            }],
+                            "duration": 3485,
+                            "title": "Основание (2 сезон) - 6 серия",
+                            "download": "",
+                            "sections": [{
+                                "skip": true,
+                                "type": "screen",
+                                "start": 0,
+                                "title": "",
+                                "end": 84.871
+                            }, {
+                                "end": 3485.25,
+                                "skip": true,
+                                "type": "titer",
+                                "start": 3423.321,
+                                "title": ""
+                            }],
+                            "poster": "https://img.imgilall.me/movies/video/6/0/9/3/0/1/0/0/0/0/800x450_609301.jpg?t=1695049980",
+                            "preview": {
+                                "src": "https://img.zcvh.net/998752/desktop/thumb-${spriteNum}.webp"
+                            }
+                        }, {
+                            "episode": "7",
+                            "id": 612311,
+                            "videoKey": 1001957,
+                            "dash": "https://hye1eaipby4w.matham.ws/08_23/25/18/MDUYSKX6/1001957.mpd?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=f06965ee930ebe9&hu=e6b36975279d2da&t=1736697629",
+                            "hls": "https://hye1eaipby4w.matham.ws/08_25_23/08/25/15/GGE3PJDC/SBCQINAW.mp4/master.m3u8?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=f06965ee930ebe9&hu=e6b36975279d2da&t=1736697629",
+                            "audio": {
+                                "names": ["Невафильм", "Eng.Original"],
+                                "order": [0, 1]
+                            },
+                            "cc": [{
+                                "url": "https://hye1eaipby4w.matham.ws/08_25_23/08/25/13/ENTYT4FP/KC7GNNC2.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=f06965ee930ebe9&hu=e6b36975279d2da&t=1736697629",
+                                "name": "Укр. повні - 1"
+                            }, {
+                                "url": "https://hye1eaipby4w.matham.ws/08_25_23/08/25/13/FVXHG7PP/F2P3VQCE.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=f06965ee930ebe9&hu=e6b36975279d2da&t=1736697629",
+                                "name": "Eng. SDH - 2"
+                            }, {
+                                "url": "https://hye1eaipby4w.matham.ws/08_25_23/08/25/13/47ILJ5S7/2K3MVG4U.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=f06965ee930ebe9&hu=e6b36975279d2da&t=1736697629",
+                                "name": "Eng. full - 3"
+                            }, {
+                                "url": "https://hye1eaipby4w.matham.ws/08_25_23/08/25/13/IS6K5QLO/P3E4SWWU.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=f06965ee930ebe9&hu=e6b36975279d2da&t=1736697629",
+                                "name": "Рус. SDH - 4"
+                            }, {
+                                "url": "https://hye1eaipby4w.matham.ws/08_25_23/08/25/13/7YEW7I36/5TZDD5TQ.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=f06965ee930ebe9&hu=e6b36975279d2da&t=1736697629",
+                                "name": "Рус. полные - 5"
+                            }, {
+                                "url": "https://hye1eaipby4w.matham.ws/08_25_23/08/25/13/ZM4JLG26/MTUFLNZB.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=f06965ee930ebe9&hu=e6b36975279d2da&t=1736697629",
+                                "name": "Рус. форсированные - 6"
+                            }],
+                            "duration": 3236,
+                            "title": "Основание (2 сезон) - 7 серия",
+                            "download": "",
+                            "sections": [{
+                                "end": 84.871,
+                                "skip": true,
+                                "type": "screen",
+                                "start": 0,
+                                "title": ""
+                            }, {
+                                "skip": true,
+                                "type": "titer",
+                                "start": 3172.132,
+                                "title": "",
+                                "end": 3236.709
+                            }],
+                            "poster": "https://img.imgilall.me/movies/video/6/1/2/3/1/1/0/0/0/0/800x450_612311.jpg?t=1695050006",
+                            "preview": {
+                                "src": "https://img.zcvh.net/1001957/desktop/thumb-${spriteNum}.webp"
+                            }
+                        }, {
+                            "episode": "8",
+                            "id": 615343,
+                            "videoKey": 1005301,
+                            "dash": "https://hye1eaipby4w.matham.ws/09_23/02/03/BTNVRMCX/1005301.mpd?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=f06965ee930ebe9&hu=e6b36975279d2da&t=1736697629",
+                            "hls": "https://hye1eaipby4w.matham.ws/09_01_23/09/01/17/5KBHP5TG/X5MRRWLF.mp4/master.m3u8?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=f06965ee930ebe9&hu=e6b36975279d2da&t=1736697629",
+                            "audio": {
+                                "names": ["Невафильм", "Eng.Original"],
+                                "order": [0, 1]
+                            },
+                            "cc": [{
+                                "url": "https://hye1eaipby4w.matham.ws/09_01_23/09/01/15/V7MQ7OZT/MTJY75ZM.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=f06965ee930ebe9&hu=e6b36975279d2da&t=1736697629",
+                                "name": "Укр. повні - 1"
+                            }, {
+                                "url": "https://hye1eaipby4w.matham.ws/09_01_23/09/01/15/IYT2IVU5/V2M7FSOK.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=f06965ee930ebe9&hu=e6b36975279d2da&t=1736697629",
+                                "name": "Eng. SDH - 2"
+                            }, {
+                                "url": "https://hye1eaipby4w.matham.ws/09_01_23/09/01/15/XCZRP7HJ/DRBMNKP5.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=f06965ee930ebe9&hu=e6b36975279d2da&t=1736697629",
+                                "name": "Eng. full - 3"
+                            }, {
+                                "url": "https://hye1eaipby4w.matham.ws/09_01_23/09/01/15/IBC3KBWH/MI2BKYOM.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=f06965ee930ebe9&hu=e6b36975279d2da&t=1736697629",
+                                "name": "Рус. SDH - 4"
+                            }, {
+                                "url": "https://hye1eaipby4w.matham.ws/09_01_23/09/01/15/KRX2OUQM/LDEYOWXX.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=f06965ee930ebe9&hu=e6b36975279d2da&t=1736697629",
+                                "name": "Рус. полные - 5"
+                            }, {
+                                "url": "https://hye1eaipby4w.matham.ws/09_01_23/09/01/15/VF65JQOV/AR7EIOSM.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=f06965ee930ebe9&hu=e6b36975279d2da&t=1736697629",
+                                "name": "Рус. форсированные - 6"
+                            }],
+                            "duration": 3618,
+                            "title": "Основание (2 сезон) - 8 серия",
+                            "download": "",
+                            "sections": [{
+                                "title": "",
+                                "end": 84.871,
+                                "skip": true,
+                                "type": "screen",
+                                "start": 0
+                            }, {
+                                "end": 3618.422,
+                                "skip": true,
+                                "type": "titer",
+                                "start": 3553.398,
+                                "title": ""
+                            }],
+                            "poster": "https://img.imgilall.me/movies/video/6/1/5/3/4/3/0/0/0/0/800x450_615343.jpg?t=1695050030",
+                            "preview": {
+                                "src": "https://img.zcvh.net/1005301/desktop/thumb-${spriteNum}.webp"
+                            }
+                        }, {
+                            "episode": "9",
+                            "id": 617103,
+                            "videoKey": 1007352,
+                            "dash": "https://hye1eaipby4w.matham.ws/09_23/08/21/3RJXD3UG/1007352.mpd?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=f06965ee930ebe9&hu=e6b36975279d2da&t=1736697629",
+                            "hls": "https://hye1eaipby4w.matham.ws/09_08_23/09/08/15/EM6LOTWC/MIVQRPAH.mp4/master.m3u8?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=f06965ee930ebe9&hu=e6b36975279d2da&t=1736697629",
+                            "audio": {
+                                "names": ["Невафильм", "Eng.Original"],
+                                "order": [0, 1]
+                            },
+                            "cc": [{
+                                "url": "https://hye1eaipby4w.matham.ws/09_08_23/09/08/15/4Z4ELWCL/ZDYISM6I.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=f06965ee930ebe9&hu=e6b36975279d2da&t=1736697629",
+                                "name": "Укр. повні - 1"
+                            }, {
+                                "url": "https://hye1eaipby4w.matham.ws/09_08_23/09/08/15/VX7Y44SM/ID7FHXAS.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=f06965ee930ebe9&hu=e6b36975279d2da&t=1736697629",
+                                "name": "Eng. SDH - 2"
+                            }, {
+                                "url": "https://hye1eaipby4w.matham.ws/09_08_23/09/08/15/T2VT75MB/QMYVB7PC.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=f06965ee930ebe9&hu=e6b36975279d2da&t=1736697629",
+                                "name": "Eng. full - 3"
+                            }, {
+                                "url": "https://hye1eaipby4w.matham.ws/09_08_23/09/08/15/6BWIK7CQ/46FKMI5R.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=f06965ee930ebe9&hu=e6b36975279d2da&t=1736697629",
+                                "name": "Рус. SDH - 4"
+                            }, {
+                                "url": "https://hye1eaipby4w.matham.ws/09_08_23/09/08/15/6OES4BHZ/HHTN5A5O.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=f06965ee930ebe9&hu=e6b36975279d2da&t=1736697629",
+                                "name": "Рус. полные - 5"
+                            }, {
+                                "url": "https://hye1eaipby4w.matham.ws/09_08_23/09/08/15/3FPBSSWD/YGDAEN25.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=f06965ee930ebe9&hu=e6b36975279d2da&t=1736697629",
+                                "name": "Рус. форсированные - 6"
+                            }],
+                            "duration": 3679,
+                            "title": "Основание (2 сезон) - 9 серия",
+                            "download": "",
+                            "sections": [{
+                                "start": 0,
+                                "title": "",
+                                "end": 84.871,
+                                "skip": true,
+                                "type": "screen"
+                            }, {
+                                "start": 3617.251,
+                                "title": "",
+                                "end": 3679.458,
+                                "skip": true,
+                                "type": "titer"
+                            }],
+                            "poster": "https://img.imgilall.me/movies/video/6/1/7/1/0/3/0/0/0/0/800x450_617103.jpg?t=1695050056",
+                            "preview": {
+                                "src": "https://img.zcvh.net/1007352/desktop/thumb-${spriteNum}.webp"
+                            }
+                        }, {
+                            "episode": "10",
+                            "id": 618951,
+                            "videoKey": 1009613,
+                            "dash": "https://hye1eaipby4w.matham.ws/09_23/15/15/L7ZBEQKC/1009613.mpd?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=f06965ee930ebe9&hu=e6b36975279d2da&t=1736697629",
+                            "hls": "https://hye1eaipby4w.matham.ws/09_15_23/09/15/11/RZFSGPC4/5S4IJYLN.mp4/master.m3u8?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=f06965ee930ebe9&hu=e6b36975279d2da&t=1736697629",
+                            "audio": {
+                                "names": ["Невафильм", "Eng.Original"],
+                                "order": [0, 1]
+                            },
+                            "cc": [{
+                                "url": "https://hye1eaipby4w.matham.ws/09_15_23/09/15/09/MJYW65EY/YXODAKCX.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=f06965ee930ebe9&hu=e6b36975279d2da&t=1736697629",
+                                "name": "Укр. повні - 1"
+                            }, {
+                                "url": "https://hye1eaipby4w.matham.ws/09_15_23/09/15/09/F3M2TGCC/5VRYVIHV.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=f06965ee930ebe9&hu=e6b36975279d2da&t=1736697629",
+                                "name": "Eng. SDH - 2"
+                            }, {
+                                "url": "https://hye1eaipby4w.matham.ws/09_15_23/09/15/09/VYQBW2EM/RTUQUGJ4.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=f06965ee930ebe9&hu=e6b36975279d2da&t=1736697629",
+                                "name": "Eng. full - 3"
+                            }, {
+                                "url": "https://hye1eaipby4w.matham.ws/09_15_23/09/15/09/WATFJ23T/MCRPCJ5I.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=f06965ee930ebe9&hu=e6b36975279d2da&t=1736697629",
+                                "name": "Рус. SDH - 4"
+                            }, {
+                                "url": "https://hye1eaipby4w.matham.ws/09_15_23/09/15/09/TMG27QJW/HBA5PTQ4.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=f06965ee930ebe9&hu=e6b36975279d2da&t=1736697629",
+                                "name": "Рус. полные - 5"
+                            }, {
+                                "url": "https://hye1eaipby4w.matham.ws/09_15_23/09/15/09/YR6SBUQL/HEBLBPYF.vtt?ha=5891910ad26d735&hc=f72f44474127842&hi=60db84177da9071&ht=f06965ee930ebe9&hu=e6b36975279d2da&t=1736697629",
+                                "name": "Рус. форсированные - 6"
+                            }],
+                            "duration": 3225,
+                            "title": "Основание (2 сезон) - 10 серия",
+                            "download": "",
+                            "sections": [{
+                                "skip": true,
+                                "type": "screen",
+                                "start": 0,
+                                "title": "",
+                                "end": 84.871
+                            }, {
+                                "end": 3225.969,
+                                "skip": true,
+                                "type": "titer",
+                                "start": 3161.656,
+                                "title": ""
+                            }],
+                            "poster": "https://img.imgilall.me/movies/video/6/1/8/9/5/1/0/0/0/0/800x450_618951.jpg?t=1695050075",
+                            "preview": {
+                                "src": "https://img.zcvh.net/1009613/desktop/thumb-${spriteNum}.webp"
+                            }
+                        }]
+                    }]
+
+                },
+                qualityByWidth: {
+                    "1280": 1080,
+                    "864": 480
+                },
+                p2p: {
+                    geo: ["ES", "", "AS57269"],
+                    tolerance: 4,
+                    tracker: "wss://t5.zcvh.net/v1/ws",
+                    longDownload: 30 * 1000
+                }
+    })
+</script>	
+</body>
+
+</html>	

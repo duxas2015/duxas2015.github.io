@@ -3,14 +3,29 @@
 <head>
 <script src="https://cdn.jsdelivr.net/npm/venom-player@latest"></script>
 <script src="managemovie.js"></script>
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="styles_mobile.css">
 </head>	
 <body>
 
-<div id="player"></div>
+<div id="outerContainer">
+	<div id="player"></div>
+	<div id="controlPanel">
+		<button class="clsButton" id="idRewind2Second" type="button">2</button>
+		<button class="clsButton" id="idRewind3Second" type="button">3</button>
+		<button class="clsButton" type="button">R</button>
+	</div>
+</div>
+
+<div id="engSubtitleOuterContainerId" class="subtitleOuterContainerCls">
+	<div id="engSubtitleContainerId" class="subtitleContainerCls"></div>
+</div>
 <div id="subtitleOuterContainerId" class="subtitleOuterContainerCls">
 	<div id="subtitleContainerId" class="subtitleContainerCls"></div>
 </div>
+
+<script>
+	var versionMobile = true;
+</script>
 
 <script>
     var player = VenomPlayer.make({

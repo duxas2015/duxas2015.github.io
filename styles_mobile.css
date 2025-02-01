@@ -1,0 +1,44 @@
+body {
+  overflow: hidden;
+  margin: 0px;
+  padding: 0px;
+}
+
+#outerContainer{
+	display:flex; 
+	flex-wrap:wrap;
+}
+
+#player {
+    width:960px!important;
+    height:540px!important;
+	flex:1;
+	max-width:90%;
+}
+
+#controlPanel {
+	flex:1;
+	max-width:10%;
+}
+
+.clsButton {
+	width:100%;
+	height:15%;
+}
+
+.subtitleContainerCls {
+	padding: 10px;
+	font-size: 300%;
+	min-height:200px;
+}
+
+.subtitleOuterContainerCls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:960px!important;	
+}
+
+video::-webkit-media-text-track-display {
+  font-size: 200%;
+}

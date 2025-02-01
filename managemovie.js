@@ -129,13 +129,23 @@ function findActiveSubtitleTrack(){
 
 var f = function ( event ) { 
  if ( event.currentTarget.activeCues[0] !== undefined ) { document.getElementById("subtitleContainerId").innerText = event.currentTarget.activeCues[0].text; } 
- else { document.getElementById("subtitleContainerId").innerText = "";}
+ else { document.getElementById("subtitleContainerId").innerHtml = "";}
  }
+
+var f_eng = function ( event ) {
+ if ( event.currentTarget.activeCues[0] !== undefined ) { document.getElementById("engSubtitleContainerId").innerText = event.currentTarget.activeCues[0].text; } 
+ else { document.getElementById("engSubtitleContainerId").innerHtml = "";}
+ }
+
 
 function listen(player) {
 	player.once('ready', () => {
       track = document.getElementsByTagName('video')[0].textTracks[findEnglishSubtitleTrackIndex()];
-	  track.mode = "showing";
+	  if ( (typeof versionMobile !== 'undefined') && versionMobile === true ) { // mobile mode
+        document.getElementsByTagName('video')[0].textTracks[findEnglishSubtitleTrackIndex()].oncuechange = f_eng;
+	  } else { // desctop mode
+		track.mode = "showing"; 		  
+	  }
       document.getElementsByTagName('video')[0].textTracks[findRussianSubtitleTrackIndex()].oncuechange = f;
 	});
 }
@@ -144,4 +154,8 @@ window.onload = function() {
   window.onkeydown = handle;
   player.onRenew = listen;
   listen(player);
+  if ( (typeof versionMobile !== 'undefined') && versionMobile === true ) {
+	  document.getElementById("idRewind2Second").addEventListener('click', ( event ) => { backMoving (2); } );
+	  document.getElementById("idRewind3Second").addEventListener('click', ( event ) => { backMoving (3); } );
+  }		
 };
