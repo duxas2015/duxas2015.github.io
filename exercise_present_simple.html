@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Present Simple Exercises</title>
+    <title>Present Simple Exercises (Full Version)</title>
     <style>
         table {
             border-collapse: collapse;
@@ -21,15 +21,16 @@
             background-color: #f2f2f2;
             font-weight: bold;
         }
-        .hint, .bulb, .eye {
+        .hint, .bulb, .eye, .paper, .speaker {
             position: relative;
             cursor: help;
             color: #0066cc;
             text-decoration: underline dotted;
+            margin-left: 5px;
         }
-        .hint .tooltip, .bulb .tooltip, .eye .tooltip {
+        .hint .tooltip, .bulb .tooltip, .eye .tooltip, .paper .tooltip {
             visibility: hidden;
-            width: 250px; /* Увеличена ширина для длинных подсказок */
+            width: 250px;
             background-color: #333;
             color: #fff;
             text-align: center;
@@ -43,7 +44,7 @@
             opacity: 0;
             transition: opacity 0.3s;
         }
-        .hint:hover .tooltip, .bulb:hover .tooltip, .eye:hover .tooltip {
+        .hint:hover .tooltip, .bulb:hover .tooltip, .eye:hover .tooltip, .paper:hover .tooltip {
             visibility: visible;
             opacity: 1;
         }
@@ -59,11 +60,16 @@
         }
         .bulb {
             color: #ffcc00;
-            margin-left: 5px;
         }
         .eye {
             color: #00cc00;
-            margin-left: 5px;
+        }
+        .paper {
+            color: #006600;
+        }
+        .speaker {
+            color: #ff0000;
+            cursor: pointer;
         }
         .theory {
             background-color: #f9f9f9;
@@ -79,7 +85,7 @@
     </style>
 </head>
 <body>
-    <h2>Упражнения на Present Simple</h2>
+    <h2>Упражнения на Present Simple (Полная версия)</h2>
 
     <div class="theory">
         <h3>Теория: Использование Present Simple</h3>
@@ -111,102 +117,102 @@
             <th>Usage Case</th>
         </tr>
         <tr>
-            <td>She <span class="hint" data-tooltip="walks">(walk)</span> to the park every morning.</td>
+            <td>She <span class="hint" data-tooltip="walks">(walk)</span> to the park every morning. <span class="paper" data-tooltip="/ʃi wɔːks tu ðə pɑːrk ˈɛvri ˈmɔːrnɪŋ/">📄</span> <span class="speaker" data-text="She walks to the park every morning">🔊</span></td>
             <td><span class="russian-translation">Она ходит в парк каждое утро.</span></td>
             <td><span class="eye" data-tooltip="Привычки и рутина">👁</span></td>
         </tr>
         <tr>
-            <td>They <span class="hint" data-tooltip="don’t eat">(not/eat)</span> meat on Fridays.</td>
+            <td>They <span class="hint" data-tooltip="don’t eat">(not/eat)</span> meat on Fridays. <span class="paper" data-tooltip="/ðeɪ dəʊnt iːt miːt ɒn ˈfraɪdeɪz/">📄</span> <span class="speaker" data-text="They don’t eat meat on Fridays">🔊</span></td>
             <td><span class="russian-translation">Они не едят мясо по пятницам.</span></td>
             <td><span class="eye" data-tooltip="Привычки и рутина">👁</span></td>
         </tr>
         <tr>
-            <td><span class="hint" data-tooltip="Do you run">(you/run)</span> in the evenings?</td>
+            <td><span class="hint" data-tooltip="Do you run">(you/run)</span> in the evenings? <span class="paper" data-tooltip="/duː juː rʌn ɪn ðə ˈiːvnɪŋz/">📄</span> <span class="speaker" data-text="Do you run in the evenings">🔊</span></td>
             <td><span class="russian-translation">Ты бегаешь по вечерам?</span></td>
             <td><span class="eye" data-tooltip="Привычки и рутина">👁</span></td>
         </tr>
         <tr>
-            <td>The cat <span class="hint" data-tooltip="sleeps">(sleep)</span> on the sofa every afternoon.</td>
+            <td>The cat <span class="hint" data-tooltip="sleeps">(sleep)</span> on the sofa every afternoon. <span class="paper" data-tooltip="/ðə kæt sliːps ɒn ðə ˈsəʊfə ˈɛvri ˌɑːftəˈnuːn/">📄</span> <span class="speaker" data-text="The cat sleeps on the sofa every afternoon">🔊</span></td>
             <td><span class="russian-translation">Кошка спит на диване каждый день.</span></td>
             <td><span class="eye" data-tooltip="Привычки и рутина">👁</span></td>
         </tr>
         <tr>
-            <td>We <span class="hint" data-tooltip="drink">(drink)</span> coffee and <span class="hint" data-tooltip="talk">(talk)</span> every morning.</td>
+            <td>We <span class="hint" data-tooltip="drink">(drink)</span> coffee and <span class="hint" data-tooltip="talk">(talk)</span> every morning. <span class="paper" data-tooltip="/wiː drɪŋk ˈkɒfi ænd tɔːk ˈɛvri ˈmɔːrnɪŋ/">📄</span> <span class="speaker" data-text="We drink coffee and talk every morning">🔊</span></td>
             <td><span class="russian-translation">Мы пьём кофе и разговариваем каждое утро.</span></td>
             <td><span class="eye" data-tooltip="Привычки и рутина">👁</span></td>
         </tr>
         <tr>
-            <td>He <span class="hint" data-tooltip="plays">(play)</span> tennis every weekend.</td>
+            <td>He <span class="hint" data-tooltip="plays">(play)</span> tennis every weekend. <span class="paper" data-tooltip="/hiː pleɪz ˈtɛnɪs ˈɛvri ˈwiːkɛnd/">📄</span> <span class="speaker" data-text="He plays tennis every weekend">🔊</span></td>
             <td><span class="russian-translation">Он играет в теннис каждые выходные.</span></td>
             <td><span class="eye" data-tooltip="Привычки и рутина">👁</span></td>
         </tr>
         <tr>
-            <td>They <span class="hint" data-tooltip="don’t swim">(not/swim)</span> in the lake in winter.</td>
+            <td>They <span class="hint" data-tooltip="don’t swim">(not/swim)</span> in the lake in winter. <span class="paper" data-tooltip="/ðeɪ dəʊnt swɪm ɪn ðə leɪk ɪn ˈwɪntə/">📄</span> <span class="speaker" data-text="They don’t swim in the lake in winter">🔊</span></td>
             <td><span class="russian-translation">Они не плавают в озере зимой.</span></td>
             <td><span class="eye" data-tooltip="Привычки и рутина">👁</span></td>
         </tr>
         <tr>
-            <td><span class="hint" data-tooltip="Do you sing">(you/sing)</span> in the choir on Sundays?</td>
+            <td><span class="hint" data-tooltip="Do you sing">(you/sing)</span> in the choir on Sundays? <span class="paper" data-tooltip="/duː juː sɪŋ ɪn ðə kwaɪə ɒn ˈsʌndeɪz/">📄</span> <span class="speaker" data-text="Do you sing in the choir on Sundays">🔊</span></td>
             <td><span class="russian-translation">Ты поёшь в хоре по воскресеньям?</span></td>
             <td><span class="eye" data-tooltip="Привычки и рутина">👁</span></td>
         </tr>
         <tr>
-            <td>The bird <span class="hint" data-tooltip="flies">(fly)</span> south every autumn.</td>
+            <td>The bird <span class="hint" data-tooltip="flies">(fly)</span> south every autumn. <span class="paper" data-tooltip="/ðə bɜːrd flaɪz saʊθ ˈɛvri ˈɔːtəm/">📄</span> <span class="speaker" data-text="The bird flies south every autumn">🔊</span></td>
             <td><span class="russian-translation">Птица летит на юг каждую осень.</span></td>
             <td><span class="eye" data-tooltip="Привычки и рутина">👁</span></td>
         </tr>
         <tr>
-            <td>We <span class="hint" data-tooltip="cook">(cook)</span> dinner and <span class="hint" data-tooltip="eat">(eat)</span> together every evening.</td>
+            <td>We <span class="hint" data-tooltip="cook">(cook)</span> dinner and <span class="hint" data-tooltip="eat">(eat)</span> together every evening. <span class="paper" data-tooltip="/wiː kʊk ˈdɪnə ænd iːt təˈɡɛðə ˈɛvri ˈiːvnɪŋ/">📄</span> <span class="speaker" data-text="We cook dinner and eat together every evening">🔊</span></td>
             <td><span class="russian-translation">Мы готовим ужин и едим вместе каждый вечер.</span></td>
             <td><span class="eye" data-tooltip="Привычки и рутина">👁</span></td>
         </tr>
         <tr>
-            <td>She <span class="hint" data-tooltip="reads">(read)</span> books every night.</td>
+            <td>She <span class="hint" data-tooltip="reads">(read)</span> books every night. <span class="paper" data-tooltip="/ʃi riːdz bʊks ˈɛvri naɪt/">📄</span> <span class="speaker" data-text="She reads books every night">🔊</span></td>
             <td><span class="russian-translation">Она читает книги каждую ночь.</span></td>
             <td><span class="eye" data-tooltip="Привычки и рутина">👁</span></td>
         </tr>
         <tr>
-            <td>They <span class="hint" data-tooltip="don’t dance">(not/dance)</span> at parties often.</td>
+            <td>They <span class="hint" data-tooltip="don’t dance">(not/dance)</span> at parties often. <span class="paper" data-tooltip="/ðeɪ dəʊnt dæns ət ˈpɑːtiz ˈɒfən/">📄</span> <span class="speaker" data-text="They don’t dance at parties often">🔊</span></td>
             <td><span class="russian-translation">Они редко танцуют на вечеринках.</span></td>
             <td><span class="eye" data-tooltip="Привычки и рутина">👁</span></td>
         </tr>
         <tr>
-            <td><span class="hint" data-tooltip="Do you write">(you/write)</span> emails in the afternoon?</td>
+            <td><span class="hint" data-tooltip="Do you write">(you/write)</span> emails in the afternoon? <span class="paper" data-tooltip="/duː juː raɪt ˈiːmeɪlz ɪn ðə ˈɑːftərnuːn/">📄</span> <span class="speaker" data-text="Do you write emails in the afternoon">🔊</span></td>
             <td><span class="russian-translation">Ты пишешь письма днём?</span></td>
             <td><span class="eye" data-tooltip="Привычки и рутина">👁</span></td>
         </tr>
         <tr>
-            <td>The dog <span class="hint" data-tooltip="barks">(bark)</span> at strangers every time.</td>
+            <td>The dog <span class="hint" data-tooltip="barks">(bark)</span> at strangers every time. <span class="paper" data-tooltip="/ðə dɒɡ bɑːks ət ˈstreɪndʒəz ˈɛvri taɪm/">📄</span> <span class="speaker" data-text="The dog barks at strangers every time">🔊</span></td>
             <td><span class="russian-translation">Собака лает на чужих каждый раз.</span></td>
             <td><span class="eye" data-tooltip="Привычки и рутина">👁</span></td>
         </tr>
         <tr>
-            <td>We <span class="hint" data-tooltip="listen">(listen)</span> to music and <span class="hint" data-tooltip="relax">(relax)</span> on weekends.</td>
+            <td>We <span class="hint" data-tooltip="listen">(listen)</span> to music and <span class="hint" data-tooltip="relax">(relax)</span> on weekends. <span class="paper" data-tooltip="/wiː ˈlɪsən tu ˈmjuːzɪk ænd rɪˈlæks ɒn ˈwiːkɛndz/">📄</span> <span class="speaker" data-text="We listen to music and relax on weekends">🔊</span></td>
             <td><span class="russian-translation">Мы слушаем музыку и расслабляемся по выходным.</span></td>
             <td><span class="eye" data-tooltip="Привычки и рутина">👁</span></td>
         </tr>
         <tr>
-            <td>He <span class="hint" data-tooltip="works">(work)</span> at the factory every weekday.</td>
+            <td>He <span class="hint" data-tooltip="works">(work)</span> at the factory every weekday. <span class="paper" data-tooltip="/hiː wɜːks ət ðə ˈfæktəri ˈɛvri ˈwiːkdeɪ/">📄</span> <span class="speaker" data-text="He works at the factory every weekday">🔊</span></td>
             <td><span class="russian-translation">Он работает на заводе каждый будний день.</span></td>
             <td><span class="eye" data-tooltip="Привычки и рутина">👁</span></td>
         </tr>
         <tr>
-            <td>They <span class="hint" data-tooltip="don’t buy">(not/buy)</span> clothes online often.</td>
+            <td>They <span class="hint" data-tooltip="don’t buy">(not/buy)</span> clothes online often. <span class="paper" data-tooltip="/ðeɪ dəʊnt baɪ kləʊðz ˈɒnlaɪn ˈɒfən/">📄</span> <span class="speaker" data-text="They don’t buy clothes online often">🔊</span></td>
             <td><span class="russian-translation">Они редко покупают одежду онлайн.</span></td>
             <td><span class="eye" data-tooltip="Привычки и рутина">👁</span></td>
         </tr>
         <tr>
-            <td><span class="hint" data-tooltip="Do you sell">(you/sell)</span> vegetables at the market?</td>
+            <td><span class="hint" data-tooltip="Do you sell">(you/sell)</span> vegetables at the market? <span class="paper" data-tooltip="/duː juː sɛl ˈvɛdʒtəblz ət ðə ˈmɑːrkɪt/">📄</span> <span class="speaker" data-text="Do you sell vegetables at the market">🔊</span></td>
             <td><span class="russian-translation">Ты продаёшь овощи на рынке?</span></td>
             <td><span class="eye" data-tooltip="Привычки и рутина">👁</span></td>
         </tr>
         <tr>
-            <td>The train <span class="hint" data-tooltip="arrives">(arrive)</span> at 8 a.m. every day.</td>
+            <td>The train <span class="hint" data-tooltip="arrives">(arrive)</span> at 8 a.m. every day. <span class="paper" data-tooltip="/ðə treɪn əˈraɪvz ət eɪt eɪ.ɛm. ˈɛvri deɪ/">📄</span> <span class="speaker" data-text="The train arrives at 8 a.m. every day">🔊</span></td>
             <td><span class="russian-translation">Поезд прибывает в 8 утра каждый день.</span></td>
             <td><span class="eye" data-tooltip="Расписания и планы">👁</span></td>
         </tr>
         <tr>
-            <td>We <span class="hint" data-tooltip="visit">(visit)</span> our friends and <span class="hint" data-tooltip="play">(play)</span> games every Saturday.</td>
+            <td>We <span class="hint" data-tooltip="visit">(visit)</span> our friends and <span class="hint" data-tooltip="play">(play)</span> games every Saturday. <span class="paper" data-tooltip="/wiː ˈvɪzɪt aʊə frɛndz ænd pleɪ ɡeɪmz ˈɛvri ˈsætədeɪ/">📄</span> <span class="speaker" data-text="We visit our friends and play games every Saturday">🔊</span></td>
             <td><span class="russian-translation">Мы посещаем друзей и играем в игры каждую субботу.</span></td>
             <td><span class="eye" data-tooltip="Привычки и рутина">👁</span></td>
         </tr>
@@ -221,102 +227,102 @@
             <th>Usage Case</th>
         </tr>
         <tr>
-            <td>She <span class="hint" data-tooltip="eats">(eats/eat)</span> breakfast at 7 a.m. every day.</td>
+            <td>She <span class="hint" data-tooltip="eats">(eats/eat)</span> breakfast at 7 a.m. every day. <span class="paper" data-tooltip="/ʃi iːts ˈbrɛkfəst ət sɛvən eɪ.ɛm. ˈɛvri deɪ/">📄</span> <span class="speaker" data-text="She eats breakfast at 7 a.m. every day">🔊</span></td>
             <td><span class="russian-translation">Она завтракает в 7 утра каждый день.</span></td>
             <td><span class="eye" data-tooltip="Привычки и рутина">👁</span></td>
         </tr>
         <tr>
-            <td><span class="hint" data-tooltip="Do you drink">(Do you drink/You drink)</span> tea in the afternoon?</td>
+            <td><span class="hint" data-tooltip="Do you drink">(Do you drink/You drink)</span> tea in the afternoon? <span class="paper" data-tooltip="/duː juː drɪŋk tiː ɪn ðə ˈɑːftərnuːn/">📄</span> <span class="speaker" data-text="Do you drink tea in the afternoon">🔊</span></td>
             <td><span class="russian-translation">Ты пьёшь чай днём?</span></td>
             <td><span class="eye" data-tooltip="Привычки и рутина">👁</span></td>
         </tr>
         <tr>
-            <td>The moon <span class="hint" data-tooltip="shines">(shine/shines)</span> at night.</td>
+            <td>The moon <span class="hint" data-tooltip="shines">(shine/shines)</span> at night. <span class="paper" data-tooltip="/ðə muːn ʃaɪnz ət naɪt/">📄</span> <span class="speaker" data-text="The moon shines at night">🔊</span></td>
             <td><span class="russian-translation">Луна светит ночью.</span></td>
             <td><span class="eye" data-tooltip="Общие истины и факты">👁</span></td>
         </tr>
         <tr>
-            <td>They <span class="hint" data-tooltip="don’t run">(don’t/doesn’t run)</span> in the rain.</td>
+            <td>They <span class="hint" data-tooltip="don’t run">(don’t/doesn’t run)</span> in the rain. <span class="paper" data-tooltip="/ðeɪ dəʊnt rʌn ɪn ðə reɪn/">📄</span> <span class="speaker" data-text="They don’t run in the rain">🔊</span></td>
             <td><span class="russian-translation">Они не бегают под дождём.</span></td>
             <td><span class="eye" data-tooltip="Привычки и рутина">👁</span></td>
         </tr>
         <tr>
-            <td>He <span class="hint" data-tooltip="plays">(plays/play)</span> soccer and <span class="hint" data-tooltip="enjoys">(enjoys/enjoy)</span> it every weekend.</td>
+            <td>He <span class="hint" data-tooltip="plays">(plays/play)</span> soccer and <span class="hint" data-tooltip="enjoys">(enjoys/enjoy)</span> it every weekend. <span class="paper" data-tooltip="/hiː pleɪz ˈsɒkə ænd ɪnˈdʒɔɪz ɪt ˈɛvri ˈwiːkɛnd/">📄</span> <span class="speaker" data-text="He plays soccer and enjoys it every weekend">🔊</span></td>
             <td><span class="russian-translation">Он играет в футбол и любит это каждые выходные.</span></td>
             <td><span class="eye" data-tooltip="Привычки и рутина">👁</span></td>
         </tr>
         <tr>
-            <td><span class="hint" data-tooltip="Do you read">(Do you read/You read)</span> newspapers every morning?</td>
+            <td><span class="hint" data-tooltip="Do you read">(Do you read/You read)</span> newspapers every morning? <span class="paper" data-tooltip="/duː juː riːd ˈnjuːzpeɪpəz ˈɛvri ˈmɔːrnɪŋ/">📄</span> <span class="speaker" data-text="Do you read newspapers every morning">🔊</span></td>
             <td><span class="russian-translation">Ты читаешь газеты каждое утро?</span></td>
             <td><span class="eye" data-tooltip="Привычки и рутина">👁</span></td>
         </tr>
         <tr>
-            <td>The bus <span class="hint" data-tooltip="leaves">(leave/leaves)</span> at 6 p.m. every evening.</td>
+            <td>The bus <span class="hint" data-tooltip="leaves">(leave/leaves)</span> at 6 p.m. every evening. <span class="paper" data-tooltip="/ðə bʌs liːvz ət sɪks piː.ɛm. ˈɛvri ˈiːvnɪŋ/">📄</span> <span class="speaker" data-text="The bus leaves at 6 p.m. every evening">🔊</span></td>
             <td><span class="russian-translation">Автобус отправляется в 6 вечера каждый вечер.</span></td>
             <td><span class="eye" data-tooltip="Расписания и планы">👁</span></td>
         </tr>
         <tr>
-            <td>She <span class="hint" data-tooltip="doesn’t write">(doesn’t/don’t write)</span> emails after work.</td>
+            <td>She <span class="hint" data-tooltip="doesn’t write">(doesn’t/don’t write)</span> emails after work. <span class="paper" data-tooltip="/ʃi dʌznt raɪt ˈiːmeɪlz ˈɑːftə wɜːk/">📄</span> <span class="speaker" data-text="She doesn’t write emails after work">🔊</span></td>
             <td><span class="russian-translation">Она не пишет письма после работы.</span></td>
             <td><span class="eye" data-tooltip="Привычки и рутина">👁</span></td>
         </tr>
         <tr>
-            <td>They <span class="hint" data-tooltip="swim">(swim/swims)</span> in the pool every summer.</td>
+            <td>They <span class="hint" data-tooltip="swim">(swim/swims)</span> in the pool every summer. <span class="paper" data-tooltip="/ðeɪ swɪm ɪn ðə puːl ˈɛvri ˈsʌmə/">📄</span> <span class="speaker" data-text="They swim in the pool every summer">🔊</span></td>
             <td><span class="russian-translation">Они плавают в бассейне каждое лето.</span></td>
             <td><span class="eye" data-tooltip="Привычки и рутина">👁</span></td>
         </tr>
         <tr>
-            <td><span class="hint" data-tooltip="Do you dance">(Do you dance/You dance)</span> at parties?</td>
+            <td><span class="hint" data-tooltip="Do you dance">(Do you dance/You dance)</span> at parties? <span class="paper" data-tooltip="/duː juː dæns ət ˈpɑːtiz/">📄</span> <span class="speaker" data-text="Do you dance at parties">🔊</span></td>
             <td><span class="russian-translation">Ты танцуешь на вечеринках?</span></td>
             <td><span class="eye" data-tooltip="Привычки и рутина">👁</span></td>
         </tr>
         <tr>
-            <td>He <span class="hint" data-tooltip="sings">(sings/sing)</span> in the shower every morning.</td>
+            <td>He <span class="hint" data-tooltip="sings">(sings/sing)</span> in the shower every morning. <span class="paper" data-tooltip="/hiː sɪŋz ɪn ðə ˈʃaʊə ˈɛvri ˈmɔːrnɪŋ/">📄</span> <span class="speaker" data-text="He sings in the shower every morning">🔊</span></td>
             <td><span class="russian-translation">Он поёт в душе каждое утро.</span></td>
             <td><span class="eye" data-tooltip="Привычки и рутина">👁</span></td>
         </tr>
         <tr>
-            <td>They <span class="hint" data-tooltip="don’t study">(don’t/doesn’t study)</span> on weekends.</td>
+            <td>They <span class="hint" data-tooltip="don’t study">(don’t/doesn’t study)</span> on weekends. <span class="paper" data-tooltip="/ðeɪ dəʊnt ˈstʌdi ɒn ˈwiːkɛndz/">📄</span> <span class="speaker" data-text="They don’t study on weekends">🔊</span></td>
             <td><span class="russian-translation">Они не учатся по выходным.</span></td>
             <td><span class="eye" data-tooltip="Привычки и рутина">👁</span></td>
         </tr>
         <tr>
-            <td><span class="hint" data-tooltip="Do you work">(Do you work/You work)</span> from home?</td>
+            <td><span class="hint" data-tooltip="Do you work">(Do you work/You work)</span> from home? <span class="paper" data-tooltip="/duː juː wɜːk frəm hoʊm/">📄</span> <span class="speaker" data-text="Do you work from home">🔊</span></td>
             <td><span class="russian-translation">Ты работаешь дома?</span></td>
             <td><span class="eye" data-tooltip="Привычки и рутина">👁</span></td>
         </tr>
         <tr>
-            <td>The river <span class="hint" data-tooltip="flows">(flow/flows)</span> to the sea every year.</td>
+            <td>The river <span class="hint" data-tooltip="flows">(flow/flows)</span> to the sea every year. <span class="paper" data-tooltip="/ðə ˈrɪvə fləʊz tu ðə siː ˈɛvri jɪə/">📄</span> <span class="speaker" data-text="The river flows to the sea every year">🔊</span></td>
             <td><span class="russian-translation">Река течёт в море каждый год.</span></td>
             <td><span class="eye" data-tooltip="Общие истины и факты">👁</span></td>
         </tr>
         <tr>
-            <td>She <span class="hint" data-tooltip="cooks">(cooks/cook)</span> dinner and <span class="hint" data-tooltip="eats">(eats/eat)</span> with her family every night.</td>
+            <td>She <span class="hint" data-tooltip="cooks">(cooks/cook)</span> dinner and <span class="hint" data-tooltip="eats">(eats/eat)</span> with her family every night. <span class="paper" data-tooltip="/ʃi kʊks ˈdɪnə ænd iːts wɪð hə ˈfæmɪli ˈɛvri naɪt/">📄</span> <span class="speaker" data-text="She cooks dinner and eats with her family every night">🔊</span></td>
             <td><span class="russian-translation">Она готовит ужин и ест с семьёй каждую ночь.</span></td>
             <td><span class="eye" data-tooltip="Привычки и рутина">👁</span></td>
         </tr>
         <tr>
-            <td><span class="hint" data-tooltip="Do you listen">(Do you listen/You listen)</span> to music at night?</td>
+            <td><span class="hint" data-tooltip="Do you listen">(Do you listen/You listen)</span> to music at night? <span class="paper" data-tooltip="/duː juː ˈlɪsən tu ˈmjuːzɪk ət naɪt/">📄</span> <span class="speaker" data-text="Do you listen to music at night">🔊</span></td>
             <td><span class="russian-translation">Ты слушаешь музыку ночью?</span></td>
             <td><span class="eye" data-tooltip="Привычки и рутина">👁</span></td>
         </tr>
         <tr>
-            <td>He <span class="hint" data-tooltip="drives">(drives/drive)</span> to work and <span class="hint" data-tooltip="arrives">(arrives/arrive)</span> at 8 a.m.</td>
+            <td>He <span class="hint" data-tooltip="drives">(drives/drive)</span> to work and <span class="hint" data-tooltip="arrives">(arrives/arrive)</span> at 8 a.m. <span class="paper" data-tooltip="/hiː draɪvz tu wɜːk ænd əˈraɪvz ət eɪt eɪ.ɛm/">📄</span> <span class="speaker" data-text="He drives to work and arrives at 8 a.m.">🔊</span></td>
             <td><span class="russian-translation">Он ездит на работу и прибывает в 8 утра.</span></td>
             <td><span class="eye" data-tooltip="Привычки и рутина, Расписания и планы">👁</span></td>
         </tr>
         <tr>
-            <td>They <span class="hint" data-tooltip="don’t buy">(don’t/doesn’t buy)</span> expensive clothes often.</td>
+            <td>They <span class="hint" data-tooltip="don’t buy">(don’t/doesn’t buy)</span> expensive clothes often. <span class="paper" data-tooltip="/ðeɪ dəʊnt baɪ ˈɪkspɛnsɪv kləʊðz ˈɒfən/">📄</span> <span class="speaker" data-text="They don’t buy expensive clothes often">🔊</span></td>
             <td><span class="russian-translation">Они редко покупают дорогую одежду.</span></td>
             <td><span class="eye" data-tooltip="Привычки и рутина">👁</span></td>
         </tr>
         <tr>
-            <td><span class="hint" data-tooltip="Do you visit">(Do you visit/You visit)</span> your grandparents every month?</td>
+            <td><span class="hint" data-tooltip="Do you visit">(Do you visit/You visit)</span> your grandparents every month? <span class="paper" data-tooltip="/duː juː ˈvɪzɪt jɔː ˈɡrændpɛrənts ˈɛvri mʌnθ/">📄</span> <span class="speaker" data-text="Do you visit your grandparents every month">🔊</span></td>
             <td><span class="russian-translation">Ты посещаешь своих бабушек и дедушек каждый месяц?</span></td>
             <td><span class="eye" data-tooltip="Привычки и рутина">👁</span></td>
         </tr>
         <tr>
-            <td>The plane <span class="hint" data-tooltip="takes">(take/takes)</span> off at 9 a.m. every day.</td>
+            <td>The plane <span class="hint" data-tooltip="takes">(take/takes)</span> off at 9 a.m. every day. <span class="paper" data-tooltip="/ðə pleɪn teɪks ɒf ət naɪn eɪ.ɛm. ˈɛvri deɪ/">📄</span> <span class="speaker" data-text="The plane takes off at 9 a.m. every day">🔊</span></td>
             <td><span class="russian-translation">Самолёт взлетает в 9 утра каждый день.</span></td>
             <td><span class="eye" data-tooltip="Расписания и планы">👁</span></td>
         </tr>
@@ -331,102 +337,102 @@
             <th>Usage Case</th>
         </tr>
         <tr>
-            <td>She likes chocolate. (negative) <span class="bulb" data-tooltip="She doesn’t like chocolate.">⚡</span></td>
+            <td>She likes chocolate. (negative) <span class="bulb" data-tooltip="She doesn’t like chocolate.">⚡</span> <span class="paper" data-tooltip="/ʃi laɪks ˈtʃɒklɪt/">📄</span> <span class="speaker" data-text="She likes chocolate">🔊</span></td>
             <td><span class="russian-translation">Она не любит шоколад.</span></td>
             <td><span class="eye" data-tooltip="Состояния и чувства">👁</span></td>
         </tr>
         <tr>
-            <td>They play tennis every weekend. (question) <span class="bulb" data-tooltip="Do they play tennis every weekend?">⚡</span></td>
+            <td>They play tennis every weekend. (question) <span class="bulb" data-tooltip="Do they play tennis every weekend?">⚡</span> <span class="paper" data-tooltip="/ðeɪ pleɪ ˈtɛnɪs ˈɛvri ˈwiːkɛnd/">📄</span> <span class="speaker" data-text="They play tennis every weekend">🔊</span></td>
             <td><span class="russian-translation">Они играют в теннис каждые выходные?</span></td>
             <td><span class="eye" data-tooltip="Привычки и рутина">👁</span></td>
         </tr>
         <tr>
-            <td>I eat pizza on Saturdays. (negative) <span class="bulb" data-tooltip="I don’t eat pizza on Saturdays.">⚡</span></td>
+            <td>I eat pizza on Saturdays. (negative) <span class="bulb" data-tooltip="I don’t eat pizza on Saturdays.">⚡</span> <span class="paper" data-tooltip="/aɪ iːt ˈpiːtsə ɒn ˈsætədeɪz/">📄</span> <span class="speaker" data-text="I eat pizza on Saturdays">🔊</span></td>
             <td><span class="russian-translation">Я не ем пиццу по субботам.</span></td>
             <td><span class="eye" data-tooltip="Привычки и рутина">👁</span></td>
         </tr>
         <tr>
-            <td>He drinks coffee every morning. (question) <span class="bulb" data-tooltip="Does he drink coffee every morning?">⚡</span></td>
+            <td>He drinks coffee every morning. (question) <span class="bulb" data-tooltip="Does he drink coffee every morning?">⚡</span> <span class="paper" data-tooltip="/hiː drɪŋks ˈkɒfi ˈɛvri ˈmɔːrnɪŋ/">📄</span> <span class="speaker" data-text="He drinks coffee every morning">🔊</span></td>
             <td><span class="russian-translation">Он пьёт кофе каждое утро?</span></td>
             <td><span class="eye" data-tooltip="Привычки и рутина">👁</span></td>
         </tr>
         <tr>
-            <td>We run in the park often. (negative) <span class="bulb" data-tooltip="We don’t run in the park often.">⚡</span></td>
+            <td>We run in the park often. (negative) <span class="bulb" data-tooltip="We don’t run in the park often.">⚡</span> <span class="paper" data-tooltip="/wiː rʌn ɪn ðə pɑːrk ˈɒfən/">📄</span> <span class="speaker" data-text="We run in the park often">🔊</span></td>
             <td><span class="russian-translation">Мы редко бегаем в парке.</span></td>
             <td><span class="eye" data-tooltip="Привычки и рутина">👁</span></td>
         </tr>
         <tr>
-            <td>She reads books every night. (question) <span class="bulb" data-tooltip="Does she read books every night?">⚡</span></td>
+            <td>She reads books every night. (question) <span class="bulb" data-tooltip="Does she read books every night?">⚡</span> <span class="paper" data-tooltip="/ʃi riːdz bʊks ˈɛvri naɪt/">📄</span> <span class="speaker" data-text="She reads books every night">🔊</span></td>
             <td><span class="russian-translation">Она читает книги каждую ночь?</span></td>
             <td><span class="eye" data-tooltip="Привычки и рутина">👁</span></td>
         </tr>
         <tr>
-            <td>They study French every week. (negative) <span class="bulb" data-tooltip="They don’t study French every week.">⚡</span></td>
+            <td>They study French every week. (negative) <span class="bulb" data-tooltip="They don’t study French every week.">⚡</span> <span class="paper" data-tooltip="/ðeɪ ˈstʌdi frɛntʃ ˈɛvri wiːk/">📄</span> <span class="speaker" data-text="They study French every week">🔊</span></td>
             <td><span class="russian-translation">Они не учат французский каждый неделю.</span></td>
             <td><span class="eye" data-tooltip="Привычки и рутина">👁</span></td>
         </tr>
         <tr>
-            <td>I work from home. (question) <span class="bulb" data-tooltip="Do I work from home?">⚡</span></td>
+            <td>I work from home. (question) <span class="bulb" data-tooltip="Do I work from home?">⚡</span> <span class="paper" data-tooltip="/aɪ wɜːk frəm hoʊm/">📄</span> <span class="speaker" data-text="I work from home">🔊</span></td>
             <td><span class="russian-translation">Я работаю дома?</span></td>
             <td><span class="eye" data-tooltip="Привычки и рутина">👁</span></td>
         </tr>
         <tr>
-            <td>He swims in the lake every summer. (negative) <span class="bulb" data-tooltip="He doesn’t swim in the lake every summer.">⚡</span></td>
+            <td>He swims in the lake every summer. (negative) <span class="bulb" data-tooltip="He doesn’t swim in the lake every summer.">⚡</span> <span class="paper" data-tooltip="/hiː swɪmz ɪn ðə leɪk ˈɛvri ˈsʌmə/">📄</span> <span class="speaker" data-text="He swims in the lake every summer">🔊</span></td>
             <td><span class="russian-translation">Он не плавает в озере каждое лето.</span></td>
             <td><span class="eye" data-tooltip="Привычки и рутина">👁</span></td>
         </tr>
         <tr>
-            <td>We dance at parties often. (question) <span class="bulb" data-tooltip="Do we dance at parties often?">⚡</span></td>
+            <td>We dance at parties often. (question) <span class="bulb" data-tooltip="Do we dance at parties often?">⚡</span> <span class="paper" data-tooltip="/wiː dæns ət ˈpɑːtiz ˈɒfən/">📄</span> <span class="speaker" data-text="We dance at parties often">🔊</span></td>
             <td><span class="russian-translation">Мы часто танцуем на вечеринках?</span></td>
             <td><span class="eye" data-tooltip="Привычки и рутина">👁</span></td>
         </tr>
         <tr>
-            <td>She sings in the choir every Sunday. (negative) <span class="bulb" data-tooltip="She doesn’t sing in the choir every Sunday.">⚡</span></td>
+            <td>She sings in the choir every Sunday. (negative) <span class="bulb" data-tooltip="She doesn’t sing in the choir every Sunday.">⚡</span> <span class="paper" data-tooltip="/ʃi sɪŋz ɪn ðə kwaɪə ˈɛvri ˈsʌndeɪ/">📄</span> <span class="speaker" data-text="She sings in the choir every Sunday">🔊</span></td>
             <td><span class="russian-translation">Она не поёт в хоре каждое воскресенье.</span></td>
             <td><span class="eye" data-tooltip="Привычки и рутина">👁</span></td>
         </tr>
         <tr>
-            <td>They cook dinner every evening. (question) <span class="bulb" data-tooltip="Do they cook dinner every evening?">⚡</span></td>
+            <td>They cook dinner every evening. (question) <span class="bulb" data-tooltip="Do they cook dinner every evening?">⚡</span> <span class="paper" data-tooltip="/ðeɪ kʊk ˈdɪnə ˈɛvri ˈiːvnɪŋ/">📄</span> <span class="speaker" data-text="They cook dinner every evening">🔊</span></td>
             <td><span class="russian-translation">Они готовят ужин каждый вечер?</span></td>
             <td><span class="eye" data-tooltip="Привычки и рутина">👁</span></td>
         </tr>
         <tr>
-            <td>I listen to music every night. (negative) <span class="bulb" data-tooltip="I don’t listen to music every night.">⚡</span></td>
+            <td>I listen to music every night. (negative) <span class="bulb" data-tooltip="I don’t listen to music every night.">⚡</span> <span class="paper" data-tooltip="/aɪ ˈlɪsən tu ˈmjuːzɪk ˈɛvri naɪt/">📄</span> <span class="speaker" data-text="I listen to music every night">🔊</span></td>
             <td><span class="russian-translation">Я не слушаю музыку каждую ночь.</span></td>
             <td><span class="eye" data-tooltip="Привычки и рутина">👁</span></td>
         </tr>
         <tr>
-            <td>He drives to work every day. (question) <span class="bulb" data-tooltip="Does he drive to work every day?">⚡</span></td>
+            <td>He drives to work every day. (question) <span class="bulb" data-tooltip="Does he drive to work every day?">⚡</span> <span class="paper" data-tooltip="/hiː draɪvz tu wɜːk ˈɛvri deɪ/">📄</span> <span class="speaker" data-text="He drives to work every day">🔊</span></td>
             <td><span class="russian-translation">Он ездит на работу каждый день?</span></td>
             <td><span class="eye" data-tooltip="Привычки и рутина">👁</span></td>
         </tr>
         <tr>
-            <td>We buy groceries every Saturday. (negative) <span class="bulb" data-tooltip="We don’t buy groceries every Saturday.">⚡</span></td>
+            <td>We buy groceries every Saturday. (negative) <span class="bulb" data-tooltip="We don’t buy groceries every Saturday.">⚡</span> <span class="paper" data-tooltip="/wiː baɪ ˈɡrəʊsəriz ˈɛvri ˈsætədeɪ/">📄</span> <span class="speaker" data-text="We buy groceries every Saturday">🔊</span></td>
             <td><span class="russian-translation">Мы не покупаем продукты каждую субботу.</span></td>
             <td><span class="eye" data-tooltip="Привычки и рутина">👁</span></td>
         </tr>
         <tr>
-            <td>She sells flowers at the market. (question) <span class="bulb" data-tooltip="Does she sell flowers at the market?">⚡</span></td>
+            <td>She sells flowers at the market. (question) <span class="bulb" data-tooltip="Does she sell flowers at the market?">⚡</span> <span class="paper" data-tooltip="/ʃi sɛlz ˈflaʊəz ət ðə ˈmɑːrkɪt/">📄</span> <span class="speaker" data-text="She sells flowers at the market">🔊</span></td>
             <td><span class="russian-translation">Она продаёт цветы на рынке?</span></td>
             <td><span class="eye" data-tooltip="Привычки и рутина">👁</span></td>
         </tr>
         <tr>
-            <td>They visit the museum every month. (negative) <span class="bulb" data-tooltip="They don’t visit the museum every month.">⚡</span></td>
+            <td>They visit the museum every month. (negative) <span class="bulb" data-tooltip="They don’t visit the museum every month.">⚡</span> <span class="paper" data-tooltip="/ðeɪ ˈvɪzɪt ðə mjuːˈziːəm ˈɛvri mʌnθ/">📄</span> <span class="speaker" data-text="They visit the museum every month">🔊</span></td>
             <td><span class="russian-translation">Они не посещают музей каждый месяц.</span></td>
             <td><span class="eye" data-tooltip="Привычки и рутина">👁</span></td>
         </tr>
         <tr>
-            <td>I help my neighbors every week. (question) <span class="bulb" data-tooltip="Do I help my neighbors every week?">⚡</span></td>
+            <td>I help my neighbors every week. (question) <span class="bulb" data-tooltip="Do I help my neighbors every week?">⚡</span> <span class="paper" data-tooltip="/aɪ hɛlp maɪ ˈneɪbəz ˈɛvri wiːk/">📄</span> <span class="speaker" data-text="I help my neighbors every week">🔊</span></td>
             <td><span class="russian-translation">Я помогаю соседям каждый неделю?</span></td>
             <td><span class="eye" data-tooltip="Привычки и рутина">👁</span></td>
         </tr>
         <tr>
-            <td>The sun rises in the east. (question) <span class="bulb" data-tooltip="Does the sun rise in the east?">⚡</span></td>
+            <td>The sun rises in the east. (question) <span class="bulb" data-tooltip="Does the sun rise in the east?">⚡</span> <span class="paper" data-tooltip="/ðə sʌn raɪzɪz ɪn ðə iːst/">📄</span> <span class="speaker" data-text="The sun rises in the east">🔊</span></td>
             <td><span class="russian-translation">Солнце встаёт на востоке?</span></td>
             <td><span class="eye" data-tooltip="Общие истины и факты">👁</span></td>
         </tr>
         <tr>
-            <td>We sleep late on Sundays. (negative) <span class="bulb" data-tooltip="We don’t sleep late on Sundays.">⚡</span></td>
+            <td>We sleep late on Sundays. (negative) <span class="bulb" data-tooltip="We don’t sleep late on Sundays.">⚡</span> <span class="paper" data-tooltip="/wiː sliːp leɪt ɒn ˈsʌndeɪz/">📄</span> <span class="speaker" data-text="We sleep late on Sundays">🔊</span></td>
             <td><span class="russian-translation">Мы не спим допоздна по воскресеньям.</span></td>
             <td><span class="eye" data-tooltip="Привычки и рутина">👁</span></td>
         </tr>
@@ -441,102 +447,102 @@
             <th>Usage Case</th>
         </tr>
         <tr>
-            <td>Do you eat breakfast every day? <span class="bulb" data-tooltip="Yes, I do. / No, I don’t.">⚡</span></td>
+            <td>Do you eat breakfast every day? <span class="bulb" data-tooltip="Yes, I do. / No, I don’t.">⚡</span> <span class="paper" data-tooltip="/duː juː iːt ˈbrɛkfəst ˈɛvri deɪ/">📄</span> <span class="speaker" data-text="Do you eat breakfast every day">🔊</span></td>
             <td><span class="russian-translation">Ты завтракаешь каждый день?</span></td>
             <td><span class="eye" data-tooltip="Привычки и рутина">👁</span></td>
         </tr>
         <tr>
-            <td>Does she drink tea in the morning? <span class="bulb" data-tooltip="Yes, she does. / No, she doesn’t.">⚡</span></td>
+            <td>Does she drink tea in the morning? <span class="bulb" data-tooltip="Yes, she does. / No, she doesn’t.">⚡</span> <span class="paper" data-tooltip="/dʌz ʃi drɪŋk tiː ɪn ðə ˈmɔːrnɪŋ/">📄</span> <span class="speaker" data-text="Does she drink tea in the morning">🔊</span></td>
             <td><span class="russian-translation">Она пьёт чай утром?</span></td>
             <td><span class="eye" data-tooltip="Привычки и рутина">👁</span></td>
         </tr>
         <tr>
-            <td>Do they run in the park every evening? <span class="bulb" data-tooltip="Yes, they do. / No, they don’t.">⚡</span></td>
+            <td>Do they run in the park every evening? <span class="bulb" data-tooltip="Yes, they do. / No, they don’t.">⚡</span> <span class="paper" data-tooltip="/duː ðeɪ rʌn ɪn ðə pɑːrk ˈɛvri ˈiːvnɪŋ/">📄</span> <span class="speaker" data-text="Do they run in the park every evening">🔊</span></td>
             <td><span class="russian-translation">Они бегают в парке каждый вечер?</span></td>
             <td><span class="eye" data-tooltip="Привычки и рутина">👁</span></td>
         </tr>
         <tr>
-            <td>Does he read books every night? <span class="bulb" data-tooltip="Yes, he does. / No, he doesn’t.">⚡</span></td>
+            <td>Does he read books every night? <span class="bulb" data-tooltip="Yes, he does. / No, he doesn’t.">⚡</span> <span class="paper" data-tooltip="/dʌz hiː riːd bʊks ˈɛvri naɪt/">📄</span> <span class="speaker" data-text="Does he read books every night">🔊</span></td>
             <td><span class="russian-translation">Он читает книги каждую ночь?</span></td>
             <td><span class="eye" data-tooltip="Привычки и рутина">👁</span></td>
         </tr>
         <tr>
-            <td>Do we write letters every month? <span class="bulb" data-tooltip="Yes, we do. / No, we don’t.">⚡</span></td>
+            <td>Do we write letters every month? <span class="bulb" data-tooltip="Yes, we do. / No, we don’t.">⚡</span> <span class="paper" data-tooltip="/duː wiː raɪt ˈlɛtəz ˈɛvri mʌnθ/">📄</span> <span class="speaker" data-text="Do we write letters every month">🔊</span></td>
             <td><span class="russian-translation">Мы пишем письма каждый месяц?</span></td>
             <td><span class="eye" data-tooltip="Привычки и рутина">👁</span></td>
         </tr>
         <tr>
-            <td>Does she play soccer every weekend? <span class="bulb" data-tooltip="Yes, she does. / No, she doesn’t.">⚡</span></td>
+            <td>Does she play soccer every weekend? <span class="bulb" data-tooltip="Yes, she does. / No, she doesn’t.">⚡</span> <span class="paper" data-tooltip="/dʌz ʃi pleɪ ˈsɒkə ˈɛvri ˈwiːkɛnd/">📄</span> <span class="speaker" data-text="Does she play soccer every weekend">🔊</span></td>
             <td><span class="russian-translation">Она играет в футбол каждые выходные?</span></td>
             <td><span class="eye" data-tooltip="Привычки и рутина">👁</span></td>
         </tr>
         <tr>
-            <td>Do they study math every day? <span class="bulb" data-tooltip="Yes, they do. / No, they don’t.">⚡</span></td>
+            <td>Do they study math every day? <span class="bulb" data-tooltip="Yes, they do. / No, they don’t.">⚡</span> <span class="paper" data-tooltip="/duː ðeɪ ˈstʌdi mæθ ˈɛvri deɪ/">📄</span> <span class="speaker" data-text="Do they study math every day">🔊</span></td>
             <td><span class="russian-translation">Они учат математику каждый день?</span></td>
             <td><span class="eye" data-tooltip="Привычки и рутина">👁</span></td>
         </tr>
         <tr>
-            <td>Does he work at night? <span class="bulb" data-tooltip="Yes, he does. / No, he doesn’t.">⚡</span></td>
+            <td>Does he work at night? <span class="bulb" data-tooltip="Yes, he does. / No, he doesn’t.">⚡</span> <span class="paper" data-tooltip="/dʌz hiː wɜːk ət naɪt/">📄</span> <span class="speaker" data-text="Does he work at night">🔊</span></td>
             <td><span class="russian-translation">Он работает ночью?</span></td>
             <td><span class="eye" data-tooltip="Привычки и рутина">👁</span></td>
         </tr>
         <tr>
-            <td>Do we swim in the river every summer? <span class="bulb" data-tooltip="Yes, we do. / No, we don’t.">⚡</span></td>
+            <td>Do we swim in the river every summer? <span class="bulb" data-tooltip="Yes, we do. / No, we don’t.">⚡</span> <span class="paper" data-tooltip="/duː wiː swɪm ɪn ðə ˈrɪvə ˈɛvri ˈsʌmə/">📄</span> <span class="speaker" data-text="Do we swim in the river every summer">🔊</span></td>
             <td><span class="russian-translation">Мы плаваем в реке каждое лето?</span></td>
             <td><span class="eye" data-tooltip="Привычки и рутина">👁</span></td>
         </tr>
         <tr>
-            <td>Does she dance at parties? <span class="bulb" data-tooltip="Yes, she does. / No, she doesn’t.">⚡</span></td>
+            <td>Does she dance at parties? <span class="bulb" data-tooltip="Yes, she does. / No, she doesn’t.">⚡</span> <span class="paper" data-tooltip="/dʌz ʃi dæns ət ˈpɑːtiz/">📄</span> <span class="speaker" data-text="Does she dance at parties">🔊</span></td>
             <td><span class="russian-translation">Она танцует на вечеринках?</span></td>
             <td><span class="eye" data-tooltip="Привычки и рутина">👁</span></td>
         </tr>
         <tr>
-            <td>Do they sing in the choir? <span class="bulb" data-tooltip="Yes, they do. / No, they don’t.">⚡</span></td>
+            <td>Do they sing in the choir? <span class="bulb" data-tooltip="Yes, they do. / No, they don’t.">⚡</span> <span class="paper" data-tooltip="/duː ðeɪ sɪŋ ɪn ðə kwaɪə/">📄</span> <span class="speaker" data-text="Do they sing in the choir">🔊</span></td>
             <td><span class="russian-translation">Они поют в хоре?</span></td>
             <td><span class="eye" data-tooltip="Привычки и рутина">👁</span></td>
         </tr>
         <tr>
-            <td>Does he cook dinner every night? <span class="bulb" data-tooltip="Yes, he does. / No, he doesn’t.">⚡</span></td>
+            <td>Does he cook dinner every night? <span class="bulb" data-tooltip="Yes, he does. / No, he doesn’t.">⚡</span> <span class="paper" data-tooltip="/dʌz hiː kʊk ˈdɪnə ˈɛvri naɪt/">📄</span> <span class="speaker" data-text="Does he cook dinner every night">🔊</span></td>
             <td><span class="russian-translation">Он готовит ужин каждую ночь?</span></td>
             <td><span class="eye" data-tooltip="Привычки и рутина">👁</span></td>
         </tr>
         <tr>
-            <td>Do we listen to music every afternoon? <span class="bulb" data-tooltip="Yes, we do. / No, we don’t.">⚡</span></td>
+            <td>Do we listen to music every afternoon? <span class="bulb" data-tooltip="Yes, we do. / No, we don’t.">⚡</span> <span class="paper" data-tooltip="/duː wiː ˈlɪsən tu ˈmjuːzɪk ˈɛvri ˈɑːftərnuːn/">📄</span> <span class="speaker" data-text="Do we listen to music every afternoon">🔊</span></td>
             <td><span class="russian-translation">Мы слушаем музыку каждый день?</span></td>
             <td><span class="eye" data-tooltip="Привычки и рутина">👁</span></td>
         </tr>
         <tr>
-            <td>Does she drive to work? <span class="bulb" data-tooltip="Yes, she does. / No, she doesn’t.">⚡</span></td>
+            <td>Does she drive to work? <span class="bulb" data-tooltip="Yes, she does. / No, she doesn’t.">⚡</span> <span class="paper" data-tooltip="/dʌz ʃi draɪv tu wɜːk/">📄</span> <span class="speaker" data-text="Does she drive to work">🔊</span></td>
             <td><span class="russian-translation">Она ездит на работу?</span></td>
             <td><span class="eye" data-tooltip="Привычки и рутина">👁</span></td>
         </tr>
         <tr>
-            <td>Do they buy books every month? <span class="bulb" data-tooltip="Yes, they do. / No, they don’t.">⚡</span></td>
+            <td>Do they buy books every month? <span class="bulb" data-tooltip="Yes, they do. / No, they don’t.">⚡</span> <span class="paper" data-tooltip="/duː ðeɪ baɪ bʊks ˈɛvri mʌnθ/">📄</span> <span class="speaker" data-text="Do they buy books every month">🔊</span></td>
             <td><span class="russian-translation">Они покупают книги каждый месяц?</span></td>
             <td><span class="eye" data-tooltip="Привычки и рутина">👁</span></td>
         </tr>
         <tr>
-            <td>Does he sell cars? <span class="bulb" data-tooltip="Yes, he does. / No, he doesn’t.">⚡</span></td>
+            <td>Does he sell cars? <span class="bulb" data-tooltip="Yes, he does. / No, he doesn’t.">⚡</span> <span class="paper" data-tooltip="/dʌz hiː sɛl kɑːrz/">📄</span> <span class="speaker" data-text="Does he sell cars">🔊</span></td>
             <td><span class="russian-translation">Он продаёт машины?</span></td>
             <td><span class="eye" data-tooltip="Привычки и рутина">👁</span></td>
         </tr>
         <tr>
-            <td>Do we visit the zoo every year? <span class="bulb" data-tooltip="Yes, we do. / No, we don’t.">⚡</span></td>
+            <td>Do we visit the zoo every year? <span class="bulb" data-tooltip="Yes, we do. / No, we don’t.">⚡</span> <span class="paper" data-tooltip="/duː wiː ˈvɪzɪt ðə zuː ˈɛvri jɪə/">📄</span> <span class="speaker" data-text="Do we visit the zoo every year">🔊</span></td>
             <td><span class="russian-translation">Мы посещаем зоопарк каждый год?</span></td>
             <td><span class="eye" data-tooltip="Привычки и рутина">👁</span></td>
         </tr>
         <tr>
-            <td>Does she help her friends? <span class="bulb" data-tooltip="Yes, she does. / No, she doesn’t.">⚡</span></td>
+            <td>Does she help her friends? <span class="bulb" data-tooltip="Yes, she does. / No, she doesn’t.">⚡</span> <span class="paper" data-tooltip="/dʌz ʃi hɛlp hə frɛndz/">📄</span> <span class="speaker" data-text="Does she help her friends">🔊</span></td>
             <td><span class="russian-translation">Она помогает своим друзьям?</span></td>
             <td><span class="eye" data-tooltip="Привычки и рутина">👁</span></td>
         </tr>
         <tr>
-            <td>Do they sleep late on weekends? <span class="bulb" data-tooltip="Yes, they do. / No, they don’t.">⚡</span></td>
+            <td>Do they sleep late on weekends? <span class="bulb" data-tooltip="Yes, they do. / No, they don’t.">⚡</span> <span class="paper" data-tooltip="/duː ðeɪ sliːp leɪt ɒn ˈwiːkɛndz/">📄</span> <span class="speaker" data-text="Do they sleep late on weekends">🔊</span></td>
             <td><span class="russian-translation">Они поздно спят по выходным?</span></td>
             <td><span class="eye" data-tooltip="Привычки и рутина">👁</span></td>
         </tr>
         <tr>
-            <td>Does the sun set in the west? <span class="bulb" data-tooltip="Yes, it does. / No, it doesn’t.">⚡</span></td>
+            <td>Does the sun set in the west? <span class="bulb" data-tooltip="Yes, it does. / No, it doesn’t.">⚡</span> <span class="paper" data-tooltip="/dʌz ðə sʌn sɛt ɪn ðə wɛst/">📄</span> <span class="speaker" data-text="Does the sun set in the west">🔊</span></td>
             <td><span class="russian-translation">Солнце садится на западе?</span></td>
             <td><span class="eye" data-tooltip="Общие истины и факты">👁</span></td>
         </tr>
@@ -544,22 +550,34 @@
 
     <script>
         // JavaScript для всплывающих подсказок с ключами
-        document.querySelectorAll('.hint, .bulb, .eye').forEach(element => {
+        document.querySelectorAll('.hint, .bulb, .eye, .paper').forEach(element => {
             element.addEventListener('mouseover', function() {
-                // Проверяем, есть ли уже tooltip, чтобы избежать дублирования
                 if (!this.querySelector('.tooltip')) {
                     const tooltip = document.createElement('span');
                     tooltip.className = 'tooltip';
                     tooltip.textContent = this.getAttribute('data-tooltip') || 'No tooltip available';
                     this.appendChild(tooltip);
-                    console.log('Tooltip created for:', this.textContent); // Отладка
+                    console.log('Tooltip created for:', this.textContent);
                 }
             });
             element.addEventListener('mouseout', function() {
                 const tooltip = this.querySelector('.tooltip');
-                if (tooltip) {
-                    this.removeChild(tooltip);
-                    console.log('Tooltip removed for:', this.textContent); // Отладка
+                if (tooltip) this.removeChild(tooltip);
+                console.log('Tooltip removed for:', this.textContent);
+            });
+        });
+
+        // JavaScript для воспроизведения текста с помощью Web Speech API
+        document.querySelectorAll('.speaker').forEach(speaker => {
+            speaker.addEventListener('click', function() {
+                const text = this.getAttribute('data-text');
+                if (text) {
+                    const utterance = new SpeechSynthesisUtterance(text);
+                    utterance.lang = 'en-US'; // Устанавливаем язык на американский английский
+                    window.speechSynthesis.speak(utterance);
+                    console.log('Speaking:', text);
+                } else {
+                    console.log('No text to speak');
                 }
             });
         });
