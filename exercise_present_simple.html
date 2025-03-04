@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Present Simple Exercises</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 20px 0;
+            font-family: Arial, sans-serif;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+            position: relative;
+        }
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+        .hint, .bulb, .eye {
+            position: relative;
+            cursor: help;
+            color: #0066cc;
+            text-decoration: underline dotted;
+        }
+        .hint .tooltip, .bulb .tooltip, .eye .tooltip {
+            visibility: hidden;
+            width: 250px; /* Увеличена ширина для длинных подсказок */
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 5px;
+            border-radius: 4px;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%;
+            left: 50%;
+            margin-left: -125px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .hint:hover .tooltip, .bulb:hover .tooltip, .eye:hover .tooltip {
+            visibility: visible;
+            opacity: 1;
+        }
+        .russian-translation {
+            visibility: hidden;
+            color: #000;
+            font-size: 14px;
+            transition: visibility 0s, opacity 0.3s;
+        }
+        td:hover .russian-translation {
+            visibility: visible;
+            opacity: 1;
+        }
+        .bulb {
+            color: #ffcc00;
+            margin-left: 5px;
+        }
+        .eye {
+            color: #00cc00;
+            margin-left: 5px;
+        }
+        .theory {
+            background-color: #f9f9f9;
+            padding: 15px;
+            border: 1px solid #ddd;
+            margin-bottom: 20px;
+            border-radius: 4px;
+        }
+        .example {
+            color: #0066cc;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <h2>Упражнения на Present Simple</h2>
+
+    <div class="theory">
+        <h3>Теория: Использование Present Simple</h3>
+        <p>Present Simple (Настоящее простое время) используется для описания привычек, фактов, рутинных действий и общих истин. Вот основные случаи его употребления:</p>
+        <ul>
+            <li><strong>Привычки и рутина:</strong> Мы используем Present Simple для действий, которые повторяются регулярно, например, каждый день, каждый понедельник и т.д. Обычно такие предложения содержат наречия времени, такие как <em>always</em>, <em>often</em>, <em>usually</em>, <em>never</em>, <em>every day</em> и т.д.  
+                <span class="example">I walk to school every day.</span> (Я хожу в школу каждый день.)</li>
+            <li><strong>Общие истины и факты:</strong> Present Simple описывает вещи, которые всегда правдивы или постоянны, например, законы природы или научные факты.  
+                <span class="example">The sun rises in the east.</span> (Солнце встаёт на востоке.)</li>
+            <li><strong>Состояния и чувства:</strong> Мы используем Present Simple для описания состояний, эмоций, мнений или чувств, которые не меняются или постоянны.  
+                <span class="example">She likes coffee.</span> (Ей нравится кофе.)</li>
+            <li><strong>Расписания и планы:</strong> Present Simple используется для расписаний транспорта, календарных событий или планов, которые происходят по фиксированному графику.  
+                <span class="example">The train leaves at 7 p.m.</span> (Поезд отправляется в 7 вечера.)</li>
+        </ul>
+        <p>Формула Present Simple:  
+        - Утвердительные предложения: <em>Подлежащее + глагол (в форме 3-го лица единственного числа добавляется -s или -es)</em>.  
+        - Отрицательные предложения: <em>Подлежащее + don’t/doesn’t + глагол (в базовой форме)</em>.  
+        - Вопросительные предложения: <em>Do/Does + подлежащее + глагол (в базовой форме)?</em></p>
+        <p>Примечание: Глагол в 3-м лице единственного числа (he, she, it) принимает форму с -s (-es для глаголов, заканчивающихся на -o, -s, -sh, -ch, -x, -z).  
+        <span class="example">He watches TV. / She goes to work.</span> (Он смотрит ТВ. / Она ходит на работу.)</p>
+    </div>
+
+    <h3>Упражнение 1: Заполнение пропусков</h3>
+    <p><strong>Задание:</strong> Дополните предложения правильной формой глаголов в скобках в Present Simple.</p>
+    <table>
+        <tr>
+            <th>English</th>
+            <th>Russian Translation</th>
+            <th>Usage Case</th>
+        </tr>
+        <tr>
+            <td>She <span class="hint" data-tooltip="walks">(walk)</span> to school every day.</td>
+            <td><span class="russian-translation">Она ходит в школу каждый день.</span></td>
+            <td><span class="eye" data-tooltip="Привычки и рутина">👁</span></td>
+        </tr>
+        <tr>
+            <td>They <span class="hint" data-tooltip="don’t watch">(not/watch)</span> TV in the morning.</td>
+            <td><span class="russian-translation">Они не смотрят ТВ утром.</span></td>
+            <td><span class="eye" data-tooltip="Привычки и рутина">👁</span></td>
+        </tr>
+        <tr>
+            <td><span class="hint" data-tooltip="Do you play">(you/play)</span> football on weekends?</td>
+            <td><span class="russian-translation">Ты играешь в футбол по выходным?</span></td>
+            <td><span class="eye" data-tooltip="Привычки и рутина">👁</span></td>
+        </tr>
+        <tr>
+            <td>The dog <span class="hint" data-tooltip="barks">(bark)</span> when someone rings the bell.</td>
+            <td><span class="russian-translation">Собака лает, когда кто-то звонит в дверь.</span></td>
+            <td><span class="eye" data-tooltip="Привычки и рутина">👁</span></td>
+        </tr>
+        <tr>
+            <td>We <span class="hint" data-tooltip="live">(live)</span> near the park and <span class="hint" data-tooltip="enjoy">(enjoy)</span> walking there.</td>
+            <td><span class="russian-translation">Мы живём недалеко от парка и любим там гулять.</span></td>
+            <td><span class="eye" data-tooltip="Состояния и чувства, Привычки и рутина">👁</span></td>
+        </tr>
+    </table>
+
+    <h3>Упражнение 2: Выбор правильного варианта</h3>
+    <p><strong>Задание:</strong> Выберите правильную форму глагола в скобках, чтобы дополнить предложения в Present Simple.</p>
+    <table>
+        <tr>
+            <th>English</th>
+            <th>Russian Translation</th>
+            <th>Usage Case</th>
+        </tr>
+        <tr>
+            <td>He <span class="hint" data-tooltip="goes">(goes/go)</span> to the gym three times a week.</td>
+            <td><span class="russian-translation">Он ходит в спортзал три раза в неделю.</span></td>
+            <td><span class="eye" data-tooltip="Привычки и рутина">👁</span></td>
+        </tr>
+        <tr>
+            <td><span class="hint" data-tooltip="Do you like">(Do you like/You like)</span> coffee or tea in the morning?</td>
+            <td><span class="russian-translation">Тебе нравится кофе или чай утром?</span></td>
+            <td><span class="eye" data-tooltip="Состояния и чувства">👁</span></td>
+        </tr>
+        <tr>
+            <td>The sun <span class="hint" data-tooltip="rises">(rise/rises)</span> in the east every day.</td>
+            <td><span class="russian-translation">Солнце встаёт на востоке каждый день.</span></td>
+            <td><span class="eye" data-tooltip="Общие истины и факты">👁</span></td>
+        </tr>
+        <tr>
+            <td>They <span class="hint" data-tooltip="don’t">(don’t/doesn’t)</span> understand the instructions.</td>
+            <td><span class="russian-translation">Они не понимают инструкции.</span></td>
+            <td><span class="eye" data-tooltip="Состояния и чувства">👁</span></td>
+        </tr>
+        <tr>
+            <td>I <span class="hint" data-tooltip="work">(work/works)</span> in an office and <span class="hint" data-tooltip="start">(start/starts)</span> at 9 a.m.</td>
+            <td><span class="russian-translation">Я работаю в офисе и начинаю в 9 утра.</span></td>
+            <td><span class="eye" data-tooltip="Привычки и рутина, Расписания и планы">👁</span></td>
+        </tr>
+    </table>
+
+    <h3>Упражнение 3: Преобразование предложений</h3>
+    <p><strong>Задание:</strong> Перепишите предложения в отрицательной или вопросительной форме в Present Simple, как указано в скобках.</p>
+    <table>
+        <tr>
+            <th>English</th>
+            <th>Russian Translation</th>
+            <th>Usage Case</th>
+        </tr>
+        <tr>
+            <td>She likes chocolate. (negative) <span class="bulb" data-tooltip="She doesn’t like chocolate.">⚡</span></td>
+            <td><span class="russian-translation">Она не любит шоколад.</span></td>
+            <td><span class="eye" data-tooltip="Состояния и чувства">👁</span></td>
+        </tr>
+        <tr>
+            <td>They play tennis every weekend. (question) <span class="bulb" data-tooltip="Do they play tennis every weekend?">⚡</span></td>
+            <td><span class="russian-translation">Они играют в теннис каждые выходные?</span></td>
+            <td><span class="eye" data-tooltip="Привычки и рутина">👁</span></td>
+        </tr>
+        <tr>
+            <td>I watch movies on Fridays. (negative) <span class="bulb" data-tooltip="I don’t watch movies on Fridays.">⚡</span></td>
+            <td><span class="russian-translation">Я не смотрю фильмы по пятницам.</span></td>
+            <td><span class="eye" data-tooltip="Привычки и рутина">👁</span></td>
+        </tr>
+        <tr>
+            <td>He reads books in the evening. (question) <span class="bulb" data-tooltip="Does he read books in the evening?">⚡</span></td>
+            <td><span class="russian-translation">Он читает книги вечером?</span></td>
+            <td><span class="eye" data-tooltip="Привычки и рутина">👁</span></td>
+        </tr>
+        <tr>
+            <td>We visit our grandparents often. (negative) <span class="bulb" data-tooltip="We don’t visit our grandparents often.">⚡</span></td>
+            <td><span class="russian-translation">Мы редко посещаем наших бабушек и дедушек.</span></td>
+            <td><span class="eye" data-tooltip="Привычки и рутина">👁</span></td>
+        </tr>
+    </table>
+
+    <h3>Упражнение 4: Вопросы и ответы</h3>
+    <p><strong>Задание:</strong> Соедините вопросы в Present Simple с правильными краткими ответами.</p>
+    <table>
+        <tr>
+            <th>English</th>
+            <th>Russian Translation</th>
+            <th>Usage Case</th>
+        </tr>
+        <tr>
+            <td>Do you live in London? <span class="bulb" data-tooltip="Yes, I do. / No, I don’t.">⚡</span></td>
+            <td><span class="russian-translation">Ты живёшь в Лондоне?</span></td>
+            <td><span class="eye" data-tooltip="Состояния и чувства">👁</span></td>
+        </tr>
+        <tr>
+            <td>Does she work in a bank? <span class="bulb" data-tooltip="Yes, she does. / No, she doesn’t.">⚡</span></td>
+            <td><span class="russian-translation">Она работает в банке?</span></td>
+            <td><span class="eye" data-tooltip="Привычки и рутина">👁</span></td>
+        </tr>
+        <tr>
+            <td>Do they study English every day? <span class="bulb" data-tooltip="Yes, they do. / No, they don’t.">⚡</span></td>
+            <td><span class="russian-translation">Они изучают английский каждый день?</span></td>
+            <td><span class="eye" data-tooltip="Привычки и рутина">👁</span></td>
+        </tr>
+        <tr>
+            <td>Does he like pizza? <span class="bulb" data-tooltip="Yes, he does. / No, he doesn’t.">⚡</span></td>
+            <td><span class="russian-translation">Ему нравится пицца?</span></td>
+            <td><span class="eye" data-tooltip="Состояния и чувства">👁</span></td>
+        </tr>
+        <tr>
+            <td>Do we need to leave now? <span class="bulb" data-tooltip="Yes, we do. / No, we don’t.">⚡</span></td>
+            <td><span class="russian-translation">Нам нужно уйти сейчас?</span></td>
+            <td><span class="eye" data-tooltip="Состояния и чувства">👁</span></td>
+        </tr>
+    </table>
+
+    <script>
+        // JavaScript для всплывающих подсказок с ключами
+        document.querySelectorAll('.hint, .bulb, .eye').forEach(element => {
+            element.addEventListener('mouseover', function() {
+                // Проверяем, есть ли уже tooltip, чтобы избежать дублирования
+                if (!this.querySelector('.tooltip')) {
+                    const tooltip = document.createElement('span');
+                    tooltip.className = 'tooltip';
+                    tooltip.textContent = this.getAttribute('data-tooltip') || 'No tooltip available';
+                    this.appendChild(tooltip);
+                    console.log('Tooltip created for:', this.textContent); // Отладка
+                }
+            });
+            element.addEventListener('mouseout', function() {
+                const tooltip = this.querySelector('.tooltip');
+                if (tooltip) {
+                    this.removeChild(tooltip);
+                    console.log('Tooltip removed for:', this.textContent); // Отладка
+                }
+            });
+        });
+    </script>
+</body>
+</html>
