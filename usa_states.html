@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>USA States and Capitals</title>
+    <style>
+        table {
+            width: 60%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: left;
+        }
+        .capital {
+            color: transparent; /* Делаем текст невидимым */
+        }
+        .capital:hover {
+            color: black; /* Делаем текст видимым мгновенно при наведении */
+        }
+        button {
+            margin-bottom: 15px;
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<h2>USA States and Capitals</h2>
+<button onclick="shuffleTable()">Shuffle Rows</button>
+
+<table id="statesTable">
+    <tr>
+        <th>State</th>
+        <th>Capital</th>
+        <th>Major Cities (Population > 500k)</th>
+    </tr>
+    <tr><td>Alabama</td><td class="capital">Montgomery</td><td>Birmingham</td></tr>
+    <tr><td>Alaska</td><td class="capital">Juneau</td><td></td></tr>
+    <tr><td>Arizona</td><td class="capital">Phoenix</td><td>Tucson</td></tr>
+    <tr><td>Arkansas</td><td class="capital">Little Rock</td><td></td></tr>
+    <tr><td>California</td><td class="capital">Sacramento</td><td>Los Angeles, San Diego, San Jose, San Francisco</td></tr>
+    <tr><td>Colorado</td><td class="capital">Denver</td><td>Colorado Springs</td></tr>
+    <tr><td>Connecticut</td><td class="capital">Hartford</td><td></td></tr>
+    <tr><td>Delaware</td><td class="capital">Dover</td><td></td></tr>
+    <tr><td>Florida</td><td class="capital">Tallahassee</td><td>Jacksonville, Miami, Tampa, Orlando</td></tr>
+    <tr><td>Georgia</td><td class="capital">Atlanta</td><td></td></tr>
+    <tr><td>Hawaii</td><td class="capital">Honolulu</td><td></td></tr>
+    <tr><td>Idaho</td><td class="capital">Boise</td><td></td></tr>
+    <tr><td>Illinois</td><td class="capital">Springfield</td><td>Chicago</td></tr>
+    <tr><td>Indiana</td><td class="capital">Indianapolis</td><td></td></tr>
+    <tr><td>Iowa</td><td class="capital">Des Moines</td><td></td></tr>
+    <tr><td>Kansas</td><td class="capital">Topeka</td><td>Wichita</td></tr>
+    <tr><td>Kentucky</td><td class="capital">Frankfort</td><td>Louisville</td></tr>
+    <tr><td>Louisiana</td><td class="capital">Baton Rouge</td><td>New Orleans</td></tr>
+    <tr><td>Maine</td><td class="capital">Augusta</td><td></td></tr>
+    <tr><td>Maryland</td><td class="capital">Annapolis</td><td>Baltimore</td></tr>
+    <tr><td>Massachusetts</td><td class="capital">Boston</td><td></td></tr>
+    <tr><td>Michigan</td><td class="capital">Lansing</td><td>Detroit</td></tr>
+    <tr><td>Minnesota</td><td class="capital">Saint Paul</td><td>Minneapolis</td></tr>
+    <tr><td>Mississippi</td><td class="capital">Jackson</td><td></td></tr>
+    <tr><td>Missouri</td><td class="capital">Jefferson City</td><td>Kansas City</td></tr>
+    <tr><td>Montana</td><td class="capital">Helena</td><td></td></tr>
+    <tr><td>Nebraska</td><td class="capital">Lincoln</td><td>Omaha</td></tr>
+    <tr><td>Nevada</td><td class="capital">Carson City</td><td>Las Vegas</td></tr>
+    <tr><td>New Hampshire</td><td class="capital">Concord</td><td></td></tr>
+    <tr><td>New Jersey</td><td class="capital">Trenton</td><td>Newark</td></tr>
+    <tr><td>New Mexico</td><td class="capital">Santa Fe</td><td>Albuquerque</td></tr>
+    <tr><td>New York</td><td class="capital">Albany</td><td>New York City</td></tr>
+    <tr><td>North Carolina</td><td class="capital">Raleigh</td><td>Charlotte</td></tr>
+    <tr><td>North Dakota</td><td class="capital">Bismarck</td><td></td></tr>
+    <tr><td>Ohio</td><td class="capital">Columbus</td><td>Cleveland, Cincinnati</td></tr>
+    <tr><td>Oklahoma</td><td class="capital">Oklahoma City</td><td>Tulsa</td></tr>
+    <tr><td>Oregon</td><td class="capital">Salem</td><td>Portland</td></tr>
+    <tr><td>Pennsylvania</td><td class="capital">Harrisburg</td><td>Philadelphia, Pittsburgh</td></tr>
+    <tr><td>Rhode Island</td><td class="capital">Providence</td><td></td></tr>
+    <tr><td>South Carolina</td><td class="capital">Columbia</td><td></td></tr>
+    <tr><td>South Dakota</td><td class="capital">Pierre</td><td></td></tr>
+    <tr><td>Tennessee</td><td class="capital">Nashville</td><td>Memphis</td></tr>
+    <tr><td>Texas</td><td class="capital">Austin</td><td>Houston, San Antonio, Dallas, Fort Worth</td></tr>
+    <tr><td>Utah</td><td class="capital">Salt Lake City</td><td></td></tr>
+    <tr><td>Vermont</td><td class="capital">Montpelier</td><td></td></tr>
+    <tr><td>Virginia</td><td class="capital">Richmond</td><td>Virginia Beach</td></tr>
+    <tr><td>Washington</td><td class="capital">Olympia</td><td>Seattle</td></tr>
+    <tr><td>West Virginia</td><td class="capital">Charleston</td><td></td></tr>
+    <tr><td>Wisconsin</td><td class="capital">Madison</td><td>Milwaukee</td></tr>
+    <tr><td>Wyoming</td><td class="capital">Cheyenne</td><td></td></tr>
+</table>
+
+<script>
+function shuffleTable() {
+    let table = document.getElementById("statesTable");
+    let rows = Array.from(table.rows).slice(1); // Получаем все строки кроме заголовка
+
+    for (let i = rows.length - 1; i > 0; i--) {
+        let j = Math.floor(Math.random() * (i + 1));
+        [rows[i], rows[j]] = [rows[j], rows[i]];
+    }
+
+    rows.forEach(row => table.appendChild(row));
+}
+</script>
+
+</body>
+</html>

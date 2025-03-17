@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Таблица перевода</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .words-column {
+            width: 30%;
+            white-space: nowrap;
+        }
+        .words-sub {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Оригинальное предложение</th>
+                <th>Перевод</th>
+                <th class="words-column">Слова и выражения</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>El niño que vivió</td>
+                <td>Мальчик, который выжил</td>
+                <td>
+                    <span class="words-sub">niño - мальчик</span>
+                    <span class="words-sub">vivió - выжил</span>
+                </td>
+            </tr>
+            <tr>
+                <td>El señor y la señora Dursley, que vivían en el número 4 de Privet Drive, estaban orgullosos de decir que eran muy normales, afortunadamente.</td>
+                <td>Мистер и миссис Дурсли, которые жили в доме номер 4 на Тисовой улице, гордились тем, что были совершенно нормальными, к счастью.</td>
+                <td>
+                    <span class="words-sub">señor - господин</span>
+                    <span class="words-sub">señora - госпожа</span>
+                    <span class="words-sub">Dursley - Дурсли</span>
+                    <span class="words-sub">vivían - жили</span>
+                    <span class="words-sub">número - номер</span>
+                    <span class="words-sub">orgullosos - гордились</span>
+                    <span class="words-sub">decir - сказать</span>
+                    <span class="words-sub">eran - были</span>
+                    <span class="words-sub">muy normales - совершенно нормальные</span>
+                    <span class="words-sub">afortunadamente - к счастью</span>
+                </td>
+            </tr>
+            <tr>
+                <td>Eran las últimas personas que se esperaría encontrar relacionadas con algo extraño o misterioso, porque no estaban para tales tonterías.</td>
+                <td>Они были последними людьми, которых можно было бы ожидать увидеть связанными с чем-то странным или таинственным, потому что не были расположены к подобным глупостям.</td>
+                <td>
+                    <span class="words-sub">últimas personas - последние люди</span>
+                    <span class="words-sub">esperaría - можно было бы ожидать</span>
+                    <span class="words-sub">encontrar - найти</span>
+                    <span class="words-sub">relacionadas - связанные</span>
+                    <span class="words-sub">algo extraño - что-то странное</span>
+                    <span class="words-sub">misterioso - таинственный</span>
+                    <span class="words-sub">porque - потому что</span>
+                    <span class="words-sub">no estaban - не были</span>
+                    <span class="words-sub">tales tonterías - подобные глупости</span>
+                </td>
+            </tr>
+            <tr>
+                <td>El señor Dursley era el director de una empresa llamada Grunnings, que fabricaba taladros.</td>
+                <td>Мистер Дурсли был директором компании под названием Grunnings, которая производила дрели.</td>
+                <td>
+                    <span class="words-sub">señor Dursley - мистер Дурсли</span>
+                    <span class="words-sub">era - был</span>
+                    <span class="words-sub">director - директор</span>
+                    <span class="words-sub">empresa - компания</span>
+                    <span class="words-sub">llamada - под названием</span>
+                    <span class="words-sub">fabricaba - производила</span>
+                    <span class="words-sub">taladros - дрели</span>
+                </td>
+            </tr>
+            <!-- Добавить остальные предложения аналогично -->
+        </tbody>
+    </table>
+</body>
+</html>
