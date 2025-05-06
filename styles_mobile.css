@@ -17,22 +17,25 @@ body {
 }
 */
 
+#player {
+    width:100%;
+}
 
 #controlPanel {
 	display:flex;
-	height:50px;
+	height:100px;
 	justify-content: flex-end;
 }
 
 
 .clsButton {
-	width:10%;
+	width:100px;
 }
 
 .subtitleContainerCls {
 	padding: 10px;
 	font-size: 300%;
-	min-height:100px;
+	height:100px;
 }
 
 .subtitleOuterContainerCls {
