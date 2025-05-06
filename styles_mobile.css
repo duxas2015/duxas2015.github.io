@@ -18,7 +18,7 @@ body {
 }
 */
 
-/*
+
 #player {
     width:100%;
 }
@@ -28,7 +28,6 @@ body {
 	height:100px;
 	justify-content: flex-end;
 }
-
 
 .clsButton {
 	width:100px;
@@ -44,10 +43,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width:960px!important;	
 }
 
 video::-webkit-media-text-track-display {
   font-size: 200%;
 }
-*/
