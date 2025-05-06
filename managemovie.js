@@ -158,5 +158,12 @@ window.onload = function() {
   if ( (typeof versionMobile !== 'undefined') && versionMobile === true ) {
 	  document.getElementById("idRewind2Second").addEventListener('click', ( event ) => { backMoving (2); } );
 	  document.getElementById("idRewind3Second").addEventListener('click', ( event ) => { backMoving (3); } );
-  }		
+	  document.getElementById("idRewindUntilNextSub").addEventListener('click', ( event ) => { getToTheClosestSubtitle(); } );
+	  document.getElementById("idSetRusSub").addEventListener('click', ( event ) => { 
+		  video = document.getElementsByTagName('video')[0];
+		  track = document.getElementsByTagName('video')[0].textTracks[findEnglishSubtitleTrackIndex()];
+		  track.mode = "showing";
+		  document.getElementsByTagName('video')[0].textTracks[findRussianSubtitleTrackIndex()].oncuechange = f;
+		} );
+  }
 };
