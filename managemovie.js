@@ -160,10 +160,8 @@ window.onload = function() {
 	  document.getElementById("idRewind3Second").addEventListener('click', ( event ) => { backMoving (3); } );
 	  document.getElementById("idRewindUntilNextSub").addEventListener('click', ( event ) => { getToTheClosestSubtitle(); } );
 	  document.getElementById("idSetRusSub").addEventListener('click', ( event ) => { 
-		  video = document.getElementsByTagName('video')[0];
-		  track = document.getElementsByTagName('video')[0].textTracks[findEnglishSubtitleTrackIndex()];
-		  track.mode = "showing";
 		  document.getElementsByTagName('video')[0].textTracks[findRussianSubtitleTrackIndex()].oncuechange = f;
+		  document.getElementsByTagName('video')[0].textTracks[findEnglishSubtitleTrackIndex()].oncuechange = f_eng;
 		} );
   }
 };
