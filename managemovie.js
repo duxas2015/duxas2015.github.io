@@ -232,7 +232,7 @@ function handle_all_episodes(seasons_obj) {
 
 			// Вызываем handle_function с номерами сезона и эпизода
 			try {
-				add_new_subtitle(seasons_obj, seasonObj.season, parseInt(episodeObj.episode, 10), './familyguy_cc/en/' + seasonObj.season + String( parseInt(episodeObj.episode, 10) ).padStart(2, '0') + '.vtt', 'English')
+				add_new_subtitle(seasons_obj, seasonObj.season, parseInt(episodeObj.episode, 10), en_subtitle_directory + seasonObj.season + String( parseInt(episodeObj.episode, 10) ).padStart(2, '0') + '.vtt', 'English')
 			} catch (error) {
 				console.error(`Ошибка при вызове handle_function для сезона ${seasonObj.season}, эпизода ${episodeObj.episode}: ${error.message}`);
 			}
@@ -309,7 +309,11 @@ window.onload = function() {
 				}
 			})
 			.then(data => {
-				return handle_all_episodes (data);
+				if ( en_subtitle_directory !== undefined && en_subtitle_directory !== null && en_subtitle_directory != '' ) {
+				  return handle_all_episodes (data);
+				} else {
+				  return data;	
+				};
 			})
 			.then(data => {
 
@@ -352,7 +356,17 @@ window.onload = function() {
 				  document.getElementById("idSetRusSub").addEventListener('click', ( event ) => { 
 					  document.getElementsByTagName('video')[0].textTracks[findRussianSubtitleTrackIndex()].oncuechange = f;
 					  document.getElementsByTagName('video')[0].textTracks[findEnglishSubtitleTrackIndex()].oncuechange = f_eng;
-					} )				
+					} );
+				  document.getElementById("idMoveEngSubBackward").addEventListener('click', ( event ) => { 
+					  shiftTextTrack(findEnglishSubtitleTrack(), 0.2 );
+					  shiftEnglishSubtitle+= 0.2;
+					  console.log(shiftEnglishSubtitle.toFixed(2));
+					} );					  
+				  document.getElementById("idMoveEngSubForward").addEventListener('click', ( event ) => {
+					  shiftTextTrack(findEnglishSubtitleTrack(), -0.2 );
+					  shiftEnglishSubtitle-= 0.2;
+					  console.log(shiftEnglishSubtitle.toFixed(2));
+					} );
 			})
 			.catch(error => {
 				console.error('Ошибка AJAX-запроса:', error.message);

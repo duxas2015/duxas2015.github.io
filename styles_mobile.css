@@ -25,6 +25,11 @@ body {
 	height:25%;
 }
 
+.clsSmallButton {
+	width:100%;
+	height:12.5%;
+}
+
 .subtitleContainerCls {
 	padding: 10px;
 	font-size: 200%;
