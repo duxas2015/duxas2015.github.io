@@ -29,9 +29,10 @@ function handle(e) {
 	else if ( e.code === 'Numpad4' ) { getToTheClosestSubtitle(); }
 	else if ( e.code === 'Numpad9' ) { 
 	  video = document.getElementsByTagName('video')[0];
-      track = document.getElementsByTagName('video')[0].textTracks[findEnglishSubtitleTrackIndex()];
-	  track.mode = "showing";
+      //track = document.getElementsByTagName('video')[0].textTracks[findEnglishSubtitleTrackIndex()];
+	  //track.mode = "showing";
       document.getElementsByTagName('video')[0].textTracks[findRussianSubtitleTrackIndex()].oncuechange = f;
+      document.getElementsByTagName('video')[0].textTracks[findEnglishSubtitleTrackIndex()].oncuechange = f_eng;
 	}
 	else if ( e.code === 'Numpad5' && !e.altKey ) { 
   	  shiftTextTrack(findEnglishSubtitleTrack(), -0.2 );
@@ -151,60 +152,60 @@ function listen(player) {
 	});
 }
 
-function get_seasons_arr(text) {
-// Проверяем, что входной параметр — строка
-if (typeof text !== 'string' || !text.trim()) {
-	console.error('Входной параметр должен быть непустой строкой');
-	return '';
-}
-
-// Регулярное выражение для поиска тегов <script>
-const scriptTagRegex = /<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi;
-
-// Находим все теги <script>
-const scriptTags = text.match(scriptTagRegex) || [];
-
-for (const scriptTag of scriptTags) {
-	const scriptContent = scriptTag.replace(/<script\b[^>]*>/i, '').replace(/<\/script>/i, '');
-	
-	// Проверяем наличие подстроки (seasons: [{
-	const seasonsStartIndex = scriptContent.indexOf('seasons:[{');
-	if (seasonsStartIndex === -1) {
-		continue; // Переходим к следующему тегу, если подстрока не найдена
+function extract_seasons_arr(text) {
+	// Проверяем, что входной параметр — строка
+	if (typeof text !== 'string' || !text.trim()) {
+		console.error('Входной параметр должен быть непустой строкой');
+		return '';
 	}
 
-	// Находим начало seasons
-	const seasonsIndex = scriptContent.indexOf('seasons', seasonsStartIndex);
-	if (seasonsIndex === -1) {
-		continue;
-	}
+	// Регулярное выражение для поиска тегов <script>
+	const scriptTagRegex = /<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi;
 
-	// Ищем соответствующую закрывающую ]
-	let bracketCount = 0;
-	let endIndex = seasonsIndex;
-	let i = seasonsIndex;
-	
-	while (i < scriptContent.length) {
-		if (scriptContent[i] === '[') {
-			bracketCount++;
-		} else if (scriptContent[i] === ']') {
-			bracketCount--;
-			if (bracketCount === 0) {
-				endIndex = i + 1; // Включаем закрывающую ]
-				break;
-			}
+	// Находим все теги <script>
+	const scriptTags = text.match(scriptTagRegex) || [];
+
+	for (const scriptTag of scriptTags) {
+		const scriptContent = scriptTag.replace(/<script\b[^>]*>/i, '').replace(/<\/script>/i, '');
+		
+		// Проверяем наличие подстроки (seasons: [{
+		const seasonsStartIndex = scriptContent.indexOf('seasons:[{');
+		if (seasonsStartIndex === -1) {
+			continue; // Переходим к следующему тегу, если подстрока не найдена
 		}
-		i++;
+
+		// Находим начало seasons
+		const seasonsIndex = scriptContent.indexOf('seasons', seasonsStartIndex);
+		if (seasonsIndex === -1) {
+			continue;
+		}
+
+		// Ищем соответствующую закрывающую ]
+		let bracketCount = 0;
+		let endIndex = seasonsIndex;
+		let i = seasonsIndex;
+		
+		while (i < scriptContent.length) {
+			if (scriptContent[i] === '[') {
+				bracketCount++;
+			} else if (scriptContent[i] === ']') {
+				bracketCount--;
+				if (bracketCount === 0) {
+					endIndex = i + 1; // Включаем закрывающую ]
+					break;
+				}
+			}
+			i++;
+		}
+
+		if (bracketCount === 0 && endIndex > seasonsIndex) {
+			// Извлекаем текст от seasons до закрывающей ]
+			return scriptContent.slice(seasonsIndex, endIndex);
+		}
 	}
 
-	if (bracketCount === 0 && endIndex > seasonsIndex) {
-		// Извлекаем текст от seasons до закрывающей ]
-		return scriptContent.slice(seasonsIndex, endIndex);
-	}
-}
-
-console.error('Не найдено подходящее содержимое с seasons');
-return '';
+	console.error('Не найдено подходящее содержимое с seasons');
+	return '';
 }
 
 function handle_all_episodes(seasons_obj) {
@@ -233,6 +234,7 @@ function handle_all_episodes(seasons_obj) {
 			// Вызываем handle_function с номерами сезона и эпизода
 			try {
 				add_new_subtitle(seasons_obj, seasonObj.season, parseInt(episodeObj.episode, 10), en_subtitle_directory + seasonObj.season + String( parseInt(episodeObj.episode, 10) ).padStart(2, '0') + '.vtt', 'English')
+				add_new_subtitle(seasons_obj, seasonObj.season, parseInt(episodeObj.episode, 10), ru_subtitle_directory + seasonObj.season + String( parseInt(episodeObj.episode, 10) ).padStart(2, '0') + '.vtt', 'Русский')
 			} catch (error) {
 				console.error(`Ошибка при вызове handle_function для сезона ${seasonObj.season}, эпизода ${episodeObj.episode}: ${error.message}`);
 			}
@@ -284,99 +286,151 @@ function add_new_subtitle(seasons_obj, season, episode, url, name) {
 	return true;
 }
 
+function getDeviceType() {
+    const userAgent = navigator.userAgent.toLowerCase();
+    const isMobile = /mobile|android|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(userAgent);
+    return isMobile ? 'mobile' : 'desktop';
+}
+
+function isMobileVersion(){
+	//if ( (typeof versionMobile !== 'undefined') && versionMobile === true ) { return true; } else { return false; }
+	if ( getDeviceType() === 'mobile' ) return true; else return false;
+}
+
+function removeNodeById(id) {
+    const element = document.getElementById(id);
+    if (element) {
+        element.remove();
+    } else {
+        console.warn(`Элемент с id "${id}" не найден`);
+    }
+}
+
+function loadCSS(path) {
+    return new Promise((resolve, reject) => {
+        // Проверяем, что path — строка и не пустая
+        if (typeof path !== 'string' || !path.trim()) {
+            reject(new Error('Путь к CSS-файлу должен быть непустой строкой'));
+            return;
+        }
+
+        // Создаём элемент <link>
+        const link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = path;
+
+        // Обработчик успешной загрузки
+        link.onload = () => {
+            resolve();
+        };
+
+        // Обработчик ошибки загрузки
+        link.onerror = () => {
+            reject(new Error(`Ошибка загрузки CSS-файла: ${path}`));
+        };
+
+        // Добавляем <link> в <head>
+        document.head.appendChild(link);
+    });
+}
+
 window.onload = function() {
-  if ( (typeof versionMobile !== 'undefined') && versionMobile === true ) {
 
-		fetch(url)
-			.then(response => {
-				if (!response.ok) {
-					throw new Error(`HTTP ошибка: ${response.status} ${response.statusText}`);
-				}
-				return response.text();
-			})
-			.then(data => {
-				return get_seasons_arr ( data );
-			})
-			.then(data => {
-			    try {
-                var parsedObject = eval('({' + data + '})');
+	fetch(url)
+		.then(response => {
+			if (!response.ok) {
+				throw new Error(`HTTP ошибка: ${response.status} ${response.statusText}`);
+			}
+			return response.text();
+		})
+		.then(data => {
+			try {
+			var parsedObject = eval('({' + extract_seasons_arr ( data ) + '})');
 
-                if (parsedObject && typeof parsedObject === 'object') {
-                    return parsedObject;
-                } else {
-                }
-				} catch (error) {
-				}
-			})
-			.then(data => {
-				if ( en_subtitle_directory !== undefined && en_subtitle_directory !== null && en_subtitle_directory != '' ) {
-				  return handle_all_episodes (data);
-				} else {
-				  return data;	
-				};
-			})
-			.then(data => {
+			if (parsedObject && typeof parsedObject === 'object') {
+				return parsedObject;
+			} else {
+			}
+			} catch (error) {
+			}
+		})
+		.then(data => {
+			if ( ( typeof en_subtitle_directory !== undefined && en_subtitle_directory !== null && en_subtitle_directory != '' ) || 
+				 ( typeof ru_subtitle_directory !== undefined && ru_subtitle_directory !== null && ru_subtitle_directory != '' )
+			   )	 
+			{
+			  return handle_all_episodes (data);
+			} else {
+			  return data;	
+			};
+		})
+		.then(data => {
 
-				player = VenomPlayer.make({
-				publicPath: 'https://cdn.jsdelivr.net/npm/venom-player@' + VenomPlayer.version + '/dist/',
-				container: document.getElementById('player'),
+			player = VenomPlayer.make({
+			publicPath: 'https://cdn.jsdelivr.net/npm/venom-player@' + VenomPlayer.version + '/dist/',
+			container: document.getElementById('player'),
 
-						playlist: {
-							open: false,
-							ignoreLast: true,
+					playlist: {
+						open: false,
+						ignoreLast: true,
 
-							autoNext: true,
-							id: 3462,
-							current: {
-								season: 1,
-								episode: "1"
-							},
-							
-							seasons: data.seasons.slice()
-
+						autoNext: true,
+						id: 3462,
+						current: {
+							season: 1,
+							episode: "1"
 						},
-					qualityByWidth: {"1280":1080,"640":480,"864":720},
-					p2p: {
-						geo: ["ES","","AS57269"],
-						tolerance:  4 ,
-						tracker: "wss://t4.zcvh.net/v1/ws",
-						longDownload: 30 * 1000
-					}
+						
+						seasons: data.seasons
+
+					},
+				qualityByWidth: {"1280":1080,"640":480,"864":720},
+				p2p: {
+					geo: ["ES","","AS57269"],
+					tolerance:  4 ,
+					tracker: "wss://t4.zcvh.net/v1/ws",
+					longDownload: 30 * 1000
+				}
 
 			});
 			return true;
-			})
-			.then(data => {
-				  window.onkeydown = handle;
-				  player.onRenew = listen;
-				  listen(player);
-				  document.getElementById("idRewind2Second").addEventListener('click', ( event ) => { backMoving (2); } );
-				  document.getElementById("idRewind3Second").addEventListener('click', ( event ) => { backMoving (3); } );
-				  document.getElementById("idRewindUntilNextSub").addEventListener('click', ( event ) => { getToTheClosestSubtitle(); } );
-				  document.getElementById("idSetRusSub").addEventListener('click', ( event ) => { 
-					  document.getElementsByTagName('video')[0].textTracks[findRussianSubtitleTrackIndex()].oncuechange = f;
-					  document.getElementsByTagName('video')[0].textTracks[findEnglishSubtitleTrackIndex()].oncuechange = f_eng;
-					} );
-				  document.getElementById("idMoveEngSubBackward").addEventListener('click', ( event ) => { 
-					  shiftTextTrack(findEnglishSubtitleTrack(), 0.2 );
-					  shiftEnglishSubtitle+= 0.2;
-					  console.log(shiftEnglishSubtitle.toFixed(2));
-					} );					  
-				  document.getElementById("idMoveEngSubForward").addEventListener('click', ( event ) => {
-					  shiftTextTrack(findEnglishSubtitleTrack(), -0.2 );
-					  shiftEnglishSubtitle-= 0.2;
-					  console.log(shiftEnglishSubtitle.toFixed(2));
-					} );
-			})
-			.catch(error => {
-				console.error('Ошибка AJAX-запроса:', error.message);
-				// Вызываем handle с ошибкой
-				handle(null, error.message);
-			});
-  } else {
-	  // desktop	
-	  window.onkeydown = handle;
-	  player.onRenew = listen;
-	  listen(player);
-  }
+		})
+		.then(data => {
+			  window.onkeydown = handle;
+			  player.onRenew = listen;
+			  listen(player);
+			  
+			if ( isMobileVersion() ) {
+			  // mobile	
+			  loadCSS('styles_mobile.css');
+			  
+			  document.getElementById("idRewind2Second").addEventListener('click', ( event ) => { backMoving (2); } );
+			  document.getElementById("idRewind3Second").addEventListener('click', ( event ) => { backMoving (3); } );
+			  document.getElementById("idRewindUntilNextSub").addEventListener('click', ( event ) => { getToTheClosestSubtitle(); } );
+			  document.getElementById("idSetRusSub").addEventListener('click', ( event ) => { 
+				  document.getElementsByTagName('video')[0].textTracks[findRussianSubtitleTrackIndex()].oncuechange = f;
+				  document.getElementsByTagName('video')[0].textTracks[findEnglishSubtitleTrackIndex()].oncuechange = f_eng;
+				} );
+			  document.getElementById("idMoveEngSubBackward").addEventListener('click', ( event ) => { 
+				  shiftTextTrack(findEnglishSubtitleTrack(), 0.2 );
+				  shiftEnglishSubtitle+= 0.2;
+				  console.log(shiftEnglishSubtitle.toFixed(2));
+				} );					  
+			  document.getElementById("idMoveEngSubForward").addEventListener('click', ( event ) => {
+				  shiftTextTrack(findEnglishSubtitleTrack(), -0.2 );
+				  shiftEnglishSubtitle-= 0.2;
+				  console.log(shiftEnglishSubtitle.toFixed(2));
+				} );
+			} else {
+				// desktop
+			    removeNodeById('controlPanel');
+			    loadCSS('styles.css');
+			}
+		})
+		.catch(error => {
+			console.error('Ошибка AJAX-запроса:', error.message);
+			// Вызываем handle с ошибкой
+			//handle(null, error.message);
+		});
 };
