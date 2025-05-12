@@ -19,7 +19,9 @@ if ( foundTime === undefined && item.startTime > currentTime && !pattern.test(it
 	return foundTime;
 }
 
-function getToTheClosestSubtitle() { video.currentTime = findClosestSubtitle (video, track) - 0.5; }
+function getToTheClosestSubtitle() { 
+  video.currentTime = findClosestSubtitle (video, track) - 0.5; 
+  }
 
 function handle(e) {
 
@@ -142,11 +144,11 @@ var f_eng = function ( event ) {
 function listen(player) {
 	player.once('ready', () => {
       track = document.getElementsByTagName('video')[0].textTracks[findEnglishSubtitleTrackIndex()];
-	  if ( (typeof versionMobile !== 'undefined') && versionMobile === true ) { // mobile mode
+	  if ( isMobileVersion() === true ) { // mobile mode
         document.getElementsByTagName('video')[0].textTracks[findEnglishSubtitleTrackIndex()].oncuechange = f_eng;
-		track.mode = "hidden";		
-	  } else { // desctop mode
-		track.mode = "showing";
+		track.mode = "hidden";
+	  } else { // desktop mode
+		//track.mode = "showing";
 	  }
       document.getElementsByTagName('video')[0].textTracks[findRussianSubtitleTrackIndex()].oncuechange = f;
 	});
@@ -292,9 +294,14 @@ function getDeviceType() {
     return isMobile ? 'mobile' : 'desktop';
 }
 
+function getMobileParam() {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get('mobile');
+}
+
 function isMobileVersion(){
 	//if ( (typeof versionMobile !== 'undefined') && versionMobile === true ) { return true; } else { return false; }
-	if ( getDeviceType() === 'mobile' ) return true; else return false;
+	if ( getDeviceType() === 'mobile' || getMobileParam() === "1" ) return true; else return false;
 }
 
 function removeNodeById(id) {
@@ -411,6 +418,7 @@ window.onload = function() {
 			  document.getElementById("idSetRusSub").addEventListener('click', ( event ) => { 
 				  document.getElementsByTagName('video')[0].textTracks[findRussianSubtitleTrackIndex()].oncuechange = f;
 				  document.getElementsByTagName('video')[0].textTracks[findEnglishSubtitleTrackIndex()].oncuechange = f_eng;
+				  video = document.getElementsByTagName('video')[0];
 				} );
 			  document.getElementById("idMoveEngSubBackward").addEventListener('click', ( event ) => { 
 				  shiftTextTrack(findEnglishSubtitleTrack(), 0.2 );

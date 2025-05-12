@@ -9,8 +9,10 @@
 <div id="outerContainer">
 	<div id="player"></div>
 	<div id="controlPanel">
-		<button class="clsButton" id="idSetRusSub" type="button">S</button>
-		<button class="clsButton" id="idRewindUntilNextSub" type="button">R</button>
+		<button class="clsSmallButton" id="idMoveEngSubBackward" type="button">&lt:&lt:</button>
+		<button class="clsSmallButton" id="idMoveEngSubForward" type="button">&gt:&gt:</button>
+		<button class="clsSmallButton" id="idSetRusSub" type="button">S</button>
+		<button class="clsSmallButton" id="idRewindUntilNextSub" type="button">R</button>
 		<button class="clsButton" id="idRewind3Second" type="button">3</button>
 		<button class="clsButton" id="idRewind2Second" type="button">2</button>
 	</div>
@@ -24,10 +26,10 @@
 </div>
 
 <script>
+	var versionMobile = true;
 	var player;
-	var url = 'https://api.embr.ws/embed/movie/285';
-	var en_subtitle_directory = '';
-	var ru_subtitle_directory = '';
+	var url = 'https://api.kinogram.best/embed/movie/559';
+	var en_subtitle_directory = './poirot_cc/en/';
 </script>
 
 </body>
