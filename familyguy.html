@@ -2,13 +2,18 @@
 <html lang="en">
 <head>
 <script src="https://cdn.jsdelivr.net/npm/venom-player@latest"></script>
-<link rel="stylesheet" href="styles.css">
 <script src="managemovie.js"></script>
 </head>	
 <body>
 
 <div id="outerContainer">
 	<div id="player"></div>
+	<div id="controlPanel">
+		<button class="clsButton" id="idSetRusSub" type="button">S</button>
+		<button class="clsButton" id="idRewindUntilNextSub" type="button">R</button>
+		<button class="clsButton" id="idRewind3Second" type="button">3</button>
+		<button class="clsButton" id="idRewind2Second" type="button">2</button>
+	</div>
 </div>
 
 <div id="engSubtitleOuterContainerId" class="subtitleOuterContainerCls">
@@ -19,7 +24,6 @@
 </div>
 
 <script>
-	var versionMobile = false;
 	var player;
 	var url = 'https://api.kinogram.best/embed/movie/3462';
 	var en_subtitle_directory = './familyguy_cc/en/';
