@@ -20,6 +20,7 @@ if ( foundTime === undefined && item.startTime > currentTime && !pattern.test(it
 }
 
 function getToTheClosestSubtitle() { 
+  var video = document.getElementsByTagName('video')[0];
   video.currentTime = findClosestSubtitle (video, track) - 0.5; 
   }
 
@@ -37,13 +38,13 @@ function handle(e) {
       document.getElementsByTagName('video')[0].textTracks[findEnglishSubtitleTrackIndex()].oncuechange = f_eng;
 	}
 	else if ( e.code === 'Numpad5' && !e.altKey ) { 
-  	  shiftTextTrack(findEnglishSubtitleTrack(), -0.2 );
-	  shiftEnglishSubtitle-= 0.2;
+  	  shiftTextTrack(findEnglishSubtitleTrack(), 0.2 );
+	  shiftEnglishSubtitle+= 0.2;
 	  console.log(shiftEnglishSubtitle.toFixed(2));
 	}
 	else if ( e.code === 'Numpad6' && !e.altKey ) { 
-  	  shiftTextTrack(findEnglishSubtitleTrack(), 0.2 );
-	  shiftEnglishSubtitle+= 0.2;	  
+  	  shiftTextTrack(findEnglishSubtitleTrack(), -0.2 );
+	  shiftEnglishSubtitle-= 0.2;	  
 	  console.log(shiftEnglishSubtitle.toFixed(2));
 	}
 	else if ( e.code === 'Numpad5' && e.altKey ) { 
@@ -145,12 +146,16 @@ function listen(player) {
 	player.once('ready', () => {
       track = document.getElementsByTagName('video')[0].textTracks[findEnglishSubtitleTrackIndex()];
 	  if ( isMobileVersion() === true ) { // mobile mode
-        document.getElementsByTagName('video')[0].textTracks[findEnglishSubtitleTrackIndex()].oncuechange = f_eng;
 		track.mode = "hidden";
 	  } else { // desktop mode
 		//track.mode = "showing";
 	  }
-      document.getElementsByTagName('video')[0].textTracks[findRussianSubtitleTrackIndex()].oncuechange = f;
+	  if ( findEnglishSubtitleTrackIndex() >= 0 ) {
+		document.getElementsByTagName('video')[0].textTracks[findEnglishSubtitleTrackIndex()].oncuechange = f_eng;
+	  }
+	  if ( findRussianSubtitleTrackIndex() >= 0 ) {
+		document.getElementsByTagName('video')[0].textTracks[findRussianSubtitleTrackIndex()].oncuechange = f;
+	  }	
 	});
 }
 
