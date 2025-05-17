@@ -48,14 +48,14 @@ function handle(e) {
 	  console.log(shiftEnglishSubtitle.toFixed(2));
 	}
 	else if ( e.code === 'Numpad5' && e.altKey ) { 
-  	  shiftTextTrack(findRussianSubtitleTrack(), -0.2 );
-	  shiftRussianSubtitle-= 0.2;
+  	  shiftTextTrack(findRussianSubtitleTrack(), 0.2 );
+	  shiftRussianSubtitle+= 0.2;
 	  console.log(shiftRussianSubtitle.toFixed(2));
 	  e.stopImmediatePropagation();
 	}
 	else if ( e.code === 'Numpad6' && e.altKey ) { 
-  	  shiftTextTrack(findRussianSubtitleTrack(), 0.2 );
-	  shiftRussianSubtitle+= 0.2;	  
+  	  shiftTextTrack(findRussianSubtitleTrack(), -0.2 );
+	  shiftRussianSubtitle-= 0.2;	  
 	  console.log(shiftRussianSubtitle.toFixed(2));
 	  e.stopImmediatePropagation();
 	}

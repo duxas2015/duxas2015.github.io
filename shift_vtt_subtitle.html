@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>WebVTT Time Shifter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        input[type="file"], input[type="text"] {
+            margin-bottom: 10px;
+            padding: 8px;
+            font-size: 14px;
+            width: 300px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .error {
+            color: red;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>WebVTT Time Shifter</h1>
+    
+    <div>
+        <label for="idSourceFile">Select WebVTT File:</label><br>
+        <input type="file" id="idSourceFile" accept=".vtt">
+    </div>
+    
+    <div>
+        <label for="idShift">Shift Time (seconds):</label><br>
+        <input type="text" id="idShift" placeholder="e.g., 2.5 or 2,5">
+    </div>
+    
+    <button id="idHandleBtn">Handle</button>
+    <div id="errorMessage" class="error"></div>
+
+    <script>
+        // Функция для сдвига времени в WebVTT
+        function shiftSubtitleTime(text, shift) {
+            if (typeof text !== 'string' || !text.trim()) {
+                throw new Error('Входной текст должен быть непустой строкой');
+            }
+            if (typeof shift !== 'number' || isNaN(shift)) {
+                throw new Error('Параметр shift должен быть числом');
+            }
+
+            const lines = text.split('\n');
+            let output = [];
+            let i = 0;
+
+            if (lines[0].trim() !== 'WEBVTT') {
+                throw new Error('Текст не начинается с WEBVTT');
+            }
+            output.push('WEBVTT');
+            i++;
+
+            function timeToSeconds(timeStr) {
+                const match = timeStr.match(/^(?:(\d+):)?(\d{2}):(\d{2})\.(\d{3})$/);
+                if (!match) {
+                    throw new Error(`Неверный формат времени: ${timeStr}`);
+                }
+                const hours = parseInt(match[1] || '0', 10);
+                const minutes = parseInt(match[2], 10);
+                const seconds = parseInt(match[3], 10);
+                const milliseconds = parseInt(match[4], 10);
+                return hours * 3600 + minutes * 60 + seconds + milliseconds / 1000;
+            }
+
+            function secondsToTime(seconds) {
+                if (seconds < 0) {
+                    throw new Error('Время не может быть отрицательным');
+                }
+                const hours = Math.floor(seconds / 3600);
+                seconds %= 3600;
+                const minutes = Math.floor(seconds / 60);
+                seconds = seconds % 60;
+                const milliseconds = Math.round((seconds % 1) * 1000);
+                const wholeSeconds = Math.floor(seconds);
+                return `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${wholeSeconds.toString().padStart(2, '0')}.${milliseconds.toString().padStart(3, '0')}`;
+            }
+
+            while (i < lines.length) {
+                const line = lines[i].trim();
+
+                if (!line) {
+                    output.push('');
+                    i++;
+                    continue;
+                }
+
+                const timecodeMatch = line.match(/^(\d{2}:\d{2}:\d{2}\.\d{3}) --> (\d{2}:\d{2}:\d{2}\.\d{3})$/);
+                if (timecodeMatch) {
+                    try {
+                        const startTime = timeToSeconds(timecodeMatch[1]);
+                        const endTime = timeToSeconds(timecodeMatch[2]);
+                        const newStartTime = startTime + shift;
+                        const newEndTime = endTime + shift;
+
+                        if (newStartTime < 0 || newEndTime < 0) {
+                            throw new Error(`Сдвиг приводит к отрицательному времени: ${line}`);
+                        }
+
+                        const formattedStart = secondsToTime(newStartTime);
+                        const formattedEnd = secondsToTime(newEndTime);
+                        output.push(`${formattedStart} --> ${formattedEnd}`);
+                    } catch (error) {
+                        throw new Error(`Ошибка обработки временного кода "${line}": ${error.message}`);
+                    }
+                } else {
+                    output.push(lines[i]);
+                }
+
+                i++;
+            }
+
+            return output.join('\n');
+        }
+
+        // Функция для получения значения сдвига
+        function getShift() {
+            const shiftInput = document.getElementById('idShift');
+            if (!shiftInput) {
+                throw new Error('Поле ввода idShift не найдено');
+            }
+
+            const inputValue = shiftInput.value.trim();
+            if (!inputValue) {
+                throw new Error('Поле ввода сдвига пустое');
+            }
+
+            // Заменяем запятую на точку
+            const normalizedValue = inputValue.replace(',', '.');
+            
+            // Проверяем, является ли значение числом
+            const parsedValue = parseFloat(normalizedValue);
+            if (isNaN(parsedValue)) {
+                throw new Error(`Введено некорректное число: ${inputValue}`);
+            }
+
+            return parsedValue;
+        }
+
+        // Функция для вывода сообщения об ошибке
+        function setErrorMessage(message) {
+            const errorMessage = document.getElementById('errorMessage');
+            if (errorMessage) {
+                errorMessage.textContent = message;
+            }
+        }
+
+        // Функция-обработчик для кнопки
+        function handle() {
+            setErrorMessage('');
+            const fileInput = document.getElementById('idSourceFile');
+
+            // Проверяем, выбран ли файл
+            if (!fileInput || !fileInput.files || fileInput.files.length === 0) {
+                setErrorMessage('Пожалуйста, выберите файл');
+                return;
+            }
+
+            const file = fileInput.files[0];
+            // Проверяем, что файл имеет расширение .vtt
+            if (!file.name.toLowerCase().endsWith('.vtt')) {
+                setErrorMessage(`Файл ${file.name} не является WebVTT-файлом`);
+                return;
+            }
+
+            // Получаем значение сдвига
+            let shiftValue;
+            try {
+                shiftValue = getShift();
+            } catch (error) {
+                setErrorMessage(error.message);
+                return;
+            }
+
+            // Читаем файл
+            const reader = new FileReader();
+            reader.onload = function(event) {
+                try {
+                    const vttText = event.target.result;
+                    const shiftedText = shiftSubtitleTime(vttText, shiftValue);
+
+                    // Создаём Blob для скачивания
+                    const blob = new Blob([shiftedText], { type: 'text/vtt' });
+                    const url = URL.createObjectURL(blob);
+                    
+                    // Создаём ссылку для скачивания с тем же именем
+                    const downloadLink = document.createElement('a');
+                    downloadLink.href = url;
+                    downloadLink.download = file.name;
+                    document.body.appendChild(downloadLink);
+                    downloadLink.click();
+                    document.body.removeChild(downloadLink);
+                    URL.revokeObjectURL(url);
+
+                    setErrorMessage(`Файл ${file.name} успешно обработан`);
+                } catch (error) {
+                    setErrorMessage(`Ошибка обработки файла ${file.name}: ${error.message}`);
+                }
+            };
+            reader.onerror = function() {
+                setErrorMessage(`Ошибка чтения файла ${file.name}`);
+            };
+            reader.readAsText(file);
+        }
+
+        // Назначение обработчика для кнопки
+        document.getElementById('idHandleBtn').addEventListener('click', handle);
+    </script>
+</body>
+</html>

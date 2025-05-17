@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Text Handler</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        textarea {
+            width: 100%;
+            max-width: 600px;
+            height: 150px;
+            margin-bottom: 10px;
+            padding: 10px;
+            font-size: 14px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Text Handler</h1>
+    
+    <div>
+        <label for="idSourceText">Source Text:</label><br>
+        <textarea id="idSourceText" placeholder="Enter source text here"></textarea>
+    </div>
+    
+    <div>
+        <label for="idDestinationText">Destination Text:</label><br>
+        <textarea id="idDestinationText" placeholder="Result will appear here"></textarea>
+    </div>
+    
+    <button id="idHandleBtn">Handle</button>
+
+    <script>
+        // Функция для получения текста из поля idSourceText
+        function getSourceText() {
+            const sourceTextArea = document.getElementById('idSourceText');
+            return sourceTextArea ? sourceTextArea.value : '';
+        }
+
+        // Функция для установки текста в поле idDestinationText
+        function setDestinationText(text) {
+            const destinationTextArea = document.getElementById('idDestinationText');
+            if (destinationTextArea) {
+                destinationTextArea.value = text;
+            }
+        }
+
+        // Функция для проверки, выглядит ли текст как объект
+        function isLikelyObjectText(text) {
+            const trimmed = text.trim();
+            return trimmed.startsWith('{') && trimmed.endsWith('}');
+        }
+
+        // Функция для вывода сообщения об ошибке
+        function setErrorMessage(message) {
+            const errorMessage = document.getElementById('errorMessage');
+            if (errorMessage) {
+                errorMessage.textContent = message;
+            }
+        }
+
+        // Функция-обработчик для кнопки
+        function handle() {
+			var playlist_obj;
+            const sourceText = '{' + getSourceText() + '}';
+
+            if (!sourceText.trim()) {
+                setErrorMessage('Поле ввода пустое');
+                return;
+            }
+			
+            try {
+                // Используем eval для преобразования текста в объект
+                // Оборачиваем в скобки для корректной обработки
+                const parsedObject = eval('(' + sourceText + ')');
+
+                // Проверяем, что результат — объект
+                if (parsedObject && typeof parsedObject === 'object') {
+                    // Форматируем объект в JSON для вывода
+                    //const formattedText = JSON.stringify(parsedObject, null, 2);
+                    playlist_obj = parsedObject;
+                } else {
+                    setErrorMessage('Результат не является объектом');
+                    setDestinationText('');
+                }
+            } catch (error) {
+                setErrorMessage('Ошибка парсинга JavaScript-объекта: ' + error.message);
+                setDestinationText('');
+            }
+
+			setDestinationText( JSON.stringify( handle_all_episodes(playlist_obj, handle_all_episodes ) ));
+			
+        }
+	
+		function handle_function( obj, season, episode ){
+		  add_new_subtitle(obj, season, episode, 'http://url', 'Русский');
+		}
+
+		function handle_all_episodes(seasons_obj) {
+			// Проверяем, что seasons_obj и seasons существуют
+			if (!seasons_obj || !Array.isArray(seasons_obj.seasons)) {
+				console.error('Неверный формат объекта или отсутствует массив seasons');
+				return false;
+			}
+
+			// Перебираем все сезоны
+			seasons_obj.seasons.forEach(seasonObj => {
+				// Проверяем, что сезон имеет поле season и массив episodes
+				if (typeof seasonObj.season !== 'number' || !Array.isArray(seasonObj.episodes)) {
+					console.error(`Неверный формат сезона или отсутствует массив episodes: ${JSON.stringify(seasonObj)}`);
+					return;
+				}
+
+				// Перебираем все эпизоды в сезоне
+				seasonObj.episodes.forEach(episodeObj => {
+					// Проверяем, что эпизод имеет поле episode
+					if (!episodeObj.episode) {
+						console.error(`Неверный формат эпизода: ${JSON.stringify(episodeObj)}`);
+						return;
+					}
+
+					// Вызываем handle_function с номерами сезона и эпизода
+					try {
+						handle_function( seasons_obj, seasonObj.season, parseInt(episodeObj.episode, 10));
+					} catch (error) {
+						console.error(`Ошибка при вызове handle_function для сезона ${seasonObj.season}, эпизода ${episodeObj.episode}: ${error.message}`);
+					}
+				});
+			});
+
+			return seasons_obj;
+		}		
+		
+		function add_new_subtitle(seasons_obj, season, episode, url, name) {
+			// Проверяем, что seasons_obj и seasons существуют
+			if (!seasons_obj || !Array.isArray(seasons_obj.seasons)) {
+				console.error('Неверный формат объекта или отсутствует массив seasons');
+				return false;
+			}
+
+			// Находим сезон с указанным номером
+			const seasonObj = seasons_obj.seasons.find(s => s.season === season);
+			if (!seasonObj) {
+				console.error(`Сезон ${season} не найден`);
+				return false;
+			}
+
+			// Проверяем, что episodes существует
+			if (!Array.isArray(seasonObj.episodes)) {
+				console.error('Массив episodes отсутствует или имеет неверный формат');
+				return false;
+			}
+
+			// Находим эпизод с указанным номером
+			const episodeObj = seasonObj.episodes.find(e => e.episode === episode.toString());
+			if (!episodeObj) {
+				console.error(`Эпизод ${episode} не найден в сезоне ${season}`);
+				return false;
+			}
+
+			// Проверяем, что массив cc существует, если нет — создаём
+			if (!Array.isArray(episodeObj.cc)) {
+				episodeObj.cc = [];
+			}
+
+			// Добавляем новый объект субтитров в массив cc
+			episodeObj.cc.push({
+				url: url,
+				name: name
+			});
+
+			console.log(`Субтитры "${name}" успешно добавлены для сезона ${season}, эпизода ${episode}`);
+			return true;
+		}		
+		
+		window.onload = function() {
+			// Назначение обработчика для кнопки
+			document.getElementById('idHandleBtn').addEventListener('click', handle);
+		}
+		
+    </script>
+</body>
+</html>
