@@ -47,6 +47,12 @@ function handle(e) {
 	  shiftEnglishSubtitle-= 0.2;	  
 	  console.log(shiftEnglishSubtitle.toFixed(2));
 	}
+	else if ( e.code === 'Numpad7' && !e.altKey ) { 
+	  downloadSubtitlesAsVTT( document.getElementsByTagName('video')[0], document.getElementsByTagName('video')[0].textTracks[findEnglishSubtitleTrackIndex()] );
+	}
+	else if ( e.code === 'Numpad7' && e.altKey ) { 
+	  downloadSubtitlesAsVTT( document.getElementsByTagName('video')[0], document.getElementsByTagName('video')[0].textTracks[findRussianSubtitleTrackIndex()] );
+	}
 	else if ( e.code === 'Numpad5' && e.altKey ) { 
   	  shiftTextTrack(findRussianSubtitleTrack(), 0.2 );
 	  shiftRussianSubtitle+= 0.2;
@@ -345,6 +351,64 @@ function loadCSS(path) {
         // Добавляем <link> в <head>
         document.head.appendChild(link);
     });
+}
+
+function downloadSubtitlesAsVTT(video, textTrack, filename = 'subtitles.vtt') {
+    // Проверяем входные параметры
+    if (!(video instanceof HTMLVideoElement)) {
+        throw new Error('Параметр video должен быть элементом <video>');
+    }
+    if (!(textTrack instanceof TextTrack)) {
+        throw new Error('Параметр textTrack должен быть объектом TextTrack');
+    }
+
+    // Проверяем, есть ли cues в textTrack
+    const cues = textTrack.cues;
+    if (!cues || cues.length === 0) {
+        throw new Error('В textTrack отсутствуют субтитры (cues)');
+    }
+
+    // Формируем WebVTT контент
+    let vttContent = 'WEBVTT\n\n';
+
+    // Функция для форматирования времени в формате HH:MM:SS.mmm
+    function formatTime(seconds) {
+        const hours = Math.floor(seconds / 3600);
+        seconds %= 3600;
+        const minutes = Math.floor(seconds / 60);
+        seconds = seconds % 60;
+        const milliseconds = Math.round((seconds % 1) * 1000);
+        const wholeSeconds = Math.floor(seconds);
+        return `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${wholeSeconds.toString().padStart(2, '0')}.${milliseconds.toString().padStart(3, '0')}`;
+    }
+
+    // Перебираем все cues
+    Array.from(cues).forEach((cue, index) => {
+        if (!(cue instanceof VTTCue)) {
+            console.warn(`Cue ${index} не является VTTCue, пропускается`);
+            return;
+        }
+
+        const startTime = formatTime(cue.startTime);
+        const endTime = formatTime(cue.endTime);
+        const text = cue.text.trim();
+
+        // Добавляем cue в WebVTT формат
+        vttContent += `${index + 1}\n${startTime} --> ${endTime}\n${text}\n\n`;
+    });
+
+    // Создаём Blob для WebVTT
+    const blob = new Blob([vttContent], { type: 'text/vtt' });
+    const url = URL.createObjectURL(blob);
+
+    // Создаём ссылку для скачивания
+    const downloadLink = document.createElement('a');
+    downloadLink.href = url;
+    downloadLink.download = filename;
+    document.body.appendChild(downloadLink);
+    downloadLink.click();
+    document.body.removeChild(downloadLink);
+    URL.revokeObjectURL(url);
 }
 
 window.onload = function() {
