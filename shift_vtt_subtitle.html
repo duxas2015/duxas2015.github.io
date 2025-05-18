@@ -101,8 +101,10 @@
                     i++;
                     continue;
                 }
-
-                const timecodeMatch = line.match(/^(\d{2}:\d{2}:\d{2}\.\d{3}) --> (\d{2}:\d{2}:\d{2}\.\d{3})$/);
+				
+				
+                //const timecodeMatch = line.match(/^(\d{2}:\d{2}:\d{2}\.\d{3}) --> (\d{2}:\d{2}:\d{2}\.\d{3})$/);
+                const timecodeMatch = line.match(/^(\d{2}:\d{2}\.\d{3}) --> (\d{2}:\d{2}\.\d{3})$/); // short
                 if (timecodeMatch) {
                     try {
                         const startTime = timeToSeconds(timecodeMatch[1]);

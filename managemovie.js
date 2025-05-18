@@ -38,13 +38,13 @@ function handle(e) {
       document.getElementsByTagName('video')[0].textTracks[findEnglishSubtitleTrackIndex()].oncuechange = f_eng;
 	}
 	else if ( e.code === 'Numpad5' && !e.altKey ) { 
-  	  shiftTextTrack(findEnglishSubtitleTrack(), 0.2 );
-	  shiftEnglishSubtitle+= 0.2;
+  	  shiftTextTrack(findEnglishSubtitleTrack(), -0.2 );
+	  shiftEnglishSubtitle-= 0.2;
 	  console.log(shiftEnglishSubtitle.toFixed(2));
 	}
 	else if ( e.code === 'Numpad6' && !e.altKey ) { 
-  	  shiftTextTrack(findEnglishSubtitleTrack(), -0.2 );
-	  shiftEnglishSubtitle-= 0.2;	  
+  	  shiftTextTrack(findEnglishSubtitleTrack(), 0.2 );
+	  shiftEnglishSubtitle+= 0.2;	  
 	  console.log(shiftEnglishSubtitle.toFixed(2));
 	}
 	else if ( e.code === 'Numpad7' && !e.altKey ) { 
@@ -490,13 +490,13 @@ window.onload = function() {
 				  video = document.getElementsByTagName('video')[0];
 				} );
 			  document.getElementById("idMoveEngSubBackward").addEventListener('click', ( event ) => { 
-				  shiftTextTrack(findEnglishSubtitleTrack(), 0.2 );
-				  shiftEnglishSubtitle+= 0.2;
+				  shiftTextTrack(findEnglishSubtitleTrack(), -0.2 );
+				  shiftEnglishSubtitle-= 0.2;
 				  console.log(shiftEnglishSubtitle.toFixed(2));
 				} );					  
 			  document.getElementById("idMoveEngSubForward").addEventListener('click', ( event ) => {
-				  shiftTextTrack(findEnglishSubtitleTrack(), -0.2 );
-				  shiftEnglishSubtitle-= 0.2;
+				  shiftTextTrack(findEnglishSubtitleTrack(), 0.2 );
+				  shiftEnglishSubtitle+= 0.2;
 				  console.log(shiftEnglishSubtitle.toFixed(2));
 				} );
 			} else {
