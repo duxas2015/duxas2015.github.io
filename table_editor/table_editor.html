@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Editor</title>
+    <link rel="stylesheet" href="table_editor.css">
+</head>
+<body>
+    <!-- Save button to export table data as JSON -->
+    <button id="saveButton">Save</button>
+    
+    <!-- Table to display JSON data -->
+    <table id="dataTable">
+        <thead>
+            <tr>
+                <th>English</th>
+                <th>Russian</th>
+            </tr>
+        </thead>
+        <tbody id="tableBody"></tbody>
+    </table>
+    
+    <!-- Container for error messages -->
+    <div id="errorMessage" class="error"></div>
+
+    <script src="table_editor.js"></script>
+</body>
+</html>

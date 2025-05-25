@@ -54,16 +54,22 @@ function handle(e) {
 	  downloadSubtitlesAsVTT( document.getElementsByTagName('video')[0], document.getElementsByTagName('video')[0].textTracks[findRussianSubtitleTrackIndex()] );
 	}
 	else if ( e.code === 'Numpad5' && e.altKey ) { 
-  	  shiftTextTrack(findRussianSubtitleTrack(), 0.2 );
-	  shiftRussianSubtitle+= 0.2;
+  	  shiftTextTrack(findRussianSubtitleTrack(), -0.2 );
+	  shiftRussianSubtitle-= 0.2;
 	  console.log(shiftRussianSubtitle.toFixed(2));
 	  e.stopImmediatePropagation();
 	}
 	else if ( e.code === 'Numpad6' && e.altKey ) { 
-  	  shiftTextTrack(findRussianSubtitleTrack(), -0.2 );
-	  shiftRussianSubtitle-= 0.2;	  
+  	  shiftTextTrack(findRussianSubtitleTrack(), 0.2 );
+	  shiftRussianSubtitle+= 0.2;	  
 	  console.log(shiftRussianSubtitle.toFixed(2));
 	  e.stopImmediatePropagation();
+	}
+	else if ( e.code === 'Numpad8' && !e.altKey ) { 
+	  syncSubtitles( document.getElementsByTagName('video')[0], findEnglishSubtitleTrackIndex(), findRussianSubtitleTrackIndex(), true );
+	}
+	else if ( e.code === 'Numpad8' && e.altKey ) { 
+	  syncSubtitles( document.getElementsByTagName('video')[0], findEnglishSubtitleTrackIndex(), findRussianSubtitleTrackIndex(), false );
 	}
 }
 
@@ -151,6 +157,8 @@ var f_eng = function ( event ) {
 function listen(player) {
 	player.once('ready', () => {
       track = document.getElementsByTagName('video')[0].textTracks[findEnglishSubtitleTrackIndex()];
+	  shiftEnglishSubtitle = 0;
+	  shiftRussianSubtitle = 0;
 	  if ( isMobileVersion() === true ) { // mobile mode
 		track.mode = "hidden";
 	  } else { // desktop mode
@@ -409,6 +417,101 @@ function downloadSubtitlesAsVTT(video, textTrack, filename = 'subtitles.vtt') {
     downloadLink.click();
     document.body.removeChild(downloadLink);
     URL.revokeObjectURL(url);
+}
+
+function syncSubtitles(video, textTrack1, textTrack2, directionFlag) {
+    // Проверяем входные параметры
+    if (!(video instanceof HTMLVideoElement)) {
+        throw new Error('Параметр video должен быть элементом <video>');
+    }
+    if (!Number.isInteger(textTrack1) || textTrack1 < 0 || textTrack1 >= video.textTracks.length) {
+        throw new Error('Неверный индекс textTrack1');
+    }
+    if (!Number.isInteger(textTrack2) || textTrack2 < 0 || textTrack2 >= video.textTracks.length) {
+        throw new Error('Неверный индекс textTrack2');
+    }
+    if (typeof directionFlag !== 'boolean') {
+        throw new Error('Параметр directionFlag должен быть булевым значением');
+    }
+
+    // Получаем треки субтитров
+    const track1 = video.textTracks[textTrack1];
+    const track2 = video.textTracks[textTrack2];
+
+    if (!(track1 instanceof TextTrack)) {
+        throw new Error('textTrack1 не является объектом TextTrack');
+    }
+    if (!(track2 instanceof TextTrack)) {
+        throw new Error('textTrack2 не является объектом TextTrack');
+    }
+
+    // Проверяем наличие cues
+    if (!track1.cues || track1.cues.length === 0) {
+        throw new Error('В textTrack1 отсутствуют субтитры (cues)');
+    }
+    if (!track2.cues || track2.cues.length === 0) {
+        throw new Error('В textTrack2 отсутствуют субтитры (cues)');
+    }
+
+    // Получаем текущее время видео
+    const currentTime = video.currentTime;
+
+    // Находим текущие субтитры в обоих треках
+    let currentCue1 = null;
+    let currentCue2 = null;
+
+    for (const cue of track1.cues) {
+        if (currentTime >= cue.startTime && currentTime < cue.endTime) {
+            currentCue1 = cue;
+            break;
+        }
+    }
+
+    for (const cue of track2.cues) {
+        if (currentTime >= cue.startTime && currentTime < cue.endTime) {
+            currentCue2 = cue;
+            break;
+        }
+    }
+
+    // Проверяем, существуют ли оба текущих субтитра
+    if (!currentCue1 || !currentCue2) {
+        throw new Error('Один или оба текущих субтитра не найдены на текущем времени видео');
+    }
+
+    // Вычисляем разницу во времени между началом текущих субтитров
+    const timeDifference = currentCue1.startTime - currentCue2.startTime;
+
+    // Определяем, какой трек нужно сместить
+    const targetTrack = directionFlag ? track2 : track1;
+    const shift = directionFlag ? timeDifference : -timeDifference;
+
+    // Смещаем все субтитры в целевом треке
+    for (const cue of targetTrack.cues) {
+        if (!(cue instanceof VTTCue)) {
+            console.warn(`Cue не является VTTCue, пропускается`);
+            continue;
+        }
+
+        const newStartTime = cue.startTime + shift;
+        const newEndTime = cue.endTime + shift;
+
+        // Проверяем, что времена не отрицательные
+        if (newStartTime < 0 || newEndTime < 0) {
+            throw new Error(`Сдвиг приводит к отрицательному времени для cue: ${cue.startTime} --> ${cue.endTime}`);
+        }
+
+        // Обновляем времена
+        cue.startTime = newStartTime;
+        cue.endTime = newEndTime;
+    }
+
+    // Возвращаем информацию о сдвиге для отладки
+    return {
+        shiftedTrack: directionFlag ? textTrack2 : textTrack1,
+        shiftApplied: shift,
+        alignedTime: directionFlag ? currentCue1.startTime : currentCue2.startTime
+    };
 }
 
 window.onload = function() {
