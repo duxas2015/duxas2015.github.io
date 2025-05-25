@@ -72,3 +72,25 @@ body {
     margin-top: 10px;
     font-size: 14px;
 }
+
+/* Speaker button styling */
+.speaker-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+}
+
+.speaker-button img {
+    width: 16px;
+    height: 16px;
+}
+
+.speaker-button:hover {
+    opacity: 0.8;
+}

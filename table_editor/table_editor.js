@@ -66,6 +66,18 @@ document.addEventListener('DOMContentLoaded', () => {
             ruCell.dataset.field = 'ru';
             row.appendChild(ruCell);
 
+            // Speaker button cell
+            const speakCell = document.createElement('td');
+            const speakButton = document.createElement('button');
+            speakButton.className = 'speaker-button';
+            const speakIcon = document.createElement('img');
+            speakIcon.src = 'speaker.png'; // Ensure speaker.png exists
+            speakIcon.alt = 'Speak';
+            speakButton.appendChild(speakIcon);
+            speakButton.dataset.englishText = item.en; // Store English text for speech
+            speakCell.appendChild(speakButton);
+            row.appendChild(speakCell);
+
             tableBody.appendChild(row);
         });
 
@@ -108,6 +120,38 @@ document.addEventListener('DOMContentLoaded', () => {
         const field = cell.dataset.field;
         data[index][field] = value;
         tableBody.dataset.json = JSON.stringify(data);
+
+        // Update speaker button text if English cell was edited
+        const row = cell.parentElement;
+        const speakButton = row.querySelector('.speaker-button');
+        if (field === 'en' && speakButton) {
+            speakButton.dataset.englishText = value;
+        }
+    }
+
+    // Function to speak text using Web Speech API
+    function speakText(text) {
+        if (!window.speechSynthesis) {
+            setErrorMessage('Speech synthesis is not supported in this browser');
+            return;
+        }
+
+        // Cancel any ongoing speech
+        window.speechSynthesis.cancel();
+
+        // Create utterance
+        const utterance = new SpeechSynthesisUtterance(text);
+        utterance.lang = 'en-US'; // Set language to English
+        utterance.rate = 1; // Normal speed
+        utterance.pitch = 1; // Normal pitch
+
+        // Speak the text
+        window.speechSynthesis.speak(utterance);
+
+        // Handle errors
+        utterance.onerror = (event) => {
+            setErrorMessage(`Speech error: ${event.error}`);
+        };
     }
 
     // Function to save table data as JSON file
@@ -118,7 +162,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Generate filename with current date and time
             const now = new Date();
-            const timestamp = now.toISOString().replace(/[:.]/g, '-'); // e.g., 2025-05-23T11-21-00-000Z
+            const timestamp = now.toISOString().replace(/[:.]/g, '-'); // e.g., 2025-05-25T15-39-00-000Z
             const filename = `translations_${timestamp}.json`;
 
             // Create Blob and trigger download
@@ -141,7 +185,14 @@ document.addEventListener('DOMContentLoaded', () => {
     // Event listener for cell clicks to enable editing
     tableBody.addEventListener('click', (event) => {
         const cell = event.target.closest('td');
-        if (cell && !cell.querySelector('input')) {
+        const button = event.target.closest('.speaker-button');
+
+        if (button) {
+            // Handle speaker button click
+            const englishText = button.dataset.englishText;
+            speakText(englishText);
+        } else if (cell && !cell.querySelector('input') && !cell.querySelector('.speaker-button')) {
+            // Handle editable cell click
             makeCellEditable(cell);
         }
     });
