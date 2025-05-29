@@ -1,6 +1,7 @@
 // Wait for the DOM to be fully loaded
 document.addEventListener('DOMContentLoaded', () => {
     // Get DOM elements
+    const fileInput = document.getElementById('fileInput');
     const saveButton = document.getElementById('saveButton');
     const tableBody = document.getElementById('tableBody');
     const errorMessage = document.getElementById('errorMessage');
@@ -16,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
         return urlParams.get(name);
     }
 
-    // Function to load JSON file
+    // Function to load JSON file from URL parameter
     async function loadJsonFile() {
         setErrorMessage('');
         const jsonFile = getUrlParameter('jsondata');
@@ -43,6 +44,43 @@ document.addEventListener('DOMContentLoaded', () => {
         } catch (error) {
             setErrorMessage(`Error loading JSON file: ${error.message}`);
         }
+    }
+
+    // Function to handle file upload
+    function handleFileUpload(file) {
+        setErrorMessage('');
+        if (!file || !file.name.endsWith('.json')) {
+            setErrorMessage('Please upload a valid JSON file');
+            return;
+        }
+
+        const reader = new FileReader();
+        reader.onload = (event) => {
+            try {
+                const newData = JSON.parse(event.target.result);
+
+                // Validate JSON format
+                if (!Array.isArray(newData) || !newData.every(item => 'en' in item && 'ru' in item)) {
+                    throw new Error('Invalid JSON format: expected array of objects with "en" and "ru" properties');
+                }
+
+                // Get current table data
+                const currentData = tableBody.dataset.json ? JSON.parse(tableBody.dataset.json) : [];
+
+                // Append new data
+                const updatedData = [...currentData, ...newData];
+
+                // Render updated table
+                renderTable(updatedData);
+                setErrorMessage('JSON file uploaded and appended successfully');
+            } catch (error) {
+                setErrorMessage(`Error processing uploaded file: ${error.message}`);
+            }
+        };
+        reader.onerror = () => {
+            setErrorMessage('Error reading uploaded file');
+        };
+        reader.readAsText(file);
     }
 
     // Function to render table from JSON data
@@ -162,7 +200,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Generate filename with current date and time
             const now = new Date();
-            const timestamp = now.toISOString().replace(/[:.]/g, '-'); // e.g., 2025-05-25T15-39-00-000Z
+            const timestamp = now.toISOString().replace(/[:.]/g, '-'); // e.g., 2025-05-29T13-51-00-000Z
             const filename = `translations_${timestamp}.json`;
 
             // Create Blob and trigger download
@@ -182,7 +220,17 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Event listener for cell clicks to enable editing
+    // Event listener for file input
+    fileInput.addEventListener('change', (event) => {
+        const file = event.target.files[0];
+        if (file) {
+            handleFileUpload(file);
+            // Reset input to allow re-uploading the same file
+            event.target.value = '';
+        }
+    });
+
+    // Event listener for cell clicks to enable editing or speak
     tableBody.addEventListener('click', (event) => {
         const cell = event.target.closest('td');
         const button = event.target.closest('.speaker-button');
