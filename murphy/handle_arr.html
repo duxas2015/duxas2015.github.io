@@ -1,0 +1,140 @@
+<!doctype html>
+<!-- Interactive Murphy Test version 1.0 -->
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="shortcut icon" href="icons/favicon.ico" type="image/x-icon">	
+	<link rel="stylesheet" href="sidenav.css">	
+	<link rel="stylesheet" href="navbar.css">		
+	<link rel="stylesheet" href="main.css">
+	<link rel="stylesheet" href="popup.css">
+
+	<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
+	<script type="text/javascript" language="Javascript" charset="utf-8" src="questions_array.js"></script>
+	<script type="text/javascript" language="Javascript" charset="utf-8" src="sections_array.js"></script>	
+	<script type="text/javascript" language="Javascript" charset="utf-8" src="topics_arr.js"></script>
+	<script type="text/javascript" language="Javascript" charset="utf-8" src="sidenav.js"></script>
+	<script type="text/javascript" language="Javascript" charset="utf-8" src="language_resources.js"></script>
+	<script type="text/javascript" language="Javascript" charset="utf-8" src="main.js"></script>	
+	<script type="text/javascript" language="Javascript" charset="utf-8" src="all_muprhy_questions_ru.js"></script>
+	
+	
+<script>
+function processQuestions(arr) {
+    // Клонируем входной объект
+    const result = JSON.parse(JSON.stringify(arr));
+    
+    // Счетчик для сквозного порядкового номера
+    let questionCounter = 1;
+    
+    // Перебираем все свойства объекта
+    for (const unitKey in result) {
+        if (unitKey.startsWith('unit-')) {
+            const exercises = result[unitKey].exercises;
+            
+            // Перебираем все упражнения
+            for (const exercise of exercises) {
+                const questions = exercise.questions;
+                
+                // Перебираем все вопросы
+                for (const question of questions) {
+                    let qText = question.Q;
+                    const answers = question.A;
+                    
+                    // Заменяем подстроки *1*, *2* и т.д.
+                    qText = qText.replace(/\*(\d+)\*/g, (match, num) => {
+                        const index = parseInt(num) - 1;
+                        return answers[index] && answers[index][0] ? answers[index][0] : match;
+                    });
+                    
+                    // Применяем функцию translate и сохраняем результат в QF
+                    question.QF = qText;
+                    
+                    // Добавляем сквозной порядковый номер в idx
+                    question.idx = questionCounter++;
+                }
+            }
+        }
+    }
+    
+    return result;
+}
+
+function create_sentence_list(arr) {
+    // Массив для хранения строк таблицы
+    const rows = [];
+    
+    // Перебираем все свойства объекта
+    for (const unitKey in arr) {
+        if (unitKey.startsWith('unit-')) {
+            const exercises = arr[unitKey].exercises;
+            
+            // Перебираем все упражнения
+            for (const exercise of exercises) {
+                const questions = exercise.questions;
+                
+                // Перебираем все вопросы
+                for (const question of questions) {
+                    const { idx, QF } = question;
+                    // Добавляем строку с idx и QF
+                    rows.push({ idx, QF });
+                }
+            }
+        }
+    }
+    
+    // Сортируем строки по idx для гарантии порядка
+    rows.sort((a, b) => a.idx - b.idx);
+    
+    // Формируем результат с разделением табуляцией
+    return rows.map(row => `${row.idx}\t${row.QF}`).join('\n');
+}
+
+function add_russian_text(arr, arr_ru) {
+    // Клонируем входной объект arr, чтобы не изменять оригинал
+    const result = JSON.parse(JSON.stringify(arr));
+    
+    // Создаем словарь для быстрого поиска QF по idx из arr_ru
+    const ruMap = new Map(arr_ru.map(item => [item.idx, item.QF]));
+    
+    // Перебираем все свойства объекта
+    for (const unitKey in result) {
+        if (unitKey.startsWith('unit-')) {
+            const exercises = result[unitKey].exercises;
+            
+            // Перебираем все упражнения
+            for (const exercise of exercises) {
+                const questions = exercise.questions;
+                
+                // Перебираем все вопросы
+                for (const question of questions) {
+                    const { idx } = question;
+                    // Добавляем свойство QFR, если есть совпадение по idx
+                    if (ruMap.has(idx.toString())) {
+                        question.QFR = ruMap.get(idx.toString());
+                    } else {
+                        question.QFR = ''; // Пустая строка, если нет совпадения
+                    }
+                }
+            }
+        }
+    }
+    
+    return result;
+}
+
+// var result = processQuestions ( questions_arr );
+// var result_ru = add_russian_text ( result, questions_ru );
+
+
+</script>	
+	
+	
+</head>	
+<body>
+</body>
+
+</html>	

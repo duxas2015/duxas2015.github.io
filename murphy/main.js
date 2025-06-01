@@ -47,6 +47,7 @@ for ( var idx_unit in questions_arr ) {
 		for ( var questions_cntr in v_current_exercise_obj.questions ) {
 		
 			var question = outcome = v_current_exercise_obj.questions[questions_cntr].Q;
+			var question_ru = v_current_exercise_obj.questions[questions_cntr].QFR;
 			var note = v_current_exercise_obj.questions[questions_cntr].N;
 			if ( note === "" ) { note = undefined;}
 			var answers_arr = v_current_exercise_obj.questions[questions_cntr].A;
@@ -63,6 +64,7 @@ for ( var idx_unit in questions_arr ) {
 				'<span class="question-hint-cls">' + 
 					'<span class="question-hint-mark-cls">' + gl_current_language_set.question_hint_mark_word + '</span>' + ' ' /* a space is mandatory to prevent a hovered hint mark sitting close to the right side of the screen to move to the next row and spoil everything */ + 
 					'<span class="question-hint-content-cls" data-hint="' + note + '"></span>' +
+					'<span class="question-hint-content-cls" data-hint="' + question_ru + '"></span>' +
 				'</span>';
 			
 			}
