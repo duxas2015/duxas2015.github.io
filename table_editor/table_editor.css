@@ -30,6 +30,26 @@ body {
     background-color: white;
 }
 
+/* Font controls styling */
+.font-controls {
+    margin-bottom: 20px;
+}
+
+.font-controls button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #2196F3;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.font-controls button:hover {
+    background-color: #1976D2;
+}
+
 /* Save button styling */
 #saveButton {
     padding: 10px 20px;
@@ -53,6 +73,7 @@ body {
     border-collapse: collapse;
     background-color: white;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    --cell-font-size: 14px; /* CSS variable for dynamic font size */
 }
 
 /* Table headers */
@@ -67,7 +88,43 @@ body {
 #dataTable td {
     padding: 12px;
     border-bottom: 1px solid #ddd;
-    cursor: text;
+    font-size: var(--cell-font-size);
+    position: relative;
+}
+
+/* Cell content with edit icon */
+.cell-content {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Text span for word selection */
+.cell-content span {
+    user-select: text; /* Ensure text is selectable for double-click */
+    cursor: default;
+}
+
+/* Edit icon styling */
+.edit-icon {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+}
+
+.edit-icon img {
+    width: 16px;
+    height: 16px;
+}
+
+.edit-icon:hover {
+    opacity: 0.8;
 }
 
 /* Hover effect for table rows */
@@ -81,7 +138,7 @@ body {
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    font-size: 14px;
+    font-size: var(--cell-font-size);
 }
 
 /* Error message styling */

@@ -2,9 +2,15 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Get DOM elements
     const fileInput = document.getElementById('fileInput');
+    const increaseFontButton = document.getElementById('increaseFontButton');
+    const decreaseFontButton = document.getElementById('decreaseFontButton');
     const saveButton = document.getElementById('saveButton');
     const tableBody = document.getElementById('tableBody');
     const errorMessage = document.getElementById('errorMessage');
+    const dataTable = document.getElementById('dataTable');
+
+    // Track last click for double-click detection
+    let lastClick = { time: 0, target: null };
 
     // Function to set error messages
     function setErrorMessage(message) {
@@ -92,14 +98,38 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // English cell
             const enCell = document.createElement('td');
-            enCell.textContent = item.en;
+            const enContent = document.createElement('div');
+            enContent.className = 'cell-content';
+            const enText = document.createElement('span');
+            enText.textContent = item.en;
+            const enEditIcon = document.createElement('button');
+            enEditIcon.className = 'edit-icon';
+            const enEditImg = document.createElement('img');
+            enEditImg.src = 'pencil.png'; // Ensure pencil.png exists
+            enEditImg.alt = 'Edit';
+            enEditIcon.appendChild(enEditImg);
+            enContent.appendChild(enText);
+            enContent.appendChild(enEditIcon);
+            enCell.appendChild(enContent);
             enCell.dataset.index = index;
             enCell.dataset.field = 'en';
             row.appendChild(enCell);
 
             // Russian cell
             const ruCell = document.createElement('td');
-            ruCell.textContent = item.ru;
+            const ruContent = document.createElement('div');
+            ruContent.className = 'cell-content';
+            const ruText = document.createElement('span');
+            ruText.textContent = item.ru;
+            const ruEditIcon = document.createElement('button');
+            ruEditIcon.className = 'edit-icon';
+            const ruEditImg = document.createElement('img');
+            ruEditImg.src = 'pencil.png';
+            ruEditImg.alt = 'Edit';
+            ruEditIcon.appendChild(ruEditImg);
+            ruContent.appendChild(ruText);
+            ruContent.appendChild(ruEditIcon);
+            ruCell.appendChild(ruContent);
             ruCell.dataset.index = index;
             ruCell.dataset.field = 'ru';
             row.appendChild(ruCell);
@@ -125,16 +155,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Function to make cell editable
     function makeCellEditable(cell) {
-        const text = cell.textContent;
+        const contentDiv = cell.querySelector('.cell-content');
+        const text = contentDiv.querySelector('span').textContent;
         const input = document.createElement('input');
         input.type = 'text';
         input.value = text;
         input.className = 'editable-input';
 
         // Replace cell content with input
-        cell.textContent = '';
+        cell.innerHTML = '';
         cell.appendChild(input);
         input.focus();
+        input.select();
 
         // Save on Enter or blur
         input.addEventListener('keydown', (event) => {
@@ -149,15 +181,28 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Function to save edited cell content
     function saveCellEdit(cell, value) {
-        // Update cell content
-        cell.textContent = value;
-
         // Update stored JSON data
         const data = JSON.parse(tableBody.dataset.json);
         const index = parseInt(cell.dataset.index, 10);
         const field = cell.dataset.field;
         data[index][field] = value;
         tableBody.dataset.json = JSON.stringify(data);
+
+        // Re-render cell with text and edit icon
+        const contentDiv = document.createElement('div');
+        contentDiv.className = 'cell-content';
+        const textSpan = document.createElement('span');
+        textSpan.textContent = value;
+        const editIcon = document.createElement('button');
+        editIcon.className = 'edit-icon';
+        const editImg = document.createElement('img');
+        editImg.src = 'pencil.png';
+        editImg.alt = 'Edit';
+        editIcon.appendChild(editImg);
+        contentDiv.appendChild(textSpan);
+        contentDiv.appendChild(editIcon);
+        cell.innerHTML = '';
+        cell.appendChild(contentDiv);
 
         // Update speaker button text if English cell was edited
         const row = cell.parentElement;
@@ -168,7 +213,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Function to speak text using Web Speech API
-    function speakText(text) {
+    function speakText(text, lang = 'en-US') {
         if (!window.speechSynthesis) {
             setErrorMessage('Speech synthesis is not supported in this browser');
             return;
@@ -179,7 +224,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Create utterance
         const utterance = new SpeechSynthesisUtterance(text);
-        utterance.lang = 'en-US'; // Set language to English
+        utterance.lang = lang; // Set language (en-US or ru-RU)
         utterance.rate = 1; // Normal speed
         utterance.pitch = 1; // Normal pitch
 
@@ -200,7 +245,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Generate filename with current date and time
             const now = new Date();
-            const timestamp = now.toISOString().replace(/[:.]/g, '-'); // e.g., 2025-05-29T13-51-00-000Z
+            const timestamp = now.toISOString().replace(/[:.]/g, '-'); // e.g., 2025-06-15T13-46-00-000Z
             const filename = `translations_${timestamp}.json`;
 
             // Create Blob and trigger download
@@ -220,6 +265,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    // Function to adjust font size
+    function adjustFontSize(multiplier) {
+        const currentSize = parseFloat(getComputedStyle(dataTable).getPropertyValue('--cell-font-size'));
+        const newSize = currentSize * multiplier;
+        dataTable.style.setProperty('--cell-font-size', `${newSize}px`);
+    }
+
     // Event listener for file input
     fileInput.addEventListener('change', (event) => {
         const file = event.target.files[0];
@@ -230,20 +282,47 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Event listener for cell clicks to enable editing or speak
+    // Event listener for table clicks
     tableBody.addEventListener('click', (event) => {
+        const editIcon = event.target.closest('.edit-icon');
+        const speakerButton = event.target.closest('.speaker-button');
         const cell = event.target.closest('td');
-        const button = event.target.closest('.speaker-button');
+        const textSpan = event.target.closest('.cell-content span');
 
-        if (button) {
+        if (speakerButton) {
             // Handle speaker button click
-            const englishText = button.dataset.englishText;
-            speakText(englishText);
-        } else if (cell && !cell.querySelector('input') && !cell.querySelector('.speaker-button')) {
-            // Handle editable cell click
-            makeCellEditable(cell);
+            const englishText = speakerButton.dataset.englishText;
+            speakText(englishText, 'en-US');
+        } else if (editIcon && cell) {
+            // Handle edit icon click
+            if (!cell.querySelector('input')) {
+                makeCellEditable(cell);
+            }
+        } else if (textSpan && cell && !cell.querySelector('input')) {
+            // Handle potential double-click on text
+            const currentTime = Date.now();
+            const isDoubleClick = (
+                currentTime - lastClick.time <= 500 &&
+                lastClick.target === textSpan &&
+                event.button === 0 // Left mouse button
+            );
+
+            if (isDoubleClick) {
+                const selectedText = window.getSelection().toString().trim();
+                if (selectedText) {
+                    const lang = cell.dataset.field === 'en' ? 'en-US' : 'ru-RU';
+                    speakText(selectedText, lang);
+                }
+                lastClick = { time: 0, target: null }; // Reset after double-click
+            } else {
+                lastClick = { time: currentTime, target: textSpan };
+            }
         }
     });
+
+    // Event listeners for font size buttons
+    increaseFontButton.addEventListener('click', () => adjustFontSize(1.1)); // Increase by 10%
+    decreaseFontButton.addEventListener('click', () => adjustFontSize(0.9)); // Decrease by 10%
 
     // Event listener for Save button
     saveButton.addEventListener('click', saveJsonFile);
