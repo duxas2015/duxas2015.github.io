@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Player with Hotkeys</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .container {
+            max-width: 640px;
+            width: 100%;
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+        #controls, #input-area {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            width: 100%;
+        }
+        #youtubeUrl {
+            flex-grow: 1;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            padding: 10px 15px;
+            border: none;
+            background-color: #007bff;
+            color: white;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        #player-container {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            margin-bottom: 20px;
+            background: #000;
+        }
+        #player {
+            width: 100%;
+            height: 100%;
+        }
+        #rewind-buttons {
+            display: none;
+            gap: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div id="input-area">
+            <input type="text" id="youtubeUrl" placeholder="Вставьте ссылку на YouTube видео">
+            <button onclick="startVideo()">Start</button>
+        </div>
+
+        <div id="player-container">
+            <div id="player"></div>
+        </div>
+
+        <div id="rewind-buttons">
+            <button onclick="rewindVideo(2)">⏪ 2 сек назад (клавиша 2)</button>
+            <button onclick="rewindVideo(3)">⏪ 3 сек назад (клавиша 3)</button>
+        </div>
+    </div>
+
+    <script>
+        var tag = document.createElement('script');
+        tag.src = "https://www.youtube.com/iframe_api";
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+        var player;
+
+        function onYouTubeIframeAPIReady() {}
+
+        function extractVideoID(url) {
+            const regex = /(?:https?:\/\/)?(?:www\.)?(?:youtube\.com\/(?:[^\/\n\s]+\/\S+\/|(?:v|e(?:mbed)?)\/|\S*?[?&]v=)|youtu\.be\/)([a-zA-Z0-9_-]{11})/;
+            const matches = url.match(regex);
+            return matches ? matches[1] : null;
+        }
+
+        function startVideo() {
+            const url = document.getElementById('youtubeUrl').value;
+            const videoId = extractVideoID(url);
+
+            if (!videoId) {
+                alert("Неверная ссылка на YouTube видео. Пожалуйста, проверьте и попробуйте снова.");
+                return;
+            }
+
+            document.getElementById('rewind-buttons').style.display = 'flex';
+
+            if (player) {
+                player.loadVideoById(videoId);
+            } else {
+                player = new YT.Player('player', {
+                    height: '100%',
+                    width: '100%',
+                    videoId: videoId,
+                    playerVars: {
+                        'playsinline': 1,
+                        'autoplay': 1
+                    }
+                });
+            }
+        }
+
+        function rewindVideo(seconds) {
+            if (player && typeof player.getCurrentTime === 'function') {
+                const currentTime = player.getCurrentTime();
+                const newTime = Math.max(0, currentTime - seconds);
+                player.seekTo(newTime, true);
+            }
+        }
+
+        // --- НОВОЕ ИЗМЕНЕНИЕ ---
+        // Добавляем обработчик нажатия клавиш на весь документ.
+        document.addEventListener('keydown', function(event) {
+            // Проверяем, что плеер существует и фокус не находится в поле ввода.
+            // Это нужно, чтобы не мешать пользователю вводить URL.
+            if (player && document.activeElement !== document.getElementById('youtubeUrl')) {
+                switch (event.code) {
+                    // Коды для клавиши '2' (основная и на Numpad)
+                    case 'Digit2':
+                    case 'Numpad2':
+                        rewindVideo(2);
+                        break;
+                    
+                    // Коды для клавиши '3' (основная и на Numpad)
+                    case 'Numpad3':
+                    case 'Digit3':
+                        rewindVideo(3);
+                        break;
+                }
+            }
+        });
+        // --- КОНЕЦ ИЗМЕНЕНИЯ ---
+
+    </script>
+
+</body>
+</html>
