@@ -90,19 +90,24 @@ body {
     border-bottom: 1px solid #ddd;
     font-size: var(--cell-font-size);
     position: relative;
+    vertical-align: top; /* Align content to top for consistent height */
 }
 
 /* Cell content with edit icon */
 .cell-content {
     display: flex;
     align-items: center;
+    justify-content: space-between; /* Right-align edit icon */
     gap: 8px;
+    width: 100%;
+    min-height: 100%; /* Ensure cell content takes full height */
 }
 
 /* Text span for word selection */
 .cell-content span {
     user-select: text; /* Ensure text is selectable for double-click */
     cursor: default;
+    white-space: pre-wrap; /* Preserve newlines and wrap text */
 }
 
 /* Edit icon styling */
@@ -132,13 +137,19 @@ body {
     background-color: #f5f5f5;
 }
 
-/* Editable cell input styling */
+/* Editable cell textarea styling */
 .editable-input {
     width: 100%;
-    padding: 8px;
+    min-height: 100%; /* At least fill cell height */
+    padding: 0; /* Remove padding to match cell edges */
+    margin: 0;
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: var(--cell-font-size);
+    box-sizing: border-box;
+    resize: none; /* Prevent manual resizing */
+    overflow: hidden; /* Disable scrollbars */
+    white-space: pre-wrap; /* Enable text wrapping and preserve newlines */
 }
 
 /* Error message styling */

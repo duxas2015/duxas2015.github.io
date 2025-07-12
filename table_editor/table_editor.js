@@ -101,7 +101,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const enContent = document.createElement('div');
             enContent.className = 'cell-content';
             const enText = document.createElement('span');
-            enText.textContent = item.en;
+            enText.textContent = item.en; // Newlines preserved
             const enEditIcon = document.createElement('button');
             enEditIcon.className = 'edit-icon';
             const enEditImg = document.createElement('img');
@@ -120,7 +120,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const ruContent = document.createElement('div');
             ruContent.className = 'cell-content';
             const ruText = document.createElement('span');
-            ruText.textContent = item.ru;
+            ruText.textContent = item.ru; // Newlines preserved
             const ruEditIcon = document.createElement('button');
             ruEditIcon.className = 'edit-icon';
             const ruEditImg = document.createElement('img');
@@ -157,25 +157,47 @@ document.addEventListener('DOMContentLoaded', () => {
     function makeCellEditable(cell) {
         const contentDiv = cell.querySelector('.cell-content');
         const text = contentDiv.querySelector('span').textContent;
-        const input = document.createElement('input');
-        input.type = 'text';
-        input.value = text;
-        input.className = 'editable-input';
+        const textarea = document.createElement('textarea');
+        textarea.value = text;
+        textarea.className = 'editable-input';
 
-        // Replace cell content with input
+        // Set textarea dimensions to fill cell
+        textarea.style.width = '100%';
+        textarea.style.minHeight = '100%';
+        textarea.style.boxSizing = 'border-box';
+
+        // Replace cell content with textarea
         cell.innerHTML = '';
-        cell.appendChild(input);
-        input.focus();
-        input.select();
+        cell.appendChild(textarea);
 
-        // Save on Enter or blur
-        input.addEventListener('keydown', (event) => {
-            if (event.key === 'Enter') {
-                saveCellEdit(cell, input.value);
+        // Adjust textarea height to fit content
+        textarea.style.height = 'auto'; // Reset height
+        textarea.style.height = `${textarea.scrollHeight}px`; // Set to content height
+
+        // Update height on input to accommodate new text
+        textarea.addEventListener('input', () => {
+            textarea.style.height = 'auto';
+            textarea.style.height = `${textarea.scrollHeight}px`;
+        });
+
+        // Place cursor at the end of the text
+        textarea.focus();
+        textarea.setSelectionRange(text.length, text.length);
+
+        // Handle Enter and Shift+Enter
+        textarea.addEventListener('keydown', (event) => {
+            if (event.key === 'Enter' && !event.shiftKey) {
+                event.preventDefault(); // Prevent newline if Enter alone
+                saveCellEdit(cell, textarea.value);
+            }
+            // Shift+Enter allows newline
+            if (event.key === 'Enter' && event.shiftKey) {
+                textarea.style.height = 'auto';
+                textarea.style.height = `${textarea.scrollHeight}px`;
             }
         });
-        input.addEventListener('blur', () => {
-            saveCellEdit(cell, input.value);
+        textarea.addEventListener('blur', () => {
+            saveCellEdit(cell, textarea.value);
         });
     }
 
@@ -185,14 +207,14 @@ document.addEventListener('DOMContentLoaded', () => {
         const data = JSON.parse(tableBody.dataset.json);
         const index = parseInt(cell.dataset.index, 10);
         const field = cell.dataset.field;
-        data[index][field] = value;
+        data[index][field] = value; // Store multi-line text
         tableBody.dataset.json = JSON.stringify(data);
 
         // Re-render cell with text and edit icon
         const contentDiv = document.createElement('div');
         contentDiv.className = 'cell-content';
         const textSpan = document.createElement('span');
-        textSpan.textContent = value;
+        textSpan.textContent = value; // Newlines preserved
         const editIcon = document.createElement('button');
         editIcon.className = 'edit-icon';
         const editImg = document.createElement('img');
@@ -245,7 +267,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Generate filename with current date and time
             const now = new Date();
-            const timestamp = now.toISOString().replace(/[:.]/g, '-'); // e.g., 2025-06-15T13-46-00-000Z
+            const timestamp = now.toISOString().replace(/[:.]/g, '-'); // e.g., 2025-07-12T20-07-00-000Z
             const filename = `translations_${timestamp}.json`;
 
             // Create Blob and trigger download
@@ -270,6 +292,12 @@ document.addEventListener('DOMContentLoaded', () => {
         const currentSize = parseFloat(getComputedStyle(dataTable).getPropertyValue('--cell-font-size'));
         const newSize = currentSize * multiplier;
         dataTable.style.setProperty('--cell-font-size', `${newSize}px`);
+
+        // Re-adjust textarea heights for all editable cells
+        document.querySelectorAll('.editable-input').forEach(textarea => {
+            textarea.style.height = 'auto';
+            textarea.style.height = `${textarea.scrollHeight}px`;
+        });
     }
 
     // Event listener for file input
@@ -295,10 +323,10 @@ document.addEventListener('DOMContentLoaded', () => {
             speakText(englishText, 'en-US');
         } else if (editIcon && cell) {
             // Handle edit icon click
-            if (!cell.querySelector('input')) {
+            if (!cell.querySelector('textarea')) {
                 makeCellEditable(cell);
             }
-        } else if (textSpan && cell && !cell.querySelector('input')) {
+        } else if (textSpan && cell && !cell.querySelector('textarea')) {
             // Handle potential double-click on text
             const currentTime = Date.now();
             const isDoubleClick = (
