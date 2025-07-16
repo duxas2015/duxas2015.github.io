@@ -263,12 +263,15 @@ document.addEventListener('DOMContentLoaded', () => {
     function saveJsonFile() {
         setErrorMessage('');
         try {
+            const jsonFile = getUrlParameter('jsondata');
+            if (!jsonFile) {
+                throw new Error('Parameter "jsondata" is missing in the URL');
+            }
+
             const data = JSON.parse(tableBody.dataset.json);
 
-            // Generate filename with current date and time
-            const now = new Date();
-            const timestamp = now.toISOString().replace(/[:.]/g, '-'); // e.g., 2025-07-12T20-07-00-000Z
-            const filename = `translations_${timestamp}.json`;
+            // Use jsondata filename
+            const filename = jsonFile;
 
             // Create Blob and trigger download
             const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
