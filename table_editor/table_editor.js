@@ -11,6 +11,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Track last click for double-click detection
     let lastClick = { time: 0, target: null };
+    // Track open context menu
+    let openContextMenu = null;
 
     // Function to set error messages
     function setErrorMessage(message) {
@@ -45,6 +47,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 throw new Error('Invalid JSON format: expected array of objects with "en" and "ru" properties');
             }
 
+            // Ensure chk property exists
+            data.forEach(item => {
+                item.chk = item.chk !== undefined ? item.chk : false;
+            });
+
             // Render table
             renderTable(data);
         } catch (error) {
@@ -69,6 +76,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (!Array.isArray(newData) || !newData.every(item => 'en' in item && 'ru' in item)) {
                     throw new Error('Invalid JSON format: expected array of objects with "en" and "ru" properties');
                 }
+
+                // Ensure chk property exists
+                newData.forEach(item => {
+                    item.chk = item.chk !== undefined ? item.chk : false;
+                });
 
                 // Get current table data
                 const currentData = tableBody.dataset.json ? JSON.parse(tableBody.dataset.json) : [];
@@ -134,16 +146,41 @@ document.addEventListener('DOMContentLoaded', () => {
             ruCell.dataset.field = 'ru';
             row.appendChild(ruCell);
 
-            // Speaker button cell
+            // Speak cell (Speaker, Checkbox, Gear)
             const speakCell = document.createElement('td');
+            const cellContainer = document.createElement('div');
+            cellContainer.style.display = 'flex';
+            cellContainer.style.alignItems = 'center';
+
+            // Speaker button
             const speakButton = document.createElement('button');
             speakButton.className = 'speaker-button';
             const speakIcon = document.createElement('img');
             speakIcon.src = 'speaker.png'; // Ensure speaker.png exists
             speakIcon.alt = 'Speak';
             speakButton.appendChild(speakIcon);
-            speakButton.dataset.englishText = item.en; // Store English text for speech
-            speakCell.appendChild(speakButton);
+            speakButton.dataset.englishText = item.en;
+            cellContainer.appendChild(speakButton);
+
+            // Checkbox
+            const checkbox = document.createElement('input');
+            checkbox.type = 'checkbox';
+            checkbox.className = 'checkbox';
+            checkbox.checked = item.chk || false;
+            checkbox.dataset.index = index;
+            cellContainer.appendChild(checkbox);
+
+            // Gear button
+            const gearButton = document.createElement('button');
+            gearButton.className = 'gear-button';
+            const gearIcon = document.createElement('img');
+            gearIcon.src = 'gear.png'; // Ensure gear.png exists
+            gearIcon.alt = 'Settings';
+            gearButton.appendChild(gearIcon);
+            gearButton.dataset.index = index;
+            cellContainer.appendChild(gearButton);
+
+            speakCell.appendChild(cellContainer);
             row.appendChild(speakCell);
 
             tableBody.appendChild(row);
@@ -160,6 +197,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const textarea = document.createElement('textarea');
         textarea.value = text;
         textarea.className = 'editable-input';
+        textarea.setAttribute('aria-label', `Edit ${cell.dataset.field} text`);
 
         // Set textarea dimensions to fill cell
         textarea.style.width = '100%';
@@ -270,15 +308,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const data = JSON.parse(tableBody.dataset.json);
 
-            // Use jsondata filename
-            const filename = jsonFile;
-
             // Create Blob and trigger download
             const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
             const url = URL.createObjectURL(blob);
             const link = document.createElement('a');
             link.href = url;
-            link.download = filename;
+            link.download = jsonFile;
             document.body.appendChild(link);
             link.click();
             document.body.removeChild(link);
@@ -288,6 +323,79 @@ document.addEventListener('DOMContentLoaded', () => {
         } catch (error) {
             setErrorMessage(`Error saving JSON file: ${error.message}`);
         }
+    }
+
+    // Function to create context menu
+    function createContextMenu(index, gearButton) {
+        // Close existing menu
+        if (openContextMenu) {
+            openContextMenu.remove();
+            openContextMenu = null;
+        }
+
+        const menu = document.createElement('div');
+        menu.className = 'context-menu';
+
+        // Position menu below gear button
+        const rect = gearButton.getBoundingClientRect();
+        menu.style.top = `${rect.bottom + window.scrollY}px`;
+        menu.style.left = `${rect.left + window.scrollX}px`;
+
+        // Plus button
+        const plusButton = document.createElement('button');
+        const plusIcon = document.createElement('img');
+        plusIcon.src = 'plus.png'; // Ensure plus.png exists
+        plusIcon.alt = 'Add Row';
+        plusButton.appendChild(plusIcon);
+        plusButton.addEventListener('click', () => {
+            addRow(index);
+            menu.remove();
+            openContextMenu = null;
+        });
+        menu.appendChild(plusButton);
+
+        // Minus button
+        const minusButton = document.createElement('button');
+        const minusIcon = document.createElement('img');
+        minusIcon.src = 'minus.png'; // Ensure minus.png exists
+        minusIcon.alt = 'Delete Row';
+        minusButton.appendChild(minusIcon);
+        minusButton.addEventListener('click', () => {
+            deleteRow(index);
+            menu.remove();
+            openContextMenu = null;
+        });
+        menu.appendChild(minusButton);
+
+        document.body.appendChild(menu);
+        openContextMenu = menu;
+    }
+
+    // Function to add new row
+    function addRow(index) {
+        const data = JSON.parse(tableBody.dataset.json);
+        data.splice(index + 1, 0, { en: '', ru: '', chk: false });
+        tableBody.dataset.json = JSON.stringify(data);
+        renderTable(data);
+    }
+
+    // Function to delete row
+    function deleteRow(index) {
+        const data = JSON.parse(tableBody.dataset.json);
+        if (data.length <= 1) {
+            setErrorMessage('Cannot delete the last row');
+            return;
+        }
+        data.splice(index, 1);
+        tableBody.dataset.json = JSON.stringify(data);
+        renderTable(data);
+    }
+
+    // Function to update checkbox state
+    function updateCheckboxState(index, checked) {
+        const data = JSON.parse(tableBody.dataset.json);
+        data[index].chk = checked;
+        tableBody.dataset.json = JSON.stringify(data);
     }
 
     // Function to adjust font size
@@ -317,6 +425,8 @@ document.addEventListener('DOMContentLoaded', () => {
     tableBody.addEventListener('click', (event) => {
         const editIcon = event.target.closest('.edit-icon');
         const speakerButton = event.target.closest('.speaker-button');
+        const gearButton = event.target.closest('.gear-button');
+        const checkbox = event.target.closest('.checkbox');
         const cell = event.target.closest('td');
         const textSpan = event.target.closest('.cell-content span');
 
@@ -329,6 +439,14 @@ document.addEventListener('DOMContentLoaded', () => {
             if (!cell.querySelector('textarea')) {
                 makeCellEditable(cell);
             }
+        } else if (gearButton) {
+            // Handle gear button click
+            const index = parseInt(gearButton.dataset.index, 10);
+            createContextMenu(index, gearButton);
+        } else if (checkbox) {
+            // Handle checkbox change
+            const index = parseInt(checkbox.dataset.index, 10);
+            updateCheckboxState(index, checkbox.checked);
         } else if (textSpan && cell && !cell.querySelector('textarea')) {
             // Handle potential double-click on text
             const currentTime = Date.now();
@@ -348,6 +466,14 @@ document.addEventListener('DOMContentLoaded', () => {
             } else {
                 lastClick = { time: currentTime, target: textSpan };
             }
+        }
+    });
+
+    // Close context menu on outside click
+    document.addEventListener('click', (event) => {
+        if (openContextMenu && !event.target.closest('.gear-button') && !event.target.closest('.context-menu')) {
+            openContextMenu.remove();
+            openContextMenu = null;
         }
     });
 

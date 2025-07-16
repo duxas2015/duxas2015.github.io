@@ -165,11 +165,12 @@ body {
     border: none;
     cursor: pointer;
     padding: 0;
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
     width: 24px;
     height: 24px;
+    margin-right: 8px; /* Space for checkbox */
 }
 
 .speaker-button img {
@@ -178,5 +179,68 @@ body {
 }
 
 .speaker-button:hover {
+    opacity: 0.8;
+}
+
+/* Checkbox styling */
+.checkbox {
+    margin-right: 8px; /* Space before gear */
+}
+
+/* Gear button styling */
+.gear-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+}
+
+.gear-button img {
+    width: 16px;
+    height: 16px;
+}
+
+.gear-button:hover {
+    opacity: 0.8;
+}
+
+/* Context menu styling */
+.context-menu {
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    padding: 8px;
+    z-index: 1000;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    max-width: 120px; /* Limit width to fit ~3 icons per row */
+}
+
+/* Context menu icon buttons */
+.context-menu button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    width: 24px;
+    height: 24px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.context-menu button img {
+    width: 16px;
+    height: 16px;
+}
+
+.context-menu button:hover {
     opacity: 0.8;
 }
