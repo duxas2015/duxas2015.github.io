@@ -547,13 +547,13 @@ window.onload = function() {
 		.then(data => {
 
 			player = VenomPlayer.make({
-			publicPath: 'https://cdn.jsdelivr.net/npm/venom-player@' + VenomPlayer.version + '/dist/',
+//			publicPath: 'https://cdn.jsdelivr.net/npm/venom-player@' + VenomPlayer.version + '/dist/',
+			publicPath: 'https://cdn.jsdelivr.net/npm/venom-player@' + '0.2.90' + '/dist/',
 			container: document.getElementById('player'),
 
 					playlist: {
 						open: false,
 						ignoreLast: true,
-
 						autoNext: true,
 						id: 3462,
 						current: {

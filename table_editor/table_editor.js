@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const increaseFontButton = document.getElementById('increaseFontButton');
     const decreaseFontButton = document.getElementById('decreaseFontButton');
     const saveButton = document.getElementById('saveButton');
+    const saveLocalButton = document.getElementById('saveLocalButton');
     const tableBody = document.getElementById('tableBody');
     const errorMessage = document.getElementById('errorMessage');
     const dataTable = document.getElementById('dataTable');
@@ -25,8 +26,13 @@ document.addEventListener('DOMContentLoaded', () => {
         return urlParams.get(name);
     }
 
-    // Function to load JSON file from URL parameter
-    async function loadJsonFile() {
+    // Function to validate JSON data
+    function validateJson(data) {
+        return Array.isArray(data) && data.every(item => 'en' in item && 'ru' in item);
+    }
+
+    // Function to load JSON data (localStorage first, then file)
+    async function loadJsonData() {
         setErrorMessage('');
         const jsonFile = getUrlParameter('jsondata');
 
@@ -35,15 +41,36 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
+        // Try localStorage first
+        let data = null;
+        try {
+            const storedData = localStorage.getItem(jsonFile);
+            if (storedData) {
+                data = JSON.parse(storedData);
+                if (!validateJson(data)) {
+                    throw new Error('Invalid JSON format in localStorage: expected array of objects with "en" and "ru" properties');
+                }
+                // Ensure chk property exists
+                data.forEach(item => {
+                    item.chk = item.chk !== undefined ? item.chk : false;
+                });
+                renderTable(data);
+                setErrorMessage('Loaded data from localStorage');
+                return;
+            }
+        } catch (error) {
+            setErrorMessage(`Error loading from localStorage: ${error.message}, falling back to file`);
+        }
+
+        // Fall back to file
         try {
             const response = await fetch(jsonFile);
             if (!response.ok) {
                 throw new Error(`HTTP error: ${response.status} ${response.statusText}`);
             }
-            const data = await response.json();
+            data = await response.json();
 
-            // Validate JSON format
-            if (!Array.isArray(data) || !data.every(item => 'en' in item && 'ru' in item)) {
+            if (!validateJson(data)) {
                 throw new Error('Invalid JSON format: expected array of objects with "en" and "ru" properties');
             }
 
@@ -52,7 +79,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 item.chk = item.chk !== undefined ? item.chk : false;
             });
 
-            // Render table
             renderTable(data);
         } catch (error) {
             setErrorMessage(`Error loading JSON file: ${error.message}`);
@@ -72,8 +98,7 @@ document.addEventListener('DOMContentLoaded', () => {
             try {
                 const newData = JSON.parse(event.target.result);
 
-                // Validate JSON format
-                if (!Array.isArray(newData) || !newData.every(item => 'en' in item && 'ru' in item)) {
+                if (!validateJson(newData)) {
                     throw new Error('Invalid JSON format: expected array of objects with "en" and "ru" properties');
                 }
 
@@ -168,6 +193,7 @@ document.addEventListener('DOMContentLoaded', () => {
             checkbox.className = 'checkbox';
             checkbox.checked = item.chk || false;
             checkbox.dataset.index = index;
+            checkbox.setAttribute('aria-label', 'Mark row');
             cellContainer.appendChild(checkbox);
 
             // Gear button
@@ -178,6 +204,7 @@ document.addEventListener('DOMContentLoaded', () => {
             gearIcon.alt = 'Settings';
             gearButton.appendChild(gearIcon);
             gearButton.dataset.index = index;
+            gearButton.setAttribute('aria-label', 'Row settings');
             cellContainer.appendChild(gearButton);
 
             speakCell.appendChild(cellContainer);
@@ -325,6 +352,23 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    // Function to save table data to localStorage
+    function saveToLocalStorage() {
+        setErrorMessage('');
+        try {
+            const jsonFile = getUrlParameter('jsondata');
+            if (!jsonFile) {
+                throw new Error('Parameter "jsondata" is missing in the URL');
+            }
+
+            const data = JSON.parse(tableBody.dataset.json);
+            localStorage.setItem(jsonFile, JSON.stringify(data));
+            setErrorMessage('JSON data saved to localStorage successfully');
+        } catch (error) {
+            setErrorMessage(`Error saving to localStorage: ${error.message}`);
+        }
+    }
+
     // Function to create context menu
     function createContextMenu(index, gearButton) {
         // Close existing menu
@@ -347,6 +391,7 @@ document.addEventListener('DOMContentLoaded', () => {
         plusIcon.src = 'plus.png'; // Ensure plus.png exists
         plusIcon.alt = 'Add Row';
         plusButton.appendChild(plusIcon);
+        plusButton.setAttribute('aria-label', 'Add new row below');
         plusButton.addEventListener('click', () => {
             addRow(index);
             menu.remove();
@@ -360,6 +405,7 @@ document.addEventListener('DOMContentLoaded', () => {
         minusIcon.src = 'minus.png'; // Ensure minus.png exists
         minusIcon.alt = 'Delete Row';
         minusButton.appendChild(minusIcon);
+        minusButton.setAttribute('aria-label', 'Delete this row');
         minusButton.addEventListener('click', () => {
             deleteRow(index);
             menu.remove();
@@ -484,6 +530,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // Event listener for Save button
     saveButton.addEventListener('click', saveJsonFile);
 
-    // Load JSON file on page load
-    loadJsonFile();
+    // Event listener for Save Local button
+    saveLocalButton.addEventListener('click', saveToLocalStorage);
+
+    // Load JSON data on page load
+    loadJsonData();
 });
