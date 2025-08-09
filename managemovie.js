@@ -9,9 +9,11 @@ function findClosestSubtitle ( video, track ) {
 	const pattern = /^\[[^\]]*\]$/; // exclude text in []
 	const pattern_2 = /^\([^\)]*\)$/; // exclude text in ()
 	const pattern_3 = /^[♪\s]+$/; // exclude text ♪
+	const pattern_4 = /^\[[^\]]*\]\n\[[^\]]*\]$/; // exclude text in []
     Array.from(track.cues).forEach( function ( item, index ) {
-if ( foundTime === undefined && item.startTime > currentTime && !pattern.test(item.text) && !pattern_2.test(item.text) && !pattern_3.test(item.text) ) {
+     if ( foundTime === undefined && item.startTime > currentTime && !pattern.test(item.text) && !pattern_2.test(item.text) && !pattern_3.test(item.text) && !pattern_4.test(item.text) ) {
             console.log ( currentTime );
+			console.log ( item.text );
             console.log( item.startTime );
             foundTime = item.startTime;
         } 
