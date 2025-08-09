@@ -514,6 +514,12 @@ function syncSubtitles(video, textTrack1, textTrack2, directionFlag) {
     };
 }
 
+// Function to get URL parameter by name
+function getUrlParameter(name) {
+	const urlParams = new URLSearchParams(window.location.search);
+	return urlParams.get(name);
+}
+
 window.onload = function() {
 
 	fetch(url)
@@ -545,6 +551,9 @@ window.onload = function() {
 			};
 		})
 		.then(data => {
+			
+            const v_episode = getUrlParameter('epsd');
+			const v_season = getUrlParameter('ssn');
 
 			player = VenomPlayer.make({
 //			publicPath: 'https://cdn.jsdelivr.net/npm/venom-player@' + VenomPlayer.version + '/dist/',
@@ -557,8 +566,8 @@ window.onload = function() {
 						autoNext: true,
 						id: 3462,
 						current: {
-							season: 1,
-							episode: "1"
+							season: v_season ?? "1", 
+							episode: v_episode ?? "1"
 						},
 						
 						seasons: data.seasons
