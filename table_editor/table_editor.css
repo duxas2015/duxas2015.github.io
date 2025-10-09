@@ -70,6 +70,14 @@ body {
     background-color: #45a049;
 }
 
+.save-controls #repeatButton, .save-controls #newButton, .save-controls #allButton {
+    background-color: #2196F3;
+}
+
+.save-controls #repeatButton:hover, .save-controls #newButton:hover, .save-controls #allButton:hover {
+    background-color: #1976D2;
+}
+
 /* Table styling */
 #dataTable {
     width: 100%;
@@ -187,8 +195,8 @@ body {
 }
 
 /* Checkbox styling */
-.checkbox {
-    margin-right: 8px; /* Space before gear */
+.checkbox, .checkbox2 {
+    margin-right: 8px; /* Space before next element */
 }
 
 /* Gear button styling */

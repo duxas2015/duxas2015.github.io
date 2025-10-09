@@ -6,6 +6,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const decreaseFontButton = document.getElementById('decreaseFontButton');
     const saveButton = document.getElementById('saveButton');
     const saveLocalButton = document.getElementById('saveLocalButton');
+    const repeatButton = document.getElementById('repeatButton');
+    const newButton = document.getElementById('newButton');
+    const allButton = document.getElementById('allButton');
     const tableBody = document.getElementById('tableBody');
     const errorMessage = document.getElementById('errorMessage');
     const dataTable = document.getElementById('dataTable');
@@ -14,6 +17,11 @@ document.addEventListener('DOMContentLoaded', () => {
     let lastClick = { time: 0, target: null };
     // Track open context menu
     let openContextMenu = null;
+    // Track filter state
+    let isRepeatFilterActive = false;
+    let isNewFilterActive = false;
+    // Track pending checkbox changes
+    let pendingChanges = {};
 
     // Function to set error messages
     function setErrorMessage(message) {
@@ -50,9 +58,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (!validateJson(data)) {
                     throw new Error('Invalid JSON format in localStorage: expected array of objects with "en" and "ru" properties');
                 }
-                // Ensure chk property exists
+                // Ensure chk and chk2 properties exist
                 data.forEach(item => {
                     item.chk = item.chk !== undefined ? item.chk : false;
+                    item.chk2 = item.chk2 !== undefined ? item.chk2 : false;
                 });
                 renderTable(data);
                 setErrorMessage('Loaded data from localStorage');
@@ -74,9 +83,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 throw new Error('Invalid JSON format: expected array of objects with "en" and "ru" properties');
             }
 
-            // Ensure chk property exists
+            // Ensure chk and chk2 properties exist
             data.forEach(item => {
                 item.chk = item.chk !== undefined ? item.chk : false;
+                item.chk2 = item.chk2 !== undefined ? item.chk2 : false;
             });
 
             renderTable(data);
@@ -102,9 +112,10 @@ document.addEventListener('DOMContentLoaded', () => {
                     throw new Error('Invalid JSON format: expected array of objects with "en" and "ru" properties');
                 }
 
-                // Ensure chk property exists
+                // Ensure chk and chk2 properties exist
                 newData.forEach(item => {
                     item.chk = item.chk !== undefined ? item.chk : false;
+                    item.chk2 = item.chk2 !== undefined ? item.chk2 : false;
                 });
 
                 // Get current table data
@@ -112,6 +123,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 // Append new data
                 const updatedData = [...currentData, ...newData];
+
+                // Clear pending changes
+                pendingChanges = {};
 
                 // Render updated table
                 renderTable(updatedData);
@@ -127,10 +141,17 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Function to render table from JSON data
-    function renderTable(data) {
+    function renderTable(data, filter = null) {
         tableBody.innerHTML = ''; // Clear existing rows
 
-        data.forEach((item, index) => {
+        let filteredData = data;
+        if (filter === 'repeat') {
+            filteredData = data.filter(item => !item.chk && item.chk2);
+        } else if (filter === 'new') {
+            filteredData = data.filter(item => !item.chk && !item.chk2);
+        }
+
+        filteredData.forEach((item, index) => {
             const row = document.createElement('tr');
 
             // English cell
@@ -171,7 +192,7 @@ document.addEventListener('DOMContentLoaded', () => {
             ruCell.dataset.field = 'ru';
             row.appendChild(ruCell);
 
-            // Speak cell (Speaker, Checkbox, Gear)
+            // Speak cell (Speaker, Checkbox, Checkbox2, Gear)
             const speakCell = document.createElement('td');
             const cellContainer = document.createElement('div');
             cellContainer.style.display = 'flex';
@@ -196,6 +217,15 @@ document.addEventListener('DOMContentLoaded', () => {
             checkbox.setAttribute('aria-label', 'Mark row');
             cellContainer.appendChild(checkbox);
 
+            // Checkbox2
+            const checkbox2 = document.createElement('input');
+            checkbox2.type = 'checkbox';
+            checkbox2.className = 'checkbox2';
+            checkbox2.checked = item.chk2 || false;
+            checkbox2.dataset.index = index;
+            checkbox2.setAttribute('aria-label', 'Mark row 2');
+            cellContainer.appendChild(checkbox2);
+
             // Gear button
             const gearButton = document.createElement('button');
             gearButton.className = 'gear-button';
@@ -209,6 +239,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
             speakCell.appendChild(cellContainer);
             row.appendChild(speakCell);
+
+            // Mark 2 cell (empty for alignment)
+            const mark2Cell = document.createElement('td');
+            row.appendChild(mark2Cell);
 
             tableBody.appendChild(row);
         });
@@ -297,6 +331,9 @@ document.addEventListener('DOMContentLoaded', () => {
         if (field === 'en' && speakButton) {
             speakButton.dataset.englishText = value;
         }
+
+        // Re-render table with current filter
+        renderTable(data, isRepeatFilterActive ? 'repeat' : isNewFilterActive ? 'new' : null);
     }
 
     // Function to speak text using Web Speech API
@@ -324,6 +361,20 @@ document.addEventListener('DOMContentLoaded', () => {
         };
     }
 
+    // Function to apply pending checkbox changes
+    function applyPendingChanges(data) {
+        Object.keys(pendingChanges).forEach(index => {
+            if (pendingChanges[index].chk !== undefined) {
+                data[index].chk = pendingChanges[index].chk;
+            }
+            if (pendingChanges[index].chk2 !== undefined) {
+                data[index].chk2 = pendingChanges[index].chk2;
+            }
+        });
+        pendingChanges = {}; // Clear pending changes after applying
+        return data;
+    }
+
     // Function to save table data as JSON file
     function saveJsonFile() {
         setErrorMessage('');
@@ -334,9 +385,11 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             const data = JSON.parse(tableBody.dataset.json);
+            // Apply pending checkbox changes
+            const updatedData = applyPendingChanges(data);
 
             // Create Blob and trigger download
-            const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+            const blob = new Blob([JSON.stringify(updatedData, null, 2)], { type: 'application/json' });
             const url = URL.createObjectURL(blob);
             const link = document.createElement('a');
             link.href = url;
@@ -345,6 +398,10 @@ document.addEventListener('DOMContentLoaded', () => {
             link.click();
             document.body.removeChild(link);
             URL.revokeObjectURL(url);
+
+            // Update stored data and re-render table
+            tableBody.dataset.json = JSON.stringify(updatedData);
+            renderTable(updatedData, isRepeatFilterActive ? 'repeat' : isNewFilterActive ? 'new' : null);
 
             setErrorMessage('JSON file saved successfully');
         } catch (error) {
@@ -362,7 +419,16 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             const data = JSON.parse(tableBody.dataset.json);
-            localStorage.setItem(jsonFile, JSON.stringify(data));
+            // Apply pending checkbox changes
+            const updatedData = applyPendingChanges(data);
+
+            // Save to localStorage
+            localStorage.setItem(jsonFile, JSON.stringify(updatedData));
+
+            // Update stored data and re-render table
+            tableBody.dataset.json = JSON.stringify(updatedData);
+            renderTable(updatedData, isRepeatFilterActive ? 'repeat' : isNewFilterActive ? 'new' : null);
+
             setErrorMessage('JSON data saved to localStorage successfully');
         } catch (error) {
             setErrorMessage(`Error saving to localStorage: ${error.message}`);
@@ -420,9 +486,11 @@ document.addEventListener('DOMContentLoaded', () => {
     // Function to add new row
     function addRow(index) {
         const data = JSON.parse(tableBody.dataset.json);
-        data.splice(index + 1, 0, { en: '', ru: '', chk: false });
+        data.splice(index + 1, 0, { en: '', ru: '', chk: false, chk2: false });
         tableBody.dataset.json = JSON.stringify(data);
-        renderTable(data);
+        // Clear pending changes for consistency
+        pendingChanges = {};
+        renderTable(data, isRepeatFilterActive ? 'repeat' : isNewFilterActive ? 'new' : null);
     }
 
     // Function to delete row
@@ -433,15 +501,27 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
         data.splice(index, 1);
+        // Clear pending changes for deleted row and adjust indices
+        const newPendingChanges = {};
+        Object.keys(pendingChanges).forEach(key => {
+            const oldIndex = parseInt(key, 10);
+            if (oldIndex < index) {
+                newPendingChanges[oldIndex] = pendingChanges[oldIndex];
+            } else if (oldIndex > index) {
+                newPendingChanges[oldIndex - 1] = pendingChanges[oldIndex];
+            }
+        });
+        pendingChanges = newPendingChanges;
         tableBody.dataset.json = JSON.stringify(data);
-        renderTable(data);
+        renderTable(data, isRepeatFilterActive ? 'repeat' : isNewFilterActive ? 'new' : null);
     }
 
     // Function to update checkbox state
-    function updateCheckboxState(index, checked) {
-        const data = JSON.parse(tableBody.dataset.json);
-        data[index].chk = checked;
-        tableBody.dataset.json = JSON.stringify(data);
+    function updateCheckboxState(index, checked, field) {
+        if (!pendingChanges[index]) {
+            pendingChanges[index] = {};
+        }
+        pendingChanges[index][field] = checked;
     }
 
     // Function to adjust font size
@@ -455,6 +535,39 @@ document.addEventListener('DOMContentLoaded', () => {
             textarea.style.height = 'auto';
             textarea.style.height = `${textarea.scrollHeight}px`;
         });
+    }
+
+    // Function to filter rows for Repeat (chk: false, chk2: true)
+    function filterRepeatRows() {
+        isRepeatFilterActive = !isRepeatFilterActive;
+        isNewFilterActive = false; // Disable other filter
+        const data = JSON.parse(tableBody.dataset.json);
+        renderTable(data, isRepeatFilterActive ? 'repeat' : null);
+        repeatButton.style.backgroundColor = isRepeatFilterActive ? '#1976D2' : '#2196F3'; // Highlight active filter
+        newButton.style.backgroundColor = '#2196F3'; // Reset other button
+        allButton.style.backgroundColor = '#2196F3'; // Reset All button
+    }
+
+    // Function to filter rows for New (chk: false, chk2: false)
+    function filterNewRows() {
+        isNewFilterActive = !isNewFilterActive;
+        isRepeatFilterActive = false; // Disable other filter
+        const data = JSON.parse(tableBody.dataset.json);
+        renderTable(data, isNewFilterActive ? 'new' : null);
+        newButton.style.backgroundColor = isNewFilterActive ? '#1976D2' : '#2196F3'; // Highlight active filter
+        repeatButton.style.backgroundColor = '#2196F3'; // Reset other button
+        allButton.style.backgroundColor = '#2196F3'; // Reset All button
+    }
+
+    // Function to show all rows
+    function showAllRows() {
+        isRepeatFilterActive = false;
+        isNewFilterActive = false;
+        const data = JSON.parse(tableBody.dataset.json);
+        renderTable(data);
+        repeatButton.style.backgroundColor = '#2196F3'; // Reset Repeat button
+        newButton.style.backgroundColor = '#2196F3'; // Reset New button
+        allButton.style.backgroundColor = '#1976D2'; // Highlight All button
     }
 
     // Event listener for file input
@@ -473,6 +586,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const speakerButton = event.target.closest('.speaker-button');
         const gearButton = event.target.closest('.gear-button');
         const checkbox = event.target.closest('.checkbox');
+        const checkbox2 = event.target.closest('.checkbox2');
         const cell = event.target.closest('td');
         const textSpan = event.target.closest('.cell-content span');
 
@@ -492,7 +606,11 @@ document.addEventListener('DOMContentLoaded', () => {
         } else if (checkbox) {
             // Handle checkbox change
             const index = parseInt(checkbox.dataset.index, 10);
-            updateCheckboxState(index, checkbox.checked);
+            updateCheckboxState(index, checkbox.checked, 'chk');
+        } else if (checkbox2) {
+            // Handle checkbox2 change
+            const index = parseInt(checkbox2.dataset.index, 10);
+            updateCheckboxState(index, checkbox2.checked, 'chk2');
         } else if (textSpan && cell && !cell.querySelector('textarea')) {
             // Handle potential double-click on text
             const currentTime = Date.now();
@@ -532,6 +650,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Event listener for Save Local button
     saveLocalButton.addEventListener('click', saveToLocalStorage);
+
+    // Event listeners for filter buttons
+    repeatButton.addEventListener('click', filterRepeatRows);
+    newButton.addEventListener('click', filterNewRows);
+    allButton.addEventListener('click', showAllRows);
 
     // Load JSON data on page load
     loadJsonData();

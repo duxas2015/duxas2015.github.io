@@ -1,4 +1,43 @@
-<!DOCTYPE html>
+<script type="text/javascript">
+        var gk_isXlsx = false;
+        var gk_xlsxFileLookup = {};
+        var gk_fileData = {};
+        function filledCell(cell) {
+          return cell !== '' && cell != null;
+        }
+        function loadFileData(filename) {
+        if (gk_isXlsx && gk_xlsxFileLookup[filename]) {
+            try {
+                var workbook = XLSX.read(gk_fileData[filename], { type: 'base64' });
+                var firstSheetName = workbook.SheetNames[0];
+                var worksheet = workbook.Sheets[firstSheetName];
+
+                // Convert sheet to JSON to filter blank rows
+                var jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1, blankrows: false, defval: '' });
+                // Filter out blank rows (rows where all cells are empty, null, or undefined)
+                var filteredData = jsonData.filter(row => row.some(filledCell));
+
+                // Heuristic to find the header row by ignoring rows with fewer filled cells than the next row
+                var headerRowIndex = filteredData.findIndex((row, index) =>
+                  row.filter(filledCell).length >= filteredData[index + 1]?.filter(filledCell).length
+                );
+                // Fallback
+                if (headerRowIndex === -1 || headerRowIndex > 25) {
+                  headerRowIndex = 0;
+                }
+
+                // Convert filtered JSON back to CSV
+                var csv = XLSX.utils.aoa_to_sheet(filteredData.slice(headerRowIndex)); // Create a new sheet from filtered array of arrays
+                csv = XLSX.utils.sheet_to_csv(csv, { header: 1 });
+                return csv;
+            } catch (e) {
+                console.error(e);
+                return "";
+            }
+        }
+        return gk_fileData[filename] || "";
+        }
+        </script><!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,38 +46,37 @@
     <link rel="stylesheet" href="table_editor.css">
 </head>
 <body>
-    <!-- File input for uploading JSON files -->
     <div class="file-upload">
         <label for="fileInput">Upload JSON File:</label>
         <input type="file" id="fileInput" accept=".json">
     </div>
-    
-    <!-- Font size adjustment buttons -->
+
     <div class="font-controls">
         <button id="increaseFontButton">Increase</button>
         <button id="decreaseFontButton">Decrease</button>
     </div>
-    
-    <!-- Save and Save Local buttons -->
+
     <div class="save-controls">
-        <button id="saveButton" aria-label="Save to JSON file">Save</button>
-        <button id="saveLocalButton" aria-label="Save to local storage">Save Local</button>
+        <button id="saveButton">Save</button>
+        <button id="saveLocalButton">Save Local</button>
+        <button id="repeatButton">Repeat</button>
+        <button id="newButton">New</button>
+        <button id="allButton">All</button>
     </div>
-    
-    <!-- Table to display JSON data -->
+
+    <div class="error" id="errorMessage"></div>
+
     <table id="dataTable">
         <thead>
             <tr>
                 <th>English</th>
                 <th>Russian</th>
                 <th>Speak</th>
+                <th>Mark 2</th>
             </tr>
         </thead>
         <tbody id="tableBody"></tbody>
     </table>
-    
-    <!-- Container for error messages -->
-    <div id="errorMessage" class="error"></div>
 
     <script src="table_editor.js"></script>
 </body>
