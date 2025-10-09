@@ -26,6 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Function to set error messages
     function setErrorMessage(message) {
         errorMessage.textContent = message;
+        console.log('Error/UI message:', message); // Log for debugging
     }
 
     // Function to get URL parameter by name
@@ -37,6 +38,20 @@ document.addEventListener('DOMContentLoaded', () => {
     // Function to validate JSON data
     function validateJson(data) {
         return Array.isArray(data) && data.every(item => 'en' in item && 'ru' in item);
+    }
+
+    // Function to estimate storage quota (modern browsers)
+    async function checkStorageQuota() {
+        if (navigator.storage && navigator.storage.estimate) {
+            const estimate = await navigator.storage.estimate();
+            const quota = estimate.quota || 0;
+            const usage = estimate.usage || 0;
+            console.log(`Storage quota: ${quota} bytes, usage: ${usage} bytes, available: ${quota - usage} bytes`);
+            return { quota, usage, available: quota - usage };
+        } else {
+            console.log('Storage estimate not supported');
+            return null;
+        }
     }
 
     // Function to load JSON data (localStorage first, then file)
@@ -52,8 +67,10 @@ document.addEventListener('DOMContentLoaded', () => {
         // Try localStorage first
         let data = null;
         try {
+            console.log('Attempting to load from localStorage:', jsonFile);
             const storedData = localStorage.getItem(jsonFile);
             if (storedData) {
+                console.log('Loaded from localStorage, length:', storedData.length);
                 data = JSON.parse(storedData);
                 if (!validateJson(data)) {
                     throw new Error('Invalid JSON format in localStorage: expected array of objects with "en" and "ru" properties');
@@ -68,11 +85,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 return;
             }
         } catch (error) {
+            console.error('Error loading from localStorage:', error);
             setErrorMessage(`Error loading from localStorage: ${error.message}, falling back to file`);
         }
 
         // Fall back to file
         try {
+            console.log('Falling back to fetch:', jsonFile);
             const response = await fetch(jsonFile);
             if (!response.ok) {
                 throw new Error(`HTTP error: ${response.status} ${response.statusText}`);
@@ -91,6 +110,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             renderTable(data);
         } catch (error) {
+            console.error('Error loading JSON file:', error);
             setErrorMessage(`Error loading JSON file: ${error.message}`);
         }
     }
@@ -131,6 +151,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 renderTable(updatedData);
                 setErrorMessage('JSON file uploaded and appended successfully');
             } catch (error) {
+                console.error('Error processing uploaded file:', error);
                 setErrorMessage(`Error processing uploaded file: ${error.message}`);
             }
         };
@@ -150,6 +171,8 @@ document.addEventListener('DOMContentLoaded', () => {
         } else if (filter === 'new') {
             filteredData = data.filter(item => !item.chk && !item.chk2);
         }
+
+        console.log(`Rendering table: total rows=${data.length}, filtered=${filteredData.length}, filter=${filter}`);
 
         filteredData.forEach((item, index) => {
             const row = document.createElement('tr');
@@ -363,15 +386,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Function to apply pending checkbox changes
     function applyPendingChanges(data) {
-        Object.keys(pendingChanges).forEach(index => {
-            if (pendingChanges[index].chk !== undefined) {
-                data[index].chk = pendingChanges[index].chk;
-            }
-            if (pendingChanges[index].chk2 !== undefined) {
-                data[index].chk2 = pendingChanges[index].chk2;
+        console.log('Applying pending changes:', pendingChanges);
+        Object.keys(pendingChanges).forEach(indexStr => {
+            const index = parseInt(indexStr, 10);
+            if (index < data.length) { // Ensure index is valid
+                if (pendingChanges[indexStr].chk !== undefined) {
+                    data[index].chk = pendingChanges[indexStr].chk;
+                }
+                if (pendingChanges[indexStr].chk2 !== undefined) {
+                    data[index].chk2 = pendingChanges[indexStr].chk2;
+                }
             }
         });
-        pendingChanges = {}; // Clear pending changes after applying
+        console.log('Data after applying changes (first 3 rows):', data.slice(0, 3));
         return data;
     }
 
@@ -399,39 +426,60 @@ document.addEventListener('DOMContentLoaded', () => {
             document.body.removeChild(link);
             URL.revokeObjectURL(url);
 
-            // Update stored data and re-render table
+            // Update stored data and re-render table (but not localStorage here)
             tableBody.dataset.json = JSON.stringify(updatedData);
             renderTable(updatedData, isRepeatFilterActive ? 'repeat' : isNewFilterActive ? 'new' : null);
 
             setErrorMessage('JSON file saved successfully');
         } catch (error) {
+            console.error('Error saving JSON file:', error);
             setErrorMessage(`Error saving JSON file: ${error.message}`);
         }
     }
 
     // Function to save table data to localStorage
-    function saveToLocalStorage() {
+    async function saveToLocalStorage() {
         setErrorMessage('');
+        const jsonFile = getUrlParameter('jsondata');
+        if (!jsonFile) {
+            setErrorMessage('Parameter "jsondata" is missing in the URL');
+            return;
+        }
+
         try {
-            const jsonFile = getUrlParameter('jsondata');
-            if (!jsonFile) {
-                throw new Error('Parameter "jsondata" is missing in the URL');
+            // Check quota first
+            const quotaInfo = await checkStorageQuota();
+            if (quotaInfo && quotaInfo.available < 1024 * 1024) { // Less than 1MB available
+                console.warn('Low storage available, may fail');
             }
 
             const data = JSON.parse(tableBody.dataset.json);
+            console.log('Data before apply, length:', JSON.stringify(data).length);
             // Apply pending checkbox changes
             const updatedData = applyPendingChanges(data);
+            const jsonString = JSON.stringify(updatedData);
+            console.log('Data after apply, length:', jsonString.length);
 
-            // Save to localStorage
-            localStorage.setItem(jsonFile, JSON.stringify(updatedData));
+            // Test setItem with try-catch for quota
+            localStorage.setItem(jsonFile, jsonString);
+            console.log('localStorage setItem successful for:', jsonFile);
 
-            // Update stored data and re-render table
-            tableBody.dataset.json = JSON.stringify(updatedData);
-            renderTable(updatedData, isRepeatFilterActive ? 'repeat' : isNewFilterActive ? 'new' : null);
-
-            setErrorMessage('JSON data saved to localStorage successfully');
+            // Verify save
+            const verify = localStorage.getItem(jsonFile);
+            if (verify === jsonString) {
+                console.log('Verification: localStorage saved correctly');
+                // Update stored data and re-render table
+                tableBody.dataset.json = jsonString;
+                renderTable(updatedData, isRepeatFilterActive ? 'repeat' : isNewFilterActive ? 'new' : null);
+                // Clear pending only on success
+                pendingChanges = {};
+                setErrorMessage('JSON data saved to localStorage successfully');
+            } else {
+                throw new Error('Verification failed: saved data mismatch');
+            }
         } catch (error) {
-            setErrorMessage(`Error saving to localStorage: ${error.message}`);
+            console.error('Error saving to localStorage:', error);
+            setErrorMessage(`Error saving to localStorage: ${error.message}. Close Chrome fully and retry.`);
         }
     }
 
@@ -522,6 +570,7 @@ document.addEventListener('DOMContentLoaded', () => {
             pendingChanges[index] = {};
         }
         pendingChanges[index][field] = checked;
+        console.log(`Pending change: row ${index}, ${field}=${checked}`); // Log for debugging
     }
 
     // Function to adjust font size
