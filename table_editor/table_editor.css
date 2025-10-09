@@ -195,7 +195,7 @@ body {
 }
 
 /* Checkbox styling */
-.checkbox, .checkbox2 {
+.checkbox, .checkbox2, .checkbox3 {
     margin-right: 8px; /* Space before next element */
 }
 
@@ -230,9 +230,9 @@ body {
     padding: 8px;
     z-index: 1000;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column; /* Stack items vertically */
     gap: 8px;
-    max-width: 120px; /* Limit width to fit ~3 icons per row */
+    min-width: 120px; /* Ensure enough space for checkbox label */
 }
 
 /* Context menu icon buttons */
@@ -255,4 +255,10 @@ body {
 
 .context-menu button:hover {
     opacity: 0.8;
+}
+
+/* Context menu checkbox label styling */
+.context-menu label {
+    font-size: 14px;
+    color: #333;
 }

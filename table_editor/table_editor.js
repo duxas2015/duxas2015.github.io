@@ -77,12 +77,22 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (!validateJson(data)) {
                     throw new Error('Invalid JSON format in localStorage: expected array of objects with "en" and "ru" properties');
                 }
-                // Ensure chk, chk2, and index properties exist
+                // Ensure chk, chk2, chk3, and index properties exist
                 data.forEach((item, idx) => {
                     item.chk = item.chk !== undefined ? item.chk : false;
                     item.chk2 = item.chk2 !== undefined ? item.chk2 : false;
+                    item.chk3 = item.chk3 !== undefined ? item.chk3 : false;
                     item.index = item.index !== undefined ? item.index : idx; // Assign index
                 });
+                // Set All button as active with bold red text
+                allButton.style.fontWeight = 'bold';
+                allButton.style.color = 'red';
+                repeatButton.style.fontWeight = 'normal';
+                repeatButton.style.color = 'white';
+                newButton.style.fontWeight = 'normal';
+                newButton.style.color = 'white';
+                rerepeatButton.style.fontWeight = 'normal';
+                rerepeatButton.style.color = 'white';
                 renderTable(data);
                 setErrorMessage('Loaded data from localStorage');
                 return;
@@ -105,13 +115,23 @@ document.addEventListener('DOMContentLoaded', () => {
                 throw new Error('Invalid JSON format: expected array of objects with "en" and "ru" properties');
             }
 
-            // Ensure chk, chk2, and index properties exist
+            // Ensure chk, chk2, chk3, and index properties exist
             data.forEach((item, idx) => {
                 item.chk = item.chk !== undefined ? item.chk : false;
                 item.chk2 = item.chk2 !== undefined ? item.chk2 : false;
+                item.chk3 = item.chk3 !== undefined ? item.chk3 : false;
                 item.index = item.index !== undefined ? item.index : idx; // Assign index
             });
 
+            // Set All button as active with bold red text
+            allButton.style.fontWeight = 'bold';
+            allButton.style.color = 'red';
+            repeatButton.style.fontWeight = 'normal';
+            repeatButton.style.color = 'white';
+            newButton.style.fontWeight = 'normal';
+            newButton.style.color = 'white';
+            rerepeatButton.style.fontWeight = 'normal';
+            rerepeatButton.style.color = 'white';
             renderTable(data);
         } catch (error) {
             console.error('Error loading JSON file:', error);
@@ -136,12 +156,13 @@ document.addEventListener('DOMContentLoaded', () => {
                     throw new Error('Invalid JSON format: expected array of objects with "en" and "ru" properties');
                 }
 
-                // Ensure chk, chk2, and index properties exist
+                // Ensure chk, chk2, chk3, and index properties exist
                 const currentData = tableBody.dataset.json ? JSON.parse(tableBody.dataset.json) : [];
                 const maxIndex = currentData.length > 0 ? Math.max(...currentData.map(item => item.index)) : -1;
                 newData.forEach((item, idx) => {
                     item.chk = item.chk !== undefined ? item.chk : false;
                     item.chk2 = item.chk2 !== undefined ? item.chk2 : false;
+                    item.chk3 = item.chk3 !== undefined ? item.chk3 : false;
                     item.index = item.index !== undefined ? item.index : maxIndex + idx + 1; // Assign unique index
                 });
 
@@ -157,8 +178,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 isReRepeatFilterActive = false;
                 repeatButton.style.backgroundColor = '#2196F3';
                 newButton.style.backgroundColor = '#2196F3';
-                allButton.style.backgroundColor = '#1976D2';
+                allButton.style.backgroundColor = '#2196F3';
                 rerepeatButton.style.backgroundColor = '#2196F3';
+                // Set All button as active
+                allButton.style.fontWeight = 'bold';
+                allButton.style.color = 'red';
+                repeatButton.style.fontWeight = 'normal';
+                repeatButton.style.color = 'white';
+                newButton.style.fontWeight = 'normal';
+                newButton.style.color = 'white';
+                rerepeatButton.style.fontWeight = 'normal';
+                rerepeatButton.style.color = 'white';
 
                 // Render updated table
                 renderTable(updatedData);
@@ -413,6 +443,10 @@ document.addEventListener('DOMContentLoaded', () => {
                     item.chk2 = pendingChanges[indexStr].chk2;
                     console.log(`Applied chk2=${item.chk2} to row index=${index}`);
                 }
+                if (pendingChanges[indexStr].chk3 !== undefined) {
+                    item.chk3 = pendingChanges[indexStr].chk3;
+                    console.log(`Applied chk3=${item.chk3} to row index=${index}`);
+                }
             }
         });
         console.log('Data after applying changes (first 3 rows):', JSON.stringify(data.slice(0, 3)));
@@ -449,8 +483,17 @@ document.addEventListener('DOMContentLoaded', () => {
             isReRepeatFilterActive = false;
             repeatButton.style.backgroundColor = '#2196F3';
             newButton.style.backgroundColor = '#2196F3';
-            allButton.style.backgroundColor = '#1976D2';
+            allButton.style.backgroundColor = '#2196F3';
             rerepeatButton.style.backgroundColor = '#2196F3';
+            // Set All button as active
+            allButton.style.fontWeight = 'bold';
+            allButton.style.color = 'red';
+            repeatButton.style.fontWeight = 'normal';
+            repeatButton.style.color = 'white';
+            newButton.style.fontWeight = 'normal';
+            newButton.style.color = 'white';
+            rerepeatButton.style.fontWeight = 'normal';
+            rerepeatButton.style.color = 'white';
 
             // Update stored data and re-render table without filter
             tableBody.dataset.json = JSON.stringify(updatedData);
@@ -496,17 +539,8 @@ document.addEventListener('DOMContentLoaded', () => {
             const verify = localStorage.getItem(jsonFile);
             if (verify === jsonString) {
                 console.log('Verification: localStorage saved correctly');
-                // Reset filters to show all rows
-                isRepeatFilterActive = false;
-                isNewFilterActive = false;
-                isReRepeatFilterActive = false;
-                repeatButton.style.backgroundColor = '#2196F3';
-                newButton.style.backgroundColor = '#2196F3';
-                allButton.style.backgroundColor = '#1976D2';
-                rerepeatButton.style.backgroundColor = '#2196F3';
-                // Update stored data and re-render table without filter
+                // Update stored data
                 tableBody.dataset.json = jsonString;
-                renderTable(updatedData, null);
                 pendingChanges = {}; // Clear pending changes after successful save
                 setErrorMessage('JSON data saved to localStorage successfully. On Android, close Chrome fully to ensure changes persist.');
             } else {
@@ -562,6 +596,28 @@ document.addEventListener('DOMContentLoaded', () => {
         });
         menu.appendChild(minusButton);
 
+        // Checkbox3
+        const checkbox3Container = document.createElement('div');
+        checkbox3Container.style.display = 'flex';
+        checkbox3Container.style.alignItems = 'center';
+        const checkbox3Label = document.createElement('label');
+        checkbox3Label.textContent = 'Mark 3';
+        checkbox3Label.style.marginRight = '8px';
+        const checkbox3 = document.createElement('input');
+        checkbox3.type = 'checkbox';
+        checkbox3.className = 'checkbox3';
+        const data = JSON.parse(tableBody.dataset.json);
+        const item = data.find(item => item.index === index);
+        checkbox3.checked = item ? item.chk3 || false : false;
+        checkbox3.dataset.index = index;
+        checkbox3.setAttribute('aria-label', 'Mark row 3');
+        checkbox3.addEventListener('change', () => {
+            updateCheckboxState(index, checkbox3.checked, 'chk3');
+        });
+        checkbox3Container.appendChild(checkbox3Label);
+        checkbox3Container.appendChild(checkbox3);
+        menu.appendChild(checkbox3Container);
+
         document.body.appendChild(menu);
         openContextMenu = menu;
     }
@@ -573,7 +629,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const pos = data.findIndex(item => item.index === index) + 1;
         // Find max index to assign a new unique index
         const maxIndex = Math.max(...data.map(item => item.index), -1) + 1;
-        data.splice(pos, 0, { en: '', ru: '', chk: false, chk2: false, index: maxIndex });
+        data.splice(pos, 0, { en: '', ru: '', chk: false, chk2: false, chk3: false, index: maxIndex });
         tableBody.dataset.json = JSON.stringify(data);
         // Clear pending changes for consistency
         pendingChanges = {};
@@ -583,8 +639,17 @@ document.addEventListener('DOMContentLoaded', () => {
         isReRepeatFilterActive = false;
         repeatButton.style.backgroundColor = '#2196F3';
         newButton.style.backgroundColor = '#2196F3';
-        allButton.style.backgroundColor = '#1976D2';
+        allButton.style.backgroundColor = '#2196F3';
         rerepeatButton.style.backgroundColor = '#2196F3';
+        // Set All button as active
+        allButton.style.fontWeight = 'bold';
+        allButton.style.color = 'red';
+        repeatButton.style.fontWeight = 'normal';
+        repeatButton.style.color = 'white';
+        newButton.style.fontWeight = 'normal';
+        newButton.style.color = 'white';
+        rerepeatButton.style.fontWeight = 'normal';
+        rerepeatButton.style.color = 'white';
         renderTable(data, null);
     }
 
@@ -609,8 +674,17 @@ document.addEventListener('DOMContentLoaded', () => {
         isReRepeatFilterActive = false;
         repeatButton.style.backgroundColor = '#2196F3';
         newButton.style.backgroundColor = '#2196F3';
-        allButton.style.backgroundColor = '#1976D2';
+        allButton.style.backgroundColor = '#2196F3';
         rerepeatButton.style.backgroundColor = '#2196F3';
+        // Set All button as active
+        allButton.style.fontWeight = 'bold';
+        allButton.style.color = 'red';
+        repeatButton.style.fontWeight = 'normal';
+        repeatButton.style.color = 'white';
+        newButton.style.fontWeight = 'normal';
+        newButton.style.color = 'white';
+        rerepeatButton.style.fontWeight = 'normal';
+        rerepeatButton.style.color = 'white';
         renderTable(data, null);
     }
 
@@ -640,7 +714,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function filterRepeatRows() {
         saveToLocalStorage().then(() => {
             isRepeatFilterActive = !isRepeatFilterActive;
-            isNewFilterActive = false; // Disable other filter
+            isNewFilterActive = false;
             isReRepeatFilterActive = false;
             const data = JSON.parse(tableBody.dataset.json);
             renderTable(data, isRepeatFilterActive ? 'repeat' : null);
@@ -659,7 +733,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function filterNewRows() {
         saveToLocalStorage().then(() => {
             isNewFilterActive = !isNewFilterActive;
-            isRepeatFilterActive = false; // Disable other filter
+            isRepeatFilterActive = false;
             isReRepeatFilterActive = false;
             const data = JSON.parse(tableBody.dataset.json);
             renderTable(data, isNewFilterActive ? 'new' : null);
