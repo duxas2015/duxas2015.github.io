@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const repeatButton = document.getElementById('repeatButton');
     const newButton = document.getElementById('newButton');
     const allButton = document.getElementById('allButton');
+    const rerepeatButton = document.getElementById('rerepeatButton');
     const tableBody = document.getElementById('tableBody');
     const errorMessage = document.getElementById('errorMessage');
     const dataTable = document.getElementById('dataTable');
@@ -20,6 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Track filter state
     let isRepeatFilterActive = false;
     let isNewFilterActive = false;
+    let isReRepeatFilterActive = false;
     // Track pending checkbox changes
     let pendingChanges = {};
 
@@ -75,10 +77,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (!validateJson(data)) {
                     throw new Error('Invalid JSON format in localStorage: expected array of objects with "en" and "ru" properties');
                 }
-                // Ensure chk and chk2 properties exist
-                data.forEach(item => {
+                // Ensure chk, chk2, and index properties exist
+                data.forEach((item, idx) => {
                     item.chk = item.chk !== undefined ? item.chk : false;
                     item.chk2 = item.chk2 !== undefined ? item.chk2 : false;
+                    item.index = item.index !== undefined ? item.index : idx; // Assign index
                 });
                 renderTable(data);
                 setErrorMessage('Loaded data from localStorage');
@@ -102,10 +105,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 throw new Error('Invalid JSON format: expected array of objects with "en" and "ru" properties');
             }
 
-            // Ensure chk and chk2 properties exist
-            data.forEach(item => {
+            // Ensure chk, chk2, and index properties exist
+            data.forEach((item, idx) => {
                 item.chk = item.chk !== undefined ? item.chk : false;
                 item.chk2 = item.chk2 !== undefined ? item.chk2 : false;
+                item.index = item.index !== undefined ? item.index : idx; // Assign index
             });
 
             renderTable(data);
@@ -132,20 +136,29 @@ document.addEventListener('DOMContentLoaded', () => {
                     throw new Error('Invalid JSON format: expected array of objects with "en" and "ru" properties');
                 }
 
-                // Ensure chk and chk2 properties exist
-                newData.forEach(item => {
+                // Ensure chk, chk2, and index properties exist
+                const currentData = tableBody.dataset.json ? JSON.parse(tableBody.dataset.json) : [];
+                const maxIndex = currentData.length > 0 ? Math.max(...currentData.map(item => item.index)) : -1;
+                newData.forEach((item, idx) => {
                     item.chk = item.chk !== undefined ? item.chk : false;
                     item.chk2 = item.chk2 !== undefined ? item.chk2 : false;
+                    item.index = item.index !== undefined ? item.index : maxIndex + idx + 1; // Assign unique index
                 });
-
-                // Get current table data
-                const currentData = tableBody.dataset.json ? JSON.parse(tableBody.dataset.json) : [];
 
                 // Append new data
                 const updatedData = [...currentData, ...newData];
 
                 // Clear pending changes
                 pendingChanges = {};
+
+                // Reset filters
+                isRepeatFilterActive = false;
+                isNewFilterActive = false;
+                isReRepeatFilterActive = false;
+                repeatButton.style.backgroundColor = '#2196F3';
+                newButton.style.backgroundColor = '#2196F3';
+                allButton.style.backgroundColor = '#1976D2';
+                rerepeatButton.style.backgroundColor = '#2196F3';
 
                 // Render updated table
                 renderTable(updatedData);
@@ -170,11 +183,13 @@ document.addEventListener('DOMContentLoaded', () => {
             filteredData = data.filter(item => !item.chk && item.chk2);
         } else if (filter === 'new') {
             filteredData = data.filter(item => !item.chk && !item.chk2);
+        } else if (filter === 'rerepeat') {
+            filteredData = data.filter(item => item.chk && item.chk2);
         }
 
         console.log(`Rendering table: total rows=${data.length}, filtered=${filteredData.length}, filter=${filter}`);
 
-        filteredData.forEach((item, index) => {
+        filteredData.forEach((item) => {
             const row = document.createElement('tr');
 
             // English cell
@@ -192,7 +207,7 @@ document.addEventListener('DOMContentLoaded', () => {
             enContent.appendChild(enText);
             enContent.appendChild(enEditIcon);
             enCell.appendChild(enContent);
-            enCell.dataset.index = index;
+            enCell.dataset.index = item.index; // Use item.index
             enCell.dataset.field = 'en';
             row.appendChild(enCell);
 
@@ -211,7 +226,7 @@ document.addEventListener('DOMContentLoaded', () => {
             ruContent.appendChild(ruText);
             ruContent.appendChild(ruEditIcon);
             ruCell.appendChild(ruContent);
-            ruCell.dataset.index = index;
+            ruCell.dataset.index = item.index; // Use item.index
             ruCell.dataset.field = 'ru';
             row.appendChild(ruCell);
 
@@ -236,7 +251,7 @@ document.addEventListener('DOMContentLoaded', () => {
             checkbox.type = 'checkbox';
             checkbox.className = 'checkbox';
             checkbox.checked = item.chk || false;
-            checkbox.dataset.index = index;
+            checkbox.dataset.index = item.index; // Use item.index
             checkbox.setAttribute('aria-label', 'Mark row');
             cellContainer.appendChild(checkbox);
 
@@ -245,7 +260,7 @@ document.addEventListener('DOMContentLoaded', () => {
             checkbox2.type = 'checkbox';
             checkbox2.className = 'checkbox2';
             checkbox2.checked = item.chk2 || false;
-            checkbox2.dataset.index = index;
+            checkbox2.dataset.index = item.index; // Use item.index
             checkbox2.setAttribute('aria-label', 'Mark row 2');
             cellContainer.appendChild(checkbox2);
 
@@ -256,16 +271,12 @@ document.addEventListener('DOMContentLoaded', () => {
             gearIcon.src = 'gear.png'; // Ensure gear.png exists
             gearIcon.alt = 'Settings';
             gearButton.appendChild(gearIcon);
-            gearButton.dataset.index = index;
+            gearButton.dataset.index = item.index; // Use item.index
             gearButton.setAttribute('aria-label', 'Row settings');
             cellContainer.appendChild(gearButton);
 
             speakCell.appendChild(cellContainer);
             row.appendChild(speakCell);
-
-            // Mark 2 cell (empty for alignment)
-            const mark2Cell = document.createElement('td');
-            row.appendChild(mark2Cell);
 
             tableBody.appendChild(row);
         });
@@ -329,34 +340,37 @@ document.addEventListener('DOMContentLoaded', () => {
         const data = JSON.parse(tableBody.dataset.json);
         const index = parseInt(cell.dataset.index, 10);
         const field = cell.dataset.field;
-        data[index][field] = value; // Store multi-line text
-        tableBody.dataset.json = JSON.stringify(data);
+        const item = data.find(item => item.index === index);
+        if (item) {
+            item[field] = value; // Store multi-line text
+            tableBody.dataset.json = JSON.stringify(data);
 
-        // Re-render cell with text and edit icon
-        const contentDiv = document.createElement('div');
-        contentDiv.className = 'cell-content';
-        const textSpan = document.createElement('span');
-        textSpan.textContent = value; // Newlines preserved
-        const editIcon = document.createElement('button');
-        editIcon.className = 'edit-icon';
-        const editImg = document.createElement('img');
-        editImg.src = 'pencil.png';
-        editImg.alt = 'Edit';
-        editIcon.appendChild(editImg);
-        contentDiv.appendChild(textSpan);
-        contentDiv.appendChild(editIcon);
-        cell.innerHTML = '';
-        cell.appendChild(contentDiv);
+            // Re-render cell with text and edit icon
+            const contentDiv = document.createElement('div');
+            contentDiv.className = 'cell-content';
+            const textSpan = document.createElement('span');
+            textSpan.textContent = value; // Newlines preserved
+            const editIcon = document.createElement('button');
+            editIcon.className = 'edit-icon';
+            const editImg = document.createElement('img');
+            editImg.src = 'pencil.png';
+            editImg.alt = 'Edit';
+            editIcon.appendChild(editImg);
+            contentDiv.appendChild(textSpan);
+            contentDiv.appendChild(editIcon);
+            cell.innerHTML = '';
+            cell.appendChild(contentDiv);
 
-        // Update speaker button text if English cell was edited
-        const row = cell.parentElement;
-        const speakButton = row.querySelector('.speaker-button');
-        if (field === 'en' && speakButton) {
-            speakButton.dataset.englishText = value;
+            // Update speaker button text if English cell was edited
+            const row = cell.parentElement;
+            const speakButton = row.querySelector('.speaker-button');
+            if (field === 'en' && speakButton) {
+                speakButton.dataset.englishText = value;
+            }
+
+            // Re-render table with current filter
+            renderTable(data, isRepeatFilterActive ? 'repeat' : isNewFilterActive ? 'new' : isReRepeatFilterActive ? 'rerepeat' : null);
         }
-
-        // Re-render table with current filter
-        renderTable(data, isRepeatFilterActive ? 'repeat' : isNewFilterActive ? 'new' : null);
     }
 
     // Function to speak text using Web Speech API
@@ -386,19 +400,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Function to apply pending checkbox changes
     function applyPendingChanges(data) {
-        console.log('Applying pending changes:', pendingChanges);
+        console.log('Applying pending changes:', JSON.stringify(pendingChanges));
         Object.keys(pendingChanges).forEach(indexStr => {
             const index = parseInt(indexStr, 10);
-            if (index < data.length) { // Ensure index is valid
+            const item = data.find(item => item.index === index);
+            if (item) {
                 if (pendingChanges[indexStr].chk !== undefined) {
-                    data[index].chk = pendingChanges[indexStr].chk;
+                    item.chk = pendingChanges[indexStr].chk;
+                    console.log(`Applied chk=${item.chk} to row index=${index}`);
                 }
                 if (pendingChanges[indexStr].chk2 !== undefined) {
-                    data[index].chk2 = pendingChanges[indexStr].chk2;
+                    item.chk2 = pendingChanges[indexStr].chk2;
+                    console.log(`Applied chk2=${item.chk2} to row index=${index}`);
                 }
             }
         });
-        console.log('Data after applying changes (first 3 rows):', data.slice(0, 3));
+        console.log('Data after applying changes (first 3 rows):', JSON.stringify(data.slice(0, 3)));
         return data;
     }
 
@@ -426,9 +443,19 @@ document.addEventListener('DOMContentLoaded', () => {
             document.body.removeChild(link);
             URL.revokeObjectURL(url);
 
-            // Update stored data and re-render table (but not localStorage here)
+            // Reset filters to show all rows
+            isRepeatFilterActive = false;
+            isNewFilterActive = false;
+            isReRepeatFilterActive = false;
+            repeatButton.style.backgroundColor = '#2196F3';
+            newButton.style.backgroundColor = '#2196F3';
+            allButton.style.backgroundColor = '#1976D2';
+            rerepeatButton.style.backgroundColor = '#2196F3';
+
+            // Update stored data and re-render table without filter
             tableBody.dataset.json = JSON.stringify(updatedData);
-            renderTable(updatedData, isRepeatFilterActive ? 'repeat' : isNewFilterActive ? 'new' : null);
+            renderTable(updatedData, null);
+            pendingChanges = {}; // Clear pending changes after successful save
 
             setErrorMessage('JSON file saved successfully');
         } catch (error) {
@@ -451,6 +478,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const quotaInfo = await checkStorageQuota();
             if (quotaInfo && quotaInfo.available < 1024 * 1024) { // Less than 1MB available
                 console.warn('Low storage available, may fail');
+                setErrorMessage('Warning: Low storage available, saving may fail');
             }
 
             const data = JSON.parse(tableBody.dataset.json);
@@ -468,18 +496,25 @@ document.addEventListener('DOMContentLoaded', () => {
             const verify = localStorage.getItem(jsonFile);
             if (verify === jsonString) {
                 console.log('Verification: localStorage saved correctly');
-                // Update stored data and re-render table
+                // Reset filters to show all rows
+                isRepeatFilterActive = false;
+                isNewFilterActive = false;
+                isReRepeatFilterActive = false;
+                repeatButton.style.backgroundColor = '#2196F3';
+                newButton.style.backgroundColor = '#2196F3';
+                allButton.style.backgroundColor = '#1976D2';
+                rerepeatButton.style.backgroundColor = '#2196F3';
+                // Update stored data and re-render table without filter
                 tableBody.dataset.json = jsonString;
-                renderTable(updatedData, isRepeatFilterActive ? 'repeat' : isNewFilterActive ? 'new' : null);
-                // Clear pending only on success
-                pendingChanges = {};
-                setErrorMessage('JSON data saved to localStorage successfully');
+                renderTable(updatedData, null);
+                pendingChanges = {}; // Clear pending changes after successful save
+                setErrorMessage('JSON data saved to localStorage successfully. On Android, close Chrome fully to ensure changes persist.');
             } else {
                 throw new Error('Verification failed: saved data mismatch');
             }
         } catch (error) {
             console.error('Error saving to localStorage:', error);
-            setErrorMessage(`Error saving to localStorage: ${error.message}. Close Chrome fully and retry.`);
+            setErrorMessage(`Error saving to localStorage: ${error.message}. On Android, close Chrome fully and retry.`);
         }
     }
 
@@ -534,11 +569,23 @@ document.addEventListener('DOMContentLoaded', () => {
     // Function to add new row
     function addRow(index) {
         const data = JSON.parse(tableBody.dataset.json);
-        data.splice(index + 1, 0, { en: '', ru: '', chk: false, chk2: false });
+        // Find the position after the item with the given index
+        const pos = data.findIndex(item => item.index === index) + 1;
+        // Find max index to assign a new unique index
+        const maxIndex = Math.max(...data.map(item => item.index), -1) + 1;
+        data.splice(pos, 0, { en: '', ru: '', chk: false, chk2: false, index: maxIndex });
         tableBody.dataset.json = JSON.stringify(data);
         // Clear pending changes for consistency
         pendingChanges = {};
-        renderTable(data, isRepeatFilterActive ? 'repeat' : isNewFilterActive ? 'new' : null);
+        // Reset filters
+        isRepeatFilterActive = false;
+        isNewFilterActive = false;
+        isReRepeatFilterActive = false;
+        repeatButton.style.backgroundColor = '#2196F3';
+        newButton.style.backgroundColor = '#2196F3';
+        allButton.style.backgroundColor = '#1976D2';
+        rerepeatButton.style.backgroundColor = '#2196F3';
+        renderTable(data, null);
     }
 
     // Function to delete row
@@ -548,20 +595,23 @@ document.addEventListener('DOMContentLoaded', () => {
             setErrorMessage('Cannot delete the last row');
             return;
         }
-        data.splice(index, 1);
-        // Clear pending changes for deleted row and adjust indices
-        const newPendingChanges = {};
-        Object.keys(pendingChanges).forEach(key => {
-            const oldIndex = parseInt(key, 10);
-            if (oldIndex < index) {
-                newPendingChanges[oldIndex] = pendingChanges[oldIndex];
-            } else if (oldIndex > index) {
-                newPendingChanges[oldIndex - 1] = pendingChanges[oldIndex];
-            }
-        });
-        pendingChanges = newPendingChanges;
+        // Remove item with matching index
+        const pos = data.findIndex(item => item.index === index);
+        if (pos !== -1) {
+            data.splice(pos, 1);
+        }
+        // Clear pending changes for deleted row
+        delete pendingChanges[index];
         tableBody.dataset.json = JSON.stringify(data);
-        renderTable(data, isRepeatFilterActive ? 'repeat' : isNewFilterActive ? 'new' : null);
+        // Reset filters
+        isRepeatFilterActive = false;
+        isNewFilterActive = false;
+        isReRepeatFilterActive = false;
+        repeatButton.style.backgroundColor = '#2196F3';
+        newButton.style.backgroundColor = '#2196F3';
+        allButton.style.backgroundColor = '#1976D2';
+        rerepeatButton.style.backgroundColor = '#2196F3';
+        renderTable(data, null);
     }
 
     // Function to update checkbox state
@@ -570,7 +620,7 @@ document.addEventListener('DOMContentLoaded', () => {
             pendingChanges[index] = {};
         }
         pendingChanges[index][field] = checked;
-        console.log(`Pending change: row ${index}, ${field}=${checked}`); // Log for debugging
+        console.log(`Pending change: row index=${index}, ${field}=${checked}`);
     }
 
     // Function to adjust font size
@@ -588,35 +638,78 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Function to filter rows for Repeat (chk: false, chk2: true)
     function filterRepeatRows() {
-        isRepeatFilterActive = !isRepeatFilterActive;
-        isNewFilterActive = false; // Disable other filter
-        const data = JSON.parse(tableBody.dataset.json);
-        renderTable(data, isRepeatFilterActive ? 'repeat' : null);
-        repeatButton.style.backgroundColor = isRepeatFilterActive ? '#1976D2' : '#2196F3'; // Highlight active filter
-        newButton.style.backgroundColor = '#2196F3'; // Reset other button
-        allButton.style.backgroundColor = '#2196F3'; // Reset All button
+        saveToLocalStorage().then(() => {
+            isRepeatFilterActive = !isRepeatFilterActive;
+            isNewFilterActive = false; // Disable other filter
+            isReRepeatFilterActive = false;
+            const data = JSON.parse(tableBody.dataset.json);
+            renderTable(data, isRepeatFilterActive ? 'repeat' : null);
+            repeatButton.style.fontWeight = isRepeatFilterActive ? 'bold' : 'normal';
+            repeatButton.style.color = isRepeatFilterActive ? 'red' : 'white';
+            newButton.style.fontWeight = 'normal';
+            newButton.style.color = 'white';
+            allButton.style.fontWeight = 'normal';
+            allButton.style.color = 'white';
+            rerepeatButton.style.fontWeight = 'normal';
+            rerepeatButton.style.color = 'white';
+        });
     }
 
     // Function to filter rows for New (chk: false, chk2: false)
     function filterNewRows() {
-        isNewFilterActive = !isNewFilterActive;
-        isRepeatFilterActive = false; // Disable other filter
-        const data = JSON.parse(tableBody.dataset.json);
-        renderTable(data, isNewFilterActive ? 'new' : null);
-        newButton.style.backgroundColor = isNewFilterActive ? '#1976D2' : '#2196F3'; // Highlight active filter
-        repeatButton.style.backgroundColor = '#2196F3'; // Reset other button
-        allButton.style.backgroundColor = '#2196F3'; // Reset All button
+        saveToLocalStorage().then(() => {
+            isNewFilterActive = !isNewFilterActive;
+            isRepeatFilterActive = false; // Disable other filter
+            isReRepeatFilterActive = false;
+            const data = JSON.parse(tableBody.dataset.json);
+            renderTable(data, isNewFilterActive ? 'new' : null);
+            newButton.style.fontWeight = isNewFilterActive ? 'bold' : 'normal';
+            newButton.style.color = isNewFilterActive ? 'red' : 'white';
+            repeatButton.style.fontWeight = 'normal';
+            repeatButton.style.color = 'white';
+            allButton.style.fontWeight = 'normal';
+            allButton.style.color = 'white';
+            rerepeatButton.style.fontWeight = 'normal';
+            rerepeatButton.style.color = 'white';
+        });
     }
 
     // Function to show all rows
     function showAllRows() {
-        isRepeatFilterActive = false;
-        isNewFilterActive = false;
-        const data = JSON.parse(tableBody.dataset.json);
-        renderTable(data);
-        repeatButton.style.backgroundColor = '#2196F3'; // Reset Repeat button
-        newButton.style.backgroundColor = '#2196F3'; // Reset New button
-        allButton.style.backgroundColor = '#1976D2'; // Highlight All button
+        saveToLocalStorage().then(() => {
+            isRepeatFilterActive = false;
+            isNewFilterActive = false;
+            isReRepeatFilterActive = false;
+            const data = JSON.parse(tableBody.dataset.json);
+            renderTable(data);
+            allButton.style.fontWeight = 'bold';
+            allButton.style.color = 'red';
+            repeatButton.style.fontWeight = 'normal';
+            repeatButton.style.color = 'white';
+            newButton.style.fontWeight = 'normal';
+            newButton.style.color = 'white';
+            rerepeatButton.style.fontWeight = 'normal';
+            rerepeatButton.style.color = 'white';
+        });
+    }
+
+    // Function to filter rows for ReRepeat (chk: true, chk2: true)
+    function filterReRepeatRows() {
+        saveToLocalStorage().then(() => {
+            isReRepeatFilterActive = !isReRepeatFilterActive;
+            isRepeatFilterActive = false;
+            isNewFilterActive = false;
+            const data = JSON.parse(tableBody.dataset.json);
+            renderTable(data, isReRepeatFilterActive ? 'rerepeat' : null);
+            rerepeatButton.style.fontWeight = isReRepeatFilterActive ? 'bold' : 'normal';
+            rerepeatButton.style.color = isReRepeatFilterActive ? 'red' : 'white';
+            repeatButton.style.fontWeight = 'normal';
+            repeatButton.style.color = 'white';
+            newButton.style.fontWeight = 'normal';
+            newButton.style.color = 'white';
+            allButton.style.fontWeight = 'normal';
+            allButton.style.color = 'white';
+        });
     }
 
     // Event listener for file input
@@ -704,6 +797,7 @@ document.addEventListener('DOMContentLoaded', () => {
     repeatButton.addEventListener('click', filterRepeatRows);
     newButton.addEventListener('click', filterNewRows);
     allButton.addEventListener('click', showAllRows);
+    rerepeatButton.addEventListener('click', filterReRepeatRows);
 
     // Load JSON data on page load
     loadJsonData();

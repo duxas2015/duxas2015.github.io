@@ -70,11 +70,11 @@ body {
     background-color: #45a049;
 }
 
-.save-controls #repeatButton, .save-controls #newButton, .save-controls #allButton {
+.save-controls #repeatButton, .save-controls #newButton, .save-controls #allButton, .save-controls #rerepeatButton {
     background-color: #2196F3;
 }
 
-.save-controls #repeatButton:hover, .save-controls #newButton:hover, .save-controls #allButton:hover {
+.save-controls #repeatButton:hover, .save-controls #newButton:hover, .save-controls #allButton:hover, .save-controls #rerepeatButton:hover {
     background-color: #1976D2;
 }
 
