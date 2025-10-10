@@ -2,6063 +2,4331 @@
   {
     "en": "Chapter 1",
     "ru": "Глава 1",
-    "index": 0,
-    "repeatCheckbox": true,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "thing in the morning",
     "ru": "утренние дела",
-    "index": 1,
-    "repeatCheckbox": true,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "Dan's alarm clock rings and he wakes up",
     "ru": "Будильник Дэна звонит, и он просыпается",
-    "index": 2,
-    "repeatCheckbox": true,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "He gets out of bed",
     "ru": "Он встает с кровати",
-    "index": 3,
-    "repeatCheckbox": true,
-    "learnedCheckbox": true
+    "chk": true
   },
   {
     "en": "he goes into the bathroom after using the toilet and flushing it",
     "ru": "Он идет в ванную после использования туалета и смыва",
-    "index": 4,
-    "repeatCheckbox": true,
-    "learnedCheckbox": true
+    "chk": true
   },
   {
     "en": "he washes his hands",
     "ru": "Он моет руки",
-    "index": 5,
-    "repeatCheckbox": true,
-    "learnedCheckbox": true
+    "chk": true
   },
   {
     "en": "he brushes his teeth, shaves, and takes a shower",
     "ru": "Он чистит зубы, бреется и принимает душ",
-    "index": 6,
-    "repeatCheckbox": true,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "he dries himself (off) with a towel",
     "ru": "Он вытирается полотенцем",
-    "index": 7,
-    "repeatCheckbox": true,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "then he brushes his hair",
     "ru": "Затем он расчесывает волосы",
-    "index": 8,
-    "repeatCheckbox": true,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "he gets dressed",
     "ru": "Он одевается",
-    "index": 9,
-    "repeatCheckbox": true,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "he makes breakfast and eats it",
     "ru": "Он готовит завтрак и ест его",
-    "index": 10,
-    "repeatCheckbox": true,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "then he leaves the apartment",
     "ru": "Затем он выходит из квартиры",
-    "index": 11,
-    "repeatCheckbox": true,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "",
     "ru": "",
-    "index": 12,
-    "repeatCheckbox": true,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "Chapter 2",
     "ru": "Глава 2",
-    "index": 13,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "Brushing your teeth and flossing",
     "ru": "Чистка зубов и использование нити",
-    "index": 14,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "Jenny runs some water over her toothbrush",
     "ru": "Дженни поливает зубную щетку водой",
-    "index": 15,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "she squeezes toothpaste onto her toothbrush",
     "ru": "Она выдавливает зубную пасту на щетку",
-    "index": 16,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "she moves her toothbrush up and down, and back and forth ",
     "ru": "Она двигает щетку вверх-вниз и вперед-назад",
-    "index": 17,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "to rinse her mouth, she takes some water, swishes it back and forth in her mouth, and spits it into the sink ",
     "ru": "Чтобы прополоскать рот, она набирает воды, полощет и сплевывает в раковину",
-    "index": 18,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "she rinses off her toothbrush",
     "ru": "Она споласкивает зубную щетку",
-    "index": 19,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "then she puts it back in the toothbrush rack",
     "ru": "Затем она ставит ее обратно в подставку",
-    "index": 20,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "she flosses her teeth by pulling out a long piece of floss, slipping it between her teeth, and moving it back and forth and up and down",
     "ru": "Она чистит зубы нитью, вытягивая длинный кусок, продевая его между зубами и двигая вперед-назад и вверх-вниз",
-    "index": 21,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "",
     "ru": "",
-    "index": 22,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "Chapter 3",
     "ru": "Глава 3",
-    "index": 23,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "taking a shower",
     "ru": "принятие душа",
-    "index": 24,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "Dan pulls the shower curtain shut",
     "ru": "Дэн задергивает занавеску для душа",
-    "index": 25,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "by turning the knob he turns the water on",
     "ru": "Повернув кран, он включает воду",
-    "index": 26,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "he washes his hair with shampoo and the rest of his body with soap",
     "ru": "Он моет волосы шампунем, а тело - мылом",
-    "index": 27,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "then he rinses ( himself ) off with water",
     "ru": "Затем он смывает пену водой",
-    "index": 28,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "after turning the water off he steps out of the shower",
     "ru": "Выключив воду, он выходит из душа",
-    "index": 29,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "he takes a towel from the towel rack",
     "ru": "Он берет полотенце с вешалки",
-    "index": 30,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "then he dries himself off",
     "ru": "Затем он вытирается",
-    "index": 31,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "he wraps a towel around himself and he dries his hair",
     "ru": "Он заворачивается в полотенце и вытирает волосы",
-    "index": 32,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "he puts some deodorant [dɪ'əud(ə)r(ə)nt] under his arms",
     "ru": "Он наносит дезодорант подмышки",
-    "index": 33,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "",
     "ru": "",
-    "index": 34,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "Chapter 4",
     "ru": "Глава 4",
-    "index": 35,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "getting dressed ( a man )",
     "ru": "одевание (мужчина)",
-    "index": 36,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "Tom puts on some underwear, a t-shirt, some socks, some pants, and a shirt",
     "ru": "Том надевает нижнее белье, футболку, носки, брюки и рубашку",
-    "index": 37,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "putting on a pair of pants",
     "ru": "надевание брюк",
-    "index": 38,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "Tom steps into his pants",
     "ru": "Том надевает брюки",
-    "index": 39,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "then he pulls them up",
     "ru": "Затем он подтягивает их",
-    "index": 40,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "he fastens the waistband and zips up the fly",
     "ru": "Он застегивает пояс и молнию",
-    "index": 41,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "he slips a belt through the belt loops and buckles it",
     "ru": "Он продевает ремень в петли и застегивает его",
-    "index": 42,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "putting on a shirt ",
     "ru": "надевание рубашки",
-    "index": 43,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "Tom slips an arm into each sleeve",
     "ru": "Том просовывает руки в рукава",
-    "index": 44,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "he buttons the shirt and the cuffs",
     "ru": "Он застегивает пуговицы на рубашке и манжетах",
-    "index": 45,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "he straightens his collar",
     "ru": "Он поправляет воротник",
-    "index": 46,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "he tucks his shirt into his pants",
     "ru": "Он заправляет рубашку в брюки",
-    "index": 47,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "",
     "ru": "",
-    "index": 48,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "Chapter 5",
     "ru": "Глава 5",
-    "index": 49,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "getting dressed (a woman)",
     "ru": "одеваться (женщина)",
-    "index": 50,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "Pam puts on some panties, a bra, a dress or a blouse or a shirt, and a skirt or some pants and some socks or some nylons or some pantyhose",
     "ru": "Пэм надевает трусики, бюстгальтер, платье, или блузку, или рубашку, и юбку, или штаны, и носки, или нейлон, или колготки.",
-    "index": 51,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "dressing for hot weather",
     "ru": "одежда для жаркой погоды",
-    "index": 52,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "if it's hot Pam wears light clothes: a short-sleeved cotton shirt and a pair of cotton shorts",
     "ru": "если жарко, Пэм носит легкую одежду: хлопчатобумажную рубашку с короткими рукавами и хлопчатобумажные шорты.",
-    "index": 53,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "she goes barefoot indoors and wears sandals outdoors ",
     "ru": "она ходит босиком в помещении и носит сандалии на улице",
-    "index": 54,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "dressing this way keeps her cool ",
     "ru": "одеваясь таким образом, она сохраняет хладнокровие",
-    "index": 55,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "dressing for cold weather",
     "ru": "одежда на холодную погоду",
-    "index": 56,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "if it's cold Pam wears heavy clothes a long-sleeved shirt, a wool sweater, long pants and thick wool socks before going outdoors",
     "ru": "если холодно, перед выходом на улицу Пэм носит тяжелую одежду: рубашку с длинными рукавами, шерстяной свитер, длинные брюки и толстые шерстяные носки.",
-    "index": 57,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "she puts on a heavy coat and some gloves or mittens",
     "ru": "она надевает тяжелое пальто и перчатки или варежки",
-    "index": 58,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "she wraps a scarf around her neck and puts on a hat and some boots",
     "ru": "она повязывает шарф на шею и надевает шляпу и сапоги",
-    "index": 59,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "dressing this way keeps her warm",
     "ru": "одеваясь таким образом она держит себя в тепле",
-    "index": 60,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "",
     "ru": "",
-    "index": 61,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "Chapter 6",
     "ru": "Глава 6",
-    "index": 62,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "making a bed",
     "ru": "застилать постель",
-    "index": 63,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "I put a bottom sheet on the mattress",
     "ru": "Я положил простыню на матрас",
-    "index": 64,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "if I have a fitted sheet I slip it over the mattress",
     "ru": "если у меня есть простыня на резинке, я надеваю ее на матрас",
-    "index": 65,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "if I have a flat sheet I tuck it under the mattress",
     "ru": "если у меня есть (обычная) простыня, я засовываю ее под матрас",
-    "index": 66,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "then I tuck the top sheet under the mattress at the foot of the bed",
     "ru": "затем я заправляю верхнюю простыню под матрац в изножье кровати",
-    "index": 67,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "I pull the top sheet tight and spread a blanket over the bed and smooth it out",
     "ru": "Я плотно натягиваю верхнюю простыню, расстилаю одеяло на кровати и разглаживаю его.",
-    "index": 68,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "I spread a bedspread over the bed",
     "ru": "Я расстилаю покрывало на кровати",
-    "index": 69,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "I fluff up the pillows and lay them at the head of the bed",
     "ru": "Взбиваю подушки и кладу их у изголовья",
-    "index": 70,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "I pull the bedspread over the pillows and smooth it out",
     "ru": "Я натягиваю покрывало на подушки и разглаживаю",
-    "index": 71,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "",
     "ru": "",
-    "index": 72,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "Chapter 7",
     "ru": "Глава 7",
-    "index": 73,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "making breakfast 1",
     "ru": "готовлю завтрак 1",
-    "index": 74,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "making coffee making tea",
     "ru": "приготовление кофе приготовление чая",
-    "index": 75,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "making coffee with an electric coffee maker",
     "ru": "приготовление кофе с помощью электрической кофеварки",
-    "index": 76,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "Pam scoops some ground coffee into the filter",
     "ru": "Пэм насыпает в фильтр немного молотого кофе.",
-    "index": 77,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "then she pours some water into the coffee maker",
     "ru": "затем она наливает немного воды в кофеварку",
-    "index": 78,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "she turns the coffee maker on by pressing the switch",
     "ru": "она включает кофеварку, нажав на выключатель",
-    "index": 79,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "The water heats up and drips through the ground coffee and into the coffee pot",
     "ru": "Вода нагревается и капает через молотый кофе в кофейник.",
-    "index": 80,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "making tea",
     "ru": "приготовление чая",
-    "index": 81,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "Dan boils water in a tea kettle",
     "ru": "Дэн кипятит воду в чайнике",
-    "index": 82,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "He pours the hot water into a tea pot and adds some tea leaves ",
     "ru": "Он наливает горячую воду в чайник и добавляет немного чайных листьев.",
-    "index": 83,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "As the tea leaves soaked in the water the water becomes tea",
     "ru": "Когда чайные листья замачиваются в воде, вода становится чаем.",
-    "index": 84,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "Dan strains the tea",
     "ru": "Дэн процеживает чай",
-    "index": 85,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "Then he adds sugar and milk and stirs his tea",
     "ru": "Затем он добавляет сахар и молоко и размешивает чай.",
-    "index": 86,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "",
     "ru": "",
-    "index": 87,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "Chapter 8",
     "ru": "Глава 8",
-    "index": 88,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "making breakfast",
     "ru": "приготовление завтрака",
-    "index": 89,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "preparing cold cereal, making toast",
     "ru": "приготовление холодных хлопьев, приготовление тостов",
-    "index": 90,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "Pam pours some cereal from the box into her bowl",
     "ru": "Пэм насыпает хлопья из коробки в свою миску.",
-    "index": 91,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "She pours in some milk and sprinkles some sugar on her cereal",
     "ru": "Она наливает немного молока и посыпает хлопья сахаром.",
-    "index": 92,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "Then she peels a banana, slices it, and puts the slices on her cereal",
     "ru": "Затем она чистит банан, нарезает его ломтиками и кладет ломтики на хлопья.",
-    "index": 93,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "making toast",
     "ru": "сделать тост",
-    "index": 94,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "Dan puts two slices of bread into the toaster ",
     "ru": "Дэн кладет в тостер два ломтика хлеба.",
-    "index": 95,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "By pressing the starter he lowers the bread into the toaster.",
     "ru": "Нажав на стартер, он опускает хлеб в тостер.",
-    "index": 96,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "Hot wires inside the toaster toast the bread ",
     "ru": "Горячие провода внутри тостера поджаривают хлеб",
-    "index": 97,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "The toast pops up when it's done ",
     "ru": "Тост выскакивает, когда готов.",
-    "index": 98,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "Dan spreads some butter and jam on his toast ",
     "ru": "Дэн намазывает тост маслом и джемом",
-    "index": 99,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "",
     "ru": "",
-    "index": 100,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "Chapter 9",
     "ru": "Глава 9",
-    "index": 101,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "making breakfast 3 : frying an egg ",
     "ru": "приготовление завтрака 3 : пожарить яйцо",
-    "index": 102,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "There are four burners on Dan’s stove",
     "ru": "На плите Дэна четыре горелки.",
-    "index": 103,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "He turns on the gas and one of the burners lights",
     "ru": "Он включает газ, и одна из конфорок загорается.",
-    "index": 104,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "He puts a frying pan on the burner and melts some butter in the pan",
     "ru": "Он ставит сковороду на огонь и растапливает в ней немного масла.",
-    "index": 105,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "He cracks an egg into the pan and throws the shell into the garbage",
     "ru": "Он разбивает яйцо на сковороду и выбрасывает скорлупу в мусор",
-    "index": 106,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "The egg fries",
     "ru": "Яйцо жарится",
-    "index": 107,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "Dan flips it over once with a spatula and then takes it out of the pan",
     "ru": "Дэн переворачивает его один раз лопаткой, а затем достает со сковороды.",
-    "index": 108,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "He puts the egg on a plate",
     "ru": "Он кладет яйцо на тарелку",
-    "index": 109,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "",
     "ru": "",
-    "index": 110,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "Сhapter 10",
     "ru": "Глава 10",
-    "index": 111,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "eating breakfast",
     "ru": "Едим Завтрак",
-    "index": 112,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "Pam and Dan sit down at the table",
     "ru": "Пэм и Дэн садятся за стол",
-    "index": 113,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "Pam drinks some coffee from her mug and eat some cereal.",
     "ru": "Пэм пьет кофе из кружки и ест хлопья.",
-    "index": 114,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "Dan drinks some tea and has an egg with bacon and toast",
     "ru": "Дэн пьет чай и ест яйцо с беконом и тостами.",
-    "index": 115,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "Sometimes he dips his toast into the yolk of his egg as he eats. ",
     "ru": "Иногда он макает свой тост в желток яйца, когда ест.",
-    "index": 116,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "They read the paper and talk a little bit.",
     "ru": "Они читают газету и немного разговаривают.",
-    "index": 117,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "It says here that taxes are going up",
     "ru": "Здесь написано, что налоги растут",
-    "index": 118,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "As usual after eating they wipe their lips with their napkins and leave the table",
     "ru": "Как обычно после еды они вытирают губы салфетками и уходят из-за стола",
-    "index": 119,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "",
     "ru": "",
-    "index": 120,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "Chapter 11 leaving the house",
     "ru": "Глава 11 уходим из дома",
-    "index": 121,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "Tom puts on a jacket and zips it up",
     "ru": "Том надевает куртку и застегивает молнию.",
-    "index": 122,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "He puts on his shoes and ties them",
     "ru": "Он надевает туфли и завязывает их",
-    "index": 123,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "He picks up his keys and wallet and puts them in his pockets",
     "ru": "Он берет ключи и бумажник и кладет их в карманы.",
-    "index": 124,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "He picks up his backpack",
     "ru": "Он поднимает свой рюкзак",
-    "index": 125,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "Then he says “goodbye” to Jenny",
     "ru": "Затем он прощается с Дженни.",
-    "index": 126,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "“See you later, Jen”",
     "ru": "«Увидимся позже, Джен»",
-    "index": 127,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "“Bye, Tom”",
     "ru": "«Пока, Том»",
-    "index": 128,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "He opens the door, steps outside and shuts the door",
     "ru": "Он открывает дверь, выходит наружу и закрывает дверь",
-    "index": 129,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "",
     "ru": "",
-    "index": 130,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "Chapter 12",
     "ru": "Глава 12",
-    "index": 131,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "taking a bus",
     "ru": "на автобусе",
-    "index": 132,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "Jenny checked her bus schedule",
     "ru": "Дженни проверила расписание автобусов.",
-    "index": 133,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "Her bus (a) number 77 was due at 8:20 ( number 77 bus )",
     "ru": "Ее автобус (а) номер 77 должен был прибыть в 8:20 (автобус номер 77)",
-    "index": 134,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "She walked to the bus stop and sat on a bench to wait for the bus",
     "ru": "Она подошла к автобусной остановке и села на скамейку, чтобы дождаться автобуса.",
-    "index": 135,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "The bus arrived on time at 8:20 , the driver opened the door and Jenny got on the bus",
     "ru": "Автобус прибыл вовремя в 8:20, водитель открыл дверь, и Дженни села в автобус.",
-    "index": 136,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "She showed the driver her bus pass, other passengers paid their fare",
     "ru": "Она показала водителю свой проездной билет, другие пассажиры оплатили проезд",
-    "index": 137,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "All the seats were full so Jenny stood in the aisle",
     "ru": "Все места были заняты, поэтому Дженни стояла в проходе.",
-    "index": 138,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "She held onto a strap on the overhead bars",
     "ru": "Она держалась за ремешок на перекладине",
-    "index": 139,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "Soon someone got off the bus so a seat was empty.",
     "ru": "Вскоре кто-то вышел из автобуса, так что место было пустым.",
-    "index": 140,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "Jenny sat down and read a book while she rode the bus",
     "ru": "Дженни села и читала книгу, пока ехала в автобусе.",
-    "index": 141,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "Near her stop she pressed a button to ring the stop signal",
     "ru": "Возле своей остановки она нажала кнопку, чтобы прозвенел стоп-сигнал.",
-    "index": 142,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "She walked to the exit and got off at her stop",
     "ru": "Она подошла к выходу и вышла на своей остановке.",
-    "index": 143,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "",
     "ru": "",
-    "index": 144,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "Chapter 13 driving a car",
     "ru": "Глава 13водить машину",
-    "index": 145,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "starting out",
     "ru": "начиная",
-    "index": 146,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "Kate sat in the driver's seat and her friends sat in the passenger seats",
     "ru": "Кейт села на водительское сиденье, а ее друзья — на пассажирские.",
-    "index": 147,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "Kate adjusted her seat and the rear-view mirror",
     "ru": "Кейт поправила сиденье и зеркало заднего вида.",
-    "index": 148,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "She buckled / fastened her seatbelt",
     "ru": "Она пристегнула ремень безопасности",
-    "index": 149,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "She put the key into the ignition, turned the key and started the car",
     "ru": "Она вставила ключ в зажигание, повернула ключ и завела машину",
-    "index": 150,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "She looked over her shoulder and backed out of the driveway",
     "ru": "Она оглянулась через плечо и выехала(задом) с  подъездной дорожки",
-    "index": 151,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "",
     "ru": "",
-    "index": 152,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "Chapter 14",
     "ru": "Глава 14",
-    "index": 153,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "driving a car",
     "ru": "водить машину",
-    "index": 154,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "operating a car, shifting gears",
     "ru": "управлять автомобилем, переключать передачи",
-    "index": 155,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "Kate stepped on the clutch pedal, shifted into gear, and took her foot off the clutch",
     "ru": "Кейт нажала на педаль сцепления, включила передачу и убрала ногу со сцепления.",
-    "index": 156,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "speeding up, slowing down",
     "ru": "ускорение, замедление",
-    "index": 157,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "to go faster kate pressed the accelerator as the car speeded up, she shifted into a higher gear",
     "ru": "чтобы ехать быстрее кейт нажала на акселератор когда машина набрала скорость она переключилась на более высокую передачу",
-    "index": 158,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "to slow down Kate let up on the accelerator and shifted into a lower gear.",
     "ru": "Чтобы замедлить движение, Кейт отпустила педаль газа и переключилась на более низкую передачу.",
-    "index": 159,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "The car slowed down.",
     "ru": "Машина замедлилась.",
-    "index": 160,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "Kate stepped on the brake ",
     "ru": "Катя нажала на тормоз",
-    "index": 161,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "Kate put her turn signal on and turned the steering wheel ",
     "ru": "Кейт включила поворотник и повернула руль.",
-    "index": 162,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "When it got dark she turned on the lights ",
     "ru": "Когда стемнело, она включила свет",
-    "index": 163,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "When it rained she turned on the windshield wipers",
     "ru": "Когда шел дождь, она включила дворники",
-    "index": 164,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "",
     "ru": "",
-    "index": 165,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "Chapter 15 ",
     "ru": "Глава 15",
-    "index": 166,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "driving along ",
     "ru": "вождение",
-    "index": 167,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "At an intersection Kate stopped for a red light",
     "ru": "На перекресткеКейт остановилась на красный свет",
-    "index": 168,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "When the light turned green, she went ahead",
     "ru": "Когда загорелся зеленый свет, она пошла вперед",
-    "index": 169,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "Once she went over the speed limit ",
     "ru": "Однажды она превысила скорость",
-    "index": 170,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "A police officer stopped her and gave her a ticket",
     "ru": "Полицейский остановил ее и выписал ей штраф.",
-    "index": 171,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "You were speeding, ma'am",
     "ru": "Вы превышали скорость, мэм",
-    "index": 172,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "Really officer, sorry",
     "ru": "Действительно офицер, извините",
-    "index": 173,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "At the end of her trip she parked and turned the car off",
     "ru": "В конце поездки она припарковалась и выключила машину.",
-    "index": 174,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "Kate and her friends got out of the car and Kate locked it ",
     "ru": "Кейт и ее друзья вышли из машины, и Кейт заперла ее.",
-    "index": 175,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "some things drivers do",
     "ru": "некоторые вещи, которые делают водители",
-    "index": 176,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "changing lanes ",
     "ru": "перестроение",
-    "index": 177,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "turning left ",
     "ru": "поворот налево",
-    "index": 178,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "turning right ",
     "ru": "поворот направо",
-    "index": 179,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "going straight ",
     "ru": "прямо",
-    "index": 180,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "getting on (entering) a freeway",
     "ru": "выезжать (выезжать) на автостраду",
-    "index": 181,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "getting off (exiting) a freeway",
     "ru": "съезд (выезд) с автострады",
-    "index": 182,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "yielding right-of-way ",
     "ru": "уступая дорогу",
-    "index": 183,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "passing someone",
     "ru": "мимо кого-то",
-    "index": 184,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "pulling over to the side of the road",
     "ru": "съезд на обочину дороги",
-    "index": 185,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "Stopping for gas",
     "ru": "Остановка для газа",
-    "index": 186,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "Kate pulled into a gas station and pulled up to a pump",
     "ru": "Кейт заехала на заправку и подъехала к насосу",
-    "index": 187,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "she told the attendant what kind of gas she wanted and how much",
     "ru": "она сказала дежурному, какой газ ей нужен и сколько",
-    "index": 188,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "“yes, ma'am”",
     "ru": "“Да, мэм”",
-    "index": 189,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "“Unleaded. fill it up please”",
     "ru": "«Неэтилированный. Полный бак, пожалуйста”",
-    "index": 190,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "He pumped the gas for her and checked the oil ",
     "ru": "Он закачал для нее газ и проверил масло",
-    "index": 191,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "“oil’s okay, ma'am”",
     "ru": "«с маслом все в порядке, мэм»",
-    "index": 192,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "then she paid him",
     "ru": "потом она заплатила ему",
-    "index": 193,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "“that'll be $15”",
     "ru": "«это будет 15 долларов»",
-    "index": 194,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "“here you go”",
     "ru": "“Ну вот”",
-    "index": 195,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "",
     "ru": "",
-    "index": 196,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "Chapter 16",
     "ru": "Глава 16",
-    "index": 197,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "taking a train ",
     "ru": "сесть на поезд",
-    "index": 198,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "Tom bought a ticket from the ticket machine, other passengers bought tickets at the ticket window",
     "ru": "Том купил билет в автомате, другие пассажиры купили билеты в кассе",
-    "index": 199,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "Tom inserted his ticket into the slot in the turnstile, the gate opened and Tom walked through",
     "ru": "Том вставил свой билет в прорезь турникета, ворота открылись, и Том прошел внутрь.",
-    "index": 200,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "He followed the signs to his gate",
     "ru": "Он следовал указателям к своим воротам",
-    "index": 201,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "He waited on the platform next to the track",
     "ru": "Он ждал на платформе рядом с трассой",
-    "index": 202,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "After his train arrived he got on",
     "ru": "После того, как его поезд прибыл, он сел в",
-    "index": 203,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "The train was crowded so he had to stand ",
     "ru": "Поезд был переполнен, поэтому ему пришлось стоять",
-    "index": 204,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "His station was announced and he got off the train",
     "ru": "Его станция была объявлена, и он вышел из поезда",
-    "index": 205,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "",
     "ru": "",
-    "index": 206,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "Chapter 17",
     "ru": "Глава 17",
-    "index": 207,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "taking a taxi",
     "ru": "взять такси",
-    "index": 208,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "Pam hailed a taxi",
     "ru": "Пэм поймала такси",
-    "index": 209,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "she got into the backseat and told the driver where she wanted to go",
     "ru": "она села на заднее сиденье и сказала водителю, куда она хочет ехать",
-    "index": 210,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "“I need to go to Riverside Square”",
     "ru": "«Мне нужно на Риверсайд-сквер»",
-    "index": 211,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "“okay”",
     "ru": "“Ладно”",
-    "index": 212,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "he started the meter",
     "ru": "он запустил счетчик",
-    "index": 213,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "She checked the meter a few times",
     "ru": "Она проверила счетчик несколько раз",
-    "index": 214,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "“hmm 450 ",
     "ru": "«хм 450",
-    "index": 215,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "That's about right“",
     "ru": "Это примерно так“",
-    "index": 216,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "during the ride",
     "ru": "во время поездки",
-    "index": 217,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "She gave the driver directions: ",
     "ru": "Она дала указания водителю:",
-    "index": 218,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "“turn left at the next traffic light all right”",
     "ru": "«Повернуть налево на следующем светофоре можно»",
-    "index": 219,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "She told him where to stop ",
     "ru": "Она сказала ему, где остановиться",
-    "index": 220,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "“pull over by that red car”",
     "ru": "«остановись у этой красной машины»",
-    "index": 221,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "“yes ma'am”",
     "ru": "“Да, мэм”",
-    "index": 222,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "She paid the fare and gave him a tip",
     "ru": "Она заплатила за проезд и дала ему чаевые",
-    "index": 223,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "“Here's 620 plus a little extra for you”",
     "ru": "«Вот вам 620 плюс немного больше»",
-    "index": 224,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "“thank you”",
     "ru": "“Спасибо”",
-    "index": 225,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "",
     "ru": "",
-    "index": 226,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "Chapter 18",
     "ru": "Глава 18",
-    "index": 227,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "walking somewhere ",
     "ru": "ходить куда-то",
-    "index": 228,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "Dan walked on the sidewalk",
     "ru": "Дэн шел по тротуару",
-    "index": 229,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "Sometimes he stepped over dirt or puddles",
     "ru": "Иногда он переступал через грязь или лужи",
-    "index": 230,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "Nnce he tripped on a crack in the sidewalk ",
     "ru": "Потом он споткнулся о трещину в тротуаре",
-    "index": 231,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "At a corner he stopped at the curb and waited for traffic to pass",
     "ru": "На углу он остановился у обочины и подождал, пока проедет транспорт.",
-    "index": 232,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "Then he crossed the street by walking in the crosswalk",
     "ru": "Затем он перешел улицу, идя по пешеходному переходу",
-    "index": 233,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "Once he took a shortcut across a parking lot",
     "ru": "Однажды он срезал путь через парковку",
-    "index": 234,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "When he could he ran because he was late",
     "ru": "Когда он мог, он бежал, потому что он опоздал",
-    "index": 235,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "He crossed a busy street by using a pedestrian overpass",
     "ru": "Он пересек оживленную улицу по пешеходной эстакаде.",
-    "index": 236,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "",
     "ru": "",
-    "index": 237,
-    "repeatCheckbox": false,
-    "learnedCheckbox": true
+    "chk": false
   },
   {
     "en": "Chapter 21",
     "ru": "Глава 21",
-    "index": 238,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "making dinner ",
     "ru": "готовить ужин",
-    "index": 239,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "making a salad",
     "ru": "приготовление салата",
-    "index": 240,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "Paul rinsed some lettuce by running water over it and drained it in a colander",
     "ru": "Пол промыл немного салата под струей воды и откинул на дуршлаг.",
-    "index": 241,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "He also rinsed some tomatoes and cucumbers and sliced them with a knife on a cutting board",
     "ru": "Он также промыл несколько помидоров и огурцов и нарезал их ножом на разделочной доске.",
-    "index": 242,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "He mixed the lettuce and the cucumber in a salad bowl and laid the tomato slices on top",
     "ru": "Он смешал листья салата и огурец в салатнице, а сверху положил ломтики помидора.",
-    "index": 243,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "Then he sprinkled some grated cheese on the salad",
     "ru": "Затем он посыпал салат тертым сыром.",
-    "index": 244,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "He poured some dressing on his salad",
     "ru": "Он налил немного заправки на свой салат",
-    "index": 245,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "",
     "ru": "",
-    "index": 246,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "Chapter 19",
     "ru": "Глава 19",
-    "index": 247,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "riding a bicycle",
     "ru": "поездка на велосипеде",
-    "index": 248,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "I put on my helmet.",
     "ru": "Я надел шлем.",
-    "index": 249,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "I held the handlebars and swung my leg over the bike",
     "ru": "Я держал руль и перекинул ногу через велосипед",
-    "index": 250,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "I started pedaling and the bike moved to go up hill",
     "ru": "Я начал крутить педали, и велосипед двинулся в гору",
-    "index": 251,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "I shifted into a lower gear to slow down",
     "ru": "Я переключился на более низкую передачу, чтобы замедлить",
-    "index": 252,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "I squeezed the brakes finally",
     "ru": "наконец-то я нажал на тормоза",
-    "index": 253,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "I got off my bike and locked it up in a bike rack ",
     "ru": "Я слез с велосипеда и запер его в велосипедной стойке.",
-    "index": 254,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "",
     "ru": "",
-    "index": 255,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "Chapter 20",
     "ru": "Глава 20",
-    "index": 256,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "returning home ",
     "ru": "возвращаясь домой",
-    "index": 257,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "Dan got back to his building",
     "ru": "Дэн вернулся в свое здание",
-    "index": 258,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "He checked his mailbox and took out his mail",
     "ru": "Он проверил свой почтовый ящик и достал почту",
-    "index": 259,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "Then he took an elevator up to his floor",
     "ru": "Затем он поднялся на лифте на свой этаж",
-    "index": 260,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "He walked down the hall to his apartment",
     "ru": "Он прошел по коридору в свою квартиру",
-    "index": 261,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "He opened his door and went inside",
     "ru": "Он открыл дверь и вошел внутрь",
-    "index": 262,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "“Hi Pam I'm back”",
     "ru": "«Привет, Пэм, я вернулся»",
-    "index": 263,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "“Hi Dan”",
     "ru": "«Привет Дэн»",
-    "index": 264,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "",
     "ru": "",
-    "index": 265,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "taking an elevator",
     "ru": "в лифте",
-    "index": 266,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "pressing the UP button, ",
     "ru": "нажав кнопку ВВЕРХ,",
-    "index": 267,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "waiting for the elevator, ",
     "ru": "ожидание лифта,",
-    "index": 268,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "getting on the elevator, ",
     "ru": "вход в лифт,",
-    "index": 269,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "choosing a floor, ",
     "ru": "выбор этажа,",
-    "index": 270,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "getting off the elevator ",
     "ru": "выход из лифта",
-    "index": 271,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "I got back to my house",
     "ru": "я вернулся в свой дом",
-    "index": 272,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "I walked up the steps to my front door",
     "ru": "Я поднялся по ступенькам к входной двери",
-    "index": 273,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "I unlocked it with my house key and then opened the door by turning the doorknob",
     "ru": "Я открыл его своим ключом от дома, а затем открыл дверь, повернув дверную ручку.",
-    "index": 274,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "I set my bag down",
     "ru": "я поставил свою сумку",
-    "index": 275,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "I hung my coat up in the front closet and took off my shoes",
     "ru": "Я повесил пальто в шкафу и снял обувь.",
-    "index": 276,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "I picked up my mail",
     "ru": "я забрал почту",
-    "index": 277,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "Then I went into the living room and checked for messages on the answering machine ",
     "ru": "Затем я пошел в гостиную и проверил сообщения на автоответчике.",
-    "index": 278,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "“you have three messages”",
     "ru": "«У вас есть три сообщения»",
-    "index": 279,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "Then I changed clothes",
     "ru": "Затем я переоделся",
-    "index": 280,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "I took off my work clothes and changed into some casual clothes",
     "ru": "Я снял рабочую одежду и переоделся в повседневную одежду",
-    "index": 281,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "",
     "ru": "",
-    "index": 282,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "Chapter 22",
     "ru": "Глава 22",
-    "index": 283,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "making dinner - preparing",
     "ru": "приготовление ужина - приготовление",
-    "index": 284,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "Kate peeled some carrots and sliced them",
     "ru": "Кейт очистила морковь и нарезала ее ломтиками.",
-    "index": 285,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "She also chopped up some broccoli",
     "ru": "Она также нарезала немного брокколи.",
-    "index": 286,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "She threw the stalk away and rinsed the broccoli",
     "ru": "Она выбросила стебель и промыла брокколи.",
-    "index": 287,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "She put some water in a saucepan and put a steamer basket inside",
     "ru": "Она налила немного воды в кастрюлю и поставила внутрь корзину для пароварки.",
-    "index": 288,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "Then she put the vegetables in the basket",
     "ru": "Затем она положила овощи в корзину",
-    "index": 289,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "She put a lid on the saucepan and lit the burner under it ",
     "ru": "Она накрыла кастрюлю крышкой и зажгла под ней горелку.",
-    "index": 290,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "The water boiled and steamed the vegetables",
     "ru": "Вода закипела и пропарила овощи",
-    "index": 291,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "",
     "ru": "",
-    "index": 292,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "Chapter 23",
     "ru": "Глава 23",
-    "index": 293,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "making spaghetti",
     "ru": "приготовление спагетти",
-    "index": 294,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "Kate diced an onion and fried it with some ground beef in a frying pan",
     "ru": "Кейт нарезала лук и обжарила его с говяжьим фаршем на сковороде.",
-    "index": 295,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "As the beef and onion mixture fried she stirred it ",
     "ru": "Когда смесь говядины и лука поджарилась, она помешала ее.",
-    "index": 296,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "When the meat was brown she turned off the burner",
     "ru": "Когда мясо было коричневым, она выключила горелку",
-    "index": 297,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "She poured the fat off into a can ",
     "ru": "Она слила жир в банку",
-    "index": 298,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "She heated two cans of tomato sauce in a saucepan",
     "ru": "Она нагрела две банки томатного соуса в кастрюле.",
-    "index": 299,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "She added the mixture of beef and onions and stirred it into the sauce with some spices",
     "ru": "Она добавила смесь говядины и лука и размешала в соусе со специями.",
-    "index": 300,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "When it started to boil she turned down the heat and let the sauce simmer in another pan",
     "ru": "Когда он закипел, она убавила огонь и дала соусу закипеть в другой кастрюле.",
-    "index": 301,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "She boiled some water",
     "ru": "Она вскипятила воды",
-    "index": 302,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "She put some spaghetti into the boiling water and boiled it until it was tender ",
     "ru": "Она положила в кипящую воду несколько спагетти и варила их, пока они не стали мягкими.",
-    "index": 303,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "In a colander, she drained the spaghetti ",
     "ru": "В дуршлаге она слила спагетти",
-    "index": 304,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "After putting the spaghetti on a plate ",
     "ru": "После выкладывания спагетти на тарелку",
-    "index": 305,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "She ladled some sauce over it",
     "ru": "Она налила на него немного соуса",
-    "index": 306,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "",
     "ru": "",
-    "index": 307,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "Chapter 24",
     "ru": "Глава 24",
-    "index": 308,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "making dinner",
     "ru": "готовить ужин",
-    "index": 309,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "for cooking rice Paul measured out one cup of rice and poured it into a pot to rinse the rice",
     "ru": "для приготовления риса Пол отмерил одну чашку риса и высыпал ее в кастрюлю, чтобы промыть рис",
-    "index": 310,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "he put some water in the pot",
     "ru": "он налил немного воды в кастрюлю",
-    "index": 311,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "he poured off the water to get rid of the dirt and husks",
     "ru": "он слил воду, чтобы избавиться от грязи и шелухи",
-    "index": 312,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "then he measured out two cups of clean water and poured it into the pot",
     "ru": "затем отмерил две чашки чистой воды и налил в кастрюлю",
-    "index": 313,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "he put a lid on the pot and heated the water ",
     "ru": "он накрыл кастрюлю крышкой и нагрел воду",
-    "index": 314,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "When it started boiling he turned down the flame ",
     "ru": "Когда он начал кипеть, он выключил пламя",
-    "index": 315,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "After about 15 minutes he checked the rice",
     "ru": "Примерно через 15 минут он проверил рис.",
-    "index": 316,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "let's see if this is ready",
     "ru": "посмотрим, готово ли это",
-    "index": 317,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "he decided it was ready to eat",
     "ru": "он решил, что он готов к употреблению",
-    "index": 318,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "yep done",
     "ru": "да сделано",
-    "index": 319,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "",
     "ru": "",
-    "index": 320,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "chapter 25",
     "ru": "глава 25",
-    "index": 321,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "eating dinner",
     "ru": "обедает",
-    "index": 322,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "Paul and Kate set the table ",
     "ru": "Пол и Кейт накрывают на стол",
-    "index": 323,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "Everyone sat down at the table ",
     "ru": "Все сели за стол",
-    "index": 324,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "They put their napkins on their laps",
     "ru": "Они кладут свои салфетки на колени",
-    "index": 325,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "Paul helped himself to some salad and past the serving dish",
     "ru": "Пол налил себе немного салата и прошел мимо сервировочного блюда.",
-    "index": 326,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "“Pass the salad please”",
     "ru": "“Передайте салат, пожалуйста”",
-    "index": 327,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "then they helped themselves to the food as they ate they talked ",
     "ru": "потом они набрасывались на еду пока ели они разговаривали",
-    "index": 328,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "so where did you go today ",
     "ru": "так куда ты ходил сегодня",
-    "index": 329,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "nowhere special",
     "ru": "ничего особенного",
-    "index": 330,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "Paul had a second helping of spaghetti",
     "ru": "У Пола была вторая порция спагетти.",
-    "index": 331,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "I'll have a bit more of this ",
     "ru": "у меня будет еще немного этого",
-    "index": 332,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "After the main course they had some dessert",
     "ru": "После основного блюда у них был десерт.",
-    "index": 333,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "mmm ice cream ",
     "ru": "мороженое ммм",
-    "index": 334,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "looks good",
     "ru": "выглядит хорошо",
-    "index": 335,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "",
     "ru": "",
-    "index": 336,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "chapter 26",
     "ru": "глава 26",
-    "index": 337,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "clearing the table",
     "ru": "уборка со стола",
-    "index": 338,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "after everyone was done Paul and Kate offered to clear the table",
     "ru": "после того, как все закончили, Пол и Кейт предложили убрать со стола",
-    "index": 339,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "Paul and I will clear up ",
     "ru": "Пол и я разберемся",
-    "index": 340,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "yeah the rest of you just sit and relax ",
     "ru": "да остальные просто сядьте и расслабьтесь",
-    "index": 341,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "they stacked up the dirty dishes",
     "ru": "они сложили грязную посуду",
-    "index": 342,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "and carried them to the kitchen ",
     "ru": "и понес их на кухню",
-    "index": 343,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "They took the serving dishes off the table",
     "ru": "Они убрали сервировочную посуду со стола",
-    "index": 344,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "and put the leftovers into containers which they put into the refrigerator",
     "ru": "а остатки сложить в контейнеры, которые поставили в холодильник",
-    "index": 345,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "they scraped the scraps from the plates into the garbage",
     "ru": "они соскребали объедки с тарелок в мусор",
-    "index": 346,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "then they wipe the table off and threw the scraps and crumbs from the table into the garbage",
     "ru": "потом вытирают стол, а объедки и крошки со стола выбрасывают в мусор",
-    "index": 347,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "",
     "ru": "",
-    "index": 348,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "chapter 27",
     "ru": "глава 27",
-    "index": 349,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "doing dishes",
     "ru": "мыть посуду",
-    "index": 350,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "Paul put the plug into the drain in the sink",
     "ru": "Пол вставил заглушку в слив в раковине",
-    "index": 351,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "then he filled the sink with water",
     "ru": "затем он наполнил раковину водой",
-    "index": 352,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "he put some dish soap into the water",
     "ru": "он положил немного средства для мытья посуды в воду",
-    "index": 353,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "he washed the dirty dishes",
     "ru": "он помыл грязную посуду",
-    "index": 354,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "he scrubbed some very dirty dishes with a scouring pad",
     "ru": "он оттер/отскреб очень грязную посуду абразивной салфеткой/губкой",
-    "index": 355,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "then he rinsed the dishes",
     "ru": "потом сполоснул посуду",
-    "index": 356,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "he put the wet dishes in the dish rack where the water dripped off them",
     "ru": "он поставил мокрую посуду на подставку для посуды, где с нее капала вода",
-    "index": 357,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "then he pulled the plug from the sink and the dirty water went down the drain",
     "ru": "потом он вытащил пробку из раковины и грязная вода ушла в канализацию",
-    "index": 358,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "he dried the dishes with a towel and then put the dishes away",
     "ru": "он вытер посуду полотенцем, а затем убрал посуду",
-    "index": 359,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "",
     "ru": "",
-    "index": 360,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "chapter 28",
     "ru": "глава 28",
-    "index": 361,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "relaxing at home 1",
     "ru": "отдых дома 1",
-    "index": 362,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "playing a CD",
     "ru": "воспроизведение компакт-диска",
-    "index": 363,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "I chose a CD from the shelf ",
     "ru": "Я выбрал компакт-диск с полки",
-    "index": 364,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "Holding the disc at the edge I took it out of the case",
     "ru": "Держа диск за край, я вынул его из футляра.",
-    "index": 365,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "then I loaded the disc into the tray",
     "ru": "затем я загрузил диск в лоток",
-    "index": 366,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "I picked up the remote and punched in the number of the track",
     "ru": "Я взял пульт и набрал номер трека",
-    "index": 367,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "I wanted to listen to",
     "ru": "я хотел послушать",
-    "index": 368,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "I listened to the music",
     "ru": "я слушал музыку",
-    "index": 369,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "finally I ejected the CD",
     "ru": "наконец я выбросил компакт-диск",
-    "index": 370,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "",
     "ru": "",
-    "index": 371,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "chapter 29",
     "ru": "глава 29",
-    "index": 372,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "relaxing at home -",
     "ru": "отдыхаете дома -",
-    "index": 373,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "using a personal cassette player",
     "ru": "с помощью личного кассетного плеера",
-    "index": 374,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "I put a cassette into the player",
     "ru": "Я вставил кассету в плеер",
-    "index": 375,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "I plugged the earphones into the jack and put them on",
     "ru": "Я подключил наушники к разъему и надел их",
-    "index": 376,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "then I started the tape",
     "ru": "затем я начал запись",
-    "index": 377,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "I adjusted the volume ",
     "ru": "я отрегулировал громкость",
-    "index": 378,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "Turned it up to make the music louder and turned it down to make the music softer ",
     "ru": "Увеличил громкость, чтобы сделать музыку громче, и уменьшил громкость, чтобы сделать музыку тише.",
-    "index": 379,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "When I was done listening I took the tape out and put it back in the case",
     "ru": "Когда я закончил слушать, я вынул кассету и положил ее обратно в футляр.",
-    "index": 380,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "",
     "ru": "",
-    "index": 381,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "chapter 30",
     "ru": "глава 30",
-    "index": 382,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "relaxing at home 3",
     "ru": "отдых дома 3",
-    "index": 383,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "reading a book",
     "ru": "читая книгу",
-    "index": 384,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "Pam opened the book to her bookmark",
     "ru": "Пэм открыла книгу на закладку",
-    "index": 385,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "she turned the pages as she read",
     "ru": "она перелистывала страницы, пока читала",
-    "index": 386,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "when she saw a word she didn't know “bogus” what does that mean",
     "ru": "когда она увидела слово, которое она не знала, “подделка”, что это значит",
-    "index": 387,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "she looked it up in a dictionary",
     "ru": "она посмотрела в словаре",
-    "index": 388,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "when she finished reading she closed the book",
     "ru": "когда она закончила читать, она закрыла книгу",
-    "index": 389,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "",
     "ru": "",
-    "index": 390,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "reading a magazine",
     "ru": "читая журнал",
-    "index": 391,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "Pam picked up the latest issue of Everyone magazine",
     "ru": "Пэм взяла последний номер журнала Everyone",
-    "index": 392,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "she looked at some of the ads",
     "ru": "она посмотрела на некоторые объявления",
-    "index": 393,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "then she flipped through the magazine until she found an interesting article",
     "ru": "потом полистала журнал пока не нашла интересную статью",
-    "index": 394,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "she read the article and looked at the pictures",
     "ru": "она прочитала статью и посмотрела на картинки",
-    "index": 395,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "",
     "ru": "",
-    "index": 396,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "chapter 31",
     "ru": "глава 31",
-    "index": 397,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "relaxing at home",
     "ru": "отдыхаете дома",
-    "index": 398,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "for watching television Tom picked up the remote for the TV and turned the TV on",
     "ru": "для просмотра телевизора Том взял пульт от телевизора и включил телевизор",
-    "index": 399,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "a game show was on ",
     "ru": "было игровое шоу",
-    "index": 400,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "“now for fifty three dollars what's the name of ”",
     "ru": "«теперь за пятьдесят три доллара как там имя»",
-    "index": 401,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "Tom didn't want to watch it ",
     "ru": "Том не хотел это смотреть",
-    "index": 402,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "“that's boring” ",
     "ru": "“это скучно”",
-    "index": 403,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "so he used the remote to change channels",
     "ru": "поэтому он использовал пульт для переключения каналов",
-    "index": 404,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "he turned up the volume so he could hear better",
     "ru": "он увеличил громкость, чтобы лучше слышать",
-    "index": 405,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "during a commercial he went to the kitchen for a snack",
     "ru": "во время рекламы он пошел на кухню перекусить",
-    "index": 406,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "he watched the news and when it ended",
     "ru": "он смотрел новости и когда они закончились",
-    "index": 407,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "that's the end of the news",
     "ru": "это конец новости",
-    "index": 408,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "he turned the TV off",
     "ru": "он выключил телевизор",
-    "index": 409,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "",
     "ru": "",
-    "index": 410,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "chapter 32",
     "ru": "глава 32",
-    "index": 411,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "relaxing at home",
     "ru": "отдыхаете дома",
-    "index": 412,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "for watching a video jenny rented a video from a video store",
     "ru": "для просмотра видео Дженни взяла видео напрокат в видеомагазине",
-    "index": 413,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "there you are ma'am",
     "ru": "вот вы, мэм",
-    "index": 414,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "at home",
     "ru": "дома",
-    "index": 415,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "she took the tape out of the case ",
     "ru": "она достала кассету из футляра",
-    "index": 416,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "with the remote she switched to the video setting and turned the VCR on",
     "ru": "с помощью пульта она переключилась на настройку видео и включила видеомагнитофон",
-    "index": 417,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "she loaded the video into it and started the tape",
     "ru": "она загрузила в него видео и запустила ленту",
-    "index": 418,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "she and Tom watched the video to see something again they rewound the tape",
     "ru": "она и Том посмотрели видео, чтобы снова что-то увидеть они перемотали пленку",
-    "index": 419,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "I'd like to see that again",
     "ru": "Я хотел бы увидеть это снова",
-    "index": 420,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "Jenny paused it when Tom left for a minute ",
     "ru": "Дженни поставила его на паузу, когда Том ушел на минуту",
-    "index": 421,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "at the end of the video she stopped the tape, rewound and ejected it",
     "ru": "в конце видео она остановила кассету, перемотала и выбросила ее",
-    "index": 422,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "later she returned it to the store",
     "ru": "позже она вернула его в магазин",
-    "index": 423,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "",
     "ru": "",
-    "index": 424,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "Chapter 33",
     "ru": "Глава 33",
-    "index": 425,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "babysitting",
     "ru": "присмотр за детьми",
-    "index": 426,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "Tom babysat his cousins while their parents were gone",
     "ru": "Том присматривал за своими двоюродными братьями, пока их родителей не было",
-    "index": 427,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "“took care of them”",
     "ru": "«заботился о них»",
-    "index": 428,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "Tom's aunt and uncle dropped the children off at Tom's house ",
     "ru": "Тетя и дядя Тома подвезли детей к дому Тома.",
-    "index": 429,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "“Bye kids be good”",
     "ru": "«Пока, дети, будьте хорошими»",
-    "index": 430,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "“they'll be fine aunt Rita”",
     "ru": "«Все будет хорошо, тетя Рита»",
-    "index": 431,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "Tom took them to a playground back at Toms house",
     "ru": "Том отвел их на детскую площадку в доме Тома.",
-    "index": 432,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "they played with blocks, drew pictures with crayons and put a puzzle together",
     "ru": "они играли с кубиками, рисовали мелками и собирали пазлы",
-    "index": 433,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "Tom changed the baby's diaper and put him to bed in the crib ",
     "ru": "Том поменял ребенку подгузник и уложил спать в кроватку",
-    "index": 434,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "the other children took a bath",
     "ru": "другие дети приняли ванну",
-    "index": 435,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "Tom read them a story and they watched a cartoon on TV",
     "ru": "Том прочитал им сказку, и они посмотрели мультфильм по телевизору.",
-    "index": 436,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "later their parents picked the children up ",
     "ru": "позже их родители забрали детей",
-    "index": 437,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "“come on kids time to go”",
     "ru": "«Давайте, дети, пора идти»",
-    "index": 438,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "thanks Tom",
     "ru": "спасибо Том",
-    "index": 439,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "sure anytime",
     "ru": "обязательно в любое время",
-    "index": 440,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "",
     "ru": "",
-    "index": 441,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "chapter 34",
     "ru": "глава 34",
-    "index": 442,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "going to bed",
     "ru": "иду спать",
-    "index": 443,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "when it got late Jenny yawned",
     "ru": "когда стало поздно Дженни зевнула",
-    "index": 444,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "she said good night to her parents",
     "ru": "она пожелала спокойной ночи своим родителям",
-    "index": 445,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "good night Jen ",
     "ru": "спокойной ночи Джен",
-    "index": 446,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "good night mom dad",
     "ru": "спокойной ночи мама папа",
-    "index": 447,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "she went upstairs to her room and changed into her nightgown",
     "ru": "она поднялась наверх в свою комнату и переоделась в ночную рубашку",
-    "index": 448,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "she hung some of her clothes up in the closet and put her dirty clothes in the laundry basket",
     "ru": "часть своей одежды она повесила в шкаф, а грязную положила в корзину для белья",
-    "index": 449,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "she brushed her teeth, washed her face and used the toilet",
     "ru": "она почистила зубы, умылась и сходила в туалет",
-    "index": 450,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "after turning on her bedside lamp she turned off the room light",
     "ru": "после включения прикроватной лампы она выключила свет в комнате",
-    "index": 451,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "she pulled back the covers and got into bed",
     "ru": "она откинула одеяло и легла в постель",
-    "index": 452,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "she set her alarm clock and put it on her nightstand",
     "ru": "она завела будильник и поставила его на тумбочку",
-    "index": 453,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "she read in bed for a while",
     "ru": "она некоторое время читала в постели",
-    "index": 454,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "finally she turned off the lamp, lay down and fell asleep",
     "ru": "наконец она выключила лампу, легла и заснула",
-    "index": 455,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "",
     "ru": "",
-    "index": 456,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "chapter 35",
     "ru": "глава 35",
-    "index": 457,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "doing laundry",
     "ru": "стирка",
-    "index": 458,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "later today",
     "ru": "позже сегодня",
-    "index": 459,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "I'm going to do my laundry",
     "ru": "я собираюсь стирать",
-    "index": 460,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "I'll carry the laundry basket to the laundry room",
     "ru": "Я понесу корзину для белья в прачечную",
-    "index": 461,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "I'll take the laundry out of the basket and then I'll sort it by separating dark colors from light",
     "ru": "Я достану белье из корзины и рассортирую его, отделив темные цвета от светлых.",
-    "index": 462,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "I'll check the pockets of the pants and shirts and take out anything I find in them",
     "ru": "Я проверю карманы брюк и рубашек и вытащу из них все, что найду.",
-    "index": 463,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "then I'll put a load of laundry into the washing machine",
     "ru": "тогда я закину белье в стиральную машину",
-    "index": 464,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "I'll adjust the settings on the machine",
     "ru": "Я отрегулирую настройки на машине",
-    "index": 465,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "then I'll put in some detergent and turn the machine on",
     "ru": "затем я добавлю немного моющего средства и включу машину",
-    "index": 466,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "the machine will wash rinse and spin the laundry",
     "ru": "машина будет стирать полоскать и отжимать белье",
-    "index": 467,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "I'll take the wet clothes out of the machine",
     "ru": "Я достану мокрую одежду из машины",
-    "index": 468,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "I'll hang some of the laundry out to dry",
     "ru": "Я повешу немного белья, чтобы высохнуть",
-    "index": 469,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "I'll put some other laundry into the dryer the dryer will dry it by heating and tumbling it",
     "ru": "Я положу другое белье в сушилку, сушилка высушит его, нагревая и переворачивая.",
-    "index": 470,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "then I'll take it out of the machine",
     "ru": "тогда я вытащу его из машины",
-    "index": 471,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "I'll fold some of the dry laundry and put it into drawers",
     "ru": "Я сложим немного сухого белья и положу в ящики.",
-    "index": 472,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "I'll iron other things and hang them up in the closet",
     "ru": "Я поглажу другие вещи и повешу их в шкаф",
-    "index": 473,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "",
     "ru": "",
-    "index": 474,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "chapter 36",
     "ru": "глава 36",
-    "index": 475,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "cleaning the house",
     "ru": "уборка дома",
-    "index": 476,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "in the living room Pam picks up things that are lying around",
     "ru": "в гостиной Пэм собирает валяющиеся вокруг вещи",
-    "index": 477,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "she dusts the furniture and the woodwork",
     "ru": "она вытирает пыль с мебели и столярных изделий",
-    "index": 478,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "then she vacuums the carpet in the kitchen",
     "ru": "потом она пылесосит ковер на кухне",
-    "index": 479,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "Dan cleans the refrigerator and throws out spoiled food ",
     "ru": "Дэн чистит холодильник и выбрасывает испорченные продукты",
-    "index": 480,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "yeah as cucumber is mushy",
     "ru": "да как огурец мягкий",
-    "index": 481,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "Pam wipes the countertops and sweeps the floor in the bathroom",
     "ru": "Пэм протирает столешницы и подметает пол в ванной.",
-    "index": 482,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "Dan scrubs the toilet with a toilet brush cleans the sink and scrubs the bathtub",
     "ru": "Дэн чистит унитаз туалетной щеткой, чистит раковину и моет ванну.",
-    "index": 483,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "he washes the mirror on the medicine cabinet",
     "ru": "он моет зеркало на аптечке",
-    "index": 484,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "then he sweeps the floor and mops it ",
     "ru": "потом подметает пол и моет шваброй",
-    "index": 485,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "Taking out the trash",
     "ru": "Выносить мусор",
-    "index": 486,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "They bundle old newspapers and put empty bottles cans and jars into bags",
     "ru": "Они связывают старые газеты и складывают в пакеты пустые бутылки, банки и банки.",
-    "index": 487,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "they set them out for recycling",
     "ru": "они отправляют их на переработку",
-    "index": 488,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "then they empty waste baskets and the kitchen garbage into a big garbage bag and take it out to the garbage can",
     "ru": "затем они высыпают мусорные корзины и кухонный мусор в большой мешок для мусора и выносят его в мусорное ведро.",
-    "index": 489,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "",
     "ru": "",
-    "index": 490,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "Сhapter 37",
     "ru": "Глава 37",
-    "index": 491,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "taking care of pets",
     "ru": "уход за домашними животными",
-    "index": 492,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "taking care of a cat",
     "ru": "уход за кошкой",
-    "index": 493,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "to feed his cat Tom opened a can of cat food and put it in the cat's dish",
     "ru": "чтобы покормить своего кота, Том открыл банку с кошачьим кормом и положил его в кошачью миску",
-    "index": 494,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "he put some fresh water in the water dish",
     "ru": "он налил немного свежей воды в миску с водой",
-    "index": 495,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "he also cleaned the litter box",
     "ru": "он также почистил лоток",
-    "index": 496,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "he petted the cat good “kitty“ and she purred and rubbed against his leg",
     "ru": "он хорошо погладил кошку “кошечка” а она мурлыкала и терлась о его ногу",
-    "index": 497,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "He played with the cat by moving a piece of string “come on kitty get the string” which the cat pounced on",
     "ru": "Он играл с кошкой, передвигая кусок веревки «давай, котенок, возьми веревку», на которую кошка набросилась.",
-    "index": 498,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "",
     "ru": "",
-    "index": 499,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "chapter 38",
     "ru": "глава 38",
-    "index": 500,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "taking care of pets",
     "ru": "уход за домашними животными",
-    "index": 501,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "to taking care of a dog I called my dog",
     "ru": "ухаживать за собакой, которую я назвал своей собакой",
-    "index": 502,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "“here Blackie”",
     "ru": "«Вот Блэки»",
-    "index": 503,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "“come on boy”",
     "ru": "“Давай, парень”",
-    "index": 504,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "after he came I petted him he wagged his tail and barked",
     "ru": "после того как он пришел я его погладила он завилял хвостом и залаял",
-    "index": 505,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "I put some dog food in his dish and filled his water dish",
     "ru": "Я положил немного собачьего корма в его тарелку и наполнил миску водой.",
-    "index": 506,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "Later I clipped a leash to his collar and took him out for a walk ",
     "ru": "Позже я пристегнула поводок к его ошейнику и вывела на прогулку.",
-    "index": 507,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "after his walk I threw a stick for him ",
     "ru": "после его прогулки я бросил ему палку",
-    "index": 508,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "“go get it” ",
     "ru": "“иди возьми это”",
-    "index": 509,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "and he fetched it",
     "ru": "и он принес это",
-    "index": 510,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "",
     "ru": "",
-    "index": 511,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "chapter 39",
     "ru": "глава 39",
-    "index": 512,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "taking care of a lawn",
     "ru": "уход за газоном",
-    "index": 513,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "Pam filled her lawn mower’s gas tank",
     "ru": "Пэм наполнила бензобак своей газонокосилки",
-    "index": 514,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "then started the mower by pulling the cord",
     "ru": "затем запустил косилку, потянув за шнур",
-    "index": 515,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "she mowed the lawn by pushing the mower back and forth",
     "ru": "она косила газон, толкая косилку вперед и назад",
-    "index": 516,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "where the mower couldn't reach she trimmed the grass by hand",
     "ru": "там, где косилка не могла достать, она косила траву вручную",
-    "index": 517,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "she raked up the grass clippings and put them on a compost pile",
     "ru": "она сгребла скошенную траву и сложила в компостную кучу",
-    "index": 518,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "she spread some grass seed on bare spots and then watered the lawn",
     "ru": "она разбросала немного семян травы на оголенных участках, а затем полила газон",
-    "index": 519,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "",
     "ru": "",
-    "index": 520,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "chapter 40",
     "ru": "глава 40",
-    "index": 521,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "gardening planting a garden",
     "ru": "садоводство посадка сада",
-    "index": 522,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "Tom will turn the soil with a spade",
     "ru": "Том перевернет землю лопатой",
-    "index": 523,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "he'll plant some seeds and cover them with a mound of soil",
     "ru": "он посадит несколько семян и покроет их насыпью земли",
-    "index": 524,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "he'll plant some seedlings and tie them to small stakes",
     "ru": "он посадит несколько саженцев и привяжет их к небольшим кольям",
-    "index": 525,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "then he'll water the garden ",
     "ru": "тогда он будет поливать огород",
-    "index": 526,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "taking care of a garden ",
     "ru": "уход за садом",
-    "index": 527,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "Tom will weed the garden",
     "ru": "Том будет пропалывать сад",
-    "index": 528,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "he'll prune extra leaves from some plants",
     "ru": "он обрежет лишние листья с некоторых растений",
-    "index": 529,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "he'll check for harmful insects and spray insecticide on some plants",
     "ru": "он проверит наличие вредных насекомых и распылит инсектицид на некоторые растения",
-    "index": 530,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "he'll put some fertilizer on the soil",
     "ru": "он положит некоторое удобрение на почву",
-    "index": 531,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "finally he'll pick some flowers for the house",
     "ru": "наконец он соберет цветы для дома",
-    "index": 532,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "",
     "ru": "",
-    "index": 533,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "Сhapter 41 cleaning a car inside",
     "ru": "Глава 41 чистка автомобиля внутри",
-    "index": 534,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "I washed the windows inside, ",
     "ru": "Я вымыл окна внутри,",
-    "index": 535,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "wipe off the dashboard and vacuumed the floor ",
     "ru": "протер приборную панель и пропылесосил пол",
-    "index": 536,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "I dip a sponge into soapy water and washed the car with it ",
     "ru": "Макаю губку в мыльную воду и мою ею машину",
-    "index": 537,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "to rinse the car I spray it with water",
     "ru": "чтобы ополоснуть машину, я брызгаю на нее водой",
-    "index": 538,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "I dry it with some rags",
     "ru": "Я высушиваю тряпками",
-    "index": 539,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "then I spread some wax on the car",
     "ru": "затем я намазал машину воском",
-    "index": 540,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "after it has dried I wiped the wax off and buffed the car with a soft cloth",
     "ru": "после высыхания я стер воск и отполировал машину мягкой тряпкой",
-    "index": 541,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "finally I washed the windows outside",
     "ru": "наконец-то я вымыл окна снаружи",
-    "index": 542,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "",
     "ru": "",
-    "index": 543,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "Chapter 42",
     "ru": "Глава 42",
-    "index": 544,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "taking a car to a garage for repairs",
     "ru": "отвезти машину в гараж на ремонт",
-    "index": 545,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "I called for an appointment to get my car fixed",
     "ru": "Я позвонил, чтобы записаться на ремонт моей машины",
-    "index": 546,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "my car is making a strange noise",
     "ru": "моя машина издает странный звук",
-    "index": 547,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "when can you look at it",
     "ru": "когда ты сможешь посмотреть на это",
-    "index": 548,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "I took my car into the garage and the mechanic diagnosed the problem",
     "ru": "Я отвез свою машину в гараж, и механик диагностировал проблему.",
-    "index": 549,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "yep sounds like a valve problem",
     "ru": "да похоже на проблемы с клапаном",
-    "index": 550,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "I asked him for an estimate of the cost",
     "ru": "Я попросил его оценить стоимость",
-    "index": 551,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "how much will it cost to fix",
     "ru": "сколько будет стоить исправить",
-    "index": 552,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "probably about 250",
     "ru": "наверное около 250",
-    "index": 553,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "he worked on the engine when I came back later to pick up the car and ",
     "ru": "он работал над двигателем, когда я вернулся позже, чтобы забрать машину и",
-    "index": 554,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "is it ready yet",
     "ru": "он уже готов",
-    "index": 555,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "it's ready",
     "ru": "готово",
-    "index": 556,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "he gave me the bill for the repair ",
     "ru": "он дал мне счет за ремонт",
-    "index": 557,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "“that'll be 294 for parts and labor” ",
     "ru": "«Это будет 294 за запчасти и работу»",
-    "index": 558,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "“two hundred ninety four dollars”",
     "ru": "«двести девяносто четыре доллара»",
-    "index": 559,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "",
     "ru": "",
-    "index": 560,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "Chapter 43",
     "ru": "Глава 43",
-    "index": 561,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "changing a flat tire",
     "ru": "замена спустившей шины",
-    "index": 562,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "my car had a flat tire so I had to change it",
     "ru": "у моей машины спустило колесо, поэтому мне пришлось его поменять",
-    "index": 563,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "I jacked the car up",
     "ru": "я поднял машину",
-    "index": 564,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "I took off the flat tire and took the spare tire out of the truck",
     "ru": "Я снял спущенное колесо и вытащил запаску из грузовика.",
-    "index": 565,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "I put the spare on the wheel tightened the lug nuts by hand lowered the car to the ground and tightened the nuts some more with a lug wrench",
     "ru": "Поставил запаску на колесо закрутил гайки от руки опустил машину на землю и еще немного затянул гайки гаечным ключом",
-    "index": 566,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "finally I put the hubcap on the wheel",
     "ru": "наконец-то я поставил колпак на колесо",
-    "index": 567,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "",
     "ru": "",
-    "index": 568,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "chapter 44",
     "ru": "глава 44",
-    "index": 569,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "dealing with a power failure",
     "ru": "работа с отключением питания",
-    "index": 570,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "during a thunderstorm our power went out",
     "ru": "во время грозы отключили электричество",
-    "index": 571,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "I turned on a flashlight and my sister lit some candles",
     "ru": "Я включил фонарик, а сестра зажгла свечи.",
-    "index": 572,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "we found the circuit breaker box and found the breakers that had tripped",
     "ru": "мы нашли коробку с автоматическим выключателем и нашли выключатели, которые сработали",
-    "index": 573,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "we reset the breakers and the power came back on ",
     "ru": "мы сбрасывали выключатели, и питание вернулось",
-    "index": 574,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "good it worked",
     "ru": "хорошо, это сработало",
-    "index": 575,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "",
     "ru": "",
-    "index": 576,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "chapter 45",
     "ru": "глава 45",
-    "index": 577,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "working with wood",
     "ru": "работа с деревом",
-    "index": 578,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "before you cut a board you measure it and mark the places to cut ",
     "ru": "перед тем, как резать доску, вы измеряете ее и отмечаете места для пропила",
-    "index": 579,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "then you cut it with a saw to trim a piece of wood",
     "ru": "затем вы разрезаете его пилой, чтобы обрезать кусок дерева",
-    "index": 580,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "you plane it to make the edges smooth ",
     "ru": "Вы строгаете его, чтобы края были гладкими",
-    "index": 581,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "you sand them to join two pieces of wood ",
     "ru": "вы шлифуете их, чтобы соединить два куска дерева",
-    "index": 582,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "you can glue them together, nail them together or join them with screws",
     "ru": "их можно склеить, прибить гвоздями или соединить шурупами",
-    "index": 583,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "",
     "ru": "",
-    "index": 584,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "chapter 46",
     "ru": "глава 46",
-    "index": 585,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "joining things with bolts",
     "ru": "соединение вещей болтами",
-    "index": 586,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "to bolt things together you put a bolt through some holes ",
     "ru": "чтобы скрепить вещи вместе, вы вставляете болт в некоторые отверстия",
-    "index": 587,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "put a washer onto the bolt and then tighten a nut by hand",
     "ru": "наденьте шайбу на болт и затяните гайку от руки",
-    "index": 588,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "then you hold the nut with a pair of pliers and tighten the bolt with a wrench ",
     "ru": "затем зажимаешь гайку пассатижами и затягиваешь болт гаечным ключом",
-    "index": 589,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "to join things with screws you drill a hole for the screw",
     "ru": "чтобы соединить вещи с помощью шурупов, вы просверлите отверстие для шурупа",
-    "index": 590,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "you put a screwdriver into the slot on the head of the screw",
     "ru": "вы вставляете отвертку в паз на головке винта",
-    "index": 591,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "you tighten the screw by turning the screwdriver clockwise ",
     "ru": "вы затягиваете винт, поворачивая отвертку по часовой стрелке",
-    "index": 592,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "to loosen the screw you turn it counterclockwise",
     "ru": "чтобы ослабить винт, вы поворачиваете его против часовой стрелки",
-    "index": 593,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "",
     "ru": "",
-    "index": 594,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "Chapter 47",
     "ru": "Глава 47",
-    "index": 595,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "shopping for groceries",
     "ru": "покупка продуктов",
-    "index": 596,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "Tom gets a shopping cart",
     "ru": "Том получает корзину",
-    "index": 597,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "some people use a basket instead of a cart",
     "ru": "некоторые люди используют корзину вместо тележки",
-    "index": 598,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "he checks his shopping list to see what he should buy",
     "ru": "он проверяет свой список покупок, чтобы увидеть, что он должен купить",
-    "index": 599,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "in the fresh produce section he checks the fruit and vegetables by feeling and smelling them",
     "ru": "в отделе свежих продуктов он проверяет фрукты и овощи, осязая и нюхая их",
-    "index": 600,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "he puts some fruit in a plastic bag and weighs the fruit on a scale ",
     "ru": "он кладет фрукты в полиэтиленовый пакет и взвешивает фрукты на весах",
-    "index": 601,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "he picks up some fresh meat at the meat counter",
     "ru": "он покупает свежее мясо на мясном прилавке",
-    "index": 602,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "I'll have four chicken breasts please",
     "ru": "Мне четыре куриных грудки, пожалуйста",
-    "index": 603,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "then at the deli he gets some cold cuts ",
     "ru": "затем в гастрономе он получает мясное ассорти",
-    "index": 604,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "“some beef pastrami please six slices”",
     "ru": "“пастрами из говядины, пожалуйста, шесть ломтиков”",
-    "index": 605,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "and cheese ",
     "ru": "и сыр",
-    "index": 606,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "“and a half pound of cheddar”",
     "ru": "«полтора фунта чеддера»",
-    "index": 607,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "he goes through the canned goods aisle",
     "ru": "он идет через проход консервов",
-    "index": 608,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "he checks the prices on two brands of canned peas and chooses the cheaper one",
     "ru": "он проверяет цены на две марки консервированного горошка и выбирает более дешевый",
-    "index": 609,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "as he shops he looks for specials",
     "ru": "когда он делает покупки, он ищет специальные предложения",
-    "index": 610,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "he picks up some toilet paper in the household goods section and gets some milk in the dairy section",
     "ru": "он берет туалетную бумагу в отделе товаров для дома и покупает молоко в молочном отделе",
-    "index": 611,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "he tries a free sample of some pizza ",
     "ru": "он пробует бесплатный образец пиццы",
-    "index": 612,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "“try some sir it's on special ”",
     "ru": "“попробуйте, сэр, это специально”",
-    "index": 613,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "and takes some frozen pizza from the frozen food case",
     "ru": "и берет замороженную пиццу из ящика с замороженными продуктами",
-    "index": 614,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "finally he goes to the checkout counter",
     "ru": "наконец он идет к кассе",
-    "index": 615,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "",
     "ru": "",
-    "index": 616,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "Chapter 48",
     "ru": "Глава 48",
-    "index": 617,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "paying for things",
     "ru": "оплата вещей",
-    "index": 618,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "the cashier rings up Tom's purchases by scanning barcodes and pressing keys on the cash register",
     "ru": "кассир прозванивает покупки Тома, сканируя штрих-коды и нажимая клавиши на кассе",
-    "index": 619,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "she tells him the total to pay ",
     "ru": "она говорит ему сумму, которую нужно заплатить",
-    "index": 620,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "“that'll be twenty three dollars and fifty cents” ",
     "ru": "«Это будет двадцать три доллара и пятьдесят центов»",
-    "index": 621,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "paying with cash",
     "ru": "оплата наличными",
-    "index": 622,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "he takes some money out of his wallet and gives it to her",
     "ru": "он достает деньги из кошелька и дает ей",
-    "index": 623,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "“here's 30 dollars”",
     "ru": "«вот 30 долларов»",
-    "index": 624,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "she puts it into the register and takes out his change",
     "ru": "она вносит его в регистр и достает сдачу",
-    "index": 625,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "She counts it out to him ",
     "ru": "Она считает это ему",
-    "index": 626,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "“twenty three dollars and fifty cents",
     "ru": "«Двадцать три доллара и пятьдесят центов",
-    "index": 627,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "twenty four twenty five and five makes thirty “",
     "ru": "двадцать четыре двадцать пять и пять равно тридцати».",
-    "index": 628,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "and gives it to him with his receipt ",
     "ru": "и отдает ему с распиской",
-    "index": 629,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "paying by check",
     "ru": "оплата чеком",
-    "index": 630,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "he writes out a check ",
     "ru": "он выписывает чек",
-    "index": 631,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "after he signs the check the cashier checks his driver's license as identification",
     "ru": "после того, как он подписывает чек, кассир проверяет его водительские права в качестве удостоверения личности",
-    "index": 632,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "“can I see some ID please” “sure”",
     "ru": "«могу ли я увидеть какое-нибудь удостоверение личности, пожалуйста» «конечно»",
-    "index": 633,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "here's my driver's license",
     "ru": "вот мои водительские права",
-    "index": 634,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "he records the check in his checkbook",
     "ru": "он записывает чек в свою чековую книжку",
-    "index": 635,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "she returns his license and gives him a receipt",
     "ru": "она возвращает ему лицензию и дает ему квитанцию",
-    "index": 636,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "thank you",
     "ru": "Спасибо",
-    "index": 637,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "thanks bye",
     "ru": "спасибо, пока",
-    "index": 638,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "",
     "ru": "",
-    "index": 639,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "paying by credit",
     "ru": "оплата в кредит",
-    "index": 640,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "he gives his card to the cashier",
     "ru": "он дает свою карту кассиру",
-    "index": 641,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "she swipes the card through the reader when the approval code comes the payment slip is printed",
     "ru": "она проводит картой через считывающее устройство, когда приходит код подтверждения, распечатывается платежная квитанция",
-    "index": 642,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "he signs the payment slip",
     "ru": "он подписывает платежную квитанцию",
-    "index": 643,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "then she gives him a copy of the slip the receipt and his card back",
     "ru": "затем она дает ему копию квитанции, квитанцию и его карту обратно",
-    "index": 644,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "",
     "ru": "",
-    "index": 645,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "Chapter 49",
     "ru": "Глава 49",
-    "index": 646,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "going to a bank",
     "ru": "иду в банк",
-    "index": 647,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "Paul went to the bank at a counter",
     "ru": "Павел пошел в банк за прилавком",
-    "index": 648,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "he filled out a deposit slip",
     "ru": "он заполнил депозитную квитанцию",
-    "index": 649,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "he filled it out by writing",
     "ru": "он заполнил его, написав",
-    "index": 650,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "his account number the amounts of his cash and checks and a total at the teller window",
     "ru": "номер его счета суммы его наличных денег и чеков и общая сумма в окне кассира",
-    "index": 651,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "he endorsed the checks by signing them on the back",
     "ru": "он подписал чеки, подписав их на обороте",
-    "index": 652,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "then he gave the teller his deposit",
     "ru": "затем он отдал кассиру свой депозит",
-    "index": 653,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "she checked the amounts on the slip and printed the amount of deposit in his passbook and gave him back his passbook",
     "ru": "она проверила суммы на квитанции, напечатала сумму депозита в его сберегательной книжке и вернула ему сберегательную книжку.",
-    "index": 654,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "thanks have a nice day",
     "ru": "Спасибо хорошего дня",
-    "index": 655,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "",
     "ru": "",
-    "index": 656,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "Сhapter 50",
     "ru": "Глава 50",
-    "index": 657,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "using an ATM",
     "ru": "с помощью банкомата",
-    "index": 658,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "Kate needed money ",
     "ru": "Кате нужны деньги",
-    "index": 659,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "oops I better find a cash machine so",
     "ru": "ой, я лучше найду банкомат, так что",
-    "index": 660,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "she went to an ATM in the store",
     "ru": "она подошла к банкомату в магазине",
-    "index": 661,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "she took her cash card out of her purse",
     "ru": "она достала карту из сумочки",
-    "index": 662,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "she lined up the magnetic strip properly and inserted the card into the slot on the ATM",
     "ru": "она правильно выровняла магнитную полосу и вставила карту в слот банкомата",
-    "index": 663,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "a message on the screen asked for her pin so she entered her PIN by pressing keys on the keypad",
     "ru": "сообщение на экране запросило ее пин-код, поэтому она ввела свой пин-код, нажимая клавиши на клавиатуре",
-    "index": 664,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "then she entered the amount of money",
     "ru": "затем она ввела сумму денег",
-    "index": 665,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "she needed the Machine returned her card and gave her her money",
     "ru": "ей нужно было, чтобы Машина вернула ей карту и дала ей деньги",
-    "index": 666,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "",
     "ru": "",
-    "index": 667,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "",
     "ru": "",
-    "index": 668,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "keeping in touch",
     "ru": "оставаться на связи",
-    "index": 669,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "using the telephone ",
     "ru": "по телефону",
-    "index": 670,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "making a phone call",
     "ru": "сделать телефонный звонок",
-    "index": 671,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "Jenny looked up Kate's phone number in the phone book",
     "ru": "Дженни нашла номер телефона Кейт в телефонной книге.",
-    "index": 672,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "she picked up the receiver and heard a dial tone",
     "ru": "она взяла трубку и услышала гудок",
-    "index": 673,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "then she dialed the number ",
     "ru": "потом она набрала номер",
-    "index": 674,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "She heard Kate's phone ringing ",
     "ru": "Она услышала, как звонит телефон Кейт.",
-    "index": 675,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "when Kate answered",
     "ru": "когда Кейт ответила",
-    "index": 676,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "hello ",
     "ru": "Привет",
-    "index": 677,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "Jenny said",
     "ru": "Дженни сказала",
-    "index": 678,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "hello and identified herself",
     "ru": "привет и представилась",
-    "index": 679,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "“hi Kate this is Jenny”",
     "ru": "«Привет, Кейт, это Дженни»",
-    "index": 680,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "then she said why she called",
     "ru": "затем она сказала, почему она позвонила",
-    "index": 681,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "I'm calling to see whether you'd like to go swimming",
     "ru": "Я звоню узнать, не хочешь ли ты поплавать",
-    "index": 682,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "",
     "ru": "",
-    "index": 683,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "Chapter 54",
     "ru": "Глава 54",
-    "index": 684,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "using the telephone for",
     "ru": "использование телефона для",
-    "index": 685,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "taking a message ",
     "ru": "получение сообщения",
-    "index": 686,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "Pam answered the phone",
     "ru": "Пэм ответила на звонок",
-    "index": 687,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "hello ",
     "ru": "Привет",
-    "index": 688,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "and the caller asked for Dan",
     "ru": "и звонивший спросил Дэна",
-    "index": 689,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "is a Dan there please",
     "ru": "это Дэн, пожалуйста",
-    "index": 690,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "she said he wasn't available and offered to take a message",
     "ru": "она сказала, что он недоступен и предложила принять сообщение",
-    "index": 691,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "sorry he can't come to the phone right now",
     "ru": "жаль, что он не может сейчас подойти к телефону",
-    "index": 692,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "can I take a message",
     "ru": "могу я принять сообщение",
-    "index": 693,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "the caller left a message for Dan",
     "ru": "звонивший оставил сообщение для Дэна",
-    "index": 694,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "yes please tell him that Lester called Pam, wrote the message on some note paper and put it next to the phone ",
     "ru": "да, пожалуйста, скажи ему, что Лестер позвонил Пэм, написал сообщение на какой-то бумаге для заметок и положил ее рядом с телефоном.",
-    "index": 695,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "Later Dan got the message and returned Lester's call",
     "ru": "Позже Дэн получил сообщение и ответил на звонок Лестера.",
-    "index": 696,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "hi Lester this is Dan you called",
     "ru": "привет Лестер это Дэн ты звонил",
-    "index": 697,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "",
     "ru": "",
-    "index": 698,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "Chapter 56",
     "ru": "Глава 56",
-    "index": 699,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "using the telephone",
     "ru": "по телефону",
-    "index": 700,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "using an answering machine",
     "ru": "с помощью автоответчика",
-    "index": 701,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "Tom recorded an outgoing message on his machine ",
     "ru": "Том записал исходящее сообщение на свой компьютер",
-    "index": 702,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "“we can't come to the phone right now after the beep please leave a message”",
     "ru": "«мы не можем сейчас подойти к телефону после гудка, пожалуйста, оставьте сообщение»",
-    "index": 703,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "when Jenny called",
     "ru": "когда Дженни позвонила",
-    "index": 704,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "she heard the message ",
     "ru": "она услышала сообщение",
-    "index": 705,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "“to the phone right now”",
     "ru": "“к телефону прямо сейчас”",
-    "index": 706,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "and left her own message for him",
     "ru": "и оставила для него свое сообщение",
-    "index": 707,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "",
     "ru": "",
-    "index": 708,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "Tom, this is Jenny please call me back at the office before 6 o'clock ",
     "ru": "Том, это Дженни, пожалуйста, перезвони мне в офис до 6 часов.",
-    "index": 709,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "when Tom got home he saw a light showing that he had a message",
     "ru": "когда Том вернулся домой, он увидел свет, показывающий, что у него есть сообщение",
-    "index": 710,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "he pressed the button to play the message as he listened to it",
     "ru": "он нажал кнопку, чтобы воспроизвести сообщение, пока он слушал его",
-    "index": 711,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "he took some notes",
     "ru": "он сделал несколько заметок",
-    "index": 712,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "then he erased the message",
     "ru": "потом стер сообщение",
-    "index": 713,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "“don't need that anymore”",
     "ru": "“это больше не нужно”",
-    "index": 714,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "",
     "ru": "",
-    "index": 715,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "Chapter 57",
     "ru": "Глава 57",
-    "index": 716,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "mailing a letter",
     "ru": "отправка письма",
-    "index": 717,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "I enclosed some pictures",
     "ru": "Я приложил несколько фотографий",
-    "index": 718,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "I hope she likes the pictures",
     "ru": "надеюсь ей понравятся фотографии",
-    "index": 719,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "I fold up my letter and put it in the envelope with the pictures",
     "ru": "Я складываю письмо и кладу его в конверт с картинками.",
-    "index": 720,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "I write my friends address in the middle of the envelope and my return address at the upper left I seal the envelope",
     "ru": "Я пишу адрес своих друзей в середине конверта и мой обратный адрес вверху слева я заклеиваю конверт",
-    "index": 721,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "I don't know how much postage I need",
     "ru": "Я не знаю, сколько почтовых расходов мне нужно",
-    "index": 722,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "so I take the letter to the post office",
     "ru": "поэтому я беру письмо на почту",
-    "index": 723,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "I stand in line ",
     "ru": "я стою в очереди",
-    "index": 724,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "when it's my turn I go to the window",
     "ru": "когда моя очередь я подхожу к окну",
-    "index": 725,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "I asked the clerk how much postage I need",
     "ru": "Я спросил клерка, сколько почтовых расходов мне нужно",
-    "index": 726,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "how much do I need on this",
     "ru": "сколько мне нужно на это",
-    "index": 727,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "",
     "ru": "",
-    "index": 728,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "he asks me how I want the letter to go ",
     "ru": "он спрашивает меня, как я хочу, чтобы письмо отправилось",
-    "index": 729,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "“regular mail or Express” ",
     "ru": "«обычная почта или экспресс»",
-    "index": 730,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "“regular” ",
     "ru": "“обычный”",
-    "index": 731,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "and weights the letter",
     "ru": "и взвешивает письмо",
-    "index": 732,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "I buy enough stamps for the postage ",
     "ru": "Я покупаю достаточно марок для почтовых расходов",
-    "index": 733,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "“a dollar 20 okay”",
     "ru": "“доллар 20 хорошо”",
-    "index": 734,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "I lick the stamps and stick them on the envelope",
     "ru": "Я облизываю марки и наклеиваю их на конверт",
-    "index": 735,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "I put the letter in the mailbox",
     "ru": "Я положил письмо в почтовый ящик",
-    "index": 736,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "",
     "ru": "",
-    "index": 737,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "Chapter 52 using the telephone",
     "ru": "Глава 52 Использование телефона",
-    "index": 738,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "to answering a telephone ",
     "ru": "отвечать на телефонные звонки",
-    "index": 739,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "Kate heard the phone ringing and picked up the receiver",
     "ru": "Кейт услышала, как звонит телефон, и взяла трубку.",
-    "index": 740,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "she answered the phone by saying",
     "ru": "она ответила на звонок, сказав",
-    "index": 741,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "hello",
     "ru": "Привет",
-    "index": 742,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "hello and",
     "ru": "Привет и",
-    "index": 743,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "then let the caller speak ",
     "ru": "затем позвольте звонящему говорить",
-    "index": 744,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "they talked for a while",
     "ru": "они говорили какое-то время",
-    "index": 745,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "I'd love to Jenny",
     "ru": "Я бы с удовольствием Дженни",
-    "index": 746,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "when and",
     "ru": "когда и",
-    "index": 747,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "then she hung up if it's a wrong number",
     "ru": "затем она повесила трубку, если это неправильный номер",
-    "index": 748,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "Kate didn't know the person the caller",
     "ru": "Кейт не знала человека, звонившего",
-    "index": 749,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "asked for could I speak with Mike",
     "ru": "спросил, могу ли я поговорить с Майком",
-    "index": 750,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "she told him that",
     "ru": "она сказала ему, что",
-    "index": 751,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "he had a wrong number",
     "ru": "он ошибся номером",
-    "index": 752,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "I'm sorry there's no one here by that name you have the wrong number",
     "ru": "Мне жаль, что здесь нет никого с таким именем, вы ошиблись номером",
-    "index": 753,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "he apologized and hung up ",
     "ru": "он извинился и повесил трубку",
-    "index": 754,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "oops sorry",
     "ru": "ой, извините",
-    "index": 755,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "",
     "ru": "",
-    "index": 756,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "Chapter 53",
     "ru": "Глава 53",
-    "index": 757,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "using the telephone",
     "ru": "по телефону",
-    "index": 758,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "leaving a message",
     "ru": "оставить сообщение",
-    "index": 759,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "I asked to speak to Dancan",
     "ru": "Я попросил поговорить с Данканом",
-    "index": 760,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "I speak to Dan please",
     "ru": "Я говорю с Дэном, пожалуйста",
-    "index": 761,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "but he wasn't available",
     "ru": "но он был недоступен",
-    "index": 762,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "I'm sorry but he's not here right now",
     "ru": "извините но его сейчас нет",
-    "index": 763,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "I identified myself and asked her to take a message",
     "ru": "Я представился и попросил ее принять сообщение",
-    "index": 764,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "this is Alex. I work with Dan",
     "ru": "это Алекс. я работаю с Дэном",
-    "index": 765,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "Сould you please take a message for him",
     "ru": "Не могли бы вы принять сообщение для него",
-    "index": 766,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "she agreed and asked me to repeat my name",
     "ru": "она согласилась и попросила меня повторить мое имя",
-    "index": 767,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "Sure. I'm sorry. I didn't catch your name.",
     "ru": "Конечно. Мне жаль. Я не расслышал твоего имени.",
-    "index": 768,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "I repeated: it it's Alex",
     "ru": "Я повторил: это Алекс",
-    "index": 769,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "Alex Rivera and spelled my last name",
     "ru": "Алекс Ривера и написал мою фамилию",
-    "index": 770,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "could you spell that out please",
     "ru": "не могли бы вы написать это, пожалуйста",
-    "index": 771,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "sure",
     "ru": "Конечно",
-    "index": 772,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "that's our IV e ra",
     "ru": "это наш IV e ra",
-    "index": 773,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "I also left my number",
     "ru": "я тоже оставила свой номер",
-    "index": 774,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "and my number is five five five five nine five nine",
     "ru": "и мой номер пять пять пять пять девять пять девять",
-    "index": 775,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "and asked that he call me back",
     "ru": "и попросил, чтобы он перезвонил мне",
-    "index": 776,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "could you ask him to give me a call",
     "ru": "не могли бы вы попросить его позвонить мне",
-    "index": 777,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "please thanks",
     "ru": "пожалуйста спасибо",
-    "index": 778,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "",
     "ru": "",
-    "index": 779,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "Chapter 56 writing a personal letter",
     "ru": "Глава 56написание личного письма",
-    "index": 780,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "I took out some paper to write to my friend",
     "ru": "Я взял бумагу, чтобы написать моему другу",
-    "index": 781,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "I wrote the date and a greeting at the top",
     "ru": "Я написал дату и приветствие вверху",
-    "index": 782,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "I apologized for not writing sooner and",
     "ru": "Я извинился, что не написал раньше и",
-    "index": 783,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "I wrote about what I'd been doing",
     "ru": "Я написал о том, что я делал",
-    "index": 784,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "as I wrote I reread her last letter to me",
     "ru": "Пока я писал, я перечитал ее последнее письмо ко мне.",
-    "index": 785,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "I answered questions she had asked and I asked her about herself",
     "ru": "Я ответил на вопросы, которые она задавала, и я спросил ее о себе",
-    "index": 786,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "then I wrote a closing and signed the letter",
     "ru": "затем я написал заключение и подписал письмо",
-    "index": 787,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "",
     "ru": "",
-    "index": 788,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "Chapter 58",
     "ru": "Глава 58",
-    "index": 789,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "going to a birthday party",
     "ru": "иду на день рождения",
-    "index": 790,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "before the party",
     "ru": "перед вечеринкой",
-    "index": 791,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "I wrap a present for my friend and sign a card for him at the party",
     "ru": "Я заворачиваю подарок своему другу и подписываю открытку на вечеринке",
-    "index": 792,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "I give him the present and the card",
     "ru": "Я даю ему подарок и открытку",
-    "index": 793,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "here you go leo",
     "ru": "вот тебе Лео",
-    "index": 794,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "happy birthday thanks Alex come on in",
     "ru": "с днем рождения спасибо Алекс заходи",
-    "index": 795,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "someone likes the candles on the birthday cake we all sing happy birthday",
     "ru": "кому-то нравятся свечи на именинном торте мы все поем с днем рождения",
-    "index": 796,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "happy birthday dear Leo and Leo blows out the candles",
     "ru": "с днем рождения дорогой Лео и Лео задувает свечи",
-    "index": 797,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "he opens his birthday presents",
     "ru": "он открывает свои подарки на день рождения",
-    "index": 798,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "hey",
     "ru": "Привет",
-    "index": 799,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "I've been wanting this CD Thanks and",
     "ru": "Я давно хотел этот компакт-диск Спасибо и",
-    "index": 800,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "then everyone eats cake and ice cream",
     "ru": "потом все едят торт и мороженое",
-    "index": 801,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "you",
     "ru": "ты",
-    "index": 802,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "[Music]",
     "ru": "[Музыка]",
-    "index": 803,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "English for everyday activities",
     "ru": "Английский для повседневной деятельности",
-    "index": 804,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "LawrenceJays wire published by compass",
     "ru": "Прослушка LawrenceJays опубликована компасом",
-    "index": 805,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "[Music]",
     "ru": "[Музыка]",
-    "index": 806,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "",
     "ru": "",
-    "index": 807,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "chapter 59",
     "ru": "глава 59",
-    "index": 808,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "going to a dinner party",
     "ru": "иду на званый обед",
-    "index": 809,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "Dan the host greets Tom and Jenny the guests at the door",
     "ru": "Хозяин Дэн встречает Тома и Дженни гостей у дверей.",
-    "index": 810,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "hi Dan",
     "ru": "привет Дэн",
-    "index": 811,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "hi Dan",
     "ru": "привет Дэн",
-    "index": 812,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "hi Tom Jenny glad you could come",
     "ru": "привет Том Дженни рад, что ты смог прийти",
-    "index": 813,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "they give him a bottle of wine they brought",
     "ru": "они дают ему бутылку вина, которое они принесли",
-    "index": 814,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "thanks",
     "ru": "Благодарность",
-    "index": 815,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "Jenny but you didn't have to bring anything inside",
     "ru": "Дженни, но тебе не нужно было ничего приносить внутрь",
-    "index": 816,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "they say hello to some people",
     "ru": "они здороваются с некоторыми людьми",
-    "index": 817,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "they know Leo",
     "ru": "они знают Лео",
-    "index": 818,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "Kate good to see you",
     "ru": "Кейт рада тебя видеть",
-    "index": 819,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "hi Tom hi Jenny",
     "ru": "привет Том привет Дженни",
-    "index": 820,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "Dan introduces them to some people",
     "ru": "Дэн знакомит их с некоторыми людьми",
-    "index": 821,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "Tom Jenny",
     "ru": "Том Дженни",
-    "index": 822,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "I'd like you to meet Sharon",
     "ru": "Я хочу, чтобы ты познакомился с Шэрон",
-    "index": 823,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "Melton and her husband John they shake hands",
     "ru": "Мелтон и ее муж Джон пожимают друг другу руки",
-    "index": 824,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "glad to meet you John",
     "ru": "рад познакомиться с тобой Джон",
-    "index": 825,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "same here",
     "ru": "то же самое",
-    "index": 826,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "Tom and make some small talk",
     "ru": "Том и немного поговорим",
-    "index": 827,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "sure was a hot one today yeah",
     "ru": "сегодня было жарко, да",
-    "index": 828,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "they have their dinner",
     "ru": "они ужинают",
-    "index": 829,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "at the end of the evening the guests say good night, and thank",
     "ru": "в конце вечера гости прощаются и благодарят",
-    "index": 830,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "Dan thanks",
     "ru": "Дэн спасибо",
-    "index": 831,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "Dan great party",
     "ru": "Дэн отличная вечеринка",
-    "index": 832,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "glad you could come",
     "ru": "рад, что ты смог прийти",
-    "index": 833,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "drive safely",
     "ru": "ездить безопасно",
-    "index": 834,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "",
     "ru": "",
-    "index": 835,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "Section six",
     "ru": "Раздел шестой",
-    "index": 836,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "having fun with friends",
     "ru": "веселиться с друзьями",
-    "index": 837,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "",
     "ru": "",
-    "index": 838,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "chapter 60",
     "ru": "глава 60",
-    "index": 839,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "going to a movie",
     "ru": "иду в кино",
-    "index": 840,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "we found out where and when the movie was showing",
     "ru": "мы узнали где и когда показывали фильм",
-    "index": 841,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "we bought tickets at the box office -",
     "ru": "мы купили билеты в кассе -",
-    "index": 842,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "please for skull night",
     "ru": "пожалуйста на ночь черепа",
-    "index": 843,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "$14 please",
     "ru": "14 долларов, пожалуйста",
-    "index": 844,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "and some popcorn at the snack counter -",
     "ru": "и немного попкорна на прилавке с закусками -",
-    "index": 845,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "large popcorns please okay the ticket taker tore our tickets and gave us back the stubs",
     "ru": "большой попкорн, пожалуйста, кассир порвал наши билеты и вернул нам корешки",
-    "index": 846,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "we went to our seats",
     "ru": "мы пошли на свои места",
-    "index": 847,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "we watched previews of coming attractions",
     "ru": "мы смотрели анонсы предстоящих аттракционов",
-    "index": 848,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "then we saw the main feature at the end",
     "ru": "затем мы увидели главную особенность в конце",
-    "index": 849,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "we watched the credits",
     "ru": "мы смотрели титры",
-    "index": 850,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "",
     "ru": "",
-    "index": 851,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "Chapter 61 ",
     "ru": " Глава 61еда в ресторане быстрого питания",
-    "index": 852,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "eating at a fast-food restaurant",
     "ru": "",
-    "index": 853,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "Jenny stood in line and read the menu at the counter",
     "ru": "Дженни стояла в очереди и читала меню у стойки.",
-    "index": 854,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "she ordered her food and a drink",
     "ru": "она заказала еду и напитки",
-    "index": 855,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "I'd like one big burger a small order fries and a medium Cola please",
     "ru": "Я бы хотел один большой бургер, маленький заказ картофеля фри и среднюю колу, пожалуйста.",
-    "index": 856,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "for here or to go",
     "ru": "здесь или на вынос",
-    "index": 857,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "for here please",
     "ru": "сюда, пожалуйста",
-    "index": 858,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "the clerk put the food on Jenny's tray and Jenny paid",
     "ru": "продавец положил еду на поднос Дженни, и Дженни заплатила",
-    "index": 859,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "her that'll be five twenty",
     "ru": "ей будет пять двадцать",
-    "index": 860,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "right",
     "ru": "правильно",
-    "index": 861,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "Jenny took some paper napkins and a straw from the dispensers",
     "ru": "Дженни достала из диспенсеров несколько бумажных салфеток и соломинку.",
-    "index": 862,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "she ate her lunch at her table",
     "ru": "она пообедала за своим столом",
-    "index": 863,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "other people got their food to go",
     "ru": "другие люди получили свою еду, чтобы пойти",
-    "index": 864,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   },
   {
     "en": "when she finished eating she threw the empty wrappers in the trash",
     "ru": "когда она закончила есть, она выбросила пустые обертки в мусорное ведро",
-    "index": 865,
-    "repeatCheckbox": false,
-    "learnedCheckbox": false
+    "chk": false
   }
 ]
