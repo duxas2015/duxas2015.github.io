@@ -384,13 +384,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 incrementButton.setAttribute('aria-label', `Increment Repeat Count (Current: ${item.repeatCount || 0})`);
                 incrementButton.addEventListener('click', () => {
                     const currentDate = getCurrentDate();
-                    if (item.repeatDate !== currentDate) {
-                        const newCount = (item.repeatCount || 0) + 1;
-                        updateCheckboxState(item.index, newCount, 'repeatCount');
-                        updateCheckboxState(item.index, currentDate, 'repeatDate');
-                        // Update the displayed count immediately
-                        countSpan.textContent = newCount;
+                    if (item.repeatDate === currentDate) {
+                        console.log(`No action: repeatDate=${item.repeatDate} matches current date=${currentDate} for index=${item.index}`);
+                        return; // No action if repeatDate is today
                     }
+                    const newCount = (item.repeatCount || 0) + 1;
+                    updateCheckboxState(item.index, newCount, 'repeatCount');
+                    updateCheckboxState(item.index, currentDate, 'repeatDate');
+                    // Update the displayed count immediately
+                    countSpan.textContent = newCount;
                 });
                 cellContainer.appendChild(incrementButton);
             }
@@ -618,7 +620,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Update stored data and re-render table without filter
             tableBody.dataset.json = JSON.stringify(updatedData);
-            renderTable(updatedData, null);
+            renderTable(updatedData);
             pendingChanges = {}; // Clear pending changes after successful save
 
             setErrorMessage('JSON file saved successfully');
@@ -780,7 +782,7 @@ document.addEventListener('DOMContentLoaded', () => {
         newButton.style.color = 'white';
         rerepeatButton.style.fontWeight = 'normal';
         rerepeatButton.style.color = 'white';
-        renderTable(data, null);
+        renderTable(data);
     }
 
     // Function to delete row
@@ -815,7 +817,7 @@ document.addEventListener('DOMContentLoaded', () => {
         newButton.style.color = 'white';
         rerepeatButton.style.fontWeight = 'normal';
         rerepeatButton.style.color = 'white';
-        renderTable(data, null);
+        renderTable(data);
     }
 
     // Function to update checkbox state or repeat-related fields
@@ -885,7 +887,7 @@ document.addEventListener('DOMContentLoaded', () => {
             isNewFilterActive = false;
             isReRepeatFilterActive = false;
             const data = JSON.parse(tableBody.dataset.json);
-            renderTable(data, null);
+            renderTable(data);
             allButton.style.fontWeight = 'bold';
             allButton.style.color = 'red';
             repeatButton.style.fontWeight = 'normal';
