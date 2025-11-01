@@ -131,11 +131,22 @@
         
         function onYouTubeIframeAPIReady() {}
 
-        function extractVideoID(url) {
-            const regex = /(?:https?:\/\/)?(?:www\.)?(?:youtube\.com\/(?:[^\/\n\s]+\/\S+\/|(?:v|e(?:mbed)?)\/|\S*?[?&]v=)|youtu\.be\/)([a-zA-Z0-9_-]{11})/;
-            const matches = url.match(regex);
-            return matches ? matches[1] : null;
-        }
+		function extractVideoID(url) {
+			// 1. Проверка на формат Shorts: /shorts/ID
+			let matches = url.match(/(?:shorts\/)([a-zA-Z0-9_-]{11})/);
+			if (matches && matches[1]) {
+				return matches[1];
+			}
+			
+			// 2. Проверка на стандартные форматы: ?v=ID или youtu.be/ID
+			const commonRegex = /(?:v=|youtu\.be\/)([a-zA-Z0-9_-]{11})/;
+			matches = url.match(commonRegex);
+			if (matches && matches[1]) {
+				return matches[1];
+			}
+
+			return null;
+		}
 
         function isValidYouTubeUrl(url) {
             const domainRegex = /^(?:https?:\/\/)?(?:www\.)?(?:youtube\.com|youtu\.be)/;
