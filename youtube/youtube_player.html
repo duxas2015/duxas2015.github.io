@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YouTube Player (v8 - Clean)</title>
+    <title>YouTube Player (v9 - Fix Live/Shorts)</title>
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
@@ -80,7 +80,6 @@
             font-size: 16px;
         }
         
-        /* Сохраняем блок для текста/статуса, хотя он теперь отображает только информационное сообщение */
         #subtitle-display {
             width: 100%;
             min-height: 50px;
@@ -131,22 +130,16 @@
         
         function onYouTubeIframeAPIReady() {}
 
-		function extractVideoID(url) {
-			// 1. Проверка на формат Shorts: /shorts/ID
-			let matches = url.match(/(?:shorts\/)([a-zA-Z0-9_-]{11})/);
-			if (matches && matches[1]) {
-				return matches[1];
-			}
-			
-			// 2. Проверка на стандартные форматы: ?v=ID или youtu.be/ID
-			const commonRegex = /(?:v=|youtu\.be\/)([a-zA-Z0-9_-]{11})/;
-			matches = url.match(commonRegex);
-			if (matches && matches[1]) {
-				return matches[1];
-			}
-
-			return null;
-		}
+        // --- ОБНОВЛЕННАЯ ФУНКЦИЯ ИЗВЛЕЧЕНИЯ ID ---
+        function extractVideoID(url) {
+            // Регулярное выражение ищет 11-значный ID после v=, embed/, youtu.be/, live/, или shorts/
+            const regex = /(?:v=|embed\/|youtu\.be\/|live\/|shorts\/)([a-zA-Z0-9_-]{11})/;
+            const matches = url.match(regex);
+            
+            // Если ID найден, возвращаем его
+            return matches ? matches[1] : null;
+        }
+        // --- КОНЕЦ ОБНОВЛЕННОЙ ФУНКЦИИ ---
 
         function isValidYouTubeUrl(url) {
             const domainRegex = /^(?:https?:\/\/)?(?:www\.)?(?:youtube\.com|youtu\.be)/;
@@ -157,9 +150,8 @@
             event.target.playVideo();
         }
 
-        // Событие теперь просто отслеживает состояние (никакой логики субтитров)
         function onPlayerStateChange(event) {
-            // Можно добавить логику паузы/воспроизведения здесь, если понадобится
+            // В этой версии логика субтитров удалена
         }
 
         function startVideo() {
@@ -225,8 +217,6 @@
                 }
             }
         });
-        
-        // Удален обработчик document.getElementById('captionsSelect').addEventListener('change', ...)
     </script>
 
 </body>
