@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YouTube Player (v4)</title>
+    <title>YouTube Player (v6 - Auto-Subtitles)</title>
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
@@ -42,15 +42,13 @@
             border-radius: 4px;
             cursor: pointer;
             font-size: 14px;
-            white-space: nowrap; /* Запрет переноса текста на кнопках */
+            white-space: nowrap; 
         }
         button:hover {
             background-color: #0056b3;
         }
-
-        /* --- НОВОЕ: СТИЛЬ ДЛЯ КНОПКИ "PASTE" --- */
         #pasteButton {
-            background-color: #6c757d; /* Серый */
+            background-color: #6c757d;
         }
         #pasteButton:hover {
             background-color: #5a6268;
@@ -71,13 +69,25 @@
             gap: 10px;
             margin-bottom: 20px;
         }
-
-        /* --- НОВОЕ: УДВОЕННАЯ ВЫСОТА КНОПОК ПЕРЕМОТКИ --- */
         #rewind-buttons button {
             padding-top: 20px;
             padding-bottom: 20px;
         }
-
+        
+        #captions-container {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        #captionsSelect {
+            width: 100%;
+            padding: 10px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            background-color: #fff;
+            font-size: 14px;
+            display: none; /* Прячем по умолчанию, пока нет видео */
+        }
+        
         #subtitle-display {
             width: 100%;
             min-height: 50px;
@@ -113,8 +123,14 @@
             <button onclick="rewindVideo(3)">⏪ 3 сек (клавиша 3)</button>
         </div>
         
+        <div id="captions-container">
+            <select id="captionsSelect">
+                <option value="">Загрузка дорожек субтитров...</option>
+            </select>
+        </div>
+        
         <div id="subtitle-display">
-            <span style="color: #888;">Английские субтитры будут показаны в плеере</span>
+            <span style="color: #888;">Субтитры отображаются в плеере</span>
         </div>
     </div>
 
@@ -128,61 +144,99 @@
         
         function onYouTubeIframeAPIReady() {}
 
-        // Функция извлечения ID (остается без изменений)
         function extractVideoID(url) {
             const regex = /(?:https?:\/\/)?(?:www\.)?(?:youtube\.com\/(?:[^\/\n\s]+\/\S+\/|(?:v|e(?:mbed)?)\/|\S*?[?&]v=)|youtu\.be\/)([a-zA-Z0-9_-]{11})/;
             const matches = url.match(regex);
             return matches ? matches[1] : null;
         }
 
-        // --- НОВАЯ ФУНКЦИЯ ПРОВЕРКИ ДОМЕНА ---
         function isValidYouTubeUrl(url) {
-            // Регулярное выражение для проверки, что ссылка принадлежит youtube.com или youtu.be
             const domainRegex = /^(?:https?:\/\/)?(?:www\.)?(?:youtube\.com|youtu\.be)/;
             return domainRegex.test(url);
-        }
-
-        function setEnglishCaptions(playerInstance) {
-            setTimeout(() => {
-                const tracks = playerInstance.getOptions('captions');
-                if (tracks && tracks.length > 0) {
-                    const englishTrack = tracks.find(track => track.languageName.startsWith('English'));
-                    if (englishTrack) {
-                        playerInstance.setOption('captions', 'track', { 'languageCode': englishTrack.languageCode });
-                        playerInstance.setOption('captions', 'on', true);
-                    }
-                }
-            }, 1500); 
         }
 
         function onPlayerReady(event) {
             event.target.playVideo();
         }
 
+        // --- ОБНОВЛЕННАЯ ФУНКЦИЯ onPlayerStateChange ---
         function onPlayerStateChange(event) {
             if (event.data === YT.PlayerState.PLAYING) {
-                setEnglishCaptions(event.target);
+                const playerInstance = event.target;
+                const selectMenu = document.getElementById('captionsSelect');
+                
+                selectMenu.innerHTML = '';
+                const tracks = playerInstance.getOptions('captions');
+                
+                if (tracks && tracks.length > 0) {
+                    const offOption = document.createElement('option');
+                    offOption.value = "";
+                    offOption.textContent = "Субтитры выключены";
+                    selectMenu.appendChild(offOption);
+                    
+                    tracks.forEach(track => {
+                        const option = document.createElement('option');
+                        option.value = track.languageCode;
+                        option.textContent = track.languageName;
+                        selectMenu.appendChild(option);
+                    });
+
+                    // --- ИЗМЕНЕННАЯ ЛОГИКА ВЫБОРА ПО УМОЛЧАНИЮ ---
+                    
+                    // 1. Ищем приоритетную дорожку (English auto-generated / Английский создано автоматически)
+                    const preferredTrack = tracks.find(track => {
+                        const lowerLangName = track.languageName.toLowerCase();
+                        const isEnglishAuto = lowerLangName.includes('english') && lowerLangName.includes('auto-generated');
+                        const isRussianAuto = lowerLangName.includes('английский') && lowerLangName.includes('создано автоматически');
+                        return isEnglishAuto || isRussianAuto;
+                    });
+                    
+                    if (preferredTrack) {
+                        // Если нашли нужную авто-дорожку, выбираем ее
+                        selectMenu.value = preferredTrack.languageCode;
+                        playerInstance.setOption('captions', 'track', { 'languageCode': preferredTrack.languageCode });
+                        playerInstance.setOption('captions', 'on', true);
+                    } else {
+                        // 2. Если не нашли, ищем просто "English" (как запасной вариант)
+                        const fallbackEnglishTrack = tracks.find(track => track.languageName.startsWith('English'));
+                        if (fallbackEnglishTrack) {
+                            selectMenu.value = fallbackEnglishTrack.languageCode;
+                            playerInstance.setOption('captions', 'track', { 'languageCode': fallbackEnglishTrack.languageCode });
+                            playerInstance.setOption('captions', 'on', true);
+                        } else {
+                            // 3. Если и его нет, по умолчанию субтитры выключены
+                            selectMenu.value = "";
+                            playerInstance.setOption('captions', 'on', false);
+                        }
+                    }
+                    // --- КОНЕЦ ИЗМЕНЕННОЙ ЛОГИКИ ---
+
+                    selectMenu.style.display = 'block';
+
+                } else {
+                    selectMenu.innerHTML = '<option value="">Субтитры недоступны</option>';
+                    selectMenu.style.display = 'block';
+                }
             }
         }
+        // --- КОНЕЦ ОБНОВЛЕННОЙ ФУНКЦИИ ---
 
-        // --- ОБНОВЛЕННАЯ ФУНКЦИЯ STARTVIDEO ---
         function startVideo() {
             const url = document.getElementById('youtubeUrl').value;
-
-            // 1. Новая проверка на домен
             if (!isValidYouTubeUrl(url)) {
                 alert("Ссылка не принадлежит домену YouTube. Пожалуйста, проверьте.");
                 return;
             }
-
-            // 2. Старая проверка на ID (все еще нужна для плеера)
             const videoId = extractVideoID(url);
             if (!videoId) {
-                alert("Домен YouTube верный, но не удалось извлечь ID видео. Проверьте формат ссылки (например, ...watch?v=ID).");
+                alert("Домен YouTube верный, но не удалось извлечь ID видео. Проверьте формат ссылки.");
                 return;
             }
 
             document.getElementById('rewind-buttons').style.display = 'flex';
+            const selectMenu = document.getElementById('captionsSelect');
+            selectMenu.style.display = 'none';
+            selectMenu.innerHTML = '<option value="">Загрузка...</option>';
 
             if (player) {
                 player.loadVideoById(videoId);
@@ -200,19 +254,11 @@
             }
         }
 
-        // --- НОВАЯ ФУНКЦИЯ "PASTE & START" ---
         async function pasteAndStart() {
             try {
-                // 1. Асинхронно читаем текст из буфера обмена
                 const text = await navigator.clipboard.readText();
-                
-                // 2. Вставляем текст в поле ввода
-                const inputField = document.getElementById('youtubeUrl');
-                inputField.value = text;
-                
-                // 3. Запускаем видео
+                document.getElementById('youtubeUrl').value = text;
                 startVideo();
-
             } catch (err) {
                 console.error('Не удалось прочитать буфер обмена: ', err);
                 alert('Не удалось получить доступ к буферу обмена.\nБраузер мог запросить у вас разрешение, пожалуйста, предоставьте его.');
@@ -235,9 +281,21 @@
                         rewindVideo(2);
                         break;
                     case 'Numpad3':
-                    case 'Digit3':
+                    case 'Numpad3':
                         rewindVideo(3);
                         break;
+                }
+            }
+        });
+        
+        document.getElementById('captionsSelect').addEventListener('change', function() {
+            if (player) {
+                const selectedLangCode = this.value;
+                if (selectedLangCode) {
+                    player.setOption('captions', 'track', { 'languageCode': selectedLangCode });
+                    player.setOption('captions', 'on', true);
+                } else {
+                    player.setOption('captions', 'on', false);
                 }
             }
         });
