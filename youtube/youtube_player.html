@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YouTube Player (v6 - Auto-Subtitles)</title>
+    <title>YouTube Player (v8 - Clean)</title>
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
@@ -64,30 +64,23 @@
             width: 100%;
             height: 100%;
         }
+        
         #rewind-buttons {
             display: none;
             gap: 10px;
             margin-bottom: 20px;
+            width: 100%;
+            justify-content: flex-start;
         }
         #rewind-buttons button {
+            width: calc(33.33% - 5px); 
             padding-top: 20px;
             padding-bottom: 20px;
+            box-sizing: border-box;
+            font-size: 16px;
         }
         
-        #captions-container {
-            width: 100%;
-            margin-bottom: 20px;
-        }
-        #captionsSelect {
-            width: 100%;
-            padding: 10px;
-            border-radius: 4px;
-            border: 1px solid #ccc;
-            background-color: #fff;
-            font-size: 14px;
-            display: none; /* Прячем по умолчанию, пока нет видео */
-        }
-        
+        /* Сохраняем блок для текста/статуса, хотя он теперь отображает только информационное сообщение */
         #subtitle-display {
             width: 100%;
             min-height: 50px;
@@ -123,14 +116,8 @@
             <button onclick="rewindVideo(3)">⏪ 3 сек (клавиша 3)</button>
         </div>
         
-        <div id="captions-container">
-            <select id="captionsSelect">
-                <option value="">Загрузка дорожек субтитров...</option>
-            </select>
-        </div>
-        
         <div id="subtitle-display">
-            <span style="color: #888;">Субтитры отображаются в плеере</span>
+            <span style="color: #888;">Субтитры управляются настройками плеера YouTube</span>
         </div>
     </div>
 
@@ -159,67 +146,10 @@
             event.target.playVideo();
         }
 
-        // --- ОБНОВЛЕННАЯ ФУНКЦИЯ onPlayerStateChange ---
+        // Событие теперь просто отслеживает состояние (никакой логики субтитров)
         function onPlayerStateChange(event) {
-            if (event.data === YT.PlayerState.PLAYING) {
-                const playerInstance = event.target;
-                const selectMenu = document.getElementById('captionsSelect');
-                
-                selectMenu.innerHTML = '';
-                const tracks = playerInstance.getOptions('captions');
-                
-                if (tracks && tracks.length > 0) {
-                    const offOption = document.createElement('option');
-                    offOption.value = "";
-                    offOption.textContent = "Субтитры выключены";
-                    selectMenu.appendChild(offOption);
-                    
-                    tracks.forEach(track => {
-                        const option = document.createElement('option');
-                        option.value = track.languageCode;
-                        option.textContent = track.languageName;
-                        selectMenu.appendChild(option);
-                    });
-
-                    // --- ИЗМЕНЕННАЯ ЛОГИКА ВЫБОРА ПО УМОЛЧАНИЮ ---
-                    
-                    // 1. Ищем приоритетную дорожку (English auto-generated / Английский создано автоматически)
-                    const preferredTrack = tracks.find(track => {
-                        const lowerLangName = track.languageName.toLowerCase();
-                        const isEnglishAuto = lowerLangName.includes('english') && lowerLangName.includes('auto-generated');
-                        const isRussianAuto = lowerLangName.includes('английский') && lowerLangName.includes('создано автоматически');
-                        return isEnglishAuto || isRussianAuto;
-                    });
-                    
-                    if (preferredTrack) {
-                        // Если нашли нужную авто-дорожку, выбираем ее
-                        selectMenu.value = preferredTrack.languageCode;
-                        playerInstance.setOption('captions', 'track', { 'languageCode': preferredTrack.languageCode });
-                        playerInstance.setOption('captions', 'on', true);
-                    } else {
-                        // 2. Если не нашли, ищем просто "English" (как запасной вариант)
-                        const fallbackEnglishTrack = tracks.find(track => track.languageName.startsWith('English'));
-                        if (fallbackEnglishTrack) {
-                            selectMenu.value = fallbackEnglishTrack.languageCode;
-                            playerInstance.setOption('captions', 'track', { 'languageCode': fallbackEnglishTrack.languageCode });
-                            playerInstance.setOption('captions', 'on', true);
-                        } else {
-                            // 3. Если и его нет, по умолчанию субтитры выключены
-                            selectMenu.value = "";
-                            playerInstance.setOption('captions', 'on', false);
-                        }
-                    }
-                    // --- КОНЕЦ ИЗМЕНЕННОЙ ЛОГИКИ ---
-
-                    selectMenu.style.display = 'block';
-
-                } else {
-                    selectMenu.innerHTML = '<option value="">Субтитры недоступны</option>';
-                    selectMenu.style.display = 'block';
-                }
-            }
+            // Можно добавить логику паузы/воспроизведения здесь, если понадобится
         }
-        // --- КОНЕЦ ОБНОВЛЕННОЙ ФУНКЦИИ ---
 
         function startVideo() {
             const url = document.getElementById('youtubeUrl').value;
@@ -234,9 +164,6 @@
             }
 
             document.getElementById('rewind-buttons').style.display = 'flex';
-            const selectMenu = document.getElementById('captionsSelect');
-            selectMenu.style.display = 'none';
-            selectMenu.innerHTML = '<option value="">Загрузка...</option>';
 
             if (player) {
                 player.loadVideoById(videoId);
@@ -288,17 +215,7 @@
             }
         });
         
-        document.getElementById('captionsSelect').addEventListener('change', function() {
-            if (player) {
-                const selectedLangCode = this.value;
-                if (selectedLangCode) {
-                    player.setOption('captions', 'track', { 'languageCode': selectedLangCode });
-                    player.setOption('captions', 'on', true);
-                } else {
-                    player.setOption('captions', 'on', false);
-                }
-            }
-        });
+        // Удален обработчик document.getElementById('captionsSelect').addEventListener('change', ...)
     </script>
 
 </body>
