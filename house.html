@@ -9,9 +9,11 @@
 <div id="outerContainer">
 	<div id="player"></div>
 	<div id="controlPanel">
-		<button class="clsButton" id="idSetRusSub" type="button">S</button>
-		<button class="clsButton" id="idMoveEngSubBackward" type="button"><</button>
-		<button class="clsButton" id="idMoveEngSubForward" type="button">></button>
+		<div id="engSubShiftGroup" class="clsButton" style="display: flex;">
+			<button class="clsButton" id="idMoveEngSubBackward" type="button" style="width: 50%; height: 100%;"><</button>
+			<button class="clsButton" id="idMoveEngSubForward" type="button" style="width: 50%; height: 100%;">></button>
+		</div>
+		
 		<button class="clsButton" id="idRewindUntilNextSub" type="button">R</button>
 		<button class="clsButton" id="idRewind3Second" type="button">3</button>
 		<button class="clsButton" id="idRewind2Second" type="button">2</button>
