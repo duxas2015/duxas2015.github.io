@@ -416,7 +416,6 @@ function downloadSubtitlesAsVTT(video, textTrack, filename = 'subtitles.vtt') {
     downloadLink.href = url;
     downloadLink.download = filename;
     document.body.appendChild(downloadLink);
-    downloadLink.click();
     document.body.removeChild(downloadLink);
     URL.revokeObjectURL(url);
 }
@@ -598,8 +597,8 @@ window.onload = function() {
 			  document.getElementById("idRewind2Second").addEventListener('click', ( event ) => { backMoving (2); } );
 			  document.getElementById("idRewind3Second").addEventListener('click', ( event ) => { backMoving (3); } );
 			  document.getElementById("idRewindUntilNextSub").addEventListener('click', ( event ) => { getToTheClosestSubtitle(); } );
-			  // document.getElementById("idSetRusSub") - удалена
 			  
+			  // English Subtitle Shift Handlers
 			  document.getElementById("idMoveEngSubBackward").addEventListener('click', ( event ) => { 
 				  shiftTextTrack(findEnglishSubtitleTrack(), -0.2 );
 				  shiftEnglishSubtitle-= 0.2;
@@ -610,6 +609,19 @@ window.onload = function() {
 				  shiftEnglishSubtitle+= 0.2;
 				  console.log(shiftEnglishSubtitle.toFixed(2));
 				} );
+				
+			  // Russian Subtitle Shift Handlers (NEW)
+			  document.getElementById("idMoveRusSubBackward").addEventListener('click', ( event ) => { 
+				  shiftTextTrack(findRussianSubtitleTrack(), -0.2 );
+				  shiftRussianSubtitle-= 0.2;
+				  console.log(shiftRussianSubtitle.toFixed(2));
+				} );					  
+			  document.getElementById("idMoveRusSubForward").addEventListener('click', ( event ) => {
+				  shiftTextTrack(findRussianSubtitleTrack(), 0.2 );
+				  shiftRussianSubtitle+= 0.2;
+				  console.log(shiftRussianSubtitle.toFixed(2));
+				} );
+
 			} else {
 				// desktop
 			    removeNodeById('controlPanel');
