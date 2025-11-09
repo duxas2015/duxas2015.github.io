@@ -155,6 +155,11 @@ var f_eng = function ( event ) {
  else { document.getElementById("engSubtitleContainerId").innerHtml = "";}
  }
 
+function idSetRusSub_click_handler() {
+    document.getElementsByTagName('video')[0].textTracks[findRussianSubtitleTrackIndex()].oncuechange = f;
+    document.getElementsByTagName('video')[0].textTracks[findEnglishSubtitleTrackIndex()].oncuechange = f_eng;
+    video = document.getElementsByTagName('video')[0];
+}
 
 function listen(player) {
 	player.once('ready', () => {
@@ -598,11 +603,11 @@ window.onload = function() {
 			  document.getElementById("idRewind2Second").addEventListener('click', ( event ) => { backMoving (2); } );
 			  document.getElementById("idRewind3Second").addEventListener('click', ( event ) => { backMoving (3); } );
 			  document.getElementById("idRewindUntilNextSub").addEventListener('click', ( event ) => { getToTheClosestSubtitle(); } );
-			  document.getElementById("idSetRusSub").addEventListener('click', ( event ) => { 
-				  document.getElementsByTagName('video')[0].textTracks[findRussianSubtitleTrackIndex()].oncuechange = f;
-				  document.getElementsByTagName('video')[0].textTracks[findEnglishSubtitleTrackIndex()].oncuechange = f_eng;
-				  video = document.getElementsByTagName('video')[0];
-				} );
+			  
+			  // Удалена кнопка idSetRusSub
+			  // document.getElementById("idSetRusSub").addEventListener('click', ( event ) => { idSetRusSub_click_handler(); } );
+			  
+			  // Новая функциональность для кнопок сдвига субтитров
 			  document.getElementById("idMoveEngSubBackward").addEventListener('click', ( event ) => { 
 				  shiftTextTrack(findEnglishSubtitleTrack(), -0.2 );
 				  shiftEnglishSubtitle-= 0.2;
