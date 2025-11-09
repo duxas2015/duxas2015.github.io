@@ -18,17 +18,19 @@ body {
 #controlPanel {
 	flex:1;
 	max-width:10%;
+    /* Добавляем display:flex и flex-direction: column, 
+       чтобы кнопки занимали всю доступную вертикальную высоту */
+    display: flex;
+    flex-direction: column;
 }
 
 .clsButton {
 	width:100%;
-	height:25%;
+	/* Устанавливаем высоту 20% для 5 кнопок */
+	height:20%;
 }
 
-.clsSmallButton {
-	width:100%;
-	height:12.5%;
-}
+/* Класс clsSmallButton удален, так как все кнопки должны быть одинаковой высоты */
 
 .subtitleContainerCls {
 	padding: 10px;
