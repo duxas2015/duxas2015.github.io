@@ -1,0 +1,261 @@
+[
+  {
+    "idx": 1,
+    "text": "Which of the following statements about design principles and design patterns are true? (Choose all that apply.)",
+    "select_type": "multiply",
+    "answers": [
+      { "letter": "A", "text": "A design principle is focused on solving a specific commonly occurring problem." },
+      { "letter": "B", "text": "Design principles and design patterns are the same thing." },
+      { "letter": "C", "text": "Design principles are often applied throughout an application, whereas design patterns are applied to solve specific problems." },
+      { "letter": "D", "text": "Design patterns can only be applied to static classes." },
+      { "letter": "E", "text": "Design principles and design patterns tend to produce code that is easier to maintain and easier for other developers to read." }
+    ]
+  },
+  {
+    "idx": 2,
+    "text": "What is the result of the following code?\n<pre>\n1: public interface CanClimb {\n2:     public abstract void climb();\n3: }\n4: public interface CanClimbTrees extends CanClimb {}\n5: public abstract class Chipmunk implements CanClimbTrees {\n6:     public abstract void chew();\n7: }\n8: public class EasternChipmunk extends Chipmunk {\n9:     public void chew() { System.out.println(\"Eastern Chipmunk is Chewing\"); }\n10: }\n</pre>",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "It compiles and runs without issue." },
+      { "letter": "B", "text": "The code will not compile because of line 2." },
+      { "letter": "C", "text": "The code will not compile because of line 4." },
+      { "letter": "D", "text": "The code will not compile because of line 5." },
+      { "letter": "E", "text": "The code will not compile because of line 8." },
+      { "letter": "F", "text": "It compiles but throws an exception at runtime." }
+    ]
+  },
+  {
+    "idx": 3,
+    "text": "Which of the following are valid functional interfaces? (Choose all that apply.)\n<pre>\npublic interface Climb {\n    public int climb();\n}\npublic abstract class Swim {\n    public abstract Object swim(double speed, int duration);\n}\npublic interface ArcticMountainClimb extends MountainClimb {\n    public default int getSpeed();\n}\npublic interface MountainClimb extends Climb {}\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      { "letter": "A", "text": "Climb" },
+      { "letter": "B", "text": "Swim" },
+      { "letter": "C", "text": "ArcticMountainClimb" },
+      { "letter": "D", "text": "MountainClimb" },
+      { "letter": "E", "text": "None of these are valid functional interfaces." }
+    ]
+  },
+  {
+    "idx": 4,
+    "text": "Which of the following are valid lambda expressions? (Choose all that apply.)",
+    "select_type": "multiply",
+    "answers": [
+      { "letter": "A", "text": "<pre>() -> \"\"</pre>" },
+      { "letter": "B", "text": "<pre>x,y -> x+y</pre>" },
+      { "letter": "C", "text": "<pre>(Coyote y) -> return 0;</pre>" },
+      { "letter": "D", "text": "<pre>(Camel c) -> {return;}</pre>" },
+      { "letter": "E", "text": "<pre>Wolf w -> 39</pre>" },
+      { "letter": "F", "text": "<pre>() -></pre>" },
+      { "letter": "G", "text": "<pre>(Animal z, m) -> a</pre>" }
+    ]
+  },
+  {
+    "idx": 5,
+    "text": "What are some of the properties of using the singleton pattern? (Choose all that apply.)",
+    "select_type": "multiply",
+    "answers": [
+      { "letter": "A", "text": "Singleton object can be replaced with encapsulated setter method." },
+      { "letter": "B", "text": "Requires constructor of singleton class to be private." },
+      { "letter": "C", "text": "Singleton object must be named instance." },
+      { "letter": "D", "text": "Singleton object may be private or protected." },
+      { "letter": "E", "text": "Ensures that there is only one instance of an object in memory." },
+      { "letter": "F", "text": "Requires a public static method to retrieve the instance of the singleton." }
+    ]
+  },
+  {
+    "idx": 6,
+    "text": "What is the result of the following class?\n<pre>\nimport java.util.function.*;\npublic class Panda {\n    int age;\n    public static void main(String[] args) {\n        Panda p1 = new Panda();\n        p1.age = 1;\n        check(p1, p -> p.age < 5); // h1\n    }\n    private static void check(Panda panda, Predicate&lt;Panda&gt; pred) { // h2\n        String result = pred.test(panda) ? \"match\": \"not match\"; // h3\n        System.out.print(result);\n    } }\n</pre>",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "match" },
+      { "letter": "B", "text": "not match" },
+      { "letter": "C", "text": "Compiler error on line h1." },
+      { "letter": "D", "text": "Compiler error on line h2." },
+      { "letter": "E", "text": "Compile error on line h3." },
+      { "letter": "F", "text": "A runtime exception is thrown." }
+    ]
+  },
+  {
+    "idx": 7,
+    "text": "What changes need to be made to make the following immutable object pattern correct? (Choose all that apply.)\n<pre>\nimport java.util.List;\npublic class Seal {\n    String name;\n    private final List&lt;Seal&gt; friends;\n    public Seal(String name, List&lt;Seal&gt; friends) {\n        this.name = name;\n        this.friends = friends;\n    }\n    public String getName() { return name; }\n    public List&lt;Seal&gt; getFriends() { return friends; }\n}\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      { "letter": "A", "text": "None; the immutable object pattern is properly implemented." },
+      { "letter": "B", "text": "Have Seal implement the Immutable interface." },
+      { "letter": "C", "text": "Mark name final and private." },
+      { "letter": "D", "text": "Add setters for name and List&lt;Seal&gt; friends." },
+      { "letter": "E", "text": "Replace the getFriends() method with methods that do not give the caller direct access to the List&lt;Seal&gt; friends." },
+      { "letter": "F", "text": "Change the type of List&lt;Seal&gt; to List&lt;Object&gt;." },
+      { "letter": "G", "text": "Make a copy of the List&lt;Seal&gt; friends in the constructor." },
+      { "letter": "H", "text": "Mark the Seal class final." }
+    ]
+  },
+  {
+    "idx": 8,
+    "text": "Which of the following are true of interfaces? (Choose all that apply.)",
+    "select_type": "multiply",
+    "answers": [
+      { "letter": "A", "text": "They can extend other classes." },
+      { "letter": "B", "text": "They cannot be extended." },
+      { "letter": "C", "text": "They enable classes to have multiple inheritance." },
+      { "letter": "D", "text": "They can only contain abstract methods." },
+      { "letter": "E", "text": "They can be declared final." },
+      { "letter": "F", "text": "All members of an interface are public." }
+    ]
+  },
+  {
+    "idx": 9,
+    "text": "What changes need to be made to make the following singleton pattern correct? (Choose all that apply.)\n<pre>\npublic class CheetahManager {\n    public static CheetahManager cheetahManager;\n    private CheetahManager() {}\n    public static CheetahManager getCheetahManager() {\n        if(cheetahManager == null) {\n            cheetahManager = new CheetahManager();\n        }\n        return cheetahManager;\n    }\n}\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      { "letter": "A", "text": "None; the singleton pattern is properly implemented." },
+      { "letter": "B", "text": "Rename cheetahManager to instance." },
+      { "letter": "C", "text": "Rename getCheetahManager() to getInstance()." },
+      { "letter": "D", "text": "Change the access modifier of cheetahManager from public to private." },
+      { "letter": "E", "text": "Mark cheetahManager final." },
+      { "letter": "F", "text": "Add synchronized to getCheetahManager()." }
+    ]
+  },
+  {
+    "idx": 10,
+    "text": "What is the result of the following code?\n<pre>\n1: public interface CanWalk {\n2:     default void walk() { System.out.println(\"Walking\"); }\n3: }\n4: public interface CanRun {\n5:     public default void walk() { System.out.println(\"Walking\"); }\n6:     public abstract void run();\n7: }\n8: public interface CanSprint extends CanWalk, CanRun {\n9:     void sprint();\n10: }\n</pre>",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "The code compiles without issue." },
+      { "letter": "B", "text": "The code will not compile because of line 5." },
+      { "letter": "C", "text": "The code will not compile because of line 6." },
+      { "letter": "D", "text": "The code will not compile because of line 8." },
+      { "letter": "E", "text": "The code will not compile because of line 9." }
+    ]
+  },
+  {
+    "idx": 11,
+    "text": "Which lambda can replace the MySecret class to return the same value? (Choose all that apply.)\n<pre>\npublic interface Secret {\n    String magic(double d);\n}\npublic class MySecret implements Secret {\n    public String magic(double d) {\n        return \"Poof\";\n    }\n}\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      { "letter": "A", "text": "<pre>caller((e) -> \"Poof\");</pre>" },
+      { "letter": "B", "text": "<pre>caller((e) -> {\"Poof\"});</pre>" },
+      { "letter": "C", "text": "<pre>caller((e) -> { String e = \"\"; \"Poof\" });</pre>" },
+      { "letter": "D", "text": "<pre>caller((e) -> { String e = \"\"; return \"Poof\"; });</pre>" },
+      { "letter": "E", "text": "<pre>caller((e) -> { String e = \"\"; return \"Poof\" });</pre>" },
+      { "letter": "F", "text": "<pre>caller((e) -> { String f = \"\"; return \"Poof\"; });</pre>" }
+    ]
+  },
+  {
+    "idx": 12,
+    "text": "What is the result of the following code?\n<pre>\npublic interface Climb {\n    boolean isTooHigh(int height, int limit);\n}\npublic class Climber {\n    public static void main(String[] args) {\n        check((h, l) -> h.toString(), 5); // x1\n    }\n    private static void check(Climb climb, int height) {\n        if (climb.isTooHigh(height, 10)) // x2\n            System.out.println(\"too high\");\n        else System.out.println(\"ok\");\n    } }\n</pre>",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "ok" },
+      { "letter": "B", "text": "too high" },
+      { "letter": "C", "text": "Compiler error on line x1." },
+      { "letter": "D", "text": "Compiler error on line x2." },
+      { "letter": "E", "text": "Compiler error on a different line." },
+      { "letter": "F", "text": "A runtime exception is thrown." }
+    ]
+  },
+  {
+    "idx": 13,
+    "text": "Which of the following are properties of classes that define immutable objects? (Choose all that apply.)",
+    "select_type": "multiply",
+    "answers": [
+      { "letter": "A", "text": "They don’t define any getter methods." },
+      { "letter": "B", "text": "All of the instance variables marked private and final." },
+      { "letter": "C", "text": "They don’t define any setter methods." },
+      { "letter": "D", "text": "They mark all instance variables static." },
+      { "letter": "E", "text": "They prevent methods from being overridden." },
+      { "letter": "F", "text": "All getter methods are marked synchronized." }
+    ]
+  },
+  {
+    "idx": 14,
+    "text": "Which of the following statements can be inserted in the blank line so that the code will compile successfully? (Choose all that apply.)\n<pre>\npublic interface CanHop {}\npublic class Frog implements CanHop {\n    public static void main(String[] args) {\n        _______________ frog = new TurtleFrog();\n    }\n}\npublic class BrazilianHornedFrog extends Frog {}\npublic class TurtleFrog extends Frog {}\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      { "letter": "A", "text": "Frog" },
+      { "letter": "B", "text": "TurtleFrog" },
+      { "letter": "C", "text": "BrazilianHornedFrog" },
+      { "letter": "D", "text": "CanHop" },
+      { "letter": "E", "text": "Object" },
+      { "letter": "F", "text": "Long" }
+    ]
+  },
+  {
+    "idx": 15,
+    "text": "Which of the following statements about polymorphism are true? (Choose all that apply.)",
+    "select_type": "multiply",
+    "answers": [
+      { "letter": "A", "text": "A reference to an object may be cast to a subclass of the object without an explicit cast." },
+      { "letter": "B", "text": "If a method takes a class that is the superclass of three different object references, then any of those objects may be passed as a parameter to the method." },
+      { "letter": "C", "text": "A reference to an object may be cast to a superclass of the object without an explicit cast." },
+      { "letter": "D", "text": "All cast exceptions can be detected at compile time." },
+      { "letter": "E", "text": "By defining a public instance method in the superclass, you guarantee that the specific method will be called in the parent class at runtime." }
+    ]
+  },
+  {
+    "idx": 16,
+    "text": "Choose the correct statement about the following code:\n<pre>\n1: public interface Herbivore {\n2:     int amount = 10;\n3:     public static void eatGrass();\n4:     public int chew() {\n5:         return 13;\n6:     }\n7: }\n</pre>",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "It compiles and runs without issue." },
+      { "letter": "B", "text": "The code will not compile because of line 2." },
+      { "letter": "C", "text": "The code will not compile because of line 3." },
+      { "letter": "D", "text": "The code will not compile because of line 4." },
+      { "letter": "E", "text": "The code will not compile because of lines 2 and 3." },
+      { "letter": "F", "text": "The code will not compile because of lines 3 and 4." }
+    ]
+  },
+  {
+    "idx": 17,
+    "text": "Which of the following are properties of classes that are properly encapsulated as a JavaBean? (Choose all that apply.)",
+    "select_type": "multiply",
+    "answers": [
+      { "letter": "A", "text": "All instance variables are marked final." },
+      { "letter": "B", "text": "boolean instance variables are accessed with is or get." },
+      { "letter": "C", "text": "All instance variables are marked private." },
+      { "letter": "D", "text": "They implement the JavaBean interface." },
+      { "letter": "E", "text": "Variables are created using lazy instantiation." },
+      { "letter": "F", "text": "The first letter of the any getter/setter, after the get, set, or is prefix, must be uppercase." }
+    ]
+  },
+  {
+    "idx": 18,
+    "text": "Which of the following statements about inheritance and object composition are correct? (Choose all that apply.)",
+    "select_type": "multiply",
+    "answers": [
+      { "letter": "A", "text": "Inheritance supports access to protected variables." },
+      { "letter": "B", "text": "Object composition tends to promote greater code reuse than inheritance." },
+      { "letter": "C", "text": "Inheritance relies on the has‐a principle." },
+      { "letter": "D", "text": "Object composition supports method overriding at runtime." },
+      { "letter": "E", "text": "Object composition requires a class variable to be declared public or accessible from a public method to be used by a class in a different package." },
+      { "letter": "F", "text": "Object composition is always preferred to inheritance." }
+    ]
+  },
+  {
+    "idx": 19,
+    "text": "Which three scenarios would best benefit from using a singleton pattern? (Choose all three.)",
+    "select_type": "multiply",
+    "answers": [
+      { "letter": "A", "text": "Create read‐only objects that are thread‐safe." },
+      { "letter": "B", "text": "Manage a reusable cache of objects." },
+      { "letter": "C", "text": "Ensure that all objects are lazily instantiated." },
+      { "letter": "D", "text": "Manage write access to a log file." },
+      { "letter": "E", "text": "Provide central access to application configuration data." },
+      { "letter": "F", "text": "Allow multiple instances of a static object to be managed in memory." }
+    ]
+  },
+  {
+    "idx": 20,
+    "text": "Choose the correct statement about the following code:\n<pre>\n1: public interface CanFly {\n2:     void fly();\n3: }\n4: interface HasWings {\n5:     public abstract Object getWingSpan();\n6: }\n7: abstract class Falcon implements CanFly, HasWings {\n8: }\n</pre>",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "It compiles without issue." },
+      { "letter": "B", "text": "The code will not compile because of line 2." },
+      { "letter": "C", "text": "The code will not compile because of line 4." },
+      { "letter": "D", "text": "The code will not compile because of line 5." },
+      { "letter": "E", "text": "The code will not compile because of lines 2 and 5." },
+      { "letter": "F", "text": "The code will not compile because the class Falcon doesn’t implement the interface methods." }
+    ]
+  }
+]

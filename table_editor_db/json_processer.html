@@ -1,0 +1,116 @@
+<script type="text/javascript">
+        var gk_isXlsx = false;
+        var gk_xlsxFileLookup = {};
+        var gk_fileData = {};
+        function filledCell(cell) {
+          return cell !== '' && cell != null;
+        }
+        function loadFileData(filename) {
+        if (gk_isXlsx && gk_xlsxFileLookup[filename]) {
+            try {
+                var workbook = XLSX.read(gk_fileData[filename], { type: 'base64' });
+                var firstSheetName = workbook.SheetNames[0];
+                var worksheet = workbook.Sheets[firstSheetName];
+
+                // Convert sheet to JSON to filter blank rows
+                var jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1, blankrows: false, defval: '' });
+                // Filter out blank rows (rows where all cells are empty, null, or undefined)
+                var filteredData = jsonData.filter(row => row.some(filledCell));
+
+                // Heuristic to find the header row by ignoring rows with fewer filled cells than the next row
+                var headerRowIndex = filteredData.findIndex((row, index) =>
+                  row.filter(filledCell).length >= filteredData[index + 1]?.filter(filledCell).length
+                );
+                // Fallback
+                if (headerRowIndex === -1 || headerRowIndex > 25) {
+                  headerRowIndex = 0;
+                }
+
+                // Convert filtered JSON back to CSV
+                var csv = XLSX.utils.aoa_to_sheet(filteredData.slice(headerRowIndex)); // Create a new sheet from filtered array of arrays
+                csv = XLSX.utils.sheet_to_csv(csv, { header: 1 });
+                return csv;
+            } catch (e) {
+                console.error(e);
+                return "";
+            }
+        }
+        return gk_fileData[filename] || "";
+        }
+        </script><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON File Processor</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <div class="bg-white p-8 rounded-lg shadow-lg max-w-md w-full">
+        <h1 class="text-2xl font-bold mb-6 text-center">JSON File Processor</h1>
+        <input type="file" id="fileInput" accept=".json" class="mb-4 w-full p-2 border rounded">
+        <button id="processButton" class="w-full bg-blue-500 text-white p-2 rounded hover:bg-blue-600" disabled>Process File</button>
+        <a id="downloadLink" class="hidden w-full mt-4 bg-green-500 text-white p-2 rounded text-center hover:bg-green-600" href="#" download="processed_verb.json">Download Processed File</a>
+        <p id="status" class="mt-4 text-center text-gray-700"></p>
+    </div>
+
+    <script>
+        const fileInput = document.getElementById('fileInput');
+        const processButton = document.getElementById('processButton');
+        const downloadLink = document.getElementById('downloadLink');
+        const status = document.getElementById('status');
+
+        fileInput.addEventListener('change', () => {
+            processButton.disabled = !fileInput.files.length;
+            downloadLink.classList.add('hidden');
+            status.textContent = fileInput.files.length ? 'File selected. Click Process File to proceed.' : '';
+        });
+
+        processButton.addEventListener('click', () => {
+            const file = fileInput.files[0];
+            if (!file) {
+                status.textContent = 'Please select a file first.';
+                return;
+            }
+
+            status.textContent = 'Processing...';
+            const reader = new FileReader();
+
+            reader.onload = (e) => {
+                try {
+                    const data = JSON.parse(e.target.result);
+                    if (!Array.isArray(data)) {
+                        status.textContent = 'Error: File must contain a JSON array.';
+                        return;
+                    }
+
+                    const processedData = data.map(item => {
+                        return {
+                            ...item,
+                            repeatCheckbox: item.chk,
+                            learnedCheckbox: item.chk2,
+                            chk: undefined,
+                            chk2: undefined,
+                            chk3: undefined
+                        };
+                    }).map(({ chk, chk2, chk3, ...rest }) => rest);
+
+                    const blob = new Blob([JSON.stringify(processedData, null, 2)], { type: 'application/json' });
+                    const url = URL.createObjectURL(blob);
+                    downloadLink.href = url;
+                    downloadLink.classList.remove('hidden');
+                    status.textContent = 'File processed successfully! Click the button to download.';
+                } catch (error) {
+                    status.textContent = 'Error processing file: ' + error.message;
+                }
+            };
+
+            reader.onerror = () => {
+                status.textContent = 'Error reading file.';
+            };
+
+            reader.readAsText(file);
+        });
+    </script>
+</body>
+</html>

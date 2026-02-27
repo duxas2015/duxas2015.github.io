@@ -1,0 +1,3462 @@
+[
+  {
+    "en": "The crew had no choice but to abándon the sinking ship.",
+    "ru": "У экипажа не было другого выбора, кроме как покинуть тонущий корабль.",
+    "index": 0,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "Many religious groups abhór violence in all its forms.",
+    "ru": "Многие религиозные группы презирают насилие во всех его формах.",
+    "index": 1,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "Congress voted to aménd the bill before sending it to the president.",
+    "ru": "Конгресс проголосовал за то, чтобы внести поправки в законопроект, прежде чем отправить его президенту.",
+    "index": 2,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "A new set of problems is likely to aríse during the testing phase.",
+    "ru": "Во время фазы тестирования, вероятно, возникнет новый комплекс проблем.",
+    "index": 3,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "His former partner felt that the sudden merger was a deliberate attempt to betráy him.",
+    "ru": "Его бывший партнёр почувствовал, что внезапное слияние было преднамеренной попыткой предать его.",
+    "index": 4,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "We will always chérish the memories of our grandmother's kindness.",
+    "ru": "Мы всегда будем лелеять (дорожить) воспоминаниями о доброте нашей бабушки.",
+    "index": 5,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The suspects were coérced into signing the confession under duress.",
+    "ru": "Подозреваемые были принуждены подписать признание под давлением.",
+    "index": 6,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "Alcohol consumption can significantly impáir judgment and motor skills.",
+    "ru": "Неожиданный шторм угрожал уничтожить значительную часть всего урожая.",
+    "index": 7,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The light began to dímish as the sun set below the horizon.",
+    "ru": "Свет начал ослабевать (уменьшаться), когда солнце село за горизонт.",
+    "index": 8,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The treasurer was caught trying to embézzle funds from the company account.",
+    "ru": "Казначей был пойман на попытке растратить средства со счёта компании.",
+    "index": 9,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "Critics routinely extól the director’s genius and unique cinematic style.",
+    "ru": "Критики регулярно восхваляют гениальность и уникальный кинематографический стиль режиссёра.",
+    "index": 10,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The start-up continued to flóunder despite receiving a large investment.",
+    "ru": "Стартап продолжал испытывать трудности (барахтаться), несмотря на получение крупной инвестиции.",
+    "index": 11,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The small town must grápple with the challenge of providing adequate healthcare.",
+    "ru": "Маленький город должен бороться с проблемой обеспечения надлежащего здравоохранения.",
+    "index": 12,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "Alcohol consumption can significantly impáir judgment and motor skills.",
+    "ru": "Потребление алкоголя может значительно ухудшить рассудительность и моторику.",
+    "index": 13,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "Do not mágnify minor issues; focus on the main objective.",
+    "ru": "Не стоит преувеличивать мелкие проблемы; сосредоточьтесь на главной цели.",
+    "index": 14,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "Many students négléct their health when preparing for final exams.",
+    "ru": "Многие студенты пренебрегают своим здоровьем, когда готовятся к выпускным экзаменам.",
+    "index": 15,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The cryptic message seemed to perpléx even the seasoned detective.",
+    "ru": "Загадочное сообщение, казалось, озадачило даже опытного детектива.",
+    "index": 16,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "She took a moment to pónder the consequences of her rash decision.",
+    "ru": "Она взяла паузу, чтобы обдумать последствия своего поспешного решения.",
+    "index": 17,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The president will prómulgate the new law next week in a public address.",
+    "ru": "Президент обнародует новый закон на следующей неделе в публичном обращении.",
+    "index": 18,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "Many ancient cultures revére their ancestors and nature spirits.",
+    "ru": "Многие древние культуры почитают своих предков и духов природы.",
+    "index": 19,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The community gathered to móurn the loss of their beloved leader.",
+    "ru": "Община собралась, чтобы скорбеть о потере своего любимого лидера.",
+    "index": 20,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The thick curtains helped to múffle the noise from the busy street outside.",
+    "ru": "Толстые шторы помогли заглушить шум с оживленной улицы.",
+    "index": 21,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "He was so nervous he could only múmble a thank you before leaving the stage.",
+    "ru": "Он так нервничал, что смог только пробормотать \"спасибо\", прежде чем уйти со сцены.",
+    "index": 22,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The old man liked to múrmur quietly to himself while tending his garden.",
+    "ru": "Старик любил тихо бормотать (шептать) себе под нос, ухаживая за своим садом.",
+    "index": 23,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The rabbit began to níbble cautiously on the carrot I offered it.",
+    "ru": "Кролик начал осторожно откусывать понемногу от морковки, которую я ему предложил.",
+    "index": 24,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "She gave a quick nód to show that she understood the instructions.",
+    "ru": "Она быстро кивнула, чтобы показать, что поняла инструкции.",
+    "index": 25,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "All employees are expected to obéy the safety guidelines without exception.",
+    "ru": "Ожидается, что все сотрудники будут подчиняться правилам безопасности без исключений.",
+    "index": 26,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The law will oblíge companies to disclose their carbon emissions annually.",
+    "ru": "Закон обяжет компании ежегодно раскрывать информацию о выбросах углерода.",
+    "index": 27,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "Fallen trees frequently obstrúct the road after a major storm.",
+    "ru": "Упавшие деревья часто препятствуют (блокируют) проезду после сильного шторма.",
+    "index": 28,
+    "repeatCheckbox": false,
+    "learnedCheckbox": true,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "I didn't mean to overhear, but they were speaking quite loudly.",
+    "ru": "Я не собирался подслушивать, но они говорили довольно громко.",
+    "index": 29,
+    "repeatCheckbox": false,
+    "learnedCheckbox": true,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The sheer amount of work threatened to overwhélm the entire staff.",
+    "ru": "Огромный объем работы грозил подавить (сокрушить) весь персонал.",
+    "index": 30,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "Many ancient civilizations pérished due to a lack of clean water.",
+    "ru": "Многие древние цивилизации погибли из-за нехватки чистой воды.",
+    "index": 31,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "His sudden departure will píque everyone's curiosity and cause speculation.",
+    "ru": "Его внезапный отъезд заденет (возбудит) всеобщее любопытство и вызовет домыслы.",
+    "index": 32,
+    "repeatCheckbox": false,
+    "learnedCheckbox": true,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The defendant chose to pléad guilty to the lesser charges.",
+    "ru": "Обвиняемый решил признать себя виновным по менее серьезным обвинениям.",
+    "index": 33,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "They plédged to donate ten percent of their annual income to charity.",
+    "ru": "Они пообещали (торжественно обязались) жертвовать десять процентов своего годового дохода на благотворительность.",
+    "index": 34,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The stock market is expected to plúnge after the central bank’s announcement.",
+    "ru": "Ожидается, что фондовый рынок резко упадет после заявления центрального банка.",
+    "index": 35,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The toddlers would práttle endlessly about imaginary friends and fairy tales.",
+    "ru": "Малыши без конца болтали (лепетали) о воображаемых друзьях и сказках.",
+    "index": 36,
+    "repeatCheckbox": false,
+    "learnedCheckbox": true,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The lack of communication may precípitate a severe misunderstanding between the teams.",
+    "ru": "Отсутствие общения может спровоцировать (ускорить) серьёзное недопонимание между командами.",
+    "index": 37,
+    "repeatCheckbox": false,
+    "learnedCheckbox": true,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "You should never presúme anything; always ask for clarification.",
+    "ru": "Вы никогда не должны ничего предполагать; всегда просите разъяснений.",
+    "index": 38,
+    "repeatCheckbox": false,
+    "learnedCheckbox": true,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "Police were called in to quéll the unrest following the football match.",
+    "ru": "Полицию вызвали, чтобы подавить беспорядки после футбольного матча.",
+    "index": 39,
+    "repeatCheckbox": false,
+    "learnedCheckbox": true,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "A cold glass of water will quénch your thirst after the hike.",
+    "ru": "Холодный стакан воды утолит вашу жажду после похода.",
+    "index": 40,
+    "repeatCheckbox": false,
+    "learnedCheckbox": true,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "Thieves managed to ránsack the entire apartment while the owners were out.",
+    "ru": "Ворам удалось ограбить (обыскать) всю квартиру, пока хозяев не было.",
+    "index": 41,
+    "repeatCheckbox": false,
+    "learnedCheckbox": true,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "We regárd this project as a critical success for the company.",
+    "ru": "Мы считаем этот проект критически важным успехом для компании.",
+    "index": 42,
+    "repeatCheckbox": false,
+    "learnedCheckbox": true,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The whole nation rejóiced when the final peace treaty was signed.",
+    "ru": "Вся нация ликовала, когда был подписан окончательный мирный договор.",
+    "index": 43,
+    "repeatCheckbox": false,
+    "learnedCheckbox": true,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "Despite the staff cuts, several essential positions will remáin unfilled.",
+    "ru": "Несмотря на сокращение штата, несколько важных должностей останутся незаполненными.",
+    "index": 44,
+    "repeatCheckbox": false,
+    "learnedCheckbox": true,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "It is unhealthy to constantly représs your feelings and emotions.",
+    "ru": "Неполезно постоянно подавлять свои чувства и эмоции.",
+    "index": 45,
+    "repeatCheckbox": false,
+    "learnedCheckbox": true,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The strong fortress was able to repúlse the final attack easily.",
+    "ru": "Сильная крепость смогла легко отразить последнюю атаку.",
+    "index": 46,
+    "repeatCheckbox": false,
+    "learnedCheckbox": true,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "She will resént being forced to work overtime without prior notice.",
+    "ru": "Она будет возмущаться (обижаться), если ее заставят работать сверхурочно без предварительного уведомления.",
+    "index": 47,
+    "repeatCheckbox": false,
+    "learnedCheckbox": true,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "She currently resídes in London but plans to move to Berlin next year.",
+    "ru": "В настоящее время она проживает в Лондоне, но планирует переехать в Берлин в следующем году.",
+    "index": 48,
+    "repeatCheckbox": false,
+    "learnedCheckbox": true,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "He had to restráin himself from shouting an angry reply during the meeting.",
+    "ru": "Ему пришлось сдержаться, чтобы не выкрикнуть гневный ответ во время встречи.",
+    "index": 49,
+    "repeatCheckbox": false,
+    "learnedCheckbox": true,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "After a short coffee break, the meeting will resúme at 10 a.m.",
+    "ru": "После короткого перерыва на кофе встреча возобновится в 10 утра.",
+    "index": 50,
+    "repeatCheckbox": false,
+    "learnedCheckbox": true,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "Many founders have to sácrifice their weekends to build their businesses.",
+    "ru": "Многим основателям приходится жертвовать своими выходными, чтобы построить свой бизнес.",
+    "index": 51,
+    "repeatCheckbox": false,
+    "learnedCheckbox": true,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "Just the smell of the grilling meat was enough to make the dogs salívate.",
+    "ru": "Одного запаха жарящегося мяса было достаточно, чтобы собаки начали пускать слюну.",
+    "index": 52,
+    "repeatCheckbox": false,
+    "learnedCheckbox": true,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The train's brakes began to scréech loudly as it pulled into the station.",
+    "ru": "Тормоза поезда начали громко скрипеть (визжать), когда он подъезжал к станции.",
+    "index": 53,
+    "repeatCheckbox": false,
+    "learnedCheckbox": true,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "When the fire alarm rang, people began to scúrry toward the exits.",
+    "ru": "Когда зазвонила пожарная сигнализация, люди начали сновать (спешить) к выходам.",
+    "index": 54,
+    "repeatCheckbox": false,
+    "learnedCheckbox": true,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The sudden bad news threatens to shátter their confidence just before the launch.",
+    "ru": "Внезапная плохая новость грозит разрушить их уверенность прямо перед запуском.",
+    "index": 55,
+    "repeatCheckbox": false,
+    "learnedCheckbox": true,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The hero quickly sheáthed his sword and prepared to negotiate.",
+    "ru": "Герой быстро вложил меч в ножны и приготовился к переговорам.",
+    "index": 56,
+    "repeatCheckbox": false,
+    "learnedCheckbox": true,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The old painting was completely shróuded in dust sheets in the storage room.",
+    "ru": "Старая картина была полностью закутана (скрыта) в пыльные чехлы в кладовой.",
+    "index": 57,
+    "repeatCheckbox": false,
+    "learnedCheckbox": true,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "He tends to shúffle his feet when he is nervous or unsure of himself.",
+    "ru": "Он имеет обыкновение шаркать ногами, когда нервничает или не уверен в себе.",
+    "index": 58,
+    "repeatCheckbox": false,
+    "learnedCheckbox": true,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The lightning seemed to smíte the ancient oak tree right in the middle.",
+    "ru": "Молния, казалось, поразила старый дуб прямо посередине.",
+    "index": 59,
+    "repeatCheckbox": false,
+    "learnedCheckbox": true,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "When he heard the shocking news, the old man suddenly snapped his book shut.",
+    "ru": "Когда он услышал шокирующую новость, старик внезапно захлопнул книгу.",
+    "index": 60,
+    "repeatCheckbox": false,
+    "learnedCheckbox": true,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The child liked to snúggle under the blankets with his favorite teddy bear.",
+    "ru": "Ребенок любил уютно устраиваться (прижиматься) под одеялом со своим любимым плюшевым мишкой.",
+    "index": 61,
+    "repeatCheckbox": false,
+    "learnedCheckbox": true,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "One bad apple can spóil the whole barrel, so choose your team carefully.",
+    "ru": "Одно \"гнилое яблоко\" может испортить всю бочку, поэтому выбирайте команду осторожно.",
+    "index": 62,
+    "repeatCheckbox": false,
+    "learnedCheckbox": true,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "Be careful when running on uneven ground, you don't want to spráin your ankle.",
+    "ru": "Будьте осторожны, бегая по неровной поверхности, вы же не хотите растянуть лодыжку.",
+    "index": 63,
+    "repeatCheckbox": false,
+    "learnedCheckbox": true,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The tired hiker began to stágger after climbing for ten consecutive hours.",
+    "ru": "Уставший турист начал шататься после десяти часов непрерывного подъема.",
+    "index": 64,
+    "repeatCheckbox": false,
+    "learnedCheckbox": true,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The bridge structure had to stráin to withstand the weight of the heavy trucks.",
+    "ru": "Конструкции моста пришлось напрячься, чтобы выдержать вес тяжелых грузовиков.",
+    "index": 65,
+    "repeatCheckbox": false,
+    "learnedCheckbox": true,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The police managed to subdúe the crowd without resorting to violence.",
+    "ru": "Полиции удалось подавить толпу, не прибегая к насилию.",
+    "index": 66,
+    "repeatCheckbox": false,
+    "learnedCheckbox": true,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "We waited for the initial excitement to subsíde before making a formal announcement.",
+    "ru": "Мы ждали, пока первоначальное возбуждение уляжется (спадет), прежде чем сделать официальное объявление.",
+    "index": 67,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The graphic designer will superimpóse the company logo onto the photo.",
+    "ru": "Графический дизайнер наложит (суперимпонирует) логотип компании на фотографию.",
+    "index": 68,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The media tried to suppréss the damaging information before the election.",
+    "ru": "СМИ пытались подавить (скрыть) компрометирующую информацию перед выборами.",
+    "index": 69,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "You must surmóunt the language barrier if you want to succeed in a new country.",
+    "ru": "Вы должны преодолеть языковой барьер, если хотите добиться успеха в новой стране.",
+    "index": 70,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The victim agreed to téstify against the crime boss in open court.",
+    "ru": "Жертва согласилась давать показания против криминального авторитета в открытом суде.",
+    "index": 71,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The thought of the impending debt crisis began to tórment the finance minister.",
+    "ru": "Мысль о надвигающемся долговом кризисе начала мучить министра финансов.",
+    "index": 72,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The mechanic had to twéak the engine's settings to improve its performance.",
+    "ru": "Механику пришлось подправить (отрегулировать) настройки двигателя, чтобы улучшить его производительность.",
+    "index": 73,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "It takes years of practice to wíeld a sword with such skill.",
+    "ru": "Требуются годы практики, чтобы владеть мечом с таким мастерством.",
+    "index": 74,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The company was forced to yíeld to the union's demands after a week-long strike.",
+    "ru": "Компания была вынуждена уступить требованиям профсоюза после недельной забастовки.",
+    "index": 75,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "To truly appreciate the art, one must not abándon the context in which it was created.",
+    "ru": "Чтобы по-настоящему оценить искусство, нельзя отбрасывать (покидать) контекст, в котором оно было создано.",
+    "index": 76,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "Many people abhór the unnecessary slaughter of animals for sport.",
+    "ru": "Многие люди ненавидят (презирают) ненужное убийство животных ради спорта.",
+    "index": 77,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "We decided to admit the mistake and move on with the revised plan.",
+    "ru": "Мы решили признать ошибку и двигаться дальше с пересмотренным планом.",
+    "index": 78,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The committee voted to aménd the club's constitution to include new rules.",
+    "ru": "Комитет проголосовал за внесение поправок в устав клуба, чтобы включить новые правила.",
+    "index": 79,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The magician hoped his tricks would amúse the skeptical audience.",
+    "ru": "Фокусник надеялся, что его трюки позабавят скептически настроенную публику.",
+    "index": 80,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "You can only appróximate the distance from the map; a measurement is better.",
+    "ru": "Вы можете только приблизительно оценить расстояние по карте; измерение будет точнее.",
+    "index": 81,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "Unexpected difficulties often aríse when dealing with complex infrastructure.",
+    "ru": "Непредвиденные трудности часто возникают при работе со сложной инфраструктурой.",
+    "index": 82,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The mountaineers plan to ascénd the highest peak before dawn.",
+    "ru": "Альпинисты планируют взобраться (подняться) на самую высокую вершину до рассвета.",
+    "index": 83,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "We must assúme the worst-case scenario and prepare a backup plan.",
+    "ru": "Мы должны предположить (допустить) наихудший сценарий и подготовить запасной план.",
+    "index": 84,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "She will atténd the international conference as a representative of the university.",
+    "ru": "Она будет присутствовать на международной конференции в качестве представителя университета.",
+    "index": 85,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "No one knows what fortune may befáll us on our long journey.",
+    "ru": "Никто не знает, какая удача может случиться (выпасть) нам в долгом путешествии.",
+    "index": 86,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "He took the effort to befríend the new colleague who looked lost and lonely.",
+    "ru": "Он приложил усилия, чтобы подружиться с новым коллегой, который выглядел потерянным и одиноким.",
+    "index": 87,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The desperate man had to bég for food in the busy city streets.",
+    "ru": "Отчаявшемуся мужчине пришлось умолять (просить) о еде на оживленных улицах города.",
+    "index": 88,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "I didn't begrúdge her the promotion; she truly deserved it.",
+    "ru": "Я не завидовал (сожалел о необходимости дать) ей повышению; она его действительно заслужила.",
+    "index": 89,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "They arrived in the city to behold the majestic ancient temples.",
+    "ru": "Они приехали в город, чтобы увидеть (созерцать) величественные древние храмы.",
+    "index": 90,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The intricate plot of the film seemed to bemúse many members of the audience.",
+    "ru": "Запутанный сюжет фильма, казалось, озадачил (сбил с толку) многих зрителей.",
+    "index": 91,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The citizens beséeched the king to lower the unbearable taxes.",
+    "ru": "Граждане умоляли (упрашивали) короля снизить невыносимые налоги.",
+    "index": 92,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "He became entirely besótted with the actress and wrote her daily letters.",
+    "ru": "Он совершенно ослеп (был одержим) этой актрисой и писал ей ежедневные письма.",
+    "index": 93,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The nation decided to bestów its highest honor on the returning hero.",
+    "ru": "Нация решила даровать (пожаловать) свою высшую награду вернувшемуся герою.",
+    "index": 94,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The spy was afraid his accomplice would eventually betráy him to the authorities.",
+    "ru": "Шпион боялся, что его сообщник в конечном итоге предаст его властям.",
+    "index": 95,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The complex instructions seemed to bewílder the assembly line workers.",
+    "ru": "Сложные инструкции, казалось, сбивали с толку (озадачивали) работников сборочной линии.",
+    "index": 96,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The new marketing campaign is designed to bóost sales in the quiet period.",
+    "ru": "Новая маркетинговая кампания призвана увеличить (поднять) продажи в период затишья.",
+    "index": 97,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The speaker's monotonous tone began to bóre the audience after the first hour.",
+    "ru": "Монотонный тон докладчика начал надоедать (нагонять скуку) публике уже через первый час.",
+    "index": 98,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "Two rival groups started to bráwl outside the pub late on Friday night.",
+    "ru": "Две конкурирующие группы начали устраивать драку возле паба поздно вечером в пятницу.",
+    "index": 99,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The contractor was penalized for breáching the terms of the signed agreement.",
+    "ru": "Подрядчик был оштрафован за нарушение условий подписанного соглашения.",
+    "index": 100,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The glass was filled to the brím with freshly squeezed orange juice.",
+    "ru": "Стакан был наполнен до краев (переполнен) свежевыжатым апельсиновым соком.",
+    "index": 101,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "She had to brúise the spices in a mortar and pestle to release their flavor.",
+    "ru": "Ей пришлось раздавить (измельчить) специи в ступке, чтобы раскрыть их аромат.",
+    "index": 102,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The car slightly búmped into the barrier while parallel parking.",
+    "ru": "Машина слегка стукнулась (врезалась) в ограждение во время параллельной парковки.",
+    "index": 103,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The phone began to búzz repeatedly, indicating a flood of new messages.",
+    "ru": "Телефон начал жужжать (вибрировать) многократно, сигнализируя о потоке новых сообщений.",
+    "index": 104,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "We can býpass the long highway traffic by taking the scenic back road.",
+    "ru": "Мы можем обойти (объехать) длинную пробку на шоссе, поехав по живописной проселочной дороге.",
+    "index": 105,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "His failure to apologize seemed to impíy (им-плай) a total lack of remorse.",
+    "ru": "Его отказ извиняться, казалось, подразумевал полное отсутствие раскаяния.",
+    "index": 106,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "From the rising water levels, scientists could infér (ин-фёр) the rapid melting of the glaciers.",
+    "ru": "По повышению уровня воды учёные смогли сделать вывод о быстром таянии ледников.",
+    "index": 107,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The manager had to intervéne (ин-тер-вин) to stop the conflict between the two departments.",
+    "ru": "Руководителю пришлось вмешаться, чтобы остановить конфликт между двумя отделами.",
+    "index": 108,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The press started to lábel (лэйбл) the politician as a 'reformist' after his first speech.",
+    "ru": "Пресса начала навешивать ярлык \"реформатора\" на политика после его первой речи.",
+    "index": 109,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "She had to relísh (рэ-лиш) the few moments of quiet she found during her busy day.",
+    "ru": "Ей пришлось наслаждаться теми немногими моментами тишины, которые она находила в свой напряженный день.",
+    "index": 110,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "Everyone started to specúlate (спэк-ю-лэйт) about who would be the next CEO.",
+    "ru": "Все начали строить догадки о том, кто станет следующим генеральным директором.",
+    "index": 111,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "Despite a strong effort, the team eventually succúmbed (са-кам) to the pressure of the final game.",
+    "ru": "Несмотря на все усилия, команда в итоге поддалась давлению финальной игры.",
+    "index": 112,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "Do not squánder (сквон-дер) this opportunity to learn from the best in the field.",
+    "ru": "Не растрачивай эту возможность поучиться у лучших специалистов в этой области.",
+    "index": 113,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "They had to trúdge (традж) up the steep hill in the heavy rain.",
+    "ru": "Им пришлось тащиться (плестись) по крутому холму под сильным дождем.",
+    "index": 114,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The release of the new product was planned to coincíde (ко-ин-сайд) with the holiday season.",
+    "ru": "Выпуск нового продукта был запланирован совместно с сезоном отпусков.",
+    "index": 115,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The whole family gathered to commémorate (ком-мэм-о-рэйт) the anniversary of the event.",
+    "ru": "Вся семья собралась, чтобы почтить память (отметить годовщину) этого события.",
+    "index": 116,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The runner had to gásp (га-сп) for air after completing the 400-meter sprint.",
+    "ru": "Бегуну пришлось задыхаться (ловить воздух) после завершения 400-метрового спринта.",
+    "index": 117,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The team decided to rélish (рэ-лиш) the small victories along the way to the main goal.",
+    "ru": "Команда решила наслаждаться маленькими победами на пути к главной цели.",
+    "index": 118,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "He chose to squánder (сквон-дер) his inheritance on luxury cars and expensive parties.",
+    "ru": "Он решил растратить своё наследство на роскошные автомобили и дорогие вечеринки.",
+    "index": 119,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The explosion caused everyone nearby to gásp (га-сп) in shock.",
+    "ru": "Взрыв заставил всех, кто был поблизости, ахнуть от шока.",
+    "index": 120,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The security guard chose to intervéne (ин-тер-вин) only when the fight escalated.",
+    "ru": "Охранник решил вмешаться только тогда, когда драка обострилась.",
+    "index": 121,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "It is wrong to lábel (лэйбл) an entire generation as \"apathetic.\"",
+    "ru": "Неправильно навешивать ярлык \"апатичного\" на целое поколение.",
+    "index": 122,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "His ambiguous answer seemed to impíy (им-плай) that he was withholding information.",
+    "ru": "Его двусмысленный ответ, казалось, подразумевал, что он скрывает информацию.",
+    "index": 123,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "Based on the data, we can infér (ин-фёр) a strong correlation between these two variables.",
+    "ru": "Основываясь на данных, мы можем сделать вывод о сильной взаимосвязи между этими двумя переменными.",
+    "index": 124,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "Historians still specúlate (спэк-ю-лэйт) about the true motives of the ancient king.",
+    "ru": "Историки до сих пор строят догадки об истинных мотивах древнего короля.",
+    "index": 125,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "To truly appreciate the art, one must not abándon (э-бэн-дон) the context in which it was created.",
+    "ru": "Чтобы по-настоящему оценить искусство, нельзя отбрасывать (покидать) контекст, в котором оно было создано.",
+    "index": 126,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "Many religious groups abhór (аб-хор) violence in all its forms.",
+    "ru": "Многие религиозные группы ненавидят (презирают) насилие во всех его формах.",
+    "index": 127,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "We decided to admit (ад-мит) the mistake and move on with the revised plan.",
+    "ru": "Мы решили признать ошибку и двигаться дальше с пересмотренным планом.",
+    "index": 128,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The committee voted to aménd (э-менд) the club's constitution to include new rules.",
+    "ru": "Комитет проголосовал за внесение поправок в устав клуба, чтобы включить новые правила.",
+    "index": 129,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The magician hoped his tricks would amúse (э-мьюз) the skeptical audience.",
+    "ru": "Фокусник надеялся, что его трюки позабавят скептически настроенную публику.",
+    "index": 130,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "You can only appróximate (э-прокс-и-мэйт) the distance from the map; a measurement is better.",
+    "ru": "Вы можете только приблизительно оценить расстояние по карте; измерение будет точнее.",
+    "index": 131,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "Unexpected difficulties often aríse (э-райз) when dealing with complex infrastructure.",
+    "ru": "Непредвиденные трудности часто возникают при работе со сложной инфраструктурой.",
+    "index": 132,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The mountaineers plan to ascénd (э-сэнд) the highest peak before dawn.",
+    "ru": "Альпинисты планируют взобраться (подняться) на самую высокую вершину до рассвета.",
+    "index": 133,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "We must assúme (э-сьюм) the worst-case scenario and prepare a backup plan.",
+    "ru": "Мы должны предположить (допустить) наихудший сценарий и подготовить запасной план.",
+    "index": 134,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "She will atténd (э-тэнд) the international conference as a representative of the university.",
+    "ru": "Она будет присутствовать на международной конференции в качестве представителя университета.",
+    "index": 135,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "No one knows what fortune may befáll (би-фол) us on our long journey.",
+    "ru": "Никто не знает, какая удача может случиться (выпасть) нам в долгом путешествии.",
+    "index": 136,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "He took the effort to befríend (би-фрэнд) the new colleague who looked lost and lonely.",
+    "ru": "Он приложил усилия, чтобы подружиться с новым коллегой, который выглядел потерянным и одиноким.",
+    "index": 137,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The desperate man had to bég (бэг) for food in the busy city streets.",
+    "ru": "Отчаявшемуся мужчине пришлось умолять (просить) о еде на оживленных улицах города.",
+    "index": 138,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "I didn't begrúdge (би-градж) her the promotion; she truly deserved it.",
+    "ru": "Я не завидовал (сожалел о необходимости дать) ей повышению; она его действительно заслужила.",
+    "index": 139,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "They arrived in the city to behold (би-холд) the majestic ancient temples.",
+    "ru": "Они приехали в город, чтобы увидеть (созерцать) величественные древние храмы.",
+    "index": 140,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The intricate plot of the film seemed to bemúse (би-мьюз) many members of the audience.",
+    "ru": "Запутанный сюжет фильма, казалось, озадачил (сбил с толку) многих зрителей.",
+    "index": 141,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The citizens beséeched (би-сич) the king to lower the unbearable taxes.",
+    "ru": "Граждане умоляли (упрашивали) короля снизить невыносимые налоги.",
+    "index": 142,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "He became entirely besótted (би-сот-ид) with the actress and wrote her daily letters.",
+    "ru": "Он совершенно ослеп (был одержим) этой актрисой и писал ей ежедневные письма.",
+    "index": 143,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The nation decided to bestów (би-стоу) its highest honor on the returning hero.",
+    "ru": "Нация решила даровать (пожаловать) свою высшую награду вернувшемуся герою.",
+    "index": 144,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The spy was afraid his accomplice would eventually betráy (би-трэй) him to the authorities.",
+    "ru": "Шпион боялся, что его сообщник в конечном итоге предаст его властям.",
+    "index": 145,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The complex instructions seemed to bewílder (би-уил-дэр) the assembly line workers.",
+    "ru": "Сложные инструкции, казалось, сбивали с толку (озадачивали) работников сборочной линии.",
+    "index": 146,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The new marketing campaign is designed to bóost (буст) sales in the quiet period.",
+    "ru": "Новая маркетинговая кампания призвана увеличить (поднять) продажи в период затишья.",
+    "index": 147,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The speaker's monotonous tone began to bóre (бор) the audience after the first hour.",
+    "ru": "Монотонный тон докладчика начал надоедать (нагонять скуку) публике уже через первый час.",
+    "index": 148,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "Two rival groups started to bráwl (брол) outside the pub late on Friday night.",
+    "ru": "Две конкурирующие группы начали устраивать драку возле паба поздно вечером в пятницу.",
+    "index": 149,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The contractor was penalized for breáching (брич-инг) the terms of the signed agreement.",
+    "ru": "Подрядчик был оштрафован за нарушение условий подписанного соглашения.",
+    "index": 150,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The glass was filled to the brím (брим) with freshly squeezed orange juice.",
+    "ru": "Стакан был наполнен до краев (переполнен) свежевыжатым апельсиновым соком.",
+    "index": 151,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "She had to brúise (бруз) the spices in a mortar and pestle to release their flavor.",
+    "ru": "Ей пришлось раздавить (измельчить) специи в ступке, чтобы раскрыть их аромат.",
+    "index": 152,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The car slightly búmped (бампт) into the barrier while parallel parking.",
+    "ru": "Машина слегка стукнулась (врезалась) в ограждение во время параллельной парковки.",
+    "index": 153,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The phone began to búzz (баз) repeatedly, indicating a flood of new messages.",
+    "ru": "Телефон начал жужжать (вибрировать) многократно, сигнализируя о потоке новых сообщений.",
+    "index": 154,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "We can býpass (бай-пас) the long highway traffic by taking the scenic back road.",
+    "ru": "Мы можем обойти (объехать) длинную пробку на шоссе, поехав по живописной проселочной дороге.",
+    "index": 155,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "After a long siege, the defenders were forced to capítulate (кэ-пит-ю-лэйт).",
+    "ru": "После долгой осады защитники были вынуждены капитулировать (сдаться).",
+    "index": 156,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The noisy chatter in the hallway did not céase (сис) even after the bell rang.",
+    "ru": "Шумный говор в коридоре не прекратился даже после звонка.",
+    "index": 157,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "She said she would chérish (чэр-иш) the small gift forever because it came from her daughter.",
+    "ru": "Она сказала, что будет дорожить (лелеять) маленьким подарком вечно, потому что он был от её дочери.",
+    "index": 158,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The child continued to chíde (чайд) the cat for climbing on the kitchen counter.",
+    "ru": "Ребёнок продолжал бранить (укорять) кота за то, что он залез на кухонную стойку.",
+    "index": 159,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The old grandfather clock began to chíme (чайм) exactly at midnight.",
+    "ru": "Старинные напольные часы начали бить (звонить) ровно в полночь.",
+    "index": 160,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The lawyer sought a way to circumvént (сёр-кум-вэнт) the complex new regulations.",
+    "ru": "Адвокат искал способ обойти (избежать) сложные новые правила.",
+    "index": 161,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The damp cloth began to clíng (клинг) to her skin in the humid weather.",
+    "ru": "Влажная ткань начала прилипать (цепляться) к её коже в условиях влажной погоды.",
+    "index": 162,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "They heard glasses clínk (клинк) as the guests raised a toast to the happy couple.",
+    "ru": "Они услышали, как чокнулись бокалы, когда гости подняли тост за счастливую пару.",
+    "index": 163,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "She claimed that her confession was obtained after the police had coérced (коу-ёрс) her.",
+    "ru": "Она утверждала, что её признание было получено после того, как полиция принудила её.",
+    "index": 164,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The researchers had to colláte (ко-лэйт) data from three separate sources before analysis.",
+    "ru": "Исследователям пришлось сопоставить (свести воедино) данные из трёх отдельных источников перед анализом.",
+    "index": 165,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "He tried to cómfort (кам-фёрт) the crying child by offering him a brightly colored toy.",
+    "ru": "Он попытался утешить плачущего ребёнка, предложив ему яркую игрушку.",
+    "index": 166,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "After hours of interrogation, the suspect decided to conféss (кон-фэс) to the crime.",
+    "ru": "После многочасового допроса подозреваемый решил признаться в преступлении.",
+    "index": 167,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "Due to the quarantine, they had to confíne (кон-файн) their activities to their own property.",
+    "ru": "Из-за карантина им пришлось ограничить свою деятельность пределами своей собственности.",
+    "index": 168,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The sudden noise seemed to confúse (кон-фьюз) the old dog, who started barking.",
+    "ru": "Внезапный шум, казалось, сбил с толку (смутил) старую собаку, которая начала лаять.",
+    "index": 169,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The two sides will conténd (кон-тенд) for the championship title in the final match.",
+    "ru": "Две стороны будут бороться (состязаться) за чемпионский титул в финальном матче.",
+    "index": 170,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The cat managed to créep (крип) silently into the room without waking anyone.",
+    "ru": "Коту удалось тихо прокрасться в комнату, никого не разбудив.",
+    "index": 171,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The rain will crúddle (крад-дл) the fresh milk if it is not refrigerated immediately.",
+    "ru": "Дождь свернёт (створожит) свежее молоко, если его не охладить немедленно.",
+    "index": 172,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "Parents often cúddle (кад-дл) their children to provide comfort and reassurance.",
+    "ru": "Родители часто обнимают (прижимают к себе) своих детей, чтобы обеспечить комфорт и уверенность.",
+    "index": 173,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "He only dábbleed (да-бл) in painting as a hobby; he never intended to sell his work.",
+    "ru": "Он лишь занимался (баловался) живописью как хобби; он никогда не собирался продавать свои работы.",
+    "index": 174,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The harsh winter storm is expected to dámage (дам-идж) power lines across the region.",
+    "ru": "Ожидается, что суровая зимняя буря повредит линии электропередач по всему региону.",
+    "index": 175,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The rabbit began to dárt (дарт) nervously back and forth across the clearing.",
+    "ru": "Кролик начал нервно метаться (бросаться) взад-вперед по поляне.",
+    "index": 176,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "Corruption threatens to debáse (ди-бэйс) the integrity of the entire political system.",
+    "ru": "Коррупция угрожает умалить (обесценить) целостность всей политической системы.",
+    "index": 177,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "It is often easier to decéive (ди-сив) others than to admit the truth to oneself.",
+    "ru": "Часто легче обмануть других, чем признаться в правде самому себе.",
+    "index": 178,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The sudden fire threatened to décimate (дэс-и-мэйт) the ancient forest.",
+    "ru": "Внезапный пожар угрожал уничтожить значительную часть (десятую часть) древнего леса.",
+    "index": 179,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "Many critics openly decrý (ди-край) the lack of originality in modern cinema.",
+    "ru": "Многие критики открыто осуждают (порицают) отсутствие оригинальности в современном кино.",
+    "index": 180,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "His failure to secure funding seemed to deject (ди-джект) the entire research team.",
+    "ru": "Его неспособность обеспечить финансирование, казалось, удручила (обескуражила) всю исследовательскую группу.",
+    "index": 181,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "We must deplóre (ди-плор) the decision to cut funding for education in rural areas.",
+    "ru": "Мы должны выразить сожаление (глубоко осудить) по поводу решения сократить финансирование образования в сельской местности.",
+    "index": 182,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "It is unfair to deríde (ди-райд) someone simply because they hold a different opinion.",
+    "ru": "Несправедливо высмеивать (насмехаться над) кого-то просто потому, что у него другое мнение.",
+    "index": 183,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The word \"democracy\" deríves (ди-райвз) from the ancient Greek terms \"demos\" and \"kratos\".",
+    "ru": "Слово \"демократия\" происходит от древнегреческих терминов \"демос\" и \"кратос\".",
+    "index": 184,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "We watched the elevator slowly descénd (ди-сэнд) to the ground floor.",
+    "ru": "Мы наблюдали, как лифт медленно спускается на первый этаж.",
+    "index": 185,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "She found it impossible to despíse (ди-спайз) her former mentor, despite their disagreement.",
+    "ru": "Ей было невозможно презирать своего бывшего наставника, несмотря на их разногласия.",
+    "index": 186,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The customs officers decided to detáin (ди-тэйн) the suspicious traveler for further questioning.",
+    "ru": "Сотрудники таможни решили задержать подозрительного путешественника для дальнейшего допроса.",
+    "index": 187,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The high cost of tuition did not detér (ди-тёр) her from applying to the best university.",
+    "ru": "Высокая стоимость обучения не отпугнула (удержала) её от поступления в лучший университет.",
+    "index": 188,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "If the weather continues to deterioráte (ди-тир-и-о-рэйт), the flight will be canceled.",
+    "ru": "Если погода продолжит ухудшаться, рейс будет отменен.",
+    "index": 189,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "It takes time for the body to digést (дай-джест) a heavy meal rich in protein.",
+    "ru": "Телу требуется время, чтобы переварить тяжелую пищу, богатую белком.",
+    "index": 190,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The speaker tended to digréss (дай-грэс) frequently from the main topic of the presentation.",
+    "ru": "Докладчик имел обыкновение часто отклоняться от основной темы презентации.",
+    "index": 191,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "Over time, the candle flame began to diminish (ди-мин-иш) and flicker.",
+    "ru": "Со временем пламя свечи начало уменьшаться и мерцать.",
+    "index": 192,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The peacekeepers’ goal was to disárm (дис-арм) the hostile rebels in the region.",
+    "ru": "Цель миротворцев состояла в том, чтобы разоружить враждебных повстанцев в регионе.",
+    "index": 193,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "His negative comments seemed designed to discóurage (дис-кёр-идж) others from pursuing the same career.",
+    "ru": "Его негативные комментарии, казалось, были призваны отговорить (обескуражить) других от продолжения той же карьеры.",
+    "index": 194,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The noblewoman would disdáin (дис-дэйн) anyone who did not share her refined tastes.",
+    "ru": "Знать презирала (относилась с презрением) к любому, кто не разделял её утонченных вкусов.",
+    "index": 195,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "They decided to dismíss (дис-мис) the theory due to a lack of supporting evidence.",
+    "ru": "Они решили отклонить (отвергнуть) эту теорию из-за отсутствия подтверждающих доказательств.",
+    "index": 196,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "It is unprofessional to publicly dispárage (дис-па-ридж) the work of a competitor.",
+    "ru": "Непрофессионально публично уничижать (принижать) работу конкурента.",
+    "index": 197,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "After the concert, the crowd began to dispérse (дис-пёрс) slowly into the streets.",
+    "ru": "После концерта толпа начала медленно рассеиваться по улицам.",
+    "index": 198,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "Their political views have recently divérged (дай-вёрдж) on the issue of climate change.",
+    "ru": "Их политические взгляды недавно разошлись по вопросу изменения климата.",
+    "index": 199,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "It began to drízzle (дри-зл) lightly just as we were setting up the picnic.",
+    "ru": "Начал слегка накрапывать дождь, как раз когда мы устраивали пикник.",
+    "index": 200,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The hungry baby started to drool (друл) the moment he smelled the warm milk.",
+    "ru": "Голодный ребенок начал пускать слюни (пускать слюнки) в тот момент, когда почувствовал запах теплого молока.",
+    "index": 201,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The technician used a special machine to dúplicate (дью-пли-кэйт) the entire database.",
+    "ru": "Техник использовал специальную машину, чтобы скопировать (дублировать) всю базу данных.",
+    "index": 202,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "He tends to dwell (дуэл) on his past mistakes, preventing him from moving forward.",
+    "ru": "Он имеет обыкновение зацикливаться (размышлять) на своих прошлых ошибках, что мешает ему двигаться вперед.",
+    "index": 203,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "I caught my little brother trying to éavesdrop (ивс-дроп) on our private conversation.",
+    "ru": "Я поймал своего младшего брата, который пытался подслушать наш частный разговор.",
+    "index": 204,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The investigation revealed that the accountant had been trying to embézzle (эм-бэзл) money for years.",
+    "ru": "Расследование показало, что бухгалтер годами пытался растрачивать (присваивать) деньги.",
+    "index": 205,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "We must encoúrage (эн-кёр-идж) young people to vote in every election.",
+    "ru": "Мы должны поощрять (воодушевлять) молодых людей голосовать на каждых выборах.",
+    "index": 206,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "She said she could not endúre (эн-дюр) the constant noise from the construction site any longer.",
+    "ru": "Она сказала, что больше не может выносить (терпеть) постоянный шум со стройки.",
+    "index": 207,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "We need an expert to éstimate (эс-ти-мэйт) the total cost of the repairs.",
+    "ru": "Нам нужен эксперт, чтобы оценить общую стоимость ремонта.",
+    "index": 208,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The liquid will quickly eváporate (и-ва-по-рэйт) if left in the sun for an hour.",
+    "ru": "Жидкость быстро испарится, если оставить её на солнце на час.",
+    "index": 209,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The old photograph managed to evóke (и-воук) strong memories of her childhood.",
+    "ru": "Старая фотография смогла вызвать (пробудить) сильные воспоминания о её детстве.",
+    "index": 210,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The critics extól (экс-тоул) the writer's latest novel as a masterpiece.",
+    "ru": "Критики восхваляют (превозносят) последний роман писателя как шедевр.",
+    "index": 211,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "Criminals often attempt to extórt (экс-торт) money from wealthy businessmen.",
+    "ru": "Преступники часто пытаются вымогать деньги у богатых бизнесменов.",
+    "index": 212,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The color of the old curtains began to fáde (фэйд) after years in the sunlight.",
+    "ru": "Цвет старых штор начал выцветать после многих лет пребывания на солнце.",
+    "index": 213,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "He tried not to fálter (фол-тэр) during his speech, but his voice cracked slightly.",
+    "ru": "Он старался не спотыкаться (колебаться) во время речи, но его голос слегка дрогнул.",
+    "index": 214,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "She tried not to flínch (флинч) when the doctor inserted the needle.",
+    "ru": "Она старалась не вздрогнуть (отшатнуться), когда врач вводил иглу.",
+    "index": 215,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The small business began to flóunder (флаун-дэр) after the loss of its biggest client.",
+    "ru": "Малый бизнес начал барахтаться (испытывать трудности) после потери своего крупнейшего клиента.",
+    "index": 216,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "Don't let your competitors fool (фул) you into thinking they are invulnerable.",
+    "ru": "Не позволяйте конкурентам обмануть вас, заставив думать, что они неуязвимы.",
+    "index": 217,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The extreme weather will fórce (форс) a change in our travel plans.",
+    "ru": "Экстремальная погода вынудит (заставит) нас изменить наши планы на поездку.",
+    "index": 218,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The blacksmith used high heat to fórge (фордж) the steel into a sharp blade.",
+    "ru": "Кузнец использовал сильный жар, чтобы выковать (сформировать) сталь в острое лезвие.",
+    "index": 219,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The company was foúnded (фаунд-ид) in 1985 by a group of university friends.",
+    "ru": "Компания была основана в 1985 году группой друзей из университета.",
+    "index": 220,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The edges of the old denim jacket began to fráy (фрэй) after many washes.",
+    "ru": "Края старой джинсовой куртки начали износиться (обтрепаться) после множества стирок.",
+    "index": 221,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "He used to fréquent (фри-куэнт) that coffee shop so often they knew his order by heart.",
+    "ru": "Он так часто посещал то кафе, что они знали его заказ наизусть.",
+    "index": 222,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "They decided to gámble (гам-бл) on the success of a completely new product line.",
+    "ru": "Они решили поставить (рискнуть) на успех совершенно новой линейки продуктов.",
+    "index": 223,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "We use a special instrument to gáuge (гэйдж) the pressure inside the reactor.",
+    "ru": "Мы используем специальный прибор, чтобы измерить (оценить) давление внутри реактора.",
+    "index": 224,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The solar panels were installed to génerate (джен-э-рэйт) enough electricity for the whole house.",
+    "ru": "Солнечные панели были установлены, чтобы генерировать (производить) достаточно электричества для всего дома.",
+    "index": 225,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "We watched the skier glíde (глайд) effortlessly down the fresh powder slope.",
+    "ru": "Мы наблюдали, как лыжник легко скользит по склону со свежим снегом.",
+    "index": 226,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The speech tended to glórify (гло-ри-фай) the nation's past while ignoring its flaws.",
+    "ru": "Речь имела тенденцию восхвалять прошлое нации, игнорируя при этом её недостатки.",
+    "index": 227,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "He was so hungry he threatened to górge (гордж) himself on the entire plate of pasta.",
+    "ru": "Он был так голоден, что грозился наесться (объесться) всей тарелкой пасты.",
+    "index": 228,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "We had to goúge (гаудж) a hole in the ice to access the water underneath.",
+    "ru": "Нам пришлось выдолбить (пробить) отверстие во льду, чтобы добраться до воды внизу.",
+    "index": 229,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "She had to gráb (грэб) her passport quickly before she missed the flight.",
+    "ru": "Ей пришлось быстро схватить паспорт, пока она не опоздала на рейс.",
+    "index": 230,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The council agreed to gránt (грант) the local charity special tax-exempt status.",
+    "ru": "Совет согласился предоставить местной благотворительной организации специальный статус освобождения от налогов.",
+    "index": 231,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The company is struggling to grápple (грэ-пл) with the sudden shift in market demand.",
+    "ru": "Компания изо всех сил борется (пытается справиться) с внезапным изменением рыночного спроса.",
+    "index": 232,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The pig started to grúnt (грант) happily once its trough was filled with feed.",
+    "ru": "Свинья начала радостно хрюкать, как только её корыто наполнили кормом.",
+    "index": 233,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "Water began to gúsh (гаш) out of the broken pipe with tremendous force.",
+    "ru": "Вода начала хлынуть из сломанной трубы с огромной силой.",
+    "index": 234,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The police decided to hált (холт) the traffic flow to investigate the accident.",
+    "ru": "Полиция решила остановить (прекратить) движение транспорта для расследования аварии.",
+    "index": 235,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "They used a large truck to hául (хол) the heavy logs out of the forest.",
+    "ru": "Они использовали большой грузовик, чтобы тащить (перевозить) тяжёлые бревна из леса.",
+    "index": 236,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "Unnecessary bureaucracy only seems to hínder (хин-дэр) progress and slow down projects.",
+    "ru": "Ненужная бюрократия, похоже, только препятствует прогрессу и замедляет проекты.",
+    "index": 237,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "Squirrels instinctively hóard (хорд) nuts and seeds for the upcoming winter.",
+    "ru": "Белки инстинктивно запасают (складируют) орехи и семена на предстоящую зиму.",
+    "index": 238,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The chart is used to íllustrate (ил-ус-трэйт) the growth of the company over the last decade.",
+    "ru": "Диаграмма используется, чтобы проиллюстрировать рост компании за последнее десятилетие.",
+    "index": 239,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "Lack of sleep can seriously impáir (им-пэр) your ability to make rational decisions.",
+    "ru": "Недостаток сна может серьёзно ухудшить вашу способность принимать рациональные решения.",
+    "index": 240,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "In medieval times, enemies would impále (им-пэйл) a banner on a stick to mark a conquest.",
+    "ru": "В средневековье враги насаживали знамя на кол, чтобы отметить завоевание.",
+    "index": 241,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The company plans to incórporate (ин-кор-по-рэйт) the latest technology into their new phones.",
+    "ru": "Компания планирует внедрить (включить) новейшие технологии в свои новые телефоны.",
+    "index": 242,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The traffic lights always índicate (ин-ди-кэйт) when it is safe to cross the street.",
+    "ru": "Светофоры всегда указывают, когда безопасно переходить улицу.",
+    "index": 243,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The jury voted to indíct (ин-дайт) the suspect on three counts of fraud.",
+    "ru": "Жюри проголосовало за предъявление обвинения подозреваемому по трём пунктам мошенничества.",
+    "index": 244,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The old house became completely infésted (ин-фэст-ид) with termites over the winter.",
+    "ru": "Старый дом был полностью заражён (наводнён) термитами за зиму.",
+    "index": 245,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "Fear of failure often can inhíbit (ин-хи-бит) people from pursuing ambitious goals.",
+    "ru": "Страх неудачи часто может препятствовать (сдерживать) людям в достижении амбициозных целей.",
+    "index": 246,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "My grandmother always warned us not to interfére (ин-тэр-фир) in the affairs of others.",
+    "ru": "Моя бабушка всегда предупреждала нас не вмешиваться в дела других.",
+    "index": 247,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The jury must intérpret (ин-тэр-прит) the meaning of the vague contract clause.",
+    "ru": "Жюри должно интерпретировать (толковать) значение расплывчатого пункта контракта.",
+    "index": 248,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "They decided to invóke (ин-воук) an emergency clause in the contract to cancel the deal.",
+    "ru": "Они решили применить (сослаться на) пункт о чрезвычайной ситуации в контракте, чтобы расторгнуть сделку.",
+    "index": 249,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The training program will invólve (ин-волв) intense practical exercises and teamwork.",
+    "ru": "Программа обучения будет включать (подразумевать) интенсивные практические занятия и командную работу.",
+    "index": 250,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The colleagues decided to jóke (джоук) around to relieve the tension before the presentation.",
+    "ru": "Коллеги решили шутить (отпускать шутки), чтобы снять напряжение перед презентацией.",
+    "index": 251,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The project manager said the new plan seemed to láck (лэк) a realistic timeline.",
+    "ru": "Руководитель проекта сказал, что новому плану, похоже, не хватает реалистичных сроков.",
+    "index": 252,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "We need to líne (лайн) up the chairs neatly before the performance begins.",
+    "ru": "Нам нужно аккуратно выстроить в ряд стулья до начала представления.",
+    "index": 253,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "He continued to lóathe (лоуθ) the bitter taste of black coffee, even as an adult.",
+    "ru": "Он продолжал ненавидеть (испытывать отвращение к) горький вкус чёрного кофе, даже будучи взрослым.",
+    "index": 254,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The raiders broke into the museum cellar hoping to lóot (лут) the valuable artifacts.",
+    "ru": "Налётчики ворвались в подвал музея в надежде разграбить ценные артефакты.",
+    "index": 255,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The guide tried to lúre (люр) the tourists into the most expensive souvenir shop.",
+    "ru": "Гид пытался заманить (соблазнить) туристов в самый дорогой сувенирный магазин.",
+    "index": 256,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The microscope can mágnify (маг-ни-фай) the image by several hundred times.",
+    "ru": "Микроскоп может увеличить изображение в несколько сотен раз.",
+    "index": 257,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The accident left him severely máimed (мэймд), affecting his mobility for life.",
+    "ru": "Авария серьёзно искалечила (нанесла увечье) его, повлияв на его подвижность на всю жизнь.",
+    "index": 258,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "Doctors recommend that you thoroughly másticate (мас-ти-кэйт) your food before swallowing.",
+    "ru": "Врачи рекомендуют вам тщательно пережевывать пищу перед глотанием.",
+    "index": 259,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "Their new product is designed to mátch (матч) the quality of their main competitor.",
+    "ru": "Их новый продукт разработан, чтобы соответствовать (сравниться с) качеству их главного конкурента.",
+    "index": 260,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "We should not méddle (мэд-дл) in private family disputes unless absolutely necessary.",
+    "ru": "Нам не следует вмешиваться (совать нос) в частные семейные споры, если это абсолютно не необходимо.",
+    "index": 261,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The community gathered to móurn (морн) the victims of the natural disaster.",
+    "ru": "Община собралась, чтобы скорбеть о жертвах стихийного бедствия.",
+    "index": 262,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "She used her scarf to múffle (ма-фл) the sound of her cough so as not to disturb others.",
+    "ru": "Она использовала шарф, чтобы заглушить звук своего кашля и не беспокоить других.",
+    "index": 263,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "He tends to múmble (мам-бл) when he is nervous, making it hard to understand him.",
+    "ru": "Он имеет обыкновение бормотать, когда нервничает, из-за чего его трудно понять.",
+    "index": 264,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The two girls múrmured (мёр-мэрд) secrets to each other across the crowded room.",
+    "ru": "Две девушки прошептали (пробормотали) секреты друг другу через переполненную комнату.",
+    "index": 265,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The bomb was designed to mútilate (мьют-и-лэйт) the landscape rather than destroy the city.",
+    "ru": "Бомба была спроектирована, чтобы уродовать (калечить) ландшафт, а не разрушать город.",
+    "index": 266,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "His wife used to nág (нэг) him constantly about his messy workshop.",
+    "ru": "Его жена постоянно пилила (изводила придирками) его из-за беспорядка в его мастерской.",
+    "index": 267,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The gardener decided to négléct (ниг-лэкт) the back flowerbeds to focus on the front lawn.",
+    "ru": "Садовод решил пренебречь задними клумбами, чтобы сосредоточиться на переднем газоне.",
+    "index": 268,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "She watched the child níbble (ни-бл) slowly on the edge of the cookie.",
+    "ru": "Она наблюдала, как ребенок медленно откусывает понемногу от края печенья.",
+    "index": 269,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The hungry crab tried to níp (нип) the fisherman's finger with its claw.",
+    "ru": "Голодный краб попытался ущипнуть (схватить) палец рыбака своей клешней.",
+    "index": 270,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "It is unproductive to nítpick (нит-пик) over small formatting errors in the final document.",
+    "ru": "Непродуктивно придираться (заниматься мелочной критикой) к небольшим ошибкам форматирования в окончательном документе.",
+    "index": 271,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The manager decided to nix (никс) the entire advertising proposal due to budget constraints.",
+    "ru": "Руководитель решил отменить (запретить) всё рекламное предложение из-за бюджетных ограничений.",
+    "index": 272,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The CEO simply nódded (нод-ид) when asked if the merger would proceed.",
+    "ru": "Генеральный директор просто кивнул, когда его спросили, состоится ли слияние.",
+    "index": 273,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "After the announcement, the stock price began to nósedive (ноуз-дайв) rapidly.",
+    "ru": "После объявления цена акций начала быстро резко падать (лететь вниз).",
+    "index": 274,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "Parents have a duty to nóurish (нёр-иш) their children's minds as well as their bodies.",
+    "ru": "Родители обязаны питать (заботиться о развитии) разум своих детей, равно как и их тела.",
+    "index": 275,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "She had to gently núdge (надж) her brother to wake him up before his alarm rang.",
+    "ru": "Ей пришлось слегка подтолкнуть (тронуть) брата, чтобы разбудить его до того, как зазвонит будильник.",
+    "index": 276,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The cold water seemed to númb (нам) her fingers instantly.",
+    "ru": "Холодная вода, казалось, мгновенно онемела её пальцы.",
+    "index": 277,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "In the military, recruits are trained to immediately obéy (о-бэй) all commands.",
+    "ru": "В армии новобранцев обучают немедленно подчиняться всем командам.",
+    "index": 278,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The rules oblíge (о-бладж) all participants to wear protective gear during the race.",
+    "ru": "Правила обязывают всех участников носить защитное снаряжение во время гонки.",
+    "index": 279,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The workers attempted to obstrúct (об-стракт) the road as a sign of protest.",
+    "ru": "Рабочие попытались заблокировать (преградить) дорогу в знак протеста.",
+    "index": 280,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The team worked hard to obtáin (об-тэйн) the necessary permits before starting the construction.",
+    "ru": "Команда усердно работала, чтобы получить необходимые разрешения до начала строительства.",
+    "index": 281,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The military was ordered to óccupy (ок-ю-пай) the critical mountain pass.",
+    "ru": "Военным было приказано занять (оккупировать) критически важный горный перевал.",
+    "index": 282,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The cultural tradition is believed to oríginate (о-ридж-и-нэйт) from ancient nomadic tribes.",
+    "ru": "Считается, что эта культурная традиция происходит (берёт начало) от древних кочевых племен.",
+    "index": 283,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The board of directors voted to oúst (ауст) the CEO due to poor performance.",
+    "ru": "Совет директоров проголосовал за смещение (изгнание) генерального директора из-за плохих результатов.",
+    "index": 284,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "We must oútlast (аут-ласт) our competitors by constantly innovating and improving.",
+    "ru": "Мы должны пережить (продержаться дольше) наших конкурентов, постоянно внедряя инновации и совершенствуясь.",
+    "index": 285,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "I accidentally overheárd (оу-вэр-хир) their conversation in the next room.",
+    "ru": "Я случайно подслушал их разговор в соседней комнате.",
+    "index": 286,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The complex logistics of the rescue mission began to overwhélm (оу-вэр-уэлм) the small team.",
+    "ru": "Сложная логистика спасательной операции начала подавлять (сокрушать) маленькую команду.",
+    "index": 287,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "Without adequate supplies, the stranded explorers will surely pérish (пэр-иш).",
+    "ru": "Без достаточных запасов застрявшие исследователи несомненно погибнут.",
+    "index": 288,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The student’s highly abstract theory seemed to perpléx (пэр-плэкс) the entire academic board.",
+    "ru": "Крайне абстрактная теория студента, казалось, озадачила весь академический совет.",
+    "index": 289,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The article was written to píque (пик) the reader's interest in space exploration.",
+    "ru": "Статья была написана, чтобы возбудить (задеть) интерес читателя к освоению космоса.",
+    "index": 290,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The farmer decided to pítch (питч) his tent near the riverbank for the night.",
+    "ru": "Фермер решил разбить свою палатку возле берега реки на ночь.",
+    "index": 291,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The defendant was prepared to pléad (плид) insanity to avoid a long prison sentence.",
+    "ru": "Обвиняемый был готов заявить (умолять о) невменяемости, чтобы избежать длительного тюремного заключения.",
+    "index": 292,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "He decided to plédge (плэдж) a significant portion of his fortune to environmental causes.",
+    "ru": "Он решил пообещать (дать залог) значительную часть своего состояния на экологические цели.",
+    "index": 293,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The children loved to plúnge (планж) into the cold lake from the wooden pier.",
+    "ru": "Дети любили нырять (резко погружаться) в холодное озеро с деревянного пирса.",
+    "index": 294,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "After the meeting, she liked to pónder (пон-дэр) the deeper meaning of the CEO’s comments.",
+    "ru": "После встречи ей нравилось обдумывать более глубокий смысл комментариев генерального директора.",
+    "index": 295,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The toddlers would práttle (прат-тл) happily to each other while playing with blocks.",
+    "ru": "Малыши счастливо болтали (лепетали) друг с другом, играя с кубиками.",
+    "index": 296,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The discovery of the old evidence helped to precípitate (при-сип-и-тэйт) the conclusion of the case.",
+    "ru": "Обнаружение старых улик помогло ускорить (спровоцировать) завершение дела.",
+    "index": 297,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "Never presúme (при-зюм) that others have the same knowledge as you do.",
+    "ru": "Никогда не предполагайте (не полагайте), что другие обладают теми же знаниями, что и вы.",
+    "index": 298,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The cult leader would proféss (проу-фэс) his undying loyalty to his followers.",
+    "ru": "Лидер культа исповедовал (открыто заявлял о) свою бесконечную преданность своим последователям.",
+    "index": 299,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The government plans to prómulgate (про-мул-гэйт) the new decree by the end of the month.",
+    "ru": "Правительство планирует обнародовать (провозгласить) новый указ к концу месяца.",
+    "index": 300,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The police were called in to quéll (куэл) the sudden eruption of minor violence.",
+    "ru": "Полицию вызвали, чтобы подавить внезапную вспышку мелкого насилия.",
+    "index": 301,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "We quickly lit a fire to quénch (куэнч) the thirst of the stranded travelers.",
+    "ru": "Мы быстро разожгли огонь, чтобы утолить (потушить) жажду заблудившихся путешественников.",
+    "index": 302,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "Thieves threatened to ránsack (рэн-сэк) the house looking for hidden valuables.",
+    "ru": "Воры угрожали рыться (грабить) в доме в поисках спрятанных ценностей.",
+    "index": 303,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "I will always regárd (ри-гард) her as one of my most inspirational teachers.",
+    "ru": "Я всегда буду считать (рассматривать) её одним из моих самых вдохновляющих учителей.",
+    "index": 304,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The whole town came out to rejóice (ри-джойс) when the local team won the cup.",
+    "ru": "Весь город вышел, чтобы ликовать (радоваться), когда местная команда выиграла кубок.",
+    "index": 305,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "Only a few fragments of the ancient text still remáin (ри-мэйн) today.",
+    "ru": "Только несколько фрагментов древнего текста всё ещё остаются сегодня.",
+    "index": 306,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "It takes great mental effort to représs (ри-прэс) negative memories from childhood.",
+    "ru": "Требуется большое умственное усилие, чтобы подавить негативные воспоминания детства.",
+    "index": 307,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The strong city walls were easily able to repúlse (ри-палс) the enemy attack.",
+    "ru": "Сильные городские стены смогли легко отразить (отбить) атаку противника.",
+    "index": 308,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "He will resént (ри-зент) any suggestion that he is not capable of handling the job.",
+    "ru": "Он возмутится (обидится) любым намёкам, что не способен справиться с работой.",
+    "index": 309,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The elderly couple chose to resíde (ри-зайд) in a small cottage near the ocean.",
+    "ru": "Пожилая пара решила проживать (поселиться) в небольшом коттедже возле океана.",
+    "index": 310,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "She had to use all her willpower to restráin (ри-стрэйн) her laughter during the solemn ceremony.",
+    "ru": "Ей пришлось использовать всю свою силу воли, чтобы сдержать смех во время торжественной церемонии.",
+    "index": 311,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "After the brief interruption, the broadcast will resúme (ри-зюм) shortly.",
+    "ru": "После короткого перерыва трансляция скоро возобновится.",
+    "index": 312,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The citizens still revére (ри-вир) the founding fathers for their wisdom and foresight.",
+    "ru": "Граждане до сих пор почитают (глубоко уважают) отцов-основателей за их мудрость и дальновидность.",
+    "index": 313,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "We cannot afford to rísk (риск) another failure by ignoring the expert advice.",
+    "ru": "Мы не можем позволить себе рисковать очередным провалом, игнорируя советы экспертов.",
+    "index": 314,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The company decided to sáck (сэк) the entire sales division due to budget cuts.",
+    "ru": "Компания решила уволить (распустить) весь отдел продаж из-за сокращения бюджета.",
+    "index": 315,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The whole family decided to sácrifice (сэк-ри-файс) their holiday savings to pay off the debt.",
+    "ru": "Вся семья решила пожертвовать своими сбережениями на отпуск, чтобы погасить долг.",
+    "index": 316,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "Just the thought of a lemon makes many people salívate (сэл-и-вэйт).",
+    "ru": "Одна только мысль о лимоне заставляет многих людей пускать слюну.",
+    "index": 317,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The frustrated driver made his tires scréech (скрич) as he sped around the corner.",
+    "ru": "Раздраженный водитель заставил свои шины визжать (скрипеть), когда резко повернул за угол.",
+    "index": 318,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "We watched the mice scúrry (скёр-ри) frantically away from the light.",
+    "ru": "Мы наблюдали, как мыши в панике сновали (спешили) прочь от света.",
+    "index": 319,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The news of the factory closure threatened to shátter (шат-тэр) the community's morale.",
+    "ru": "Новость о закрытии фабрики угрожала разрушить (разбить) моральный дух общины.",
+    "index": 320,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The warrior decided to sheáthe (шис) his sword as a sign that he wished to talk.",
+    "ru": "Воин решил вложить свой меч в ножны в знак того, что хочет поговорить.",
+    "index": 321,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The thick fog began to shróud (шрауд) the entire valley, making driving dangerous.",
+    "ru": "Густой туман начал окутывать (скрывать) всю долину, делая вождение опасным.",
+    "index": 322,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The elderly patient could only shúffle (ша-фл) his feet slowly when attempting to walk.",
+    "ru": "Пожилой пациент мог только медленно шаркать ногами, когда пытался ходить.",
+    "index": 323,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "In ancient texts, the gods would often smíte (смайт) those who displayed arrogance.",
+    "ru": "В древних текстах боги часто поражали (наказывали) тех, кто проявлял высокомерие.",
+    "index": 324,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The plastic ruler began to snáp (снэп) easily when bent too far.",
+    "ru": "Пластиковая линейка начала легко ломаться (трещать), когда её слишком сильно сгибали.",
+    "index": 325,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The child tried to snúggle (сна-гл) close to her mother during the loud thunderstorm.",
+    "ru": "Ребёнок пытался прижаться (уютно устроиться) к матери во время сильной грозы.",
+    "index": 326,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The decision to ignore the problem may spóil (спойл) the whole presentation.",
+    "ru": "Решение игнорировать проблему может испортить всю презентацию.",
+    "index": 327,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "I tried not to spráin (спрэйн) my wrist when lifting the heavy box into the truck.",
+    "ru": "Я старался не растянуть запястье, поднимая тяжёлую коробку в грузовик.",
+    "index": 328,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The tired fighter began to stágger (ста-гэр) across the ring near the end of the match.",
+    "ru": "Уставший боец начал шататься (спотыкаться) по рингу ближе к концу матча.",
+    "index": 329,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "We needed to use strong clamps to stáple (стэй-пл) the thick fabric pieces together.",
+    "ru": "Нам нужно было использовать прочные зажимы, чтобы скрепить (прикрепить скобой) толстые куски ткани.",
+    "index": 330,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "Gently stír (стёр) the sauce continuously until it thickens to the right consistency.",
+    "ru": "Аккуратно перемешивайте (помешивайте) соус, пока он не загустеет до нужной консистенции.",
+    "index": 331,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "Never stráin (стрэйн) your eyes by reading in dim, poorly lit conditions.",
+    "ru": "Никогда не напрягайте глаза, читая в тусклых, плохо освещённых условиях.",
+    "index": 332,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The workers agreed not to stríke (страйк) during the busy holiday season.",
+    "ru": "Рабочие согласились не бастовать (объявлять забастовку) во время напряжённого сезона отпусков.",
+    "index": 333,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The technician will strúng (странг) new fiber optic cables across the entire campus.",
+    "ru": "Техник протянет (натянет) новые волоконно-оптические кабели по всему кампусу.",
+    "index": 334,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The general used the heavy artillery fire to subdúe (саб-дью) the enemy resistance.",
+    "ru": "Генерал использовал сильный артиллерийский огонь, чтобы подавить сопротивление противника.",
+    "index": 335,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "We waited for the strong winds to subsíde (саб-сайд) before we could safely leave the port.",
+    "ru": "Мы ждали, пока сильные ветры утихнут (спадут), прежде чем смогли безопасно покинуть порт.",
+    "index": 336,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The editor decided to superimpóse (су-пэр-им-поуз) the text onto the background image.",
+    "ru": "Редактор решил наложить текст на фоновое изображение.",
+    "index": 337,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The defeated leader had to supplicáte (сап-ли-кэйт) the conqueror for a treaty of peace.",
+    "ru": "Побеждённому лидеру пришлось умолять (усердно просить) завоевателя о мирном договоре.",
+    "index": 338,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The government used force to suppréss (сап-прэс) the uprising in the southern provinces.",
+    "ru": "Правительство применило силу, чтобы подавить восстание в южных провинциях.",
+    "index": 339,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "It took the young climber great effort to surmóunt (сёр-маунт) the final icy ridge.",
+    "ru": "Молодому альпинисту потребовалось много усилий, чтобы преодолеть последний обледенелый хребет.",
+    "index": 340,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "Poor management decisions will inevitably táint (тэйн-т) the company's reputation.",
+    "ru": "Плохие управленческие решения неизбежно запятнают репутацию компании.",
+    "index": 341,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The witness agreed to téstify (тэс-ти-фай) under oath about what he saw that night.",
+    "ru": "Свидетель согласился давать показания под присягой о том, что он видел той ночью.",
+    "index": 342,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The author knew the dramatic ending would títillate (тит-и-лэйт) her most devoted readers.",
+    "ru": "Автор знала, что драматичный финал щекочет нервы (возбудит) её самых преданных читателей.",
+    "index": 343,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "The thought of losing the game began to tórment (тор-мэнт) the nervous chess player.",
+    "ru": "Мысль о проигрыше в игре начала мучить нервного шахматиста.",
+    "index": 344,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  },
+  {
+    "en": "He had to tóss (тос) his hat into the ring to formally join the political race.",
+    "ru": "Ему пришлось бросить свою шляпу на ринг, чтобы официально вступить в политическую гонку.",
+    "index": 345,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false,
+    "thirdCheckbox": false,
+    "repeatDate": null,
+    "repeatCount": 0
+  }
+]

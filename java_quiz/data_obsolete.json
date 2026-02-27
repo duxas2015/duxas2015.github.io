@@ -1,0 +1,282 @@
+[
+{ "book":"SE",
+  "chapters" : [ { "chapter_name":"Chapter 01",
+  "questions" :  
+  
+[
+  {
+    "idx": 1,
+    "text": "What is the result of the following code?\n<pre>1:  public class Employee {\n2:      public int employeeId;\n3:      public String firstName, lastName;\n4:      public int yearStarted;\n5:      @Override public int hashCode() {\n6:          return employeeId;\n7:      }\n8:      public boolean equals(Employee e) {\n9:          return this.employeeId == e.employeeId;\n10:     }\n11:     public static void main(String[] args) {\n12:         Employee one = new Employee();\n13:         one.employeeId = 101;\n14:         Employee two = new Employee();\n15:         two.employeeId = 101;\n16:         if (one.equals(two)) System.out.println(\"Success\");\n17:         else System.out.println(\"Failure\");\n18:     } }</pre>",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "Success" },
+      { "letter": "B", "text": "Failure" },
+      { "letter": "C", "text": "The <pre>hashCode()</pre> method fails to compile." },
+      { "letter": "D", "text": "The <pre>equals()</pre> method fails to compile." },
+      { "letter": "E", "text": "Another line of code fails to compile." },
+      { "letter": "F", "text": "A runtime exception is thrown." }
+    ]
+  },
+  {
+    "idx": 2,
+    "text": "What is the result of compiling the following class?\n<pre>public class Book {\n    private int ISBN;\n    private String title, author;\n    private int pageCount;\n    public int hashCode() {\n        return ISBN;\n    }\n    @Override public boolean equals(Object obj) {\n        if ( !(obj instanceof Book)) {\n            return false;\n        }\n        Book other = (Book) obj;\n        return this.ISBN == other.ISBN;\n    }\n    // imagine getters and setters are here\n}</pre>",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "The code compiles." },
+      { "letter": "B", "text": "The code does not compile because <pre>hashCode()</pre> is incorrect." },
+      { "letter": "C", "text": "The code does not compile because <pre>equals()</pre> does not override the parent method correctly." },
+      { "letter": "D", "text": "The code does not compile because <pre>equals()</pre> tries to refer to a private field." },
+      { "letter": "E", "text": "The code does not compile because the <pre>ClassCastException</pre> is not handled or declared." },
+      { "letter": "F", "text": "The code does not compile for another reason." }
+    ]
+  },
+  {
+    "idx": 3,
+    "text": "What is the result of the following code?\n<pre>String s1 = \"Canada\";\nString s2 = new String(s1);\nif(s1 == s2) System.out.println(\"s1 == s2\");\nif(s1.equals(s2)) System.out.println(\"s1.equals(s2)\");</pre>",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "There is no output." },
+      { "letter": "B", "text": "<pre>s1 == s2</pre>" },
+      { "letter": "C", "text": "<pre>s1.equals(s2)</pre>" },
+      { "letter": "D", "text": "Both B and C." },
+      { "letter": "E", "text": "The code does not compile." },
+      { "letter": "F", "text": "The code throws a runtime exception." }
+    ]
+  },
+  {
+    "idx": 4,
+    "text": "What is true about the following code? You may assume city and mascot are never null.\n<pre>public class BaseballTeam {\n    private String city, mascot;\n    private int numberOfPlayers;\n    public boolean equals(Object obj) {\n        if ( !(obj instanceof BaseballTeam))\n            return false;\n        BaseballTeam other = (BaseballTeam) obj;\n        return (city.equals(other.city) && mascot.equals(other.mascot));\n    }\n    public int hashCode() {\n        return numberOfPlayers;\n    }\n    // imagine getters and setters are here\n}</pre>",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "The class does not compile." },
+      { "letter": "B", "text": "The class compiles but has an improper <pre>equals()</pre> method." },
+      { "letter": "C", "text": "The class compiles but has an improper <pre>hashCode()</pre> method." },
+      { "letter": "D", "text": "The class compiles and has proper <pre>equals()</pre> and <pre>hashCode()</pre> methods." }
+    ]
+  },
+  {
+    "idx": 5,
+    "text": "Which of the following statements are true, assuming a and b are String objects? (Choose all that apply.)",
+    "select_type": "multiply",
+    "answers": [
+      { "letter": "A", "text": "If <pre>a.equals(b)</pre> is true, <pre>a.hashCode() == b.hashCode()</pre> is always true." },
+      { "letter": "B", "text": "If <pre>a.equals(b)</pre> is true, <pre>a.hashCode() == b.hashCode()</pre> is sometimes but not always true." },
+      { "letter": "C", "text": "If <pre>a.equals(b)</pre> is false, <pre>a.hashCode() == b.hashCode()</pre> can never be true." },
+      { "letter": "D", "text": "If <pre>a.equals(b)</pre> is false, <pre>a.hashCode() == b.hashCode()</pre> can sometimes be true." }
+    ]
+  },
+  {
+    "idx": 6,
+    "text": "What is the result of the following code?\n<pre>public class FlavorsEnum {\n    enum Flavors {\n        VANILLA, CHOCOLATE, STRAWBERRY\n    }\n    public static void main(String[] args) {\n        System.out.println(Flavors.CHOCOLATE.ordinal());\n    }\n}</pre>",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "0" },
+      { "letter": "B", "text": "1" },
+      { "letter": "C", "text": "9" },
+      { "letter": "D", "text": "<pre>CHOCOLATE</pre>" },
+      { "letter": "E", "text": "The code does not compile due to a missing semicolon." },
+      { "letter": "F", "text": "The code does not compile for a different reason." }
+    ]
+  },
+  {
+    "idx": 7,
+    "text": "What is the result of the following code? (Choose all that apply.)\n<pre>public class IceCream {\n    enum Flavors {\n        VANILLA, CHOCOLATE, STRAWBERRY\n    }\n    public static void main(String[] args) {\n        Flavors f = Flavors.STRAWBERRY;\n        switch (f) {\n            case 0: System.out.println(\"vanilla\");\n            case 1: System.out.println(\"chocolate\");\n            case 2: System.out.println(\"strawberry\");\n            break;\n            default: System.out.println(\"missing flavor\");\n        } } }</pre>",
+    "select_type": "multiply",
+    "answers": [
+      { "letter": "A", "text": "vanilla" },
+      { "letter": "B", "text": "chocolate" },
+      { "letter": "C", "text": "strawberry" },
+      { "letter": "D", "text": "missing flavor" },
+      { "letter": "E", "text": "The code does not compile." },
+      { "letter": "F", "text": "An exception is thrown." }
+    ]
+  },
+  {
+    "idx": 8,
+    "text": "What is the result of the following code?\n<pre>1:  public class Outer {\n2:      private int x = 5;\n3:      protected class Inner {\n4:          public static int x = 10;\n5:          public void go() { System.out.println(x); }\n6:      }\n7:      public static void main(String[] args) {\n8:          Outer out = new Outer();\n9:          Outer.Inner in = out.new Inner();\n10:         in.go();\n11:     } }</pre>",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "The output is 5." },
+      { "letter": "B", "text": "The output is 10." },
+      { "letter": "C", "text": "Line 4 generates a compiler error." },
+      { "letter": "D", "text": "Line 8 generates a compiler error." },
+      { "letter": "E", "text": "Line 9 generates a compiler error." },
+      { "letter": "F", "text": "An exception is thrown." }
+    ]
+  },
+  {
+    "idx": 9,
+    "text": "What is the result of the following code?\n<pre>1:  public class Outer {\n2:      private int x = 24;\n3:      public int getX() {\n4:          String message = \"x is \";\n5:          class Inner {\n6:              private int x = Outer.this.x;\n7:              public void printX() {\n8:                  System.out.println(message + x);\n9:              }\n10:         }\n11:         Inner in = new Inner();\n12:         in.printX();\n13:         return x;\n14:     }\n15:     public static void main(String[] args) {\n16:         new Outer().getX();\n17:     } }</pre>",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "x is 0." },
+      { "letter": "B", "text": "x is 24." },
+      { "letter": "C", "text": "Line 6 generates a compiler error." },
+      { "letter": "D", "text": "Line 8 generates a compiler error." },
+      { "letter": "E", "text": "Line 11 generates a compiler error." },
+      { "letter": "F", "text": "An exception is thrown." }
+    ]
+  },
+  {
+    "idx": 10,
+    "text": "The following code appears in a file named Book.java. What is the result of compiling the source file?\n<pre>1:  public class Book {\n2:      private int pageNumber;\n3:      private class BookReader {\n4:          public int getPage() {\n5:              return pageNumber;\n6:          } } }</pre>",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "The code compiles successfully, and one bytecode file is generated: <pre>Book.class</pre>." },
+      { "letter": "B", "text": "The code compiles successfully, and two bytecode files are generated: <pre>Book.class</pre> and <pre>BookReader.class</pre>." },
+      { "letter": "C", "text": "The code compiles successfully, and two bytecode files are generated: <pre>Book.class</pre> and <pre>Book$BookReader.class</pre>." },
+      { "letter": "D", "text": "A compiler error occurs on line 3." },
+      { "letter": "E", "text": "A compiler error occurs on line 5." }
+    ]
+  },
+  {
+    "idx": 11,
+    "text": "Which of the following statements can be inserted to make FootballGame compile?\n<pre>package my.sports;\npublic class Football {\n    public static final int TEAM_SIZE = 11;\n}\n\npackage my.apps;\n// INSERT CODE HERE\npublic class FootballGame {\n    public int getTeamSize() { return TEAM_SIZE; }\n}</pre>",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "<pre>import my.sports.Football;</pre>" },
+      { "letter": "B", "text": "<pre>import static my.sports.*;</pre>" },
+      { "letter": "C", "text": "<pre>import static my.sports.Football;</pre>" },
+      { "letter": "D", "text": "<pre>import static my.sports.Football.*;</pre>" },
+      { "letter": "E", "text": "<pre>static import my.sports.*;</pre>" },
+      { "letter": "F", "text": "<pre>static import my.sports.Football;</pre>" },
+      { "letter": "G", "text": "<pre>static import my.sports.Football.*;</pre>" }
+    ]
+  },
+  {
+    "idx": 12,
+    "text": "What is the result of the following code?\n<pre>public class Browsers {\n    static class Browser {\n        public void go() {\n            System.out.println(\"Inside Browser\");\n        }\n    }\n    static class Firefox extends Browser {\n        public void go() {\n            System.out.println(\"Inside Firefox\");\n        }\n    }\n    static class IE extends Browser {\n        @Override public void go() {\n            System.out.println(\"Inside IE\");\n        }\n    }\n    public static void main(String[] args) {\n        Browser b = new Firefox();\n        IE e = (IE) b;\n        e.go();\n    }\n}</pre>",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "Inside Browser" },
+      { "letter": "B", "text": "Inside Firefox" },
+      { "letter": "C", "text": "Inside IE" },
+      { "letter": "D", "text": "The code does not compile." },
+      { "letter": "E", "text": "A runtime exception is thrown." }
+    ]
+  },
+  {
+    "idx": 13,
+    "text": "Which is a true statement about the following code?\n<pre>public class IsItFurry {\n    static interface Mammal { }\n    static class Furry implements Mammal { }\n    static class Chipmunk extends Furry { }\n    public static void main(String[] args) {\n        Chipmunk c = new Chipmunk();\n        Mammal m = c;\n        Furry f = c;\n        int result = 0;\n        if (c instanceof Mammal) result += 1;\n        if (c instanceof Furry) result += 2;\n        if (null instanceof Chipmunk) result += 4;\n        System.out.println(result);\n    } }</pre>",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "The output is 0." },
+      { "letter": "B", "text": "The output is 3." },
+      { "letter": "C", "text": "The output is 7." },
+      { "letter": "D", "text": "<pre>c instanceof Mammal</pre> does not compile." },
+      { "letter": "E", "text": "<pre>c instanceof Furry</pre> does not compile." },
+      { "letter": "F", "text": "<pre>null instanceof Chipmunk</pre> does not compile." }
+    ]
+  },
+  {
+    "idx": 14,
+    "text": "Which is a true statement about the following code? (Choose all that apply.)\n<pre>import java.util. *;\npublic class IsItFurry {\n    static class Chipmunk { }\n    public static void main(String[] args) {\n        Chipmunk c = new Chipmunk();\n        ArrayList <Chipmunk> l = new ArrayList<>();\n        Runnable r = new Thread();\n        int result = 0;\n        if (c instanceof Chipmunk) result += 1;\n        if (l instanceof Chipmunk) result += 2;\n        if (r instanceof Chipmunk) result += 4;\n        System.out.println(result);\n    } }</pre>",
+    "select_type": "multiply",
+    "answers": [
+      { "letter": "A", "text": "The code compiles, and the output is 0." },
+      { "letter": "B", "text": "The code compiles, and the output is 3." },
+      { "letter": "C", "text": "The code compiles, and the output is 7." },
+      { "letter": "D", "text": "<pre>c instanceof Chipmunk</pre> does not compile." },
+      { "letter": "E", "text": "<pre>l instanceof Chipmunk</pre> does not compile." },
+      { "letter": "F", "text": "<pre>r instanceof Chipmunk</pre> does not compile." }
+    ]
+  },
+  {
+    "idx": 15,
+    "text": "Which of the following statements are true about the <pre>equals()</pre> method? (Choose all that apply.)",
+    "select_type": "multiply",
+    "answers": [
+      { "letter": "A", "text": "If <pre>equals(null)</pre> is called, the method should throw an exception." },
+      { "letter": "B", "text": "If <pre>equals(null)</pre> is called, the method should return false." },
+      { "letter": "C", "text": "If <pre>equals(null)</pre> is called, the method should return true." },
+      { "letter": "D", "text": "If <pre>equals()</pre> is passed the wrong type, the method should throw an exception." },
+      { "letter": "E", "text": "If <pre>equals()</pre> is passed the wrong type, the method should return false." },
+      { "letter": "F", "text": "If <pre>equals()</pre> is passed the wrong type, the method should return true." }
+    ]
+  },
+  {
+    "idx": 16,
+    "text": "Which of the following can be inserted in main?\n<pre>public class Outer {\n    class Inner { }\n    public static void main(String[] args) {\n        // INSERT CODE HERE\n    } }</pre>",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "<pre>Inner in = new Inner();</pre>" },
+      { "letter": "B", "text": "<pre>Inner in = Outer.new Inner();</pre>" },
+      { "letter": "C", "text": "<pre>Outer.Inner in = new Outer.Inner();</pre>" },
+      { "letter": "D", "text": "<pre>Outer.Inner in = new Outer().Inner();</pre>" },
+      { "letter": "E", "text": "<pre>Outer.Inner in = new Outer().new Inner();</pre>" },
+      { "letter": "F", "text": "<pre>Outer.Inner in = Outer.new Inner();</pre>" }
+    ]
+  },
+  {
+    "idx": 17,
+    "text": "What is the result of the following code? (Choose all that apply.)\n<pre>1:  public enum AnimalClasses {\n2:      MAMMAL(true), FISH(Boolean.FALSE), BIRD(false),\n3:      REPTILE(false), AMPHIBIAN(false), INVERTEBRATE(false)\n4:      boolean hasHair;\n5:      public AnimalClasses(boolean hasHair) {\n6:          this.hasHair = hasHair;\n7:      }\n8:      public boolean hasHair() {\n9:          return hasHair;\n10:     }\n11:     public void giveWig() {\n12:         hasHair = true;\n13:     } }</pre>",
+    "select_type": "multiply",
+    "answers": [
+      { "letter": "A", "text": "Compiler error on line 2." },
+      { "letter": "B", "text": "Compiler error on line 3." },
+      { "letter": "C", "text": "Compiler error on line 5." },
+      { "letter": "D", "text": "Compiler error on line 8." },
+      { "letter": "E", "text": "Compiler error on line 12." },
+      { "letter": "F", "text": "Compiler error on another line." },
+      { "letter": "G", "text": "The code compiles successfully." }
+    ]
+  },
+  {
+    "idx": 18,
+    "text": "What is the result of the following code? (Choose all that apply.)\n<pre>public class Swimmer {\n    enum AnimalClasses {\n        MAMMAL, FISH {\n            public boolean hasFins() { return true; }},\n        BIRD, REPTILE, AMPHIBIAN, INVERTEBRATE;\n        public abstract boolean hasFins();\n    }\n    public static void main(String[] args) {\n        System.out.println(AnimalClasses.FISH);\n        System.out.println(AnimalClasses.FISH.ordinal());\n        System.out.println(AnimalClasses.FISH.hasFins());\n        System.out.println(AnimalClasses.BIRD.hasFins());\n    }\n}</pre>",
+    "select_type": "multiply",
+    "answers": [
+      { "letter": "A", "text": "fish" },
+      { "letter": "B", "text": "FISH" },
+      { "letter": "C", "text": "0" },
+      { "letter": "D", "text": "1" },
+      { "letter": "E", "text": "false" },
+      { "letter": "F", "text": "true" },
+      { "letter": "G", "text": "The code does not compile." }
+    ]
+  },
+  {
+    "idx": 19,
+    "text": "Which of the following can be inserted to override the superclass method? (Choose all that apply.)\n<pre>public class LearnToWalk {\n    public void toddle() {}\n    class BabyRhino extends LearnToWalk {\n        // INSERT CODE HERE\n    }\n}</pre>",
+    "select_type": "multiply",
+    "answers": [
+      { "letter": "A", "text": "<pre>public void toddle() {}</pre>" },
+      { "letter": "B", "text": "<pre>public void Toddle() {}</pre>" },
+      { "letter": "C", "text": "<pre>public final void toddle() {}</pre>" },
+      { "letter": "D", "text": "<pre>public static void toddle() {}</pre>" },
+      { "letter": "E", "text": "<pre>public void toddle() throws Exception {}</pre>" },
+      { "letter": "F", "text": "<pre>public void toddle(boolean fall) {}</pre>" }
+    ]
+  },
+  {
+    "idx": 20,
+    "text": "What is the result of the following code?\n<pre>public class FourLegged {\n    String walk = \"walk,\";\n    static class BabyRhino extends FourLegged {\n        String walk = \"toddle,\";\n    }\n    public static void main(String[] args) {\n        FourLegged f = new BabyRhino();\n        BabyRhino b = new BabyRhino();\n        System.out.println(f.walk);\n        System.out.println(b.walk);\n    } }</pre>",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "toddle,toddle," },
+      { "letter": "B", "text": "toddle,walk," },
+      { "letter": "C", "text": "walk,toddle," },
+      { "letter": "D", "text": "walk,walk," },
+      { "letter": "E", "text": "The code does not compile." },
+      { "letter": "F", "text": "A runtime exception is thrown." }
+    ]
+  },
+  {
+    "idx": 21,
+    "text": "Which of the following could be inserted to fill in the blank? (Choose all that apply.)\n<pre>public interface Otter {\n    default void play() { }\n}\nclass RiverOtter implements Otter {\n    _____________________________\n}</pre>",
+    "select_type": "multiply",
+    "answers": [
+      { "letter": "A", "text": "<pre>@Override public boolean equals(Object o) { return false; }</pre>" },
+      { "letter": "B", "text": "<pre>@Override public boolean equals(Otter o) { return false; }</pre>" },
+      { "letter": "C", "text": "<pre>@Override public int hashCode() { return 42; }</pre>" },
+      { "letter": "D", "text": "<pre>@Override public long hashCode() { return 42; }</pre>" },
+      { "letter": "E", "text": "<pre>@Override public void play() { }</pre>" },
+      { "letter": "F", "text": "<pre>@Override void play() { }</pre>" }
+    ]
+  }
+]  
+  
+}
+]
+}
+]

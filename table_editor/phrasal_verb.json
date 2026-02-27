@@ -1,0 +1,3222 @@
+[
+  {
+    "en": "I need to look up that word in the dictionary.",
+    "ru": "Мне нужно посмотреть это слово в словаре.",
+    "index": 0,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "Please put on your coat; it's cold outside.",
+    "ru": "Пожалуйста, наденьте своё пальто; на улице холодно.",
+    "index": 1,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "She decided to give up smoking last year.",
+    "ru": "Она решила бросить курить в прошлом году.",
+    "index": 2,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "Don't put off your homework until the last minute.",
+    "ru": "Не откладывай свою домашнюю работу до последней минуты.",
+    "index": 3,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "The plane will take off in about twenty minutes.",
+    "ru": "Самолет взлетит примерно через двадцать минут.",
+    "index": 4,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "Can you turn down the music a bit? It's too loud.",
+    "ru": "Ты можешь немного убавить музыку? Она слишком громкая.",
+    "index": 5,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "We'll have to call off the meeting due to the storm.",
+    "ru": "Нам придется отменить встречу из-за шторма.",
+    "index": 6,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "The children were running around in the garden.",
+    "ru": "Дети бегали (резвились) в саду.",
+    "index": 7,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "I'm really looking forward to the summer holidays.",
+    "ru": "Я очень жду летних каникул.",
+    "index": 8,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "He came across some old photos while cleaning.",
+    "ru": "Он наткнулся на старые фотографии во время уборки.",
+    "index": 9,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "They had to get up very early for their flight.",
+    "ru": "Им пришлось встать очень рано на свой рейс.",
+    "index": 10,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "If you don't understand, you should ask around for help.",
+    "ru": "Если вы не понимаете, вам следует поспрашивать (поискать помощи).",
+    "index": 11,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "Remember to switch off all the lights before leaving.",
+    "ru": "Не забудьте выключить весь свет перед уходом.",
+    "index": 12,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "I'll pick you up at the station at 7 PM.",
+    "ru": "Я заберу тебя на станции в 7 вечера.",
+    "index": 13,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "We need to work out a solution to this problem.",
+    "ru": "Нам нужно разработать (найти) решение этой проблемы.",
+    "index": 14,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "It took me a while to figure out how the machine worked.",
+    "ru": "Мне потребовалось время, чтобы понять (разобраться), как работает машина.",
+    "index": 15,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "She always backs up her files to the cloud.",
+    "ru": "Она всегда создает резервную копию своих файлов в облаке.",
+    "index": 16,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "He decided to drop by the bakery on his way home.",
+    "ru": "Он решил зайти в пекарню по дороге домой.",
+    "index": 17,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "We should go over the presentation one more time.",
+    "ru": "Нам следует еще раз просмотреть (повторить) презентацию.",
+    "index": 18,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "Don't give away the ending of the movie!",
+    "ru": "Не выдавай (раскрывай) концовку фильма!",
+    "index": 19,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "They had a huge argument but managed to make up quickly.",
+    "ru": "У них был сильный спор, но им удалось быстро помириться.",
+    "index": 20,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "Could you hold on a second? I need to check something.",
+    "ru": "Не могли бы вы подождать секунду? Мне нужно кое-что проверить.",
+    "index": 21,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "We need to sort out this misunderstanding right away.",
+    "ru": "Нам нужно немедленно уладить это недопонимание.",
+    "index": 22,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "The car broke down on the way to the airport.",
+    "ru": "Машина сломалась по дороге в аэропорт.",
+    "index": 23,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "I can't believe he let me down when I needed help.",
+    "ru": "Не могу поверить, что он меня подвел, когда мне нужна была помощь.",
+    "index": 24,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "The police are looking into the case very carefully.",
+    "ru": "Полиция очень внимательно расследует это дело.",
+    "index": 25,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "After the meeting, we all decided to carry on working.",
+    "ru": "После совещания мы все решили продолжать работать.",
+    "index": 26,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "He decided to take up painting as a new hobby.",
+    "ru": "Он решил заняться рисованием как новым хобби.",
+    "index": 27,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "You need to fill in this application form completely.",
+    "ru": "Вам нужно полностью заполнить эту анкету.",
+    "index": 28,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "Why don't you come over to my place for dinner?",
+    "ru": "Почему бы тебе не зайти ко мне на ужин?",
+    "index": 29,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "The fire fighters managed to put out the blaze quickly.",
+    "ru": "Пожарным удалось быстро потушить пламя.",
+    "index": 30,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "I was running late, so I just threw on some clothes.",
+    "ru": "Я опаздывал, поэтому просто накинул кое-какую одежду.",
+    "index": 31,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "She was very nervous before the speech, but she pulled it off.",
+    "ru": "Она очень нервничала перед выступлением, но ей удалось справиться (успешно завершить).",
+    "index": 32,
+    "repeatCheckbox": false,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "Please keep up with the group; don't fall behind.",
+    "ru": "Пожалуйста, поспевай за группой; не отставай.",
+    "index": 33,
+    "repeatCheckbox": false,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "You can rely on me; I will always back you up.",
+    "ru": "Ты можешь положиться на меня; я всегда тебя поддержу.",
+    "index": 34,
+    "repeatCheckbox": false,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "We should try out that new restaurant downtown.",
+    "ru": "Нам следует испробовать (сходить в) тот новый ресторан в центре города.",
+    "index": 35,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "The manager had to lay off several employees last month.",
+    "ru": "Менеджеру пришлось уволить (сократить) нескольких сотрудников в прошлом месяце.",
+    "index": 36,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "Before you sign the contract, you should read it over.",
+    "ru": "Прежде чем подписать договор, вам следует его прочитать.",
+    "index": 37,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "Don't worry about it; I'll deal with the problem.",
+    "ru": "Не беспокойся об этом; я разберусь с проблемой.",
+    "index": 38,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "He eventually settled down in a small town by the coast.",
+    "ru": "В конце концов, он остепенился (обосновался) в маленьком городке на побережье.",
+    "index": 39,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "He decided to do away with all unnecessary paperwork.",
+    "ru": "Он решил покончить со всей ненужной документацией (избавиться от).",
+    "index": 40,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "I don't know why she suddenly blew up at me.",
+    "ru": "Я не знаю, почему она вдруг вспылила на меня (рассердилась).",
+    "index": 41,
+    "repeatCheckbox": false,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "The children were brought up by their grandparents.",
+    "ru": "Детей воспитали их бабушка и дедушка.",
+    "index": 42,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "It took weeks to get over the flu.",
+    "ru": "Понадобились недели, чтобы оправиться от гриппа.",
+    "index": 43,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "We're planning to get away for the weekend.",
+    "ru": "Мы планируем уехать (выбраться) на выходные.",
+    "index": 44,
+    "repeatCheckbox": false,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "She needs to cut down on sugar to be healthier.",
+    "ru": "Ей нужно сократить потребление сахара, чтобы быть здоровее.",
+    "index": 45,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "The new teacher is finding it hard to keep up with the workload.",
+    "ru": "Новому учителю трудно справляться с (поспевать за) рабочей нагрузкой.",
+    "index": 46,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "He didn't really take to his new colleagues at first.",
+    "ru": "Сначала он не очень поладил со своими новыми коллегами.",
+    "index": 47,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "The construction workers had to knock down the old wall.",
+    "ru": "Строителям пришлось снести старую стену.",
+    "index": 48,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "Stop trying to show off with your new phone!",
+    "ru": "Перестань выпендриваться (хвастаться) своим новым телефоном!",
+    "index": 49,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "They finally came up with a brilliant solution.",
+    "ru": "Они наконец придумали (предложили) блестящее решение.",
+    "index": 50,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "It's important to stand up for what you believe in.",
+    "ru": "Важно отстаивать то, во что ты веришь.",
+    "index": 51,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "Could you please look after my cat while I'm away?",
+    "ru": "Не могли бы вы, пожалуйста, присмотреть за моей кошкой, пока меня не будет?",
+    "index": 52,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "The meeting was so boring that I nearly drifted off.",
+    "ru": "Встреча была такой скучной, что я чуть не заснул (потерял внимание).",
+    "index": 53,
+    "repeatCheckbox": false,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "We are going to set up a new office in London.",
+    "ru": "Мы собираемся учредить (открыть/установить) новый офис в Лондоне.",
+    "index": 54,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "We had to turn down their generous offer.",
+    "ru": "Нам пришлось отклонить их щедрое предложение.",
+    "index": 55,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "I don't know how much longer I can put up with this noise.",
+    "ru": "Я не знаю, как долго я еще смогу терпеть этот шум.",
+    "index": 56,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "The politician stepped down after the scandal.",
+    "ru": "Политик ушел в отставку после скандала.",
+    "index": 57,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "If you make a mistake, you should always own up to it.",
+    "ru": "Если ты совершаешь ошибку, ты всегда должен признать ее.",
+    "index": 58,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "He ran into his old college professor at the supermarket.",
+    "ru": "Он случайно встретил своего старого профессора в супермаркете.",
+    "index": 59,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "Please hand in your essays by Friday.",
+    "ru": "Пожалуйста, сдайте свои эссе до пятницы.",
+    "index": 60,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "The children were trying to shout down their teacher.",
+    "ru": "Дети пытались перекричать своего учителя.",
+    "index": 61,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "He hopes to catch up with the news when he gets home.",
+    "ru": "Он надеется наверстать (ознакомиться с) новости, когда вернется домой.",
+    "index": 62,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "I need to top up my phone credit before I make a call.",
+    "ru": "Мне нужно пополнить баланс телефона, прежде чем звонить.",
+    "index": 63,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "We need to clear out the garage this weekend.",
+    "ru": "Нам нужно очистить (прибраться в) гараж на этих выходных.",
+    "index": 64,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "They decided to split up after ten years of marriage.",
+    "ru": "Они решили расстаться после десяти лет брака.",
+    "index": 65,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "We ran out of milk this morning, so I bought some.",
+    "ru": "У нас закончилось молоко сегодня утром, поэтому я купил его.",
+    "index": 66,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "Before you apply, you must read up on the company.",
+    "ru": "Прежде чем подавать заявку, вы должны изучить (почитать о) компанию.",
+    "index": 67,
+    "repeatCheckbox": false,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "The doctor told me to cut out all processed food.",
+    "ru": "Врач сказал мне исключить всю обработанную пищу.",
+    "index": 68,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "I wish you wouldn't butt in when I'm talking!",
+    "ru": "Мне бы хотелось, чтобы ты не вмешивался, когда я говорю!",
+    "index": 69,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "We need to think over this offer carefully.",
+    "ru": "Нам нужно тщательно обдумать это предложение.",
+    "index": 70,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "The committee will look into the complaints next week.",
+    "ru": "Комитет рассмотрит жалобы на следующей неделе.",
+    "index": 71,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "They tried to cover up the mistake, but the truth came out.",
+    "ru": "Они пытались скрыть ошибку, но правда всплыла.",
+    "index": 72,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "She always manages to talk him into doing the dishes.",
+    "ru": "Ей всегда удается уговорить его помыть посуду.",
+    "index": 73,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "Don't forget to log in to your account to check your status.",
+    "ru": "Не забудьте войти в свою учетную запись, чтобы проверить свой статус.",
+    "index": 74,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "We decided to eat out tonight instead of cooking.",
+    "ru": "Мы решили поесть в ресторане (вне дома) сегодня вечером, вместо того чтобы готовить.",
+    "index": 75,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "If you want to use the gym, you must sign up first.",
+    "ru": "Если вы хотите пользоваться спортзалом, вы должны сначала записаться (зарегистрироваться).",
+    "index": 76,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "The company is trying to branch out into new markets.",
+    "ru": "Компания пытается расшириться (выйти) на новые рынки.",
+    "index": 77,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "We had to live on very little money for a few months.",
+    "ru": "Нам пришлось жить на очень маленькие деньги в течение нескольких месяцев.",
+    "index": 78,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "The speaker was so quiet that I couldn't make out what she was saying.",
+    "ru": "Докладчик говорил так тихо, что я не мог расслышать (понять), что она говорит.",
+    "index": 79,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "The car broke down on the highway in the middle of the night.",
+    "ru": "Машина сломалась на шоссе посреди ночи.",
+    "index": 80,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "They decided to break up after four years of dating.",
+    "ru": "Они решили расстаться после четырех лет отношений.",
+    "index": 81,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "The prisoners managed to break out of the jail last night.",
+    "ru": "Заключенным удалось сбежать из тюрьмы прошлой ночью.",
+    "index": 82,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "She often tries to break into the film industry.",
+    "ru": "Она часто пытается прорваться (попасть) в киноиндустрию.",
+    "index": 83,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "We need to break the project down into smaller tasks.",
+    "ru": "Нам нужно разделить проект на более мелкие задачи.",
+    "index": 84,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "Don't break off the conversation; I was enjoying it.",
+    "ru": "Не прерывай разговор; мне было интересно.",
+    "index": 85,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "After weeks of tension, the peace talks finally broke off.",
+    "ru": "После недель напряженности мирные переговоры наконец прекратились.",
+    "index": 86,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "An epidemic of flu broke out in the city last winter.",
+    "ru": "Эпидемия гриппа разразилась в городе прошлой зимой.",
+    "index": 87,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "We should break for lunch at 1:00 PM.",
+    "ru": "Нам следует сделать перерыв на обед в 13:00.",
+    "index": 88,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "It took a long time to break him in to the new work routine.",
+    "ru": "Потребовалось много времени, чтобы приучить его к новому рабочему распорядку.",
+    "index": 89,
+    "repeatCheckbox": false,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "The government failed to break through the deadlock in negotiations.",
+    "ru": "Правительству не удалось преодолеть тупик в переговорах.",
+    "index": 90,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "Someone tried to break in while we were away on holiday.",
+    "ru": "Кто-то пытался ворваться (взломать дверь), пока мы были в отпуске.",
+    "index": 91,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "They had to break away from the main group to find help.",
+    "ru": "Им пришлось отделиться от основной группы, чтобы найти помощь.",
+    "index": 92,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "It was difficult to break away from his influence.",
+    "ru": "Было трудно вырваться из-под его влияния.",
+    "index": 93,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "The news of the scandal finally broke.",
+    "ru": "Новость о скандале наконец стала известна (просочилась).",
+    "index": 94,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "He always knows how to break the ice at formal gatherings.",
+    "ru": "Он всегда знает, как разрядить обстановку (начать общение) на официальных встречах.",
+    "index": 95,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "She had to break the news of the job loss gently.",
+    "ru": "Ей пришлось мягко сообщить неприятную новость о потере работы.",
+    "index": 96,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "Let's break the habit of checking our phones every five minutes.",
+    "ru": "Давайте избавимся от привычки проверять телефоны каждые пять минут.",
+    "index": 97,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "The thieves tried to break the safe open but failed.",
+    "ru": "Воры пытались взломать сейф, но безуспешно.",
+    "index": 98,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "The clouds finally broke up, and the sun came out.",
+    "ru": "Облака наконец рассеялись, и вышло солнце.",
+    "index": 99,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "I always get up early on weekdays.",
+    "ru": "Я всегда встаю рано в будние дни.",
+    "index": 100,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "It took her a long time to get over the illness.",
+    "ru": "Ей потребовалось много времени, чтобы оправиться от болезни.",
+    "index": 101,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "We need to get rid of this old furniture.",
+    "ru": "Нам нужно избавиться от этой старой мебели.",
+    "index": 102,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "I don't know how he gets away with being late all the time.",
+    "ru": "Не знаю, как ему сходит с рук то, что он все время опаздывает.",
+    "index": 103,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "I'm excited to get together with my friends this weekend.",
+    "ru": "Я с нетерпением жду, чтобы собраться с друзьями на этих выходных.",
+    "index": 104,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "How did you get into playing the piano?",
+    "ru": "Как ты начал заниматься игрой на пианино?",
+    "index": 105,
+    "repeatCheckbox": false,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "She couldn't get across her point during the meeting.",
+    "ru": "Она не смогла донести свою точку зрения во время встречи.",
+    "index": 106,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "Please get on the bus quickly; we are running late.",
+    "ru": "Пожалуйста, быстро садитесь в автобус; мы опаздываем.",
+    "index": 107,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "They decided to get off at the next station.",
+    "ru": "Они решили выйти на следующей станции.",
+    "index": 108,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "We should get back to work after this short break.",
+    "ru": "Нам следует вернуться к работе после этого короткого перерыва.",
+    "index": 109,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "I will get around to cleaning the apartment tomorrow.",
+    "ru": "Я займусь уборкой квартиры завтра.",
+    "index": 110,
+    "repeatCheckbox": false,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "He managed to get by on very little money last month.",
+    "ru": "Ему удалось свести концы с концами (выжить) на очень небольшие деньги в прошлом месяце.",
+    "index": 111,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "It's hard to get through to him when he's angry.",
+    "ru": "Трудно дозвониться до него (или достучаться до него), когда он злится.",
+    "index": 112,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "We need to get a new plan going right away.",
+    "ru": "Нам нужно немедленно начать осуществлять новый план.",
+    "index": 113,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "If you get ahead, don't forget where you started.",
+    "ru": "Если ты добьешься успеха (продвинешься), не забывай, с чего ты начинал.",
+    "index": 114,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "The children were trying to get at the cookies on the top shelf.",
+    "ru": "Дети пытались достать печенье с верхней полки.",
+    "index": 115,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "I hope you get down to studying soon; the exams are close.",
+    "ru": "Надеюсь, ты скоро приступишь к учебе; экзамены близко.",
+    "index": 116,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "We didn't know how to start, but we eventually got going.",
+    "ru": "Мы не знали, как начать, но в итоге начали (сдвинулись с места).",
+    "index": 117,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "Could you help me get the box down from the attic?",
+    "ru": "Не мог бы ты помочь мне снять коробку с чердака?",
+    "index": 118,
+    "repeatCheckbox": false,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "When will you get your driving license back after the fine?",
+    "ru": "Когда ты получишь обратно свои водительские права после штрафа?",
+    "index": 119,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "I wish he would get off my back about cleaning the apartment.",
+    "ru": "Хотел бы я, чтобы он отстал от меня (перестал пилить) по поводу уборки в квартире.",
+    "index": 120,
+    "repeatCheckbox": false,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "The news about the merger quickly got out to the press.",
+    "ru": "Новости о слиянии быстро просочились (стали известны) прессе.",
+    "index": 121,
+    "repeatCheckbox": false,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "They had a difficult start, but they eventually got along.",
+    "ru": "У них было трудное начало, но в итоге они поладили.",
+    "index": 122,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "We need to get the details down in writing before signing the contract.",
+    "ru": "Нам нужно записать детали, прежде чем подписывать контракт.",
+    "index": 123,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "It took us an hour to get through to the customer service line.",
+    "ru": "Нам потребовался час, чтобы дозвониться до линии обслуживания клиентов.",
+    "index": 124,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "Let's get away with a quick trip to the beach this weekend.",
+    "ru": "Давай выберемся (устроим) в быструю поездку на пляж в эти выходные.",
+    "index": 125,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "The thief managed to get away in the confusion.",
+    "ru": "Вору удалось скрыться в суматохе.",
+    "index": 126,
+    "repeatCheckbox": false,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "He hopes to get ahead in his career within the next five years.",
+    "ru": "Он надеется продвинуться (добиться успеха) в своей карьере в течение следующих пяти лет.",
+    "index": 127,
+    "repeatCheckbox": false,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "You need a special key to get into the server room.",
+    "ru": "Вам нужен специальный ключ, чтобы попасть в серверную.",
+    "index": 128,
+    "repeatCheckbox": false,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "They always get at each other during board meetings.",
+    "ru": "Они всегда придираются друг к другу во время заседаний правления.",
+    "index": 129,
+    "repeatCheckbox": false,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "She often gets behind with her university readings.",
+    "ru": "Она часто отстает от своих университетских чтений.",
+    "index": 130,
+    "repeatCheckbox": false,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "The noise from the street is starting to get to me.",
+    "ru": "Шум с улицы начинает раздражать меня (донимать).",
+    "index": 131,
+    "repeatCheckbox": false,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "We need to get down to business and stop wasting time.",
+    "ru": "Нам нужно приступить к делу и перестать тратить время.",
+    "index": 132,
+    "repeatCheckbox": false,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "She had to get out of the habit of checking social media constantly.",
+    "ru": "Ей пришлось избавиться от привычки постоянно проверять социальные сети.",
+    "index": 133,
+    "repeatCheckbox": false,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "The best way to travel around the city is to get around on a bike.",
+    "ru": "Лучший способ передвижения по городу — передвигаться на велосипеде.",
+    "index": 134,
+    "repeatCheckbox": false,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "I'll never get over how incredible that concert was.",
+    "ru": "Я никогда не перестану восхищаться (не забуду), насколько невероятным был тот концерт.",
+    "index": 135,
+    "repeatCheckbox": false,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "I called him, but I couldn't get through.",
+    "ru": "Я позвонил ему, но не смог дозвониться.",
+    "index": 136,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "Can you get the message across to the team before noon?",
+    "ru": "Можешь донести сообщение до команды до полудня?",
+    "index": 137,
+    "repeatCheckbox": false,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "We can't afford a new car, so we'll have to get by with the old one.",
+    "ru": "Мы не можем позволить себе новую машину, так что придется довольствоваться (обходиться) старой.",
+    "index": 138,
+    "repeatCheckbox": false,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "When did you get back from your trip to Italy?",
+    "ru": "Когда ты вернулся из своей поездки в Италию?",
+    "index": 139,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "1. The plane will take off at 8:00 AM sharp.",
+    "ru": "1. Самолет взлетит ровно в 8:00 утра.",
+    "index": 140,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "2. Please take off your shoes before entering the house.",
+    "ru": "2. Пожалуйста, снимите обувь, прежде чем входить в дом.",
+    "index": 141,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "3. I decided to take up yoga to relieve stress.",
+    "ru": "3. Я решил заняться йогой, чтобы снять стресс.",
+    "index": 142,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "4. The company was taken over by a larger corporation.",
+    "ru": "4. Компанию поглотила более крупная корпорация.",
+    "index": 143,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "5. His uncle agreed to take him in after he lost his job.",
+    "ru": "5. Его дядя согласился приютить его после того, как он потерял работу.",
+    "index": 144,
+    "repeatCheckbox": false,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "6. The lecture was difficult to take in all at once.",
+    "ru": "6. Лекцию было трудно понять/усвоить сразу.",
+    "index": 145,
+    "repeatCheckbox": false,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "7. I had to take back what I said because it wasn't true.",
+    "ru": "7. Мне пришлось взять назад (отказаться от) то, что я сказал, потому что это было неправдой.",
+    "index": 146,
+    "repeatCheckbox": false,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "8. You must take down the information accurately in your notebook.",
+    "ru": "8. Вы должны точно записать информацию в свой блокнот.",
+    "index": 147,
+    "repeatCheckbox": false,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "9. She takes after her mother in appearance and personality.",
+    "ru": "9. Она похожа на свою мать внешностью и характером.",
+    "index": 148,
+    "repeatCheckbox": false,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "10. The manager had to take on more responsibilities.",
+    "ru": "10. Менеджеру пришлось взять на себя больше обязанностей.",
+    "index": 149,
+    "repeatCheckbox": false,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "11. He was ill, so his colleague had to take over his duties.",
+    "ru": "11. Он заболел, поэтому его коллеге пришлось взять на себя его обязанности.",
+    "index": 150,
+    "repeatCheckbox": false,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "12. Don't forget to take out the trash before you leave.",
+    "ru": "12. Не забудь вынести мусор перед уходом.",
+    "index": 151,
+    "repeatCheckbox": false,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "13. The tailor had to take in the jacket because it was too loose.",
+    "ru": "13. Портному пришлось ушить пиджак, потому что он был слишком свободным.",
+    "index": 152,
+    "repeatCheckbox": false,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "14. We will take the matter up with the management next week.",
+    "ru": "14. Мы поднимем этот вопрос перед руководством на следующей неделе.",
+    "index": 153,
+    "repeatCheckbox": false,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "15. The school has decided to take away student privileges.",
+    "ru": "15. Школа решила забрать (отменить) привилегии учеников.",
+    "index": 154,
+    "repeatCheckbox": false,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "16. I can't take out a loan without collateral.",
+    "ru": "16. Я не могу взять кредит без залога.",
+    "index": 155,
+    "repeatCheckbox": false,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "17. The new employee will take to the job quickly.",
+    "ru": "17. Новый сотрудник быстро освоится с (привыкнет к) работе.",
+    "index": 156,
+    "repeatCheckbox": false,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "18. This furniture takes up too much space in the living room.",
+    "ru": "18. Эта мебель занимает слишком много места в гостиной.",
+    "index": 157,
+    "repeatCheckbox": false,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "19. The project will take up most of my time this month.",
+    "ru": "19. Проект займет (потребует) большую часть моего времени в этом месяце.",
+    "index": 158,
+    "repeatCheckbox": false,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "20. She often takes out her stress on her family.",
+    "ru": "20. Она часто срывает свой стресс на своей семье.",
+    "index": 159,
+    "repeatCheckbox": false,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "21. We decided to take the dog back to the shelter.",
+    "ru": "21. Мы решили вернуть собаку в приют.",
+    "index": 160,
+    "repeatCheckbox": false,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "22. It's time to take on the challenge and finish the marathon.",
+    "ru": "22. Пришло время принять вызов и закончить марафон.",
+    "index": 161,
+    "repeatCheckbox": false,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "23. The heavy traffic took us over an hour to cross the city.",
+    "ru": "23. Интенсивное движение заняло у нас больше часа, чтобы пересечь город.",
+    "index": 162,
+    "repeatCheckbox": false,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "24. Please take down the umbrella; the rain has stopped.",
+    "ru": "24. Пожалуйста, сложи (убери) зонт; дождь прекратился.",
+    "index": 163,
+    "repeatCheckbox": false,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "25. He was taken away by the police for questioning.",
+    "ru": "25. Его увезла полиция для допроса.",
+    "index": 164,
+    "repeatCheckbox": false,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "26. He couldn't take in the beauty of the landscape.",
+    "ru": "26. Он не мог охватить (воспринять) красоту пейзажа.",
+    "index": 165,
+    "repeatCheckbox": false,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "27. She took him back despite his terrible mistake.",
+    "ru": "27. Она приняла его обратно, несмотря на его ужасную ошибку.",
+    "index": 166,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "28. Why don't we take out the client to dinner tonight?",
+    "ru": "28. Почему бы нам не сводить клиента на ужин сегодня вечером?",
+    "index": 167,
+    "repeatCheckbox": false,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "29. I don't take to loud, crowded places very well.",
+    "ru": "29. Я не очень люблю громкие, людные места.",
+    "index": 168,
+    "repeatCheckbox": false,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "30. The scandal helped to take the minister down.",
+    "ru": "30. Скандал помог свергнуть министра (лишить его власти).",
+    "index": 169,
+    "repeatCheckbox": false,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "31. His jokes always take me back to my childhood.",
+    "ru": "31. Его шутки всегда возвращают меня (напоминают) о моем детстве.",
+    "index": 170,
+    "repeatCheckbox": false,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "32. We have to take out the appendix from the final report.",
+    "ru": "32. Мы должны убрать (исключить) приложение из итогового отчета.",
+    "index": 171,
+    "repeatCheckbox": false,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "33. The new rules will take effect next month.",
+    "ru": "33. Новые правила вступят в силу в следующем месяце.",
+    "index": 172,
+    "repeatCheckbox": false,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "34. You need to take into account his lack of experience.",
+    "ru": "34. Вам нужно принять во внимание его недостаток опыта.",
+    "index": 173,
+    "repeatCheckbox": false,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "35. The teacher told the class to take notes.",
+    "ru": "35. Учитель велел классу делать записи (конспектировать).",
+    "index": 174,
+    "repeatCheckbox": false,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "36. Don't worry, the wound will take time to heal.",
+    "ru": "36. Не волнуйся, ране потребуется время, чтобы зажить.",
+    "index": 175,
+    "repeatCheckbox": false,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "37. We should take a moment to appreciate the view.",
+    "ru": "37. Мы должны уделить минутку, чтобы оценить вид.",
+    "index": 176,
+    "repeatCheckbox": false,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "38. The students were taken on a tour of the museum.",
+    "ru": "38. Студентов взяли (повезли) на экскурсию по музею.",
+    "index": 177,
+    "repeatCheckbox": false,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "39. He couldn't take it anymore and quit his job.",
+    "ru": "39. Он не мог больше это терпеть и уволился с работы.",
+    "index": 178,
+    "repeatCheckbox": false,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "40. The team must take on this new opponent aggressively.",
+    "ru": "40. Команда должна вступить в бой с этим новым противником агрессивно.",
+    "index": 179,
+    "repeatCheckbox": false,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "1. I need to look up the meaning of this word in the dictionary.",
+    "ru": "1. Мне нужно посмотреть (найти) значение этого слова в словаре.",
+    "index": 180,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "2. Things are finally looking up for her career.",
+    "ru": "2. Дела наконец идут на поправку (улучшаются) в её карьере.",
+    "index": 181,
+    "repeatCheckbox": false,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "3. We are really looking forward to our vacation next month.",
+    "ru": "3. Мы очень ждем (с нетерпением) нашего отпуска в следующем месяце.",
+    "index": 182,
+    "repeatCheckbox": true,
+    "learnedCheckbox": true
+  },
+  {
+    "en": "4. Could you look after my dog while I'm away?",
+    "ru": "4. Не мог бы ты присмотреть за моей собакой, пока меня не будет?",
+    "index": 183,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "5. The police are looking into the cause of the fire.",
+    "ru": "5. Полиция расследует причину пожара.",
+    "index": 184,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "6. Always look out for other people when you cross the street.",
+    "ru": "6. Всегда остерегайся (будь внимателен к) других людей, когда переходишь улицу.",
+    "index": 185,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "7. Please look over the contract before signing it.",
+    "ru": "7. Пожалуйста, просмотрите (изучите) контракт перед его подписанием.",
+    "index": 186,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "8. The old photos look back on my childhood.",
+    "ru": "8. Старые фотографии напоминают о моём детстве.",
+    "index": 187,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "9. If you don't know the answer, look it up on the internet.",
+    "ru": "9. Если ты не знаешь ответа, найди его в интернете.",
+    "index": 188,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "10. You should look up to people who show integrity.",
+    "ru": "10. Тебе следует уважать (брать пример с) людей, которые проявляют честность.",
+    "index": 189,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "11. She always looks down on people who aren't wealthy.",
+    "ru": "11. Она всегда смотрит свысока на людей, которые не богаты.",
+    "index": 190,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "12. Can you look through these documents for any errors?",
+    "ru": "12. Ты можешь просмотреть (пролистать) эти документы на предмет ошибок?",
+    "index": 191,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "13. I've been looking for my keys all morning.",
+    "ru": "13. Я ищу свои ключи всё утро.",
+    "index": 192,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "14. We will look ahead to the next quarter's financial goals.",
+    "ru": "14. Мы заглянем вперед (обсудим) финансовые цели следующего квартала.",
+    "index": 193,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "15. The children look forward to Christmas every year.",
+    "ru": "15. Дети с нетерпением ждут Рождества каждый год.",
+    "index": 194,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "16. The house looks onto a beautiful park.",
+    "ru": "16. Дом выходит (окнами) на красивый парк.",
+    "index": 195,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "17. Look here, I need to speak to you about something important.",
+    "ru": "17. Послушай, мне нужно поговорить с тобой о чем-то важном.",
+    "index": 196,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "18. Look around and tell me what you see.",
+    "ru": "18. Оглянись и скажи мне, что ты видишь.",
+    "index": 197,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "19. They promised to look into the customer's complaint immediately.",
+    "ru": "19. Они пообещали немедленно рассмотреть (расследовать) жалобу клиента.",
+    "index": 198,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "20. She still looks back on her college years fondly.",
+    "ru": "20. Она до сих пор с нежностью вспоминает (оглядывается на) свои студенческие годы.",
+    "index": 199,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "21. If you are lost, look up the address on your phone.",
+    "ru": "21. Если ты заблудился, найди адрес в телефоне.",
+    "index": 200,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "22. The patient needs someone to look after him constantly.",
+    "ru": "22. Пациенту нужно, чтобы кто-то ухаживал за ним постоянно.",
+    "index": 201,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "23. You need to look beyond the surface to find the truth.",
+    "ru": "23. Тебе нужно смотреть глубже (видеть дальше) поверхности, чтобы найти правду.",
+    "index": 202,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "24. We should look out for opportunities to expand the business.",
+    "ru": "24. Нам следует выискивать (быть начеку) возможности для расширения бизнеса.",
+    "index": 203,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "25. He looks like his father, but he takes after his mother.",
+    "ru": "25. Он похож на своего отца, но унаследовал характер от матери.",
+    "index": 204,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "26. Don't look down on that work; it's honest labour.",
+    "ru": "26. Не пренебрегай этой работой; это честный труд.",
+    "index": 205,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "27. I will look into the possibility of changing the dates.",
+    "ru": "27. Я изучу возможность изменения дат.",
+    "index": 206,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "28. Remember to look out when you open the car door.",
+    "ru": "28. Не забудь посмотреть (убедиться в отсутствии транспорта), когда открываешь дверь машины.",
+    "index": 207,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "29. Can you look through the window to see if it's raining?",
+    "ru": "29. Ты можешь посмотреть в окно, чтобы увидеть, идет ли дождь?",
+    "index": 208,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "30. The future is looking bright for the company.",
+    "ru": "30. Будущее выглядит светлым для компании.",
+    "index": 209,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "31. He had to look away from the terrible scene.",
+    "ru": "31. Ему пришлось отвернуться от ужасной сцены.",
+    "index": 210,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "32. I stopped at the market just to look around.",
+    "ru": "32. Я остановился на рынке просто, чтобы осмотреться.",
+    "index": 211,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "33. The kids looked in on their sleeping parents.",
+    "ru": "33. Дети заглянули к своим спящим родителям.",
+    "index": 212,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "34. The ancient city walls look down on the modern town.",
+    "ru": "34. Древние городские стены возвышаются над современным городом.",
+    "index": 213,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "35. We need to look for a better solution to this problem.",
+    "ru": "35. Нам нужно искать лучшее решение этой проблемы.",
+    "index": 214,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "36. Try to look on the bright side of the situation.",
+    "ru": "36. Попытайся смотреть на светлую сторону ситуации.",
+    "index": 215,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "37. You must look up when speaking to an audience.",
+    "ru": "37. Ты должен поднять глаза (смотреть вверх), когда говоришь с аудиторией.",
+    "index": 216,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "38. We need to look over the budget projections one last time.",
+    "ru": "38. Нам нужно проверить (пересмотреть) бюджетные прогнозы в последний раз.",
+    "index": 217,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "39. The doctor told her to look out for any signs of infection.",
+    "ru": "39. Врач сказал ей следить за любыми признаками инфекции.",
+    "index": 218,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "40. I’ll look you up next time I’m in town!",
+    "ru": "40. Я найду тебя (навещу) в следующий раз, когда буду в городе!",
+    "index": 219,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "1. She suddenly came across her old school friend at the market.",
+    "ru": "1. Она внезапно наткнулась на свою старую школьную подругу на рынке.",
+    "index": 220,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "2. He comes across as a very honest and reliable person.",
+    "ru": "2. Он производит впечатление (кажется) очень честного и надежного человека.",
+    "index": 221,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "3. When does the new magazine come out?",
+    "ru": "3. Когда выходит (публикуется) новый журнал?",
+    "index": 222,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "4. It took him a week to come round after the operation.",
+    "ru": "4. Ему потребовалась неделя, чтобы прийти в себя после операции.",
+    "index": 223,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "5. If you ever visit, please come over for dinner.",
+    "ru": "5. Если когда-нибудь приедешь, пожалуйста, заходи на ужин.",
+    "index": 224,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "6. We tried to find a solution, but couldn't come up with one.",
+    "ru": "6. Мы пытались найти решение, но не смогли его придумать (предложить).",
+    "index": 225,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "7. The paint started to come off the wall after the rain.",
+    "ru": "7. Краска начала отслаиваться (сходить) со стены после дождя.",
+    "index": 226,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "8. The problem comes down to a simple lack of communication.",
+    "ru": "8. Проблема сводится к простому недостатку общения.",
+    "index": 227,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "9. Let's come back to this topic later in the meeting.",
+    "ru": "9. Давайте вернемся к этой теме позже на встрече.",
+    "index": 228,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "10. The truth about the scandal finally came out.",
+    "ru": "10. Правда о скандале наконец выяснилась (раскрылась).",
+    "index": 229,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "11. He was very sick but is slowly coming along.",
+    "ru": "11. Он был очень болен, но потихоньку идет на поправку (продвигается).",
+    "index": 230,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "12. His patience was tested, but he eventually came through.",
+    "ru": "12. Его терпение было испытано, но он в конце концов выдержал (справился).",
+    "index": 231,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "13. The whole town came out to celebrate the victory.",
+    "ru": "13. Весь город собрался (пришел), чтобы отпраздновать победу.",
+    "index": 232,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "14. When does the next train come in?",
+    "ru": "14. Когда прибывает следующий поезд?",
+    "index": 233,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "15. The bill for the new furniture came to over a thousand dollars.",
+    "ru": "15. Счет за новую мебель составил более тысячи долларов.",
+    "index": 234,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "16. The stain will come off if you wash the shirt in hot water.",
+    "ru": "16. Пятно отстирается, если ты постираешь рубашку в горячей воде.",
+    "index": 235,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "17. The decision was unexpected and came as a shock.",
+    "ru": "17. Решение было неожиданным и стало шоком.",
+    "index": 236,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "18. I hope the money for the project comes through soon.",
+    "ru": "18. Надеюсь, деньги на проект скоро поступят (будут получены).",
+    "index": 237,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "19. If you need support, I will come along with you.",
+    "ru": "19. Если тебе нужна поддержка, я пойду с тобой.",
+    "index": 238,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "20. The children came down with the flu last week.",
+    "ru": "20. Дети заболели гриппом на прошлой неделе.",
+    "index": 239,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "21. That tradition comes down from ancient times.",
+    "ru": "21. Эта традиция дошла до нас (передалась) с древних времен.",
+    "index": 240,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "22. When will you come up to visit us in the city?",
+    "ru": "22. Когда ты приедешь к нам в город (обычно, в место, расположенное выше или севернее)?",
+    "index": 241,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "23. His hard work finally came off when he got the promotion.",
+    "ru": "23. Его тяжелая работа наконец окупилась (увенчалась успехом), когда он получил повышение.",
+    "index": 242,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "24. They plan to come in on the deal as financial partners.",
+    "ru": "24. Они планируют участвовать в сделке в качестве финансовых партнеров.",
+    "index": 243,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "25. The loose plank came away from the deck with little effort.",
+    "ru": "25. Незакрепленная доска отошла от настила без особых усилий.",
+    "index": 244,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "26. The new regulations come into force next month.",
+    "ru": "26. Новые правила вступают в силу в следующем месяце.",
+    "index": 245,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "27. I wasn't sure about the plan, but I eventually came around to it.",
+    "ru": "27. Я не был уверен в плане, но в итоге изменил свое мнение (согласился).",
+    "index": 246,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "28. How did you come by such a rare book?",
+    "ru": "28. Как ты заполучил (достал) такую редкую книгу?",
+    "index": 247,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "29. I wish they would just come to the point.",
+    "ru": "29. Хотел бы я, чтобы они просто перешли к сути (делу).",
+    "index": 248,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "30. The button came undone right before the presentation.",
+    "ru": "30. Пуговица расстегнулась прямо перед презентацией.",
+    "index": 249,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "31. This shirt comes in five different colours.",
+    "ru": "31. Эта рубашка доступна в пяти разных цветах.",
+    "index": 250,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "32. He was surprised when his old debt suddenly came due.",
+    "ru": "32. Он был удивлен, когда его старый долг внезапно подошел к сроку (наступил срок оплаты).",
+    "index": 251,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "33. The boat came alongside the dock to unload.",
+    "ru": "33. Лодка подошла (пришвартовалась) к доку, чтобы разгрузиться.",
+    "index": 252,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "34. The secret was kept for years before it came to light.",
+    "ru": "34. Секрет хранился годами, прежде чем стал известен (раскрылся).",
+    "index": 253,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "35. After much discussion, a consensus was finally come to.",
+    "ru": "35. После долгих обсуждений, наконец, было достигнуто (пришли к) соглашение.",
+    "index": 254,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "36. Everything we talked about will come to nothing if we don't act now.",
+    "ru": "36. Все, о чем мы говорили, сойдет на нет (ни к чему не приведет), если мы не будем действовать сейчас.",
+    "index": 255,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "37. You can always come and go as you please here.",
+    "ru": "37. Ты всегда можешь приходить и уходить, когда тебе угодно, здесь.",
+    "index": 256,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "38. The new law came into being after years of debate.",
+    "ru": "38. Новый закон появился (возник) после многих лет дебатов.",
+    "index": 257,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "39. She came under attack for her controversial statements.",
+    "ru": "39. Она подверглась нападению (критике) за свои спорные заявления.",
+    "index": 258,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "40. The workers came out on strike for better wages.",
+    "ru": "40. Рабочие объявили забастовку за повышение заработной платы.",
+    "index": 259,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "1. The new policy brings about significant changes in the workplace.",
+    "ru": "1. Новая политика приводит к значительным изменениям на рабочем месте.",
+    "index": 260,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "2. He was brought up in a small village by his grandparents.",
+    "ru": "2. Он был воспитан в маленькой деревне своими бабушкой и дедушкой.",
+    "index": 261,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "3. Can you bring down that box from the top shelf for me?",
+    "ru": "3. Можешь снять (спустить) ту коробку с верхней полки для меня?",
+    "index": 262,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "4. The company tried to bring down its production costs.",
+    "ru": "4. Компания пыталась снизить свои производственные расходы.",
+    "index": 263,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "5. His childhood memories were brought back by the old song.",
+    "ru": "5. Его детские воспоминания вернулись (были вызваны) старой песней.",
+    "index": 264,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "6. We decided to bring forward the meeting to Tuesday.",
+    "ru": "6. Мы решили перенести встречу на более ранний срок, на вторник.",
+    "index": 265,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "7. They must bring in new evidence to support their claim.",
+    "ru": "7. Они должны предоставить (ввести) новые доказательства в поддержку своего иска.",
+    "index": 266,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "8. The new legislation will bring in higher taxes next year.",
+    "ru": "8. Новое законодательство введет более высокие налоги в следующем году.",
+    "index": 267,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "9. The successful mission brought honour upon the whole team.",
+    "ru": "9. Успешная миссия принесла честь всей команде.",
+    "index": 268,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "10. The government was eventually brought down by the scandal.",
+    "ru": "10. Правительство в конце концов было свергнуто скандалом.",
+    "index": 269,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "11. He managed to bring the conversation back to the main topic.",
+    "ru": "11. Ему удалось вернуть разговор к основной теме.",
+    "index": 270,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "12. We need to bring out a new product line by summer.",
+    "ru": "12. Нам нужно выпустить (представить) новую линейку продуктов к лету.",
+    "index": 271,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "13. A good designer can bring out the best in any room.",
+    "ru": "13. Хороший дизайнер может подчеркнуть (выявить) лучшее в любой комнате.",
+    "index": 272,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "14. She always brings people together with her positive energy.",
+    "ru": "14. Она всегда собирает людей вместе (сплачивает) своей позитивной энергией.",
+    "index": 273,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "15. The illness quickly brought him down and confined him to bed.",
+    "ru": "15. Болезнь быстро свалила его (лишила сил) и приковала к постели.",
+    "index": 274,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "16. I promise to bring your book back tomorrow.",
+    "ru": "16. Я обещаю вернуть твою книгу завтра.",
+    "index": 275,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "17. The project will bring in a significant profit for the firm.",
+    "ru": "17. Проект принесет значительную прибыль фирме.",
+    "index": 276,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "18. The jury was unable to bring in a verdict.",
+    "ru": "18. Жюри не смогло вынести вердикт.",
+    "index": 277,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "19. They should bring in an expert to assess the situation.",
+    "ru": "19. Им следует пригласить (нанять) эксперта для оценки ситуации.",
+    "index": 278,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "20. The change in atmosphere brought about a feeling of relief.",
+    "ru": "20. Изменение в атмосфере вызвало чувство облегчения.",
+    "index": 279,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "21. We will bring up the issue of overtime at the next meeting.",
+    "ru": "21. Мы поднимем вопрос о сверхурочной работе на следующем собрании.",
+    "index": 280,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "22. The sudden noise brought her to immediately.",
+    "ru": "22. Внезапный шум сразу привел ее в сознание.",
+    "index": 281,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "23. They plan to bring out a special edition of the game.",
+    "ru": "23. Они планируют выпустить специальное издание игры.",
+    "index": 282,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "24. We must bring our differences together to form a common strategy.",
+    "ru": "24. Мы должны объединить наши различия, чтобы сформировать общую стратегию.",
+    "index": 283,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "25. The new evidence brings the old theory down.",
+    "ru": "25. Новое доказательство опровергает старую теорию.",
+    "index": 284,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "26. The charity event brought in over a thousand dollars.",
+    "ru": "26. Благотворительное мероприятие собрало (принесло) более тысячи долларов.",
+    "index": 285,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "27. Could you bring over your laptop tonight?",
+    "ru": "27. Мог бы ты принести с собой (занести) свой ноутбук сегодня вечером?",
+    "index": 286,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "28. Her talent was brought out by a fantastic music teacher.",
+    "ru": "28. Ее талант был раскрыт фантастическим учителем музыки.",
+    "index": 287,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "29. Let's bring the boxes upstairs before unpacking.",
+    "ru": "29. Давай поднимем коробки наверх перед распаковкой.",
+    "index": 288,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "30. The scandal threatened to bring the entire organization down.",
+    "ru": "30. Скандал угрожал развалить всю организацию.",
+    "index": 289,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "31. This discussion brings us to the final item on the agenda.",
+    "ru": "31. Эта дискуссия подводит нас к последнему пункту повестки дня.",
+    "index": 290,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "32. The warm weather brings on the spring flowers early.",
+    "ru": "32. Теплая погода вызывает (ускоряет) раннее появление весенних цветов.",
+    "index": 291,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "33. The speaker had to bring his speech to an end quickly.",
+    "ru": "33. Докладчику пришлось быстро закончить свою речь.",
+    "index": 292,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "34. Can you bring up that document from the archive?",
+    "ru": "34. Можешь поднять (достать) тот документ из архива?",
+    "index": 293,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "35. The loud music was bringing down the mood of the party.",
+    "ru": "35. Громкая музыка портила (ухудшала) настроение вечеринки.",
+    "index": 294,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "36. We hope the government will bring in new safety measures.",
+    "ru": "36. Мы надеемся, что правительство введет новые меры безопасности.",
+    "index": 295,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "37. Please bring the subject up gently with him.",
+    "ru": "37. Пожалуйста, подними эту тему с ним осторожно.",
+    "index": 296,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "38. The experience brought out a strength in her she didn't know she had.",
+    "ru": "38. Этот опыт обнаружил в ней силу, о которой она не знала.",
+    "index": 297,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "39. The doctor gave her a medicine to bring the fever down.",
+    "ru": "39. Врач дал ей лекарство, чтобы сбить температуру.",
+    "index": 298,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "40. Bring me back a souvenir from your trip!",
+    "ru": "40. Привези мне сувенир из своей поездки!",
+    "index": 299,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "1. We had to call off the trip due to bad weather.",
+    "ru": "1. Нам пришлось отменить поездку из-за плохой погоды.",
+    "index": 300,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "2. I'll call you back in about ten minutes.",
+    "ru": "2. Я перезвоню тебе примерно через десять минут.",
+    "index": 301,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "3. The manager decided to call in an external consultant.",
+    "ru": "3. Менеджер решил вызвать (пригласить) внешнего консультанта.",
+    "index": 302,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "4. Please call on me if you need any help with the project.",
+    "ru": "4. Пожалуйста, обращайся ко мне, если тебе понадобится помощь с проектом.",
+    "index": 303,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "5. His actions may call for a formal apology.",
+    "ru": "5. Его действия могут потребовать официального извинения.",
+    "index": 304,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "6. The doctor was called out in the middle of the night.",
+    "ru": "6. Врача вызвали (срочно) посреди ночи.",
+    "index": 305,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "7. I'm going to call around to a few garages for a quote.",
+    "ru": "7. Я собираюсь обзвонить несколько автомастерских, чтобы узнать цену.",
+    "index": 306,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "8. They decided to call it a day and finish the work tomorrow.",
+    "ru": "8. Они решили закругляться (закончить работу) и закончить завтра.",
+    "index": 307,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "9. Does this old debt still call for payment?",
+    "ru": "9. Требует ли этот старый долг всё ещё оплаты?",
+    "index": 308,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "10. The teacher decided to call the students together for an assembly.",
+    "ru": "10. Учитель решил собрать учеников на общее собрание.",
+    "index": 309,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "11. I often call up my grandmother just to chat.",
+    "ru": "11. Я часто звоню своей бабушке, просто чтобы поболтать.",
+    "index": 310,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "12. The memories of that summer always call up a smile.",
+    "ru": "12. Воспоминания о том лете всегда вызывают улыбку.",
+    "index": 311,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "13. You should call back to the office to confirm the details.",
+    "ru": "13. Тебе следует перезвонить в офис, чтобы подтвердить детали.",
+    "index": 312,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "14. We will have to call the reserves in if the main team gets tired.",
+    "ru": "14. Нам придется вызвать резерв, если основная команда устанет.",
+    "index": 313,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "15. The speaker was called on to present the award.",
+    "ru": "15. Спикера попросили (пригласили) вручить награду.",
+    "index": 314,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "16. The judge may call for a heavier sentence in this case.",
+    "ru": "16. Судья может потребовать более сурового приговора в этом деле.",
+    "index": 315,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "17. The supervisor called out the employee for being late.",
+    "ru": "17. Начальник отчитал (пожурил) сотрудника за опоздание.",
+    "index": 316,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "18. I had to call in sick because I had a fever.",
+    "ru": "18. Мне пришлось позвонить и сообщить о болезни, потому что у меня была температура.",
+    "index": 317,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "19. Don't call me names just because you are angry!",
+    "ru": "19. Не обзывай меня только потому, что ты злишься!",
+    "index": 318,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "20. Before signing, we need to call up the exact terms of the agreement.",
+    "ru": "20. Перед подписанием нам нужно уточнить (найти) точные условия соглашения.",
+    "index": 319,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "21. If the situation worsens, we will have to call for an evacuation.",
+    "ru": "21. Если ситуация ухудшится, нам придется призвать к эвакуации.",
+    "index": 320,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "22. They plan to call together all the shareholders next month.",
+    "ru": "22. Они планируют созвать всех акционеров в следующем месяце.",
+    "index": 321,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "23. You can call at the reception desk for your visitor's pass.",
+    "ru": "23. Вы можете зайти на стойку регистрации за пропуском.",
+    "index": 322,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "24. I was so exhausted that I just called it a night.",
+    "ru": "24. Я был так измотан, что просто объявил конец вечеринке/работе.",
+    "index": 323,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "25. The company will call on its clients to vote for the new logo.",
+    "ru": "25. Компания призовет своих клиентов проголосовать за новый логотип.",
+    "index": 324,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "26. He decided to call off his engagement to his long-time girlfriend.",
+    "ru": "26. Он решил разорвать свою помолвку с давней подругой.",
+    "index": 325,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "27. I need to call in the repairman to fix the boiler.",
+    "ru": "27. Мне нужно вызвать ремонтника, чтобы починить котел.",
+    "index": 326,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "28. If you have an emergency, please call through immediately.",
+    "ru": "28. Если у вас чрезвычайная ситуация, пожалуйста, позвоните немедленно (по внутренней линии).",
+    "index": 327,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "29. Let's call a halt to the arguments and find a solution.",
+    "ru": "29. Давайте положим конец спорам и найдем решение.",
+    "index": 328,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "30. The manager must call for high standards of work.",
+    "ru": "30. Менеджер должен требовать высоких стандартов работы.",
+    "index": 329,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "31. His brave actions were called into question by the media.",
+    "ru": "31. Его смелые действия были поставлены под сомнение средствами массовой информации.",
+    "index": 330,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "32. I'll call over the technician as soon as the line is free.",
+    "ru": "32. Я позову (по внутренней связи) техника, как только линия будет свободна.",
+    "index": 331,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "33. The military decided to call up all the reserve troops.",
+    "ru": "33. Военные решили призвать все резервные войска.",
+    "index": 332,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "34. The witness was called up to the stand.",
+    "ru": "34. Свидетеля вызвали на трибуну.",
+    "index": 333,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "35. You can call on the help of the entire team if necessary.",
+    "ru": "35. При необходимости ты можешь прибегнуть к помощи всей команды.",
+    "index": 334,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "36. This situation could call forth strong emotions.",
+    "ru": "36. Эта ситуация может вызвать (пробудить) сильные эмоции.",
+    "index": 335,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "37. The noise was so loud that I had to call out to him.",
+    "ru": "37. Шум был такой громкий, что мне пришлось крикнуть ему.",
+    "index": 336,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "38. The pilot reported that he was calling for a clear landing strip.",
+    "ru": "38. Пилот сообщил, что запрашивает чистую посадочную полосу.",
+    "index": 337,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "39. After the long flight, I just wanted to call it quits.",
+    "ru": "39. После долгого полета я просто хотел всё бросить (закончить).",
+    "index": 338,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "40. I need to call up a lot of courage for this presentation.",
+    "ru": "40. Мне нужно собрать много смелости для этой презентации.",
+    "index": 339,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "1. Can you drop off the package at the post office for me?",
+    "ru": "1. Можешь отвезти (оставить) посылку на почте для меня?",
+    "index": 340,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "2. I often drop off in front of the TV after a long day.",
+    "ru": "2. Я часто засыпаю перед телевизором после долгого дня.",
+    "index": 341,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "3. Why don't you drop by for a cup of coffee sometime?",
+    "ru": "3. Почему бы тебе как-нибудь не заглянуть (зайти) на чашку кофе?",
+    "index": 342,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "4. He had to drop out of college due to financial problems.",
+    "ru": "4. Ему пришлось бросить (покинуть) колледж из-за финансовых проблем.",
+    "index": 343,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "5. Sales often drop off during the winter months.",
+    "ru": "5. Продажи часто падают (снижаются) в течение зимних месяцев.",
+    "index": 344,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "6. We decided to drop the subject entirely.",
+    "ru": "6. Мы решили полностью прекратить (оставить) эту тему.",
+    "index": 345,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "7. I'll drop you a line when I get settled in the new city.",
+    "ru": "7. Я напишу тебе пару строк (короткое сообщение), когда устроюсь в новом городе.",
+    "index": 346,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "8. Prices are expected to drop down later this year.",
+    "ru": "8. Ожидается, что цены упадут (снизятся) позже в этом году.",
+    "index": 347,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "9. Please drop in any time you are in the neighbourhood.",
+    "ru": "9. Пожалуйста, заходи (без приглашения) в любое время, когда будешь поблизости.",
+    "index": 348,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "10. The passenger quickly dropped off his luggage and left.",
+    "ru": "10. Пассажир быстро выгрузил свой багаж и уехал.",
+    "index": 349,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "11. She had to drop back from the leading group in the race.",
+    "ru": "11. Ей пришлось отстать (отойти назад) от лидирующей группы в гонке.",
+    "index": 350,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "12. Can you drop off the kids at school on your way to work?",
+    "ru": "12. Можешь высадить детей у школы по дороге на работу?",
+    "index": 351,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "13. The temperature will drop away significantly overnight.",
+    "ru": "13. Температура значительно понизится (опустится) за ночь.",
+    "index": 352,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "14. We must drop down this wall to expand the room.",
+    "ru": "14. Мы должны снести эту стену, чтобы расширить комнату.",
+    "index": 353,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "15. The speaker had to drop out of the conference at the last minute.",
+    "ru": "15. Докладчику пришлось отказаться от участия в конференции в последнюю минуту.",
+    "index": 354,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "16. I saw a helicopter drop down near the river.",
+    "ru": "16. Я видел, как вертолет опустился (снизился) возле реки.",
+    "index": 355,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "17. He would often drop in on his elderly neighbour.",
+    "ru": "17. Он часто навещал (неформально) своего пожилого соседа.",
+    "index": 356,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "18. They will drop their lawsuit if we meet their demands.",
+    "ru": "18. Они откажутся от своего иска, если мы выполним их требования.",
+    "index": 357,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "19. My energy levels drop off quickly after lunch.",
+    "ru": "19. Мой уровень энергии быстро падает после обеда.",
+    "index": 358,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "20. The company announced plans to drop the product line.",
+    "ru": "20. Компания объявила о планах снять с производства эту линейку продуктов.",
+    "index": 359,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "21. Don't forget to drop your keys back into the bowl.",
+    "ru": "21. Не забудь бросить свои ключи обратно в миску.",
+    "index": 360,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "22. He decided to drop a note of congratulations to the winner.",
+    "ru": "22. Он решил написать короткое поздравление победителю.",
+    "index": 361,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "23. You can't just drop everything and move to another country!",
+    "ru": "23. Ты не можешь просто бросить все и переехать в другую страну!",
+    "index": 362,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "24. We should drop the prices down to increase sales.",
+    "ru": "24. Нам следует снизить цены, чтобы увеличить продажи.",
+    "index": 363,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "25. The singer suddenly dropped out of the spotlight.",
+    "ru": "25. Певец внезапно исчез (ушел) из поля зрения общественности.",
+    "index": 364,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "26. He often drops hints about the big surprise.",
+    "ru": "26. Он часто намекает (бросает намеки) на большой сюрприз.",
+    "index": 365,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "27. The parachutist had to drop away from the falling debris.",
+    "ru": "27. Парашютисту пришлось отделиться (отдалиться) от падающих обломков.",
+    "index": 366,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "28. The wind caused the boat to drop back significantly.",
+    "ru": "28. Ветер заставил лодку значительно отстать.",
+    "index": 367,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "29. Let me drop you at the corner of the street.",
+    "ru": "29. Позволь мне высадить тебя на углу улицы.",
+    "index": 368,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "30. Please drop me off before the traffic starts.",
+    "ru": "30. Пожалуйста, высади меня до того, как начнется пробка.",
+    "index": 369,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "31. The courier will drop the documents in before noon.",
+    "ru": "31. Курьер доставит документы (занесет) до полудня.",
+    "index": 370,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "32. Drop whatever you are doing and come here immediately!",
+    "ru": "32. Брось все, что ты делаешь, и иди сюда немедленно!",
+    "index": 371,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "33. We need to drop the heavy boxes down to the cellar.",
+    "ru": "33. Нам нужно опустить тяжелые коробки в подвал.",
+    "index": 372,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "34. The news caused her smile to drop away.",
+    "ru": "34. Эта новость заставила её улыбку исчезнуть (смениться печалью).",
+    "index": 373,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "35. You can drop by the office to sign the paperwork.",
+    "ru": "35. Ты можешь зайти в офис, чтобы подписать документы.",
+    "index": 374,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "36. Try to drop your voice when you're in the library.",
+    "ru": "36. Постарайся понизить голос, когда ты в библиотеке.",
+    "index": 375,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "37. They need to drop their opposition to the new plan.",
+    "ru": "37. Им нужно прекратить свое сопротивление новому плану.",
+    "index": 376,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "38. The conversation will drop off if you don't contribute.",
+    "ru": "38. Разговор заглохнет (прекратится), если ты не будешь участвовать.",
+    "index": 377,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "39. He dropped in for five minutes and then had to rush out.",
+    "ru": "39. Он заглянул на пять минут, а затем должен был спешно уйти.",
+    "index": 378,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "40. I must remember to drop this payment off at the bank.",
+    "ru": "40. Я должен не забыть занести этот платеж в банк.",
+    "index": 379,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "1. Don't put off your dentist appointment any longer.",
+    "ru": "1. Не откладывай визит к стоматологу дольше.",
+    "index": 380,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "2. She decided to put on her new dress for the party.",
+    "ru": "2. Она решила надеть свое новое платье на вечеринку.",
+    "index": 381,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "3. I can't put up with that loud music next door anymore.",
+    "ru": "3. Я больше не могу терпеть эту громкую музыку по соседству.",
+    "index": 382,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "4. The fire fighters managed to put out the blaze quickly.",
+    "ru": "4. Пожарным удалось быстро потушить пламя.",
+    "index": 383,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "5. Could you put me through to the manager, please?",
+    "ru": "5. Не могли бы вы, пожалуйста, соединить меня с менеджером?",
+    "index": 384,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "6. We need to put aside some money for our summer trip.",
+    "ru": "6. Нам нужно отложить (сэкономить) немного денег на летнюю поездку.",
+    "index": 385,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "7. He was worried he might put the investors off with his plan.",
+    "ru": "7. Он беспокоился, что может оттолкнуть инвесторов своим планом.",
+    "index": 386,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "8. The government put forward a new proposal for tax reform.",
+    "ru": "8. Правительство выдвинуло новое предложение по налоговой реформе.",
+    "index": 387,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "9. We need to put up a notice about the change in schedule.",
+    "ru": "9. Нам нужно повесить объявление об изменении расписания.",
+    "index": 388,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "10. The company had to put down a competitor's claim in court.",
+    "ru": "10. Компании пришлось опровергнуть заявление конкурента в суде.",
+    "index": 389,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "11. I wish you wouldn't put me down in front of other people.",
+    "ru": "11. Я бы хотел, чтобы ты не унижал меня перед другими людьми.",
+    "index": 390,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "12. She decided to put her name down for the volunteer team.",
+    "ru": "12. Она решила записаться в команду волонтеров.",
+    "index": 391,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "13. The manager had to put the new employee on a strict training schedule.",
+    "ru": "13. Менеджеру пришлось назначить новому сотруднику строгий график обучения.",
+    "index": 392,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "14. We decided to put the matter to a vote.",
+    "ru": "14. Мы решили вынести вопрос на голосование.",
+    "index": 393,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "15. The unexpected expenses really put us back.",
+    "ru": "15. Непредвиденные расходы сильно отбросили нас назад (замедлили).",
+    "index": 394,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "16. It's time to put away the winter clothes until next year.",
+    "ru": "16. Пришло время убрать зимнюю одежду до следующего года.",
+    "index": 395,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "17. The project team had to put in long hours to meet the deadline.",
+    "ru": "17. Команде проекта пришлось работать сверхурочно, чтобы уложиться в срок.",
+    "index": 396,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "18. They offered to put us up for the night when our flight was cancelled.",
+    "ru": "18. Они предложили приютить нас на ночь, когда наш рейс был отменен.",
+    "index": 397,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "19. He tried to put an end to the argument quickly.",
+    "ru": "19. Он попытался быстро положить конец спору.",
+    "index": 398,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "20. Could you put the milk back in the fridge?",
+    "ru": "20. Мог бы ты поставить молоко обратно в холодильник?",
+    "index": 399,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "21. They had to put down their old dog due to severe illness.",
+    "ru": "21. Им пришлось усыпить свою старую собаку из-за тяжелой болезни.",
+    "index": 400,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "22. The noise was distracting, so I had to put it out of my mind.",
+    "ru": "22. Шум отвлекал, поэтому мне пришлось выбросить его из головы.",
+    "index": 401,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "23. You must put your full effort into this task.",
+    "ru": "23. Ты должен вложить все свои силы в это задание.",
+    "index": 402,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "24. They plan to put up a new housing development on the site.",
+    "ru": "24. Они планируют построить новый жилой комплекс на этом участке.",
+    "index": 403,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "25. The soldiers were ordered to put up a fight against the invaders.",
+    "ru": "25. Солдатам было приказано оказать сопротивление захватчикам.",
+    "index": 404,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "26. He couldn't put into words how grateful he was.",
+    "ru": "26. Он не мог выразить словами, насколько он благодарен.",
+    "index": 405,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "27. I need to put some weight on before the winter.",
+    "ru": "27. Мне нужно набрать немного веса перед зимой.",
+    "index": 406,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "28. The crisis has put back the economy by several years.",
+    "ru": "28. Кризис отбросил назад экономику на несколько лет.",
+    "index": 407,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "29. Can you put the TV on? The news is starting.",
+    "ru": "29. Можешь включить телевизор? Начинаются новости.",
+    "index": 408,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "30. The manager was asked to put together a financial report.",
+    "ru": "30. Менеджера попросили составить (сформировать) финансовый отчет.",
+    "index": 409,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "31. The actor put on a fantastic performance last night.",
+    "ru": "31. Актер устроил (показал) фантастическое представление прошлой ночью.",
+    "index": 410,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "32. We will put the question to the board for approval.",
+    "ru": "32. Мы вынесем вопрос на совет директоров для утверждения.",
+    "index": 411,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "33. Try not to put the company down when talking to clients.",
+    "ru": "33. Постарайся не очернять компанию при разговоре с клиентами.",
+    "index": 412,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "34. The police tried to put a stop to the illegal activities.",
+    "ru": "34. Полиция пыталась положить конец незаконной деятельности.",
+    "index": 413,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "35. You can put your trust in me completely.",
+    "ru": "35. Ты можешь полностью положиться на (довериться) меня.",
+    "index": 414,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "36. Don't let your failure put you off your ultimate goal.",
+    "ru": "36. Не позволяй неудаче отвратить тебя от конечной цели.",
+    "index": 415,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "37. We need to put our clocks forward an hour in the spring.",
+    "ru": "37. Нам нужно перевести часы вперед на час весной.",
+    "index": 416,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "38. They offered to put their resources behind the new project.",
+    "ru": "38. Они предложили поддержать (обеспечить ресурсами) новый проект.",
+    "index": 417,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "39. The store is putting up its Christmas decorations early this year.",
+    "ru": "39. Магазин развешивает (украшает) рождественские украшения рано в этом году.",
+    "index": 418,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "40. I must put down my thoughts before I forget them.",
+    "ru": "40. Я должен записать свои мысли, пока не забыл их.",
+    "index": 419,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "1. Can you turn off the light before you leave the room?",
+    "ru": "1. Можешь выключить свет, прежде чем покинуть комнату?",
+    "index": 420,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "2. Please turn on the heating; it's getting cold.",
+    "ru": "2. Пожалуйста, включи отопление; становится холодно.",
+    "index": 421,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "3. I decided to turn down the job offer because the pay was low.",
+    "ru": "3. Я решил отказаться (отклонить) от предложения о работе, потому что зарплата была низкой.",
+    "index": 422,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "4. Could you turn down the music? It's too loud.",
+    "ru": "4. Не мог бы ты убавить музыку? Она слишком громкая.",
+    "index": 423,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "5. It turned out that they were siblings, not just friends.",
+    "ru": "5. Оказалось, что они были братьями и сестрами, а не просто друзьями.",
+    "index": 424,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "6. A large crowd turned out for the political rally.",
+    "ru": "6. Большая толпа собралась (явилась) на политический митинг.",
+    "index": 425,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "7. He promised to turn over a new leaf and stop drinking.",
+    "ru": "7. Он пообещал начать новую жизнь (исправиться) и бросить пить.",
+    "index": 426,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "8. You must turn in your assignments by midnight.",
+    "ru": "8. Вы должны сдать (предоставить) свои задания до полуночи.",
+    "index": 427,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "9. We need to turn back before the storm catches us.",
+    "ru": "9. Нам нужно повернуть назад (вернуться), пока нас не застигла буря.",
+    "index": 428,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "10. The water was turned off due to urgent repairs.",
+    "ru": "10. Вода была перекрыта (отключена) из-за срочного ремонта.",
+    "index": 429,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "11. He decided to turn to his parents for financial help.",
+    "ru": "11. Он решил обратиться к своим родителям за финансовой помощью.",
+    "index": 430,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "12. The caterpillar will turn into a butterfly.",
+    "ru": "12. Гусеница превратится в бабочку.",
+    "index": 431,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "13. The police asked him to turn in his weapon.",
+    "ru": "13. Полиция попросила его сдать оружие.",
+    "index": 432,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "14. We had to turn away customers because the restaurant was full.",
+    "ru": "14. Нам пришлось отказывать (отправлять прочь) клиентам, потому что ресторан был полон.",
+    "index": 433,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "15. The detective found a key that turned up in the garden.",
+    "ru": "15. Детектив нашел ключ, который обнаружился (всплыл) в саду.",
+    "index": 434,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "16. Don't forget to turn the volume up before the movie starts.",
+    "ru": "16. Не забудь прибавить громкость до того, как начнется фильм.",
+    "index": 435,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "17. The discussion started to turn sour after an hour.",
+    "ru": "17. Обсуждение начало портиться (становиться неприятным) через час.",
+    "index": 436,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "18. You should turn your thesis in to your advisor next week.",
+    "ru": "18. Ты должен сдать свою диссертацию своему научному руководителю на следующей неделе.",
+    "index": 437,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "19. The situation may turn against us if we don't act quickly.",
+    "ru": "19. Ситуация может обернуться против нас, если мы не будем действовать быстро.",
+    "index": 438,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "20. The key won't turn in the lock; it must be broken.",
+    "ru": "20. Ключ не поворачивается в замке; он, должно быть, сломан.",
+    "index": 439,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "21. Let's turn to the next topic on the agenda.",
+    "ru": "21. Давайте перейдем к следующей теме в повестке дня.",
+    "index": 440,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "22. My old friends often turn up unexpectedly.",
+    "ru": "22. Мои старые друзья часто появляются (приходят) неожиданно.",
+    "index": 441,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "23. You must turn your focus away from the minor details.",
+    "ru": "23. Ты должен отвлечь свое внимание от второстепенных деталей.",
+    "index": 442,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "24. We decided to turn the building over to the city council.",
+    "ru": "24. Мы решили передать здание городскому совету.",
+    "index": 443,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "25. The child turned over in his sleep.",
+    "ru": "25. Ребенок перевернулся во сне.",
+    "index": 444,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "26. He threatened to turn her in to the police.",
+    "ru": "26. Он угрожал сдать ее (донести на нее) полиции.",
+    "index": 445,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "27. I hope the weather will turn out nice for the picnic.",
+    "ru": "27. Надеюсь, погода окажется хорошей для пикника.",
+    "index": 446,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "28. The loud noise was starting to turn me off the idea of camping.",
+    "ru": "28. Громкий шум начал отвращать меня от идеи кемпинга.",
+    "index": 447,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "29. Please turn the TV down when I'm on the phone.",
+    "ru": "29. Пожалуйста, убавь телевизор, когда я говорю по телефону.",
+    "index": 448,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "30. The factory needed to turn out 1000 units a day.",
+    "ru": "30. Фабрика должна была производить (выпускать) 1000 единиц в день.",
+    "index": 449,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "31. They tried to turn the tables on their accusers.",
+    "ru": "31. Они пытались повернуть ситуацию в свою пользу (поменять роли) против своих обвинителей.",
+    "index": 450,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "32. He often turns up late for important meetings.",
+    "ru": "32. Он часто появляется (приходит) поздно на важные встречи.",
+    "index": 451,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "33. The boat had to turn about quickly to avoid the obstacle.",
+    "ru": "33. Лодке пришлось быстро развернуться, чтобы избежать препятствия.",
+    "index": 452,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "34. The leaves turn colour in the autumn.",
+    "ru": "34. Листья меняют цвет осенью.",
+    "index": 453,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "35. You need to turn your attention to what's happening now.",
+    "ru": "35. Тебе нужно обратить свое внимание на то, что происходит сейчас.",
+    "index": 454,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "36. Don't turn your back on a friend in need.",
+    "ru": "36. Не отворачивайся от друга в беде.",
+    "index": 455,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "37. We need to turn the whole system around for it to work.",
+    "ru": "37. Нам нужно полностью изменить (перевернуть) всю систему, чтобы она заработала.",
+    "index": 456,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "38. The conversation will turn to politics eventually.",
+    "ru": "38. Разговор в конце концов перейдет к политике.",
+    "index": 457,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "39. The situation suddenly turned around in our favour.",
+    "ru": "39. Ситуация внезапно изменилась (повернулась) в нашу пользу.",
+    "index": 458,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  },
+  {
+    "en": "40. He decided to turn himself in to the authorities.",
+    "ru": "40. Он решил сдаться властям.",
+    "index": 459,
+    "repeatCheckbox": false,
+    "learnedCheckbox": false
+  }
+]
