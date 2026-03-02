@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Advanced Class Design - Review Questions</title>
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+    
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #3498db;
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+        }
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            background-color: var(--bg-color);
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 20px;
+            background: var(--primary-color);
+            color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .question-card {
+            background: var(--card-bg);
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+            border-left: 5px solid var(--accent-color);
+        }
+        .question-header {
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+        .type-badge {
+            font-size: 0.75em;
+            text-transform: uppercase;
+            background: #e17055;
+            color: white;
+            padding: 3px 8px;
+            border-radius: 4px;
+            margin-bottom: 10px;
+            display: inline-block;
+        }
+        .options {
+            display: grid;
+            gap: 12px;
+            margin-top: 20px;
+        }
+        .option-label {
+            display: flex;
+            align-items: center;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .option-label:hover {
+            background-color: #f0f7ff;
+            border-color: var(--accent-color);
+        }
+        .option-label input {
+            margin-right: 15px;
+            width: 18px;
+            height: 18px;
+        }
+        pre[class*="language-"] {
+            margin: 20px 0 !important;
+            border-radius: 8px !important;
+            font-size: 0.95em !important;
+        }
+        .btn-submit {
+            display: block;
+            width: 100%;
+            padding: 20px;
+            background: #27ae60;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.2em;
+            cursor: pointer;
+            margin-top: 40px;
+            transition: background 0.3s;
+        }
+        .btn-submit:hover {
+            background: #2ecc71;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Java Quiz: Advanced Class Design</h1>
+        <p>Подготовка к сертификации OCP (Chapter 1)</p>
+    </header>
+
+    <form id="quizForm">
+        
+        <div class="question-card">
+            <div class="type-badge">Одиночный выбор</div>
+            <div class="question-header">1. What is the result of the following code?</div>
+<pre><code class="language-java">public class Employee {
+    public int employeeId;
+    public String firstName, lastName;
+    public int yearStarted;
+    @Override public int hashCode() {
+        return employeeId;
+    }
+    public boolean equals(Employee e) {
+        return this.employeeId == e.employeeId;
+    }
+    public static void main(String[] args) {
+        Employee one = new Employee();
+        one.employeeId = 101;
+        Employee two = new Employee();
+        two.employeeId = 101;
+        if (one.equals(two)) System.out.println("Success");
+        else System.out.println("Failure");
+    } 
+}</code></pre>
+            <div class="options">
+                <label class="option-label"><input type="radio" name="q1" value="A"> A. Success</label>
+                <label class="option-label"><input type="radio" name="q1" value="B"> B. Failure</label>
+                <label class="option-label"><input type="radio" name="q1" value="C"> C. The hashCode() method fails to compile.</label>
+                <label class="option-label"><input type="radio" name="q1" value="D"> D. The equals() method fails to compile.</label>
+                <label class="option-label"><input type="radio" name="q1" value="E"> E. Another line of code fails to compile.</label>
+                <label class="option-label"><input type="radio" name="q1" value="F"> F. A runtime exception is thrown.</label>
+            </div>
+        </div>
+
+        <div class="question-card">
+            <div class="type-badge">Одиночный выбор</div>
+            <div class="question-header">2. What is the result of compiling the following class?</div>
+<pre><code class="language-java">public class Book {
+    private int ISBN;
+    private String title, author;
+    private int pageCount;
+    public int hashCode() {
+        return ISBN;
+    }
+    @Override public boolean equals(Object obj) {
+        if ( !(obj instanceof Book)) {
+            return false;
+        }
+        Book other = (Book) obj;
+        return this.ISBN == other.ISBN;
+    }
+}</code></pre>
+            <div class="options">
+                <label class="option-label"><input type="radio" name="q2" value="A"> A. The code compiles.</label>
+                <label class="option-label"><input type="radio" name="q2" value="B"> B. The code does not compile because hashCode() is incorrect.</label>
+                <label class="option-label"><input type="radio" name="q2" value="C"> C. The code does not compile because equals() does not override correctly.</label>
+                <label class="option-label"><input type="radio" name="q2" value="D"> D. The code does not compile because equals() tries to refer to a private field.</label>
+                <label class="option-label"><input type="radio" name="q2" value="E"> E. The code does not compile because the ClassCastException is not handled.</label>
+                <label class="option-label"><input type="radio" name="q2" value="F"> F. The code does not compile for another reason.</label>
+            </div>
+        </div>
+
+        <div class="question-card">
+            <div class="type-badge">Одиночный выбор</div>
+            <div class="question-header">3. What is the result of the following code?</div>
+<pre><code class="language-java">String s1 = "Canada";
+String s2 = new String(s1);
+if(s1 == s2) System.out.println("s1 == s2");
+if(s1.equals(s2)) System.out.println("s1.equals(s2)");</code></pre>
+            <div class="options">
+                <label class="option-label"><input type="radio" name="q3" value="A"> A. There is no output.</label>
+                <label class="option-label"><input type="radio" name="q3" value="B"> B. s1 == s2</label>
+                <label class="option-label"><input type="radio" name="q3" value="C"> C. s1.equals(s2)</label>
+                <label class="option-label"><input type="radio" name="q3" value="D"> D. Both B and C.</label>
+            </div>
+        </div>
+
+        <div class="question-card">
+            <div class="type-badge">Одиночный выбор</div>
+            <div class="question-header">4. What is true about the following code? (Assume city and mascot are never null)</div>
+<pre><code class="language-java">public class BaseballTeam {
+    private String city, mascot;
+    private int numberOfPlayers;
+    public boolean equals(Object obj) {
+        if ( !(obj instanceof BaseballTeam))
+            return false;
+        BaseballTeam other = (BaseballTeam) obj;
+        return (city.equals(other.city) && mascot.equals(other.mascot));
+    }
+    public int hashCode() {
+        return numberOfPlayers;
+    }
+}</code></pre>
+            <div class="options">
+                <label class="option-label"><input type="radio" name="q4" value="A"> A. The class does not compile.</label>
+                <label class="option-label"><input type="radio" name="q4" value="B"> B. The class compiles but has an improper equals() method.</label>
+                <label class="option-label"><input type="radio" name="q4" value="C"> C. The class compiles but has an improper hashCode() method.</label>
+                <label class="option-label"><input type="radio" name="q4" value="D"> D. The class compiles and has proper equals() and hashCode().</label>
+            </div>
+        </div>
+
+        <div class="question-card">
+            <div class="type-badge" style="background:#2980b9">Множественный выбор</div>
+            <div class="question-header">5. Which of the following statements are true, assuming a and b are String objects?</div>
+            <div class="options">
+                <label class="option-label"><input type="checkbox" name="q5" value="A"> A. If a.equals(b) is true, a.hashCode() == b.hashCode() is always true.</label>
+                <label class="option-label"><input type="checkbox" name="q5" value="B"> B. If a.equals(b) is true, a.hashCode() == b.hashCode() is sometimes but not always true.</label>
+                <label class="option-label"><input type="checkbox" name="q5" value="C"> C. If a.equals(b) is false, a.hashCode() == b.hashCode() can never be true.</label>
+                <label class="option-label"><input type="checkbox" name="q5" value="D"> D. If a.equals(b) is false, a.hashCode() == b.hashCode() can sometimes be true.</label>
+            </div>
+        </div>
+
+        <div class="question-card">
+            <div class="type-badge">Одиночный выбор</div>
+            <div class="question-header">6. What is the result of the following code?</div>
+<pre><code class="language-java">public class FlavorsEnum {
+    enum Flavors { VANILLA, CHOCOLATE, STRAWBERRY }
+    public static void main(String[] args) {
+        System.out.println(Flavors.CHOCOLATE.ordinal());
+    }
+}</code></pre>
+            <div class="options">
+                <label class="option-label"><input type="radio" name="q6" value="A"> A. 0</label>
+                <label class="option-label"><input type="radio" name="q6" value="B"> B. 1</label>
+                <label class="option-label"><input type="radio" name="q6" value="C"> C. 9</label>
+                <label class="option-label"><input type="radio" name="q6" value="D"> D. CHOCOLATE</label>
+            </div>
+        </div>
+
+        <div class="question-card">
+            <div class="type-badge" style="background:#2980b9">Множественный выбор</div>
+            <div class="question-header">7. What is the result of the following code?</div>
+<pre><code class="language-java">public class IceCream {
+    enum Flavors { VANILLA, CHOCOLATE, STRAWBERRY }
+    public static void main(String[] args) {
+        Flavors f = Flavors.STRAWBERRY;
+        switch (f) {
+            case 0: System.out.println("vanilla");
+            case 1: System.out.println("chocolate");
+            case 2: System.out.println("strawberry"); break;
+            default: System.out.println("missing flavor");
+        }
+    }
+}</code></pre>
+            <div class="options">
+                <label class="option-label"><input type="checkbox" name="q7" value="A"> A. vanilla</label>
+                <label class="option-label"><input type="checkbox" name="q7" value="B"> B. chocolate</label>
+                <label class="option-label"><input type="checkbox" name="q7" value="C"> C. strawberry</label>
+                <label class="option-label"><input type="checkbox" name="q7" value="D"> D. missing flavor</label>
+                <label class="option-label"><input type="checkbox" name="q7" value="E"> E. The code does not compile.</label>
+            </div>
+        </div>
+
+        <div class="question-card">
+            <div class="type-badge">Одиночный выбор</div>
+            <div class="question-header">8. What is the result of the following code?</div>
+<pre><code class="language-java">public class Outer {
+    private int x = 5;
+    protected class Inner {
+        public static int x = 10;
+        public void go() { System.out.println(x); }
+    }
+    public static void main(String[] args) {
+        Outer out = new Outer();
+        Outer.Inner in = out.new Inner();
+        in.go();
+    }
+}</code></pre>
+            <div class="options">
+                <label class="option-label"><input type="radio" name="q8" value="A"> A. The output is 5.</label>
+                <label class="option-label"><input type="radio" name="q8" value="B"> B. The output is 10.</label>
+                <label class="option-label"><input type="radio" name="q8" value="C"> C. Line 4 generates a compiler error.</label>
+                <label class="option-label"><input type="radio" name="q8" value="D"> D. Line 8 generates a compiler error.</label>
+            </div>
+        </div>
+
+        <div class="question-card">
+            <div class="type-badge">Одиночный выбор</div>
+            <div class="question-header">9. What is the result of the following code?</div>
+<pre><code class="language-java">public class Outer {
+    private int x = 24;
+    public int getX() {
+        String message = "x is ";
+        class Inner {
+            private int x = Outer.this.x;
+            public void printX() { System.out.println(message + x); }
+        }
+        Inner in = new Inner();
+        in.printX();
+        return x;
+    }
+    public static void main(String[] args) { new Outer().getX(); }
+}</code></pre>
+            <div class="options">
+                <label class="option-label"><input type="radio" name="q9" value="A"> A. x is 0.</label>
+                <label class="option-label"><input type="radio" name="q9" value="B"> B. x is 24.</label>
+                <label class="option-label"><input type="radio" name="q9" value="C"> C. Line 6 generates a compiler error.</label>
+                <label class="option-label"><input type="radio" name="q9" value="D"> D. Line 8 generates a compiler error.</label>
+            </div>
+        </div>
+
+        <div class="question-card">
+            <div class="type-badge">Одиночный выбор</div>
+            <div class="question-header">10. File: Book.java. What is the result?</div>
+<pre><code class="language-java">public class Book {
+    private int pageNumber;
+    private class BookReader {
+        public int getPage() { return pageNumber; }
+    }
+}</code></pre>
+            <div class="options">
+                <label class="option-label"><input type="radio" name="q10" value="A"> A. Compiles to Book.class only.</label>
+                <label class="option-label"><input type="radio" name="q10" value="B"> B. Compiles to Book.class and BookReader.class.</label>
+                <label class="option-label"><input type="radio" name="q10" value="C"> C. Compiles to Book.class and Book$BookReader.class.</label>
+                <label class="option-label"><input type="radio" name="q10" value="D"> D. Compiler error on line 3.</label>
+            </div>
+        </div>
+
+        <div class="question-card">
+            <div class="type-badge">Одиночный выбор</div>
+            <div class="question-header">11. Which can be inserted to make FootballGame compile?</div>
+<pre><code class="language-java">// package my.sports;
+public class Football { public static final int TEAM_SIZE = 11; }
+
+// package my.apps;
+// INSERT CODE HERE
+public class FootballGame {
+    public int getTeamSize() { return TEAM_SIZE; }
+}</code></pre>
+            <div class="options">
+                <label class="option-label"><input type="radio" name="q11" value="A"> A. import my.sports.Football;</label>
+                <label class="option-label"><input type="radio" name="q11" value="D"> D. import static my.sports.Football.*;</label>
+                <label class="option-label"><input type="radio" name="q11" value="G"> G. static import my.sports.Football.*;</label>
+            </div>
+        </div>
+
+        <div class="question-card">
+            <div class="type-badge">Одиночный выбор</div>
+            <div class="question-header">12. What is the result of the following code?</div>
+<pre><code class="language-java">public class Browsers {
+    static class Browser { public void go() { System.out.println("Inside Browser"); } }
+    static class Firefox extends Browser { public void go() { System.out.println("Inside Firefox"); } }
+    static class IE extends Browser { @Override public void go() { System.out.println("Inside IE"); } }
+    public static void main(String[] args) {
+        Browser b = new Firefox();
+        IE e = (IE) b;
+        e.go();
+    }
+}</code></pre>
+            <div class="options">
+                <label class="option-label"><input type="radio" name="q12" value="B"> B. Inside Firefox</label>
+                <label class="option-label"><input type="radio" name="q12" value="E"> E. A runtime exception is thrown.</label>
+            </div>
+        </div>
+
+        <div class="question-card">
+            <div class="type-badge">Одиночный выбор</div>
+            <div class="question-header">13. Which is true?</div>
+<pre><code class="language-java">public class IsItFurry {
+    static interface Mammal { }
+    static class Furry implements Mammal { }
+    static class Chipmunk extends Furry { }
+    public static void main(String[] args) {
+        Chipmunk c = new Chipmunk();
+        int result = 0;
+        if (c instanceof Mammal) result += 1;
+        if (c instanceof Furry) result += 2;
+        if (null instanceof Chipmunk) result += 4;
+        System.out.println(result);
+    }
+}</code></pre>
+            <div class="options">
+                <label class="option-label"><input type="radio" name="q13" value="A"> A. Output 0</label>
+                <label class="option-label"><input type="radio" name="q13" value="B"> B. Output 3</label>
+                <label class="option-label"><input type="radio" name="q13" value="C"> C. Output 7</label>
+            </div>
+        </div>
+
+        <div class="question-card">
+            <div class="type-badge" style="background:#2980b9">Множественный выбор</div>
+            <div class="question-header">14. Which is true? (Choose all that apply)</div>
+<pre><code class="language-java">public class IsItFurry {
+    static class Chipmunk { }
+    public static void main(String[] args) {
+        Chipmunk c = new Chipmunk();
+        ArrayList&lt;Chipmunk&gt; l = new ArrayList&lt;&gt;();
+        Runnable r = new Thread();
+        int result = 0;
+        if (c instanceof Chipmunk) result += 1;
+        if (l instanceof Chipmunk) result += 2;
+        if (r instanceof Chipmunk) result += 4;
+        System.out.println(result);
+    }
+}</code></pre>
+            <div class="options">
+                <label class="option-label"><input type="checkbox" name="q14" value="B"> B. The code compiles, output 3</label>
+                <label class="option-label"><input type="checkbox" name="q14" value="E"> E. l instanceof Chipmunk does not compile</label>
+                <label class="option-label"><input type="checkbox" name="q14" value="F"> F. r instanceof Chipmunk does not compile</label>
+            </div>
+        </div>
+
+        <div class="question-card">
+            <div class="type-badge" style="background:#2980b9">Множественный выбор</div>
+            <div class="question-header">15. Which of the following are true about equals()?</div>
+            <div class="options">
+                <label class="option-label"><input type="checkbox" name="q15" value="B"> B. If equals(null) is called, return false.</label>
+                <label class="option-label"><input type="checkbox" name="q15" value="D"> D. If passed wrong type, throw exception.</label>
+                <label class="option-label"><input type="checkbox" name="q15" value="E"> E. If passed wrong type, return false.</label>
+            </div>
+        </div>
+
+        <div class="question-card">
+            <div class="type-badge">Одиночный выбор</div>
+            <div class="question-header">16. Which can be inserted in main?</div>
+<pre><code class="language-java">public class Outer {
+    class Inner { }
+    public static void main(String[] args) { /* INSERT */ }
+}</code></pre>
+            <div class="options">
+                <label class="option-label"><input type="radio" name="q16" value="E"> E. Outer.Inner in = new Outer().new Inner();</label>
+                <label class="option-label"><input type="radio" name="q16" value="A"> A. Inner in = new Inner();</label>
+            </div>
+        </div>
+
+        <div class="question-card">
+            <div class="type-badge" style="background:#2980b9">Множественный выбор</div>
+            <div class="question-header">17. Result of the code? (Choose all that apply)</div>
+<pre><code class="language-java">public enum AnimalClasses {
+    MAMMAL(true), FISH(Boolean.FALSE), BIRD(false),
+    REPTILE(false), AMPHIBIAN(false), INVERTEBRATE(false)
+    boolean hasHair;
+    public AnimalClasses(boolean hasHair) { this.hasHair = hasHair; }
+    public boolean hasHair() { return hasHair; }
+    public void giveWig() { hasHair = true; }
+}</code></pre>
+            <div class="options">
+                <label class="option-label"><input type="checkbox" name="q17" value="A"> A. Error on line 2</label>
+                <label class="option-label"><input type="checkbox" name="q17" value="F"> F. Error on another line (Missing semicolon)</label>
+            </div>
+        </div>
+
+        <div class="question-card">
+            <div class="type-badge" style="background:#2980b9">Множественный выбор</div>
+            <div class="question-header">18. Result of the code? (Choose all that apply)</div>
+<pre><code class="language-java">enum AnimalClasses {
+    MAMMAL, FISH { public boolean hasFins() { return true; }},
+    BIRD, REPTILE, AMPHIBIAN, INVERTEBRATE;
+    public abstract boolean hasFins();
+}</code></pre>
+            <div class="options">
+                <label class="option-label"><input type="checkbox" name="q18" value="B"> B. FISH</label>
+                <label class="option-label"><input type="checkbox" name="q18" value="D"> D. 1</label>
+                <label class="option-label"><input type="checkbox" name="q18" value="F"> F. true</label>
+                <label class="option-label"><input type="checkbox" name="q18" value="G"> G. Does not compile (MAMMAL doesn't implement abstract method)</label>
+            </div>
+        </div>
+
+        <div class="question-card">
+            <div class="type-badge" style="background:#2980b9">Множественный выбор</div>
+            <div class="question-header">19. Which can be inserted to override toddle()?</div>
+<pre><code class="language-java">public class LearnToWalk {
+    public void toddle() {}
+    class BabyRhino extends LearnToWalk { /* INSERT */ }
+}</code></pre>
+            <div class="options">
+                <label class="option-label"><input type="checkbox" name="q19" value="A"> A. public void toddle() {}</label>
+                <label class="option-label"><input type="checkbox" name="q19" value="C"> C. public final void toddle() {}</label>
+                <label class="option-label"><input type="checkbox" name="q19" value="F"> F. public void toddle(boolean fall) {} (This is overload, not override)</label>
+            </div>
+        </div>
+
+        <div class="question-card">
+            <div class="type-badge">Одиночный выбор</div>
+            <div class="question-header">20. What is the output?</div>
+<pre><code class="language-java">public class FourLegged {
+    String walk = "walk,";
+    static class BabyRhino extends FourLegged {
+        String walk = "toddle,";
+    }
+    public static void main(String[] args) {
+        FourLegged f = new BabyRhino();
+        BabyRhino b = new BabyRhino();
+        System.out.println(f.walk);
+        System.out.println(b.walk);
+    }
+}</code></pre>
+            <div class="options">
+                <label class="option-label"><input type="radio" name="q20" value="C"> C. walk,toddle,</label>
+                <label class="option-label"><input type="radio" name="q20" value="A"> A. toddle,toddle,</label>
+            </div>
+        </div>
+
+        <div class="question-card">
+            <div class="type-badge" style="background:#2980b9">Множественный выбор</div>
+            <div class="question-header">21. What can be inserted? (Choose all that apply)</div>
+<pre><code class="language-java">public interface Otter { default void play() { } }
+class RiverOtter implements Otter { /* INSERT */ }</code></pre>
+            <div class="options">
+                <label class="option-label"><input type="checkbox" name="q21" value="A"> A. @Override public boolean equals(Object o) { return false; }</label>
+                <label class="option-label"><input type="checkbox" name="q21" value="C"> C. @Override public int hashCode() { return 42; }</label>
+                <label class="option-label"><input type="checkbox" name="q21" value="E"> E. @Override public void play() { }</label>
+            </div>
+        </div>
+
+        <button type="button" class="btn-submit" onclick="alert('Тест завершен! Правильные ответы можно сверить с учебником OCP.')">Завершить тест</button>
+    </form>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-java.min.js"></script>
+
+</body>
+</html>

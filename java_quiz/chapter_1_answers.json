@@ -1,0 +1,149 @@
+[
+  {
+    "idx": 1,
+    "correct": {
+      "letter": ["A"],
+      "description": "Based on the equals() method in the code, objects are equal if they have the same employeeId. The hashCode() method correctly overrides the one from Object. The equals() method is an overload of the one from Object and not an override. It would be better to pass Object since an override would be better to use here. It is odd to override hashCode() and not equals()."
+    }
+  },
+  {
+    "idx": 2,
+    "correct": {
+      "letter": ["A"],
+      "description": "hashCode() is correct and perfectly reasonable given that equals() also checks that field. ClassCastException is a runtime exception and therefore does not need to be handled or declared. The override in equals() is correct. It is common for equals() to refer to a private instance variable. This is legal because it is within the same class, even if it is referring to a different object of the same class."
+    }
+  },
+  {
+    "idx": 3,
+    "correct": {
+      "letter": ["C"],
+      "description": "s1 points to the string pool. s2 points to an object on the heap, since it is created at runtime. == checks for reference equality. These are different references, making B incorrect. String overrides equals() so the actual values are the same, making C correct."
+    }
+  },
+  {
+    "idx": 4,
+    "correct": {
+      "letter": ["C"],
+      "description": "The equals() method is correct. You are allowed to use any business logic that you want in determining equality. The hashCode() method is not correct. It violates the rule that two objects that return true for equals() must return the same hashCode(). It is also a bad idea for the hash code to contain values that could change."
+    }
+  },
+  {
+    "idx": 5,
+    "correct": {
+      "letter": ["A", "D"],
+      "description": "The relevant rule is that two objects that return true for equals() objects must return the same hash code. Therefore A is correct and B is incorrect. Two objects with the same hash code may or may not be equal. This makes C incorrect and D correct. The fact that two objects are not equal does not guarantee or preclude them from sharing a hash code."
+    }
+  },
+  {
+    "idx": 6,
+    "correct": {
+      "letter": ["B"],
+      "description": "The ordinal() method of an enum returns its corresponding int value. Like arrays, enums are zero based. Remember that the index of an enum may change when you recompile the code and should not be used for comparison."
+    }
+  },
+  {
+    "idx": 7,
+    "correct": {
+      "letter": ["E"],
+      "description": "A case statement on an enum data type must be the unqualified name of an enumeration constant. For example, case VANILLA would be valid. You cannot use the ordinal equivalents. Therefore, the code does not compile."
+    }
+  },
+  {
+    "idx": 8,
+    "correct": {
+      "letter": ["C"],
+      "description": "Inner is a member inner class. Inner classes are not allowed to contain static methods or static variables. Only nested static classes are permitted to contain statics."
+    }
+  },
+  {
+    "idx": 9,
+    "correct": {
+      "letter": ["B"],
+      "description": "Outer.this.x is the correct way to refer to x in the Outer class. In Java 8, variables used in local inner classes only need to be effectively final, which means that the code would still compile if final were added."
+    }
+  },
+  {
+    "idx": 10,
+    "correct": {
+      "letter": ["C"],
+      "description": "The code compiles fine. A member inner class is allowed to be private, and it is allowed to refer to instance variables from the outer class. Book$BookReader.class is correct because it shows the scope of the class is limited to Book."
+    }
+  },
+  {
+    "idx": 11,
+    "correct": {
+      "letter": ["D"],
+      "description": "FootballGame is trying to refer to a static variable in another class. It needs a static import to do so. The correct syntax is import static and not static import. B is incorrect because * does not import classes in a package."
+    }
+  },
+  {
+    "idx": 12,
+    "correct": {
+      "letter": ["E"],
+      "description": "The main method tries to cast a Firefox instance to IE. Since IE is not a subclass of Firefox, this throws a ClassCastException."
+    }
+  },
+  {
+    "idx": 13,
+    "correct": {
+      "letter": ["B"],
+      "description": "c is an instance of Chipmunk. It is an instance of any superclasses or interfaces it implements: Furry, Mammal, and Object. null is not an instance of any type. Therefore, the first two if statements execute and result is 3."
+    }
+  },
+  {
+    "idx": 14,
+    "correct": {
+      "letter": ["E"],
+      "description": "Code involving instanceof does not compile when there is no way for it to evaluate true. E does not compile because ArrayList is a concrete class that does not extend Chipmunk. F does compile because Runnable is an interface."
+    }
+  },
+  {
+    "idx": 15,
+    "correct": {
+      "letter": ["B", "E"],
+      "description": "equals() should return false when the object it passed in is not equal to the current object. This includes null and incorrect types. An equals() method should have a null check and an instanceof check."
+    }
+  },
+  {
+    "idx": 16,
+    "correct": {
+      "letter": ["E"],
+      "description": "This is a member inner class. It needs to be created using an instance of the outer class. The syntax creates an object of the outer class and then an object of the inner class from it."
+    }
+  },
+  {
+    "idx": 17,
+    "correct": {
+      "letter": ["B", "C"],
+      "description": "Enums are required to have a semicolon after the list of values if there is anything else in the enum. Enums are not allowed to have a public constructor."
+    }
+  },
+  {
+    "idx": 18,
+    "correct": {
+      "letter": ["G"],
+      "description": "This question is about abstract methods in enums. Just as an abstract superclass requires concrete subclasses to have an implementation, abstract enum methods require each enum type to implement the method."
+    }
+  },
+  {
+    "idx": 19,
+    "correct": {
+      "letter": ["A", "C"],
+      "description": "An override must have the same method signature. A and C both do. F is an overload. E throws a checked exception not declared in the superclass. D is static."
+    }
+  },
+  {
+    "idx": 20,
+    "correct": {
+      "letter": ["C"],
+      "description": "We are referring to instance variables, not methods. With instance variables, the reference type matters (hiding), unlike virtual method invocation where the object type matters."
+    }
+  },
+  {
+    "idx": 21,
+    "correct": {
+      "letter": ["A", "C", "E"],
+      "description": "@Override means implementing from a superclass or interface. Object declares methods in A and C. Option E is correct because it's in Otter. F is wrong (interface methods are public). B and D have wrong parameters/return types."
+    }
+  }
+]

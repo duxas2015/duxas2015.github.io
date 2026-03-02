@@ -1,0 +1,121 @@
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.button-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+button, input[type="file"] {
+    padding: 10px 15px;
+    background-color: #2196F3;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover, input[type="file"]:hover {
+    background-color: #1976D2;
+}
+
+.error-message {
+    color: red;
+    margin-bottom: 10px;
+    min-height: 20px;
+}
+
+#dataTable {
+    width: 100%;
+    border-collapse: collapse;
+    --cell-font-size: 16px;
+}
+
+#dataTable th, #dataTable td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+#dataTable th {
+    background-color: #f2f2f2;
+}
+
+.cell-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cell-content span {
+    white-space: pre-wrap;
+    font-size: var(--cell-font-size);
+}
+
+.editable-input {
+    width: 100%;
+    font-size: var(--cell-font-size);
+    resize: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 4px;
+}
+
+.speaker-button, .edit-icon, .gear-button, .increment-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin-left: 8px;
+}
+
+.speaker-button img, .edit-icon img, .gear-button img {
+    width: 20px;
+    height: 20px;
+}
+
+.increment-button {
+    padding: 2px 8px;
+    background-color: #2196F3;
+    color: white;
+    border-radius: 4px;
+}
+
+.increment-button:hover {
+    background-color: #1976D2;
+}
+
+.increment-button.minus-button {
+    margin-right: 4px;
+}
+
+.context-menu {
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    padding: 10px;
+    z-index: 1000;
+}
+
+.context-menu button {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.context-menu button img {
+    width: 20px;
+    height: 20px;
+}
+
+#downloadLocalButton {
+    background-color: #4CAF50; /* Зеленый цвет для отличия */
+}
+
+#downloadLocalButton:hover {
+    background-color: #45a049;
+}

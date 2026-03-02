@@ -1,0 +1,142 @@
+[
+  {
+    "idx": 1,
+    "correct": {
+      "letter": ["C", "E"],
+      "description": "Option A is incorrect as a design pattern is focused on solving a specific commonly occurring problem. Option B is also incorrect, as design principles and design patterns are different, despite both promoting better code development. Option D is incorrect as design patterns may be applied to static or non-static classes alike. Options C and E are correct statements about design principles and design patterns."
+    }
+  },
+  {
+    "idx": 2,
+    "correct": {
+      "letter": ["E"],
+      "description": "The code does not compile because EasternChipmunk inherits the abstract method climb() but does not implement it, therefore the correct answer is E. B, C, and D are incorrect as they compile for various reasons. Line 2 compiles, as non-static and non-default interface methods are assumed to have the abstract modifier. Line 4 compiles without issue as an interface can extend another interface. Line 5 compiles without issue as an abstract class can implement an interface without implementing any of the abstract methods. F is incorrect, as Line 8 does not compile."
+    }
+  },
+  {
+    "idx": 3,
+    "correct": {
+      "letter": ["A", "D"],
+      "description": "A is correct as Climb defines an interface with exactly one abstract method. B is incorrect, as abstract classes are not functional interfaces despite having a single abstract method. While functional interfaces may have any number of default methods, ArcticMountainClimb will not compile due to the default method getSpeed() missing an implementation body, so C is incorrect. D is correct, as the interface MountainClimb has exactly one abstract method defined in Climb. Finally, E is incorrect because A and D are correct."
+    }
+  },
+  {
+    "idx": 4,
+    "correct": {
+      "letter": ["A", "D"],
+      "description": "The first lambda expression is valid, taking no arguments and returning the empty string, so A is correct. B is incorrect, as more than one parameter requires parentheses (). C is incorrect, as brackets {} are required when using return. D is correct, as the expression takes one Camel input and returns void. E is incorrect, as parentheses are required when using the data type Wolf. F is incorrect, as it has no right-side expression. Finally, G is incorrect, as specifying the data type for one parameter in a lambda expression requires you to specify the data type for all parameters in the expression."
+    }
+  },
+  {
+    "idx": 5,
+    "correct": {
+      "letter": ["B", "E", "F"],
+      "description": "A is incorrect, as any method that changes the singleton breaks the singleton pattern. B is correct, as the constructor of the singleton class must be private. C is incorrect, as the name of the object/method is not defined in the pattern. D is incorrect, as the object must be marked private for proper encapsulation. E is correct, as the purpose of a singleton is to ensure that all threads share the same instance. F is correct, as a public static method is required for all threads to access the same singleton."
+    }
+  },
+  {
+    "idx": 6,
+    "correct": {
+      "letter": ["A"],
+      "description": "This code compiles and runs without issue. Line h1 creates a lambda expression that checks if the age is less than 5. Line h2 uses the Predicate interface, which declares a test() method. Since test() returns true on the expression, match is output and A is correct."
+    }
+  },
+  {
+    "idx": 7,
+    "correct": {
+      "letter": ["C", "E", "G", "H"],
+      "description": "B is incorrect (no Immutable interface in API). C is correct (instance variables should be private and final). D is incorrect (setters break immutability). E is correct (direct access to mutable List should be removed). G is correct (copy mutable structures in constructor). H is correct (prevents methods from being overridden)."
+    }
+  },
+  {
+    "idx": 8,
+    "correct": {
+      "letter": ["C", "F"],
+      "description": "A and B are incorrect as interfaces can extend interfaces but not classes. C is correct since a class may implement multiple interfaces. D is incorrect as interfaces have static/default methods. E is incorrect as interfaces are assumed abstract and cannot be final. F is correct as interface members are assumed public."
+    }
+  },
+  {
+    "idx": 9,
+    "correct": {
+      "letter": ["D", "F"],
+      "description": "The public modifier on the instance breaks the pattern, hence D is required. E is incorrect as final would prevent lazy instantiation. F is required to prevent two threads from creating two distinct instances (thread-safety)."
+    }
+  },
+  {
+    "idx": 10,
+    "correct": {
+      "letter": ["D"],
+      "description": "Java does not support multiple inheritance of default methods with the same signature. CanWalk and CanRun both implement walk(). CanSprint extends both and won't compile because of the conflict. This makes D the correct answer."
+    }
+  },
+  {
+    "idx": 11,
+    "correct": {
+      "letter": ["A", "F"],
+      "description": "B is incorrect (missing return). C, D, and E are incorrect because variable 'e' is already in use and cannot be redefined. A and F are the only correct lambda expressions that match the functional interface."
+    }
+  },
+  {
+    "idx": 12,
+    "correct": {
+      "letter": ["C"],
+      "description": "The functional interface takes two int parameters. Line x1 attempts to use them as if one is an Object (calling .toString() on an int), resulting in a compiler error. It also tries to return String instead of boolean."
+    }
+  },
+  {
+    "idx": 13,
+    "correct": {
+      "letter": ["B", "C", "E"],
+      "description": "Immutable objects may not be modified after creation. B (private final variables), C (no setters), and E (preventing override) support this. A is incorrect (getters are allowed). D and F are not parts of the pattern."
+    }
+  },
+  {
+    "idx": 14,
+    "correct": {
+      "letter": ["A", "B", "D", "E"],
+      "description": "The blank can be filled with any supertype of TurtleFrog. Frog (A) is a superclass, TurtleFrog (B) is the class itself, CanHop (D) is an inherited interface, and Object (E) is the universal superclass. BrazilianHornedFrog (C) and Long (F) are unrelated."
+    }
+  },
+  {
+    "idx": 15,
+    "correct": {
+      "letter": ["B", "C"],
+      "description": "Casting to a subclass (A) requires an explicit cast. Casting to a superclass (C) does not. Passing subclass references where a superclass is expected (B) is a key feature of polymorphism. E is incorrect because instance methods can be overridden."
+    }
+  },
+  {
+    "idx": 16,
+    "correct": {
+      "letter": ["F"],
+      "description": "The code contains two errors: line 3 (static method in interface must have a body) and line 4 (method with a body must be marked default or static). Therefore, F is the correct answer."
+    }
+  },
+  {
+    "idx": 17,
+    "correct": {
+      "letter": ["B", "C", "F"],
+      "description": "B, C, and F are standard JavaBean properties. A is for immutability. D is incorrect (no JavaBean interface). E is not part of the encapsulation rules."
+    }
+  },
+  {
+    "idx": 18,
+    "correct": {
+      "letter": ["A", "B", "E"],
+      "description": "A (inheritance allows protected access) and B (composition promotes reuse) are correct. C is inverted (inheritance is is-a). D is about inheritance. E is correct as composition requires explicit access to variables/methods."
+    }
+  },
+  {
+    "idx": 19,
+    "correct": {
+      "letter": ["B", "D", "E"],
+      "description": "B (caching), D (log file access), and E (configuration data) are classic use cases for singletons. A is for immutability. C is a technique but not the primary benefit. F is the opposite of a singleton."
+    }
+  },
+  {
+    "idx": 20,
+    "correct": {
+      "letter": ["A"],
+      "description": "Both fly() and getWingSpan() will be public abstract. Interfaces can have public or default access. Falcon does not need to implement the methods because it is an abstract class. The code compiles fine."
+    }
+  }
+]

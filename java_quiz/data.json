@@ -1,0 +1,1549 @@
+[
+{ "book":"Oracle® Certified Professional Java® SE 8 Programmer II ( Jeanne Boyarsky, Scott Selikoff )",
+  "chapters" : [ { "chapter_name":"Chapter 01 :  Advanced Class Design",
+  "questions" :  
+  
+[
+  {
+    "idx": 1,
+    "text": "What is the result of the following code?\n<pre>1:  public class Employee {\n2:      public int employeeId;\n3:      public String firstName, lastName;\n4:      public int yearStarted;\n5:      @Override public int hashCode() {\n6:          return employeeId;\n7:      }\n8:      public boolean equals(Employee e) {\n9:          return this.employeeId == e.employeeId;\n10:     }\n11:     public static void main(String[] args) {\n12:         Employee one = new Employee();\n13:         one.employeeId = 101;\n14:         Employee two = new Employee();\n15:         two.employeeId = 101;\n16:         if (one.equals(two)) System.out.println(\"Success\");\n17:         else System.out.println(\"Failure\");\n18:     } }</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Success"
+      },
+      {
+        "letter": "B",
+        "text": "Failure"
+      },
+      {
+        "letter": "C",
+        "text": "The <pre>hashCode()</pre> method fails to compile."
+      },
+      {
+        "letter": "D",
+        "text": "The <pre>equals()</pre> method fails to compile."
+      },
+      {
+        "letter": "E",
+        "text": "Another line of code fails to compile."
+      },
+      {
+        "letter": "F",
+        "text": "A runtime exception is thrown."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "A"
+      ],
+      "description": "Based on the equals() method in the code, objects are equal if they have the same employeeId. The hashCode() method correctly overrides the one from Object. The equals() method is an overload of the one from Object and not an override. It would be better to pass Object since an override would be better to use here. It is odd to override hashCode() and not equals()."
+    }
+  },
+  {
+    "idx": 2,
+    "text": "What is the result of compiling the following class?\n<pre>public class Book {\n    private int ISBN;\n    private String title, author;\n    private int pageCount;\n    public int hashCode() {\n        return ISBN;\n    }\n    @Override public boolean equals(Object obj) {\n        if ( !(obj instanceof Book)) {\n            return false;\n        }\n        Book other = (Book) obj;\n        return this.ISBN == other.ISBN;\n    }\n    // imagine getters and setters are here\n}</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "The code compiles."
+      },
+      {
+        "letter": "B",
+        "text": "The code does not compile because <pre>hashCode()</pre> is incorrect."
+      },
+      {
+        "letter": "C",
+        "text": "The code does not compile because <pre>equals()</pre> does not override the parent method correctly."
+      },
+      {
+        "letter": "D",
+        "text": "The code does not compile because <pre>equals()</pre> tries to refer to a private field."
+      },
+      {
+        "letter": "E",
+        "text": "The code does not compile because the <pre>ClassCastException</pre> is not handled or declared."
+      },
+      {
+        "letter": "F",
+        "text": "The code does not compile for another reason."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "A"
+      ],
+      "description": "hashCode() is correct and perfectly reasonable given that equals() also checks that field. ClassCastException is a runtime exception and therefore does not need to be handled or declared. The override in equals() is correct. It is common for equals() to refer to a private instance variable. This is legal because it is within the same class, even if it is referring to a different object of the same class."
+    }
+  },
+  {
+    "idx": 3,
+    "text": "What is the result of the following code?\n<pre>String s1 = \"Canada\";\nString s2 = new String(s1);\nif(s1 == s2) System.out.println(\"s1 == s2\");\nif(s1.equals(s2)) System.out.println(\"s1.equals(s2)\");</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "There is no output."
+      },
+      {
+        "letter": "B",
+        "text": "<pre>s1 == s2</pre>"
+      },
+      {
+        "letter": "C",
+        "text": "<pre>s1.equals(s2)</pre>"
+      },
+      {
+        "letter": "D",
+        "text": "Both B and C."
+      },
+      {
+        "letter": "E",
+        "text": "The code does not compile."
+      },
+      {
+        "letter": "F",
+        "text": "The code throws a runtime exception."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "C"
+      ],
+      "description": "s1 points to the string pool. s2 points to an object on the heap, since it is created at runtime. == checks for reference equality. These are different references, making B incorrect. String overrides equals() so the actual values are the same, making C correct."
+    }
+  },
+  {
+    "idx": 4,
+    "text": "What is true about the following code? You may assume city and mascot are never null.\n<pre>public class BaseballTeam {\n    private String city, mascot;\n    private int numberOfPlayers;\n    public boolean equals(Object obj) {\n        if ( !(obj instanceof BaseballTeam))\n            return false;\n        BaseballTeam other = (BaseballTeam) obj;\n        return (city.equals(other.city) && mascot.equals(other.mascot));\n    }\n    public int hashCode() {\n        return numberOfPlayers;\n    }\n    // imagine getters and setters are here\n}</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "The class does not compile."
+      },
+      {
+        "letter": "B",
+        "text": "The class compiles but has an improper <pre>equals()</pre> method."
+      },
+      {
+        "letter": "C",
+        "text": "The class compiles but has an improper <pre>hashCode()</pre> method."
+      },
+      {
+        "letter": "D",
+        "text": "The class compiles and has proper <pre>equals()</pre> and <pre>hashCode()</pre> methods."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "C"
+      ],
+      "description": "The equals() method is correct. You are allowed to use any business logic that you want in determining equality. The hashCode() method is not correct. It violates the rule that two objects that return true for equals() must return the same hashCode(). It is also a bad idea for the hash code to contain values that could change."
+    }
+  },
+  {
+    "idx": 5,
+    "text": "Which of the following statements are true, assuming a and b are String objects? (Choose all that apply.)",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "If <pre>a.equals(b)</pre> is true, <pre>a.hashCode() == b.hashCode()</pre> is always true."
+      },
+      {
+        "letter": "B",
+        "text": "If <pre>a.equals(b)</pre> is true, <pre>a.hashCode() == b.hashCode()</pre> is sometimes but not always true."
+      },
+      {
+        "letter": "C",
+        "text": "If <pre>a.equals(b)</pre> is false, <pre>a.hashCode() == b.hashCode()</pre> can never be true."
+      },
+      {
+        "letter": "D",
+        "text": "If <pre>a.equals(b)</pre> is false, <pre>a.hashCode() == b.hashCode()</pre> can sometimes be true."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "A",
+        "D"
+      ],
+      "description": "The relevant rule is that two objects that return true for equals() objects must return the same hash code. Therefore A is correct and B is incorrect. Two objects with the same hash code may or may not be equal. This makes C incorrect and D correct. The fact that two objects are not equal does not guarantee or preclude them from sharing a hash code."
+    }
+  },
+  {
+    "idx": 6,
+    "text": "What is the result of the following code?\n<pre>public class FlavorsEnum {\n    enum Flavors {\n        VANILLA, CHOCOLATE, STRAWBERRY\n    }\n    public static void main(String[] args) {\n        System.out.println(Flavors.CHOCOLATE.ordinal());\n    }\n}</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "0"
+      },
+      {
+        "letter": "B",
+        "text": "1"
+      },
+      {
+        "letter": "C",
+        "text": "9"
+      },
+      {
+        "letter": "D",
+        "text": "<pre>CHOCOLATE</pre>"
+      },
+      {
+        "letter": "E",
+        "text": "The code does not compile due to a missing semicolon."
+      },
+      {
+        "letter": "F",
+        "text": "The code does not compile for a different reason."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "B"
+      ],
+      "description": "The ordinal() method of an enum returns its corresponding int value. Like arrays, enums are zero based. Remember that the index of an enum may change when you recompile the code and should not be used for comparison."
+    }
+  },
+  {
+    "idx": 7,
+    "text": "What is the result of the following code? (Choose all that apply.)\n<pre>public class IceCream {\n    enum Flavors {\n        VANILLA, CHOCOLATE, STRAWBERRY\n    }\n    public static void main(String[] args) {\n        Flavors f = Flavors.STRAWBERRY;\n        switch (f) {\n            case 0: System.out.println(\"vanilla\");\n            case 1: System.out.println(\"chocolate\");\n            case 2: System.out.println(\"strawberry\");\n            break;\n            default: System.out.println(\"missing flavor\");\n        } } }</pre>",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "vanilla"
+      },
+      {
+        "letter": "B",
+        "text": "chocolate"
+      },
+      {
+        "letter": "C",
+        "text": "strawberry"
+      },
+      {
+        "letter": "D",
+        "text": "missing flavor"
+      },
+      {
+        "letter": "E",
+        "text": "The code does not compile."
+      },
+      {
+        "letter": "F",
+        "text": "An exception is thrown."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "E"
+      ],
+      "description": "A case statement on an enum data type must be the unqualified name of an enumeration constant. For example, case VANILLA would be valid. You cannot use the ordinal equivalents. Therefore, the code does not compile."
+    }
+  },
+  {
+    "idx": 8,
+    "text": "What is the result of the following code?\n<pre>1:  public class Outer {\n2:      private int x = 5;\n3:      protected class Inner {\n4:          public static int x = 10;\n5:          public void go() { System.out.println(x); }\n6:      }\n7:      public static void main(String[] args) {\n8:          Outer out = new Outer();\n9:          Outer.Inner in = out.new Inner();\n10:         in.go();\n11:     } }</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "The output is 5."
+      },
+      {
+        "letter": "B",
+        "text": "The output is 10."
+      },
+      {
+        "letter": "C",
+        "text": "Line 4 generates a compiler error."
+      },
+      {
+        "letter": "D",
+        "text": "Line 8 generates a compiler error."
+      },
+      {
+        "letter": "E",
+        "text": "Line 9 generates a compiler error."
+      },
+      {
+        "letter": "F",
+        "text": "An exception is thrown."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "C"
+      ],
+      "description": "Inner is a member inner class. Inner classes are not allowed to contain static methods or static variables. Only nested static classes are permitted to contain statics."
+    }
+  },
+  {
+    "idx": 9,
+    "text": "What is the result of the following code?\n<pre>1:  public class Outer {\n2:      private int x = 24;\n3:      public int getX() {\n4:          String message = \"x is \";\n5:          class Inner {\n6:              private int x = Outer.this.x;\n7:              public void printX() {\n8:                  System.out.println(message + x);\n9:              }\n10:         }\n11:         Inner in = new Inner();\n12:         in.printX();\n13:         return x;\n14:     }\n15:     public static void main(String[] args) {\n16:         new Outer().getX();\n17:     } }</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "x is 0."
+      },
+      {
+        "letter": "B",
+        "text": "x is 24."
+      },
+      {
+        "letter": "C",
+        "text": "Line 6 generates a compiler error."
+      },
+      {
+        "letter": "D",
+        "text": "Line 8 generates a compiler error."
+      },
+      {
+        "letter": "E",
+        "text": "Line 11 generates a compiler error."
+      },
+      {
+        "letter": "F",
+        "text": "An exception is thrown."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "B"
+      ],
+      "description": "Outer.this.x is the correct way to refer to x in the Outer class. In Java 8, variables used in local inner classes only need to be effectively final, which means that the code would still compile if final were added."
+    }
+  },
+  {
+    "idx": 10,
+    "text": "The following code appears in a file named Book.java. What is the result of compiling the source file?\n<pre>1:  public class Book {\n2:      private int pageNumber;\n3:      private class BookReader {\n4:          public int getPage() {\n5:              return pageNumber;\n6:          } } }</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "The code compiles successfully, and one bytecode file is generated: <pre>Book.class</pre>."
+      },
+      {
+        "letter": "B",
+        "text": "The code compiles successfully, and two bytecode files are generated: <pre>Book.class</pre> and <pre>BookReader.class</pre>."
+      },
+      {
+        "letter": "C",
+        "text": "The code compiles successfully, and two bytecode files are generated: <pre>Book.class</pre> and <pre>Book$BookReader.class</pre>."
+      },
+      {
+        "letter": "D",
+        "text": "A compiler error occurs on line 3."
+      },
+      {
+        "letter": "E",
+        "text": "A compiler error occurs on line 5."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "C"
+      ],
+      "description": "The code compiles fine. A member inner class is allowed to be private, and it is allowed to refer to instance variables from the outer class. Book$BookReader.class is correct because it shows the scope of the class is limited to Book."
+    }
+  },
+  {
+    "idx": 11,
+    "text": "Which of the following statements can be inserted to make FootballGame compile?\n<pre>package my.sports;\npublic class Football {\n    public static final int TEAM_SIZE = 11;\n}\n\npackage my.apps;\n// INSERT CODE HERE\npublic class FootballGame {\n    public int getTeamSize() { return TEAM_SIZE; }\n}</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "<pre>import my.sports.Football;</pre>"
+      },
+      {
+        "letter": "B",
+        "text": "<pre>import static my.sports.*;</pre>"
+      },
+      {
+        "letter": "C",
+        "text": "<pre>import static my.sports.Football;</pre>"
+      },
+      {
+        "letter": "D",
+        "text": "<pre>import static my.sports.Football.*;</pre>"
+      },
+      {
+        "letter": "E",
+        "text": "<pre>static import my.sports.*;</pre>"
+      },
+      {
+        "letter": "F",
+        "text": "<pre>static import my.sports.Football;</pre>"
+      },
+      {
+        "letter": "G",
+        "text": "<pre>static import my.sports.Football.*;</pre>"
+      }
+    ],
+    "correct": {
+      "letter": [
+        "D"
+      ],
+      "description": "FootballGame is trying to refer to a static variable in another class. It needs a static import to do so. The correct syntax is import static and not static import. B is incorrect because * does not import classes in a package."
+    }
+  },
+  {
+    "idx": 12,
+    "text": "What is the result of the following code?\n<pre>public class Browsers {\n    static class Browser {\n        public void go() {\n            System.out.println(\"Inside Browser\");\n        }\n    }\n    static class Firefox extends Browser {\n        public void go() {\n            System.out.println(\"Inside Firefox\");\n        }\n    }\n    static class IE extends Browser {\n        @Override public void go() {\n            System.out.println(\"Inside IE\");\n        }\n    }\n    public static void main(String[] args) {\n        Browser b = new Firefox();\n        IE e = (IE) b;\n        e.go();\n    }\n}</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Inside Browser"
+      },
+      {
+        "letter": "B",
+        "text": "Inside Firefox"
+      },
+      {
+        "letter": "C",
+        "text": "Inside IE"
+      },
+      {
+        "letter": "D",
+        "text": "The code does not compile."
+      },
+      {
+        "letter": "E",
+        "text": "A runtime exception is thrown."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "E"
+      ],
+      "description": "The main method tries to cast a Firefox instance to IE. Since IE is not a subclass of Firefox, this throws a ClassCastException."
+    }
+  },
+  {
+    "idx": 13,
+    "text": "Which is a true statement about the following code?\n<pre>public class IsItFurry {\n    static interface Mammal { }\n    static class Furry implements Mammal { }\n    static class Chipmunk extends Furry { }\n    public static void main(String[] args) {\n        Chipmunk c = new Chipmunk();\n        Mammal m = c;\n        Furry f = c;\n        int result = 0;\n        if (c instanceof Mammal) result += 1;\n        if (c instanceof Furry) result += 2;\n        if (null instanceof Chipmunk) result += 4;\n        System.out.println(result);\n    } }</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "The output is 0."
+      },
+      {
+        "letter": "B",
+        "text": "The output is 3."
+      },
+      {
+        "letter": "C",
+        "text": "The output is 7."
+      },
+      {
+        "letter": "D",
+        "text": "<pre>c instanceof Mammal</pre> does not compile."
+      },
+      {
+        "letter": "E",
+        "text": "<pre>c instanceof Furry</pre> does not compile."
+      },
+      {
+        "letter": "F",
+        "text": "<pre>null instanceof Chipmunk</pre> does not compile."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "B"
+      ],
+      "description": "c is an instance of Chipmunk. It is an instance of any superclasses or interfaces it implements: Furry, Mammal, and Object. null is not an instance of any type. Therefore, the first two if statements execute and result is 3."
+    }
+  },
+  {
+    "idx": 14,
+    "text": "Which is a true statement about the following code? (Choose all that apply.)\n<pre>import java.util. *;\npublic class IsItFurry {\n    static class Chipmunk { }\n    public static void main(String[] args) {\n        Chipmunk c = new Chipmunk();\n        ArrayList <Chipmunk> l = new ArrayList<>();\n        Runnable r = new Thread();\n        int result = 0;\n        if (c instanceof Chipmunk) result += 1;\n        if (l instanceof Chipmunk) result += 2;\n        if (r instanceof Chipmunk) result += 4;\n        System.out.println(result);\n    } }</pre>",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "The code compiles, and the output is 0."
+      },
+      {
+        "letter": "B",
+        "text": "The code compiles, and the output is 3."
+      },
+      {
+        "letter": "C",
+        "text": "The code compiles, and the output is 7."
+      },
+      {
+        "letter": "D",
+        "text": "<pre>c instanceof Chipmunk</pre> does not compile."
+      },
+      {
+        "letter": "E",
+        "text": "<pre>l instanceof Chipmunk</pre> does not compile."
+      },
+      {
+        "letter": "F",
+        "text": "<pre>r instanceof Chipmunk</pre> does not compile."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "E"
+      ],
+      "description": "Code involving instanceof does not compile when there is no way for it to evaluate true. E does not compile because ArrayList is a concrete class that does not extend Chipmunk. F does compile because Runnable is an interface."
+    }
+  },
+  {
+    "idx": 15,
+    "text": "Which of the following statements are true about the <pre>equals()</pre> method? (Choose all that apply.)",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "If <pre>equals(null)</pre> is called, the method should throw an exception."
+      },
+      {
+        "letter": "B",
+        "text": "If <pre>equals(null)</pre> is called, the method should return false."
+      },
+      {
+        "letter": "C",
+        "text": "If <pre>equals(null)</pre> is called, the method should return true."
+      },
+      {
+        "letter": "D",
+        "text": "If <pre>equals()</pre> is passed the wrong type, the method should throw an exception."
+      },
+      {
+        "letter": "E",
+        "text": "If <pre>equals()</pre> is passed the wrong type, the method should return false."
+      },
+      {
+        "letter": "F",
+        "text": "If <pre>equals()</pre> is passed the wrong type, the method should return true."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "B",
+        "E"
+      ],
+      "description": "equals() should return false when the object it passed in is not equal to the current object. This includes null and incorrect types. An equals() method should have a null check and an instanceof check."
+    }
+  },
+  {
+    "idx": 16,
+    "text": "Which of the following can be inserted in main?\n<pre>public class Outer {\n    class Inner { }\n    public static void main(String[] args) {\n        // INSERT CODE HERE\n    } }</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "<pre>Inner in = new Inner();</pre>"
+      },
+      {
+        "letter": "B",
+        "text": "<pre>Inner in = Outer.new Inner();</pre>"
+      },
+      {
+        "letter": "C",
+        "text": "<pre>Outer.Inner in = new Outer.Inner();</pre>"
+      },
+      {
+        "letter": "D",
+        "text": "<pre>Outer.Inner in = new Outer().Inner();</pre>"
+      },
+      {
+        "letter": "E",
+        "text": "<pre>Outer.Inner in = new Outer().new Inner();</pre>"
+      },
+      {
+        "letter": "F",
+        "text": "<pre>Outer.Inner in = Outer.new Inner();</pre>"
+      }
+    ],
+    "correct": {
+      "letter": [
+        "E"
+      ],
+      "description": "This is a member inner class. It needs to be created using an instance of the outer class. The syntax creates an object of the outer class and then an object of the inner class from it."
+    }
+  },
+  {
+    "idx": 17,
+    "text": "What is the result of the following code? (Choose all that apply.)\n<pre>1:  public enum AnimalClasses {\n2:      MAMMAL(true), FISH(Boolean.FALSE), BIRD(false),\n3:      REPTILE(false), AMPHIBIAN(false), INVERTEBRATE(false)\n4:      boolean hasHair;\n5:      public AnimalClasses(boolean hasHair) {\n6:          this.hasHair = hasHair;\n7:      }\n8:      public boolean hasHair() {\n9:          return hasHair;\n10:     }\n11:     public void giveWig() {\n12:         hasHair = true;\n13:     } }</pre>",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Compiler error on line 2."
+      },
+      {
+        "letter": "B",
+        "text": "Compiler error on line 3."
+      },
+      {
+        "letter": "C",
+        "text": "Compiler error on line 5."
+      },
+      {
+        "letter": "D",
+        "text": "Compiler error on line 8."
+      },
+      {
+        "letter": "E",
+        "text": "Compiler error on line 12."
+      },
+      {
+        "letter": "F",
+        "text": "Compiler error on another line."
+      },
+      {
+        "letter": "G",
+        "text": "The code compiles successfully."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "B",
+        "C"
+      ],
+      "description": "Enums are required to have a semicolon after the list of values if there is anything else in the enum. Enums are not allowed to have a public constructor."
+    }
+  },
+  {
+    "idx": 18,
+    "text": "What is the result of the following code? (Choose all that apply.)\n<pre>public class Swimmer {\n    enum AnimalClasses {\n        MAMMAL, FISH {\n            public boolean hasFins() { return true; }},\n        BIRD, REPTILE, AMPHIBIAN, INVERTEBRATE;\n        public abstract boolean hasFins();\n    }\n    public static void main(String[] args) {\n        System.out.println(AnimalClasses.FISH);\n        System.out.println(AnimalClasses.FISH.ordinal());\n        System.out.println(AnimalClasses.FISH.hasFins());\n        System.out.println(AnimalClasses.BIRD.hasFins());\n    }\n}</pre>",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "fish"
+      },
+      {
+        "letter": "B",
+        "text": "FISH"
+      },
+      {
+        "letter": "C",
+        "text": "0"
+      },
+      {
+        "letter": "D",
+        "text": "1"
+      },
+      {
+        "letter": "E",
+        "text": "false"
+      },
+      {
+        "letter": "F",
+        "text": "true"
+      },
+      {
+        "letter": "G",
+        "text": "The code does not compile."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "G"
+      ],
+      "description": "This question is about abstract methods in enums. Just as an abstract superclass requires concrete subclasses to have an implementation, abstract enum methods require each enum type to implement the method."
+    }
+  },
+  {
+    "idx": 19,
+    "text": "Which of the following can be inserted to override the superclass method? (Choose all that apply.)\n<pre>public class LearnToWalk {\n    public void toddle() {}\n    class BabyRhino extends LearnToWalk {\n        // INSERT CODE HERE\n    }\n}</pre>",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "<pre>public void toddle() {}</pre>"
+      },
+      {
+        "letter": "B",
+        "text": "<pre>public void Toddle() {}</pre>"
+      },
+      {
+        "letter": "C",
+        "text": "<pre>public final void toddle() {}</pre>"
+      },
+      {
+        "letter": "D",
+        "text": "<pre>public static void toddle() {}</pre>"
+      },
+      {
+        "letter": "E",
+        "text": "<pre>public void toddle() throws Exception {}</pre>"
+      },
+      {
+        "letter": "F",
+        "text": "<pre>public void toddle(boolean fall) {}</pre>"
+      }
+    ],
+    "correct": {
+      "letter": [
+        "A",
+        "C"
+      ],
+      "description": "An override must have the same method signature. A and C both do. F is an overload. E throws a checked exception not declared in the superclass. D is static."
+    }
+  },
+  {
+    "idx": 20,
+    "text": "What is the result of the following code?\n<pre>public class FourLegged {\n    String walk = \"walk,\";\n    static class BabyRhino extends FourLegged {\n        String walk = \"toddle,\";\n    }\n    public static void main(String[] args) {\n        FourLegged f = new BabyRhino();\n        BabyRhino b = new BabyRhino();\n        System.out.println(f.walk);\n        System.out.println(b.walk);\n    } }</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "toddle,toddle,"
+      },
+      {
+        "letter": "B",
+        "text": "toddle,walk,"
+      },
+      {
+        "letter": "C",
+        "text": "walk,toddle,"
+      },
+      {
+        "letter": "D",
+        "text": "walk,walk,"
+      },
+      {
+        "letter": "E",
+        "text": "The code does not compile."
+      },
+      {
+        "letter": "F",
+        "text": "A runtime exception is thrown."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "C"
+      ],
+      "description": "We are referring to instance variables, not methods. With instance variables, the reference type matters (hiding), unlike virtual method invocation where the object type matters."
+    }
+  },
+  {
+    "idx": 21,
+    "text": "Which of the following could be inserted to fill in the blank? (Choose all that apply.)\n<pre>public interface Otter {\n    default void play() { }\n}\nclass RiverOtter implements Otter {\n    _____________________________\n}</pre>",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "<pre>@Override public boolean equals(Object o) { return false; }</pre>"
+      },
+      {
+        "letter": "B",
+        "text": "<pre>@Override public boolean equals(Otter o) { return false; }</pre>"
+      },
+      {
+        "letter": "C",
+        "text": "<pre>@Override public int hashCode() { return 42; }</pre>"
+      },
+      {
+        "letter": "D",
+        "text": "<pre>@Override public long hashCode() { return 42; }</pre>"
+      },
+      {
+        "letter": "E",
+        "text": "<pre>@Override public void play() { }</pre>"
+      },
+      {
+        "letter": "F",
+        "text": "<pre>@Override void play() { }</pre>"
+      }
+    ],
+    "correct": {
+      "letter": [
+        "A",
+        "C",
+        "E"
+      ],
+      "description": "@Override means implementing from a superclass or interface. Object declares methods in A and C. Option E is correct because it's in Otter. F is wrong (interface methods are public). B and D have wrong parameters/return types."
+    }
+  }
+]  
+  
+},
+
+{ "chapter_name":"Chapter 02 : Design Patterns and Principles",
+  "questions" :  
+[
+  {
+    "idx": 1,
+    "text": "Which of the following statements about design principles and design patterns are true? (Choose all that apply.)",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "A design principle is focused on solving a specific commonly occurring problem."
+      },
+      {
+        "letter": "B",
+        "text": "Design principles and design patterns are the same thing."
+      },
+      {
+        "letter": "C",
+        "text": "Design principles are often applied throughout an application, whereas design patterns are applied to solve specific problems."
+      },
+      {
+        "letter": "D",
+        "text": "Design patterns can only be applied to static classes."
+      },
+      {
+        "letter": "E",
+        "text": "Design principles and design patterns tend to produce code that is easier to maintain and easier for other developers to read."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "C",
+        "E"
+      ],
+      "description": "Option A is incorrect as a design pattern is focused on solving a specific commonly occurring problem. Option B is also incorrect, as design principles and design patterns are different, despite both promoting better code development. Option D is incorrect as design patterns may be applied to static or non-static classes alike. Options C and E are correct statements about design principles and design patterns."
+    }
+  },
+  {
+    "idx": 2,
+    "text": "What is the result of the following code?\n<pre>\n1: public interface CanClimb {\n2:     public abstract void climb();\n3: }\n4: public interface CanClimbTrees extends CanClimb {}\n5: public abstract class Chipmunk implements CanClimbTrees {\n6:     public abstract void chew();\n7: }\n8: public class EasternChipmunk extends Chipmunk {\n9:     public void chew() { System.out.println(\"Eastern Chipmunk is Chewing\"); }\n10: }\n</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "It compiles and runs without issue."
+      },
+      {
+        "letter": "B",
+        "text": "The code will not compile because of line 2."
+      },
+      {
+        "letter": "C",
+        "text": "The code will not compile because of line 4."
+      },
+      {
+        "letter": "D",
+        "text": "The code will not compile because of line 5."
+      },
+      {
+        "letter": "E",
+        "text": "The code will not compile because of line 8."
+      },
+      {
+        "letter": "F",
+        "text": "It compiles but throws an exception at runtime."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "E"
+      ],
+      "description": "The code does not compile because EasternChipmunk inherits the abstract method climb() but does not implement it, therefore the correct answer is E. B, C, and D are incorrect as they compile for various reasons. Line 2 compiles, as non-static and non-default interface methods are assumed to have the abstract modifier. Line 4 compiles without issue as an interface can extend another interface. Line 5 compiles without issue as an abstract class can implement an interface without implementing any of the abstract methods. F is incorrect, as Line 8 does not compile."
+    }
+  },
+  {
+    "idx": 3,
+    "text": "Which of the following are valid functional interfaces? (Choose all that apply.)\n<pre>\npublic interface Climb {\n    public int climb();\n}\npublic abstract class Swim {\n    public abstract Object swim(double speed, int duration);\n}\npublic interface ArcticMountainClimb extends MountainClimb {\n    public default int getSpeed();\n}\npublic interface MountainClimb extends Climb {}\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Climb"
+      },
+      {
+        "letter": "B",
+        "text": "Swim"
+      },
+      {
+        "letter": "C",
+        "text": "ArcticMountainClimb"
+      },
+      {
+        "letter": "D",
+        "text": "MountainClimb"
+      },
+      {
+        "letter": "E",
+        "text": "None of these are valid functional interfaces."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "A",
+        "D"
+      ],
+      "description": "A is correct as Climb defines an interface with exactly one abstract method. B is incorrect, as abstract classes are not functional interfaces despite having a single abstract method. While functional interfaces may have any number of default methods, ArcticMountainClimb will not compile due to the default method getSpeed() missing an implementation body, so C is incorrect. D is correct, as the interface MountainClimb has exactly one abstract method defined in Climb. Finally, E is incorrect because A and D are correct."
+    }
+  },
+  {
+    "idx": 4,
+    "text": "Which of the following are valid lambda expressions? (Choose all that apply.)",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "<pre>() -> \"\"</pre>"
+      },
+      {
+        "letter": "B",
+        "text": "<pre>x,y -> x+y</pre>"
+      },
+      {
+        "letter": "C",
+        "text": "<pre>(Coyote y) -> return 0;</pre>"
+      },
+      {
+        "letter": "D",
+        "text": "<pre>(Camel c) -> {return;}</pre>"
+      },
+      {
+        "letter": "E",
+        "text": "<pre>Wolf w -> 39</pre>"
+      },
+      {
+        "letter": "F",
+        "text": "<pre>() -></pre>"
+      },
+      {
+        "letter": "G",
+        "text": "<pre>(Animal z, m) -> a</pre>"
+      }
+    ],
+    "correct": {
+      "letter": [
+        "A",
+        "D"
+      ],
+      "description": "The first lambda expression is valid, taking no arguments and returning the empty string, so A is correct. B is incorrect, as more than one parameter requires parentheses (). C is incorrect, as brackets {} are required when using return. D is correct, as the expression takes one Camel input and returns void. E is incorrect, as parentheses are required when using the data type Wolf. F is incorrect, as it has no right-side expression. Finally, G is incorrect, as specifying the data type for one parameter in a lambda expression requires you to specify the data type for all parameters in the expression."
+    }
+  },
+  {
+    "idx": 5,
+    "text": "What are some of the properties of using the singleton pattern? (Choose all that apply.)",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Singleton object can be replaced with encapsulated setter method."
+      },
+      {
+        "letter": "B",
+        "text": "Requires constructor of singleton class to be private."
+      },
+      {
+        "letter": "C",
+        "text": "Singleton object must be named instance."
+      },
+      {
+        "letter": "D",
+        "text": "Singleton object may be private or protected."
+      },
+      {
+        "letter": "E",
+        "text": "Ensures that there is only one instance of an object in memory."
+      },
+      {
+        "letter": "F",
+        "text": "Requires a public static method to retrieve the instance of the singleton."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "B",
+        "E",
+        "F"
+      ],
+      "description": "A is incorrect, as any method that changes the singleton breaks the singleton pattern. B is correct, as the constructor of the singleton class must be private. C is incorrect, as the name of the object/method is not defined in the pattern. D is incorrect, as the object must be marked private for proper encapsulation. E is correct, as the purpose of a singleton is to ensure that all threads share the same instance. F is correct, as a public static method is required for all threads to access the same singleton."
+    }
+  },
+  {
+    "idx": 6,
+    "text": "What is the result of the following class?\n<pre>\nimport java.util.function.*;\npublic class Panda {\n    int age;\n    public static void main(String[] args) {\n        Panda p1 = new Panda();\n        p1.age = 1;\n        check(p1, p -> p.age < 5); // h1\n    }\n    private static void check(Panda panda, Predicate&lt;Panda&gt; pred) { // h2\n        String result = pred.test(panda) ? \"match\": \"not match\"; // h3\n        System.out.print(result);\n    } }\n</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "match"
+      },
+      {
+        "letter": "B",
+        "text": "not match"
+      },
+      {
+        "letter": "C",
+        "text": "Compiler error on line h1."
+      },
+      {
+        "letter": "D",
+        "text": "Compiler error on line h2."
+      },
+      {
+        "letter": "E",
+        "text": "Compile error on line h3."
+      },
+      {
+        "letter": "F",
+        "text": "A runtime exception is thrown."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "A"
+      ],
+      "description": "This code compiles and runs without issue. Line h1 creates a lambda expression that checks if the age is less than 5. Line h2 uses the Predicate interface, which declares a test() method. Since test() returns true on the expression, match is output and A is correct."
+    }
+  },
+  {
+    "idx": 7,
+    "text": "What changes need to be made to make the following immutable object pattern correct? (Choose all that apply.)\n<pre>\nimport java.util.List;\npublic class Seal {\n    String name;\n    private final List&lt;Seal&gt; friends;\n    public Seal(String name, List&lt;Seal&gt; friends) {\n        this.name = name;\n        this.friends = friends;\n    }\n    public String getName() { return name; }\n    public List&lt;Seal&gt; getFriends() { return friends; }\n}\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "None; the immutable object pattern is properly implemented."
+      },
+      {
+        "letter": "B",
+        "text": "Have Seal implement the Immutable interface."
+      },
+      {
+        "letter": "C",
+        "text": "Mark name final and private."
+      },
+      {
+        "letter": "D",
+        "text": "Add setters for name and List&lt;Seal&gt; friends."
+      },
+      {
+        "letter": "E",
+        "text": "Replace the getFriends() method with methods that do not give the caller direct access to the List&lt;Seal&gt; friends."
+      },
+      {
+        "letter": "F",
+        "text": "Change the type of List&lt;Seal&gt; to List&lt;Object&gt;."
+      },
+      {
+        "letter": "G",
+        "text": "Make a copy of the List&lt;Seal&gt; friends in the constructor."
+      },
+      {
+        "letter": "H",
+        "text": "Mark the Seal class final."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "C",
+        "E",
+        "G",
+        "H"
+      ],
+      "description": "B is incorrect (no Immutable interface in API). C is correct (instance variables should be private and final). D is incorrect (setters break immutability). E is correct (direct access to mutable List should be removed). G is correct (copy mutable structures in constructor). H is correct (prevents methods from being overridden)."
+    }
+  },
+  {
+    "idx": 8,
+    "text": "Which of the following are true of interfaces? (Choose all that apply.)",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "They can extend other classes."
+      },
+      {
+        "letter": "B",
+        "text": "They cannot be extended."
+      },
+      {
+        "letter": "C",
+        "text": "They enable classes to have multiple inheritance."
+      },
+      {
+        "letter": "D",
+        "text": "They can only contain abstract methods."
+      },
+      {
+        "letter": "E",
+        "text": "They can be declared final."
+      },
+      {
+        "letter": "F",
+        "text": "All members of an interface are public."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "C",
+        "F"
+      ],
+      "description": "A and B are incorrect as interfaces can extend interfaces but not classes. C is correct since a class may implement multiple interfaces. D is incorrect as interfaces have static/default methods. E is incorrect as interfaces are assumed abstract and cannot be final. F is correct as interface members are assumed public."
+    }
+  },
+  {
+    "idx": 9,
+    "text": "What changes need to be made to make the following singleton pattern correct? (Choose all that apply.)\n<pre>\npublic class CheetahManager {\n    public static CheetahManager cheetahManager;\n    private CheetahManager() {}\n    public static CheetahManager getCheetahManager() {\n        if(cheetahManager == null) {\n            cheetahManager = new CheetahManager();\n        }\n        return cheetahManager;\n    }\n}\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "None; the singleton pattern is properly implemented."
+      },
+      {
+        "letter": "B",
+        "text": "Rename cheetahManager to instance."
+      },
+      {
+        "letter": "C",
+        "text": "Rename getCheetahManager() to getInstance()."
+      },
+      {
+        "letter": "D",
+        "text": "Change the access modifier of cheetahManager from public to private."
+      },
+      {
+        "letter": "E",
+        "text": "Mark cheetahManager final."
+      },
+      {
+        "letter": "F",
+        "text": "Add synchronized to getCheetahManager()."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "D",
+        "F"
+      ],
+      "description": "The public modifier on the instance breaks the pattern, hence D is required. E is incorrect as final would prevent lazy instantiation. F is required to prevent two threads from creating two distinct instances (thread-safety)."
+    }
+  },
+  {
+    "idx": 10,
+    "text": "What is the result of the following code?\n<pre>\n1: public interface CanWalk {\n2:     default void walk() { System.out.println(\"Walking\"); }\n3: }\n4: public interface CanRun {\n5:     public default void walk() { System.out.println(\"Walking\"); }\n6:     public abstract void run();\n7: }\n8: public interface CanSprint extends CanWalk, CanRun {\n9:     void sprint();\n10: }\n</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "The code compiles without issue."
+      },
+      {
+        "letter": "B",
+        "text": "The code will not compile because of line 5."
+      },
+      {
+        "letter": "C",
+        "text": "The code will not compile because of line 6."
+      },
+      {
+        "letter": "D",
+        "text": "The code will not compile because of line 8."
+      },
+      {
+        "letter": "E",
+        "text": "The code will not compile because of line 9."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "D"
+      ],
+      "description": "Java does not support multiple inheritance of default methods with the same signature. CanWalk and CanRun both implement walk(). CanSprint extends both and won't compile because of the conflict. This makes D the correct answer."
+    }
+  },
+  {
+    "idx": 11,
+    "text": "Which lambda can replace the MySecret class to return the same value? (Choose all that apply.)\n<pre>\npublic interface Secret {\n    String magic(double d);\n}\npublic class MySecret implements Secret {\n    public String magic(double d) {\n        return \"Poof\";\n    }\n}\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "<pre>caller((e) -> \"Poof\");</pre>"
+      },
+      {
+        "letter": "B",
+        "text": "<pre>caller((e) -> {\"Poof\"});</pre>"
+      },
+      {
+        "letter": "C",
+        "text": "<pre>caller((e) -> { String e = \"\"; \"Poof\" });</pre>"
+      },
+      {
+        "letter": "D",
+        "text": "<pre>caller((e) -> { String e = \"\"; return \"Poof\"; });</pre>"
+      },
+      {
+        "letter": "E",
+        "text": "<pre>caller((e) -> { String e = \"\"; return \"Poof\" });</pre>"
+      },
+      {
+        "letter": "F",
+        "text": "<pre>caller((e) -> { String f = \"\"; return \"Poof\"; });</pre>"
+      }
+    ],
+    "correct": {
+      "letter": [
+        "A",
+        "F"
+      ],
+      "description": "B is incorrect (missing return). C, D, and E are incorrect because variable 'e' is already in use and cannot be redefined. A and F are the only correct lambda expressions that match the functional interface."
+    }
+  },
+  {
+    "idx": 12,
+    "text": "What is the result of the following code?\n<pre>\npublic interface Climb {\n    boolean isTooHigh(int height, int limit);\n}\npublic class Climber {\n    public static void main(String[] args) {\n        check((h, l) -> h.toString(), 5); // x1\n    }\n    private static void check(Climb climb, int height) {\n        if (climb.isTooHigh(height, 10)) // x2\n            System.out.println(\"too high\");\n        else System.out.println(\"ok\");\n    } }\n</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "ok"
+      },
+      {
+        "letter": "B",
+        "text": "too high"
+      },
+      {
+        "letter": "C",
+        "text": "Compiler error on line x1."
+      },
+      {
+        "letter": "D",
+        "text": "Compiler error on line x2."
+      },
+      {
+        "letter": "E",
+        "text": "Compiler error on a different line."
+      },
+      {
+        "letter": "F",
+        "text": "A runtime exception is thrown."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "C"
+      ],
+      "description": "The functional interface takes two int parameters. Line x1 attempts to use them as if one is an Object (calling .toString() on an int), resulting in a compiler error. It also tries to return String instead of boolean."
+    }
+  },
+  {
+    "idx": 13,
+    "text": "Which of the following are properties of classes that define immutable objects? (Choose all that apply.)",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "They don’t define any getter methods."
+      },
+      {
+        "letter": "B",
+        "text": "All of the instance variables marked private and final."
+      },
+      {
+        "letter": "C",
+        "text": "They don’t define any setter methods."
+      },
+      {
+        "letter": "D",
+        "text": "They mark all instance variables static."
+      },
+      {
+        "letter": "E",
+        "text": "They prevent methods from being overridden."
+      },
+      {
+        "letter": "F",
+        "text": "All getter methods are marked synchronized."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "B",
+        "C",
+        "E"
+      ],
+      "description": "Immutable objects may not be modified after creation. B (private final variables), C (no setters), and E (preventing override) support this. A is incorrect (getters are allowed). D and F are not parts of the pattern."
+    }
+  },
+  {
+    "idx": 14,
+    "text": "Which of the following statements can be inserted in the blank line so that the code will compile successfully? (Choose all that apply.)\n<pre>\npublic interface CanHop {}\npublic class Frog implements CanHop {\n    public static void main(String[] args) {\n        _______________ frog = new TurtleFrog();\n    }\n}\npublic class BrazilianHornedFrog extends Frog {}\npublic class TurtleFrog extends Frog {}\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Frog"
+      },
+      {
+        "letter": "B",
+        "text": "TurtleFrog"
+      },
+      {
+        "letter": "C",
+        "text": "BrazilianHornedFrog"
+      },
+      {
+        "letter": "D",
+        "text": "CanHop"
+      },
+      {
+        "letter": "E",
+        "text": "Object"
+      },
+      {
+        "letter": "F",
+        "text": "Long"
+      }
+    ],
+    "correct": {
+      "letter": [
+        "A",
+        "B",
+        "D",
+        "E"
+      ],
+      "description": "The blank can be filled with any supertype of TurtleFrog. Frog (A) is a superclass, TurtleFrog (B) is the class itself, CanHop (D) is an inherited interface, and Object (E) is the universal superclass. BrazilianHornedFrog (C) and Long (F) are unrelated."
+    }
+  },
+  {
+    "idx": 15,
+    "text": "Which of the following statements about polymorphism are true? (Choose all that apply.)",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "A reference to an object may be cast to a subclass of the object without an explicit cast."
+      },
+      {
+        "letter": "B",
+        "text": "If a method takes a class that is the superclass of three different object references, then any of those objects may be passed as a parameter to the method."
+      },
+      {
+        "letter": "C",
+        "text": "A reference to an object may be cast to a superclass of the object without an explicit cast."
+      },
+      {
+        "letter": "D",
+        "text": "All cast exceptions can be detected at compile time."
+      },
+      {
+        "letter": "E",
+        "text": "By defining a public instance method in the superclass, you guarantee that the specific method will be called in the parent class at runtime."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "B",
+        "C"
+      ],
+      "description": "Casting to a subclass (A) requires an explicit cast. Casting to a superclass (C) does not. Passing subclass references where a superclass is expected (B) is a key feature of polymorphism. E is incorrect because instance methods can be overridden."
+    }
+  },
+  {
+    "idx": 16,
+    "text": "Choose the correct statement about the following code:\n<pre>\n1: public interface Herbivore {\n2:     int amount = 10;\n3:     public static void eatGrass();\n4:     public int chew() {\n5:         return 13;\n6:     }\n7: }\n</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "It compiles and runs without issue."
+      },
+      {
+        "letter": "B",
+        "text": "The code will not compile because of line 2."
+      },
+      {
+        "letter": "C",
+        "text": "The code will not compile because of line 3."
+      },
+      {
+        "letter": "D",
+        "text": "The code will not compile because of line 4."
+      },
+      {
+        "letter": "E",
+        "text": "The code will not compile because of lines 2 and 3."
+      },
+      {
+        "letter": "F",
+        "text": "The code will not compile because of lines 3 and 4."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "F"
+      ],
+      "description": "The code contains two errors: line 3 (static method in interface must have a body) and line 4 (method with a body must be marked default or static). Therefore, F is the correct answer."
+    }
+  },
+  {
+    "idx": 17,
+    "text": "Which of the following are properties of classes that are properly encapsulated as a JavaBean? (Choose all that apply.)",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "All instance variables are marked final."
+      },
+      {
+        "letter": "B",
+        "text": "boolean instance variables are accessed with is or get."
+      },
+      {
+        "letter": "C",
+        "text": "All instance variables are marked private."
+      },
+      {
+        "letter": "D",
+        "text": "They implement the JavaBean interface."
+      },
+      {
+        "letter": "E",
+        "text": "Variables are created using lazy instantiation."
+      },
+      {
+        "letter": "F",
+        "text": "The first letter of the any getter/setter, after the get, set, or is prefix, must be uppercase."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "B",
+        "C",
+        "F"
+      ],
+      "description": "B, C, and F are standard JavaBean properties. A is for immutability. D is incorrect (no JavaBean interface). E is not part of the encapsulation rules."
+    }
+  },
+  {
+    "idx": 18,
+    "text": "Which of the following statements about inheritance and object composition are correct? (Choose all that apply.)",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Inheritance supports access to protected variables."
+      },
+      {
+        "letter": "B",
+        "text": "Object composition tends to promote greater code reuse than inheritance."
+      },
+      {
+        "letter": "C",
+        "text": "Inheritance relies on the has‐a principle."
+      },
+      {
+        "letter": "D",
+        "text": "Object composition supports method overriding at runtime."
+      },
+      {
+        "letter": "E",
+        "text": "Object composition requires a class variable to be declared public or accessible from a public method to be used by a class in a different package."
+      },
+      {
+        "letter": "F",
+        "text": "Object composition is always preferred to inheritance."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "A",
+        "B",
+        "E"
+      ],
+      "description": "A (inheritance allows protected access) and B (composition promotes reuse) are correct. C is inverted (inheritance is is-a). D is about inheritance. E is correct as composition requires explicit access to variables/methods."
+    }
+  },
+  {
+    "idx": 19,
+    "text": "Which three scenarios would best benefit from using a singleton pattern? (Choose all three.)",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Create read‐only objects that are thread‐safe."
+      },
+      {
+        "letter": "B",
+        "text": "Manage a reusable cache of objects."
+      },
+      {
+        "letter": "C",
+        "text": "Ensure that all objects are lazily instantiated."
+      },
+      {
+        "letter": "D",
+        "text": "Manage write access to a log file."
+      },
+      {
+        "letter": "E",
+        "text": "Provide central access to application configuration data."
+      },
+      {
+        "letter": "F",
+        "text": "Allow multiple instances of a static object to be managed in memory."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "B",
+        "D",
+        "E"
+      ],
+      "description": "B (caching), D (log file access), and E (configuration data) are classic use cases for singletons. A is for immutability. C is a technique but not the primary benefit. F is the opposite of a singleton."
+    }
+  },
+  {
+    "idx": 20,
+    "text": "Choose the correct statement about the following code:\n<pre>\n1: public interface CanFly {\n2:     void fly();\n3: }\n4: interface HasWings {\n5:     public abstract Object getWingSpan();\n6: }\n7: abstract class Falcon implements CanFly, HasWings {\n8: }\n</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "It compiles without issue."
+      },
+      {
+        "letter": "B",
+        "text": "The code will not compile because of line 2."
+      },
+      {
+        "letter": "C",
+        "text": "The code will not compile because of line 4."
+      },
+      {
+        "letter": "D",
+        "text": "The code will not compile because of line 5."
+      },
+      {
+        "letter": "E",
+        "text": "The code will not compile because of lines 2 and 5."
+      },
+      {
+        "letter": "F",
+        "text": "The code will not compile because the class Falcon doesn’t implement the interface methods."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "A"
+      ],
+      "description": "Both fly() and getWingSpan() will be public abstract. Interfaces can have public or default access. Falcon does not need to implement the methods because it is an abstract class. The code compiles fine."
+    }
+  }
+]
+}
+
+]
+}
+]
