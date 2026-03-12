@@ -1,0 +1,267 @@
+[
+  {
+    "idx": 1,
+    "text": "What is the output of the following?\n<pre>\nStream&lt;String&gt; stream = Stream.iterate(\"\", (s) -&gt; s + \"1\");\nSystem.out.println(stream.limit(2).map(x -&gt; x + \"2\"));\n</pre>",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "12112" },
+      { "letter": "B", "text": "212" },
+      { "letter": "C", "text": "212112" },
+      { "letter": "D", "text": "java.util.stream.ReferencePipeline$3@4517d9a3" },
+      { "letter": "E", "text": "The code does not compile." },
+      { "letter": "F", "text": "An exception is thrown." },
+      { "letter": "G", "text": "The code hangs." }
+    ]
+  },
+  {
+    "idx": 2,
+    "text": "What is the output of the following?\n<pre>\nPredicate&lt;? super String&gt; predicate = s -&gt; s.startsWith(\"g\");\nStream&lt;String&gt; stream1 = Stream.generate(() -&gt; \"growl! \");\nStream&lt;String&gt; stream2 = Stream.generate(() -&gt; \"growl! \");\nboolean b1 = stream1.anyMatch(predicate);\nboolean b2 = stream2.allMatch(predicate);\nSystem.out.println(b1 + \" \" + b2);\n</pre>",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "true false" },
+      { "letter": "B", "text": "true true" },
+      { "letter": "C", "text": "java.util.stream.ReferencePipeline$3@4517d9a3" },
+      { "letter": "D", "text": "The code does not compile." },
+      { "letter": "E", "text": "An exception is thrown." },
+      { "letter": "F", "text": "The code hangs." }
+    ]
+  },
+  {
+    "idx": 3,
+    "text": "What is the output of the following?\n<pre>\nPredicate&lt;? super String&gt; predicate = s -&gt; s.length() &gt; 3;\nStream&lt;String&gt; stream = Stream.iterate(\"-\", (s) -&gt; s + s);\nboolean b1 = stream.noneMatch(predicate);\nboolean b2 = stream.anyMatch(predicate);\nSystem.out.println(b1 + \" \" + b2);\n</pre>",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "false true" },
+      { "letter": "B", "text": "false false" },
+      { "letter": "C", "text": "java.util.stream.ReferencePipeline$3@4517d9a3" },
+      { "letter": "D", "text": "The code does not compile." },
+      { "letter": "E", "text": "An exception is thrown." },
+      { "letter": "F", "text": "The code hangs." }
+    ]
+  },
+  {
+    "idx": 4,
+    "text": "Which are true statements about terminal operations in a stream? (Choose all that apply.)",
+    "select_type": "multiply",
+    "answers": [
+      { "letter": "A", "text": "At most one terminal operation can exist in a stream pipeline." },
+      { "letter": "B", "text": "Terminal operations are a required part of the stream pipeline in order to get a result." },
+      { "letter": "C", "text": "Terminal operations have Stream as the return type." },
+      { "letter": "D", "text": "The referenced Stream may be used after the calling a terminal operation." },
+      { "letter": "E", "text": "The <pre>peek()</pre> method is an example of a terminal operation." }
+    ]
+  },
+  {
+    "idx": 5,
+    "text": "Which terminal operations on the Stream class are reductions? (Choose all that apply.)",
+    "select_type": "multiply",
+    "answers": [
+      { "letter": "A", "text": "collect()" },
+      { "letter": "B", "text": "count()" },
+      { "letter": "C", "text": "findFirst()" },
+      { "letter": "D", "text": "map()" },
+      { "letter": "E", "text": "peek()" },
+      { "letter": "F", "text": "sum()" }
+    ]
+  },
+  {
+    "idx": 6,
+    "text": "Which of the following can fill in the blank so that the code prints out false? (Choose all that apply.)\n<pre>\nStream&lt;String&gt; s = Stream.generate(() -&gt; \"meow\");\nboolean match = s.________________(String::isEmpty);\nSystem.out.println(match);\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      { "letter": "A", "text": "allMatch" },
+      { "letter": "B", "text": "anyMatch" },
+      { "letter": "C", "text": "findAny" },
+      { "letter": "D", "text": "findFirst" },
+      { "letter": "E", "text": "noneMatch" },
+      { "letter": "F", "text": "None of the above" }
+    ]
+  },
+  {
+    "idx": 7,
+    "text": "We have a method that returns a sorted list without changing the original. Which of the following can replace the method implementation to do the same with streams?\n<pre>\nprivate static List&lt;String&gt; sort(List&lt;String&gt; list) {\n  List&lt;String&gt; copy = new ArrayList&lt;&gt;(list);\n  Collections.sort(copy, (a, b) -&gt; b.compareTo(a));\n  return copy;\n}\n</pre>",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "<pre>return list.stream().compare((a, b) -&gt; b.compareTo(a)).collect(Collectors.toList());</pre>" },
+      { "letter": "B", "text": "<pre>return list.stream().compare((a, b) -&gt; b.compareTo(a)).sort();</pre>" },
+      { "letter": "C", "text": "<pre>return list.stream().compareTo((a, b) -&gt; b.compareTo(a)).collect(Collectors.toList());</pre>" },
+      { "letter": "D", "text": "<pre>return list.stream().compareTo((a, b) -&gt; b.compareTo(a)).sort();</pre>" },
+      { "letter": "E", "text": "<pre>return list.stream().sorted((a, b) -&gt; b.compareTo(a)).collect();</pre>" },
+      { "letter": "F", "text": "<pre>return list.stream().sorted((a, b) -&gt; b.compareTo(a)).collect(Collectors.toList());</pre>" }
+    ]
+  },
+  {
+    "idx": 8,
+    "text": "Which of the following are true given the declaration <pre>IntStream is = IntStream.empty();</pre>? (Choose all that apply.)",
+    "select_type": "multiply",
+    "answers": [
+      { "letter": "A", "text": "<pre>is.average()</pre> returns the type int." },
+      { "letter": "B", "text": "<pre>is.average()</pre> returns the type OptionalInt." },
+      { "letter": "C", "text": "<pre>is.findAny()</pre> returns the type int." },
+      { "letter": "D", "text": "<pre>is.findAny()</pre> returns the type OptionalInt." },
+      { "letter": "E", "text": "<pre>is.sum()</pre> returns the type int." },
+      { "letter": "F", "text": "<pre>is.sum()</pre> returns the type OptionalInt." }
+    ]
+  },
+  {
+    "idx": 9,
+    "text": "Which of the following can we add after line 5 for the code to run without error and not produce any output? (Choose all that apply.)\n<pre>\n4: LongStream ls = LongStream.of(1, 2, 3);\n5: OptionalLong opt = ls.map(n -&gt; n * 10).filter(n -&gt; n &lt; 5).findFirst();\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      { "letter": "A", "text": "<pre>if (opt.isPresent()) System.out.println(opt.get());</pre>" },
+      { "letter": "B", "text": "<pre>if (opt.isPresent()) System.out.println(opt.getAsLong());</pre>" },
+      { "letter": "C", "text": "<pre>opt.ifPresent(System.out.println)</pre>" },
+      { "letter": "D", "text": "<pre>opt.ifPresent(System.out::println)</pre>" },
+      { "letter": "E", "text": "None of these; the code does not compile." },
+      { "letter": "F", "text": "None of these; line 5 throws an exception at runtime." }
+    ]
+  },
+  {
+    "idx": 10,
+    "text": "Select from the following statements and indicate the order in which they would appear to output 10 lines:\n<pre>\nStream.generate(() -&gt; \"1\")\nL: .filter(x -&gt; x.length() &gt; 1)\nM: .forEach(System.out::println)\nN: .limit(10)\nO: .peek(System.out::println)\n;\n</pre>",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "L, N" },
+      { "letter": "B", "text": "L, N, O" },
+      { "letter": "C", "text": "L, N, M" },
+      { "letter": "D", "text": "L, N, M, O" },
+      { "letter": "E", "text": "L, O, M" },
+      { "letter": "F", "text": "N, M" },
+      { "letter": "G", "text": "N, O" }
+    ]
+  },
+  {
+    "idx": 11,
+    "text": "What changes need to be made for this code to print the string 12345? (Choose all that apply.)\n<pre>\nStream.iterate(1, x -&gt; x++).limit(5).map(x -&gt; x).collect(Collectors.joining());\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      { "letter": "A", "text": "Change <pre>Collectors.joining()</pre> to <pre>Collectors.joining(\"\")</pre>." },
+      { "letter": "B", "text": "Change <pre>map(x -&gt; x)</pre> to <pre>map(x -&gt; \"\" + x)</pre>." },
+      { "letter": "C", "text": "Change <pre>x -&gt; x++</pre> to <pre>x -&gt; ++x</pre>." },
+      { "letter": "D", "text": "Add <pre>forEach(System.out::print)</pre> after the call to <pre>collect()</pre>." },
+      { "letter": "E", "text": "Wrap the entire line in a <pre>System.out.print</pre> statement." },
+      { "letter": "F", "text": "None of the above. The code already prints 12345." }
+    ]
+  },
+  {
+    "idx": 12,
+    "text": "Which functional interfaces complete the following code? (Choose all that apply.)\n<pre>\n6: ____________ x = String::new;\n7: ____________ y = (a, b) -&gt; System.out.println();\n8: ____________ z = a -&gt; a + a;\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      { "letter": "A", "text": "BiConsumer<String, String>" },
+      { "letter": "B", "text": "BiFunction<String, String>" },
+      { "letter": "C", "text": "BinaryConsumer<String, String>" },
+      { "letter": "D", "text": "BinaryFunction<String, String>" },
+      { "letter": "E", "text": "Consumer<String>" },
+      { "letter": "F", "text": "Supplier<String>" },
+      { "letter": "G", "text": "UnaryOperator<String>" },
+      { "letter": "H", "text": "UnaryOperator<String, String>" }
+    ]
+  },
+  {
+    "idx": 13,
+    "text": "Which of the following is true?\n<pre>\nList&lt;Integer&gt; l1 = Arrays.asList(1, 2, 3);\nList&lt;Integer&gt; l2 = Arrays.asList(4, 5, 6);\nList&lt;Integer&gt; l3 = Arrays.asList();\nStream.of(l1, l2, l3).map(x -&gt; x + 1)\n      .flatMap(x -&gt; x.stream()).forEach(System.out::print);\n</pre>",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "The code compiles and prints 123456." },
+      { "letter": "B", "text": "The code compiles and prints 234567." },
+      { "letter": "C", "text": "The code compiles but does not print anything." },
+      { "letter": "D", "text": "The code compiles but prints stream references." },
+      { "letter": "E", "text": "The code runs infinitely." },
+      { "letter": "F", "text": "The code does not compile." },
+      { "letter": "G", "text": "The code throws an exception" }
+    ]
+  },
+  {
+    "idx": 14,
+    "text": "Which of the following is true?\n<pre>\n4: Stream&lt;Integer&gt; s = Stream.of(1);\n5: IntStream is = s.mapToInt(x -&gt; x);\n6: DoubleStream ds = s.mapToDouble(x -&gt; x);\n7: Stream&lt;Integer&gt; s2 = ds.mapToInt(x -&gt; x);\n8: s2.forEach(System.out::print);\n</pre>",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "Line 4 does not compile." },
+      { "letter": "B", "text": "Line 5 does not compile." },
+      { "letter": "C", "text": "Line 6 does not compile." },
+      { "letter": "D", "text": "Line 7 does not compile." },
+      { "letter": "E", "text": "Line 8 does not compile." },
+      { "letter": "F", "text": "The code throws an exception." },
+      { "letter": "G", "text": "The code compiles and prints 1." }
+    ]
+  },
+  {
+    "idx": 15,
+    "text": "The <pre>partitioningBy()</pre> collector creates a <pre>Map&lt;Boolean, List&lt;String&gt;&gt;</pre> when passed to <pre>collect()</pre> by default. When specific parameters are passed to <pre>partitioningBy()</pre>, which return types can be created? (Choose all that apply.)",
+    "select_type": "multiply",
+    "answers": [
+      { "letter": "A", "text": "Map<boolean, List<String>>" },
+      { "letter": "B", "text": "Map<Boolean, Map<String>>" },
+      { "letter": "C", "text": "Map<Long, TreeSet<String>>" },
+      { "letter": "D", "text": "Map<Boolean, List<String>>" },
+      { "letter": "E", "text": "Map<Boolean, Set<String>>" },
+      { "letter": "F", "text": "None of the above" }
+    ]
+  },
+  {
+    "idx": 16,
+    "text": "What is the output of the following?\n<pre>\nStream&lt;String&gt; s = Stream.empty();\nStream&lt;String&gt; s2 = Stream.empty();\nMap&lt;Boolean, List&lt;String&gt;&gt; p = s.collect(\n      Collectors.partitioningBy(b -&gt; b.startsWith(\"c\")));\nMap&lt;Boolean, List&lt;String&gt;&gt; g = s2.collect(\n      Collectors.groupingBy(b -&gt; b.startsWith(\"c\")));\nSystem.out.println(p + \" \" + g);\n</pre>",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "{} {}" },
+      { "letter": "B", "text": "{} {false=[], true=[]}" },
+      { "letter": "C", "text": "{false=[], true=[]} {}" },
+      { "letter": "D", "text": "{false=[], true=[]} {false=[], true=[]}" },
+      { "letter": "E", "text": "The code does not compile." },
+      { "letter": "F", "text": "An exception is thrown." }
+    ]
+  },
+  {
+    "idx": 17,
+    "text": "Which of the following is equivalent to this code?\n<pre>UnaryOperator&lt;Integer&gt; u = x -&gt; x * x;</pre>",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "<pre>BiFunction&lt;Integer&gt; f = x -&gt; x*x;</pre>" },
+      { "letter": "B", "text": "<pre>BiFunction&lt;Integer, Integer&gt; f = x -&gt; x*x;</pre>" },
+      { "letter": "C", "text": "<pre>BinaryOperator&lt;Integer, Integer&gt; f = x -&gt; x*x;</pre>" },
+      { "letter": "D", "text": "<pre>Function&lt;Integer&gt; f = x -&gt; x*x;</pre>" },
+      { "letter": "E", "text": "<pre>Function&lt;Integer, Integer&gt; f = x -&gt; x*x;</pre>" },
+      { "letter": "F", "text": "None of the above" }
+    ]
+  },
+  {
+    "idx": 18,
+    "text": "What is the result of the following?\n<pre>\nDoubleStream s = DoubleStream.of(1.2, 2.4);\ns.peek(System.out::println).filter(x -&gt; x &gt; 2).count();\n</pre>",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "1" },
+      { "letter": "B", "text": "2" },
+      { "letter": "C", "text": "2.4" },
+      { "letter": "D", "text": "1.2 and 2.4" },
+      { "letter": "E", "text": "There is no output." },
+      { "letter": "F", "text": "The code does not compile." },
+      { "letter": "G", "text": "An exception is thrown." }
+    ]
+  },
+  {
+    "idx": 19,
+    "text": "Which of the following return primitives? (Choose all that apply.)",
+    "select_type": "multiply",
+    "answers": [
+      { "letter": "A", "text": "BooleanSupplier" },
+      { "letter": "B", "text": "CharSupplier" },
+      { "letter": "C", "text": "DoubleSupplier" },
+      { "letter": "D", "text": "FloatSupplier" },
+      { "letter": "E", "text": "IntSupplier" },
+      { "letter": "F", "text": "StringSupplier" }
+    ]
+  },
+  {
+    "idx": 20,
+    "text": "What is the simplest way of rewriting this code?\n<pre>\nList&lt;Integer&gt; l = IntStream.range(1, 6)\n      .mapToObj(i -&gt; i).collect(Collectors.toList());\nl.forEach(System.out::println);\n</pre>",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "<pre>IntStream.range(1, 6);</pre>" },
+      { "letter": "B", "text": "<pre>IntStream.range(1, 6).forEach(System.out::println);</pre>" },
+      { "letter": "C", "text": "<pre>IntStream.range(1, 6).mapToObj(1 -&gt; i).forEach(System.out::println);</pre>" },
+      { "letter": "D", "text": "None of the above is equivalent." },
+      { "letter": "E", "text": "The provided code does not compile." }
+    ]
+  }
+]

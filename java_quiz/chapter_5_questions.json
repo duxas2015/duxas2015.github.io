@@ -1,0 +1,259 @@
+[
+  {
+    "idx": 1,
+    "text": "Which of the following creates valid locales, assuming that the language and country codes follow standard conventions? (Choose all that apply.) [cite: 63, 64]",
+    "select_type": "multiply",
+    "answers": [
+      { "letter": "A", "text": "<pre>new Locale(\"hi\");</pre>" },
+      { "letter": "B", "text": "<pre>new Locale(\"hi\", \"IN\");</pre>" },
+      { "letter": "C", "text": "<pre>new Locale(\"IN\");</pre>" },
+      { "letter": "D", "text": "<pre>new Locale(\"IN\", \"hi\");</pre>" },
+      { "letter": "E", "text": "<pre>Locale.create(\"hi\");</pre>" },
+      { "letter": "F", "text": "<pre>Locale.create(\"IN\");</pre> [cite: 65]" }
+    ]
+  },
+  {
+    "idx": 2,
+    "text": "Which of the following are common types to localize? (Choose all that apply.) [cite: 65, 66]",
+    "select_type": "multiply",
+    "answers": [
+      { "letter": "A", "text": "Booleans" },
+      { "letter": "B", "text": "Class names" },
+      { "letter": "C", "text": "Currency" },
+      { "letter": "D", "text": "Dates" },
+      { "letter": "E", "text": "Numbers" },
+      { "letter": "F", "text": "Variable names" }
+    ]
+  },
+  {
+    "idx": 3,
+    "text": "Which of the following are true? (Choose all that apply.) [cite: 66, 67]",
+    "select_type": "multiply",
+    "answers": [
+      { "letter": "A", "text": "All keys must be in the same resource bundle file to be used." },
+      { "letter": "B", "text": "All resource bundles defined as Java classes can be expressed using the property file format instead. [cite: 68]" },
+      { "letter": "C", "text": "All resource bundles defined as property files can be expressed using the Java class list bundle format instead. [cite: 69]" },
+      { "letter": "D", "text": "Changing the default locale lasts for only a single run of the program. [cite: 70]" },
+      { "letter": "E", "text": "It is forbidden to have both Props_en.java and Props_en.properties in the classpath of an application. [cite: 71]" }
+    ]
+  },
+  {
+    "idx": 4,
+    "text": "Assume that all bundles mentioned in the answers exist and define the same keys. Which one will be used to find the key in line 8? [cite: 72, 73]\n<pre>\n6: Locale.setDefault(new Locale(\"en\", \"US\"));\n7: ResourceBundle b = ResourceBundle.getBundle(\"Dolphins\");\n8: b.getString(\"name\");\n</pre> [cite: 74]",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "Dolphins.properties" },
+      { "letter": "B", "text": "Dolphins_en.java" },
+      { "letter": "C", "text": "Dolphins_en.properties" },
+      { "letter": "D", "text": "Whales.properties" },
+      { "letter": "E", "text": "Whales_en_US.properties" },
+      { "letter": "F", "text": "The code does not compile." }
+    ]
+  },
+  {
+    "idx": 5,
+    "text": "Suppose that we have the following property files and code. Which bundles are used on lines 8 and 9 respectively? [cite: 75]\n\n<b>Dolphins.properties</b>\nname=The Dolphin\nage=0\n\n<b>Dolphins_en.properties</b>\nname=Dolly\nage=4\n\n<b>Dolphins_fr.properties</b>\nname=Dolly [cite: 76]\n\n<pre>\n5: Locale fr = new Locale(\"fr\");\n6: Locale.setDefault(new Locale(\"en\", \"US\"));\n7: ResourceBundle b = ResourceBundle.getBundle(\"Dolphins\", fr);\n8: b.getString(\"name\");\n9: b.getString(\"age\");\n</pre> [cite: 76, 77]",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "Dolphins.properties and Dolphins.properties" },
+      { "letter": "B", "text": "Dolphins.properties and Dolphins_en.properties" },
+      { "letter": "C", "text": "Dolphins_en.properties and Dolphins_en.properties" },
+      { "letter": "D", "text": "Dolphins_fr.properties and Dolphins.properties" },
+      { "letter": "E", "text": "Dolphins_fr.properties and Dolphins_en.properties" },
+      { "letter": "F", "text": "The code does not compile." }
+    ]
+  },
+  {
+    "idx": 6,
+    "text": "Which of the following can be inserted into the blank to create a date of June 21, 2014? (Choose all that apply.) [cite: 78, 79]\n<pre>\nimport java.time.*;\npublic class StartOfSummer {\n  public static void main(String[] args) {\n    LocalDate date =\n  } }\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      { "letter": "A", "text": "<pre>new LocalDate(2014, 5, 21);</pre>" },
+      { "letter": "B", "text": "<pre>new LocalDate(2014, 6, 21);</pre> [cite: 80]" },
+      { "letter": "C", "text": "<pre>LocalDate.of(2014, 5, 21);</pre>" },
+      { "letter": "D", "text": "<pre>LocalDate.of(2014, 6, 21);</pre>" },
+      { "letter": "E", "text": "<pre>LocalDate.of(2014, Calendar.JUNE, 21);</pre>" },
+      { "letter": "F", "text": "<pre>LocalDate.of(2014, Month.JUNE, 21);</pre> [cite: 81]" }
+    ]
+  },
+  {
+    "idx": 7,
+    "text": "What is the output of the following code?\n<pre>\nLocalDate date = LocalDate.parse(\"2018–04–30\", DateTimeFormatter.ISO_LOCAL_DATE);\ndate.plusDays(2);\ndate.plusHours(3);\nSystem.out.println(date.getYear() + \" \" + date.getMonth() + \" \" + date.getDayOfMonth());\n</pre> [cite: 81, 82]",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "2018 APRIL 2" },
+      { "letter": "B", "text": "2018 APRIL 30" },
+      { "letter": "C", "text": "2018 MAY 2" },
+      { "letter": "D", "text": "The code does not compile." },
+      { "letter": "E", "text": "A runtime exception is thrown. [cite: 83]" }
+    ]
+  },
+  {
+    "idx": 8,
+    "text": "What is the output of the following code? [cite: 83]\n<pre>\nLocalDate date = LocalDate.of(2018, Month.APRIL, 40);\nSystem.out.println(date.getYear() + \" \" + date.getMonth() + \" \" + date.getDayOfMonth());\n</pre> [cite: 84]",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "2018 APRIL 4 [cite: 85]" },
+      { "letter": "B", "text": "2018 APRIL 30" },
+      { "letter": "C", "text": "2018 MAY 10" },
+      { "letter": "D", "text": "Another date" },
+      { "letter": "E", "text": "The code does not compile." },
+      { "letter": "F", "text": "A runtime exception is thrown. [cite: 86]" }
+    ]
+  },
+  {
+    "idx": 9,
+    "text": "What is the output of the following code? [cite: 86]\n<pre>\nLocalDate date = LocalDate.of(2018, Month.APRIL, 30);\ndate.plusDays(2);\ndate.plusYears(3);\nSystem.out.println(date.getYear() + \" \" + date.getMonth() + \" \" + date.getDayOfMonth());\n</pre> [cite: 87]",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "2018 APRIL 2 [cite: 88]" },
+      { "letter": "B", "text": "2018 APRIL 30" },
+      { "letter": "C", "text": "2018 MAY 2" },
+      { "letter": "D", "text": "2021 APRIL 2" },
+      { "letter": "E", "text": "2021 APRIL 30" },
+      { "letter": "F", "text": "2021 MAY 2" },
+      { "letter": "G", "text": "A runtime exception is thrown." }
+    ]
+  },
+  {
+    "idx": 10,
+    "text": "What is the output of the following code? [cite: 89]\n<pre>\nLocalDateTime d = LocalDateTime.of(2015, 5, 10, 11, 22, 33);\nPeriod p = Period.of(1, 2, 3);\nd = d.minus(p);\nDateTimeFormatter f = DateTimeFormatter.ofLocalizedTime(FormatStyle.SHORT);\nSystem.out.println(d.format(f));\n</pre> [cite: 90]",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "3/7/14 11:22 AM [cite: 91]" },
+      { "letter": "B", "text": "5/10/15 11:22 AM" },
+      { "letter": "C", "text": "3/7/14" },
+      { "letter": "D", "text": "5/10/15" },
+      { "letter": "E", "text": "11:22 AM" },
+      { "letter": "F", "text": "The code does not compile." },
+      { "letter": "G", "text": "A runtime exception is thrown. [cite: 92]" }
+    ]
+  },
+  {
+    "idx": 11,
+    "text": "What is the output of the following code? [cite: 92]\n<pre>\nLocalDateTime d = LocalDateTime.of(2015, 5, 10, 11, 22, 33);\nPeriod p = Period.ofDays(1).ofYears(2);\nd = d.minus(p);\nDateTimeFormatter f = DateTimeFormatter.ofLocalizedDateTime(FormatStyle.SHORT);\nSystem.out.println(f.format(d));\n</pre> [cite: 93, 94]",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "5/9/13 11:22 AM" },
+      { "letter": "B", "text": "5/10/13 11:22 AM" },
+      { "letter": "C", "text": "5/9/14" },
+      { "letter": "D", "text": "5/10/14" },
+      { "letter": "E", "text": "The code does not compile." },
+      { "letter": "G", "text": "A runtime exception is thrown. [cite: 95]" }
+    ]
+  },
+  {
+    "idx": 12,
+    "text": "Which of the answer choices is true given the following code? (Choose all that apply.) [cite: 95, 96]\n<pre>\n2016–08–28T05:00 GMT-04:00\n2016–08–28T09:00 GMT-06:00\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      { "letter": "A", "text": "The first date/time is earlier." },
+      { "letter": "B", "text": "The second date/time is earlier." },
+      { "letter": "C", "text": "Both date/times are the same. [cite: 97]" },
+      { "letter": "D", "text": "The date/times are 2 hours apart." },
+      { "letter": "E", "text": "The date/times are 6 hours apart." },
+      { "letter": "F", "text": "The date/times are 10 hours apart. [cite: 98]" }
+    ]
+  },
+  {
+    "idx": 13,
+    "text": "Note that March 13, 2016, is the weekend that clocks spring ahead for daylight savings time. What is the output of the following? [cite: 98, 99]\n<pre>\nLocalDate date = LocalDate.of(2016, Month.MARCH, 13);\nLocalTime time = LocalTime.of(1, 30);\nZoneId zone = ZoneId.of(\"US/Eastern\");\nZonedDateTime dateTime1 = ZonedDateTime.of(date, time, zone);\nZonedDateTime dateTime2 = dateTime1.plus(1, ChronoUnit.HOURS);\nlong hours = ChronoUnit.HOURS.between(dateTime1, dateTime2);\nint clock1 = dateTime1.getHour();\nint clock2 = dateTime2.getHour();\nSystem.out.println(hours + \",\" + clock1 + \",\" + clock2);\n</pre> [cite: 100, 101]",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "1,1,2 [cite: 102]" },
+      { "letter": "B", "text": "1,1,3" },
+      { "letter": "C", "text": "2,1,2" },
+      { "letter": "D", "text": "2,1,3" },
+      { "letter": "E", "text": "The code does not compile." },
+      { "letter": "F", "text": "A runtime exception is thrown." }
+    ]
+  },
+  {
+    "idx": 14,
+    "text": "Note that March 13, 2016, is the weekend that we spring forward, and November 6, 2016, is when we fall back for daylight savings time. Which of the following can fill in the blank without the code throwing an exception? [cite: 103, 104]\n<pre>\nZoneId zone = ZoneId.of(\"US/Eastern\");\nLocalDate date = ;\nLocalTime time1 = LocalTime.of(2, 15);\nZonedDateTime a = ZonedDateTime.of(date4, time1, zone);\n</pre> [cite: 105]",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "<pre>LocalDate.of(2016, 3, 13)</pre> [cite: 106]" },
+      { "letter": "B", "text": "<pre>LocalDate.of(2016, 3, 40)</pre>" },
+      { "letter": "C", "text": "<pre>LocalDate.of(2016, 11, 6)</pre>" },
+      { "letter": "D", "text": "<pre>LocalDate.of(2016, 11, 7)</pre>" },
+      { "letter": "E", "text": "<pre>LocalDate.of(2017, 2, 29)</pre>" }
+    ]
+  },
+  {
+    "idx": 15,
+    "text": "Given the following code, which of the answer choices can fill in the blank to print true? (Choose all that apply.) [cite: 106, 107]\n<pre>\nString m1 = Duration.of(1, ChronoUnit.MINUTES).toString();\nString m2 = Duration.ofMinutes(1).toString();\nString s = Duration.of(60, ChronoUnit.SECONDS).toString();\nString d = Duration.ofDays(1).toString();\nString p = Period.ofDays(1).toString();\nSystem.out.println( );\n</pre> [cite: 108]",
+    "select_type": "multiply",
+    "answers": [
+      { "letter": "A", "text": "<pre>m1 == m2</pre> [cite: 109]" },
+      { "letter": "B", "text": "<pre>m1.equals(m2)</pre>" },
+      { "letter": "C", "text": "<pre>m1.equals(s)</pre>" },
+      { "letter": "D", "text": "<pre>d == p</pre>" },
+      { "letter": "E", "text": "<pre>d.equals(p)</pre>" }
+    ]
+  },
+  {
+    "idx": 16,
+    "text": "Given the following, which answers can correctly fill in the blank? (Choose all that apply.) [cite: 109, 110]\n<pre>\nLocalDate date = LocalDate.now();\nLocalTime time = LocalTime.now();\nLocalDateTime dateTime = LocalDateTime.now();\nZoneId zoneId = ZoneId.systemDefault();\nZonedDateTime zonedDateTime = ZonedDateTime.of(dateTime, zoneId);\nlong epochSeconds = 0;\nInstant instant = ;\n</pre> [cite: 111]",
+    "select_type": "multiply",
+    "answers": [
+      { "letter": "A", "text": "<pre>Instant.now()</pre> [cite: 112]" },
+      { "letter": "B", "text": "<pre>Instant.ofEpochSecond(epochSeconds)</pre>" },
+      { "letter": "C", "text": "<pre>date.toInstant()</pre>" },
+      { "letter": "D", "text": "<pre>dateTime.toInstant()</pre>" },
+      { "letter": "E", "text": "<pre>time.toInstant()</pre>" },
+      { "letter": "F", "text": "<pre>zonedDateTime.toInstant()</pre>" }
+    ]
+  },
+  {
+    "idx": 17,
+    "text": "What is the output of the following method if props contains {veggies=brontosaurus, meat=velociraptor}? [cite: 112]\n<pre>\nprivate static void print(Properties props) {\n  System.out.println(props.get(\"veggies\", \"none\")\n    + \" \" + props.get(\"omni\", \"none\"));\n}\n</pre> [cite: 113, 114]",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "brontosaurus none" },
+      { "letter": "B", "text": "brontosaurus null" },
+      { "letter": "C", "text": "none none" },
+      { "letter": "D", "text": "none null" },
+      { "letter": "E", "text": "The code does not compile." },
+      { "letter": "F", "text": "A runtime exception is thrown." }
+    ]
+  },
+  {
+    "idx": 18,
+    "text": "Which of the following prints out all of the values in props? [cite: 115]",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "<pre>props.keys().stream().map(k -&gt; k .forEach(System.out::println);</pre> [cite: 116]" },
+      { "letter": "B", "text": "<pre>props.keys().stream().map(k -&gt; props.get(k)).forEach(System.out::println);</pre>" },
+      { "letter": "C", "text": "<pre>props.keySet().stream().map(k -&gt; k) .forEach(System.out::println);</pre>" },
+      { "letter": "D", "text": "<pre>props.keySet().stream().map(k -&gt; props.get(k)).forEach(System.out::println);</pre>" },
+      { "letter": "E", "text": "<pre>props.stream().map(k -&gt; k) .forEach(System.out::println);</pre>" },
+      { "letter": "F", "text": "<pre>props.stream().map(k -&gt; props.get(k)) .forEach(System.out::println);</pre>" }
+    ]
+  },
+  {
+    "idx": 19,
+    "text": "Which of the following are stored in a Period object? (Choose all that apply.)",
+    "select_type": "multiply",
+    "answers": [
+      { "letter": "A", "text": "Year" },
+      { "letter": "B", "text": "Month" },
+      { "letter": "C", "text": "Day" },
+      { "letter": "D", "text": "Hour" },
+      { "letter": "E", "text": "Minute" },
+      { "letter": "F", "text": "Second" }
+    ]
+  },
+  {
+    "idx": 20,
+    "text": "Which of the following objects could contain the information “eastern standard time”? (Choose all that apply.)",
+    "select_type": "multiply",
+    "answers": [
+      { "letter": "A", "text": "Instant" },
+      { "letter": "B", "text": "LocalDate" },
+      { "letter": "C", "text": "LocalDateTime" },
+      { "letter": "D", "text": "LocalTime" },
+      { "letter": "E", "text": "ZonedDateTime" }
+    ]
+  }
+]

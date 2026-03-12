@@ -1,0 +1,142 @@
+[
+  {
+    "idx": 1,
+    "correct": {
+      "letter": ["D"],
+      "description": "No terminal operation is called, so the stream never executes[cite: 1]. The methods chain to create a stream that would contain “2” and “12.” The first line creates an infinite stream[cite: 2]. The second line would get the first two elements from that infinite stream and map each element to add an extra character[cite: 3]."
+    }
+  },
+  {
+    "idx": 2,
+    "correct": {
+      "letter": ["F"],
+      "description": "b1 is set to true since anyMatch() terminates[cite: 4]. Even though the stream is infinite, Java finds a match on the first element and stops looking[cite: 5]. However, when allMatch() runs, it needs to keep going until the end of the stream since it keeps finding matches[cite: 6]. Since all elements continue to match, the program hangs[cite: 7]."
+    }
+  },
+  {
+    "idx": 3,
+    "correct": {
+      "letter": ["E"],
+      "description": "An infinite stream is generated where each element is twice as long as the previous one [cite: 7]. b1 is set to false because Java finds an element that doesn’t match when it gets to the element of length 4. However, the next line tries to operate on the same stream[cite: 8]. Since streams can be used only once, this throws an exception that the “stream has already been operated upon or closed”[cite: 9]. If two different streams were used, the result would be option A[cite: 10]."
+    }
+  },
+  {
+    "idx": 4,
+    "correct": {
+      "letter": ["A", "B"],
+      "description": "Terminal operations are the final step in a stream pipeline[cite: 10]. Exactly one is required, because it triggers the execution of the entire stream pipeline. Therefore, options A and B are correct[cite: 11]. Options C and F are true of intermediate operations rather than terminal operations. Option E is never true[cite: 12]. Once a stream pipeline is run, the Stream is marked invalid[cite: 13]."
+    }
+  },
+  {
+    "idx": 5,
+    "correct": {
+      "letter": ["A", "B"],
+      "description": "Options D and E are incorrect because they are intermediate operations and not terminal operations[cite: 14]. While option F is a reduction, it is incorrect because it is available only on primitive streams such as IntStream[cite: 15]. Option C is incorrect because it is not a reduction—it does not look at each element in the stream[cite: 16]."
+    }
+  },
+  {
+    "idx": 6,
+    "correct": {
+      "letter": ["A"],
+      "description": "Options C and D are incorrect because these methods do not take a Predicate parameter and do not return a boolean[cite: 17]. Options B and E are incorrect because they cause the code to run infinitely[cite: 18]. The stream has no way to know that a match won’t show up later[cite: 19]. Option A is correct because it is safe to return false as soon as one element passes through the stream that doesn’t match[cite: 20]."
+    }
+  },
+  {
+    "idx": 7,
+    "correct": {
+      "letter": ["F"],
+      "description": "The sorted() method is used in a stream pipeline to return a sorted Stream[cite: 21]. A collector is needed to turn the stream back into a List. The collect() method takes the desired collector[cite: 22]."
+    }
+  },
+  {
+    "idx": 8,
+    "correct": {
+      "letter": ["D", "E"],
+      "description": "The sum() method returns an int rather than an OptionalInt because the sum of an empty list is zero[cite: 23]. Therefore, option E is correct. The findAny() method returns an OptionalInt because there might not be any elements to find[cite: 24]. Therefore, option D is correct. The average() method returns an OptionalDouble since averages of any type can result in a fraction[cite: 25]. Therefore, options A and B are both incorrect[cite: 26]."
+    }
+  },
+  {
+    "idx": 9,
+    "correct": {
+      "letter": ["B", "D"],
+      "description": "Option A would work for a regular Stream[cite: 26]. However, we have a LongStream and therefore need to call getAsLong()[cite: 27]. Option C is missing the :: that would make it a method reference. Therefore, options B and D are correct[cite: 28]."
+    }
+  },
+  {
+    "idx": 10,
+    "correct": {
+      "letter": ["F"],
+      "description": "The terminal operation must be right before the semicolon, which is line M. Remember that forEach() is a terminal operation while peek() is an intermediate operation[cite: 29]. This eliminates all but choices C, E, and F. Choice E is incorrect because there is no limit() operation, which means that the code would run infinitely[cite: 30]. Choice C is incorrect because filter() is called before limit(). No elements make it through the filter, so the code also runs infinitely[cite: 31]. Choice F is correct[cite: 32]."
+    }
+  },
+  {
+    "idx": 11,
+    "correct": {
+      "letter": ["B", "C", "E"],
+      "description": "As written, the code doesn’t compile because the collector expects to get a String immediately before it in the chain[cite: 32]. Option B fixes this, at which point nothing is output because the collector creates a String[cite: 33]. Option E fixes this and causes the output to be 11111. Since the post-increment operator is used, the stream contains an infinite number of 1s[cite: 34]. Option C fixes this and causes the stream to contain increasing numbers[cite: 35]."
+    }
+  },
+  {
+    "idx": 12,
+    "correct": {
+      "letter": ["A", "F", "G"],
+      "description": "Line 6 doesn’t take any parameters, and it returns a String, making it a Supplier[cite: 36]. Another clue is that it uses a constructor reference, which should scream Supplier! This makes choice F correct[cite: 37]. Line 7 takes two parameters, and it doesn’t return anything making it a BiConsumer[cite: 38]. The print statement should also be a clue that we are dealing with a Consumer or BiConsumer[cite: 39]. This makes choice A correct. Choices C and D are there to mislead you; these interfaces don’t actually exist[cite: 40]. BinaryOperator spells out binary. The other functional interfaces use the prefix Bi[cite: 41]. Finally, line 8 takes a single parameter, and it returns the same type, which is a UnaryOperator[cite: 42]. Since the types are the same, only one generic is needed, making choice G correct[cite: 43]."
+    }
+  },
+  {
+    "idx": 13,
+    "correct": {
+      "letter": ["F"],
+      "description": "If the map() and flatMap() calls were reversed, choice B would be correct[cite: 44]. In this case, the Stream created from the source is of type Stream<List<Integer>>[cite: 45]. The Function in map expects an Integer rather than a List<Integer>, so the code does not compile[cite: 46]."
+    }
+  },
+  {
+    "idx": 14,
+    "correct": {
+      "letter": ["D"],
+      "description": "Line 4 should obviously look OK. It creates a Stream and uses autoboxing to put the Integer 1 inside[cite: 47]. Line 5 converts to a primitive, again using autoboxing. Line 6 converts to a double primitive, which works since double d = 1; [cite: 48] would work. Line 7 is where it all falls apart. Converting from a double to an int would require a cast inside the lambda[cite: 49]."
+    }
+  },
+  {
+    "idx": 15,
+    "correct": {
+      "letter": ["D", "E"],
+      "description": "Choices A and B do not compile, because they are invalid generic declarations[cite: 50]. Primitives are not allowed as generics, and Map must have two generic types[cite: 51]. Choice C is incorrect because partitioning only gives a Boolean key[cite: 52]. Choices D and E are correct because the result Collection can be customized[cite: 53]."
+    }
+  },
+  {
+    "idx": 16,
+    "correct": {
+      "letter": ["C"],
+      "description": "The partitioningBy() operation always returns a map with two Boolean keys, even if there are no corresponding values[cite: 54]. By contrast, groupingBy() returns only keys that are actually needed[cite: 55]."
+    }
+  },
+  {
+    "idx": 17,
+    "correct": {
+      "letter": ["E"],
+      "description": "A UnaryOperator is a special type of function where the parameter and return type are the same[cite: 55]. Therefore, option E is correct. Notice that other options don’t even compile because they have the wrong number of generic types for the functional interface provided[cite: 56]."
+    }
+  },
+  {
+    "idx": 18,
+    "correct": {
+      "letter": ["D"],
+      "description": "The terminal operation is count(). Since there is a terminal operation, the intermediate operations run[cite: 57]. The peek() operation comes before the filter, so both numbers are printed[cite: 58]. The count happens to be 1 since the other number is filtered[cite: 59]. However, the result of the stream pipeline isn’t stored in a variable, and that result is ignored[cite: 60]."
+    }
+  },
+  {
+    "idx": 19,
+    "correct": {
+      "letter": ["A", "C", "E"],
+      "description": "The three common types of double, int and, long have dedicated supplier classes[cite: 61]. The only primitive functional interface that does not involve one of those three types is BooleanSupplier[cite: 62]."
+    }
+  },
+  {
+    "idx": 20,
+    "correct": {
+      "letter": ["B"],
+      "description": "Both lists and streams have forEach() methods. There is no reason to collect into a list just to loop through it[cite: 63]."
+    }
+  }
+]

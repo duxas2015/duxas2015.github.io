@@ -1,0 +1,326 @@
+[
+  {
+    "idx": 1,
+    "text": "Suppose that you have a collection of products for sale in a database and you need to display those products. The products are not unique. Which of the following collections classes in the java.util package best suit your needs for this scenario?",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "Arrays" },
+      { "letter": "B", "text": "ArrayList" },
+      { "letter": "C", "text": "HashMap" },
+      { "letter": "D", "text": "HashSet" },
+      { "letter": "E", "text": "LinkedList" }
+    ]
+  },
+  {
+    "idx": 2,
+    "text": "Suppose that you need to work with a collection of elements that need to be sorted in their natural order, and each element has a unique string associated with its value. Which of the following collections classes in the java.util package best suit your needs for this scenario?",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "ArrayList" },
+      { "letter": "B", "text": "HashMap" },
+      { "letter": "C", "text": "HashSet" },
+      { "letter": "D", "text": "TreeMap" },
+      { "letter": "E", "text": "TreeSet" },
+      { "letter": "F", "text": "Vector" }
+    ]
+  },
+  {
+    "idx": 3,
+    "text": "What is the result of the following statements?\n<pre>\n3: List list = new ArrayList();\n4: list.add(\"one\");\n5: list.add(\"two\");\n6: list.add(7);\n7: for (String s: list)\n8: System.out.print(s);\n</pre>",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "onetwo" },
+      { "letter": "B", "text": "onetwo7" },
+      { "letter": "C", "text": "onetwo followed by an exception" },
+      { "letter": "D", "text": "Compiler error on line 6" },
+      { "letter": "E", "text": "Compiler error on line 7" }
+    ]
+  },
+  {
+    "idx": 4,
+    "text": "What is the result of the following statements?\n<pre>\n3: ArrayDeque&lt;String&gt; greetings = new ArrayDeque&lt;String&gt;();\n4: greetings.push(\"hello\");\n5: greetings.push(\"hi\");\n6: greetings.push(\"ola\");\n7: greetings.pop();\n8: greetings.peek();\n9: while (greetings.peek() != null)\n10: System.out.print(greetings.pop());\n</pre>",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "hello" },
+      { "letter": "B", "text": "hellohi" },
+      { "letter": "C", "text": "hellohiola" },
+      { "letter": "D", "text": "hi" },
+      { "letter": "E", "text": "hihello" },
+      { "letter": "F", "text": "The code does not compile." },
+      { "letter": "G", "text": "An exception is thrown." }
+    ]
+  },
+  {
+    "idx": 5,
+    "text": "Which of these statements compile? (Choose all that apply.)",
+    "select_type": "multiply",
+    "answers": [
+      { "letter": "A", "text": "<pre>HashSet&lt;Number&gt; hs = new HashSet&lt;Integer&gt;();</pre>" },
+      { "letter": "B", "text": "<pre>HashSet&lt;? super ClassCastException&gt; set = new HashSet&lt;Exception&gt;();</pre>" },
+      { "letter": "C", "text": "<pre>List&lt;String&gt; list = new Vector&lt;String&gt;();</pre>" },
+      { "letter": "D", "text": "<pre>List&lt;Object&gt; values = new HashSet&lt;Object&gt;();</pre>" },
+      { "letter": "E", "text": "<pre>List&lt;Object&gt; objects = new ArrayList&lt;? extends Object&gt;();</pre>" },
+      { "letter": "F", "text": "<pre>Map&lt;String, ? extends Number&gt; hm = new HashMap&lt;String, Integer&gt;();</pre>" }
+    ]
+  },
+  {
+    "idx": 6,
+    "text": "What is the result of the following code?\n<pre>\n1: public class Hello&lt;T&gt; {\n2:   T t;\n3:   public Hello(T t) { this.t = t; }\n4:   public String toString() { return t.toString(); }\n5:   public static void main(String[] args) {\n6:     System.out.print(new Hello&lt;String&gt;(\"hi\"));\n7:     System.out.print(new Hello(\"there\"));\n8:   } }\n</pre>",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "hi" },
+      { "letter": "B", "text": "hi followed by a runtime exception" },
+      { "letter": "C", "text": "hithere" },
+      { "letter": "D", "text": "Compiler error on line 4" },
+      { "letter": "E", "text": "Compiler error on line 6" },
+      { "letter": "F", "text": "Compiler error on line 7" }
+    ]
+  },
+  {
+    "idx": 7,
+    "text": "Which of the following statements are true? (Select two.)\n<pre>\n3: Set&lt;Number&gt; numbers = new HashSet&lt;&gt;();\n4: numbers.add(new Integer(86));\n5: numbers.add(75);\n6: numbers.add(new Integer(86));\n7: numbers.add(null);\n8: numbers.add(309L);\n9: Iterator iter = numbers.iterator();\n10: while (iter.hasNext())\n11: System.out.print(iter.next());\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      { "letter": "A", "text": "The code compiles successfully." },
+      { "letter": "B", "text": "The output is 8675null309." },
+      { "letter": "C", "text": "The output is 867586null309." },
+      { "letter": "D", "text": "The output is indeterminate." },
+      { "letter": "E", "text": "There is a compiler error on line 3." },
+      { "letter": "F", "text": "There is a compiler error on line 9." },
+      { "letter": "G", "text": "An exception is thrown." }
+    ]
+  },
+  {
+    "idx": 8,
+    "text": "What is the result of the following code?\n<pre>\nTreeSet&lt;String&gt; tree = new TreeSet&lt;String&gt;();\ntree.add(\"one\");\ntree.add(\"One\");\ntree.add(\"ONE\");\nSystem.out.println(tree.ceiling(\"On\"));\n</pre>",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "On" },
+      { "letter": "B", "text": "one" },
+      { "letter": "C", "text": "One" },
+      { "letter": "D", "text": "ONE" },
+      { "letter": "E", "text": "The code does not compile." },
+      { "letter": "F", "text": "An exception is thrown." }
+    ]
+  },
+  {
+    "idx": 9,
+    "text": "Which of the answer choices are valid given the following declaration?\n<pre>Map&lt;String, Double&gt; map = new HashMap&lt;&gt;();</pre>",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "<pre>map.add(\"pi\", 3.14159);</pre>" },
+      { "letter": "B", "text": "<pre>map.add(\"e\", 2L);</pre>" },
+      { "letter": "C", "text": "<pre>map.add(\"log(1)\", new Double(0.0));</pre>" },
+      { "letter": "D", "text": "<pre>map.add('x', new Double(123.4));</pre>" },
+      { "letter": "E", "text": "None of the above" }
+    ]
+  },
+  {
+    "idx": 10,
+    "text": "What is the result of the following program?\n<pre>\nimport java.util.*;\npublic class MyComparator implements Comparator&lt;String&gt; {\n  public int compare(String a, String b) {\n    return b.toLowerCase().compareTo(a.toLowerCase());\n  }\n  public static void main(String[] args) {\n    String[] values = { \"123\", \"Abb\", \"aab\" };\n    Arrays.sort(values, new MyComparator());\n    for (String s: values)\n      System.out.print(s + \" \");\n  }\n}\n</pre>",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "Abb aab 123" },
+      { "letter": "B", "text": "aab Abb 123" },
+      { "letter": "C", "text": "123 Abb aab" },
+      { "letter": "D", "text": "123 aab Abb" },
+      { "letter": "E", "text": "The code does not compile." },
+      { "letter": "F", "text": "A runtime exception is thrown." }
+    ]
+  },
+  {
+    "idx": 11,
+    "text": "What is the result of the following code?\n<pre>\n3: Map&lt;Integer, Integer&gt; map = new HashMap&lt;&gt;(10);\n4: for (int i = 1; i &lt;= 10; i++) {\n5:   map.put(i, i * i);\n6: }\n7: System.out.println(map.get(4));\n</pre>",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "16" },
+      { "letter": "B", "text": "25" },
+      { "letter": "C", "text": "Compiler error on line 3." },
+      { "letter": "D", "text": "Compiler error on line 5." },
+      { "letter": "E", "text": "Compiler error on line 7." },
+      { "letter": "F", "text": "A runtime exception is thrown." }
+    ]
+  },
+  {
+    "idx": 12,
+    "text": "Which of these statements can fill in the blank so that the Helper class compiles successfully? (Choose all that apply.)\n<pre>\n3: public class Helper {\n4:   public static &lt;U extends Exception&gt; void printException(U u) {\n5:     System.out.println(u.getMessage());\n6:   }\n7:   public static void main(String[] args) {\n8:     __________________________________\n9:   } }\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      { "letter": "A", "text": "<pre>Helper.printException(new FileNotFoundException(\"A\"));</pre>" },
+      { "letter": "B", "text": "<pre>Helper.printException(new Exception(\"B\"));</pre>" },
+      { "letter": "C", "text": "<pre>Helper.&lt;Throwable&gt;printException(new Exception(\"C\"));</pre>" },
+      { "letter": "D", "text": "<pre>Helper.&lt;NullPointerException&gt;printException(new NullPointerException(\"D\"));</pre>" },
+      { "letter": "E", "text": "<pre>Helper.printException(new Throwable(\"E\"));</pre>" }
+    ]
+  },
+  {
+    "idx": 13,
+    "text": "Which of these statements can fill in the blank so that the Wildcard class compiles successfully? (Choose all that apply.)\n<pre>\nimport java.util.*;\npublic class Wildcard {\n  public void showSize(List&lt;?&gt; list) {\n    System.out.println(list.size());\n  }\n  public static void main(String[] args) {\n    Wildcard card = new Wildcard();\n    ____________________________________\n    card.showSize(list);\n  } }\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      { "letter": "A", "text": "<pre>ArrayDeque&lt;?&gt; list = new ArrayDeque&lt;String&gt;();</pre>" },
+      { "letter": "B", "text": "<pre>ArrayList&lt;? super Date&gt; list = new ArrayList&lt;Date&gt;();</pre>" },
+      { "letter": "C", "text": "<pre>List&lt;?&gt; list = new ArrayList&lt;?&gt;();</pre>" },
+      { "letter": "D", "text": "<pre>List&lt;Exception&gt; list = new LinkedList&lt;java.io.IOException&gt;();</pre>" },
+      { "letter": "E", "text": "<pre>Vector&lt;? extends Number&gt; list = new Vector&lt;Integer&gt;();</pre>" },
+      { "letter": "F", "text": "None of the above" }
+    ]
+  },
+  {
+    "idx": 14,
+    "text": "What is the result of the following program?\n<pre>\nimport java.util.*;\npublic class Sorted implements Comparable&lt;Sorted&gt;, Comparator&lt;Sorted&gt; {\n  private int num;\n  private String text;\n  Sorted(int n, String t) {\n    this.num = n;\n    this.text = t;\n  }\n  public String toString() { return \"\" + num; }\n  public int compareTo(Sorted s) { return text.compareTo(s.text); }\n  public int compare(Sorted s1, Sorted s2) { return s1.num – s2.num; }\n  public static void main(String[] args) {\n    Sorted s1 = new Sorted(88, \"a\");\n    Sorted s2 = new Sorted(55, \"b\");\n    TreeSet&lt;Sorted&gt; t1 = new TreeSet&lt;&gt;();\n    t1.add(s1); t1.add(s2);\n    TreeSet&lt;Sorted&gt; t2 = new TreeSet&lt;&gt;(s1);\n    t2.add(s1); t2.add(s2);\n    System.out.println(t1 + \" \" + t2);\n  } }\n</pre>",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "[55. 88] [55, 88]" },
+      { "letter": "B", "text": "[55. 88] [88, 55]" },
+      { "letter": "C", "text": "[88. 55] [55, 88]" },
+      { "letter": "D", "text": "[88. 55] [88, 55]" },
+      { "letter": "E", "text": "The code does not compile." },
+      { "letter": "F", "text": "A runtime exception is thrown." }
+    ]
+  },
+  {
+    "idx": 15,
+    "text": "What is the result of the following code?\n<pre>\nComparator&lt;Integer&gt; c = (o1, o2) -&gt; o2—o1;\nList&lt;Integer&gt; list = Arrays.asList(5, 4, 7, 1);\nCollections.sort(list, c);\nSystem.out.println(Collections.binarySearch(list, 1));\n</pre>",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "0" },
+      { "letter": "B", "text": "1" },
+      { "letter": "C", "text": "2" },
+      { "letter": "D", "text": "The result is undefined." },
+      { "letter": "E", "text": "The code does not compile." },
+      { "letter": "F", "text": "A runtime exception is thrown." }
+    ]
+  },
+  {
+    "idx": 16,
+    "text": "Which of the following statements are true? (Choose all that apply.)",
+    "select_type": "multiply",
+    "answers": [
+      { "letter": "A", "text": "Comparable is in the java.util package." },
+      { "letter": "B", "text": "Comparator is in the java.util package." },
+      { "letter": "C", "text": "compare() is in the Comparable interface." },
+      { "letter": "D", "text": "compare() is in the Comparator interface." },
+      { "letter": "E", "text": "compare() takes one method parameter." },
+      { "letter": "F", "text": "compare() takes two method parameters." }
+    ]
+  },
+  {
+    "idx": 17,
+    "text": "Which two options can fill in the blanks to make this code compile? (Choose all that apply.)\n<pre>\n1: public class Generic________ {\n2:   public static void main(String[] args) {\n3:     Generic&lt;String&gt; g = new Generic_______();\n4:     Generic&lt;Object&gt; g2 = new Generic();\n5:   }\n6: }\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      { "letter": "A", "text": "On line 1, fill in with <>." },
+      { "letter": "B", "text": "On line 1, fill in with <T>." },
+      { "letter": "C", "text": "On line 1, fill in with <?>." },
+      { "letter": "D", "text": "On line 3, fill in with <>." },
+      { "letter": "E", "text": "On line 3, fill in with <T>." },
+      { "letter": "F", "text": "On line 3, fill in with <?>." }
+    ]
+  },
+  {
+    "idx": 18,
+    "text": "Which of the following lines can be inserted to make the code compile? (Choose all that apply.)\n<pre>\nclass A {}\nclass B extends A {}\nclass C extends B {}\nclass D&lt;C&gt; {\n  // INSERT CODE HERE\n}\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      { "letter": "A", "text": "<pre>A a1 = new A();</pre>" },
+      { "letter": "B", "text": "<pre>A a2 = new B();</pre>" },
+      { "letter": "C", "text": "<pre>A a3 = new C();</pre>" },
+      { "letter": "D", "text": "<pre>C c1 = new A();</pre>" },
+      { "letter": "E", "text": "<pre>C c2 = new B();</pre>" },
+      { "letter": "F", "text": "<pre>C c1 = new C();</pre>" }
+    ]
+  },
+  {
+    "idx": 19,
+    "text": "Which options are true of the following code? (Choose all that apply.)\n<pre>\n3: ______________&lt;Integer&gt; q = new LinkedList&lt;&gt;();\n4: q.add(10);\n5: q.add(12);\n6: q.remove(1);\n7: System.out.print(q);\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      { "letter": "A", "text": "If we fill in the blank with List, the output is [10]." },
+      { "letter": "B", "text": "If we fill in the blank with List, the output is [10, 12]." },
+      { "letter": "C", "text": "If we fill in the blank with Queue, the output is [10]." },
+      { "letter": "D", "text": "If we fill in the blank with Queue, the output is [10, 12]." },
+      { "letter": "E", "text": "The code does not compile in either scenario." },
+      { "letter": "F", "text": "A runtime exception is thrown." }
+    ]
+  },
+  {
+    "idx": 20,
+    "text": "What is the result of the following code?\n<pre>\n4: Map m = new HashMap();\n5: m.put(123, \"456\");\n6: m.put(\"abc\", \"def\");\n7: System.out.println(m.contains(\"123\"));\n</pre>",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "false" },
+      { "letter": "B", "text": "true" },
+      { "letter": "C", "text": "Compiler error on line 4." },
+      { "letter": "D", "text": "Compiler error on line 5." },
+      { "letter": "E", "text": "Compiler error on line 7." },
+      { "letter": "F", "text": "A runtime exception is thrown." }
+    ]
+  },
+  {
+    "idx": 21,
+    "text": "Fill in the blanks to make this code compile and print 123. (Choose all that apply.)\n<pre>\n4: List&lt;String&gt; list = Arrays.asList(\"1\", \"2\", \"3\");\n5: Iterator iter = list.iterator();\n6: while(iter.__________())\n7:   System.out.print(iter._________());\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      { "letter": "A", "text": "On line 6, fill in the blank with hasNext()." },
+      { "letter": "B", "text": "On line 6, fill in the blank with isNext()." },
+      { "letter": "C", "text": "On line 6, fill in the blank with next()." },
+      { "letter": "D", "text": "On line 7, fill in the blank with getNext()." },
+      { "letter": "E", "text": "On line 7, fill in the blank with hasNext()." },
+      { "letter": "F", "text": "On line 7, fill in the blank with next()." }
+    ]
+  },
+  {
+    "idx": 22,
+    "text": "What code change is needed to make the method compile?\n<pre>\npublic static T identity(T t) {\n  return t;\n}\n</pre>",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "Add <T> after the public keyword." },
+      { "letter": "B", "text": "Add <T> after the static keyword." },
+      { "letter": "C", "text": "Add <T> after T." },
+      { "letter": "D", "text": "Add <?> after the public keyword." },
+      { "letter": "E", "text": "Add <?> after the static keyword." },
+      { "letter": "F", "text": "No change required. The code already compiles." }
+    ]
+  },
+  {
+    "idx": 23,
+    "text": "Which of the answer choices make sense to implement with a lambda? (Choose all that apply.)",
+    "select_type": "multiply",
+    "answers": [
+      { "letter": "A", "text": "Comparable interface" },
+      { "letter": "B", "text": "Comparator interface" },
+      { "letter": "C", "text": "remove method on a Collection" },
+      { "letter": "D", "text": "removeAll method on a Collection" },
+      { "letter": "E", "text": "removeIf method on a Collection" }
+    ]
+  },
+  {
+    "idx": 24,
+    "text": "Which of the following compiles and print outs the entire set? (Choose all that apply.)\n<pre>\nSet&lt;String&gt; s = new HashSet&lt;&gt;();\ns.add(\"lion\");\ns.add(\"tiger\");\ns.add(\"bear\");\ns.forEach( );\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      { "letter": "A", "text": "<pre>() -&gt; System.out.println(s)</pre>" },
+      { "letter": "B", "text": "<pre>s -&gt; System.out.println(s)</pre>" },
+      { "letter": "C", "text": "<pre>(s) -&gt; System.out.println(s)</pre>" },
+      { "letter": "D", "text": "<pre>System.out.println(s)</pre>" },
+      { "letter": "E", "text": "<pre>System::out::println</pre>" },
+      { "letter": "F", "text": "<pre>System.out::println</pre>" }
+    ]
+  },
+  {
+    "idx": 25,
+    "text": "What is the result of the following?\n<pre>\nMap&lt;Integer, Integer&gt; map = new HashMap&lt;&gt;();\nmap.put(1, 10);\nmap.put(2, 20);\nmap.put(3, null);\nmap.merge(1, 3, (a,b) -&gt; a + b);\nmap.merge(3, 3, (a,b) -&gt; a + b);\nSystem.out.println(map);\n</pre>",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "{1=10, 2=20}" },
+      { "letter": "B", "text": "{1=10, 2=20, 3=null}" },
+      { "letter": "C", "text": "{1=10, 2=20, 3=3}" },
+      { "letter": "D", "text": "{1=13, 2=20}" },
+      { "letter": "E", "text": "{1=13, 2=20, 3=null}" },
+      { "letter": "F", "text": "{1=13, 2=20, 3=3}" },
+      { "letter": "G", "text": "The code does not compile." },
+      { "letter": "H", "text": "An exception is thrown." }
+    ]
+  }
+]
