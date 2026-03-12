@@ -1,5 +1,6 @@
 <?php
-$db = new mysqli("localhost", "subtitle", "Subtitle@2026", "subtitle");
+require_once 'db_config.php';
+$db = getDbConnection();
 $m_code = $_GET['movie_code'] ?? '';
 $series = isset($_GET['series']) ? (int)$_GET['series'] : 0;
 $episode = isset($_GET['episode']) ? (int)$_GET['episode'] : 0;

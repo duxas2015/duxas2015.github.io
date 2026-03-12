@@ -1,6 +1,7 @@
 <?php
 header('Content-Type: application/json');
-$db = new mysqli("localhost", "subtitle", "Subtitle@2026", "subtitle");
+require_once 'db_config.php';
+$db = getDbConnection();
 $data = json_decode(file_get_contents('php://input'), true);
 
 if (!$data || !isset($data['id'])) {

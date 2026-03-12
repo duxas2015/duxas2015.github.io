@@ -1,7 +1,7 @@
 <?php
 // list.php
-$db = new mysqli("localhost", "subtitle", "Subtitle@2026", "subtitle");
-
+require_once 'db_config.php';
+$db = getDbConnection();
 if ($db->connect_error) {
     die("Ошибка подключения: " . $db->connect_error);
 }

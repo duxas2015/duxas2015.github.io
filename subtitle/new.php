@@ -1,6 +1,7 @@
 <?php
 // new.php
-$db = new mysqli("localhost", "subtitle", "Subtitle@2026", "subtitle");
+require_once 'db_config.php';
+$db = getDbConnection();
 // Получаем список "корневых" элементов (где нет кода фильма)
 $parents = $db->query("SELECT id, movie FROM subtitle WHERE movie_code = '' OR movie_code IS NULL ORDER BY movie");
 ?>
