@@ -1,0 +1,53 @@
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 20px; background: #f0f2f5; }
+.header-actions { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; background: white; padding: 15px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+
+/* Убираем display: table, оставляем стандартное поведение таблицы */
+table { 
+    width: 100%; 
+    border-collapse: collapse; 
+    background: white; 
+    table-layout: fixed; /* Фиксирует ширину колонок для предотвращения скачков */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1); 
+}
+
+th, td { 
+    border: 1px solid #dee2e6; 
+    padding: 10px; 
+    vertical-align: top; 
+    word-wrap: break-word; /* Предотвращает растягивание ячейки длинным текстом */
+}
+
+th { background: #007bff; color: white; text-transform: uppercase; font-size: 12px; }
+
+.edit-col { display: none; }
+body.edit-mode .edit-col { display: table-cell; }
+
+/* Настройки колонок */
+.col-idx { width: 70px; background: #f8f9fa; }
+.col-time { width: 150px; font-family: 'Courier New', monospace; font-size: 11px; }
+
+/* Редактируемые элементы */
+[contenteditable="true"] { 
+    min-height: 1.2em; 
+    outline: none; 
+/*    display: inline-block; */ /* Изменено с block на inline-block */
+    width: 100%; 
+}
+
+body.edit-mode [contenteditable="true"] { 
+    background: #fffde7; 
+    border-bottom: 1px dashed #ccc; /* Визуальная подсказка вместо полной рамки */
+}
+
+/* Кнопки Add/Remove */
+.actions-container { display: flex; gap: 5px; margin-top: 8px; justify-content: center; }
+.btn-row { 
+    width: 24px; height: 24px; line-height: 22px; text-align: center; 
+    border: 1px solid #ccc; cursor: pointer; font-size: 11px; font-weight: bold; 
+    background: #f8f9fa; border-radius: 4px; 
+}
+.btn-row:hover { background: #e2e6ea; }
+.btn-add { color: #28a745; }
+.btn-rem { color: #dc3545; }
+
+.btn-save { padding: 10px 25px; background: #28a745; color: white; border: none; border-radius: 5px; cursor: pointer; font-weight: bold; }

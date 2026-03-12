@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subtitle Aligner & Editor</title>
+    <style>
+        body { font-family: sans-serif; margin: 20px; background-color: #f4f4f9; color: #333; }
+        .controls { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); margin-bottom: 20px; }
+        .input-group { margin-bottom: 10px; display: inline-block; margin-right: 20px; }
+        label { font-weight: bold; display: block; margin-bottom: 5px; }
+        
+        table { width: 100%; border-collapse: collapse; background: white; font-size: 13px; table-layout: fixed; }
+        th, td { border: 1px solid #ddd; padding: 6px; overflow: hidden; vertical-align: top; }
+        th { background-color: #007bff; color: white; position: sticky; top: 0; z-index: 10; }
+        
+        .col-idx { width: 70px; text-align: center; background: #f0f0f0; }
+        .col-time { width: 160px; font-family: monospace; font-size: 11px; color: #666; }
+        .col-text { width: auto; }
+        
+        .btn-edit { 
+            display: inline-flex; width: 22px; height: 22px; 
+            align-items: center; justify-content: center;
+            margin: 2px; cursor: pointer; border: 1px solid #ccc;
+            border-radius: 3px; font-size: 10px; font-weight: bold;
+            background: white; transition: 0.2s;
+        }
+        .btn-add { color: green; }
+        .btn-add:hover { background: #e6ffed; border-color: green; }
+        .btn-rem { color: red; }
+        .btn-rem:hover { background: #fff0f0; border-color: red; }
+        
+        .empty { background-color: #fffaf0; }
+        button#processBtn { padding: 10px 25px; background: #28a745; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 16px; }
+        button#processBtn:hover { background: #218838; }
+    </style>
+</head>
+<body>
+
+    <div class="controls">
+        <h2>Subtitle Aligner (Pro)</h2>
+        <div class="input-group">
+            <label>English Subtitles:</label>
+            <input type="file" id="enFile" accept=".srt,.vtt">
+        </div>
+        <div class="input-group">
+            <label>Russian Subtitles:</label>
+            <input type="file" id="ruFile" accept=".srt,.vtt">
+        </div>
+        <button id="processBtn" onclick="processSubtitles()">Показать</button>
+    </div>
+
+    <table id="resultTable" style="display:none;">
+        <thead>
+            <tr>
+                <th class="col-idx"># EN</th>
+                <th class="col-time">Время EN</th>
+                <th class="col-text">Текст EN</th>
+                <th class="col-text">Текст RU</th>
+                <th class="col-idx"># RU</th>
+                <th class="col-time">Время RU</th>
+            </tr>
+        </thead>
+        <tbody id="tableBody"></tbody>
+    </table>
+
+    <script>
+        let currentData = { en: [], ru: [] };
+
+        async function processSubtitles() {
+            const enFile = document.getElementById('enFile').files[0];
+            const ruFile = document.getElementById('ruFile').files[0];
+
+            if (!enFile || !ruFile) {
+                alert("Пожалуйста, выберите оба файла.");
+                return;
+            }
+
+            const enRaw = parseSubtitles(await enFile.text());
+            const ruRaw = parseSubtitles(await ruFile.text());
+
+            // Исходное выравнивание
+            alignData(enRaw, ruRaw);
+            renderTable();
+        }
+
+        function parseSubtitles(data) {
+            const blocks = data.trim().split(/\r?\n\r?\n/);
+            return blocks.map(block => {
+                const lines = block.split(/\r?\n/);
+                let index = "", timeRange = "", text = "";
+                if (lines[0].includes('-->')) {
+                    timeRange = lines[0];
+                    text = lines.slice(1).join(' ');
+                } else if (lines.length >= 2 && lines[1].includes('-->')) {
+                    index = lines[0];
+                    timeRange = lines[1];
+                    text = lines.slice(2).join(' ');
+                }
+                return timeRange ? { index, time: timeRange, startTime: timeToSeconds(timeRange.split(' --> ')[0]), text: text.replace(/<[^>]*>/g, '') } : null;
+            }).filter(Boolean);
+        }
+
+        function timeToSeconds(timeStr) {
+            const p = timeStr.trim().replace(',', '.').split(':');
+            let h=0, m=0, s=0;
+            if (p.length === 3) [h, m, s] = p; else [m, s] = p;
+            return parseFloat(h) * 3600 + parseFloat(m) * 60 + parseFloat(s);
+        }
+
+        function alignData(enRaw, ruRaw) {
+            currentData.en = [];
+            currentData.ru = [];
+            let eI = 0, rI = 0;
+            const threshold = 1.5;
+
+            while (eI < enRaw.length || rI < ruRaw.length) {
+                const e = enRaw[eI];
+                const r = ruRaw[rI];
+
+                if (e && r && Math.abs(e.startTime - r.startTime) <= threshold) {
+                    currentData.en.push(e); currentData.ru.push(r);
+                    eI++; rI++;
+                } else if (e && (!r || e.startTime < r.startTime)) {
+                    currentData.en.push(e); currentData.ru.push(null);
+                    eI++;
+                } else {
+                    currentData.en.push(null); currentData.ru.push(r);
+                    rI++;
+                }
+            }
+        }
+
+        function renderTable() {
+            const tbody = document.getElementById('tableBody');
+            tbody.innerHTML = '';
+            const maxLen = Math.max(currentData.en.length, currentData.ru.length);
+
+            for (let i = 0; i < maxLen; i++) {
+                const en = currentData.en[i] || null;
+                const ru = currentData.ru[i] || null;
+                const tr = document.createElement('tr');
+
+                tr.innerHTML = `
+                    <td class="col-idx">
+                        <div>${en ? en.index : ''}</div>
+                        <button class="btn-edit btn-add" onclick="edit('en','add',${i})" title="Add empty space">A</button>
+                        <button class="btn-edit btn-rem" onclick="edit('en','rem',${i})" title="Remove this line">R</button>
+                    </td>
+                    <td class="col-time">${en ? en.time : ''}</td>
+                    <td class="col-text ${!en ? 'empty' : ''}">${en ? en.text : ''}</td>
+                    <td class="col-text ${!ru ? 'empty' : ''}">${ru ? ru.text : ''}</td>
+                    <td class="col-idx">
+                        <div>${ru ? ru.index : ''}</div>
+                        <button class="btn-edit btn-add" onclick="edit('ru','add',${i})" title="Add empty space">A</button>
+                        <button class="btn-edit btn-rem" onclick="edit('ru','rem',${i})" title="Remove this line">R</button>
+                    </td>
+                    <td class="col-time">${ru ? ru.time : ''}</td>
+                `;
+                tbody.appendChild(tr);
+            }
+            document.getElementById('resultTable').style.display = 'table';
+        }
+
+        function edit(side, type, index) {
+            const list = currentData[side];
+            if (type === 'add') {
+                // Вставляем null (пустоту) в текущую позицию, сдвигая всё вниз
+                list.splice(index, 0, null);
+            } else if (type === 'rem') {
+                // Удаляем элемент, сдвигая всё вверх
+                list.splice(index, 1);
+            }
+            
+            // Выравниваем длину массивов, чтобы таблица не ломалась
+            const max = Math.max(currentData.en.length, currentData.ru.length);
+            while(currentData.en.length < max) currentData.en.push(null);
+            while(currentData.ru.length < max) currentData.ru.push(null);
+            
+            renderTable();
+        }
+    </script>
+</body>
+</html>
