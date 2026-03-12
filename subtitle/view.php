@@ -25,6 +25,8 @@ $subId = $rows[0]['id'] ?? 0;
     <div class="header-actions">
         <h2>Subtitles: <?= htmlspecialchars($m_code) ?> (S<?= $series ?>E<?= $episode ?>)</h2>
         <div class="controls">
+			<button class="btn-zoom" onclick="changeFontSize(1.1)">A+</button>
+			<button class="btn-zoom" onclick="changeFontSize(0.9)">A-</button>
             <label><input type="checkbox" id="modeSwitch"> Edit Mode</label>
             <button class="btn-save" id="saveBtn">Сохранить изменения</button>
         </div>
