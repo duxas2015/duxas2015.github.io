@@ -84,13 +84,16 @@ $parents = $db->query("SELECT id, movie FROM subtitle WHERE movie_code = '' OR m
 
             if (!form.checkValidity() || !enFile || !ruFile) return alert("Заполните все поля");
 
-            const enText = await enFile.text();
-            const ruText = await ruFile.text();
+            let enText = await enFile.text();
+            let ruText = await ruFile.text();
+
+			enText = enText.replace(/^\uFEFF/, "");
+			ruText = ruText.replace(/^\uFEFF/, "");
             
             const enSubs = parseSubtitles(enText);
             const ruSubs = parseSubtitles(ruText);
             const aligned = alignData(enSubs, ruSubs);
-
+			
             const payload = {
                 parent_id: form.parent_id.value, // Передаем ID родителя
                 movie: form.movie.value,
