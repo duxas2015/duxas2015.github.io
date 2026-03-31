@@ -7983,5 +7983,5503 @@
 
 
 ]
+},
+{ "book":"Oracle® Certified Professional Java® SE 8 Programmer I ( Jeanne Boyarsky, Scott Selikoff )",
+  "chapters" : [ { "chapter_name":"Chapter 01 : Java Building Blocks",
+  "questions" :  
+[
+  {
+    "idx": 1,
+    "text": "Which of the following are valid Java identifiers? (Choose all that apply)",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "A$B"
+      },
+      {
+        "letter": "B",
+        "text": "_helloWorld"
+      },
+      {
+        "letter": "C",
+        "text": "true"
+      },
+      {
+        "letter": "D",
+        "text": "java.lang"
+      },
+      {
+        "letter": "E",
+        "text": "Public"
+      },
+      {
+        "letter": "F",
+        "text": "1980_s"
+      }
+    ],
+    "correct": {
+      "letter": [
+        "A",
+        "B",
+        "E"
+      ],
+      "description": "Option A is valid because you can use the dollar sign in identifiers. Option B is valid because you can use an underscore in identifiers. Option C is not a valid identifier because true is a Java reserved word. Option D is not valid because the dot (.) is not allowed in identifiers. Option E is valid because Java is case sensitive, so Public is not a reserved word and therefore a valid identifier. Option F is not valid because the first character is not a letter, $, or _."
+    }
+  },
+  {
+    "idx": 2,
+    "text": "What is the output of the following program?\n<pre>\n1: public class WaterBottle {\n2:   private String brand;\n3:   private boolean empty;\n4:   public static void main(String[] args) {\n5:     WaterBottle wb = new WaterBottle();\n6:     System.out.print(\"Empty = \" + wb.empty);\n7:     System.out.print(\", Brand = \" + wb.brand);\n8:   } }\n</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Line 6 generates a compiler error."
+      },
+      {
+        "letter": "B",
+        "text": "Line 7 generates a compiler error."
+      },
+      {
+        "letter": "C",
+        "text": "There is no output."
+      },
+      {
+        "letter": "D",
+        "text": "Empty = false, Brand = null"
+      },
+      {
+        "letter": "E",
+        "text": "Empty = false, Brand ="
+      },
+      {
+        "letter": "F",
+        "text": "Empty = null, Brand = null"
+      }
+    ],
+    "correct": {
+      "letter": [
+        "D"
+      ],
+      "description": "Boolean fields initialize to false and references initialize to null, so empty is false and brand is null. Brand = null is output."
+    }
+  },
+  {
+    "idx": 3,
+    "text": "Which of the following are true? (Choose all that apply)\n<pre>\n4: short numPets = 5;\n5: int numGrains = 5.6;\n6: String name = \"Scruffy\";\n7: numPets.length();\n8: numGrains.length();\n9: name.length();\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Line 4 generates a compiler error."
+      },
+      {
+        "letter": "B",
+        "text": "Line 5 generates a compiler error."
+      },
+      {
+        "letter": "C",
+        "text": "Line 6 generates a compiler error."
+      },
+      {
+        "letter": "D",
+        "text": "Line 7 generates a compiler error."
+      },
+      {
+        "letter": "E",
+        "text": "Line 8 generates a compiler error."
+      },
+      {
+        "letter": "F",
+        "text": "Line 9 generates a compiler error."
+      },
+      {
+        "letter": "G",
+        "text": "The code compiles as is."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "B",
+        "D",
+        "E"
+      ],
+      "description": "Option A (line 4) compiles because short is an integral type. Option B (line 5) generates a compiler error because int is an integral type, but 5.6 is a floating-point type. Option C (line 6) compiles because it is assigned a String. Options D and E (lines 7 and 8) do not compile because short and int are primitives. Primitives do not allow methods to be called on them. Option F (line 9) compiles because length() is defined on String."
+    }
+  },
+  {
+    "idx": 4,
+    "text": "Given the following class, which of the following is true? (Choose all that apply)\n<pre>\n1: public class Snake {\n2:\n3:   public void shed(boolean time) {\n4:\n5:     if (time) {\n6:\n7:     }\n8:     System.out.println(result);\n9:\n10:  }\n11: }\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "If <pre>String result = \"done\";</pre> is inserted on line 2, the code will compile."
+      },
+      {
+        "letter": "B",
+        "text": "If <pre>String result = \"done\";</pre> is inserted on line 4, the code will compile."
+      },
+      {
+        "letter": "C",
+        "text": "If <pre>String result = \"done\";</pre> is inserted on line 6, the code will compile."
+      },
+      {
+        "letter": "D",
+        "text": "If <pre>String result = \"done\";</pre> is inserted on line 9, the code will compile."
+      },
+      {
+        "letter": "E",
+        "text": "None of the above changes will make the code compile."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "A",
+        "B"
+      ],
+      "description": "Adding the variable at line 2 makes result an instance variable. Since instance variables are in scope for the entire life of the object, option A is correct. Option B is correct because adding the variable at line 4 makes result a local variable with a scope of the whole method. Adding the variable at line 6 makes result a local variable with a scope of lines 6–7. Since it is out of scope on line 8, it doesn’t compile. Line 9 is even more restrictive; it is in scope only for the loop, so option C is incorrect."
+    }
+  },
+  {
+    "idx": 5,
+    "text": "Given the following classes, which of the following can independently replace INSERT IMPORTS HERE to make the code compile? (Choose all that apply)\n<pre>\npackage aquarium;\npublic class Tank { }\n\npackage aquarium.jellies;\npublic class Jelly { }\n\npackage visitor;\nINSERT IMPORTS HERE\npublic class AquariumVisitor {\n  public void admire(Jelly jelly) { } }\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "<pre>import aquarium.*;</pre>"
+      },
+      {
+        "letter": "B",
+        "text": "<pre>import aquarium.*.Jelly;</pre>"
+      },
+      {
+        "letter": "C",
+        "text": "<pre>import aquarium.jellies.Jelly;</pre>"
+      },
+      {
+        "letter": "D",
+        "text": "<pre>import aquarium.jellies.*;</pre>"
+      },
+      {
+        "letter": "E",
+        "text": "<pre>import aquarium.jellies.Jelly.*;</pre>"
+      },
+      {
+        "letter": "F",
+        "text": "None of these can make the code compile."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "A",
+        "B",
+        "D"
+      ],
+      "description": "Options A and B are correct because they import all the classes in the package. Option D is correct because it imports a specific class. Option C is incorrect because you cannot have a wildcard in the middle of an import statement. Option E is incorrect because you cannot import a package. Option F is incorrect because you cannot have two wildcards in an import statement."
+    }
+  },
+  {
+    "idx": 6,
+    "text": "Given the following classes, what is the maximum number of imports that can be removed and have the code still compile?\n<pre>\npackage aquarium; public class Water { }\n\npackage aquarium;\nimport java.lang.*;\nimport java.lang.System;\nimport aquarium.Water;\nimport aquarium.*;\npublic class Tank {\n  public void print(Water water) {\n    System.out.println(water); } }\n</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "0"
+      },
+      {
+        "letter": "B",
+        "text": "1"
+      },
+      {
+        "letter": "C",
+        "text": "2"
+      },
+      {
+        "letter": "D",
+        "text": "3"
+      },
+      {
+        "letter": "E",
+        "text": "4"
+      },
+      {
+        "letter": "F",
+        "text": "Does not compile."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "E"
+      ],
+      "description": "Option E is the correct order for the elements in a Java class. Note that the package and import statements are optional."
+    }
+  },
+  {
+    "idx": 7,
+    "text": "Given the following classes, which of the following snippets can be inserted in place of INSERT IMPORTS HERE and have the code compile? (Choose all that apply)\n<pre>\npackage aquarium;\npublic class Water {\n  boolean salty = false;\n}\n\npackage aquarium.jellies;\npublic class Water {\n  boolean salty = true;\n}\n\npackage employee;\nINSERT IMPORTS HERE\npublic class WaterFiller {\n  Water water;\n}\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "<pre>import aquarium.*;</pre>"
+      },
+      {
+        "letter": "B",
+        "text": "<pre>import aquarium.Water;\nimport aquarium.jellies.*;</pre>"
+      },
+      {
+        "letter": "C",
+        "text": "<pre>import aquarium.*;\nimport aquarium.jellies.Water;</pre>"
+      },
+      {
+        "letter": "D",
+        "text": "<pre>import aquarium.*;\nimport aquarium.jellies.*;</pre>"
+      },
+      {
+        "letter": "E",
+        "text": "<pre>import aquarium.Water;\nimport aquarium.jellies.Water;</pre>"
+      },
+      {
+        "letter": "F",
+        "text": "None of these imports can make the code compile."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "A",
+        "B",
+        "C"
+      ],
+      "description": "The command to compile Java is javac. You pass the name of the file you want to compile, including the extension. Therefore, options A and B are correct. Option C is correct because the wildcard (*) can be used to compile all the Java files in the directory. Options D, E, and F are incorrect because java is the command to run a Java program, not compile it."
+    }
+  },
+  {
+    "idx": 8,
+    "text": "Given the following class, which of the following calls print out Blue Jay? (Choose all that apply)\n<pre>\npublic class BirdDisplay {\n  public static void main(String[] name) {\n    System.out.println(name[1]);\n  } }\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "<pre>java BirdDisplay Sparrow Blue Jay</pre>"
+      },
+      {
+        "letter": "B",
+        "text": "<pre>java BirdDisplay Sparrow \"Blue Jay\"</pre>"
+      },
+      {
+        "letter": "C",
+        "text": "<pre>java BirdDisplay Blue Jay Sparrow</pre>"
+      },
+      {
+        "letter": "D",
+        "text": "<pre>java BirdDisplay \"Blue Jay\" Sparrow</pre>"
+      },
+      {
+        "letter": "E",
+        "text": "<pre>java BirdDisplay.class Sparrow \"Blue Jay\"</pre>"
+      },
+      {
+        "letter": "F",
+        "text": "<pre>java BirdDisplay.class \"Blue Jay\" Sparrow</pre>"
+      },
+      {
+        "letter": "G",
+        "text": "Does not compile."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "A",
+        "D",
+        "E"
+      ],
+      "description": "An instance variable is in scope as long as the object it is part of exists. A static variable is in scope as long as the class it is part of exists. A local variable is in scope from the time it is declared until the end of the block in which it is declared."
+    }
+  },
+  {
+    "idx": 9,
+    "text": "Which of the following legally fill in the blank so you can run the main() method from the command line?\n<pre>\npublic static void main( ) \n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "<pre>String[] _names</pre>"
+      },
+      {
+        "letter": "B",
+        "text": "<pre>String[] 123</pre>"
+      },
+      {
+        "letter": "C",
+        "text": "<pre>String abc[]</pre>"
+      },
+      {
+        "letter": "D",
+        "text": "<pre>String _Names[]</pre>"
+      },
+      {
+        "letter": "E",
+        "text": "<pre>String... $n</pre>"
+      },
+      {
+        "letter": "F",
+        "text": "<pre>String names</pre>"
+      },
+      {
+        "letter": "G",
+        "text": "None of the above."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "A",
+        "B",
+        "E"
+      ],
+      "description": "Option A is a valid main() method. Option B is also a valid main() method because the order of the public and static modifiers does not matter. Option E is also valid because the square brackets can come after the variable name."
+    }
+  },
+  {
+    "idx": 10,
+    "text": "Which of the following are legal entry point methods that can be run from the command line? (Choose all that apply)",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "<pre>private static void main(String[] args)</pre>"
+      },
+      {
+        "letter": "B",
+        "text": "<pre>public static final main(String[] args)</pre>"
+      },
+      {
+        "letter": "C",
+        "text": "<pre>public void main(String[] args)</pre>"
+      },
+      {
+        "letter": "D",
+        "text": "<pre>public static void test(String[] args)</pre>"
+      },
+      {
+        "letter": "E",
+        "text": "<pre>public static void main(String[] args)</pre>"
+      },
+      {
+        "letter": "F",
+        "text": "<pre>public static main(String[] args)</pre>"
+      },
+      {
+        "letter": "G",
+        "text": "None of the above."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "B"
+      ],
+      "description": "Java is not required to run the garbage collector. While you can suggest that it run with System.gc(), it is not a guarantee. Objects are eligible for garbage collection when they are no longer reachable. An object can become eligible for garbage collection even if the program is still running."
+    }
+  },
+  {
+    "idx": 11,
+    "text": "Which of the following are true? (Choose all that apply)",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "An instance variable of type double defaults to null."
+      },
+      {
+        "letter": "B",
+        "text": "An instance variable of type int defaults to null."
+      },
+      {
+        "letter": "C",
+        "text": "An instance variable of type String defaults to null."
+      },
+      {
+        "letter": "D",
+        "text": "An instance variable of type double defaults to 0.0."
+      },
+      {
+        "letter": "E",
+        "text": "An instance variable of type int defaults to 0.0."
+      },
+      {
+        "letter": "F",
+        "text": "An instance variable of type String defaults to 0.0."
+      },
+      {
+        "letter": "G",
+        "text": "None of the above."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "C",
+        "D"
+      ],
+      "description": "Option C is correct because the package name must match the directory structure. Option D is correct because the import statement is required to use a class from another package."
+    }
+  },
+  {
+    "idx": 12,
+    "text": "Which of the following are true? (Choose all that apply)",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "A local variable of type boolean defaults to null."
+      },
+      {
+        "letter": "B",
+        "text": "A local variable of type float defaults to 0."
+      },
+      {
+        "letter": "C",
+        "text": "A local variable of type Object defaults to null."
+      },
+      {
+        "letter": "D",
+        "text": "A local variable of type boolean defaults to false."
+      },
+      {
+        "letter": "E",
+        "text": "A local variable of type boolean defaults to true."
+      },
+      {
+        "letter": "F",
+        "text": "A local variable of type float defaults to 0.0."
+      },
+      {
+        "letter": "G",
+        "text": "None of the above."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "G"
+      ],
+      "description": "The code does not compile because of line 5. You cannot use an underscore at the beginning or end of a literal, or adjacent to a decimal point."
+    }
+  },
+  {
+    "idx": 13,
+    "text": "Which of the following are true? (Choose all that apply)",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "An instance variable of type boolean defaults to false."
+      },
+      {
+        "letter": "B",
+        "text": "An instance variable of type boolean defaults to true."
+      },
+      {
+        "letter": "C",
+        "text": "An instance variable of type boolean defaults to null."
+      },
+      {
+        "letter": "D",
+        "text": "An instance variable of type int defaults to 0."
+      },
+      {
+        "letter": "E",
+        "text": "An instance variable of type int defaults to 0.0."
+      },
+      {
+        "letter": "F",
+        "text": "An instance variable of type int defaults to null."
+      },
+      {
+        "letter": "G",
+        "text": "None of the above."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "A",
+        "D"
+      ],
+      "description": "An object can become eligible for garbage collection when it is no longer reachable. This happens if the reference to the object is set to null or if the reference goes out of scope."
+    }
+  },
+  {
+    "idx": 14,
+    "text": "Given the following class in the file /my/directory/named/A/Bird.java:\n<pre>\nINSERT CODE HERE\npublic class Bird { }\n</pre>\nWhich of the following replaces INSERT CODE HERE if we compile from /my/directory? (Choose all that apply)",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "<pre>package my.directory.named.a;</pre>"
+      },
+      {
+        "letter": "B",
+        "text": "<pre>package my.directory.named.A;</pre>"
+      },
+      {
+        "letter": "C",
+        "text": "<pre>package named.a;</pre>"
+      },
+      {
+        "letter": "D",
+        "text": "<pre>package named.A;</pre>"
+      },
+      {
+        "letter": "E",
+        "text": "<pre>package a;</pre>"
+      },
+      {
+        "letter": "F",
+        "text": "<pre>package A;</pre>"
+      },
+      {
+        "letter": "G",
+        "text": "Does not compile."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "D"
+      ],
+      "description": "The code does not compile because of line 4. The variable result is declared inside the if block, so it is out of scope on line 6."
+    }
+  },
+  {
+    "idx": 15,
+    "text": "Which of the following lines of code compile? (Choose all that apply)",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "<pre>int i1 = 1_234;</pre>"
+      },
+      {
+        "letter": "B",
+        "text": "<pre>double d1 = 1_234_.0;</pre>"
+      },
+      {
+        "letter": "C",
+        "text": "<pre>double d2 = 1_234._0;</pre>"
+      },
+      {
+        "letter": "D",
+        "text": "<pre>double d3 = 1_234.0_;</pre>"
+      },
+      {
+        "letter": "E",
+        "text": "<pre>double d4 = 1_234.0;</pre>"
+      },
+      {
+        "letter": "F",
+        "text": "None of the above."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "A",
+        "E"
+      ],
+      "description": "Option A is correct because it is a valid way to run a Java class. Option E is correct because it is a valid way to run a Java class from a package."
+    }
+  },
+  {
+    "idx": 16,
+    "text": "Given the following class, which of the following lines of code can replace INSERT CODE HERE to make the code compile? (Choose all that apply)\n<pre>\npublic class Price {\n  public void admission() {\n    INSERT CODE HERE\n    System.out.println(amount);\n  } }\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "<pre>int amount = 9L;</pre>"
+      },
+      {
+        "letter": "B",
+        "text": "<pre>int amount = 0b101;</pre>"
+      },
+      {
+        "letter": "C",
+        "text": "<pre>int amount = 0xE;</pre>"
+      },
+      {
+        "letter": "D",
+        "text": "<pre>double amount = 0xE;</pre>"
+      },
+      {
+        "letter": "E",
+        "text": "<pre>double amount = 1_2_.0_0;</pre>"
+      },
+      {
+        "letter": "F",
+        "text": "<pre>int amount = 1_2_;</pre>"
+      },
+      {
+        "letter": "G",
+        "text": "None of the above."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "B",
+        "C",
+        "D"
+      ],
+      "description": "Option B is correct because the name of the file must match the name of the public class. Option C is correct because the code will compile. Option D is correct because the code will run, but it won't do anything because there is no main() method."
+    }
+  },
+  {
+    "idx": 17,
+    "text": "Which of the following are true? (Choose all that apply)\n<pre>\npublic class Bunny {\n  public static void main(String[] args) {\n    Bunny bun = new Bunny();\n  } }\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Bunny is a class."
+      },
+      {
+        "letter": "B",
+        "text": "bun is a class."
+      },
+      {
+        "letter": "C",
+        "text": "main is a class."
+      },
+      {
+        "letter": "D",
+        "text": "Bunny is a reference to an object."
+      },
+      {
+        "letter": "E",
+        "text": "bun is a reference to an object."
+      },
+      {
+        "letter": "F",
+        "text": "main is a reference to an object."
+      },
+      {
+        "letter": "G",
+        "text": "None of the above."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "A",
+        "E"
+      ],
+      "description": "A is correct because it is a valid multi-line comment. E is correct because it is a valid single-line comment."
+    }
+  },
+  {
+    "idx": 18,
+    "text": "Which represent the order in which the following statements can be assembled into a program that will compile successfully? (Choose all that apply)\n<pre>\nA: class Rabbit {}\nB: import java.util.*;\nC: package animals;\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "A, B, C"
+      },
+      {
+        "letter": "B",
+        "text": "B, C, A"
+      },
+      {
+        "letter": "C",
+        "text": "C, B, A"
+      },
+      {
+        "letter": "D",
+        "text": "B, A"
+      },
+      {
+        "letter": "E",
+        "text": "C, A"
+      },
+      {
+        "letter": "F",
+        "text": "A, C"
+      },
+      {
+        "letter": "G",
+        "text": "A, B"
+      }
+    ],
+    "correct": {
+      "letter": [
+        "C",
+        "D",
+        "E"
+      ],
+      "description": "The order of the elements in a Java file is: package, imports, and then the class. All of these elements are optional."
+    }
+  },
+  {
+    "idx": 19,
+    "text": "Suppose we have a class named Rabbit. Which of the following statements are true? (Choose all that apply)\n<pre>\n1:  public class Rabbit {\n2:    public static void main(String[] args) {\n3:      Rabbit one = new Rabbit();\n4:      Rabbit two = new Rabbit();\n5:      Rabbit three = one;\n6:      one = null;\n7:      Rabbit four = one;\n8:      three = null;\n9:      two = null;\n10:     two = new Rabbit();\n11:     System.gc();\n12:   } }\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "The Rabbit object from line 3 is first eligible for garbage collection immediately following line 6."
+      },
+      {
+        "letter": "B",
+        "text": "The Rabbit object from line 3 is first eligible for garbage collection immediately following line 8."
+      },
+      {
+        "letter": "C",
+        "text": "The Rabbit object from line 3 is first eligible for garbage collection immediately following line 12."
+      },
+      {
+        "letter": "D",
+        "text": "The Rabbit object from line 4 is first eligible for garbage collection immediately following line 9."
+      },
+      {
+        "letter": "E",
+        "text": "The Rabbit object from line 4 is first eligible for garbage collection immediately following line 11."
+      },
+      {
+        "letter": "F",
+        "text": "The Rabbit object from line 4 is first eligible for garbage collection immediately following line 12."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "A",
+        "D"
+      ],
+      "description": "Setting a reference to null means it has no effect on garbage collection. The Rabbit object from line 4 only has a single reference to it: two. Option D is correct because this single reference becomes null on line 9. The Rabbit object declared on line 10 becomes eligible for garbage collection at the end of the method on line 12. Calling System.gc() has no effect on eligibility for garbage collection."
+    }
+  },
+  {
+    "idx": 20,
+    "text": "What is true about the following code? (Choose all that apply)\n<pre>\npublic class Bear {\n  protected void finalize() {\n    System.out.println(\"Roar!\");\n  }\n  public static void main(String[] args) {\n    Bear bear = new Bear();\n    bear = null;\n    System.gc();\n  } }\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "finalize() is guaranteed to be called."
+      },
+      {
+        "letter": "B",
+        "text": "finalize() might or might not be called"
+      },
+      {
+        "letter": "C",
+        "text": "finalize() is guaranteed not to be called."
+      },
+      {
+        "letter": "D",
+        "text": "Garbage collection is guaranteed to run."
+      },
+      {
+        "letter": "E",
+        "text": "Garbage collection might or might not run."
+      },
+      {
+        "letter": "F",
+        "text": "Garbage collection is guaranteed not to run."
+      },
+      {
+        "letter": "G",
+        "text": "The code does not compile."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "B",
+        "E"
+      ],
+      "description": "Calling System.gc() suggests that Java might wish to run the garbage collector. Java is free to ignore the request, making option E correct. finalize() runs if an object attempts to be garbage collected, making option B correct."
+    }
+  },
+  {
+    "idx": 21,
+    "text": "What does the following code output?\n<pre>\n1: public class Salmon {\n2:   int count;\n3:   public void Salmon() {\n4:     count = 4;\n5:   }\n6:   public static void main(String[] args) {\n7:     Salmon s = new Salmon();\n8:     System.out.println(s.count);\n9:   } }\n</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "0"
+      },
+      {
+        "letter": "B",
+        "text": "4"
+      },
+      {
+        "letter": "C",
+        "text": "Compilation fails on line 3."
+      },
+      {
+        "letter": "D",
+        "text": "Compilation fails on line 4."
+      },
+      {
+        "letter": "E",
+        "text": "Compilation fails on line 7."
+      },
+      {
+        "letter": "F",
+        "text": "Compilation fails on line 8."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "A"
+      ],
+      "description": "While the code on line 3 does compile, it is not a constructor because it has a return type. It is a method that happens to have the same name as the class. When the code runs, the default constructor is called and count has the default value (0) for an int."
+    }
+  },
+  {
+    "idx": 22,
+    "text": "Which of the following are true statements? (Choose all that apply)",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Java allows operator overloading."
+      },
+      {
+        "letter": "B",
+        "text": "Java code compiled on Windows can run on Linux."
+      },
+      {
+        "letter": "C",
+        "text": "Java has pointers to specific locations in memory."
+      },
+      {
+        "letter": "D",
+        "text": "Java is a procedural language."
+      },
+      {
+        "letter": "E",
+        "text": "Java is an object-oriented language."
+      },
+      {
+        "letter": "F",
+        "text": "Java is a functional programming language."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "B",
+        "E"
+      ],
+      "description": "C++ has operator overloading and pointers. Java made a point of not having either. Java does have references to objects, but these are pointing to an object that can move around in memory. Option B is correct because Java is platform independent. Option E is correct because Java is object oriented. While it does support some parts of functional programming, these occur within a class."
+    }
+  },
+  {
+    "idx": 23,
+    "text": "Which of the following are true? (Choose all that apply)",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "javac compiles a .class file into a .java file."
+      },
+      {
+        "letter": "B",
+        "text": "javac compiles a .java file into a .bytecode file."
+      },
+      {
+        "letter": "C",
+        "text": "javac compiles a .java file into a .class file."
+      },
+      {
+        "letter": "D",
+        "text": "Java takes the name of the class as a parameter."
+      },
+      {
+        "letter": "E",
+        "text": "Java takes the name of the .bytecode file as a parameter."
+      },
+      {
+        "letter": "F",
+        "text": "Java takes the name of the .class file as a parameter."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "C",
+        "D"
+      ],
+      "description": "Java puts source code in .java files and bytecode in .class files. It does not use a .bytecode file. When running a Java program, you pass just the name of the class without the .class extension."
+    }
+  }
+]  
+}  
+,{ "chapter_name":"Chapter 02 : Operators and Statements",
+  "questions" :  
+[
+  {
+    "idx": 1,
+    "text": "Which of the following Java operators can be used with boolean variables? (Choose all that apply)",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "=="
+      },
+      {
+        "letter": "B",
+        "text": "+"
+      },
+      {
+        "letter": "C",
+        "text": "--"
+      },
+      {
+        "letter": "D",
+        "text": "!"
+      },
+      {
+        "letter": "E",
+        "text": "%"
+      },
+      {
+        "letter": "F",
+        "text": "<="
+      }
+    ],
+    "correct": {
+      "letter": [
+        "A",
+        "D"
+      ],
+      "description": "Option A is the equality operator and can be used on numeric primitives, boolean values, and object references. Options B and C are both arithmetic operators and cannot be applied to a boolean value. Option D is the logical complement operator and is used exclusively with boolean values. Option E is the modulus operator, which can only be used with numeric primitives. Finally, option F is a relational operator that compares the values of two numbers."
+    }
+  },
+  {
+    "idx": 2,
+    "text": "What data type (or types) will allow the following code snippet to compile? (Choose all that apply)\n<pre>\nbyte x = 5;\nbyte y = 10;\n_____ z = x + y;\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "int"
+      },
+      {
+        "letter": "B",
+        "text": "long"
+      },
+      {
+        "letter": "C",
+        "text": "boolean"
+      },
+      {
+        "letter": "D",
+        "text": "double"
+      },
+      {
+        "letter": "E",
+        "text": "short"
+      },
+      {
+        "letter": "F",
+        "text": "byte"
+      }
+    ],
+    "correct": {
+      "letter": [
+        "A",
+        "B",
+        "D"
+      ],
+      "description": "The value x + y is automatically promoted to int, so int and data types that can be promoted automatically from int will work. Options A, B, D are such data types. Option C will not work because boolean is not a numeric data type. Options E and F will not work without an explicit cast to a smaller data type."
+    }
+  },
+  {
+    "idx": 3,
+    "text": "What is the output of the following application?\n<pre>\n1: public class CompareValues {\n2:   public static void main(String[] args) {\n3:     int x = 0;\n4:     while(x++ < 10) {}\n5:     String message = x > 10 ? \"Greater than\" : false;\n6:     System.out.println(message+\",\"+x);\n7:   }\n8: }\n</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Greater than,10"
+      },
+      {
+        "letter": "B",
+        "text": "false,10"
+      },
+      {
+        "letter": "C",
+        "text": "Greater than,11"
+      },
+      {
+        "letter": "D",
+        "text": "false,11"
+      },
+      {
+        "letter": "E",
+        "text": "The code will not compile because of line 4."
+      },
+      {
+        "letter": "F",
+        "text": "The code will not compile because of line 5."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "F"
+      ],
+      "description": "In this example, the ternary operator has two expressions, one of them a String and the other a boolean value. The ternary operator is permitted to have expressions that don’t have matching types, but the key here is the assignment to the String reference. The compiler knows how to assign the first expression value as a String, but the second boolean expression cannot be set as a String; therefore, this line will not compile."
+    }
+  },
+  {
+    "idx": 4,
+    "text": "What change would allow the following code snippet to compile? (Choose all that apply)\n<pre>\n3: long x = 10;\n4: int y = 2 * x;\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "No change; it compiles as is."
+      },
+      {
+        "letter": "B",
+        "text": "Cast x on line 4 to int."
+      },
+      {
+        "letter": "C",
+        "text": "Change the data type of x on line 3 to short."
+      },
+      {
+        "letter": "D",
+        "text": "Cast 2 * x on line 4 to int."
+      },
+      {
+        "letter": "E",
+        "text": "Change the data type of y on line 4 to long."
+      },
+      {
+        "letter": "F",
+        "text": "None of the above will allow the code to compile."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "B",
+        "C",
+        "D",
+        "F"
+      ],
+      "description": "The code will not compile as is, so option A is not correct. The value 2 * x is automatically promoted to long and cannot be automatically stored in y, which is in an int value. Options B, C, and D solve this problem by reducing the long value to a smaller data type."
+    }
+  },
+  {
+    "idx": 5,
+    "text": "What is the output of the following code snippet?\n<pre>\n3: java.util.List&lt;Integer&gt; list = new java.util.ArrayList&lt;&gt;();\n4: list.add(10);\n5: list.add(14);\n6: for(int x : list) {\n7:   System.out.print(x + \", \");\n8:   break;\n9: }\n</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "10,"
+      },
+      {
+        "letter": "B",
+        "text": "10, 14,"
+      },
+      {
+        "letter": "C",
+        "text": "14,"
+      },
+      {
+        "letter": "D",
+        "text": "The code will not compile because of line 8."
+      },
+      {
+        "letter": "E",
+        "text": "The code will not compile because of line 6."
+      },
+      {
+        "letter": "F",
+        "text": "The code contains an infinite loop and does not terminate."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "C"
+      ],
+      "description": "The code compiles and runs without issue. The post-increment operator (++) on line 4 returns the current value and then increments it, but the result is not assigned. On line 5, the pre-increment operator increments the value first and then returns it. The same logic applies to the decrement operators."
+    }
+  },
+  {
+    "idx": 6,
+    "text": "What is the output of the following code snippet?\n<pre>\n3: int x = 4;\n4: long y = x * 4 - x++;\n5: if(y &lt; 10) System.out.print(\"Too Low\");\n6: else System.out.print(\"Just Right\");\n7: else System.out.print(\"Too High\");\n</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Too Low"
+      },
+      {
+        "letter": "B",
+        "text": "Just Right"
+      },
+      {
+        "letter": "C",
+        "text": "Too High"
+      },
+      {
+        "letter": "D",
+        "text": "The code will not compile because of line 6."
+      },
+      {
+        "letter": "E",
+        "text": "The code will not compile because of line 7."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "F"
+      ],
+      "description": "The expression in the if statement must be a boolean. In this case, it is an assignment (x = 5), which returns the value 5 (an int). This causes a compilation error because an int cannot be converted to a boolean."
+    }
+  },
+  {
+    "idx": 7,
+    "text": "What is the output of the following code?\n<pre>\n1: public class TernaryTester {\n2:   public static void main(String[] args) {\n3:     int x = 5;\n4:     System.out.println(x &gt; 2 ? x &lt; 4 ? 10 : 8 : 7);\n5:   } }\n</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "5"
+      },
+      {
+        "letter": "B",
+        "text": "7"
+      },
+      {
+        "letter": "C",
+        "text": "8"
+      },
+      {
+        "letter": "D",
+        "text": "10"
+      },
+      {
+        "letter": "E",
+        "text": "The code will not compile because of line 4."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "D"
+      ],
+      "description": "The code uses the short-circuiting OR operator (||). Since the first expression (x > 2) is true, the second expression (y++ < 10) is never evaluated. Therefore, y remains 10."
+    }
+  },
+  {
+    "idx": 8,
+    "text": "What is the output of the following code snippet?\n<pre>\n3: boolean x = true, z = true;\n4: int y = 20;\n5: x = (y != 10) ^ (z=false);\n6: System.out.println(x+\", \"+y+\", \"+z);\n</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "true, 10, true"
+      },
+      {
+        "letter": "B",
+        "text": "true, 20, false"
+      },
+      {
+        "letter": "C",
+        "text": "false, 20, true"
+      },
+      {
+        "letter": "D",
+        "text": "false, 20, false"
+      },
+      {
+        "letter": "E",
+        "text": "false, 10, true"
+      },
+      {
+        "letter": "F",
+        "text": "The code will not compile because of line 5."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "B",
+        "D",
+        "E"
+      ],
+      "description": "A switch statement can accept primitive types like byte, short, char, and int, as well as their wrapper classes and Enums or Strings. It cannot accept long, float, double, or boolean."
+    }
+  },
+  {
+    "idx": 9,
+    "text": "How many times will the following code print \"Hello World\"?\n<pre>\n3: for(int i=0; i&lt;10; )\n4:   i = i++;\n5:   System.out.println(\"Hello World\");\n</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "9"
+      },
+      {
+        "letter": "B",
+        "text": "10"
+      },
+      {
+        "letter": "C",
+        "text": "11"
+      },
+      {
+        "letter": "D",
+        "text": "The code will not compile because of line 3."
+      },
+      {
+        "letter": "E",
+        "text": "The code contains an infinite loop and does not terminate."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "F"
+      ],
+      "description": "The loop will run indefinitely because the termination condition (i < 10) is never met. The variable i is decremented in each iteration."
+    }
+  },
+  {
+    "idx": 10,
+    "text": "What is the output of the following code?\n<pre>\n3: byte a = 40, b = 50;\n4: byte sum = (byte) a + b;\n5: System.out.println(sum);\n</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "40"
+      },
+      {
+        "letter": "B",
+        "text": "50"
+      },
+      {
+        "letter": "C",
+        "text": "90"
+      },
+      {
+        "letter": "D",
+        "text": "The code will not compile because of line 4."
+      },
+      {
+        "letter": "E",
+        "text": "An undefined value."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "A"
+      ],
+      "description": "The break statement exits the loop, and the program continues with the next statement after the loop. The continue statement stops the current iteration and goes to the next one."
+    }
+  },
+  {
+    "idx": 11,
+    "text": "What is the output of the following code?\n<pre>\n1: public class ArithmeticSample {\n2:   public static void main(String[] args) {\n3:     int x = 5 * 4 % 3;\n4:     System.out.println(x);\n5:   } }\n</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "0"
+      },
+      {
+        "letter": "B",
+        "text": "1"
+      },
+      {
+        "letter": "C",
+        "text": "2"
+      },
+      {
+        "letter": "D",
+        "text": "3"
+      },
+      {
+        "letter": "E",
+        "text": "5"
+      },
+      {
+        "letter": "F",
+        "text": "The code will not compile because of line 3."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "A",
+        "B",
+        "C"
+      ],
+      "description": "For a while loop, the condition is checked before the body is executed. For a do-while loop, the body is executed at least once before the condition is checked."
+    }
+  },
+  {
+    "idx": 12,
+    "text": "What is the output of the following code snippet?\n<pre>\n3: int x = 0;\n4: String s = null;\n5: if(x == s) System.out.println(\"Success\");\n6: else System.out.println(\"Failure\");\n</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Success"
+      },
+      {
+        "letter": "B",
+        "text": "Failure"
+      },
+      {
+        "letter": "C",
+        "text": "The code will not compile because of line 5."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "D"
+      ],
+      "description": "The nested loops iterate through the rows and columns. The if statement with the continue label affects the outer loop based on the values of row and col."
+    }
+  },
+  {
+    "idx": 13,
+    "text": "What is the output of the following code snippet?\n<pre>\n3: int x1 = 50, x2 = 75;\n4: boolean b = x1 &gt;= x2;\n5: if(b = true) System.out.println(\"Success\");\n6: else System.out.println(\"Failure\");\n</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Success"
+      },
+      {
+        "letter": "B",
+        "text": "Failure"
+      },
+      {
+        "letter": "C",
+        "text": "The code will not compile because of line 4."
+      },
+      {
+        "letter": "D",
+        "text": "The code will not compile because of line 5."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "A",
+        "D"
+      ],
+      "description": "These are the correct results for the given bitwise operations. Bitwise operators work on the individual bits of the integer values."
+    }
+  },
+  {
+    "idx": 14,
+    "text": "What is the output of the following code snippet?\n<pre>\n3: int c = 7;\n4: int result = 4;\n5: result += ++c * 5 / c-- + c;\n6: System.out.println(\"c = \" + c);\n7: System.out.println(\"result = \" + result);\n</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "c = 6\nresult = 16"
+      },
+      {
+        "letter": "B",
+        "text": "c = 7\nresult = 16"
+      },
+      {
+        "letter": "C",
+        "text": "c = 7\nresult = 17"
+      },
+      {
+        "letter": "D",
+        "text": "c = 8\nresult = 17"
+      },
+      {
+        "letter": "E",
+        "text": "c = 8\nresult = 18"
+      },
+      {
+        "letter": "F",
+        "text": "The code will not compile because of line 5."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "C"
+      ],
+      "description": "The code uses a label with a break statement to exit multiple levels of nested loops at once. This is a valid Java construct."
+    }
+  },
+  {
+    "idx": 15,
+    "text": "What is the output of the following code snippet?\n<pre>\n3: int x = 1, y = 15;\n4: while x &lt; 10\n5:   y--;\n6:   x++;\n7: System.out.println(x+\", \"+y);\n</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "10, 5"
+      },
+      {
+        "letter": "B",
+        "text": "10, 6"
+      },
+      {
+        "letter": "C",
+        "text": "11, 5"
+      },
+      {
+        "letter": "D",
+        "text": "The code will not compile because of line 4."
+      },
+      {
+        "letter": "E",
+        "text": "The code will not compile because of line 6."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "E"
+      ],
+      "description": "The code fails to compile because the variable declared in the for-each loop is already declared in the same scope."
+    }
+  },
+  {
+    "idx": 16,
+    "text": "What is the output of the following code snippet?\n<pre>\n3: do {\n4:   int y = 1;\n5:   System.out.print(y++ + \" \");\n6: } while(y &lt;= 10);\n</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "1 2 3 4 5 6 7 8 9 10"
+      },
+      {
+        "letter": "B",
+        "text": "1 2 3 4 5 6 7 8 9"
+      },
+      {
+        "letter": "C",
+        "text": "1 2 3 4 5 6 7 8 9 10 11"
+      },
+      {
+        "letter": "D",
+        "text": "The code will not compile because of line 6."
+      },
+      {
+        "letter": "E",
+        "text": "The code contains an infinite loop and does not terminate."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "C"
+      ],
+      "description": "The cast (byte) is required because adding two bytes results in an int. Without the cast, the code will not compile."
+    }
+  },
+  {
+    "idx": 17,
+    "text": "What is the output of the following code snippet?\n<pre>\n3: boolean keepGoing = true;\n4: int result = 15, i = 10;\n5: do {\n6:   i--;\n7:   if(i==8) keepGoing = false;\n8:   result -= 2;\n9: } while(keepGoing);\n10: System.out.println(result);\n</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "7"
+      },
+      {
+        "letter": "B",
+        "text": "9"
+      },
+      {
+        "letter": "C",
+        "text": "10"
+      },
+      {
+        "letter": "D",
+        "text": "11"
+      },
+      {
+        "letter": "E",
+        "text": "15"
+      },
+      {
+        "letter": "F",
+        "text": "The code will not compile because of line 8."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "D"
+      ],
+      "description": "The logical XOR operator (^) returns true only if exactly one of the operands is true. If both are true or both are false, it returns false."
+    }
+  },
+  {
+    "idx": 18,
+    "text": "What is the output of the following code snippet?\n<pre>\n3: int count = 0;\n4: ROW_LOOP: for(int row = 1; row &lt;=3; row++)\n5:   for(int col = 1; col &lt;=2 ; col++) {\n6:     if(row * col % 2 == 0) continue ROW_LOOP;\n7:     count++;\n8:   }\n9: System.out.println(count);\n</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "1"
+      },
+      {
+        "letter": "B",
+        "text": "2"
+      },
+      {
+        "letter": "C",
+        "text": "3"
+      },
+      {
+        "letter": "D",
+        "text": "4"
+      },
+      {
+        "letter": "E",
+        "text": "6"
+      },
+      {
+        "letter": "F",
+        "text": "The code will not compile because of line 6."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "B"
+      ],
+      "description": "On the third iteration, row = 2 and col = 2, so the expression on line 6 is true and the continue ends the outer loop with count still at 1. On the fourth iteration, row = 3 and col = 1, so the expression on line 6 is false, the continue is skipped, and count is incremented to 2. Finally, on the fifth and final iteration, row = 3 and col = 2, so the expression on line 6 is true and the continue ends the outer loop with count still at 2. The result of 2 is displayed, so the answer is option B."
+    }
+  },
+  {
+    "idx": 19,
+    "text": "What is the result of the following code snippet?\n<pre>\n3: int m = 9, n = 1, x = 0;\n4: while(m &gt; n) {\n5:   m--;\n6:   n += 2;\n7:   x += m + n;\n8: }\n9: System.out.println(x);\n</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "11"
+      },
+      {
+        "letter": "B",
+        "text": "13"
+      },
+      {
+        "letter": "C",
+        "text": "23"
+      },
+      {
+        "letter": "D",
+        "text": "36"
+      },
+      {
+        "letter": "E",
+        "text": "50"
+      },
+      {
+        "letter": "F",
+        "text": "The code will not compile because of line 7."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "D"
+      ],
+      "description": "Prior to the first iteration, m = 9, n = 1, and x = 0. After the iteration of the first loop, m is updated to 8, n to 3, and x to the sum of the new values for m + n, 0 + 11 = 11. After the iteration of the second loop, m is updated to 7, n to 5, and x to the sum of the new values for m + n, 11 + 12 = 23. After the iteration of the third loop, m is updated to 6, n to 7, and x to the sum of the new values for m + n, 23 + 13 = 36. On the fourth iteration of the loop, m > n evaluates to false, as 6 < 7 is not true. The loop ends and the most recent value of x, 36, is output, so the correct answer is option D."
+    }
+  },
+  {
+    "idx": 20,
+    "text": "What is the result of the following code snippet?\n<pre>\n3: final char a = 'A', d = 'D';\n4: char grade = 'B';\n5: switch(grade) {\n6:   case a:\n7:   case 'B': System.out.print(\"great \");\n8:   case 'C': System.out.print(\"good \"); break;\n9:   case d: \n10:  case 'F': System.out.print(\"not good \");\n11: }\n</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "great"
+      },
+      {
+        "letter": "B",
+        "text": "great good"
+      },
+      {
+        "letter": "C",
+        "text": "good"
+      },
+      {
+        "letter": "D",
+        "text": "not good"
+      },
+      {
+        "letter": "E",
+        "text": "The code will not compile because of line 3."
+      },
+      {
+        "letter": "F",
+        "text": "The code will not compile because of line 6."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "B"
+      ],
+      "description": "The code compiles and runs without issue. The value of the expression is calculated correctly using the rules of operator precedence (multiplication/division before addition/subtraction)."
+    }
+  }
+]
+}
+,{ "chapter_name":"Chapter 03 : Core Java APIs",
+  "questions" :  
+[
+  {
+    "idx": 1,
+    "text": "What is output by the following code? (Choose all that apply)\n<pre>\n1: public class Fish {\n2:   public static void main(String[] args) {\n3:     int numFish = 4;\n4:     String fishType = \"tuna\";\n5:     String anotherFish = numFish + 1;\n6:     System.out.println(anotherFish + \" \" + fishType);\n7:     System.out.println(numFish + \" \" + 1);\n8:   } }\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "4 1"
+      },
+      {
+        "letter": "B",
+        "text": "41"
+      },
+      {
+        "letter": "C",
+        "text": "5"
+      },
+      {
+        "letter": "D",
+        "text": "5 tuna"
+      },
+      {
+        "letter": "E",
+        "text": "5tuna"
+      },
+      {
+        "letter": "F",
+        "text": "51tuna"
+      },
+      {
+        "letter": "G",
+        "text": "The code does not compile."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "G"
+      ],
+      "description": "Line 5 does not compile. This question is checking to see if you are paying attention to the types. numFish is an int and 1 is an int. Therefore, we use numeric addition and get 5. The problem is that we can’t store an int in a String variable. Supposing line 5 said String anotherFish = numFish + 1 + \"\";. In that case, the answer would be options A and D. The variable defined on line 5 would be the string \"5\", and both output statements would use concatenation."
+    }
+  },
+  {
+    "idx": 2,
+    "text": "Which of the following are output by this code? (Choose all that apply)\n<pre>\n3: String s = \"Hello\";\n4: String t = new String(s);\n5: if (\"Hello\".equals(s)) System.out.println(\"one\");\n6: if (t == s) System.out.println(\"two\");\n7: if (t.equals(s)) System.out.println(\"three\");\n8: if (\"Hello\" == s) System.out.println(\"four\");\n9: if (\"Hello\" == t) System.out.println(\"five\");\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "one"
+      },
+      {
+        "letter": "B",
+        "text": "two"
+      },
+      {
+        "letter": "C",
+        "text": "three"
+      },
+      {
+        "letter": "D",
+        "text": "four"
+      },
+      {
+        "letter": "E",
+        "text": "five"
+      },
+      {
+        "letter": "F",
+        "text": "The code does not compile."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "A",
+        "C",
+        "D"
+      ],
+      "description": "The code compiles fine. Line 3 points to the String in the string pool. Line 4 calls the String constructor explicitly and is therefore a different object than s. Lines 5 and 7 check for object equality, which is true, and so print one and three. Line 6 uses object reference equality, which is not true since we have different objects. Line 7 also compares references but is true since both references point to the object from the string pool. Finally, line 8 compares one object from the string pool with one that was explicitly constructed and returns false."
+    }
+  },
+  {
+    "idx": 3,
+    "text": "Which are true statements? (Choose all that apply)",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "An immutable object can be modified."
+      },
+      {
+        "letter": "B",
+        "text": "An immutable object cannot be modified."
+      },
+      {
+        "letter": "C",
+        "text": "An immutable object can be garbage collected."
+      },
+      {
+        "letter": "D",
+        "text": "An immutable object cannot be garbage collected."
+      },
+      {
+        "letter": "E",
+        "text": "String is immutable."
+      },
+      {
+        "letter": "F",
+        "text": "StringBuffer is immutable."
+      },
+      {
+        "letter": "G",
+        "text": "StringBuilder is immutable."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "B",
+        "C",
+        "E"
+      ],
+      "description": "Immutable means the state of an object cannot change once it is created. Immutable objects can be garbage collected just like mutable objects. String is immutable. StringBuilder can be mutated with methods like append(). Although StringBuffer isn’t on the exam, you should know about it anyway in case older questions haven’t been removed."
+    }
+  },
+  {
+    "idx": 4,
+    "text": "What is the result of the following code?\n<pre>\n7: StringBuilder sb = new StringBuilder();\n8: sb.append(\"aaa\").insert(1, \"bb\").insert(4, \"ccc\");\n9: System.out.println(sb);\n</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "abbaaccc"
+      },
+      {
+        "letter": "B",
+        "text": "abbaccca"
+      },
+      {
+        "letter": "C",
+        "text": "bbaaaccc"
+      },
+      {
+        "letter": "D",
+        "text": "bbaaccca"
+      },
+      {
+        "letter": "E",
+        "text": "An exception is thrown."
+      },
+      {
+        "letter": "F",
+        "text": "The code does not compile."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "B"
+      ],
+      "description": "This example uses method chaining. After the call to append(), sb contains \"aaa\". That result is passed to the first insert() call, which inserts at index 1. At this point sb contains abbbaa. That result is passed to the final insert(), which inserts at index 4, resulting in abbaccca."
+    }
+  },
+  {
+    "idx": 5,
+    "text": "What is the result of the following code?\n<pre>\n2: String s1 = \"java\";\n3: StringBuilder s2 = new StringBuilder(\"java\");\n4: if (s1 == s2)\n5:   System.out.print(\"1\");\n6: if (s1.equals(s2))\n7:   System.out.print(\"2\");\n</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "1"
+      },
+      {
+        "letter": "B",
+        "text": "2"
+      },
+      {
+        "letter": "C",
+        "text": "12"
+      },
+      {
+        "letter": "D",
+        "text": "No output is printed."
+      },
+      {
+        "letter": "E",
+        "text": "An exception is thrown."
+      },
+      {
+        "letter": "F",
+        "text": "The code does not compile."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "F"
+      ],
+      "description": "The question is trying to distract you into paying attention to logical equality versus object reference equality. It is hoping you will miss the fact that line 4 does not compile. Java does not allow you to compare String and StringBuilder using ==."
+    }
+  },
+  {
+    "idx": 6,
+    "text": "What is the result of the following code?\n<pre>\npublic class Lion {\n  public void roar(String roar1, StringBuilder roar2) {\n    roar1.concat(\"!!!\");\n    roar2.append(\"!!!\");\n  }\n  public static void main(String[] args) {\n    String roar1 = \"roar\";\n    StringBuilder roar2 = new StringBuilder(\"roar\");\n    new Lion().roar(roar1, roar2);\n    System.out.println(roar1 + \" \" + roar2);\n  } }\n</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "roar roar"
+      },
+      {
+        "letter": "B",
+        "text": "roar roar!!!"
+      },
+      {
+        "letter": "C",
+        "text": "roar!!! roar"
+      },
+      {
+        "letter": "D",
+        "text": "roar!!! roar!!!"
+      },
+      {
+        "letter": "E",
+        "text": "An exception is thrown."
+      },
+      {
+        "letter": "F",
+        "text": "The code does not compile."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "B"
+      ],
+      "description": "A String is immutable. Calling concat() returns a new String but does not change the original. A StringBuilder is mutable. Calling append() adds characters to the existing character sequence along with returning a reference to the same object."
+    }
+  },
+  {
+    "idx": 7,
+    "text": "Which are the results of the following code? (Choose all that apply)\n<pre>\nString letters = \"abcdef\";\nSystem.out.println(letters.length());\nSystem.out.println(letters.charAt(3));\nSystem.out.println(letters.charAt(6));\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "5"
+      },
+      {
+        "letter": "B",
+        "text": "6"
+      },
+      {
+        "letter": "C",
+        "text": "c"
+      },
+      {
+        "letter": "D",
+        "text": "d"
+      },
+      {
+        "letter": "E",
+        "text": "An exception is thrown."
+      },
+      {
+        "letter": "F",
+        "text": "The code does not compile."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "B",
+        "D",
+        "E"
+      ],
+      "description": "length() is simply a count of the number of characters in a String. In this case, there are six characters. charAt() returns the character at that index. Remember that indexes are zero based, which means that index 3 corresponds to d and index 6 corresponds to 1 past the end of the array. A StringIndexOutOfBoundsException is thrown for the last line."
+    }
+  },
+  {
+    "idx": 8,
+    "text": "Which are the results of the following code? (Choose all that apply)\n<pre>\nString numbers = \"012345678\";\nSystem.out.println(numbers.substring(1, 3));\nSystem.out.println(numbers.substring(7, 7));\nSystem.out.println(numbers.substring(7));\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "12"
+      },
+      {
+        "letter": "B",
+        "text": "123"
+      },
+      {
+        "letter": "C",
+        "text": "7"
+      },
+      {
+        "letter": "D",
+        "text": "78"
+      },
+      {
+        "letter": "E",
+        "text": "A blank line."
+      },
+      {
+        "letter": "F",
+        "text": "An exception is thrown."
+      },
+      {
+        "letter": "G",
+        "text": "The code does not compile."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "A",
+        "D",
+        "E"
+      ],
+      "description": "substring() has two forms. The first takes the index to start with and the index to stop immediately before. The second takes just the index to start with and goes to the end of the String. Remember that indexes are zero based. The first call starts at index 1 and ends with index 2 since it needs to stop before index 3. The second call starts at index 7 and ends in the same place, resulting in an empty String. This prints out a blank line. The final call starts at index 7 and goes to the end of the String."
+    }
+  },
+  {
+    "idx": 9,
+    "text": "What is the result of the following code?\n<pre>\n3: String s = \"purr\";\n4: s.toUpperCase();\n5: s.trim();\n6: s.substring(1, 3);\n7: s += \" two\";\n8: System.out.println(s.length());\n</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "2"
+      },
+      {
+        "letter": "B",
+        "text": "4"
+      },
+      {
+        "letter": "C",
+        "text": "8"
+      },
+      {
+        "letter": "D",
+        "text": "10"
+      },
+      {
+        "letter": "E",
+        "text": "An exception is thrown."
+      },
+      {
+        "letter": "F",
+        "text": "The code does not compile."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "C"
+      ],
+      "description": "This question is trying to see if you know that String objects are immutable. Line 4 returns \"PURR\" but the result is ignored and not stored in s. Line 5 returns \"purr\" since there is no whitespace present but the result is again ignored. Line 6 returns \"ur\" because it starts with index 1 and ends before index 3 using zero-based indexes. The result is ignored again. Finally, on line 6 something happens. We concatenate four new characters to s and now have a String of length 8."
+    }
+  },
+  {
+    "idx": 10,
+    "text": "What is the result of the following code? (Choose all that apply)\n<pre>\n13: String a = \"\";\n14: a += 2;\n15: a += 'c';\n16: a += false;\n17: if ( a == \"2cfalse\") System.out.println(\"==\");\n18: if ( a.equals(\"2cfalse\")) System.out.println(\"equals\");\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Compile error on line 14."
+      },
+      {
+        "letter": "B",
+        "text": "Compile error on line 15."
+      },
+      {
+        "letter": "C",
+        "text": "Compile error on line 16."
+      },
+      {
+        "letter": "D",
+        "text": "Compile error on another line."
+      },
+      {
+        "letter": "E",
+        "text": "=="
+      },
+      {
+        "letter": "F",
+        "text": "equals"
+      },
+      {
+        "letter": "G",
+        "text": "An exception is thrown."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "F"
+      ],
+      "description": "a += 2 expands to a = a + 2. A String concatenated with any other type gives a String. Lines 14, 15, and 16 all append to a, giving a result of \"2cfalse\". The if statement on line 18 returns false because the values of the two String objects are the same using object equality. The if statement on line 17 returns false because the two String objects are not the same in memory. One comes directly from the string pool and the other comes from building using String operations."
+    }
+  },
+  {
+    "idx": 11,
+    "text": "What is the result of the following code?\n<pre>\n4: int total = 0;\n5: StringBuilder letters = new StringBuilder(\"abcdefg\");\n6: total += letters.substring(1, 2).length();\n7: total += letters.substring(6, 6).length();\n8: total += letters.substring(6, 5).length();\n9: System.out.println(total);\n</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "1"
+      },
+      {
+        "letter": "B",
+        "text": "2"
+      },
+      {
+        "letter": "C",
+        "text": "3"
+      },
+      {
+        "letter": "D",
+        "text": "7"
+      },
+      {
+        "letter": "E",
+        "text": "An exception is thrown."
+      },
+      {
+        "letter": "F",
+        "text": "The code does not compile."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "E"
+      ],
+      "description": "Line 6 adds 1 to total because substring() includes the starting index but not the ending index. Line 7 adds 0 to total. Line 8 is a problem: Java does not allow the indexes to be specified in reverse order and the code throws a StringIndexOutOfBoundsException."
+    }
+  },
+  {
+    "idx": 12,
+    "text": "What is the result of the following code? (Choose all that apply)\n<pre>\nStringBuilder numbers = new StringBuilder(\"0123456789\");\nnumbers.delete(2, 8);\nnumbers.append(\"-\").insert(2, \"+\");\nSystem.out.println(numbers);\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "01+89–"
+      },
+      {
+        "letter": "B",
+        "text": "012+9–"
+      },
+      {
+        "letter": "C",
+        "text": "012+–9"
+      },
+      {
+        "letter": "D",
+        "text": "0123456789"
+      },
+      {
+        "letter": "E",
+        "text": "An exception is thrown."
+      },
+      {
+        "letter": "F",
+        "text": "The code does not compile."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "A"
+      ],
+      "description": "First, we delete the characters at index 2 until the character one before index 8. At this point, 0189 is in numbers. The following line uses method chaining. It appends a dash to the end of the characters sequence, resulting in 0189–, and then inserts a plus sign at index 2, resulting in 01+89–."
+    }
+  },
+  {
+    "idx": 13,
+    "text": "What is the result of the following code?\n<pre>\nStringBuilder b = \"rumble\";\nb.append(4).deleteCharAt(3).delete(3, b.length() - 1);\nSystem.out.println(b);\n</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "rum"
+      },
+      {
+        "letter": "B",
+        "text": "rum4"
+      },
+      {
+        "letter": "C",
+        "text": "rumb4"
+      },
+      {
+        "letter": "D",
+        "text": "rumble4"
+      },
+      {
+        "letter": "E",
+        "text": "An exception is thrown."
+      },
+      {
+        "letter": "F",
+        "text": "The code does not compile."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "F"
+      ],
+      "description": "This is a trick question. The first line does not compile because you cannot assign a String to a StringBuilder. If that line were StringBuilder b = new StringBuilder(\"rumble\"), the code would compile and print rum4. Watch out for this sort of trick on the exam. You could easily spend a minute working out the character positions for no reason at all."
+    }
+  },
+  {
+    "idx": 14,
+    "text": "Which of the following can replace line 4 to print \"avaJ\"? (Choose all that apply)\n<pre>\n3: StringBuilder puzzle = new StringBuilder(\"Java\");\n4: // INSERT CODE HERE\n5: System.out.println(puzzle);\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "puzzle.reverse();"
+      },
+      {
+        "letter": "B",
+        "text": "puzzle.append(\"vaJ$\").substring(0, 4);"
+      },
+      {
+        "letter": "C",
+        "text": "puzzle.append(\"vaJ$\").delete(0, 3).deleteCharAt(puzzle.length() - 1);"
+      },
+      {
+        "letter": "D",
+        "text": "puzzle.append(\"vaJ$\").delete(0, 3).deleteCharAt(puzzle.length());"
+      },
+      {
+        "letter": "E",
+        "text": "None of the above."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "A",
+        "C"
+      ],
+      "description": "The reverse() method is the easiest way of reversing the characters in a StringBuilder; therefore, option A is correct. Option B is a nice distraction—it does in fact return \"avaJ\". However, substring() returns a String, which is not stored anywhere. Option C uses method chaining. First it creates the value \"JavavaJ$\". Then it removes the first three characters, resulting in \"avaJ$\". Finally, it removes the last character, resulting in \"avaJ\". Option D throws an exception because you cannot delete the character after the last index. Remember that deleteCharAt() uses indexes that are zero based and length() counts starting with 1."
+    }
+  },
+  {
+    "idx": 15,
+    "text": "Which of these array declarations is not legal? (Choose all that apply)",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "int[][] scores = new int[5][];"
+      },
+      {
+        "letter": "B",
+        "text": "Object[][][] cubbies = new Object[3][0][5];"
+      },
+      {
+        "letter": "C",
+        "text": "String beans[] = new beans[6];"
+      },
+      {
+        "letter": "D",
+        "text": "java.util.Date[] dates[] = new java.util.Date[2][];"
+      },
+      {
+        "letter": "E",
+        "text": "int[][] types = new int[];"
+      },
+      {
+        "letter": "F",
+        "text": "int[][] java = new int[][];"
+      }
+    ],
+    "correct": {
+      "letter": [
+        "C",
+        "E",
+        "F"
+      ],
+      "description": "Option C uses the variable name as if it were a type, which is clearly illegal. Options E and F don’t specify any size. Although it is legal to leave out the size for later dimensions of a multidimensional array, the first one is required. Option A declares a legal 2D array. Option B declares a legal 3D array. Option D declares a legal 2D array. Remember that it is normal to see on the exam types you might not have learned. You aren’t expected to know anything about them."
+    }
+  },
+  {
+    "idx": 16,
+    "text": "Which of these compile when replacing line 8? (Choose all that apply)\n<pre>\n7: char[]c = new char[2];\n8: // INSERT CODE HERE\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "int length = c.capacity;"
+      },
+      {
+        "letter": "B",
+        "text": "int length = c.capacity();"
+      },
+      {
+        "letter": "C",
+        "text": "int length = c.length;"
+      },
+      {
+        "letter": "D",
+        "text": "int length = c.length();"
+      },
+      {
+        "letter": "E",
+        "text": "int length = c.size;"
+      },
+      {
+        "letter": "F",
+        "text": "int length = c.size();"
+      },
+      {
+        "letter": "G",
+        "text": "None of the above."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "C"
+      ],
+      "description": "Arrays define a property called length. It is not a method, so parentheses are not allowed."
+    }
+  },
+  {
+    "idx": 17,
+    "text": "Which of these compile when replacing line 8? (Choose all that apply)\n<pre>\n7: ArrayList l = new ArrayList();\n8: // INSERT CODE HERE\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "int length = l.capacity;"
+      },
+      {
+        "letter": "B",
+        "text": "int length = l.capacity();"
+      },
+      {
+        "letter": "C",
+        "text": "int length = l.length;"
+      },
+      {
+        "letter": "D",
+        "text": "int length = l.length();"
+      },
+      {
+        "letter": "E",
+        "text": "int length = l.size;"
+      },
+      {
+        "letter": "F",
+        "text": "int length = l.size();"
+      },
+      {
+        "letter": "G",
+        "text": "None of the above."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "F"
+      ],
+      "description": "The ArrayList class defines a method called size()."
+    }
+  },
+  {
+    "idx": 18,
+    "text": "Which of the following are true? (Choose all that apply)",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "An array has a fixed size."
+      },
+      {
+        "letter": "B",
+        "text": "An ArrayList has a fixed size."
+      },
+      {
+        "letter": "C",
+        "text": "An array allows multiple dimensions."
+      },
+      {
+        "letter": "D",
+        "text": "An array is ordered."
+      },
+      {
+        "letter": "E",
+        "text": "An ArrayList is ordered."
+      },
+      {
+        "letter": "F",
+        "text": "An array is immutable."
+      },
+      {
+        "letter": "G",
+        "text": "An ArrayList is immutable."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "A",
+        "C",
+        "D",
+        "E"
+      ],
+      "description": "An array is not able to change size and can have multiple dimensions. Both an array and ArrayList are ordered and have indexes. Neither is immutable. The elements can change in value."
+    }
+  },
+  {
+    "idx": 19,
+    "text": "Which of the following are true? (Choose all that apply)",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Two arrays with the same content are equal."
+      },
+      {
+        "letter": "B",
+        "text": "Two ArrayLists with the same content are equal."
+      },
+      {
+        "letter": "C",
+        "text": "If you call remove(0) using an empty ArrayList object, it will compile successfully."
+      },
+      {
+        "letter": "D",
+        "text": "If you call remove(0) using an empty ArrayList object, it will run successfully."
+      },
+      {
+        "letter": "E",
+        "text": "None of the above."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "B",
+        "C"
+      ],
+      "description": "An array does not override equals() and so uses object equality. ArrayList does override equals() and defines it as the same elements in the same order. The compiler does not know when an index is out of bounds and thus can’t give you a compiler error. The code will throw an exception at runtime, though."
+    }
+  },
+  {
+    "idx": 20,
+    "text": "What is the result of the following statements?\n<pre>\n6: List&lt;String&gt; list = new ArrayList&lt;String&gt;();\n7: list.add(\"one\");\n8: list.add(\"two\");\n9: list.add(7);\n10: for(String s : list) System.out.print(s);\n</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "onetwo"
+      },
+      {
+        "letter": "B",
+        "text": "onetwo7"
+      },
+      {
+        "letter": "C",
+        "text": "onetwo followed by an exception"
+      },
+      {
+        "letter": "D",
+        "text": "Compiler error on line 9."
+      },
+      {
+        "letter": "E",
+        "text": "Compiler error on line 10."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "D"
+      ],
+      "description": "The code does not compile because list is instantiated using generics. Only String objects can be added to list and 7 is an int."
+    }
+  },
+  {
+    "idx": 21,
+    "text": "What is the result of the following statements?\n<pre>\n3: ArrayList&lt;Integer&gt; values = new ArrayList&lt;&gt;();\n4: values.add(4);\n5: values.add(5);\n6: values.set(1, 6);\n7: values.remove(0);\n8: for (Integer v : values) System.out.print(v);\n</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "4"
+      },
+      {
+        "letter": "B",
+        "text": "5"
+      },
+      {
+        "letter": "C",
+        "text": "6"
+      },
+      {
+        "letter": "D",
+        "text": "46"
+      },
+      {
+        "letter": "E",
+        "text": "45"
+      },
+      {
+        "letter": "F",
+        "text": "An exception is thrown."
+      },
+      {
+        "letter": "G",
+        "text": "The code does not compile."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "C"
+      ],
+      "description": "After line 4, values has one element (4). After line 5, values has two elements (4, 5). After line 6, values has two elements (4, 6) because set() does a replace. After line 7, values has only one element (6)."
+    }
+  },
+  {
+    "idx": 22,
+    "text": "What is the result of the following?\n<pre>\nint[] random = { 6, -4, 12, 0, -10 };\nint x = 12;\nint y = Arrays.binarySearch(random, x);\nSystem.out.println(y);\n</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "2"
+      },
+      {
+        "letter": "B",
+        "text": "4"
+      },
+      {
+        "letter": "C",
+        "text": "6"
+      },
+      {
+        "letter": "D",
+        "text": "The result is undefined."
+      },
+      {
+        "letter": "E",
+        "text": "An exception is thrown."
+      },
+      {
+        "letter": "F",
+        "text": "The code does not compile."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "D"
+      ],
+      "description": "The code compiles and runs fine. However, an array must be sorted for binarySearch() to return a meaningful result."
+    }
+  },
+  {
+    "idx": 23,
+    "text": "What is the result of the following?\n<pre>\n4: List&lt;Integer&gt; list = Arrays.asList(10, 4, -1, 5);\n5: Collections.sort(list);\n6: Integer array[] = list.toArray(new Integer[4]);\n7: System.out.println(array[0]);\n</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "–1"
+      },
+      {
+        "letter": "B",
+        "text": "10"
+      },
+      {
+        "letter": "C",
+        "text": "Compiler error on line 4."
+      },
+      {
+        "letter": "D",
+        "text": "Compiler error on line 5."
+      },
+      {
+        "letter": "E",
+        "text": "Compiler error on line 6."
+      },
+      {
+        "letter": "F",
+        "text": "An exception is thrown."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "A"
+      ],
+      "description": "Line 4 creates a fixed size array of size 4. Line 5 sorts it. Line 6 converts it back to an array. The brackets aren’t in the traditional place, but they are still legal. Line 7 prints the first element, which is now –1."
+    }
+  },
+  {
+    "idx": 24,
+    "text": "What is the result of the following?\n<pre>\n6: String [] names = {\"Tom\", \"Dick\", \"Harry\"};\n7: List&lt;String&gt; list = names.asList();\n8: list.set(0, \"Sue\");\n9: System.out.println(names[0]);\n</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Sue"
+      },
+      {
+        "letter": "B",
+        "text": "Tom"
+      },
+      {
+        "letter": "C",
+        "text": "Compiler error on line 7."
+      },
+      {
+        "letter": "D",
+        "text": "Compiler error on line 8."
+      },
+      {
+        "letter": "E",
+        "text": "An exception is thrown."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "C"
+      ],
+      "description": "Converting from an array to an ArrayList uses Arrays.asList(names). There is no asList() method on an array instance. If this code were corrected to compile, the answer would be option A."
+    }
+  },
+  {
+    "idx": 25,
+    "text": "What is the result of the following?\n<pre>\nList&lt;String&gt; hex = Arrays.asList(\"30\", \"8\", \"3A\", \"FF\");\nCollections.sort(hex);\nint x = Collections.binarySearch(hex, \"8\");\nint y = Collections.binarySearch(hex, \"3A\");\nint z = Collections.binarySearch(hex, \"4F\");\nSystem.out.println(x + \" \" + y + \" \" + z);\n</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "0 1 –2"
+      },
+      {
+        "letter": "B",
+        "text": "0 1 –3"
+      },
+      {
+        "letter": "C",
+        "text": "2 1 –2"
+      },
+      {
+        "letter": "D",
+        "text": "2 1 –3"
+      },
+      {
+        "letter": "E",
+        "text": "None of the above."
+      },
+      {
+        "letter": "F",
+        "text": "The code doesn’t compile."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "D"
+      ],
+      "description": "After sorting, hex contains [30, 3A, 8, FF]. Remember that numbers sort before letters and strings sort alphabetically. This makes 30 come before 8. A binary search correctly finds 8 at index 2 and 3A at index 1. It cannot find 4F but notices it should be at index 2. The rule when an item isn’t found is to negate that index and subtract 1. Therefore, we get –2–1, which is –3."
+    }
+  },
+  {
+    "idx": 26,
+    "text": "Which of the following are true statements about the following code? (Choose all that apply)\n<pre>\n4: List&lt;Integer&gt; ages = new ArrayList&lt;&gt;();\n5: ages.add(Integer.parseInt(\"5\"));\n6: ages.add(Integer.valueOf(\"6\"));\n7: ages.add(7);\n8: ages.add(null);\n9: for (int age : ages) System.out.print(age);\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "The code compiles."
+      },
+      {
+        "letter": "B",
+        "text": "The code throws a runtime exception."
+      },
+      {
+        "letter": "C",
+        "text": "Exactly one of the add statements uses autoboxing."
+      },
+      {
+        "letter": "D",
+        "text": "Exactly two of the add statements use autoboxing."
+      },
+      {
+        "letter": "E",
+        "text": "Exactly three of the add statements use autoboxing."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "A",
+        "B",
+        "D"
+      ],
+      "description": "Lines 5 and 7 use autoboxing to convert an int to an Integer. Line 6 does not because valueOf() returns an Integer. Line 8 does not because null is not an int. The code does not compile. However, when the for loop tries to unbox null into an int, it fails and throws a NullPointerException."
+    }
+  },
+  {
+    "idx": 27,
+    "text": "What is the result of the following?\n<pre>\nList&lt;String&gt; one = new ArrayList&lt;String&gt;();\none.add(\"abc\");\nList&lt;String&gt; two = new ArrayList&lt;&gt;();\ntwo.add(\"abc\");\nif (one == two)\n  System.out.println(\"A\");\nelse if (one.equals(two))\n  System.out.println(\"B\");\nelse\n  System.out.println(\"C\");\n</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "A"
+      },
+      {
+        "letter": "B",
+        "text": "B"
+      },
+      {
+        "letter": "C",
+        "text": "C"
+      },
+      {
+        "letter": "D",
+        "text": "An exception is thrown."
+      },
+      {
+        "letter": "E",
+        "text": "The code does not compile."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "B"
+      ],
+      "description": "The first if statement is false because the variables do not point to the same object. The second if statement is true because ArrayList implements equality to mean the same elements in the same order."
+    }
+  },
+  {
+    "idx": 28,
+    "text": "Which of the following can be inserted into the blank to create a date of June 21, 2014? (Choose all that apply)\n<pre>\nimport java.time.*;\npublic class StartOfSummer {\n  public static void main(String[] args) {\n    LocalDate date = ____________________________\n  }\n}\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "new LocalDate(2014, 5, 21);"
+      },
+      {
+        "letter": "B",
+        "text": "new LocalDate(2014, 6, 21);"
+      },
+      {
+        "letter": "C",
+        "text": "LocalDate.of(2014, 5, 21);"
+      },
+      {
+        "letter": "D",
+        "text": "LocalDate.of(2014, 6, 21);"
+      },
+      {
+        "letter": "E",
+        "text": "LocalDate.of(2014, Calendar.JUNE, 21);"
+      },
+      {
+        "letter": "F",
+        "text": "LocalDate.of(2014, Month.JUNE, 21);"
+      }
+    ],
+    "correct": {
+      "letter": [
+        "D",
+        "F"
+      ],
+      "description": "Options A and B are incorrect because LocalDate does not have a public constructor. Option C is incorrect because months start counting with 1 rather than 0. Option E is incorrect because it uses the old pre–Java 8 way of counting months, again beginning with 0. Options D and F are both correct ways of specifying the desired date."
+    }
+  },
+  {
+    "idx": 29,
+    "text": "What is the output of the following code?\n<pre>\nLocalDate date = LocalDate.parse(\"2018-04-30\", DateTimeFormatter.ISO_LOCAL_DATE);\ndate.plusDays(2);\ndate.plusHours(3);\nSystem.out.println(date.getYear() + \" \" + date.getMonth() + \" \" + date.getDayOfMonth());\n</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "2018 APRIL 2"
+      },
+      {
+        "letter": "B",
+        "text": "2018 APRIL 30"
+      },
+      {
+        "letter": "C",
+        "text": "2018 MAY 2"
+      },
+      {
+        "letter": "D",
+        "text": "The code does not compile."
+      },
+      {
+        "letter": "E",
+        "text": "A runtime exception is thrown."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "D"
+      ],
+      "description": "A LocalDate does not have a time element. Therefore, it has no method to add hours and the code does not compile."
+    }
+  },
+  {
+    "idx": 30,
+    "text": "What is the output of the following code?\n<pre>\nLocalDate date = LocalDate.of(2018, Month.APRIL, 40);\nSystem.out.println(date.getYear() + \" \" + date.getMonth() + \" \" + date.getDayOfMonth());\n</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "2018 APRIL 4"
+      },
+      {
+        "letter": "B",
+        "text": "2018 APRIL 30"
+      },
+      {
+        "letter": "C",
+        "text": "2018 MAY 10"
+      },
+      {
+        "letter": "D",
+        "text": "Another date."
+      },
+      {
+        "letter": "E",
+        "text": "The code does not compile."
+      },
+      {
+        "letter": "F",
+        "text": "A runtime exception is thrown."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "F"
+      ],
+      "description": "Java throws an exception if invalid date values are passed. There is no 40th day in April—or any other month for that matter."
+    }
+  },
+  {
+    "idx": 31,
+    "text": "What is the output of the following code?\n<pre>\nLocalDate date = LocalDate.of(2018, Month.APRIL, 30);\ndate.plusDays(2);\ndate.plusYears(3);\nSystem.out.println(date.getYear() + \" \" + date.getMonth() + \" \" + date.getDayOfMonth());\n</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "2018 APRIL 2"
+      },
+      {
+        "letter": "B",
+        "text": "2018 APRIL 30"
+      },
+      {
+        "letter": "C",
+        "text": "2018 MAY 2"
+      },
+      {
+        "letter": "D",
+        "text": "2021 APRIL 2"
+      },
+      {
+        "letter": "E",
+        "text": "2021 APRIL 30"
+      },
+      {
+        "letter": "F",
+        "text": "2021 MAY 2"
+      },
+      {
+        "letter": "G",
+        "text": "A runtime exception is thrown."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "B"
+      ],
+      "description": "The date starts out as April 30, 2018. Since dates are immutable and the plus methods have their return values ignored, the result is unchanged. Therefore, option B is correct."
+    }
+  },
+  {
+    "idx": 32,
+    "text": "What is the output of the following code?\n<pre>\nLocalDateTime d = LocalDateTime.of(2015, 5, 10, 11, 22, 33);\nPeriod p = Period.of(1, 2, 3);\nd = d.minus(p);\nDateTimeFormatter f = DateTimeFormatter.ofLocalizedTime(FormatStyle.SHORT);\nSystem.out.println(d.format(f));\n</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "3/7/14 11:22 AM"
+      },
+      {
+        "letter": "B",
+        "text": "5/10/15 11:22 AM"
+      },
+      {
+        "letter": "C",
+        "text": "3/7/14"
+      },
+      {
+        "letter": "D",
+        "text": "5/10/15"
+      },
+      {
+        "letter": "E",
+        "text": "11:22 AM"
+      },
+      {
+        "letter": "F",
+        "text": "The code does not compile."
+      },
+      {
+        "letter": "G",
+        "text": "A runtime exception is thrown."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "E"
+      ],
+      "description": "Even though d has both date and time, the formatter only outputs time."
+    }
+  },
+  {
+    "idx": 33,
+    "text": "What is the output of the following code?\n<pre>\nLocalDateTime d = LocalDateTime.of(2015, 5, 10, 11, 22, 33);\nPeriod p = Period.ofDays(1).ofYears(2);\nd = d.minus(p);\nDateTimeFormatter f = DateTimeFormatter.ofLocalizedDateTime(FormatStyle.SHORT);\nSystem.out.println(f.format(d));\n</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "5/9/13 11:22 AM"
+      },
+      {
+        "letter": "B",
+        "text": "5/10/13 11:22 AM"
+      },
+      {
+        "letter": "C",
+        "text": "5/9/14"
+      },
+      {
+        "letter": "D",
+        "text": "5/10/14"
+      },
+      {
+        "letter": "E",
+        "text": "The code does not compile."
+      },
+      {
+        "letter": "F",
+        "text": "A runtime exception is thrown."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "B"
+      ],
+      "description": "Period does not allow chaining. Only the last Period method called counts, so only the two years are subtracted."
+    }
+  }
+]  
+}
+
+,{ "chapter_name":"Chapter 04 : Methods and Encapsulation",
+  "questions" :  
+[
+  {
+    "idx": 1,
+    "text": "Which of the following can fill in the blank in this code to make it compile?\n(Choose all that apply)\n<pre>\npublic class Ant {\n  _____ void method() { }\n}\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "default"
+      },
+      {
+        "letter": "B",
+        "text": "final"
+      },
+      {
+        "letter": "C",
+        "text": "private"
+      },
+      {
+        "letter": "D",
+        "text": "Public"
+      },
+      {
+        "letter": "E",
+        "text": "String"
+      },
+      {
+        "letter": "F",
+        "text": "zzz:"
+      }
+    ],
+    "correct": {
+      "letter": [
+        "B",
+        "C"
+      ],
+      "description": "void is a return type. Only the access modifier or optional specifiers are allowed before the return type[cite: 88]. Option C is correct, creating a method with private access[cite: 89]. Option B is correct, creating a method with default access and the optional specifier final[cite: 90]. Since default access does not require a modifier, we get to jump right to final[cite: 91]. Option A is incorrect because default access omits the access modifier rather than specifying default[cite: 92]. Option D is incorrect because Java is case sensitive[cite: 93]. It would have been correct if public were the choice[cite: 93]. Option E is incorrect because the method already has a void return type[cite: 94]. Option F is incorrect because labels are not allowed for methods[cite: 95]."
+    }
+  },
+  {
+    "idx": 2,
+    "text": "Which of the following compile?\n(Choose all that apply)",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "<pre>final static void method4() { }</pre>"
+      },
+      {
+        "letter": "B",
+        "text": "<pre>public final int void method() { }</pre>"
+      },
+      {
+        "letter": "C",
+        "text": "<pre>private void int method() { }</pre>"
+      },
+      {
+        "letter": "D",
+        "text": "<pre>static final void method3() { }</pre>"
+      },
+      {
+        "letter": "E",
+        "text": "<pre>void final method() {}</pre>"
+      },
+      {
+        "letter": "F",
+        "text": "<pre>void public method() { }</pre>"
+      }
+    ],
+    "correct": {
+      "letter": [
+        "A",
+        "D"
+      ],
+      "description": "Options A and D are correct because the optional specifiers are allowed in any order[cite: 96]. Options B and C are incorrect because they each have two return types[cite: 97]. Options E and F are incorrect because the return type is before the optional specifier and access modifier, respectively[cite: 98]."
+    }
+  },
+  {
+    "idx": 3,
+    "text": "Which of the following methods compile?\n(Choose all that apply)",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "<pre>public void methodA() { return;}</pre>"
+      },
+      {
+        "letter": "B",
+        "text": "<pre>public void methodB() { return null;}</pre>"
+      },
+      {
+        "letter": "C",
+        "text": "<pre>public void methodD() {}</pre>"
+      },
+      {
+        "letter": "D",
+        "text": "<pre>public int methodD() { return 9;}</pre>"
+      },
+      {
+        "letter": "E",
+        "text": "<pre>public int methodE() { return 9.0;}</pre>"
+      },
+      {
+        "letter": "F",
+        "text": "<pre>public int methodF() { return;}</pre>"
+      },
+      {
+        "letter": "G",
+        "text": "<pre>public int methodG() { return null;}</pre>"
+      }
+    ],
+    "correct": {
+      "letter": [
+        "A",
+        "C",
+        "D"
+      ],
+      "description": "Options A and C are correct because a void method is allowed to have a return statement as long as it doesn’t try to return a value[cite: 99]. Options B and G do not compile because null requires a reference object as the return type [cite: 100]. void is not a reference object since it is a marker for no return type [cite: 101]. int is not a reference object since it is a primitive[cite: 102]. Option D is correct because it returns an int value[cite: 102]. Option E does not compile because it tries to return a double when the return type is int[cite: 103]. Since a double cannot be assigned to an int, it cannot be returned as one either[cite: 104]. Option F does not compile because no value is actually returned[cite: 105]."
+    }
+  },
+  {
+    "idx": 4,
+    "text": "Which of the following compile?\n(Choose all that apply)",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "<pre>public void moreA(int... nums) {}</pre>"
+      },
+      {
+        "letter": "B",
+        "text": "<pre>public void moreB(String values, int... nums) {}</pre>"
+      },
+      {
+        "letter": "C",
+        "text": "<pre>public void moreC(int... nums, String values) {}</pre>"
+      },
+      {
+        "letter": "D",
+        "text": "<pre>public void moreD(String... values, int... nums) {}</pre>"
+      },
+      {
+        "letter": "E",
+        "text": "<pre>public void moreE(String[] values, ...int nums) {}</pre>"
+      },
+      {
+        "letter": "F",
+        "text": "<pre>public void moreF(String... values, int[] nums) {}</pre>"
+      },
+      {
+        "letter": "G",
+        "text": "<pre>public void moreG(String[] values, int[] nums) {}</pre>"
+      }
+    ],
+    "correct": {
+      "letter": [
+        "A",
+        "B",
+        "G"
+      ],
+      "description": "Options A and B are correct because the single vararg parameter is the last parameter declared[cite: 106]. Option G is correct because it doesn’t use any vararg parameters at all[cite: 107]. Options C and F are incorrect because the vararg parameter is not last[cite: 108]. Option D is incorrect because two vararg parameters are not allowed in the same method[cite: 109]. Option E is incorrect because the ... for a vararg must be after the type, not before it[cite: 110]."
+    }
+  },
+  {
+    "idx": 5,
+    "text": "Given the following method, which of the method calls return 2?\n(Choose all that apply)\n<pre>\npublic int howMany(boolean b, boolean... b2) {\n  return b2.length;\n}\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "howMany();"
+      },
+      {
+        "letter": "B",
+        "text": "howMany(true);"
+      },
+      {
+        "letter": "C",
+        "text": "howMany(true, true);"
+      },
+      {
+        "letter": "D",
+        "text": "howMany(true, true, true);"
+      },
+      {
+        "letter": "E",
+        "text": "howMany(true, {true});"
+      },
+      {
+        "letter": "F",
+        "text": "howMany(true, {true, true});"
+      },
+      {
+        "letter": "G",
+        "text": "howMany(true, new boolean[2]);"
+      }
+    ],
+    "correct": {
+      "letter": [
+        "D",
+        "G"
+      ],
+      "description": "Option D passes the initial parameter plus two more to turn into a vararg array of size 2[cite: 111]. Option G passes the initial parameter plus an array of size 2[cite: 111]. Option A does not compile because it does not pass the initial parameter[cite: 111]. Options E and F do not compile because they do not declare an array properly[cite: 112]. It should be new boolean[] {true}[cite: 112]. Option B creates a vararg array of size 0 and option C creates a vararg array of size 1[cite: 113]."
+    }
+  },
+  {
+    "idx": 6,
+    "text": "Which of the following are true? (Choose all that apply)",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Package private access is more lenient than protected access."
+      },
+      {
+        "letter": "B",
+        "text": "A public class that has private fields and package private methods is not visible to classes outside the package."
+      },
+      {
+        "letter": "C",
+        "text": "You can use access modifiers so only some of the classes in a package see a particular package private class."
+      },
+      {
+        "letter": "D",
+        "text": "You can use access modifiers to allow read access to all methods, but not any instance variables."
+      },
+      {
+        "letter": "E",
+        "text": "You can use access modifiers to restrict read access to all classes that begin with the word Test."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "D"
+      ],
+      "description": "Option D is correct[cite: 113]. This is the common implementation for encapsulation by setting all fields to be private and all methods to be public[cite: 114]. Option A is incorrect because protected access allows everything that package private access allows and additionally allows subclasses access[cite: 115]. Option B is incorrect because the class is public[cite: 116]. This means that other classes can see the class[cite: 116]. However, they cannot call any of the methods or read any of the fields[cite: 117]. It is essentially a useless class[cite: 117]. Option C is incorrect because package private access applies to the whole package[cite: 118]. Option E is incorrect because Java has no such capability[cite: 119]."
+    }
+  },
+  {
+    "idx": 7,
+    "text": "Given the following my.school.ClassRoom and my.city.School class definitions, which line numbers in main() generate a compiler error?\n(Choose all that apply)\n<pre>\n1: package my.school;\n2: public class Classroom {\n3:   private int roomNumber;\n4:   protected String teacherName;\n5:   static int globalKey = 54321;\n6:   public int floor = 3;\n7:   Classroom(int r, String t) {\n8:     roomNumber = r;\n9:     teacherName = t; } }\n\n1: package my.city;\n2: import my.school.*;\n3: public class School {\n4:   public static void main(String[] args) {\n5:     System.out.println(Classroom.globalKey);\n6:     Classroom room = new Classroom(101, \"\"Mrs. Anderson\");\n7:     System.out.println(room.roomNumber);\n8:     System.out.println(room.floor);\n9:     System.out.println(room.teacherName); } }\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "None, the code compiles fine."
+      },
+      {
+        "letter": "B",
+        "text": "Line 5"
+      },
+      {
+        "letter": "C",
+        "text": "Line 6"
+      },
+      {
+        "letter": "D",
+        "text": "Line 7"
+      },
+      {
+        "letter": "E",
+        "text": "Line 8"
+      },
+      {
+        "letter": "F",
+        "text": "Line 9"
+      }
+    ],
+    "correct": {
+      "letter": [
+        "B",
+        "C",
+        "D",
+        "F"
+      ],
+      "description": "The two classes are in different packages, which means private access and default (package private) access will not compile[cite: 119]. Additionally, protected access will not compile since School does not inherit from Classroom[cite: 120]. Therefore, only line 8 will compile because it uses public access[cite: 121]."
+    }
+  },
+  {
+    "idx": 8,
+    "text": "Which of the following are true? (Choose all that apply)",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Encapsulation uses package private instance variables."
+      },
+      {
+        "letter": "B",
+        "text": "Encapsulation uses private instance variables."
+      },
+      {
+        "letter": "C",
+        "text": "Encapsulation allows setters."
+      },
+      {
+        "letter": "D",
+        "text": "Immutability uses package private instance variables."
+      },
+      {
+        "letter": "E",
+        "text": "Immutability uses private instance variables."
+      },
+      {
+        "letter": "F",
+        "text": "Immutability allows setters."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "B",
+        "C",
+        "E"
+      ],
+      "description": "Encapsulation requires using methods to get and set instance variables so other classes are not directly using them[cite: 122]. Instance variables must be private for this to work[cite: 123]. Immutability takes this a step further, allowing only getters, so the instance variables do not change state[cite: 123]."
+    }
+  },
+  {
+    "idx": 9,
+    "text": "Which are methods using JavaBeans naming conventions for accessors and mutators?\n(Choose all that apply)",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "<pre>public boolean getCanSwim() { return canSwim;}</pre>"
+      },
+      {
+        "letter": "B",
+        "text": "<pre>public boolean canSwim() { return numberWings;}</pre>"
+      },
+      {
+        "letter": "C",
+        "text": "<pre>public int getNumWings() { return numberWings;}</pre>"
+      },
+      {
+        "letter": "D",
+        "text": "<pre>public int numWings() { return numberWings;}</pre>"
+      },
+      {
+        "letter": "E",
+        "text": "<pre>public void setCanSwim(boolean b) { canSwim = b;}</pre>"
+      }
+    ],
+    "correct": {
+      "letter": [
+        "C",
+        "E"
+      ],
+      "description": "Option A is incorrect because the property is of type boolean and getters must begin with is for booleans[cite: 124]. Options B and D are incorrect because they don’t follow the naming convention of beginning with get/is/set[cite: 125]. Options C and E follow normal getter and setter conventions[cite: 126]."
+    }
+  },
+  {
+    "idx": 10,
+    "text": "What is the output of the following code?\n<pre>\n1: package rope;\n2: public class Rope {\n3:   public static int LENGTH = 5;\n4:   static {\n5:     LENGTH = 10;\n6:   }\n7:   public static void swing() {\n8:     System.out.print(\"swing \");\n9:   }\n10: }\n\n1: import rope.*;\n2: import static rope.Rope.*;\n3: public class Chimp {\n4:   public static void main(String[] args) {\n5:     Rope.swing();\n6:     new Rope().swing();\n7:     System.out.println(LENGTH);\n8:   }\n9: }\n</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "swing swing 5"
+      },
+      {
+        "letter": "B",
+        "text": "swing swing 10"
+      },
+      {
+        "letter": "C",
+        "text": "Compiler error on line 2 of Chimp."
+      },
+      {
+        "letter": "D",
+        "text": "Compiler error on line 5 of Chimp."
+      },
+      {
+        "letter": "E",
+        "text": "Compiler error on line 6 of Chimp."
+      },
+      {
+        "letter": "F",
+        "text": "Compiler error on line 7 of Chimp."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "B"
+      ],
+      "description": "Rope runs line 3, setting LENGTH to 5, then immediately after runs the static initializer, which sets it to 10[cite: 126]. Line 5 calls the static method normally and prints swing[cite: 126]. Line 6 also calls the static method[cite: 127]. Java allows calling a static method through an instance variable[cite: 127]. Line 7 uses the static import on line 2 to reference LENGTH[cite: 128]."
+    }
+  },
+  {
+    "idx": 11,
+    "text": "Which are true of the following code?\n(Choose all that apply)\n<pre>\n1: public class Rope {\n2:   public static void swing() {\n3:     System.out.print(\"swing \");\n4:   }\n5:   public void climb() {\n6:     System.out.println(\"climb \");\n7:   }\n8:   public static void play() {\n9:     swing();\n10:    climb();\n11:  }\n12:  public static void main(String[] args) {\n13:    Rope rope = new Rope();\n14:    rope.play();\n15:    Rope rope2 = null;\n16:    rope2.play();\n17:  }\n18: }\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "The code compiles as is."
+      },
+      {
+        "letter": "B",
+        "text": "There is exactly one compiler error in the code."
+      },
+      {
+        "letter": "C",
+        "text": "There are exactly two compiler errors in the code."
+      },
+      {
+        "letter": "D",
+        "text": "If the lines with compiler errors are removed, the output is climb climb."
+      },
+      {
+        "letter": "E",
+        "text": "If the lines with compiler errors are removed, the output is swing swing."
+      },
+      {
+        "letter": "F",
+        "text": "If the lines with compile errors are removed, the code throws a NullPointerException."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "B",
+        "E"
+      ],
+      "description": "Line 10 does not compile because static methods are not allowed to call instance methods[cite: 129]. Even though we are calling play() as if it were an instance method and an instance exists, Java knows play() is really a static method and treats it as such[cite: 130]. If line 10 is removed, the code works[cite: 131]. It does not throw a NullPointerException on line 16 because play() is a static method[cite: 131]. Java looks at the type of the reference for rope2 and translates the call to Rope.play()[cite: 132]."
+    }
+  },
+  {
+    "idx": 12,
+    "text": "What is the output of the following code?\n<pre>\nimport rope.*;\nimport static rope.Rope.*;\npublic class RopeSwing {\n  private static Rope rope1 = new Rope();\n  private static Rope rope2 = new Rope();\n  {\n    System.out.println(rope1.length);\n  }\n  public static void main(String[] args) {\n    rope1.length = 2;\n    rope2.length = 8;\n    System.out.println(rope1.length);\n  }\n}\n\npackage rope;\npublic class Rope {\n  public static int length = 0;\n}\n</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "02"
+      },
+      {
+        "letter": "B",
+        "text": "08"
+      },
+      {
+        "letter": "C",
+        "text": "2"
+      },
+      {
+        "letter": "D",
+        "text": "8"
+      },
+      {
+        "letter": "E",
+        "text": "The code does not compile."
+      },
+      {
+        "letter": "F",
+        "text": "An exception is thrown."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "D"
+      ],
+      "description": "There are two details to notice in this code[cite: 133]. First, note that RopeSwing has an instance initializer and not a static initializer[cite: 134]. Since RopeSwing is never constructed, the instance initializer does not run[cite: 135]. The other detail is that length is static[cite: 135]. Changes from one object update this common static variable[cite: 136]."
+    }
+  },
+  {
+    "idx": 13,
+    "text": "How many compiler errors are in the following code?\n<pre>\n1: public class RopeSwing {\n2:   private static final String leftRope;\n3:   private static final String rightRope;\n4:   private static final String bench;\n5:   private static final String name = \"name\";\n6:   static {\n7:     leftRope = \"left\";\n8:     rightRope = \"right\";\n9:   }\n10:  static {\n11:    name = \"name\";\n12:    rightRope = \"right\";\n13:  }\n14:  public static void main(String[] args) {\n15:    bench = \"bench\";\n16:  }\n17: }\n</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "0"
+      },
+      {
+        "letter": "B",
+        "text": "1"
+      },
+      {
+        "letter": "C",
+        "text": "2"
+      },
+      {
+        "letter": "D",
+        "text": "3"
+      },
+      {
+        "letter": "E",
+        "text": "4"
+      },
+      {
+        "letter": "F",
+        "text": "5"
+      }
+    ],
+    "correct": {
+      "letter": [
+        "E"
+      ],
+      "description": "static final variables must be set exactly once, and it must be in the declaration line or in a static initialization block[cite: 136]. Line 4 doesn’t compile because bench is not set in either of these locations[cite: 137]. Line 15 doesn’t compile because final variables are not allowed to be set after that point[cite: 138]. Line 11 doesn’t compile because name is set twice: once in the declaration and again in the static block[cite: 139]. Line 12 doesn’t compile because rightRope is set twice as well[cite: 140]. Both are in static initialization blocks[cite: 140]."
+    }
+  },
+  {
+    "idx": 14,
+    "text": "Which of the following can replace line 2 to make this code compile?\n(Choose all that apply)\n<pre>\n1: import java.util.*;\n2: // INSERT CODE HERE\n3: public class Imports {\n4:   public void method(ArrayList&lt;String&gt; list) {\n5:     sort(list);\n6:   }\n7: }\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "import static java.util.Collections;"
+      },
+      {
+        "letter": "B",
+        "text": "import static java.util.Collections.*;"
+      },
+      {
+        "letter": "C",
+        "text": "import static java.util.Collections.sort(ArrayList&lt;String&gt;);"
+      },
+      {
+        "letter": "D",
+        "text": "static import java.util.Collections;"
+      },
+      {
+        "letter": "E",
+        "text": "static import java.util.Collections.*;"
+      },
+      {
+        "letter": "F",
+        "text": "static import java.util.Collections.sort(ArrayList&lt;String&gt;);"
+      }
+    ],
+    "correct": {
+      "letter": [
+        "B"
+      ],
+      "description": "The two valid ways to do this are import static java.util.Collections.*; and import static java.util.Collections.sort;[cite: 141]. Option A is incorrect because you can only do a static import on static members[cite: 142]. Classes such as Collections require a regular import[cite: 143]. Option C is nonsense as method parameters have no business in an import[cite: 143]. Options D, E, and F try to trick you into reversing the syntax of import static[cite: 144]."
+    }
+  },
+  {
+    "idx": 15,
+    "text": "What is the result of the following statements?\n<pre>\n1: public class Test {\n2:   public void print(byte x) {\n3:     System.out.print(\"byte\");\n4:   }\n5:   public void print(int x) {\n6:     System.out.print(\"int\");\n7:   }\n8:   public void print(float x) {\n9:     System.out.print(\"float\");\n10:  }\n11:  public void print(Object x) {\n12:    System.out.print(\"Object\");\n13:  }\n14:  public static void main(String[] args) {\n15:    Test t = new Test();\n16:    short s = 123;\n17:    t.print(s);\n18:    t.print(true);\n19:    t.print(6.789);\n20:  }\n21: }\n</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "bytefloatObject"
+      },
+      {
+        "letter": "B",
+        "text": "intfloatObject"
+      },
+      {
+        "letter": "C",
+        "text": "byteObjectfloat"
+      },
+      {
+        "letter": "D",
+        "text": "intObjectfloat"
+      },
+      {
+        "letter": "E",
+        "text": "intObjectObject"
+      },
+      {
+        "letter": "F",
+        "text": "byteObjectObject"
+      }
+    ],
+    "correct": {
+      "letter": [
+        "E"
+      ],
+      "description": "The argument on line 17 is a short[cite: 145]. It can be promoted to an int, so print() on line 5 is invoked[cite: 146]. The argument on line 18 is a boolean[cite: 147]. It can be autoboxed to a boolean, so print() on line 11 is invoked[cite: 147]. The argument on line 19 is a double[cite: 148]. It can be autoboxed to a double, so print() on line 11 is invoked[cite: 148]. Therefore, the output is intObjectObject and the correct answer is option E[cite: 149]."
+    }
+  },
+  {
+    "idx": 16,
+    "text": "What is the result of the following program?\n<pre>\n1: public class Squares {\n2:   public static long square(int x) {\n3:     long y = x * (long) x;\n4:     x = -1;\n5:     return y;\n6:   }\n7:   public static void main(String[] args) {\n8:     int value = 9;\n9:     long result = square(value);\n10:    System.out.println(value);\n11:  } }\n</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "-1"
+      },
+      {
+        "letter": "B",
+        "text": "9"
+      },
+      {
+        "letter": "C",
+        "text": "81"
+      },
+      {
+        "letter": "D",
+        "text": "Compiler error on line 9."
+      },
+      {
+        "letter": "E",
+        "text": "Compiler error on a different line."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "B"
+      ],
+      "description": "Since Java is pass-by-value and the variable on line 8 never gets reassigned, it stays as 9[cite: 149]. In the method square, x starts as 9 [cite: 149]. y becomes 81 and then x gets set to –1[cite: 149]. Line 9 does set result to 81[cite: 150]. However, we are printing out value and that is still 9[cite: 150]."
+    }
+  },
+  {
+    "idx": 17,
+    "text": "Which of the following are output by the following code?\n(Choose all that apply)\n<pre>\npublic class StringBuilders {\n  public static StringBuilder work(StringBuilder a,\n    StringBuilder b) {\n    a = new StringBuilder(\"a\");\n    b.append(\"b\");\n    return a;\n  }\n  public static void main(String[] args) {\n    StringBuilder s1 = new StringBuilder(\"s1\");\n    StringBuilder s2 = new StringBuilder(\"s2\");\n    StringBuilder s3 = work(s1, s2);\n    System.out.println(\"s1 = \" + s1);\n    System.out.println(\"s2 = \" + s2);\n    System.out.println(\"s3 = \" + s3);\n  }\n}\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "s1 = a"
+      },
+      {
+        "letter": "B",
+        "text": "s1 = s1"
+      },
+      {
+        "letter": "C",
+        "text": "s2 = s2"
+      },
+      {
+        "letter": "D",
+        "text": "s2 = s2b"
+      },
+      {
+        "letter": "E",
+        "text": "s3 = a"
+      },
+      {
+        "letter": "F",
+        "text": "s3 = null"
+      },
+      {
+        "letter": "G",
+        "text": "The code does not compile."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "B",
+        "D",
+        "E"
+      ],
+      "description": "Since Java is pass-by-reference, assigning a new object to a does not change the caller[cite: 150]. Calling append() does affect the caller because both the method parameter and caller have a reference to the same object[cite: 151]. Finally, returning a value does pass the reference to the caller for assignment to s3[cite: 152]."
+    }
+  },
+  {
+    "idx": 18,
+    "text": "Which of the following are true? (Choose 2)",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "this() can be called from anywhere in a constructor."
+      },
+      {
+        "letter": "B",
+        "text": "this() can be called from any instance method in the class."
+      },
+      {
+        "letter": "C",
+        "text": "this.variableName can be called from any instance method in the class."
+      },
+      {
+        "letter": "D",
+        "text": "this.variableName can be called from any static method in the class."
+      },
+      {
+        "letter": "E",
+        "text": "You must include a default constructor in the code if the compiler does not include one."
+      },
+      {
+        "letter": "F",
+        "text": "You can call the default constructor written by the compiler using this()."
+      },
+      {
+        "letter": "G",
+        "text": "You can access a private constructor with the main() method."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "C",
+        "G"
+      ],
+      "description": "Since the main() method is in the same class, it can call private methods in the class [cite: 153]. this() may only be called as the first line of a constructor [cite: 154]. this.variableName can be called from any instance method to refer to an instance variable[cite: 155]. It cannot be called from a static method because there is no instance of the class to refer to[cite: 156]. Option F is tricky[cite: 157]. The default constructor is only written by the compiler if no user-defined constructors were provided [cite: 157]. this() can only be called from a constructor in the same class[cite: 158]. Since there can be no user-defined constructors in the class if a default constructor was created, it is impossible for option F to be true[cite: 159]."
+    }
+  },
+  {
+    "idx": 19,
+    "text": "Which of these classes compile and use a default constructor?\n(Choose all that apply)",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "public class Bird { }"
+      },
+      {
+        "letter": "B",
+        "text": "public class Bird { public bird() {} }"
+      },
+      {
+        "letter": "C",
+        "text": "public class Bird { public bird(String name) {} }"
+      },
+      {
+        "letter": "D",
+        "text": "public class Bird { public Bird() {} }"
+      },
+      {
+        "letter": "E",
+        "text": "public class Bird { Bird(String name) {} }"
+      },
+      {
+        "letter": "F",
+        "text": "public class Bird { private Bird(int age) {} }"
+      },
+      {
+        "letter": "G",
+        "text": "public class Bird { void Bird() { } }"
+      }
+    ],
+    "correct": {
+      "letter": [
+        "A",
+        "G"
+      ],
+      "description": "Options B and C don’t compile because the constructor name must match the classname[cite: 160]. Since Java is case sensitive, these don’t match[cite: 161]. Options D, E, and F all compile and provide one user-defined constructor[cite: 161]. Since a constructor is coded, a default constructor isn’t supplied[cite: 162]. Option G defines a method, but not a constructor[cite: 162]. Option A does not define a constructor, either[cite: 163]. Since no constructor is coded, a default constructor is provided for options A and G[cite: 163]."
+    }
+  },
+  {
+    "idx": 20,
+    "text": "Which code can be inserted to have the code print 2?\n<pre>\npublic class BirdSeed {\n  private int numberBags;\n  boolean call;\n  public BirdSeed() {\n    // LINE 1\n    call = false;\n    // LINE 2\n  }\n  public BirdSeed(int numberBags) {\n    this.numberBags = numberBags;\n  }\n  public static void main(String[] args) {\n    BirdSeed seed = new BirdSeed();\n    System.out.println(seed.numberBags);\n  } }\n</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Replace line 1 with BirdSeed(2);"
+      },
+      {
+        "letter": "B",
+        "text": "Replace line 2 with BirdSeed(2);"
+      },
+      {
+        "letter": "C",
+        "text": "Replace line 1 with new BirdSeed(2);"
+      },
+      {
+        "letter": "D",
+        "text": "Replace line 2 with new BirdSeed(2);"
+      },
+      {
+        "letter": "E",
+        "text": "Replace line 1 with this(2);"
+      },
+      {
+        "letter": "F",
+        "text": "Replace line 2 with this(2);"
+      }
+    ],
+    "correct": {
+      "letter": [
+        "E"
+      ],
+      "description": "Options A and B will not compile because constructors cannot be called without new[cite: 163]. Options C and D will compile but will create a new object rather than setting the fields in this one[cite: 164]. Option F will not compile because this() must be the first line of a constructor[cite: 165]. Option E is correct[cite: 165]."
+    }
+  },
+  {
+    "idx": 21,
+    "text": "Which of the following complete the constructor so that this code prints out 50?\n(Choose all that apply)\n<pre>\npublic class Cheetah {\n  int numSpots;\n  public Cheetah(int numSpots) {\n    // INSERT CODE HERE\n  }\n  public static void main(String[] args) {\n    System.out.println(new Cheetah(50).numSpots);\n  }\n}\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "numSpots = numSpots;"
+      },
+      {
+        "letter": "B",
+        "text": "numSpots = this.numSpots;"
+      },
+      {
+        "letter": "C",
+        "text": "this.numSpots = numSpots;"
+      },
+      {
+        "letter": "D",
+        "text": "numSpots = super.numSpots;"
+      },
+      {
+        "letter": "E",
+        "text": "super.numSpots = numSpots;"
+      },
+      {
+        "letter": "F",
+        "text": "None of the above."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "C"
+      ],
+      "description": "Within the constructor numSpots refers to the constructor parameter[cite: 166]. The instance variable is hidden because they have the same name [cite: 167]. this.numSpots tells Java to use the instance variable[cite: 167]. In the main() method, numSpots refers to the instance variable[cite: 168]. Option A sets the constructor parameter to itself, leaving the instance variable as 0[cite: 169]. Option B sets the constructor parameter to the value of the instance variable, making them both 0[cite: 169]. Option C is correct, setting the instance variable to the value of the constructor parameter[cite: 169]. Options D and E do not compile[cite: 170]."
+    }
+  },
+  {
+    "idx": 22,
+    "text": "What is the result of the following?\n<pre>\npublic class Order {\n  static String result = \"\";\n  { result += \"c\"; }\n  static\n  { result += \"u\"; }\n  { result += \"r\"; }\n}\n\npublic class OrderDriver {\n  public static void main(String[] args) {\n    System.out.print(Order.result + \" \");\n    System.out.print(Order.result + \" \");\n    new Order();\n    new Order();\n    System.out.print(Order.result + \" \");\n  }\n}\n</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "curur"
+      },
+      {
+        "letter": "B",
+        "text": "ucrcr"
+      },
+      {
+        "letter": "C",
+        "text": "u ucrcr"
+      },
+      {
+        "letter": "D",
+        "text": "u u curcur"
+      },
+      {
+        "letter": "E",
+        "text": "u u ucrcr"
+      },
+      {
+        "letter": "F",
+        "text": "ur ur urc"
+      },
+      {
+        "letter": "G",
+        "text": "The code does not compile."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "E"
+      ],
+      "description": "On line 3 of OrderDriver, we refer to Order for the first time[cite: 170]. At this point the statics in Order get initialized[cite: 171]. In this case, the statics are the static declaration of result and the static initializer [cite: 171]. result is u at this point[cite: 172]. On line 4, result is the same because the static initialization is only run once[cite: 172]. On line 5, we create a new Order, which triggers the instance initializers in the order they appear in the file[cite: 173]. Now result is ucr[cite: 174]. Line 6 creates another Order, triggering another set of initializers[cite: 174]. Now result is ucrcr[cite: 174]. Notice how the static is on a different line than the initialization code in lines 4–5 of Order[cite: 175]. The exam may try to trick you by formatting the code like this to confuse you[cite: 176]."
+    }
+  },
+  {
+    "idx": 23,
+    "text": "What is the result of the following?\n<pre>\n1: public class Order {\n2:   String value = \"t\";\n3:   { value += \"a\"; }\n4:   { value += \"c\"; }\n5:   public Order() {\n6:     value += \"b\";\n7:   }\n8:   public Order(String s) {\n9:     value += s;\n10:  }\n11:  public static void main(String[] args) {\n12:    Order order = new Order(\"f\");\n13:    order = new Order();\n14:    System.out.println(order.value);\n15:  } }\n</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "tacb"
+      },
+      {
+        "letter": "B",
+        "text": "tacf"
+      },
+      {
+        "letter": "C",
+        "text": "tacbf"
+      },
+      {
+        "letter": "D",
+        "text": "tacfb"
+      },
+      {
+        "letter": "E",
+        "text": "tacftacb"
+      },
+      {
+        "letter": "F",
+        "text": "The code does not compile."
+      },
+      {
+        "letter": "G",
+        "text": "An exception is thrown."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "A"
+      ],
+      "description": "Line 4 instantiates an Order[cite: 177]. Java runs the declarations and instance initializers first in the order they appear[cite: 177]. This sets value to tacf[cite: 178]. Line 5 creates another Order and initializes value to tacb[cite: 178]. The object on line 5 is stored in the same variable line 4 used[cite: 179]. This makes the object created on line 4 unreachable[cite: 180]. When value is printed, it is the instance variable in the object created on line 5[cite: 180]."
+    }
+  },
+  {
+    "idx": 24,
+    "text": "Which of the following will compile when inserted in the following code?\n(Choose all that apply)\n<pre>\npublic class Order3 {\n  final String value1 = \"1\";\n  static String value2 = \"2\";\n  String value3 = \"3\";\n  {\n    // CODE SNIPPET 1\n  }\n  static {\n    // CODE SNIPPET 2\n  }\n}\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "value1 = \"d\"; instead of // CODE SNIPPET 1"
+      },
+      {
+        "letter": "B",
+        "text": "value2 = \"e\"; instead of // CODE SNIPPET 1"
+      },
+      {
+        "letter": "C",
+        "text": "value3 = \"f\"; instead of // CODE SNIPPET 1"
+      },
+      {
+        "letter": "D",
+        "text": "value1 = \"g\"; instead of // CODE SNIPPET 2"
+      },
+      {
+        "letter": "E",
+        "text": "value2 = \"h\"; instead of // CODE SNIPPET 2"
+      },
+      {
+        "letter": "F",
+        "text": "value3 = \"i\"; instead of // CODE SNIPPET 2"
+      }
+    ],
+    "correct": {
+      "letter": [
+        "B",
+        "C",
+        "E"
+      ],
+      "description": "value1 is a final instance variable[cite: 180]. It can only be set once: in the variable declaration, an instance initializer, or a constructor[cite: 181]. Option A does not compile because the final variable was already set in the declaration [cite: 182]. value2 is a static variable[cite: 182]. Both instance and static initializers are able to access static variables, making options B and E correct [cite: 183]. value3 is an instance variable[cite: 183]. Options D and F do not compile because a static initializer does not have access to instance variables[cite: 184]."
+    }
+  },
+  {
+    "idx": 25,
+    "text": "Which of the following are true about the following code?\n(Choose all that apply)\n<pre>\npublic class Create {\n  Create() {\n    System.out.print(\"1 \");\n  }\n  Create(int num) {\n    System.out.print(\"2 \");\n  }\n  Create(Integer num) {\n    System.out.print(\"3 \");\n  }\n  Create(Object num) {\n    System.out.print(\"4 \");\n  }\n  Create(int... nums) {\n    System.out.print(\"5 \");\n  }\n  public static void main(String[] args) {\n    new Create(100);\n    new Create(1000L);\n  }\n}\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "The code prints out 2 4."
+      },
+      {
+        "letter": "B",
+        "text": "The code prints out 3 4."
+      },
+      {
+        "letter": "C",
+        "text": "The code prints out 4 2."
+      },
+      {
+        "letter": "D",
+        "text": "The code prints out 4 4."
+      },
+      {
+        "letter": "E",
+        "text": "The code prints 3 4 if you remove the constructor Create(int num)."
+      },
+      {
+        "letter": "F",
+        "text": "The code prints 4 4 if you remove the constructor Create(int num)."
+      },
+      {
+        "letter": "G",
+        "text": "The code prints 5 4 if you remove the constructor Create(int num)."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "A",
+        "E"
+      ],
+      "description": "The 100 parameter is an int and so calls the matching int constructor[cite: 185]. When this constructor is removed, Java looks for the next most specific constructor[cite: 186]. Java prefers autoboxing to varargs, and so chooses the Integer constructor[cite: 187]. The 100L parameter is a long[cite: 187]. Since it can’t be converted into a smaller type, it is autoboxed into a Long and then the constructor for Object is called[cite: 188]."
+    }
+  },
+  {
+    "idx": 26,
+    "text": "What is the result of the following class?\n<pre>\n1: import java.util.function.*;\n2:\n3: public class Panda {\n4:   int age;\n5:   public static void main(String[] args) {\n6:     Panda p1 = new Panda();\n7:     p1.age = 1;\n8:     check(p1, p -&gt; p.age &lt; 5);\n9:   }\n10:  private static void check(Panda panda, Predicate&lt;Panda&gt; pred) {\n11:    String result = pred.test(panda) ? \"match\" : \"not match\";\n12:    System.out.print(result);\n13:  } }\n</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "match"
+      },
+      {
+        "letter": "B",
+        "text": "not match"
+      },
+      {
+        "letter": "C",
+        "text": "Compiler error on line 8."
+      },
+      {
+        "letter": "D",
+        "text": "Compiler error on line 10."
+      },
+      {
+        "letter": "E",
+        "text": "Compiler error on line 11."
+      },
+      {
+        "letter": "F",
+        "text": "A runtime exception is thrown."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "A",
+        "E"
+      ],
+      "description": "This code is correct[cite: 189]. Line 8 creates a lambda expression that checks if the age is less than 5[cite: 189]. Since there is only one parameter and it does not specify a type, the parentheses around the type parameter are optional[cite: 189]. Line 10 uses the Predicate interface, which declares a test() method[cite: 190]."
+    }
+  },
+  {
+    "idx": 27,
+    "text": "What is the result of the following code?\n<pre>\n1: interface Climb {\n2:   boolean isTooHigh(int height, int limit);\n3: }\n4:\n5: public class Climber {\n6:   public static void main(String[] args) {\n7:     check((h, l) -&gt; h.append(l).isEmpty(), 5);\n8:   }\n9:   private static void check(Climb climb, int height) {\n10:    if (climb.isTooHigh(height, 10))\n11:      System.out.println(\"too high\");\n12:    else\n13:      System.out.println(\"ok\");\n14:  }\n15: }\n</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "ok"
+      },
+      {
+        "letter": "B",
+        "text": "too high"
+      },
+      {
+        "letter": "C",
+        "text": "Compiler error on line 7."
+      },
+      {
+        "letter": "D",
+        "text": "Compiler error on line 10."
+      },
+      {
+        "letter": "E",
+        "text": "Compiler error on a different line."
+      },
+      {
+        "letter": "F",
+        "text": "A runtime exception is thrown."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "C"
+      ],
+      "description": "The interface takes two int parameters[cite: 190]. The code on line 7 attempts to use them as if one is a StringBuilder[cite: 191]. It is tricky to use types in a lambda when they are implicitly specified[cite: 192]. Remember to check the interface for the real type[cite: 193]."
+    }
+  },
+  {
+    "idx": 28,
+    "text": "Which of the following lambda expressions can fill in the blank?\n(Choose all that apply)\n<pre>\nList&lt;String&gt; list = new ArrayList&lt;&gt;();\nlist.removeIf(___________________);\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "s -> s.isEmpty()"
+      },
+      {
+        "letter": "B",
+        "text": "s -> {s.isEmpty()}"
+      },
+      {
+        "letter": "C",
+        "text": "s -> {s.isEmpty();}"
+      },
+      {
+        "letter": "D",
+        "text": "s -> {return s.isEmpty();}"
+      },
+      {
+        "letter": "E",
+        "text": "String s -> s.isEmpty()"
+      },
+      {
+        "letter": "F",
+        "text": "(String s) -> s.isEmpty()"
+      }
+    ],
+    "correct": {
+      "letter": [
+        "A",
+        "D",
+        "F"
+      ],
+      "description": "removeIf() expects a Predicate, which takes a parameter list of one parameter using the specified type[cite: 193]. Options B and C are incorrect because they do not use the return keyword[cite: 194]. It is required inside braces for lambda bodies[cite: 195]. Option E is incorrect because it is missing the parentheses around the parameter list[cite: 195]. This is only optional for a single parameter with an inferred type[cite: 196]."
+    }
+  },
+  {
+    "idx": 29,
+    "text": "Which lambda can replace the MySecret class to return the same value?\n(Choose all that apply)\n<pre>\ninterface Secret {\n  String magic(double d);\n}\nclass MySecret implements Secret {\n  public String magic(double d) {\n    return \"Poof\";\n  }\n}\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "caller((e) -> \"Poof\");"
+      },
+      {
+        "letter": "B",
+        "text": "caller((e) -> {\"Poof\"});"
+      },
+      {
+        "letter": "C",
+        "text": "caller((e) -> { String e = \"\"; \"Poof\" });"
+      },
+      {
+        "letter": "D",
+        "text": "caller((e) -> { String e = \"\"; return \"Poof\"; });"
+      },
+      {
+        "letter": "E",
+        "text": "caller((e) -> { String e = \"\"; return \"Poof\" });"
+      },
+      {
+        "letter": "F",
+        "text": "caller((e) -> { String f = \"\"; return \"Poof\"; });"
+      }
+    ],
+    "correct": {
+      "letter": [
+        "A",
+        "F"
+      ],
+      "description": "Option B is incorrect because it does not use the return keyword[cite: 197]. Options C, D, and E are incorrect because the variable e is already in use from the lambda and cannot be redefined[cite: 198]. Additionally, option C is missing the return keyword and option E is missing the semicolon[cite: 199]."
+    }
+  }
+]  
+}
+,{ "chapter_name":"Chapter 05 : Class Design",
+  "questions" :  
+[
+  {
+    "idx": 1,
+    "text": "What modifiers are implicitly applied to all interface methods?\n(Choose all that apply)",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "protected"
+      },
+      {
+        "letter": "B",
+        "text": "public"
+      },
+      {
+        "letter": "C",
+        "text": "static"
+      },
+      {
+        "letter": "D",
+        "text": "void"
+      },
+      {
+        "letter": "E",
+        "text": "abstract"
+      },
+      {
+        "letter": "F",
+        "text": "default"
+      }
+    ],
+    "correct": {
+      "letter": [
+        "B"
+      ],
+      "description": "All interface methods are implicitly public, so option B is correct and option A is not[cite: 200]. Interface methods may be declared as static or default but are never implicitly added, so options C and F are incorrect[cite: 201]. Option D is incorrect—void is not a modifier; it is a return type[cite: 202]. Prior to Java 8 all interface methods would be assumed to be abstract[cite: 203]. Since Java 8 now includes default and static methods and they are never abstract, you cannot assume the abstract modifier will be implicitly applied to all methods by the compiler[cite: 204]."
+    }
+  },
+  {
+    "idx": 2,
+    "text": "What is the output of the following code?\n<pre>\n1: class Mammal {\n2:   public Mammal(int age) {\n3:     System.out.print(\"Mammal\");\n4:   }\n5: }\n6: public class Platypus extends Mammal {\n7:   public Platypus() {\n8:     System.out.print(\"Platypus\");\n9:   }\n10:  public static void main(String[] args) {\n11:    new Mammal(5);\n12:  }\n13: }\n</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Platypus"
+      },
+      {
+        "letter": "B",
+        "text": "Mammal"
+      },
+      {
+        "letter": "C",
+        "text": "PlatypusMammal"
+      },
+      {
+        "letter": "D",
+        "text": "MammalPlatypus"
+      },
+      {
+        "letter": "E",
+        "text": "The code will not compile because of line 8."
+      },
+      {
+        "letter": "F",
+        "text": "The code will not compile because of line 11."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "E"
+      ],
+      "description": "The code will not compile because the parent class Mammal doesn’t define a no-argument constructor, so the first line of a Platypus constructor should be an explicit call to super(int age)[cite: 205]. If there was such a call, then the output would be MammalPlatypus, since the super constructor is executed before the child constructor[cite: 206]."
+    }
+  },
+  {
+    "idx": 3,
+    "text": "Which of the following statements can be inserted in the blank line so that the code will compile successfully?\n(Choose all that apply)\n<pre>\npublic interface CanHop {}\npublic class Frog implements CanHop {\n  public static void main(String[] args) {\n    _________ frog = new TurtleFrog();\n  }\n}\npublic class BrazilianHornedFrog extends Frog {}\npublic class TurtleFrog extends Frog {}\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "<pre>Frog</pre>"
+      },
+      {
+        "letter": "B",
+        "text": "<pre>TurtleFrog</pre>"
+      },
+      {
+        "letter": "C",
+        "text": "<pre>BrazilianHornedFrog</pre>"
+      },
+      {
+        "letter": "D",
+        "text": "<pre>CanHop</pre>"
+      },
+      {
+        "letter": "E",
+        "text": "<pre>Object</pre>"
+      },
+      {
+        "letter": "F",
+        "text": "<pre>Long</pre>"
+      }
+    ],
+    "correct": {
+      "letter": [
+        "A",
+        "B",
+        "D",
+        "E"
+      ],
+      "description": "The blank can be filled with any class or interface that is a supertype of TurtleFrog[cite: 207]. Option A is a superclass of TurtleFrog, and option B is the same class, so both are correct[cite: 208]. BrazilianHornedFrog is not a superclass of TurtleFrog, so option C is incorrect[cite: 209]. TurtleFrog inherits the CanHope interface, so option D is correct[cite: 210]. All classes inherit Object, so option E is correct[cite: 210]. Finally, Long is an unrelated class that is not a superclass of TurtleFrog, and is therefore incorrect[cite: 211]."
+    }
+  },
+  {
+    "idx": 4,
+    "text": "Which statement(s) are correct about the following code?\n(Choose all that apply)\n<pre>\npublic class Rodent {\n  protected static Integer chew() throws Exception {\n    System.out.println(\"Rodent is chewing\");\n    return 1;\n  }\n}\npublic class Beaver extends Rodent {\n  public Number chew() throws RuntimeException {\n    System.out.println(\"Beaver is chewing on wood\");\n    return 2;\n  }\n}\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "It will compile without issue."
+      },
+      {
+        "letter": "B",
+        "text": "It fails to compile because the type of the exception the method throws is a subclass of the type of exception the parent method throws."
+      },
+      {
+        "letter": "C",
+        "text": "It fails to compile because the return types are not covariant."
+      },
+      {
+        "letter": "D",
+        "text": "It fails to compile because the method is protected in the parent class and public in the subclass."
+      },
+      {
+        "letter": "E",
+        "text": "It fails to compile because of a static modifier mismatch between the two methods."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "C",
+        "E"
+      ],
+      "description": "The code doesn’t compile, so option A is incorrect[cite: 212]. Option B is also not correct because the rules for overriding a method allow a subclass to define a method with an exception that is a subclass of the exception in the parent method[cite: 213]. Option C is correct because the return types are not covariant; in particular, Number is not a subclass of Integer[cite: 214]. Option D is incorrect because the subclass defines a method that is more accessible than the method in the parent class, which is allowed[cite: 215]. Finally, option E is correct because the method is declared as static in the parent class and not so in the child class[cite: 216]. For nonprivate methods in the parent class, both methods must use static (hide) or neither should use static (override)[cite: 217]."
+    }
+  },
+  {
+    "idx": 5,
+    "text": "Which of the following may only be hidden and not overridden?\n(Choose all that apply)",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "private instance methods"
+      },
+      {
+        "letter": "B",
+        "text": "protected instance methods"
+      },
+      {
+        "letter": "C",
+        "text": "public instance methods"
+      },
+      {
+        "letter": "D",
+        "text": "static methods"
+      },
+      {
+        "letter": "E",
+        "text": "public variables"
+      },
+      {
+        "letter": "F",
+        "text": "private variables"
+      }
+    ],
+    "correct": {
+      "letter": [
+        "A",
+        "D",
+        "E",
+        "F"
+      ],
+      "description": "Options B and C are incorrect because protected and public methods may be overridden, not hidden[cite: 218]. Option A is correct because private methods are always hidden in a subclass[cite: 219]. Option D is also correct because static methods cannot be overridden, only hidden[cite: 220]. Options E and F are correct because variables may only be hidden, regardless of the access modifier[cite: 221]."
+    }
+  },
+  {
+    "idx": 6,
+    "text": "Choose the correct statement about the following code:\n<pre>\n1: interface HasExoskeleton {\n2:   abstract int getNumberOfSections();\n3: }\n4: abstract class Insect implements HasExoskeleton {\n5:   abstract int getNumberOfLegs();\n6: }\n7: public class Beetle extends Insect {\n8:   int getNumberOfLegs() { return 6; }\n9: }\n</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "It compiles and runs without issue."
+      },
+      {
+        "letter": "B",
+        "text": "The code will not compile because of line 2."
+      },
+      {
+        "letter": "C",
+        "text": "The code will not compile because of line 4."
+      },
+      {
+        "letter": "D",
+        "text": "The code will not compile because of line 7."
+      },
+      {
+        "letter": "E",
+        "text": "It compiles but throws an exception at runtime."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "D"
+      ],
+      "description": "The code fails to compile because Beetle, the first concrete subclass, doesn’t implement getNumberOfSections(), which is inherited as an abstract method; therefore, option D is correct[cite: 222]. Option B is incorrect because there is nothing wrong with this interface method definition[cite: 223]. Option C is incorrect because an abstract class is not required to implement any abstract methods, including those inherited from an interface[cite: 224]. Option E is incorrect because the code fails at compilation-time[cite: 225]."
+    }
+  },
+  {
+    "idx": 7,
+    "text": "Which of the following statements about polymorphism are true?\n(Choose all that apply)",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "A reference to an object may be cast to a subclass of the object without an explicit cast."
+      },
+      {
+        "letter": "B",
+        "text": "If a method takes a superclass of three objects, then any of those classes may be passed as a parameter to the method."
+      },
+      {
+        "letter": "C",
+        "text": "A method that takes a parameter with type java.lang.Object will take any reference."
+      },
+      {
+        "letter": "D",
+        "text": "All cast exceptions can be detected at compile-time."
+      },
+      {
+        "letter": "E",
+        "text": "By defining a public instance method in the superclass, you guarantee that the specific method will be called in the parent class at runtime."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "B",
+        "C"
+      ],
+      "description": "A reference to an object requires an explicit cast if referenced with a subclass, so option A is incorrect[cite: 226]. If the cast is to a superclass reference, then an explicit cast is not required[cite: 227]. Because of polymorphic parameters, if a method takes the superclass of an object as a parameter, then any subclass references may be used without a cast, so option B is correct[cite: 228]. All objects extend java.lang.Object, so if a method takes that type, any valid object, including null, may be passed; therefore, option C is correct[cite: 229, 230]. Some cast exceptions can be detected as errors at compile-time, but others can only be detected at runtime, so D is incorrect[cite: 230]. Due to the nature of polymorphism, a public instance method can be overridden in a subclass and calls to it will be replaced even in the superclass it was defined, so E is incorrect[cite: 231]."
+    }
+  },
+  {
+    "idx": 8,
+    "text": "Choose the correct statement about the following code:\n<pre>\n1: public interface Herbivore {\n2:   int amount = 10;\n3:   public static void eatGrass();\n4:   public int chew() {\n5:     return 13;\n6:   }\n7: }\n</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "It compiles and runs without issue."
+      },
+      {
+        "letter": "B",
+        "text": "The code will not compile because of line 2."
+      },
+      {
+        "letter": "C",
+        "text": "The code will not compile because of line 3."
+      },
+      {
+        "letter": "D",
+        "text": "The code will not compile because of line 4."
+      },
+      {
+        "letter": "E",
+        "text": "The code will not compile because of lines 2 and 3."
+      },
+      {
+        "letter": "F",
+        "text": "The code will not compile because of lines 3 and 4."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "F"
+      ],
+      "description": "The interface variable amount is correctly declared, with public and static being assumed and automatically inserted by the compiler, so option B is incorrect[cite: 232]. The method declaration for eatGrass() on line 3 is incorrect because the method has been marked as static but no method body has been provided[cite: 233]. The method declaration for chew() on line 4 is also incorrect, since an interface method that provides a body must be marked as default or static explicitly[cite: 234]. Therefore, option F is the correct answer since this code contains two compile-time errors[cite: 235]."
+    }
+  },
+  {
+    "idx": 9,
+    "text": "Choose the correct statement about the following code:\n<pre>\n1: public interface CanFly {\n2:   void fly();\n3: }\n4: interface HasWings {\n5:   public abstract Object getWindSpan();\n6: }\n7: abstract class Falcon implements CanFly, HasWings {\n8: }\n</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "It compiles without issue."
+      },
+      {
+        "letter": "B",
+        "text": "The code will not compile because of line 2."
+      },
+      {
+        "letter": "C",
+        "text": "The code will not compile because of line 4."
+      },
+      {
+        "letter": "D",
+        "text": "The code will not compile because of line 5."
+      },
+      {
+        "letter": "E",
+        "text": "The code will not compile because of lines 2 and 5."
+      },
+      {
+        "letter": "F",
+        "text": "The code will not compile because the class Falcon doesn’t implement the interface methods."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "A"
+      ],
+      "description": "Although the definition of methods on lines 2 and 5 vary, both will be converted to public abstract by the compiler[cite: 236]. Line 4 is fine, because an interface can have public or default access[cite: 237]. Finally, the class Falcon doesn’t need to implement the interface methods because it is marked as abstract[cite: 238]. Therefore, the code will compile without issue[cite: 239]."
+    }
+  },
+  {
+    "idx": 10,
+    "text": "Which statements are true for both abstract classes and interfaces?\n(Choose all that apply)",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "All methods within them are assumed to be abstract."
+      },
+      {
+        "letter": "B",
+        "text": "Both can contain public static final variables."
+      },
+      {
+        "letter": "C",
+        "text": "Both can be extended using the extend keyword."
+      },
+      {
+        "letter": "D",
+        "text": "Both can contain default methods."
+      },
+      {
+        "letter": "E",
+        "text": "Both can contain static methods."
+      },
+      {
+        "letter": "F",
+        "text": "Neither can be instantiated directly."
+      },
+      {
+        "letter": "G",
+        "text": "Both inherit java.lang.Object."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "B",
+        "C",
+        "E",
+        "F"
+      ],
+      "description": "Option A is wrong, because an abstract class may contain concrete methods[cite: 239]. Since Java 8, interfaces may also contain concrete methods in form of static or default methods[cite: 240]. Although all variables in interfaces are assumed to be public static final, abstract classes may contain them as well, so option B is correct[cite: 241]. Both abstract classes and interfaces can be extended with the extends keyword, so option C is correct[cite: 242]. Only interfaces can contain default methods, so option D is incorrect[cite: 243]. Both abstract classes and interfaces can contain static methods, so option E is correct[cite: 244]. Both structures require a concrete subclass to be instantiated, so option F is correct[cite: 245]. Finally, though an instance of an object that implements an interface inherits java.lang.Object, the interface itself doesn’t; otherwise, Java would support multiple inheritance for objects, which it doesn’t[cite: 246, 247]."
+    }
+  },
+  {
+    "idx": 11,
+    "text": "What modifiers are assumed for all interface variables?\n(Choose all that apply)",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "public"
+      },
+      {
+        "letter": "B",
+        "text": "protected"
+      },
+      {
+        "letter": "C",
+        "text": "private"
+      },
+      {
+        "letter": "D",
+        "text": "static"
+      },
+      {
+        "letter": "E",
+        "text": "final"
+      },
+      {
+        "letter": "F",
+        "text": "abstract"
+      }
+    ],
+    "correct": {
+      "letter": [
+        "A",
+        "D",
+        "E"
+      ],
+      "description": "Interface variables are assumed to be public static final; therefore, options A, D, and E are correct[cite: 248]. Options B and C are incorrect because interface variables must be public—interfaces are implemented by classes, not inherited by interfaces[cite: 249]. Option F is incorrect because variables can never be abstract[cite: 250]."
+    }
+  },
+  {
+    "idx": 12,
+    "text": "What is the output of the following code?\n<pre>\n1: interface Nocturnal {\n2:   default boolean isBlind() { return true; }\n3: }\n4: public class Owl implements Nocturnal {\n5:   public boolean isBlind() { return false; }\n6:   public static void main(String[] args) {\n7:     Nocturnal nocturnal = (Nocturnal)new Owl();\n8:     System.out.println(nocturnal.isBlind());\n9:   }\n10: }\n</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "true"
+      },
+      {
+        "letter": "B",
+        "text": "false"
+      },
+      {
+        "letter": "C",
+        "text": "The code will not compile because of line 2."
+      },
+      {
+        "letter": "D",
+        "text": "The code will not compile because of line 5."
+      },
+      {
+        "letter": "E",
+        "text": "The code will not compile because of line 7."
+      },
+      {
+        "letter": "F",
+        "text": "The code will not compile because of line 8."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "B"
+      ],
+      "description": "This code compiles and runs without issue, outputting false, so option B is the correct answer[cite: 250]. The first declaration of isBlind() is as a default interface method, assumed public[cite: 251]. The second declaration of isBlind() correctly overrides the default interface method[cite: 252]. Finally, the newly created Owl instance may be automatically cast to a Nocturnal reference without an explicit cast, although adding it doesn’t break the code[cite: 253]."
+    }
+  },
+  {
+    "idx": 13,
+    "text": "What is the output of the following code?\n<pre>\n1: class Arthropod {\n2:   public void printName(double input) { System.out.print(\"Arthropod\"); }\n3: }\n4: public class Spider extends Arthropod {\n5:   public void printName(int input) { System.out.print(\"Spider\"); }\n6:   public static void main(String[] args) {\n7:     Spider spider = new Spider();\n8:     spider.printName(4);\n9:     spider.printName(9.0);\n10:  }\n11: }\n</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "SpiderArthropod"
+      },
+      {
+        "letter": "B",
+        "text": "ArthropodSpider"
+      },
+      {
+        "letter": "C",
+        "text": "SpiderSpider"
+      },
+      {
+        "letter": "D",
+        "text": "ArthropodArthropod"
+      },
+      {
+        "letter": "E",
+        "text": "The code will not compile because of line 5."
+      },
+      {
+        "letter": "F",
+        "text": "The code will not compile because of line 9."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "A"
+      ],
+      "description": "The code compiles and runs without issue, so options E and F are incorrect[cite: 254]. The printName() method is an overload in Spider, not an override, so both methods may be called[cite: 255]. The call on line 8 references the version that takes an int as input defined in the Spider class, and the call on line 9 references the version in the Arthropod class that takes a double[cite: 256]. Therefore, SpiderArthropod is output and option A is the correct answer[cite: 257]."
+    }
+  },
+  {
+    "idx": 14,
+    "text": "Which statements are true about the following code?\n(Choose all that apply)\n<pre>\n1: interface HasVocalCords {\n2:   public abstract void makeSound();\n3: }\n4: public interface CanBark extends HasVocalCords {\n5:   public void bark();\n6: }\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "The CanBark interface doesn’t compile."
+      },
+      {
+        "letter": "B",
+        "text": "A class that implements HasVocalCords must override the makeSound() method."
+      },
+      {
+        "letter": "C",
+        "text": "A class that implements CanBark inherits both the makeSound() and bark() methods."
+      },
+      {
+        "letter": "D",
+        "text": "A class that implements CanBark only inherits the bark() method."
+      },
+      {
+        "letter": "E",
+        "text": "An interface cannot extend another interface."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "C"
+      ],
+      "description": "The code compiles without issue, so option A is wrong[cite: 258]. Option B is incorrect, since an abstract class could implement HasVocalCords without the need to override the makeSound() method[cite: 259]. Option C is correct; any class that implements CanBark automatically inherits its methods, as well as any inherited methods defined in the parent interface[cite: 260]. Because option C is correct, it follows that option D is incorrect[cite: 261]. Finally, an interface can extend multiple interfaces, so option E is incorrect[cite: 262]."
+    }
+  },
+  {
+    "idx": 15,
+    "text": "Which of the following is true about a concrete subclass?\n(Choose all that apply)",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "A concrete subclass can be declared as abstract."
+      },
+      {
+        "letter": "B",
+        "text": "A concrete subclass must implement all inherited abstract methods."
+      },
+      {
+        "letter": "C",
+        "text": "A concrete subclass must implement all methods defined in an inherited interface."
+      },
+      {
+        "letter": "D",
+        "text": "A concrete subclass cannot be marked as final."
+      },
+      {
+        "letter": "E",
+        "text": "Abstract methods cannot be overridden by a concrete subclass."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "B"
+      ],
+      "description": "Concrete classes are, by definition, not abstract, so option A is incorrect[cite: 263]. A concrete class must implement all inherited abstract methods, so option B is correct[cite: 264]. Option C is incorrect; a superclass may have already implemented an inherited interface, so the concrete subclass would not need to implement the method[cite: 265]. Concrete classes can be both final and not final, so option D is incorrect[cite: 266]. Finally, abstract methods must be overridden by a concrete subclass, so option E is incorrect[cite: 267]."
+    }
+  },
+  {
+    "idx": 16,
+    "text": "What is the output of the following code?\n<pre>\n1: abstract class Reptile {\n2:   public final void layEggs() { System.out.println(\"Reptile laying eggs\"); }\n3:   public static void main(String[] args) {\n4:     Reptile reptile = new Lizard();\n5:     reptile.layEggs();\n6:   }\n7: }\n8: public class Lizard extends Reptile {\n9:   public void layEggs() { System.out.println(\"Lizard laying eggs\"); }\n10: }\n</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Reptile laying eggs"
+      },
+      {
+        "letter": "B",
+        "text": "Lizard laying eggs"
+      },
+      {
+        "letter": "C",
+        "text": "The code will not compile because of line 4."
+      },
+      {
+        "letter": "D",
+        "text": "The code will not compile because of line 5."
+      },
+      {
+        "letter": "E",
+        "text": "The code will not compile because of line 9."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "E"
+      ],
+      "description": "The code doesn’t compile, so options A and B are incorrect[cite: 268]. The issue with line 9 is that layEggs() is marked as final in the superclass Reptile, which means it cannot be overridden[cite: 269]. There are no errors on any other lines, so options C and D are incorrect[cite: 270]."
+    }
+  },
+  {
+    "idx": 17,
+    "text": "What is the output of the following code?\n<pre>\n1: public abstract class Whale {\n2:   public abstract void dive() {};\n3:   public static void main(String[] args) {\n4:     Whale whale = new Orca();\n5:     whale.dive();\n6:   }\n7: }\n8: class Orca extends Whale {\n9:   public void dive(int depth) { System.out.println(\"Orca diving\"); }\n10: }\n</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Orca diving"
+      },
+      {
+        "letter": "B",
+        "text": "The code will not compile because of line 2."
+      },
+      {
+        "letter": "C",
+        "text": "The code will not compile because of line 8."
+      },
+      {
+        "letter": "D",
+        "text": "The code will not compile because of line 9."
+      },
+      {
+        "letter": "E",
+        "text": "The output cannot be determined from the code provided."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "B"
+      ],
+      "description": "Line 2 contains an invalid definition of an abstract method. Abstract methods cannot contain a body, so the code will not compile and option B is the correct answer[cite: 272]. If the body {} was removed from line 2, the code would still not compile, although it would be line 8 that would throw the compilation error[cite: 273]. Since dive() in Whale is abstract and Orca extends Whale, then it must implement an overridden version of dive()[cite: 274]. The method on line 9 is an overloaded version of dive(), not an overridden version, so Orca is an invalid subclass and will not compile[cite: 275]."
+    }
+  },
+  {
+    "idx": 18,
+    "text": "What is the output of the following code? (Choose all that apply)\n<pre>\n1: interface Aquatic {\n2:   public default int getNumberOfGills(int input) { return 2; }\n3: }\n4: public class ClownFish implements Aquatic {\n5:   public String getNumberOfGills() { return \"4\"; }\n6:   public String getNumberOfGills(int input) { return \"6\"; }\n7:   public static void main(String[] args) {\n8:     System.out.println(new ClownFish().getNumberOfGills(-1));\n9:   }\n10: }\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "2"
+      },
+      {
+        "letter": "B",
+        "text": "4"
+      },
+      {
+        "letter": "C",
+        "text": "6"
+      },
+      {
+        "letter": "D",
+        "text": "The code will not compile because of line 5."
+      },
+      {
+        "letter": "E",
+        "text": "The code will not compile because of line 6."
+      },
+      {
+        "letter": "F",
+        "text": "The code will not compile because of line 8."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "E"
+      ],
+      "description": "The code doesn’t compile because line 6 contains an incompatible override of the getNumberOfGills(int input) method defined in the Aquatic interface[cite: 276]. In particular, int and String are not covariant returns types, since int is not a subclass of String[cite: 277]. Note that line 5 compiles without issue; getNumberOfGills() is an overloaded method that is not related to the parent interface method that takes an int value[cite: 278]."
+    }
+  },
+  {
+    "idx": 19,
+    "text": "Which of the following statements can be inserted in the blank so that the code will compile successfully?\n(Choose all that apply)\n<pre>\npublic class Snake {}\npublic class Cobra extends Snake {}\npublic class GardenSnake {}\npublic class SnakeHandler {\n  private Snake snake;\n  public void setSnake(Snake snake) { this.snake = snake; }\n  public static void main(String[] args) {\n    new SnakeHandler().setSnake(_________);\n  }\n}\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "<pre>new Cobra()</pre>"
+      },
+      {
+        "letter": "B",
+        "text": "<pre>new GardenSnake()</pre>"
+      },
+      {
+        "letter": "C",
+        "text": "<pre>new Snake()</pre>"
+      },
+      {
+        "letter": "D",
+        "text": "<pre>new Object()</pre>"
+      },
+      {
+        "letter": "E",
+        "text": "<pre>new String(\"Snake\")</pre>"
+      },
+      {
+        "letter": "F",
+        "text": "<pre>null</pre>"
+      }
+    ],
+    "correct": {
+      "letter": [
+        "A",
+        "C",
+        "F"
+      ],
+      "description": "Cobra is a subclass of Snake, so option A can be used[cite: 279]. GardenSnake is not defined as a subclass of Snake, so it cannot be used and option B is incorrect[cite: 280]. The class Snake is not marked as abstract, so it can be instantiated and passed, so option C is correct[cite: 281]. Object is a superclass of Snake, not a subclass, so it also cannot be used and option D is incorrect[cite: 282]. The class String is unrelated in this example, so option E is incorrect[cite: 283]. Finally, a null value can always be passed as an object value, regardless of type, so option F is correct[cite: 284]."
+    }
+  },
+  {
+    "idx": 20,
+    "text": "What is the result of the following code?\n<pre>\n1: public abstract class Bird {\n2:   private void fly() { System.out.println(\"Bird is flying\"); }\n3:   public static void main(String[] args) {\n4:     Bird bird = new Pelican();\n5:     bird.fly();\n6:   }\n7: }\n8: class Pelican extends Bird {\n9:   protected void fly() { System.out.println(\"Pelican is flying\"); }\n10: }\n</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Bird is flying"
+      },
+      {
+        "letter": "B",
+        "text": "Pelican is flying"
+      },
+      {
+        "letter": "C",
+        "text": "The code will not compile because of line 4."
+      },
+      {
+        "letter": "D",
+        "text": "The code will not compile because of line 5."
+      },
+      {
+        "letter": "E",
+        "text": "The code will not compile because of line 9."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "A"
+      ],
+      "description": "The code compiles and runs without issue, so options C, D, and E are incorrect[cite: 285]. The method fly() is marked as private in the parent class Bird, which means it may only be hidden, not overridden[cite: 286]. With hidden methods, the specific method used depends on where it is referenced[cite: 287]. Since it is referenced within the Bird class, the method declared on line 2 was used, and option A is correct[cite: 288]. Alternatively, if the method was referenced within the Pelican class, or if the method in the parent class was marked as protected and overridden in the subclass, then the method on line 9 would have been used[cite: 289]."
+    }
+  }
+]  
+}
+
+,{ "chapter_name":"Chapter 06 : Exceptions",
+  "questions" :  
+[
+  {
+    "idx": 1,
+    "text": "What modifiers are implicitly applied to all interface methods? (Choose all that apply)",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "protected"
+      },
+      {
+        "letter": "B",
+        "text": "public"
+      },
+      {
+        "letter": "C",
+        "text": "static"
+      },
+      {
+        "letter": "D",
+        "text": "void"
+      },
+      {
+        "letter": "E",
+        "text": "abstract"
+      },
+      {
+        "letter": "F",
+        "text": "default"
+      }
+    ],
+    "correct": {
+      "letter": [
+        "B"
+      ],
+      "description": "Runtime exceptions are also known as unchecked exceptions. They are allowed to be declared, but they don’t have to be. Checked exceptions must be handled or declared. Legally, you can handle java.lang.Error subclasses, but it’s not a good idea."
+    }
+  },
+  {
+    "idx": 2,
+    "text": "What is the output of the following code?\n<pre>\n1: class Mammal {\n2:   public Mammal(int age) {\n3:     System.out.print(\"Mammal\");\n4:   }\n5: }\n6: public class Platypus extends Mammal {\n7:   public Platypus() {\n8:     System.out.print(\"Platypus\");\n9:   }\n10:  public static void main(String[] args) {\n11:    new Mammal(5);\n12:  }\n13: }\n</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Platypus"
+      },
+      {
+        "letter": "B",
+        "text": "Mammal"
+      },
+      {
+        "letter": "C",
+        "text": "PlatypusMammal"
+      },
+      {
+        "letter": "D",
+        "text": "MammalPlatypus"
+      },
+      {
+        "letter": "E",
+        "text": "The code will not compile because of line 8."
+      },
+      {
+        "letter": "F",
+        "text": "The code will not compile because of line 11."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "B",
+        "D"
+      ],
+      "description": "In a method declaration, the keyword throws is used. To actually throw an exception, the keyword throw is used and a new exception is created."
+    }
+  },
+  {
+    "idx": 3,
+    "text": "Which of the following statements can be inserted in the blank line so that the code will compile successfully? (Choose all that apply)\n<pre>\npublic interface CanHop {}\npublic class Frog implements CanHop {\n  public static void main(String[] args) {\n    frog = new TurtleFrog();\n  }\n}\npublic class BrazilianHornedFrog extends Frog {}\npublic class TurtleFrog extends Frog {}\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Frog"
+      },
+      {
+        "letter": "B",
+        "text": "TurtleFrog"
+      },
+      {
+        "letter": "C",
+        "text": "BrazilianHornedFrog"
+      },
+      {
+        "letter": "D",
+        "text": "CanHop"
+      },
+      {
+        "letter": "E",
+        "text": "Object"
+      },
+      {
+        "letter": "F",
+        "text": "Long"
+      }
+    ],
+    "correct": {
+      "letter": [
+        "C"
+      ],
+      "description": "A try statement is required to have a catch clause and/or finally clause. If it goes the catch route, it is allowed to have multiple catch clauses."
+    }
+  },
+  {
+    "idx": 4,
+    "text": "Which statement(s) are correct about the following code? (Choose all that apply)\n<pre>\npublic class Rodent {\n  protected static Integer chew() throws Exception {\n    System.out.println(\"Rodent is chewing\");\n    return 1;\n  }\n}\npublic class Beaver extends Rodent {\n  public Number chew() throws RuntimeException {\n    System.out.println(\"Beaver is chewing on wood\");\n    return 2;\n  }\n}\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "It will compile without issue."
+      },
+      {
+        "letter": "B",
+        "text": "It fails to compile because the type of the exception the method throws is a subclass of the type of exception the parent method throws."
+      },
+      {
+        "letter": "C",
+        "text": "It fails to compile because the return types are not covariant."
+      },
+      {
+        "letter": "D",
+        "text": "It fails to compile because the method is protected in the parent class and public in the subclass."
+      },
+      {
+        "letter": "E",
+        "text": "It fails to compile because of a static modifier mismatch between the two methods."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "B"
+      ],
+      "description": "The second line tries to cast an Integer to a String. Since String does not extend Integer, this is not allowed and a ClassCastException is thrown."
+    }
+  },
+  {
+    "idx": 5,
+    "text": "Which of the following may only be hidden and not overridden? (Choose all that apply)",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "private instance methods"
+      },
+      {
+        "letter": "B",
+        "text": "protected instance methods"
+      },
+      {
+        "letter": "C",
+        "text": "public instance methods"
+      },
+      {
+        "letter": "D",
+        "text": "static methods"
+      },
+      {
+        "letter": "E",
+        "text": "public variables"
+      },
+      {
+        "letter": "F",
+        "text": "private variables"
+      }
+    ],
+    "correct": {
+      "letter": [
+        "A",
+        "B",
+        "D"
+      ],
+      "description": "java.io.IOException is thrown by many methods in the java.io package, but it is always thrown programmatically. The same is true for NumberFormatException; it is thrown programmatically by the wrapper classes of java.lang. The other three exceptions are all thrown by the JVM when the corresponding problem arises."
+    }
+  },
+  {
+    "idx": 6,
+    "text": "Choose the correct statement about the following code:\n<pre>\n1: interface HasExoskeleton {\n2:   abstract int getNumberOfSections();\n3: }\n4: abstract class Insect implements HasExoskeleton {\n5:   abstract int getNumberOfLegs();\n6: }\n7: public class Beetle extends Insect {\n8:   int getNumberOfLegs() { return 6; }\n9: }\n</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "It compiles and runs without issue."
+      },
+      {
+        "letter": "B",
+        "text": "The code will not compile because of line 2."
+      },
+      {
+        "letter": "C",
+        "text": "The code will not compile because of line 4."
+      },
+      {
+        "letter": "D",
+        "text": "The code will not compile because of line 7."
+      },
+      {
+        "letter": "E",
+        "text": "It compiles but throws an exception at runtime."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "C"
+      ],
+      "description": "The compiler tests the operation for a valid type but not a valid result, so the code will still compile and run. At runtime, evaluation of the parameter takes place before passing it to the print() method, so an ArithmeticException object is raised."
+    }
+  },
+  {
+    "idx": 7,
+    "text": "Which of the following statements about polymorphism are true? (Choose all that apply)",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "A reference to an object may be cast to a subclass of the object without an explicit cast."
+      },
+      {
+        "letter": "B",
+        "text": "If a method takes a superclass of three objects, then any of those classes may be passed as a parameter to the method."
+      },
+      {
+        "letter": "C",
+        "text": "A method that takes a parameter with type java.lang.Object will take any reference."
+      },
+      {
+        "letter": "D",
+        "text": "All cast exceptions can be detected at compile-time."
+      },
+      {
+        "letter": "E",
+        "text": "By defining a public instance method in the superclass, you guarantee that the specific method will be called in the parent class at runtime."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "C"
+      ],
+      "description": "The main() method invokes go and A is printed on line 3. The stop method is invoked and E is printed on line 14. Line 16 throws a NullPointerException, so stop immediately ends and line 17 doesn’t execute. The exception isn’t caught in go, so the go method ends as well, but not before its finally block executes and C is printed on line 9. Because main() doesn’t catch the exception, the stack trace displays and no further output occurs, so AEC was the output printed before the stack trace."
+    }
+  },
+  {
+    "idx": 8,
+    "text": "Choose the correct statement about the following code:\n<pre>\n1: public interface Herbivore {\n2:   int amount = 10;\n3:   public static void eatGrass();\n4:   public int chew() {\n5:     return 13;\n6:   }\n7: }\n</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "It compiles and runs without issue."
+      },
+      {
+        "letter": "B",
+        "text": "The code will not compile because of line 2."
+      },
+      {
+        "letter": "C",
+        "text": "The code will not compile because of line 3."
+      },
+      {
+        "letter": "D",
+        "text": "The code will not compile because of line 4."
+      },
+      {
+        "letter": "E",
+        "text": "The code will not compile because of lines 2 and 3."
+      },
+      {
+        "letter": "F",
+        "text": "The code will not compile because of lines 3 and 4."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "E"
+      ],
+      "description": "The order of catch blocks is important because they’re checked in the order they appear after the try block. Because ArithmeticException is a child class of RuntimeException, the catch block on line 7 is unreachable. (If an ArithmeticException is thrown in try try block, it will be caught on line 5.) Line 7 generates a compiler error because it is unreachable code."
+    }
+  },
+  {
+    "idx": 9,
+    "text": "Choose the correct statement about the following code:\n<pre>\n1: public interface CanFly {\n2:   void fly();\n3: }\n4: interface HasWings {\n5:   public abstract Object getWindSpan();\n6: }\n7: abstract class Falcon implements CanFly, HasWings {\n8: }\n</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "It compiles without issue."
+      },
+      {
+        "letter": "B",
+        "text": "The code will not compile because of line 2."
+      },
+      {
+        "letter": "C",
+        "text": "The code will not compile because of line 4."
+      },
+      {
+        "letter": "D",
+        "text": "The code will not compile because of line 5."
+      },
+      {
+        "letter": "E",
+        "text": "The code will not compile because of lines 2 and 5."
+      },
+      {
+        "letter": "F",
+        "text": "The code will not compile because the class Falcon doesn’t implement the interface methods."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "B"
+      ],
+      "description": "The main() method invokes start on a new Laptop object. Line 4 prints Starting up; then line 5 throws an Exception. Line 6 catches the exception, line 7 prints Problem, and then line 8 calls System.exit, which terminates the JVM. The finally block does not execute because the JVM is no longer running."
+    }
+  },
+  {
+    "idx": 10,
+    "text": "Which statements are true for both abstract classes and interfaces? (Choose all that apply)",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "All methods within them are assumed to be abstract."
+      },
+      {
+        "letter": "B",
+        "text": "Both can contain public static final variables."
+      },
+      {
+        "letter": "C",
+        "text": "Both can be extended using the extend keyword."
+      },
+      {
+        "letter": "D",
+        "text": "Both can contain default methods."
+      },
+      {
+        "letter": "E",
+        "text": "Both can contain static methods."
+      },
+      {
+        "letter": "F",
+        "text": "Neither can be instantiated directly."
+      },
+      {
+        "letter": "G",
+        "text": "Both inherit java.lang.Object."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "E"
+      ],
+      "description": "The parseName method is invoked within main() on a new Dog object. Line 4 prints 1. The try block executes and 2 is printed. Line 7 throws a NumberFormatException, so line 8 doesn’t execute. The exception is caught on line 9, and line 10 prints 4. Because the exception is handled, execution resumes normally. parseName runs to completion, and line 17 executes, printing 5. That’s the end of the program, so the output is 1245."
+    }
+  },
+  {
+    "idx": 11,
+    "text": "What modifiers are assumed for all interface variables? (Choose all that apply)",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "public"
+      },
+      {
+        "letter": "B",
+        "text": "protected"
+      },
+      {
+        "letter": "C",
+        "text": "private"
+      },
+      {
+        "letter": "D",
+        "text": "static"
+      },
+      {
+        "letter": "E",
+        "text": "final"
+      },
+      {
+        "letter": "F",
+        "text": "abstract"
+      }
+    ],
+    "correct": {
+      "letter": [
+        "A"
+      ],
+      "description": "The parseName method is invoked on a new Cat object. Line 4 prints 1. The try block is entered, and line 6 prints 2. Line 7 throws a NumberFormatException. It isn’t caught, so parseName ends. main() doesn’t catch the exception either, so the program terminates and the stack trace for the NumberFormatException is printed."
+    }
+  },
+  {
+    "idx": 12,
+    "text": "What is the output of the following code?\n<pre>\n1: interface Nocturnal {\n2:   default boolean isBlind() { return true; }\n3: }\n4: public class Owl implements Nocturnal {\n5:   public boolean isBlind() { return false; }\n6:   public static void main(String[] args) {\n7:     Nocturnal nocturnal = (Nocturnal)new Owl();\n8:     System.out.println(nocturnal.isBlind());\n9:   }\n10: }\n</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "true"
+      },
+      {
+        "letter": "B",
+        "text": "false"
+      },
+      {
+        "letter": "C",
+        "text": "The code will not compile because of line 2."
+      },
+      {
+        "letter": "D",
+        "text": "The code will not compile because of line 5."
+      },
+      {
+        "letter": "E",
+        "text": "The code will not compile because of line 7."
+      },
+      {
+        "letter": "F",
+        "text": "The code will not compile because of line 8."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "A",
+        "B",
+        "D",
+        "G"
+      ],
+      "description": "The main() method invokes run on a new Mouse object. Line 4 prints 1 and line 6 prints 2, so options A and B are correct. Line 7 throws a NullPointerException, which causes line 8 to be skipped, so C is incorrect. The exception is caught on line 9 and line 10 prints 4, so option D is correct. Line 11 throws the exception again, which causes run() to immediately end, so line 13 doesn’t execute and option E is incorrect. The main() method doesn’t catch the exception either, so line 18 doesn’t execute and option F is incorrect. The uncaught NullPointerException causes the stack trace to be printed, so option G is correct."
+    }
+  },
+  {
+    "idx": 13,
+    "text": "What is the output of the following code?\n<pre>\n1: class Arthropod {\n2:   public void printName(double input) { System.out.print(\"Arthropod\"); }\n3: }\n4: public class Spider extends Arthropod {\n5:   public void printName(int input) { System.out.print(\"Spider\"); }\n6:   public static void main(String[] args) {\n7:     Spider spider = new Spider();\n8:     spider.printName(4);\n9:     spider.printName(9.0);\n10:  }\n11: }\n</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "SpiderArthropod"
+      },
+      {
+        "letter": "B",
+        "text": "ArthropodSpider"
+      },
+      {
+        "letter": "C",
+        "text": "SpiderSpider"
+      },
+      {
+        "letter": "D",
+        "text": "ArthropodArthropod"
+      },
+      {
+        "letter": "E",
+        "text": "The code will not compile because of line 5."
+      },
+      {
+        "letter": "F",
+        "text": "The code will not compile because of line 9."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "A",
+        "B",
+        "C",
+        "E"
+      ],
+      "description": "Classes listed in the throws part of a method declaration must extend java.lang.Throwable. This includes Error, Exception, and RuntimeException. Arbitrary classes such as String can’t go there. Any Java type, including Exception, can be declared as the return type. However, this will simply return the object rather than throw an exception."
+    }
+  },
+  {
+    "idx": 14,
+    "text": "Which statements are true about the following code? (Choose all that apply)\n<pre>\n1: interface HasVocalCords {\n2:   public abstract void makeSound();\n3: }\n4: public interface CanBark extends HasVocalCords {\n5:   public void bark();\n6: }\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "The CanBark interface doesn’t compile."
+      },
+      {
+        "letter": "B",
+        "text": "A class that implements HasVocalCords must override the makeSound() method."
+      },
+      {
+        "letter": "C",
+        "text": "A class that implements CanBark inherits both the makeSound() and bark() methods."
+      },
+      {
+        "letter": "D",
+        "text": "A class that implements CanBark only inherits the bark() method."
+      },
+      {
+        "letter": "E",
+        "text": "An interface cannot extend another interface."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "A",
+        "C",
+        "D",
+        "E"
+      ],
+      "description": "A method that declares an exception isn’t required to throw one, making option A correct. Runtime exceptions can be thrown in any method, making options C and E correct. Option D matches the exception type declared and so is also correct. Option B is incorrect because a broader exception is not allowed."
+    }
+  },
+  {
+    "idx": 15,
+    "text": "Which of the following is true about a concrete subclass? (Choose all that apply)",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "A concrete subclass can be declared as abstract."
+      },
+      {
+        "letter": "B",
+        "text": "A concrete subclass must implement all inherited abstract methods."
+      },
+      {
+        "letter": "C",
+        "text": "A concrete subclass must implement all methods defined in an inherited interface."
+      },
+      {
+        "letter": "D",
+        "text": "A concrete subclass cannot be marked as final."
+      },
+      {
+        "letter": "E",
+        "text": "Abstract methods cannot be overridden by a concrete subclass."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "A",
+        "B",
+        "D",
+        "E"
+      ],
+      "description": "ArrayIndexOutOfBoundsException, IllegalArgumentException, and NumberFormatException are runtime exceptions. Sorry, you have to memorize them. Any class that extends RuntimeException is a runtime (unchecked) exception. Classes that extend Exception but not RuntimeException are checked exceptions."
+    }
+  },
+  {
+    "idx": 16,
+    "text": "What is the output of the following code?\n<pre>\n1: abstract class Reptile {\n2:   public final void layEggs() { System.out.println(\"Reptile laying eggs\"); }\n3:   public static void main(String[] args) {\n4:     Reptile reptile = new Lizard();\n5:     reptile.layEggs();\n6:   }\n7: }\n8: public class Lizard extends Reptile {\n9:   public void layEggs() { System.out.println(\"Lizard laying eggs\"); }\n10: }\n</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Reptile laying eggs"
+      },
+      {
+        "letter": "B",
+        "text": "Lizard laying eggs"
+      },
+      {
+        "letter": "C",
+        "text": "The code will not compile because of line 4."
+      },
+      {
+        "letter": "D",
+        "text": "The code will not compile because of line 5."
+      },
+      {
+        "letter": "E",
+        "text": "The code will not compile because of line 9."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "B"
+      ],
+      "description": "IllegalArgumentException is used when an unexpected parameter is passed into a method. Option A is incorrect because returning null or -1 is a common return value for this scenario. Option D is incorrect because a for loop is typically used for this scenario. Option E is incorrect because you should find out how to code the method and not leave it for the unsuspecting programmer who calls your method. Option C is incorrect because you should run!"
+    }
+  },
+  {
+    "idx": 17,
+    "text": "What is the output of the following code?\n<pre>\n1: public abstract class Whale {\n2:   public abstract void dive() {};\n3:   public static void main(String[] args) {\n4:     Whale whale = new Orca();\n5:     whale.dive();\n6:   }\n7: }\n8: class Orca extends Whale {\n9:   public void dive(int depth) { System.out.println(\"Orca diving\"); }\n10: }\n</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Orca diving"
+      },
+      {
+        "letter": "B",
+        "text": "The code will not compile because of line 2."
+      },
+      {
+        "letter": "C",
+        "text": "The code will not compile because of line 8."
+      },
+      {
+        "letter": "D",
+        "text": "The code will not compile because of line 9."
+      },
+      {
+        "letter": "E",
+        "text": "The output cannot be determined from the code provided."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "A",
+        "C",
+        "D",
+        "E"
+      ],
+      "description": "The method is allowed to throw no exceptions at all, making option A correct. It is also allowed to throw runtime exceptions, making options D and E correct. Option C is also correct since it matches the signature in the interface."
+    }
+  },
+  {
+    "idx": 18,
+    "text": "What is the output of the following code? (Choose all that apply)\n<pre>\n1: interface Aquatic {\n2:   public default int getNumberOfGills(int input) { return 2; }\n3: }\n4: public class ClownFish implements Aquatic {\n5:   public String getNumberOfGills() { return \"4\"; }\n6:   public String getNumberOfGills(int input) { return \"6\"; }\n7:   public static void main(String[] args) {\n8:     System.out.println(new ClownFish().getNumberOfGills(-1));\n9:   }\n10: }\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "2"
+      },
+      {
+        "letter": "B",
+        "text": "4"
+      },
+      {
+        "letter": "C",
+        "text": "6"
+      },
+      {
+        "letter": "D",
+        "text": "The code will not compile because of line 5."
+      },
+      {
+        "letter": "E",
+        "text": "The code will not compile because of line 6."
+      },
+      {
+        "letter": "F",
+        "text": "The code will not compile because of line 8."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "A",
+        "B",
+        "C",
+        "E"
+      ],
+      "description": "Checked exceptions are required to be handled or declared. Runtime exceptions are allowed to be handled or declared. Errors are allowed to be handled or declared, but this is bad practice."
+    }
+  },
+  {
+    "idx": 19,
+    "text": "Which of the following statements can be inserted in the blank so that the code will compile successfully? (Choose all that apply)\n<pre>\npublic class Snake {}\npublic class Cobra extends Snake {}\npublic class GardenSnake {}\npublic class SnakeHandler {\n  private Snake snake;\n  public void setSnake(Snake snake) { this.snake = snake; }\n  public static void main(String[] args) {\n    new SnakeHandler().setSnake( );\n  }\n}\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "new Cobra()"
+      },
+      {
+        "letter": "B",
+        "text": "new GardenSnake()"
+      },
+      {
+        "letter": "C",
+        "text": "new Snake()"
+      },
+      {
+        "letter": "D",
+        "text": "new Object()"
+      },
+      {
+        "letter": "E",
+        "text": "new String(\"Snake\")"
+      },
+      {
+        "letter": "F",
+        "text": "null"
+      }
+    ],
+    "correct": {
+      "letter": [
+        "C",
+        "E"
+      ],
+      "description": "Option C is allowed because it is a more specific type than RuntimeException. Option E is allowed because it isn’t in the same inheritance tree as RuntimeException. It’s not a good idea to catch either of these. Option B is not allowed because the method called inside the try block doesn’t declare an IOException to be thrown. The compiler realizes that IOException would be an unreachable catch block. Option D is not allowed because the same exception can’t be specified in two different catch blocks. Finally, option A is not allowed because it’s more general than RuntimeException and would make that block unreachable."
+    }
+  },
+  {
+    "idx": 20,
+    "text": "What is the result of the following code?\n<pre>\n1: public abstract class Bird {\n2:   private void fly() { System.out.println(\"Bird is flying\"); }\n3:   public static void main(String[] args) {\n4:     Bird bird = new Pelican();\n5:     bird.fly();\n6:   }\n7: }\n8: class Pelican extends Bird {\n9:   protected void fly() { System.out.println(\"Pelican is flying\"); }\n10: }\n</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Bird is flying"
+      },
+      {
+        "letter": "B",
+        "text": "Pelican is flying"
+      },
+      {
+        "letter": "C",
+        "text": "The code will not compile because of line 4."
+      },
+      {
+        "letter": "D",
+        "text": "The code will not compile because of line 5."
+      },
+      {
+        "letter": "E",
+        "text": "The code will not compile because of line 9."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "A",
+        "E"
+      ],
+      "description": "The code begins normally and prints a on line 13, followed by b on line 15. On line 16, it throws an exception that’s caught on line 17. Remember, only the most specific matching catch is run. Line 18 prints c, and then line 19 throws another exception. Regardless, the finally block runs, printing e. Since the finally block also throws an exception, that’s the one printed."
+    }
+  }
+]  
+}
+
+]
 }
 ]

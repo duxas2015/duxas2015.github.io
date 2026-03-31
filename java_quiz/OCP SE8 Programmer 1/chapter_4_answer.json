@@ -1,0 +1,288 @@
+[
+  {
+    "idx": 1,
+    "correct": {
+      "letter": [
+        "B",
+        "C"
+      ],
+      "description": "void is a return type. Only the access modifier or optional specifiers are allowed before the return type[cite: 88]. Option C is correct, creating a method with private access[cite: 89]. Option B is correct, creating a method with default access and the optional specifier final[cite: 90]. Since default access does not require a modifier, we get to jump right to final[cite: 91]. Option A is incorrect because default access omits the access modifier rather than specifying default[cite: 92]. Option D is incorrect because Java is case sensitive[cite: 93]. It would have been correct if public were the choice[cite: 93]. Option E is incorrect because the method already has a void return type[cite: 94]. Option F is incorrect because labels are not allowed for methods[cite: 95]."
+    }
+  },
+  {
+    "idx": 2,
+    "correct": {
+      "letter": [
+        "A",
+        "D"
+      ],
+      "description": "Options A and D are correct because the optional specifiers are allowed in any order[cite: 96]. Options B and C are incorrect because they each have two return types[cite: 97]. Options E and F are incorrect because the return type is before the optional specifier and access modifier, respectively[cite: 98]."
+    }
+  },
+  {
+    "idx": 3,
+    "correct": {
+      "letter": [
+        "A",
+        "C",
+        "D"
+      ],
+      "description": "Options A and C are correct because a void method is allowed to have a return statement as long as it doesn’t try to return a value[cite: 99]. Options B and G do not compile because null requires a reference object as the return type [cite: 100]. void is not a reference object since it is a marker for no return type [cite: 101]. int is not a reference object since it is a primitive[cite: 102]. Option D is correct because it returns an int value[cite: 102]. Option E does not compile because it tries to return a double when the return type is int[cite: 103]. Since a double cannot be assigned to an int, it cannot be returned as one either[cite: 104]. Option F does not compile because no value is actually returned[cite: 105]."
+    }
+  },
+  {
+    "idx": 4,
+    "correct": {
+      "letter": [
+        "A",
+        "B",
+        "G"
+      ],
+      "description": "Options A and B are correct because the single vararg parameter is the last parameter declared[cite: 106]. Option G is correct because it doesn’t use any vararg parameters at all[cite: 107]. Options C and F are incorrect because the vararg parameter is not last[cite: 108]. Option D is incorrect because two vararg parameters are not allowed in the same method[cite: 109]. Option E is incorrect because the ... for a vararg must be after the type, not before it[cite: 110]."
+    }
+  },
+  {
+    "idx": 5,
+    "correct": {
+      "letter": [
+        "D",
+        "G"
+      ],
+      "description": "Option D passes the initial parameter plus two more to turn into a vararg array of size 2[cite: 111]. Option G passes the initial parameter plus an array of size 2[cite: 111]. Option A does not compile because it does not pass the initial parameter[cite: 111]. Options E and F do not compile because they do not declare an array properly[cite: 112]. It should be new boolean[] {true}[cite: 112]. Option B creates a vararg array of size 0 and option C creates a vararg array of size 1[cite: 113]."
+    }
+  },
+  {
+    "idx": 6,
+    "correct": {
+      "letter": [
+        "D"
+      ],
+      "description": "Option D is correct[cite: 113]. This is the common implementation for encapsulation by setting all fields to be private and all methods to be public[cite: 114]. Option A is incorrect because protected access allows everything that package private access allows and additionally allows subclasses access[cite: 115]. Option B is incorrect because the class is public[cite: 116]. This means that other classes can see the class[cite: 116]. However, they cannot call any of the methods or read any of the fields[cite: 117]. It is essentially a useless class[cite: 117]. Option C is incorrect because package private access applies to the whole package[cite: 118]. Option E is incorrect because Java has no such capability[cite: 119]."
+    }
+  },
+  {
+    "idx": 7,
+    "correct": {
+      "letter": [
+        "B",
+        "C",
+        "D",
+        "F"
+      ],
+      "description": "The two classes are in different packages, which means private access and default (package private) access will not compile[cite: 119]. Additionally, protected access will not compile since School does not inherit from Classroom[cite: 120]. Therefore, only line 8 will compile because it uses public access[cite: 121]."
+    }
+  },
+  {
+    "idx": 8,
+    "correct": {
+      "letter": [
+        "B",
+        "C",
+        "E"
+      ],
+      "description": "Encapsulation requires using methods to get and set instance variables so other classes are not directly using them[cite: 122]. Instance variables must be private for this to work[cite: 123]. Immutability takes this a step further, allowing only getters, so the instance variables do not change state[cite: 123]."
+    }
+  },
+  {
+    "idx": 9,
+    "correct": {
+      "letter": [
+        "C",
+        "E"
+      ],
+      "description": "Option A is incorrect because the property is of type boolean and getters must begin with is for booleans[cite: 124]. Options B and D are incorrect because they don’t follow the naming convention of beginning with get/is/set[cite: 125]. Options C and E follow normal getter and setter conventions[cite: 126]."
+    }
+  },
+  {
+    "idx": 10,
+    "correct": {
+      "letter": [
+        "B"
+      ],
+      "description": "Rope runs line 3, setting LENGTH to 5, then immediately after runs the static initializer, which sets it to 10[cite: 126]. Line 5 calls the static method normally and prints swing[cite: 126]. Line 6 also calls the static method[cite: 127]. Java allows calling a static method through an instance variable[cite: 127]. Line 7 uses the static import on line 2 to reference LENGTH[cite: 128]."
+    }
+  },
+  {
+    "idx": 11,
+    "correct": {
+      "letter": [
+        "B",
+        "E"
+      ],
+      "description": "Line 10 does not compile because static methods are not allowed to call instance methods[cite: 129]. Even though we are calling play() as if it were an instance method and an instance exists, Java knows play() is really a static method and treats it as such[cite: 130]. If line 10 is removed, the code works[cite: 131]. It does not throw a NullPointerException on line 16 because play() is a static method[cite: 131]. Java looks at the type of the reference for rope2 and translates the call to Rope.play()[cite: 132]."
+    }
+  },
+  {
+    "idx": 12,
+    "correct": {
+      "letter": [
+        "D"
+      ],
+      "description": "There are two details to notice in this code[cite: 133]. First, note that RopeSwing has an instance initializer and not a static initializer[cite: 134]. Since RopeSwing is never constructed, the instance initializer does not run[cite: 135]. The other detail is that length is static[cite: 135]. Changes from one object update this common static variable[cite: 136]."
+    }
+  },
+  {
+    "idx": 13,
+    "correct": {
+      "letter": [
+        "E"
+      ],
+      "description": "static final variables must be set exactly once, and it must be in the declaration line or in a static initialization block[cite: 136]. Line 4 doesn’t compile because bench is not set in either of these locations[cite: 137]. Line 15 doesn’t compile because final variables are not allowed to be set after that point[cite: 138]. Line 11 doesn’t compile because name is set twice: once in the declaration and again in the static block[cite: 139]. Line 12 doesn’t compile because rightRope is set twice as well[cite: 140]. Both are in static initialization blocks[cite: 140]."
+    }
+  },
+  {
+    "idx": 14,
+    "correct": {
+      "letter": [
+        "B"
+      ],
+      "description": "The two valid ways to do this are import static java.util.Collections.*; and import static java.util.Collections.sort;[cite: 141]. Option A is incorrect because you can only do a static import on static members[cite: 142]. Classes such as Collections require a regular import[cite: 143]. Option C is nonsense as method parameters have no business in an import[cite: 143]. Options D, E, and F try to trick you into reversing the syntax of import static[cite: 144]."
+    }
+  },
+  {
+    "idx": 15,
+    "correct": {
+      "letter": [
+        "E"
+      ],
+      "description": "The argument on line 17 is a short[cite: 145]. It can be promoted to an int, so print() on line 5 is invoked[cite: 146]. The argument on line 18 is a boolean[cite: 147]. It can be autoboxed to a boolean, so print() on line 11 is invoked[cite: 147]. The argument on line 19 is a double[cite: 148]. It can be autoboxed to a double, so print() on line 11 is invoked[cite: 148]. Therefore, the output is intObjectObject and the correct answer is option E[cite: 149]."
+    }
+  },
+  {
+    "idx": 16,
+    "correct": {
+      "letter": [
+        "B"
+      ],
+      "description": "Since Java is pass-by-value and the variable on line 8 never gets reassigned, it stays as 9[cite: 149]. In the method square, x starts as 9 [cite: 149]. y becomes 81 and then x gets set to –1[cite: 149]. Line 9 does set result to 81[cite: 150]. However, we are printing out value and that is still 9[cite: 150]."
+    }
+  },
+  {
+    "idx": 17,
+    "correct": {
+      "letter": [
+        "B",
+        "D",
+        "E"
+      ],
+      "description": "Since Java is pass-by-reference, assigning a new object to a does not change the caller[cite: 150]. Calling append() does affect the caller because both the method parameter and caller have a reference to the same object[cite: 151]. Finally, returning a value does pass the reference to the caller for assignment to s3[cite: 152]."
+    }
+  },
+  {
+    "idx": 18,
+    "correct": {
+      "letter": [
+        "C",
+        "G"
+      ],
+      "description": "Since the main() method is in the same class, it can call private methods in the class [cite: 153]. this() may only be called as the first line of a constructor [cite: 154]. this.variableName can be called from any instance method to refer to an instance variable[cite: 155]. It cannot be called from a static method because there is no instance of the class to refer to[cite: 156]. Option F is tricky[cite: 157]. The default constructor is only written by the compiler if no user-defined constructors were provided [cite: 157]. this() can only be called from a constructor in the same class[cite: 158]. Since there can be no user-defined constructors in the class if a default constructor was created, it is impossible for option F to be true[cite: 159]."
+    }
+  },
+  {
+    "idx": 19,
+    "correct": {
+      "letter": [
+        "A",
+        "G"
+      ],
+      "description": "Options B and C don’t compile because the constructor name must match the classname[cite: 160]. Since Java is case sensitive, these don’t match[cite: 161]. Options D, E, and F all compile and provide one user-defined constructor[cite: 161]. Since a constructor is coded, a default constructor isn’t supplied[cite: 162]. Option G defines a method, but not a constructor[cite: 162]. Option A does not define a constructor, either[cite: 163]. Since no constructor is coded, a default constructor is provided for options A and G[cite: 163]."
+    }
+  },
+  {
+    "idx": 20,
+    "correct": {
+      "letter": [
+        "E"
+      ],
+      "description": "Options A and B will not compile because constructors cannot be called without new[cite: 163]. Options C and D will compile but will create a new object rather than setting the fields in this one[cite: 164]. Option F will not compile because this() must be the first line of a constructor[cite: 165]. Option E is correct[cite: 165]."
+    }
+  },
+  {
+    "idx": 21,
+    "correct": {
+      "letter": [
+        "C"
+      ],
+      "description": "Within the constructor numSpots refers to the constructor parameter[cite: 166]. The instance variable is hidden because they have the same name [cite: 167]. this.numSpots tells Java to use the instance variable[cite: 167]. In the main() method, numSpots refers to the instance variable[cite: 168]. Option A sets the constructor parameter to itself, leaving the instance variable as 0[cite: 169]. Option B sets the constructor parameter to the value of the instance variable, making them both 0[cite: 169]. Option C is correct, setting the instance variable to the value of the constructor parameter[cite: 169]. Options D and E do not compile[cite: 170]."
+    }
+  },
+  {
+    "idx": 22,
+    "correct": {
+      "letter": [
+        "E"
+      ],
+      "description": "On line 3 of OrderDriver, we refer to Order for the first time[cite: 170]. At this point the statics in Order get initialized[cite: 171]. In this case, the statics are the static declaration of result and the static initializer [cite: 171]. result is u at this point[cite: 172]. On line 4, result is the same because the static initialization is only run once[cite: 172]. On line 5, we create a new Order, which triggers the instance initializers in the order they appear in the file[cite: 173]. Now result is ucr[cite: 174]. Line 6 creates another Order, triggering another set of initializers[cite: 174]. Now result is ucrcr[cite: 174]. Notice how the static is on a different line than the initialization code in lines 4–5 of Order[cite: 175]. The exam may try to trick you by formatting the code like this to confuse you[cite: 176]."
+    }
+  },
+  {
+    "idx": 23,
+    "correct": {
+      "letter": [
+        "A"
+      ],
+      "description": "Line 4 instantiates an Order[cite: 177]. Java runs the declarations and instance initializers first in the order they appear[cite: 177]. This sets value to tacf[cite: 178]. Line 5 creates another Order and initializes value to tacb[cite: 178]. The object on line 5 is stored in the same variable line 4 used[cite: 179]. This makes the object created on line 4 unreachable[cite: 180]. When value is printed, it is the instance variable in the object created on line 5[cite: 180]."
+    }
+  },
+  {
+    "idx": 24,
+    "correct": {
+      "letter": [
+        "B",
+        "C",
+        "E"
+      ],
+      "description": "value1 is a final instance variable[cite: 180]. It can only be set once: in the variable declaration, an instance initializer, or a constructor[cite: 181]. Option A does not compile because the final variable was already set in the declaration [cite: 182]. value2 is a static variable[cite: 182]. Both instance and static initializers are able to access static variables, making options B and E correct [cite: 183]. value3 is an instance variable[cite: 183]. Options D and F do not compile because a static initializer does not have access to instance variables[cite: 184]."
+    }
+  },
+  {
+    "idx": 25,
+    "correct": {
+      "letter": [
+        "A",
+        "E"
+      ],
+      "description": "The 100 parameter is an int and so calls the matching int constructor[cite: 185]. When this constructor is removed, Java looks for the next most specific constructor[cite: 186]. Java prefers autoboxing to varargs, and so chooses the Integer constructor[cite: 187]. The 100L parameter is a long[cite: 187]. Since it can’t be converted into a smaller type, it is autoboxed into a Long and then the constructor for Object is called[cite: 188]."
+    }
+  },
+  {
+    "idx": 26,
+    "correct": {
+      "letter": [
+        "A",
+        "E"
+      ],
+      "description": "This code is correct[cite: 189]. Line 8 creates a lambda expression that checks if the age is less than 5[cite: 189]. Since there is only one parameter and it does not specify a type, the parentheses around the type parameter are optional[cite: 189]. Line 10 uses the Predicate interface, which declares a test() method[cite: 190]."
+    }
+  },
+  {
+    "idx": 27,
+    "correct": {
+      "letter": [
+        "C"
+      ],
+      "description": "The interface takes two int parameters[cite: 190]. The code on line 7 attempts to use them as if one is a StringBuilder[cite: 191]. It is tricky to use types in a lambda when they are implicitly specified[cite: 192]. Remember to check the interface for the real type[cite: 193]."
+    }
+  },
+  {
+    "idx": 28,
+    "correct": {
+      "letter": [
+        "A",
+        "D",
+        "F"
+      ],
+      "description": "removeIf() expects a Predicate, which takes a parameter list of one parameter using the specified type[cite: 193]. Options B and C are incorrect because they do not use the return keyword[cite: 194]. It is required inside braces for lambda bodies[cite: 195]. Option E is incorrect because it is missing the parentheses around the parameter list[cite: 195]. This is only optional for a single parameter with an inferred type[cite: 196]."
+    }
+  },
+  {
+    "idx": 29,
+    "correct": {
+      "letter": [
+        "A",
+        "F"
+      ],
+      "description": "Option B is incorrect because it does not use the return keyword[cite: 197]. Options C, D, and E are incorrect because the variable e is already in use from the lambda and cannot be redefined[cite: 198]. Additionally, option C is missing the return keyword and option E is missing the semicolon[cite: 199]."
+    }
+  }
+]

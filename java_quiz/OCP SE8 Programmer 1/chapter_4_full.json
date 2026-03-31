@@ -1,0 +1,1124 @@
+[
+  {
+    "idx": 1,
+    "text": "Which of the following can fill in the blank in this code to make it compile?\n(Choose all that apply)\n<pre>\npublic class Ant {\n  _____ void method() { }\n}\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "default"
+      },
+      {
+        "letter": "B",
+        "text": "final"
+      },
+      {
+        "letter": "C",
+        "text": "private"
+      },
+      {
+        "letter": "D",
+        "text": "Public"
+      },
+      {
+        "letter": "E",
+        "text": "String"
+      },
+      {
+        "letter": "F",
+        "text": "zzz:"
+      }
+    ],
+    "correct": {
+      "letter": [
+        "B",
+        "C"
+      ],
+      "description": "void is a return type. Only the access modifier or optional specifiers are allowed before the return type[cite: 88]. Option C is correct, creating a method with private access[cite: 89]. Option B is correct, creating a method with default access and the optional specifier final[cite: 90]. Since default access does not require a modifier, we get to jump right to final[cite: 91]. Option A is incorrect because default access omits the access modifier rather than specifying default[cite: 92]. Option D is incorrect because Java is case sensitive[cite: 93]. It would have been correct if public were the choice[cite: 93]. Option E is incorrect because the method already has a void return type[cite: 94]. Option F is incorrect because labels are not allowed for methods[cite: 95]."
+    }
+  },
+  {
+    "idx": 2,
+    "text": "Which of the following compile?\n(Choose all that apply)",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "<pre>final static void method4() { }</pre>"
+      },
+      {
+        "letter": "B",
+        "text": "<pre>public final int void method() { }</pre>"
+      },
+      {
+        "letter": "C",
+        "text": "<pre>private void int method() { }</pre>"
+      },
+      {
+        "letter": "D",
+        "text": "<pre>static final void method3() { }</pre>"
+      },
+      {
+        "letter": "E",
+        "text": "<pre>void final method() {}</pre>"
+      },
+      {
+        "letter": "F",
+        "text": "<pre>void public method() { }</pre>"
+      }
+    ],
+    "correct": {
+      "letter": [
+        "A",
+        "D"
+      ],
+      "description": "Options A and D are correct because the optional specifiers are allowed in any order[cite: 96]. Options B and C are incorrect because they each have two return types[cite: 97]. Options E and F are incorrect because the return type is before the optional specifier and access modifier, respectively[cite: 98]."
+    }
+  },
+  {
+    "idx": 3,
+    "text": "Which of the following methods compile?\n(Choose all that apply)",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "<pre>public void methodA() { return;}</pre>"
+      },
+      {
+        "letter": "B",
+        "text": "<pre>public void methodB() { return null;}</pre>"
+      },
+      {
+        "letter": "C",
+        "text": "<pre>public void methodD() {}</pre>"
+      },
+      {
+        "letter": "D",
+        "text": "<pre>public int methodD() { return 9;}</pre>"
+      },
+      {
+        "letter": "E",
+        "text": "<pre>public int methodE() { return 9.0;}</pre>"
+      },
+      {
+        "letter": "F",
+        "text": "<pre>public int methodF() { return;}</pre>"
+      },
+      {
+        "letter": "G",
+        "text": "<pre>public int methodG() { return null;}</pre>"
+      }
+    ],
+    "correct": {
+      "letter": [
+        "A",
+        "C",
+        "D"
+      ],
+      "description": "Options A and C are correct because a void method is allowed to have a return statement as long as it doesn’t try to return a value[cite: 99]. Options B and G do not compile because null requires a reference object as the return type [cite: 100]. void is not a reference object since it is a marker for no return type [cite: 101]. int is not a reference object since it is a primitive[cite: 102]. Option D is correct because it returns an int value[cite: 102]. Option E does not compile because it tries to return a double when the return type is int[cite: 103]. Since a double cannot be assigned to an int, it cannot be returned as one either[cite: 104]. Option F does not compile because no value is actually returned[cite: 105]."
+    }
+  },
+  {
+    "idx": 4,
+    "text": "Which of the following compile?\n(Choose all that apply)",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "<pre>public void moreA(int... nums) {}</pre>"
+      },
+      {
+        "letter": "B",
+        "text": "<pre>public void moreB(String values, int... nums) {}</pre>"
+      },
+      {
+        "letter": "C",
+        "text": "<pre>public void moreC(int... nums, String values) {}</pre>"
+      },
+      {
+        "letter": "D",
+        "text": "<pre>public void moreD(String... values, int... nums) {}</pre>"
+      },
+      {
+        "letter": "E",
+        "text": "<pre>public void moreE(String[] values, ...int nums) {}</pre>"
+      },
+      {
+        "letter": "F",
+        "text": "<pre>public void moreF(String... values, int[] nums) {}</pre>"
+      },
+      {
+        "letter": "G",
+        "text": "<pre>public void moreG(String[] values, int[] nums) {}</pre>"
+      }
+    ],
+    "correct": {
+      "letter": [
+        "A",
+        "B",
+        "G"
+      ],
+      "description": "Options A and B are correct because the single vararg parameter is the last parameter declared[cite: 106]. Option G is correct because it doesn’t use any vararg parameters at all[cite: 107]. Options C and F are incorrect because the vararg parameter is not last[cite: 108]. Option D is incorrect because two vararg parameters are not allowed in the same method[cite: 109]. Option E is incorrect because the ... for a vararg must be after the type, not before it[cite: 110]."
+    }
+  },
+  {
+    "idx": 5,
+    "text": "Given the following method, which of the method calls return 2?\n(Choose all that apply)\n<pre>\npublic int howMany(boolean b, boolean... b2) {\n  return b2.length;\n}\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "howMany();"
+      },
+      {
+        "letter": "B",
+        "text": "howMany(true);"
+      },
+      {
+        "letter": "C",
+        "text": "howMany(true, true);"
+      },
+      {
+        "letter": "D",
+        "text": "howMany(true, true, true);"
+      },
+      {
+        "letter": "E",
+        "text": "howMany(true, {true});"
+      },
+      {
+        "letter": "F",
+        "text": "howMany(true, {true, true});"
+      },
+      {
+        "letter": "G",
+        "text": "howMany(true, new boolean[2]);"
+      }
+    ],
+    "correct": {
+      "letter": [
+        "D",
+        "G"
+      ],
+      "description": "Option D passes the initial parameter plus two more to turn into a vararg array of size 2[cite: 111]. Option G passes the initial parameter plus an array of size 2[cite: 111]. Option A does not compile because it does not pass the initial parameter[cite: 111]. Options E and F do not compile because they do not declare an array properly[cite: 112]. It should be new boolean[] {true}[cite: 112]. Option B creates a vararg array of size 0 and option C creates a vararg array of size 1[cite: 113]."
+    }
+  },
+  {
+    "idx": 6,
+    "text": "Which of the following are true? (Choose all that apply)",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Package private access is more lenient than protected access."
+      },
+      {
+        "letter": "B",
+        "text": "A public class that has private fields and package private methods is not visible to classes outside the package."
+      },
+      {
+        "letter": "C",
+        "text": "You can use access modifiers so only some of the classes in a package see a particular package private class."
+      },
+      {
+        "letter": "D",
+        "text": "You can use access modifiers to allow read access to all methods, but not any instance variables."
+      },
+      {
+        "letter": "E",
+        "text": "You can use access modifiers to restrict read access to all classes that begin with the word Test."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "D"
+      ],
+      "description": "Option D is correct[cite: 113]. This is the common implementation for encapsulation by setting all fields to be private and all methods to be public[cite: 114]. Option A is incorrect because protected access allows everything that package private access allows and additionally allows subclasses access[cite: 115]. Option B is incorrect because the class is public[cite: 116]. This means that other classes can see the class[cite: 116]. However, they cannot call any of the methods or read any of the fields[cite: 117]. It is essentially a useless class[cite: 117]. Option C is incorrect because package private access applies to the whole package[cite: 118]. Option E is incorrect because Java has no such capability[cite: 119]."
+    }
+  },
+  {
+    "idx": 7,
+    "text": "Given the following my.school.ClassRoom and my.city.School class definitions, which line numbers in main() generate a compiler error?\n(Choose all that apply)\n<pre>\n1: package my.school;\n2: public class Classroom {\n3:   private int roomNumber;\n4:   protected String teacherName;\n5:   static int globalKey = 54321;\n6:   public int floor = 3;\n7:   Classroom(int r, String t) {\n8:     roomNumber = r;\n9:     teacherName = t; } }\n\n1: package my.city;\n2: import my.school.*;\n3: public class School {\n4:   public static void main(String[] args) {\n5:     System.out.println(Classroom.globalKey);\n6:     Classroom room = new Classroom(101, \"\"Mrs. Anderson\");\n7:     System.out.println(room.roomNumber);\n8:     System.out.println(room.floor);\n9:     System.out.println(room.teacherName); } }\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "None, the code compiles fine."
+      },
+      {
+        "letter": "B",
+        "text": "Line 5"
+      },
+      {
+        "letter": "C",
+        "text": "Line 6"
+      },
+      {
+        "letter": "D",
+        "text": "Line 7"
+      },
+      {
+        "letter": "E",
+        "text": "Line 8"
+      },
+      {
+        "letter": "F",
+        "text": "Line 9"
+      }
+    ],
+    "correct": {
+      "letter": [
+        "B",
+        "C",
+        "D",
+        "F"
+      ],
+      "description": "The two classes are in different packages, which means private access and default (package private) access will not compile[cite: 119]. Additionally, protected access will not compile since School does not inherit from Classroom[cite: 120]. Therefore, only line 8 will compile because it uses public access[cite: 121]."
+    }
+  },
+  {
+    "idx": 8,
+    "text": "Which of the following are true? (Choose all that apply)",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Encapsulation uses package private instance variables."
+      },
+      {
+        "letter": "B",
+        "text": "Encapsulation uses private instance variables."
+      },
+      {
+        "letter": "C",
+        "text": "Encapsulation allows setters."
+      },
+      {
+        "letter": "D",
+        "text": "Immutability uses package private instance variables."
+      },
+      {
+        "letter": "E",
+        "text": "Immutability uses private instance variables."
+      },
+      {
+        "letter": "F",
+        "text": "Immutability allows setters."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "B",
+        "C",
+        "E"
+      ],
+      "description": "Encapsulation requires using methods to get and set instance variables so other classes are not directly using them[cite: 122]. Instance variables must be private for this to work[cite: 123]. Immutability takes this a step further, allowing only getters, so the instance variables do not change state[cite: 123]."
+    }
+  },
+  {
+    "idx": 9,
+    "text": "Which are methods using JavaBeans naming conventions for accessors and mutators?\n(Choose all that apply)",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "<pre>public boolean getCanSwim() { return canSwim;}</pre>"
+      },
+      {
+        "letter": "B",
+        "text": "<pre>public boolean canSwim() { return numberWings;}</pre>"
+      },
+      {
+        "letter": "C",
+        "text": "<pre>public int getNumWings() { return numberWings;}</pre>"
+      },
+      {
+        "letter": "D",
+        "text": "<pre>public int numWings() { return numberWings;}</pre>"
+      },
+      {
+        "letter": "E",
+        "text": "<pre>public void setCanSwim(boolean b) { canSwim = b;}</pre>"
+      }
+    ],
+    "correct": {
+      "letter": [
+        "C",
+        "E"
+      ],
+      "description": "Option A is incorrect because the property is of type boolean and getters must begin with is for booleans[cite: 124]. Options B and D are incorrect because they don’t follow the naming convention of beginning with get/is/set[cite: 125]. Options C and E follow normal getter and setter conventions[cite: 126]."
+    }
+  },
+  {
+    "idx": 10,
+    "text": "What is the output of the following code?\n<pre>\n1: package rope;\n2: public class Rope {\n3:   public static int LENGTH = 5;\n4:   static {\n5:     LENGTH = 10;\n6:   }\n7:   public static void swing() {\n8:     System.out.print(\"swing \");\n9:   }\n10: }\n\n1: import rope.*;\n2: import static rope.Rope.*;\n3: public class Chimp {\n4:   public static void main(String[] args) {\n5:     Rope.swing();\n6:     new Rope().swing();\n7:     System.out.println(LENGTH);\n8:   }\n9: }\n</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "swing swing 5"
+      },
+      {
+        "letter": "B",
+        "text": "swing swing 10"
+      },
+      {
+        "letter": "C",
+        "text": "Compiler error on line 2 of Chimp."
+      },
+      {
+        "letter": "D",
+        "text": "Compiler error on line 5 of Chimp."
+      },
+      {
+        "letter": "E",
+        "text": "Compiler error on line 6 of Chimp."
+      },
+      {
+        "letter": "F",
+        "text": "Compiler error on line 7 of Chimp."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "B"
+      ],
+      "description": "Rope runs line 3, setting LENGTH to 5, then immediately after runs the static initializer, which sets it to 10[cite: 126]. Line 5 calls the static method normally and prints swing[cite: 126]. Line 6 also calls the static method[cite: 127]. Java allows calling a static method through an instance variable[cite: 127]. Line 7 uses the static import on line 2 to reference LENGTH[cite: 128]."
+    }
+  },
+  {
+    "idx": 11,
+    "text": "Which are true of the following code?\n(Choose all that apply)\n<pre>\n1: public class Rope {\n2:   public static void swing() {\n3:     System.out.print(\"swing \");\n4:   }\n5:   public void climb() {\n6:     System.out.println(\"climb \");\n7:   }\n8:   public static void play() {\n9:     swing();\n10:    climb();\n11:  }\n12:  public static void main(String[] args) {\n13:    Rope rope = new Rope();\n14:    rope.play();\n15:    Rope rope2 = null;\n16:    rope2.play();\n17:  }\n18: }\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "The code compiles as is."
+      },
+      {
+        "letter": "B",
+        "text": "There is exactly one compiler error in the code."
+      },
+      {
+        "letter": "C",
+        "text": "There are exactly two compiler errors in the code."
+      },
+      {
+        "letter": "D",
+        "text": "If the lines with compiler errors are removed, the output is climb climb."
+      },
+      {
+        "letter": "E",
+        "text": "If the lines with compiler errors are removed, the output is swing swing."
+      },
+      {
+        "letter": "F",
+        "text": "If the lines with compile errors are removed, the code throws a NullPointerException."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "B",
+        "E"
+      ],
+      "description": "Line 10 does not compile because static methods are not allowed to call instance methods[cite: 129]. Even though we are calling play() as if it were an instance method and an instance exists, Java knows play() is really a static method and treats it as such[cite: 130]. If line 10 is removed, the code works[cite: 131]. It does not throw a NullPointerException on line 16 because play() is a static method[cite: 131]. Java looks at the type of the reference for rope2 and translates the call to Rope.play()[cite: 132]."
+    }
+  },
+  {
+    "idx": 12,
+    "text": "What is the output of the following code?\n<pre>\nimport rope.*;\nimport static rope.Rope.*;\npublic class RopeSwing {\n  private static Rope rope1 = new Rope();\n  private static Rope rope2 = new Rope();\n  {\n    System.out.println(rope1.length);\n  }\n  public static void main(String[] args) {\n    rope1.length = 2;\n    rope2.length = 8;\n    System.out.println(rope1.length);\n  }\n}\n\npackage rope;\npublic class Rope {\n  public static int length = 0;\n}\n</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "02"
+      },
+      {
+        "letter": "B",
+        "text": "08"
+      },
+      {
+        "letter": "C",
+        "text": "2"
+      },
+      {
+        "letter": "D",
+        "text": "8"
+      },
+      {
+        "letter": "E",
+        "text": "The code does not compile."
+      },
+      {
+        "letter": "F",
+        "text": "An exception is thrown."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "D"
+      ],
+      "description": "There are two details to notice in this code[cite: 133]. First, note that RopeSwing has an instance initializer and not a static initializer[cite: 134]. Since RopeSwing is never constructed, the instance initializer does not run[cite: 135]. The other detail is that length is static[cite: 135]. Changes from one object update this common static variable[cite: 136]."
+    }
+  },
+  {
+    "idx": 13,
+    "text": "How many compiler errors are in the following code?\n<pre>\n1: public class RopeSwing {\n2:   private static final String leftRope;\n3:   private static final String rightRope;\n4:   private static final String bench;\n5:   private static final String name = \"name\";\n6:   static {\n7:     leftRope = \"left\";\n8:     rightRope = \"right\";\n9:   }\n10:  static {\n11:    name = \"name\";\n12:    rightRope = \"right\";\n13:  }\n14:  public static void main(String[] args) {\n15:    bench = \"bench\";\n16:  }\n17: }\n</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "0"
+      },
+      {
+        "letter": "B",
+        "text": "1"
+      },
+      {
+        "letter": "C",
+        "text": "2"
+      },
+      {
+        "letter": "D",
+        "text": "3"
+      },
+      {
+        "letter": "E",
+        "text": "4"
+      },
+      {
+        "letter": "F",
+        "text": "5"
+      }
+    ],
+    "correct": {
+      "letter": [
+        "E"
+      ],
+      "description": "static final variables must be set exactly once, and it must be in the declaration line or in a static initialization block[cite: 136]. Line 4 doesn’t compile because bench is not set in either of these locations[cite: 137]. Line 15 doesn’t compile because final variables are not allowed to be set after that point[cite: 138]. Line 11 doesn’t compile because name is set twice: once in the declaration and again in the static block[cite: 139]. Line 12 doesn’t compile because rightRope is set twice as well[cite: 140]. Both are in static initialization blocks[cite: 140]."
+    }
+  },
+  {
+    "idx": 14,
+    "text": "Which of the following can replace line 2 to make this code compile?\n(Choose all that apply)\n<pre>\n1: import java.util.*;\n2: // INSERT CODE HERE\n3: public class Imports {\n4:   public void method(ArrayList&lt;String&gt; list) {\n5:     sort(list);\n6:   }\n7: }\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "import static java.util.Collections;"
+      },
+      {
+        "letter": "B",
+        "text": "import static java.util.Collections.*;"
+      },
+      {
+        "letter": "C",
+        "text": "import static java.util.Collections.sort(ArrayList&lt;String&gt;);"
+      },
+      {
+        "letter": "D",
+        "text": "static import java.util.Collections;"
+      },
+      {
+        "letter": "E",
+        "text": "static import java.util.Collections.*;"
+      },
+      {
+        "letter": "F",
+        "text": "static import java.util.Collections.sort(ArrayList&lt;String&gt;);"
+      }
+    ],
+    "correct": {
+      "letter": [
+        "B"
+      ],
+      "description": "The two valid ways to do this are import static java.util.Collections.*; and import static java.util.Collections.sort;[cite: 141]. Option A is incorrect because you can only do a static import on static members[cite: 142]. Classes such as Collections require a regular import[cite: 143]. Option C is nonsense as method parameters have no business in an import[cite: 143]. Options D, E, and F try to trick you into reversing the syntax of import static[cite: 144]."
+    }
+  },
+  {
+    "idx": 15,
+    "text": "What is the result of the following statements?\n<pre>\n1: public class Test {\n2:   public void print(byte x) {\n3:     System.out.print(\"byte\");\n4:   }\n5:   public void print(int x) {\n6:     System.out.print(\"int\");\n7:   }\n8:   public void print(float x) {\n9:     System.out.print(\"float\");\n10:  }\n11:  public void print(Object x) {\n12:    System.out.print(\"Object\");\n13:  }\n14:  public static void main(String[] args) {\n15:    Test t = new Test();\n16:    short s = 123;\n17:    t.print(s);\n18:    t.print(true);\n19:    t.print(6.789);\n20:  }\n21: }\n</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "bytefloatObject"
+      },
+      {
+        "letter": "B",
+        "text": "intfloatObject"
+      },
+      {
+        "letter": "C",
+        "text": "byteObjectfloat"
+      },
+      {
+        "letter": "D",
+        "text": "intObjectfloat"
+      },
+      {
+        "letter": "E",
+        "text": "intObjectObject"
+      },
+      {
+        "letter": "F",
+        "text": "byteObjectObject"
+      }
+    ],
+    "correct": {
+      "letter": [
+        "E"
+      ],
+      "description": "The argument on line 17 is a short[cite: 145]. It can be promoted to an int, so print() on line 5 is invoked[cite: 146]. The argument on line 18 is a boolean[cite: 147]. It can be autoboxed to a boolean, so print() on line 11 is invoked[cite: 147]. The argument on line 19 is a double[cite: 148]. It can be autoboxed to a double, so print() on line 11 is invoked[cite: 148]. Therefore, the output is intObjectObject and the correct answer is option E[cite: 149]."
+    }
+  },
+  {
+    "idx": 16,
+    "text": "What is the result of the following program?\n<pre>\n1: public class Squares {\n2:   public static long square(int x) {\n3:     long y = x * (long) x;\n4:     x = -1;\n5:     return y;\n6:   }\n7:   public static void main(String[] args) {\n8:     int value = 9;\n9:     long result = square(value);\n10:    System.out.println(value);\n11:  } }\n</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "-1"
+      },
+      {
+        "letter": "B",
+        "text": "9"
+      },
+      {
+        "letter": "C",
+        "text": "81"
+      },
+      {
+        "letter": "D",
+        "text": "Compiler error on line 9."
+      },
+      {
+        "letter": "E",
+        "text": "Compiler error on a different line."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "B"
+      ],
+      "description": "Since Java is pass-by-value and the variable on line 8 never gets reassigned, it stays as 9[cite: 149]. In the method square, x starts as 9 [cite: 149]. y becomes 81 and then x gets set to –1[cite: 149]. Line 9 does set result to 81[cite: 150]. However, we are printing out value and that is still 9[cite: 150]."
+    }
+  },
+  {
+    "idx": 17,
+    "text": "Which of the following are output by the following code?\n(Choose all that apply)\n<pre>\npublic class StringBuilders {\n  public static StringBuilder work(StringBuilder a,\n    StringBuilder b) {\n    a = new StringBuilder(\"a\");\n    b.append(\"b\");\n    return a;\n  }\n  public static void main(String[] args) {\n    StringBuilder s1 = new StringBuilder(\"s1\");\n    StringBuilder s2 = new StringBuilder(\"s2\");\n    StringBuilder s3 = work(s1, s2);\n    System.out.println(\"s1 = \" + s1);\n    System.out.println(\"s2 = \" + s2);\n    System.out.println(\"s3 = \" + s3);\n  }\n}\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "s1 = a"
+      },
+      {
+        "letter": "B",
+        "text": "s1 = s1"
+      },
+      {
+        "letter": "C",
+        "text": "s2 = s2"
+      },
+      {
+        "letter": "D",
+        "text": "s2 = s2b"
+      },
+      {
+        "letter": "E",
+        "text": "s3 = a"
+      },
+      {
+        "letter": "F",
+        "text": "s3 = null"
+      },
+      {
+        "letter": "G",
+        "text": "The code does not compile."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "B",
+        "D",
+        "E"
+      ],
+      "description": "Since Java is pass-by-reference, assigning a new object to a does not change the caller[cite: 150]. Calling append() does affect the caller because both the method parameter and caller have a reference to the same object[cite: 151]. Finally, returning a value does pass the reference to the caller for assignment to s3[cite: 152]."
+    }
+  },
+  {
+    "idx": 18,
+    "text": "Which of the following are true? (Choose 2)",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "this() can be called from anywhere in a constructor."
+      },
+      {
+        "letter": "B",
+        "text": "this() can be called from any instance method in the class."
+      },
+      {
+        "letter": "C",
+        "text": "this.variableName can be called from any instance method in the class."
+      },
+      {
+        "letter": "D",
+        "text": "this.variableName can be called from any static method in the class."
+      },
+      {
+        "letter": "E",
+        "text": "You must include a default constructor in the code if the compiler does not include one."
+      },
+      {
+        "letter": "F",
+        "text": "You can call the default constructor written by the compiler using this()."
+      },
+      {
+        "letter": "G",
+        "text": "You can access a private constructor with the main() method."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "C",
+        "G"
+      ],
+      "description": "Since the main() method is in the same class, it can call private methods in the class [cite: 153]. this() may only be called as the first line of a constructor [cite: 154]. this.variableName can be called from any instance method to refer to an instance variable[cite: 155]. It cannot be called from a static method because there is no instance of the class to refer to[cite: 156]. Option F is tricky[cite: 157]. The default constructor is only written by the compiler if no user-defined constructors were provided [cite: 157]. this() can only be called from a constructor in the same class[cite: 158]. Since there can be no user-defined constructors in the class if a default constructor was created, it is impossible for option F to be true[cite: 159]."
+    }
+  },
+  {
+    "idx": 19,
+    "text": "Which of these classes compile and use a default constructor?\n(Choose all that apply)",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "public class Bird { }"
+      },
+      {
+        "letter": "B",
+        "text": "public class Bird { public bird() {} }"
+      },
+      {
+        "letter": "C",
+        "text": "public class Bird { public bird(String name) {} }"
+      },
+      {
+        "letter": "D",
+        "text": "public class Bird { public Bird() {} }"
+      },
+      {
+        "letter": "E",
+        "text": "public class Bird { Bird(String name) {} }"
+      },
+      {
+        "letter": "F",
+        "text": "public class Bird { private Bird(int age) {} }"
+      },
+      {
+        "letter": "G",
+        "text": "public class Bird { void Bird() { } }"
+      }
+    ],
+    "correct": {
+      "letter": [
+        "A",
+        "G"
+      ],
+      "description": "Options B and C don’t compile because the constructor name must match the classname[cite: 160]. Since Java is case sensitive, these don’t match[cite: 161]. Options D, E, and F all compile and provide one user-defined constructor[cite: 161]. Since a constructor is coded, a default constructor isn’t supplied[cite: 162]. Option G defines a method, but not a constructor[cite: 162]. Option A does not define a constructor, either[cite: 163]. Since no constructor is coded, a default constructor is provided for options A and G[cite: 163]."
+    }
+  },
+  {
+    "idx": 20,
+    "text": "Which code can be inserted to have the code print 2?\n<pre>\npublic class BirdSeed {\n  private int numberBags;\n  boolean call;\n  public BirdSeed() {\n    // LINE 1\n    call = false;\n    // LINE 2\n  }\n  public BirdSeed(int numberBags) {\n    this.numberBags = numberBags;\n  }\n  public static void main(String[] args) {\n    BirdSeed seed = new BirdSeed();\n    System.out.println(seed.numberBags);\n  } }\n</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Replace line 1 with BirdSeed(2);"
+      },
+      {
+        "letter": "B",
+        "text": "Replace line 2 with BirdSeed(2);"
+      },
+      {
+        "letter": "C",
+        "text": "Replace line 1 with new BirdSeed(2);"
+      },
+      {
+        "letter": "D",
+        "text": "Replace line 2 with new BirdSeed(2);"
+      },
+      {
+        "letter": "E",
+        "text": "Replace line 1 with this(2);"
+      },
+      {
+        "letter": "F",
+        "text": "Replace line 2 with this(2);"
+      }
+    ],
+    "correct": {
+      "letter": [
+        "E"
+      ],
+      "description": "Options A and B will not compile because constructors cannot be called without new[cite: 163]. Options C and D will compile but will create a new object rather than setting the fields in this one[cite: 164]. Option F will not compile because this() must be the first line of a constructor[cite: 165]. Option E is correct[cite: 165]."
+    }
+  },
+  {
+    "idx": 21,
+    "text": "Which of the following complete the constructor so that this code prints out 50?\n(Choose all that apply)\n<pre>\npublic class Cheetah {\n  int numSpots;\n  public Cheetah(int numSpots) {\n    // INSERT CODE HERE\n  }\n  public static void main(String[] args) {\n    System.out.println(new Cheetah(50).numSpots);\n  }\n}\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "numSpots = numSpots;"
+      },
+      {
+        "letter": "B",
+        "text": "numSpots = this.numSpots;"
+      },
+      {
+        "letter": "C",
+        "text": "this.numSpots = numSpots;"
+      },
+      {
+        "letter": "D",
+        "text": "numSpots = super.numSpots;"
+      },
+      {
+        "letter": "E",
+        "text": "super.numSpots = numSpots;"
+      },
+      {
+        "letter": "F",
+        "text": "None of the above."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "C"
+      ],
+      "description": "Within the constructor numSpots refers to the constructor parameter[cite: 166]. The instance variable is hidden because they have the same name [cite: 167]. this.numSpots tells Java to use the instance variable[cite: 167]. In the main() method, numSpots refers to the instance variable[cite: 168]. Option A sets the constructor parameter to itself, leaving the instance variable as 0[cite: 169]. Option B sets the constructor parameter to the value of the instance variable, making them both 0[cite: 169]. Option C is correct, setting the instance variable to the value of the constructor parameter[cite: 169]. Options D and E do not compile[cite: 170]."
+    }
+  },
+  {
+    "idx": 22,
+    "text": "What is the result of the following?\n<pre>\npublic class Order {\n  static String result = \"\";\n  { result += \"c\"; }\n  static\n  { result += \"u\"; }\n  { result += \"r\"; }\n}\n\npublic class OrderDriver {\n  public static void main(String[] args) {\n    System.out.print(Order.result + \" \");\n    System.out.print(Order.result + \" \");\n    new Order();\n    new Order();\n    System.out.print(Order.result + \" \");\n  }\n}\n</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "curur"
+      },
+      {
+        "letter": "B",
+        "text": "ucrcr"
+      },
+      {
+        "letter": "C",
+        "text": "u ucrcr"
+      },
+      {
+        "letter": "D",
+        "text": "u u curcur"
+      },
+      {
+        "letter": "E",
+        "text": "u u ucrcr"
+      },
+      {
+        "letter": "F",
+        "text": "ur ur urc"
+      },
+      {
+        "letter": "G",
+        "text": "The code does not compile."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "E"
+      ],
+      "description": "On line 3 of OrderDriver, we refer to Order for the first time[cite: 170]. At this point the statics in Order get initialized[cite: 171]. In this case, the statics are the static declaration of result and the static initializer [cite: 171]. result is u at this point[cite: 172]. On line 4, result is the same because the static initialization is only run once[cite: 172]. On line 5, we create a new Order, which triggers the instance initializers in the order they appear in the file[cite: 173]. Now result is ucr[cite: 174]. Line 6 creates another Order, triggering another set of initializers[cite: 174]. Now result is ucrcr[cite: 174]. Notice how the static is on a different line than the initialization code in lines 4–5 of Order[cite: 175]. The exam may try to trick you by formatting the code like this to confuse you[cite: 176]."
+    }
+  },
+  {
+    "idx": 23,
+    "text": "What is the result of the following?\n<pre>\n1: public class Order {\n2:   String value = \"t\";\n3:   { value += \"a\"; }\n4:   { value += \"c\"; }\n5:   public Order() {\n6:     value += \"b\";\n7:   }\n8:   public Order(String s) {\n9:     value += s;\n10:  }\n11:  public static void main(String[] args) {\n12:    Order order = new Order(\"f\");\n13:    order = new Order();\n14:    System.out.println(order.value);\n15:  } }\n</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "tacb"
+      },
+      {
+        "letter": "B",
+        "text": "tacf"
+      },
+      {
+        "letter": "C",
+        "text": "tacbf"
+      },
+      {
+        "letter": "D",
+        "text": "tacfb"
+      },
+      {
+        "letter": "E",
+        "text": "tacftacb"
+      },
+      {
+        "letter": "F",
+        "text": "The code does not compile."
+      },
+      {
+        "letter": "G",
+        "text": "An exception is thrown."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "A"
+      ],
+      "description": "Line 4 instantiates an Order[cite: 177]. Java runs the declarations and instance initializers first in the order they appear[cite: 177]. This sets value to tacf[cite: 178]. Line 5 creates another Order and initializes value to tacb[cite: 178]. The object on line 5 is stored in the same variable line 4 used[cite: 179]. This makes the object created on line 4 unreachable[cite: 180]. When value is printed, it is the instance variable in the object created on line 5[cite: 180]."
+    }
+  },
+  {
+    "idx": 24,
+    "text": "Which of the following will compile when inserted in the following code?\n(Choose all that apply)\n<pre>\npublic class Order3 {\n  final String value1 = \"1\";\n  static String value2 = \"2\";\n  String value3 = \"3\";\n  {\n    // CODE SNIPPET 1\n  }\n  static {\n    // CODE SNIPPET 2\n  }\n}\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "value1 = \"d\"; instead of // CODE SNIPPET 1"
+      },
+      {
+        "letter": "B",
+        "text": "value2 = \"e\"; instead of // CODE SNIPPET 1"
+      },
+      {
+        "letter": "C",
+        "text": "value3 = \"f\"; instead of // CODE SNIPPET 1"
+      },
+      {
+        "letter": "D",
+        "text": "value1 = \"g\"; instead of // CODE SNIPPET 2"
+      },
+      {
+        "letter": "E",
+        "text": "value2 = \"h\"; instead of // CODE SNIPPET 2"
+      },
+      {
+        "letter": "F",
+        "text": "value3 = \"i\"; instead of // CODE SNIPPET 2"
+      }
+    ],
+    "correct": {
+      "letter": [
+        "B",
+        "C",
+        "E"
+      ],
+      "description": "value1 is a final instance variable[cite: 180]. It can only be set once: in the variable declaration, an instance initializer, or a constructor[cite: 181]. Option A does not compile because the final variable was already set in the declaration [cite: 182]. value2 is a static variable[cite: 182]. Both instance and static initializers are able to access static variables, making options B and E correct [cite: 183]. value3 is an instance variable[cite: 183]. Options D and F do not compile because a static initializer does not have access to instance variables[cite: 184]."
+    }
+  },
+  {
+    "idx": 25,
+    "text": "Which of the following are true about the following code?\n(Choose all that apply)\n<pre>\npublic class Create {\n  Create() {\n    System.out.print(\"1 \");\n  }\n  Create(int num) {\n    System.out.print(\"2 \");\n  }\n  Create(Integer num) {\n    System.out.print(\"3 \");\n  }\n  Create(Object num) {\n    System.out.print(\"4 \");\n  }\n  Create(int... nums) {\n    System.out.print(\"5 \");\n  }\n  public static void main(String[] args) {\n    new Create(100);\n    new Create(1000L);\n  }\n}\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "The code prints out 2 4."
+      },
+      {
+        "letter": "B",
+        "text": "The code prints out 3 4."
+      },
+      {
+        "letter": "C",
+        "text": "The code prints out 4 2."
+      },
+      {
+        "letter": "D",
+        "text": "The code prints out 4 4."
+      },
+      {
+        "letter": "E",
+        "text": "The code prints 3 4 if you remove the constructor Create(int num)."
+      },
+      {
+        "letter": "F",
+        "text": "The code prints 4 4 if you remove the constructor Create(int num)."
+      },
+      {
+        "letter": "G",
+        "text": "The code prints 5 4 if you remove the constructor Create(int num)."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "A",
+        "E"
+      ],
+      "description": "The 100 parameter is an int and so calls the matching int constructor[cite: 185]. When this constructor is removed, Java looks for the next most specific constructor[cite: 186]. Java prefers autoboxing to varargs, and so chooses the Integer constructor[cite: 187]. The 100L parameter is a long[cite: 187]. Since it can’t be converted into a smaller type, it is autoboxed into a Long and then the constructor for Object is called[cite: 188]."
+    }
+  },
+  {
+    "idx": 26,
+    "text": "What is the result of the following class?\n<pre>\n1: import java.util.function.*;\n2:\n3: public class Panda {\n4:   int age;\n5:   public static void main(String[] args) {\n6:     Panda p1 = new Panda();\n7:     p1.age = 1;\n8:     check(p1, p -&gt; p.age &lt; 5);\n9:   }\n10:  private static void check(Panda panda, Predicate&lt;Panda&gt; pred) {\n11:    String result = pred.test(panda) ? \"match\" : \"not match\";\n12:    System.out.print(result);\n13:  } }\n</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "match"
+      },
+      {
+        "letter": "B",
+        "text": "not match"
+      },
+      {
+        "letter": "C",
+        "text": "Compiler error on line 8."
+      },
+      {
+        "letter": "D",
+        "text": "Compiler error on line 10."
+      },
+      {
+        "letter": "E",
+        "text": "Compiler error on line 11."
+      },
+      {
+        "letter": "F",
+        "text": "A runtime exception is thrown."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "A",
+        "E"
+      ],
+      "description": "This code is correct[cite: 189]. Line 8 creates a lambda expression that checks if the age is less than 5[cite: 189]. Since there is only one parameter and it does not specify a type, the parentheses around the type parameter are optional[cite: 189]. Line 10 uses the Predicate interface, which declares a test() method[cite: 190]."
+    }
+  },
+  {
+    "idx": 27,
+    "text": "What is the result of the following code?\n<pre>\n1: interface Climb {\n2:   boolean isTooHigh(int height, int limit);\n3: }\n4:\n5: public class Climber {\n6:   public static void main(String[] args) {\n7:     check((h, l) -&gt; h.append(l).isEmpty(), 5);\n8:   }\n9:   private static void check(Climb climb, int height) {\n10:    if (climb.isTooHigh(height, 10))\n11:      System.out.println(\"too high\");\n12:    else\n13:      System.out.println(\"ok\");\n14:  }\n15: }\n</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "ok"
+      },
+      {
+        "letter": "B",
+        "text": "too high"
+      },
+      {
+        "letter": "C",
+        "text": "Compiler error on line 7."
+      },
+      {
+        "letter": "D",
+        "text": "Compiler error on line 10."
+      },
+      {
+        "letter": "E",
+        "text": "Compiler error on a different line."
+      },
+      {
+        "letter": "F",
+        "text": "A runtime exception is thrown."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "C"
+      ],
+      "description": "The interface takes two int parameters[cite: 190]. The code on line 7 attempts to use them as if one is a StringBuilder[cite: 191]. It is tricky to use types in a lambda when they are implicitly specified[cite: 192]. Remember to check the interface for the real type[cite: 193]."
+    }
+  },
+  {
+    "idx": 28,
+    "text": "Which of the following lambda expressions can fill in the blank?\n(Choose all that apply)\n<pre>\nList&lt;String&gt; list = new ArrayList&lt;&gt;();\nlist.removeIf(___________________);\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "s -> s.isEmpty()"
+      },
+      {
+        "letter": "B",
+        "text": "s -> {s.isEmpty()}"
+      },
+      {
+        "letter": "C",
+        "text": "s -> {s.isEmpty();}"
+      },
+      {
+        "letter": "D",
+        "text": "s -> {return s.isEmpty();}"
+      },
+      {
+        "letter": "E",
+        "text": "String s -> s.isEmpty()"
+      },
+      {
+        "letter": "F",
+        "text": "(String s) -> s.isEmpty()"
+      }
+    ],
+    "correct": {
+      "letter": [
+        "A",
+        "D",
+        "F"
+      ],
+      "description": "removeIf() expects a Predicate, which takes a parameter list of one parameter using the specified type[cite: 193]. Options B and C are incorrect because they do not use the return keyword[cite: 194]. It is required inside braces for lambda bodies[cite: 195]. Option E is incorrect because it is missing the parentheses around the parameter list[cite: 195]. This is only optional for a single parameter with an inferred type[cite: 196]."
+    }
+  },
+  {
+    "idx": 29,
+    "text": "Which lambda can replace the MySecret class to return the same value?\n(Choose all that apply)\n<pre>\ninterface Secret {\n  String magic(double d);\n}\nclass MySecret implements Secret {\n  public String magic(double d) {\n    return \"Poof\";\n  }\n}\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "caller((e) -> \"Poof\");"
+      },
+      {
+        "letter": "B",
+        "text": "caller((e) -> {\"Poof\"});"
+      },
+      {
+        "letter": "C",
+        "text": "caller((e) -> { String e = \"\"; \"Poof\" });"
+      },
+      {
+        "letter": "D",
+        "text": "caller((e) -> { String e = \"\"; return \"Poof\"; });"
+      },
+      {
+        "letter": "E",
+        "text": "caller((e) -> { String e = \"\"; return \"Poof\" });"
+      },
+      {
+        "letter": "F",
+        "text": "caller((e) -> { String f = \"\"; return \"Poof\"; });"
+      }
+    ],
+    "correct": {
+      "letter": [
+        "A",
+        "F"
+      ],
+      "description": "Option B is incorrect because it does not use the return keyword[cite: 197]. Options C, D, and E are incorrect because the variable e is already in use from the lambda and cannot be redefined[cite: 198]. Additionally, option C is missing the return keyword and option E is missing the semicolon[cite: 199]."
+    }
+  }
+]
