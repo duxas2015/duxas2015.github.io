@@ -32,6 +32,10 @@ function handle(e) {
     else if ( e.code === 'Numpad2' ) { backMoving (3); }
 	else if ( e.code === 'Numpad3' ) { backMoving (4); }
 	else if ( e.code === 'Numpad4' ) { getToTheClosestSubtitle(); }
+	else if ( e.code === 'Numpad0' ) {
+		const v = document.getElementsByTagName('video')[0];		
+        if (v.paused) { v.play(); } else { v.pause(); }
+    }
 	else if ( e.code === 'Numpad9' ) { 
 	  video = document.getElementsByTagName('video')[0];
       //track = document.getElementsByTagName('video')[0].textTracks[findEnglishSubtitleTrackIndex()];
@@ -591,12 +595,18 @@ window.onload = function() {
 			  listen(player);
 			  
 			if ( isMobileVersion() ) {
+
 			  // mobile	
 			  loadCSS('styles_mobile.css');
 			  
 			  document.getElementById("idRewind2Second").addEventListener('click', ( event ) => { backMoving (2); } );
 			  document.getElementById("idRewind3Second").addEventListener('click', ( event ) => { backMoving (3); } );
 			  document.getElementById("idRewindUntilNextSub").addEventListener('click', ( event ) => { getToTheClosestSubtitle(); } );
+
+    			document.getElementById('idPauseVideo').addEventListener('click', () => {
+					const v = document.getElementsByTagName('video')[0];
+					if (v.paused) { v.play(); } else { v.pause(); }
+				});
 			  
 			  // English Subtitle Shift Handlers
 			  document.getElementById("idMoveEngSubBackward").addEventListener('click', ( event ) => { 
