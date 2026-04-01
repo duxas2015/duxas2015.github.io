@@ -1,0 +1,197 @@
+[
+  {
+    "idx": 1,
+    "correct": {
+      "letter": [
+        "B"
+      ],
+      "description": "All interface methods are implicitly public, so option B is correct and option A is not[cite: 200]. Interface methods may be declared as static or default but are never implicitly added, so options C and F are incorrect[cite: 201]. Option D is incorrect—void is not a modifier; it is a return type[cite: 202]. Prior to Java 8 all interface methods would be assumed to be abstract[cite: 203]. Since Java 8 now includes default and static methods and they are never abstract, you cannot assume the abstract modifier will be implicitly applied to all methods by the compiler[cite: 204]."
+    }
+  },
+  {
+    "idx": 2,
+    "correct": {
+      "letter": [
+        "E"
+      ],
+      "description": "The code will not compile because the parent class Mammal doesn’t define a no-argument constructor, so the first line of a Platypus constructor should be an explicit call to super(int age)[cite: 205]. If there was such a call, then the output would be MammalPlatypus, since the super constructor is executed before the child constructor[cite: 206]."
+    }
+  },
+  {
+    "idx": 3,
+    "correct": {
+      "letter": [
+        "A",
+        "B",
+        "D",
+        "E"
+      ],
+      "description": "The blank can be filled with any class or interface that is a supertype of TurtleFrog[cite: 207]. Option A is a superclass of TurtleFrog, and option B is the same class, so both are correct[cite: 208]. BrazilianHornedFrog is not a superclass of TurtleFrog, so option C is incorrect[cite: 209]. TurtleFrog inherits the CanHope interface, so option D is correct[cite: 210]. All classes inherit Object, so option E is correct[cite: 210]. Finally, Long is an unrelated class that is not a superclass of TurtleFrog, and is therefore incorrect[cite: 211]."
+    }
+  },
+  {
+    "idx": 4,
+    "correct": {
+      "letter": [
+        "C",
+        "E"
+      ],
+      "description": "The code doesn’t compile, so option A is incorrect[cite: 212]. Option B is also not correct because the rules for overriding a method allow a subclass to define a method with an exception that is a subclass of the exception in the parent method[cite: 213]. Option C is correct because the return types are not covariant; in particular, Number is not a subclass of Integer[cite: 214]. Option D is incorrect because the subclass defines a method that is more accessible than the method in the parent class, which is allowed[cite: 215]. Finally, option E is correct because the method is declared as static in the parent class and not so in the child class[cite: 216]. For nonprivate methods in the parent class, both methods must use static (hide) or neither should use static (override)[cite: 217]."
+    }
+  },
+  {
+    "idx": 5,
+    "correct": {
+      "letter": [
+        "A",
+        "D",
+        "E",
+        "F"
+      ],
+      "description": "Options B and C are incorrect because protected and public methods may be overridden, not hidden[cite: 218]. Option A is correct because private methods are always hidden in a subclass[cite: 219]. Option D is also correct because static methods cannot be overridden, only hidden[cite: 220]. Options E and F are correct because variables may only be hidden, regardless of the access modifier[cite: 221]."
+    }
+  },
+  {
+    "idx": 6,
+    "correct": {
+      "letter": [
+        "D"
+      ],
+      "description": "The code fails to compile because Beetle, the first concrete subclass, doesn’t implement getNumberOfSections(), which is inherited as an abstract method; therefore, option D is correct[cite: 222]. Option B is incorrect because there is nothing wrong with this interface method definition[cite: 223]. Option C is incorrect because an abstract class is not required to implement any abstract methods, including those inherited from an interface[cite: 224]. Option E is incorrect because the code fails at compilation-time[cite: 225]."
+    }
+  },
+  {
+    "idx": 7,
+    "correct": {
+      "letter": [
+        "B",
+        "C"
+      ],
+      "description": "A reference to an object requires an explicit cast if referenced with a subclass, so option A is incorrect[cite: 226]. If the cast is to a superclass reference, then an explicit cast is not required[cite: 227]. Because of polymorphic parameters, if a method takes the superclass of an object as a parameter, then any subclass references may be used without a cast, so option B is correct[cite: 228]. All objects extend java.lang.Object, so if a method takes that type, any valid object, including null, may be passed; therefore, option C is correct[cite: 229, 230]. Some cast exceptions can be detected as errors at compile-time, but others can only be detected at runtime, so D is incorrect[cite: 230]. Due to the nature of polymorphism, a public instance method can be overridden in a subclass and calls to it will be replaced even in the superclass it was defined, so E is incorrect[cite: 231]."
+    }
+  },
+  {
+    "idx": 8,
+    "correct": {
+      "letter": [
+        "F"
+      ],
+      "description": "The interface variable amount is correctly declared, with public and static being assumed and automatically inserted by the compiler, so option B is incorrect[cite: 232]. The method declaration for eatGrass() on line 3 is incorrect because the method has been marked as static but no method body has been provided[cite: 233]. The method declaration for chew() on line 4 is also incorrect, since an interface method that provides a body must be marked as default or static explicitly[cite: 234]. Therefore, option F is the correct answer since this code contains two compile-time errors[cite: 235]."
+    }
+  },
+  {
+    "idx": 9,
+    "correct": {
+      "letter": [
+        "A"
+      ],
+      "description": "Although the definition of methods on lines 2 and 5 vary, both will be converted to public abstract by the compiler[cite: 236]. Line 4 is fine, because an interface can have public or default access[cite: 237]. Finally, the class Falcon doesn’t need to implement the interface methods because it is marked as abstract[cite: 238]. Therefore, the code will compile without issue[cite: 239]."
+    }
+  },
+  {
+    "idx": 10,
+    "correct": {
+      "letter": [
+        "B",
+        "C",
+        "E",
+        "F"
+      ],
+      "description": "Option A is wrong, because an abstract class may contain concrete methods[cite: 239]. Since Java 8, interfaces may also contain concrete methods in form of static or default methods[cite: 240]. Although all variables in interfaces are assumed to be public static final, abstract classes may contain them as well, so option B is correct[cite: 241]. Both abstract classes and interfaces can be extended with the extends keyword, so option C is correct[cite: 242]. Only interfaces can contain default methods, so option D is incorrect[cite: 243]. Both abstract classes and interfaces can contain static methods, so option E is correct[cite: 244]. Both structures require a concrete subclass to be instantiated, so option F is correct[cite: 245]. Finally, though an instance of an object that implements an interface inherits java.lang.Object, the interface itself doesn’t; otherwise, Java would support multiple inheritance for objects, which it doesn’t[cite: 246, 247]."
+    }
+  },
+  {
+    "idx": 11,
+    "correct": {
+      "letter": [
+        "A",
+        "D",
+        "E"
+      ],
+      "description": "Interface variables are assumed to be public static final; therefore, options A, D, and E are correct[cite: 248]. Options B and C are incorrect because interface variables must be public—interfaces are implemented by classes, not inherited by interfaces[cite: 249]. Option F is incorrect because variables can never be abstract[cite: 250]."
+    }
+  },
+  {
+    "idx": 12,
+    "correct": {
+      "letter": [
+        "B"
+      ],
+      "description": "This code compiles and runs without issue, outputting false, so option B is the correct answer[cite: 250]. The first declaration of isBlind() is as a default interface method, assumed public[cite: 251]. The second declaration of isBlind() correctly overrides the default interface method[cite: 252]. Finally, the newly created Owl instance may be automatically cast to a Nocturnal reference without an explicit cast, although adding it doesn’t break the code[cite: 253]."
+    }
+  },
+  {
+    "idx": 13,
+    "correct": {
+      "letter": [
+        "A"
+      ],
+      "description": "The code compiles and runs without issue, so options E and F are incorrect[cite: 254]. The printName() method is an overload in Spider, not an override, so both methods may be called[cite: 255]. The call on line 8 references the version that takes an int as input defined in the Spider class, and the call on line 9 references the version in the Arthropod class that takes a double[cite: 256]. Therefore, SpiderArthropod is output and option A is the correct answer[cite: 257]."
+    }
+  },
+  {
+    "idx": 14,
+    "correct": {
+      "letter": [
+        "C"
+      ],
+      "description": "The code compiles without issue, so option A is wrong[cite: 258]. Option B is incorrect, since an abstract class could implement HasVocalCords without the need to override the makeSound() method[cite: 259]. Option C is correct; any class that implements CanBark automatically inherits its methods, as well as any inherited methods defined in the parent interface[cite: 260]. Because option C is correct, it follows that option D is incorrect[cite: 261]. Finally, an interface can extend multiple interfaces, so option E is incorrect[cite: 262]."
+    }
+  },
+  {
+    "idx": 15,
+    "correct": {
+      "letter": [
+        "B"
+      ],
+      "description": "Concrete classes are, by definition, not abstract, so option A is incorrect[cite: 263]. A concrete class must implement all inherited abstract methods, so option B is correct[cite: 264]. Option C is incorrect; a superclass may have already implemented an inherited interface, so the concrete subclass would not need to implement the method[cite: 265]. Concrete classes can be both final and not final, so option D is incorrect[cite: 266]. Finally, abstract methods must be overridden by a concrete subclass, so option E is incorrect[cite: 267]."
+    }
+  },
+  {
+    "idx": 16,
+    "correct": {
+      "letter": [
+        "E"
+      ],
+      "description": "The code doesn’t compile, so options A and B are incorrect[cite: 268]. The issue with line 9 is that layEggs() is marked as final in the superclass Reptile, which means it cannot be overridden[cite: 269]. There are no errors on any other lines, so options C and D are incorrect[cite: 270]."
+    }
+  },
+  {
+    "idx": 17,
+    "correct": {
+      "letter": [
+        "B"
+      ],
+      "description": "Line 2 contains an invalid definition of an abstract method. Abstract methods cannot contain a body, so the code will not compile and option B is the correct answer[cite: 272]. If the body {} was removed from line 2, the code would still not compile, although it would be line 8 that would throw the compilation error[cite: 273]. Since dive() in Whale is abstract and Orca extends Whale, then it must implement an overridden version of dive()[cite: 274]. The method on line 9 is an overloaded version of dive(), not an overridden version, so Orca is an invalid subclass and will not compile[cite: 275]."
+    }
+  },
+  {
+    "idx": 18,
+    "correct": {
+      "letter": [
+        "E"
+      ],
+      "description": "The code doesn’t compile because line 6 contains an incompatible override of the getNumberOfGills(int input) method defined in the Aquatic interface[cite: 276]. In particular, int and String are not covariant returns types, since int is not a subclass of String[cite: 277]. Note that line 5 compiles without issue; getNumberOfGills() is an overloaded method that is not related to the parent interface method that takes an int value[cite: 278]."
+    }
+  },
+  {
+    "idx": 19,
+    "correct": {
+      "letter": [
+        "A",
+        "C",
+        "F"
+      ],
+      "description": "Cobra is a subclass of Snake, so option A can be used[cite: 279]. GardenSnake is not defined as a subclass of Snake, so it cannot be used and option B is incorrect[cite: 280]. The class Snake is not marked as abstract, so it can be instantiated and passed, so option C is correct[cite: 281]. Object is a superclass of Snake, not a subclass, so it also cannot be used and option D is incorrect[cite: 282]. The class String is unrelated in this example, so option E is incorrect[cite: 283]. Finally, a null value can always be passed as an object value, regardless of type, so option F is correct[cite: 284]."
+    }
+  },
+  {
+    "idx": 20,
+    "correct": {
+      "letter": [
+        "A"
+      ],
+      "description": "The code compiles and runs without issue, so options C, D, and E are incorrect[cite: 285]. The method fly() is marked as private in the parent class Bird, which means it may only be hidden, not overridden[cite: 286]. With hidden methods, the specific method used depends on where it is referenced[cite: 287]. Since it is referenced within the Bird class, the method declared on line 2 was used, and option A is correct[cite: 288]. Alternatively, if the method was referenced within the Pelican class, or if the method in the parent class was marked as protected and overridden in the subclass, then the method on line 9 would have been used[cite: 289]."
+    }
+  }
+]

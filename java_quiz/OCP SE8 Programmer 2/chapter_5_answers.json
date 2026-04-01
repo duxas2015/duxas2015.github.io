@@ -1,0 +1,142 @@
+[
+  {
+    "idx": 1,
+    "correct": {
+      "letter": ["A", "B"],
+      "description": "Choices E and F are incorrect because a Locale is created using a constructor[cite: 64]. The convention is to use lowercase for a language code and uppercase for a country code[cite: 65]. The language is mandatory when using a constructor, which makes choices A and B correct[cite: 66]."
+    }
+  },
+  {
+    "idx": 2,
+    "correct": {
+      "letter": ["C", "D", "E"],
+      "description": "Localization refers to user-facing elements that a user sees[cite: 67]. Currency, dates, and numbers are commonly used in different formats for different countries[cite: 68]. Class and variable names are internal to the application, so there is no need to translate them for users[cite: 69]. Booleans are true/false values with standard names[cite: 70]."
+    }
+  },
+  {
+    "idx": 3,
+    "correct": {
+      "letter": ["C", "D"],
+      "description": "Choice A is incorrect because Java will look at parent bundles[cite: 70]. For example, Java will look at Props.properties if Props_en.properties does not contain the requested key[cite: 71]. Java class resource bundles can have non-String values while property files are limited to strings[cite: 72]. Therefore, choice B is incorrect and choice C is correct[cite: 73]. Choice D is correct because the locale is only changed in memory[cite: 74]. Choice E is incorrect because Java specifies that it will look for a Java class resource bundle before a property file of the same name[cite: 75]."
+    }
+  },
+  {
+    "idx": 4,
+    "correct": {
+      "letter": ["B"],
+      "description": "Java will first look for the most specific matches it can find, starting with Dolphins_en_US.java and then Dolphins_en_US.properties[cite: 76]. Since neither is found, it drops the country and looks for Dolphins_en.java[cite: 77]. Since a match is found, there is no reason to go on to the next one, which is Dolphins_en.properties[cite: 78]."
+    }
+  },
+  {
+    "idx": 5,
+    "correct": {
+      "letter": ["D"],
+      "description": "Java will use Dolphins_fr.properties as the matching resource bundle on line 7 because it is an exact match on the language of the requested locale[cite: 79]. Line 8 finds a matching key in this file. Line 9 does not find a match in that file, and therefore it has to look higher up in the hierarchy[cite: 80]. Once a bundle is chosen, only resources in that hierarchy are allowed[cite: 81]."
+    }
+  },
+  {
+    "idx": 6,
+    "correct": {
+      "letter": ["D", "F"],
+      "description": "Options A and B are incorrect because LocalDate does not have a public constructor[cite: 82]. Option C is incorrect because months start counting with 1 rather than 0. Option E is incorrect because it uses the old Calendar constants for months, which begin with 0. Options D and F are both correct ways of specifying the desired date[cite: 83]."
+    }
+  },
+  {
+    "idx": 7,
+    "correct": {
+      "letter": ["D"],
+      "description": "A LocalDate does not have a time element[cite: 84]. Therefore, it has no method to add hours, and the code does not compile[cite: 85]."
+    }
+  },
+  {
+    "idx": 8,
+    "correct": {
+      "letter": ["F"],
+      "description": "Java throws an exception if invalid date values are passed[cite: 86]. There is no 40th day in April—or any other month for that matter[cite: 87]."
+    }
+  },
+  {
+    "idx": 9,
+    "correct": {
+      "letter": ["B"],
+      "description": "The date starts out as April 30, 2018. Since dates are immutable and the plus methods have their return values ignored, the result is unchanged[cite: 88]. Therefore, Option B is correct[cite: 89]."
+    }
+  },
+  {
+    "idx": 10,
+    "correct": {
+      "letter": ["E"],
+      "description": "Even though d has both date and time, the formatter only outputs time[cite: 89]."
+    }
+  },
+  {
+    "idx": 11,
+    "correct": {
+      "letter": ["B"],
+      "description": "Period does not allow chaining. Only the last Period method called counts, so only the two years are subtracted[cite: 90]."
+    }
+  },
+  {
+    "idx": 12,
+    "correct": {
+      "letter": ["A", "E"],
+      "description": "When dealing with time zones, it is best to convert to GMT first by subtracting the time zone[cite: 91]. The first date/time is 9:00 GMT, and the second is 15:00 GMT. Therefore, the first one is earlier by 6 hours[cite: 92]."
+    }
+  },
+  {
+    "idx": 13,
+    "correct": {
+      "letter": ["B"],
+      "description": "dateTime1 is 2016–03–13T01:30–05:00[US/Eastern] and dateTime2 is 2016–03–13T03:30–04:00[US/Eastern]. While the values are two hours apart, the time zone offset changes as well, making it only change from 6:30 GMT to 7:30 GMT[cite: 93]."
+    }
+  },
+  {
+    "idx": 14,
+    "correct": {
+      "letter": ["A", "C", "D"],
+      "description": "Option B is incorrect because there is no March 40th[cite: 94]. Option E is incorrect because 2017 isn’t a leap year and therefore has no February 29th[cite: 95]. Option D is correct because it is just a regular date and has nothing to do with daylight savings time[cite: 96]. Options A and C are correct because Java is smart enough to adjust for daylight savings time[cite: 97]."
+    }
+  },
+  {
+    "idx": 15,
+    "correct": {
+      "letter": ["B", "C"],
+      "description": "Options A and D are incorrect because the String references do not point to the same object[cite: 98]. Option E is incorrect because a Period format begins with a P and a Duration format begins with PT[cite: 99]. They are different types and do not represent the same value even though they are both a day[cite: 100]. Remember that Duration uses hours/minutes/seconds and Period uses years/months/days for measures[cite: 101]. Options B and C are correct because m1, m2, and s all represent a duration of the same length[cite: 102]."
+    }
+  },
+  {
+    "idx": 16,
+    "correct": {
+      "letter": ["A", "B", "F"],
+      "description": "Option A correctly creates the current instant. Option B correctly converts from seconds to an Instant[cite: 103]. Option F is also a proper conversion. Options C, D, and E are incorrect because the source object does not represent a point in time[cite: 104]. Without a time zone, Java doesn’t know what moment in time to use for the Instant[cite: 105]."
+    }
+  },
+  {
+    "idx": 17,
+    "correct": {
+      "letter": ["E"],
+      "description": "The Properties class defines a get() method that does not allow for a default value[cite: 106]. It also has a getProperty() method, which returns the default value if the key is not provided[cite: 107]."
+    }
+  },
+  {
+    "idx": 18,
+    "correct": {
+      "letter": ["D"],
+      "description": "Options E and F do not compile because you can’t get a stream directly from a Properties object[cite: 108]. Options A and B do not compile because the method is keySet(), not keys()[cite: 109]. Option C outputs all of the keys, and Option D outputs all of the values[cite: 110]."
+    }
+  },
+  {
+    "idx": 19,
+    "correct": {
+      "letter": ["A", "B", "C"],
+      "description": "Remember that Duration uses hours/minutes/seconds and Period uses years/months/days for measures[cite: 111]."
+    }
+  },
+  {
+    "idx": 20,
+    "correct": {
+      "letter": ["E"],
+      "description": "Local______ explicitly excludes time zones. Instant represents a point in time, but always uses GMT rather than the desired time zone[cite: 112]."
+    }
+  }
+]

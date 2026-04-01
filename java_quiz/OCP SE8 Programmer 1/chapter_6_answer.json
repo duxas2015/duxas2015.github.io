@@ -1,0 +1,205 @@
+[
+  {
+    "idx": 1,
+    "correct": {
+      "letter": [
+        "B"
+      ],
+      "description": "Runtime exceptions are also known as unchecked exceptions. They are allowed to be declared, but they don’t have to be. Checked exceptions must be handled or declared. Legally, you can handle java.lang.Error subclasses, but it’s not a good idea."
+    }
+  },
+  {
+    "idx": 2,
+    "correct": {
+      "letter": [
+        "B",
+        "D"
+      ],
+      "description": "In a method declaration, the keyword throws is used. To actually throw an exception, the keyword throw is used and a new exception is created."
+    }
+  },
+  {
+    "idx": 3,
+    "correct": {
+      "letter": [
+        "C"
+      ],
+      "description": "A try statement is required to have a catch clause and/or finally clause. If it goes the catch route, it is allowed to have multiple catch clauses."
+    }
+  },
+  {
+    "idx": 4,
+    "correct": {
+      "letter": [
+        "B"
+      ],
+      "description": "The second line tries to cast an Integer to a String. Since String does not extend Integer, this is not allowed and a ClassCastException is thrown."
+    }
+  },
+  {
+    "idx": 5,
+    "correct": {
+      "letter": [
+        "A",
+        "B",
+        "D"
+      ],
+      "description": "java.io.IOException is thrown by many methods in the java.io package, but it is always thrown programmatically. The same is true for NumberFormatException; it is thrown programmatically by the wrapper classes of java.lang. The other three exceptions are all thrown by the JVM when the corresponding problem arises."
+    }
+  },
+  {
+    "idx": 6,
+    "correct": {
+      "letter": [
+        "C"
+      ],
+      "description": "The compiler tests the operation for a valid type but not a valid result, so the code will still compile and run. At runtime, evaluation of the parameter takes place before passing it to the print() method, so an ArithmeticException object is raised."
+    }
+  },
+  {
+    "idx": 7,
+    "correct": {
+      "letter": [
+        "C"
+      ],
+      "description": "The main() method invokes go and A is printed on line 3. The stop method is invoked and E is printed on line 14. Line 16 throws a NullPointerException, so stop immediately ends and line 17 doesn’t execute. The exception isn’t caught in go, so the go method ends as well, but not before its finally block executes and C is printed on line 9. Because main() doesn’t catch the exception, the stack trace displays and no further output occurs, so AEC was the output printed before the stack trace."
+    }
+  },
+  {
+    "idx": 8,
+    "correct": {
+      "letter": [
+        "E"
+      ],
+      "description": "The order of catch blocks is important because they’re checked in the order they appear after the try block. Because ArithmeticException is a child class of RuntimeException, the catch block on line 7 is unreachable. (If an ArithmeticException is thrown in try try block, it will be caught on line 5.) Line 7 generates a compiler error because it is unreachable code."
+    }
+  },
+  {
+    "idx": 9,
+    "correct": {
+      "letter": [
+        "B"
+      ],
+      "description": "The main() method invokes start on a new Laptop object. Line 4 prints Starting up; then line 5 throws an Exception. Line 6 catches the exception, line 7 prints Problem, and then line 8 calls System.exit, which terminates the JVM. The finally block does not execute because the JVM is no longer running."
+    }
+  },
+  {
+    "idx": 10,
+    "correct": {
+      "letter": [
+        "E"
+      ],
+      "description": "The parseName method is invoked within main() on a new Dog object. Line 4 prints 1. The try block executes and 2 is printed. Line 7 throws a NumberFormatException, so line 8 doesn’t execute. The exception is caught on line 9, and line 10 prints 4. Because the exception is handled, execution resumes normally. parseName runs to completion, and line 17 executes, printing 5. That’s the end of the program, so the output is 1245."
+    }
+  },
+  {
+    "idx": 11,
+    "correct": {
+      "letter": [
+        "A"
+      ],
+      "description": "The parseName method is invoked on a new Cat object. Line 4 prints 1. The try block is entered, and line 6 prints 2. Line 7 throws a NumberFormatException. It isn’t caught, so parseName ends. main() doesn’t catch the exception either, so the program terminates and the stack trace for the NumberFormatException is printed."
+    }
+  },
+  {
+    "idx": 12,
+    "correct": {
+      "letter": [
+        "A",
+        "B",
+        "D",
+        "G"
+      ],
+      "description": "The main() method invokes run on a new Mouse object. Line 4 prints 1 and line 6 prints 2, so options A and B are correct. Line 7 throws a NullPointerException, which causes line 8 to be skipped, so C is incorrect. The exception is caught on line 9 and line 10 prints 4, so option D is correct. Line 11 throws the exception again, which causes run() to immediately end, so line 13 doesn’t execute and option E is incorrect. The main() method doesn’t catch the exception either, so line 18 doesn’t execute and option F is incorrect. The uncaught NullPointerException causes the stack trace to be printed, so option G is correct."
+    }
+  },
+  {
+    "idx": 13,
+    "correct": {
+      "letter": [
+        "A",
+        "B",
+        "C",
+        "E"
+      ],
+      "description": "Classes listed in the throws part of a method declaration must extend java.lang.Throwable. This includes Error, Exception, and RuntimeException. Arbitrary classes such as String can’t go there. Any Java type, including Exception, can be declared as the return type. However, this will simply return the object rather than throw an exception."
+    }
+  },
+  {
+    "idx": 14,
+    "correct": {
+      "letter": [
+        "A",
+        "C",
+        "D",
+        "E"
+      ],
+      "description": "A method that declares an exception isn’t required to throw one, making option A correct. Runtime exceptions can be thrown in any method, making options C and E correct. Option D matches the exception type declared and so is also correct. Option B is incorrect because a broader exception is not allowed."
+    }
+  },
+  {
+    "idx": 15,
+    "correct": {
+      "letter": [
+        "A",
+        "B",
+        "D",
+        "E"
+      ],
+      "description": "ArrayIndexOutOfBoundsException, IllegalArgumentException, and NumberFormatException are runtime exceptions. Sorry, you have to memorize them. Any class that extends RuntimeException is a runtime (unchecked) exception. Classes that extend Exception but not RuntimeException are checked exceptions."
+    }
+  },
+  {
+    "idx": 16,
+    "correct": {
+      "letter": [
+        "B"
+      ],
+      "description": "IllegalArgumentException is used when an unexpected parameter is passed into a method. Option A is incorrect because returning null or -1 is a common return value for this scenario. Option D is incorrect because a for loop is typically used for this scenario. Option E is incorrect because you should find out how to code the method and not leave it for the unsuspecting programmer who calls your method. Option C is incorrect because you should run!"
+    }
+  },
+  {
+    "idx": 17,
+    "correct": {
+      "letter": [
+        "A",
+        "C",
+        "D",
+        "E"
+      ],
+      "description": "The method is allowed to throw no exceptions at all, making option A correct. It is also allowed to throw runtime exceptions, making options D and E correct. Option C is also correct since it matches the signature in the interface."
+    }
+  },
+  {
+    "idx": 18,
+    "correct": {
+      "letter": [
+        "A",
+        "B",
+        "C",
+        "E"
+      ],
+      "description": "Checked exceptions are required to be handled or declared. Runtime exceptions are allowed to be handled or declared. Errors are allowed to be handled or declared, but this is bad practice."
+    }
+  },
+  {
+    "idx": 19,
+    "correct": {
+      "letter": [
+        "C",
+        "E"
+      ],
+      "description": "Option C is allowed because it is a more specific type than RuntimeException. Option E is allowed because it isn’t in the same inheritance tree as RuntimeException. It’s not a good idea to catch either of these. Option B is not allowed because the method called inside the try block doesn’t declare an IOException to be thrown. The compiler realizes that IOException would be an unreachable catch block. Option D is not allowed because the same exception can’t be specified in two different catch blocks. Finally, option A is not allowed because it’s more general than RuntimeException and would make that block unreachable."
+    }
+  },
+  {
+    "idx": 20,
+    "correct": {
+      "letter": [
+        "A",
+        "E"
+      ],
+      "description": "The code begins normally and prints a on line 13, followed by b on line 15. On line 16, it throws an exception that’s caught on line 17. Remember, only the most specific matching catch is run. Line 18 prints c, and then line 19 throws another exception. Regardless, the finally block runs, printing e. Since the finally block also throws an exception, that’s the one printed."
+    }
+  }
+]

@@ -1,0 +1,299 @@
+[
+  {
+    "idx": 1,
+    "text": "Given an instance of a Stream, s, and a Collection, c, which are valid ways of creating a parallel stream? (Choose all that apply.)",
+    "select_type": "multiply",
+    "answers": [
+      { "letter": "A", "text": "<pre>new ParallelStream(s)</pre>" },
+      { "letter": "B", "text": "<pre>c.parallel()</pre>" },
+      { "letter": "C", "text": "<pre>s.parallelStream()</pre>" },
+      { "letter": "D", "text": "<pre>c.parallelStream()</pre>" },
+      { "letter": "E", "text": "<pre>new ParallelStream(c)</pre>" },
+      { "letter": "F", "text": "<pre>s.parallel()</pre>" }
+    ]
+  },
+  {
+    "idx": 2,
+    "text": "Which of the following statements about the Callable call() and Runnable run() methods are correct? (Choose all that apply.)",
+    "select_type": "multiply",
+    "answers": [
+      { "letter": "A", "text": "Both can throw unchecked exceptions." },
+      { "letter": "B", "text": "Callable takes a generic method argument." },
+      { "letter": "C", "text": "Callable can throw a checked exception." },
+      { "letter": "D", "text": "Both can be implemented with lambda expressions." },
+      { "letter": "E", "text": "Runnable returns a generic type." },
+      { "letter": "F", "text": "Callable returns a generic type." },
+      { "letter": "G", "text": "Both methods return void." }
+    ]
+  },
+  {
+    "idx": 3,
+    "text": "Which lines need to be changed to make the code compile? (Choose all that apply.)\n<pre>\nExecutorService service = Executors.newSingleThreadScheduledExecutor();\nservice.scheduleWithFixedDelay(() -> { // w1\n  System.out.println(\"Open Zoo\");\n  return null; // w2\n}, 0, 1, TimeUnit.MINUTES);\nFuture&lt;?&gt; result = service.submit(() -> System.out.println(\"Wake Staff\")); // w3\nSystem.out.println(result.get()); // w4\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      { "letter": "A", "text": "It compiles and runs without issue." },
+      { "letter": "B", "text": "Line w1" },
+      { "letter": "C", "text": "Line w2" },
+      { "letter": "D", "text": "Line w3" },
+      { "letter": "E", "text": "Line w4" },
+      { "letter": "F", "text": "It compiles but throws an exception at runtime." }
+    ]
+  },
+  {
+    "idx": 4,
+    "text": "What statement about the following code is true?\n<pre>\nAtomicLong value1 = new AtomicLong(0);\nfinal long[] value2 = {0};\nIntStream.iterate(1, i -> 1).limit(100).parallel()\n  .forEach(i -> value1.incrementAndGet());\nIntStream.iterate(1, i -> 1).limit(100).parallel()\n  .forEach(i -> ++value2[0]);\nSystem.out.println(value1+\" \"+value2[0]);\n</pre>",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "It outputs 100 100." },
+      { "letter": "B", "text": "It outputs 100 99." },
+      { "letter": "C", "text": "The output cannot be determined ahead of time." },
+      { "letter": "D", "text": "The code does not compile." },
+      { "letter": "E", "text": "It compiles but throws an exception at runtime." },
+      { "letter": "F", "text": "It compiles but enters an infinite loop at runtime." }
+    ]
+  },
+  {
+    "idx": 5,
+    "text": "Fill in the blanks: __________ occur(s) when two or more threads are blocked forever but both appear active. __________ occur(s) when two or more threads try to complete a related task at the same time.",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "Livelock, Deadlock" },
+      { "letter": "B", "text": "Deadlock, Starvation" },
+      { "letter": "C", "text": "Race conditions, Deadlock" },
+      { "letter": "D", "text": "Livelock, Race conditions" },
+      { "letter": "E", "text": "Starvation, Race conditions" },
+      { "letter": "F", "text": "Deadlock, Livelock" }
+    ]
+  },
+  {
+    "idx": 6,
+    "text": "Which happens when more tasks are submitted to a thread executor than available threads?",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "The thread executor will throw an exception when a task is submitted that is over its thread limit." },
+      { "letter": "B", "text": "The task will be added to an internal queue and completed when there is an available thread." },
+      { "letter": "C", "text": "The thread executor will discard any task over its thread limit." },
+      { "letter": "D", "text": "The call to submit the task to the thread executor will wait until there is a thread available before continuing." },
+      { "letter": "E", "text": "The thread executor creates new temporary threads to complete the additional tasks." }
+    ]
+  },
+  {
+    "idx": 7,
+    "text": "What is the result of executing the following code snippet?\n<pre>\nList&lt;Integer&gt; l1 = Arrays.asList(1,2,3);\nList&lt;Integer&gt; l2 = new CopyOnWriteArrayList&lt;&gt;(l1);\nSet&lt;Integer&gt; s3 = new ConcurrentSkipListSet&lt;&gt;();\ns3.addAll(l1);\nfor(Integer item: l2) l2.add(4); // x1\nfor(Integer item: s3) s3.add(5); // x2\nSystem.out.println(l1.size()+\" \"+l2.size()+\" \"+s3.size());\n</pre>",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "It outputs 3 6 4." },
+      { "letter": "B", "text": "It outputs 6 6 6." },
+      { "letter": "C", "text": "It outputs 6 3 4." },
+      { "letter": "D", "text": "The code does not compile." },
+      { "letter": "E", "text": "It compiles but throws an exception at runtime on line x1." },
+      { "letter": "F", "text": "It compiles but throws an exception at runtime on line x2." },
+      { "letter": "G", "text": "It compiles but enters an infinite loop at runtime." }
+    ]
+  },
+  {
+    "idx": 8,
+    "text": "What statements about the following code are true? (Choose all that apply.)\n<pre>\nInteger i1 = Arrays.asList(1,2,3,4,5).stream().findAny().get();\nsynchronized(i1) { // y1\n  Integer i2 = Arrays.asList(6,7,8,9,10)\n    .parallelStream()\n    .sorted() // y2\n    .findAny().get(); // y3\n  System.out.println(i1+\" \"+i2);\n}\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      { "letter": "A", "text": "It outputs 1 6." },
+      { "letter": "B", "text": "It outputs 1 10." },
+      { "letter": "C", "text": "The code will not compile because of line y1." },
+      { "letter": "D", "text": "The code will not compile because of line y2." },
+      { "letter": "E", "text": "The code will not compile because of line y3." },
+      { "letter": "F", "text": "It compiles but throws an exception at runtime." },
+      { "letter": "G", "text": "The output cannot be determined ahead of time." },
+      { "letter": "H", "text": "It compiles but waits forever at runtime." }
+    ]
+  },
+  {
+    "idx": 9,
+    "text": "Assuming MyTask is an abstract class that implements the ForkJoinTask interface, what statements about the following code are true? (Choose all that apply.)\n<pre>\nimport java.util.concurrent.*;\npublic class FindMin extends MyTask {\n  private Integer[] elements;\n  private int a;\n  private int b;\n  public FindMin(Integer[] elements, int a, int b) {\n    this.elements = elements;\n    this.a = a;\n    this.b = b;\n  }\n  public Integer compute() {\n    if ((b—a) &lt; 2)\n      return Math.min(elements[a], elements[b]);\n    else {\n      int m = a + ((b—a) / 2);\n      System.out.println(a + \",\" + m + \",\" + b);\n      MyTask t1 = new FindMin(elements, a, m);\n      int result = t1.fork().join();\n      return Math.min(new FindMin(elements, m, b).compute(), result);\n    }\n  }\n  public static void main(String[] args) throws InterruptedException,\n    ExecutionException {\n    Integer[] elements = new Integer[] { 8, -3, 2, -54 };\n    MyTask task = new FindMin(elements, 0, elements.length—1);\n    ForkJoinPool pool = new ForkJoinPool(1);\n    Integer sum = pool.invoke(task);\n    System.out.println(\"Min: \" + sum);\n  }\n}\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      { "letter": "A", "text": "The code correctly finds the minimum value in the array." },
+      { "letter": "B", "text": "MyTask inherits RecursiveAction." },
+      { "letter": "C", "text": "MyTask inherits RecursiveTask." },
+      { "letter": "D", "text": "The code produces a ForkJoinPool at runtime." },
+      { "letter": "E", "text": "The class produces single-threaded performance at runtime." },
+      { "letter": "F", "text": "The code does not compile." }
+    ]
+  },
+  {
+    "idx": 10,
+    "text": "What statements about the following code are true? (Choose all that apply.)\n<pre>\nSystem.out.println(Arrays.asList(\"duck\",\"chicken\",\"flamingo\",\"pelican\")\n  .parallelStream().parallel() // q1\n  .reduce(0,\n    (c1, c2) -> c1.length() + c2.length(), // q2\n    (s1, s2) -> s1 + s2)); // q3\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      { "letter": "A", "text": "It compiles and runs without issue, outputting the total length of all strings in the stream." },
+      { "letter": "B", "text": "The code will not compile because of line q1." },
+      { "letter": "C", "text": "The code will not compile because of line q2." },
+      { "letter": "D", "text": "The code will not compile because of line q3." },
+      { "letter": "E", "text": "It compiles but throws an exception at runtime." }
+    ]
+  },
+  {
+    "idx": 11,
+    "text": "What statements about the following code snippet are true? (Choose all that apply.)\n<pre>\nObject o1 = new Object();\nObject o2 = new Object();\nExecutorService service = Executors.newFixedThreadPool(2);\nFuture&lt;?&gt; f1 = service.submit(() -> {\n  synchronized (o1) {\n    synchronized (o2) { System.out.println(\"Tortoise\"); } // t1\n  }\n});\nFuture&lt;?&gt; f2 = service.submit(() -> {\n  synchronized (o2) {\n    synchronized (o1) { System.out.println(\"Hare\"); } // t2\n  }\n});\nf1.get();\nf2.get();\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      { "letter": "A", "text": "If the code does output anything, the order cannot be determined." },
+      { "letter": "B", "text": "The code will always output Tortoise followed by Hare." },
+      { "letter": "C", "text": "The code will always output Hare followed by Tortoise." },
+      { "letter": "D", "text": "The code does not compile because of line t1." },
+      { "letter": "E", "text": "The code does not compile because of line t2." },
+      { "letter": "F", "text": "The code may produce a deadlock at runtime." },
+      { "letter": "G", "text": "The code may produce a livelock at runtime." },
+      { "letter": "H", "text": "It compiles but throws an exception at runtime." }
+    ]
+  },
+  {
+    "idx": 12,
+    "text": "What is the result of executing the following application? (Choose all that apply.)\n<pre>\nimport java.util.concurrent.*;\npublic class CountNumbers extends RecursiveAction {\n  private int start;\n  private int end;\n  public CountNumbers(int start, int end) {\n    this.start = start;\n    this.end = end;\n  }\n  protected void compute() {\n    if (start&lt;0) return;else {\n      int middle = start + ((end—start) / 2);\n      invokeAll(new CountNumbers(start, middle),\n        new CountNumbers(middle, end)); // m1\n    }\n  }\n  public static void main(String[] args) {\n    ForkJoinTask&lt;?&gt; task = new CountNumbers(0, 4); // m2\n    ForkJoinPool pool = new ForkJoinPool();\n    Object result = pool.invoke(task); // m3\n  }\n}\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      { "letter": "A", "text": "It compiles and runs without issue." },
+      { "letter": "B", "text": "The code will not compile because of m1." },
+      { "letter": "C", "text": "The code will not compile because of m2." },
+      { "letter": "D", "text": "The code will not compile because of m3." },
+      { "letter": "E", "text": "It compiles but throws an exception at runtime." },
+      { "letter": "F", "text": "It compiles but hangs at runtime." }
+    ]
+  },
+  {
+    "idx": 13,
+    "text": "What statements about the following code snippet are true? (Choose all that apply.)\n<pre>\n4: Stream&lt;String&gt; cats = Stream.of(\"leopard\",\"lynx\",\"ocelot\",\"puma\").parallel();\n5: Stream&lt;String&gt; bears = Stream.of(\"panda\",\"grizzly\",\"polar\").parallel();\n6: ConcurrentMap&lt;Boolean, List&lt;String&gt;&gt; data = Stream.of(cats,bears)\n7:   .flatMap(s -> s)\n8:   .collect(Collectors.groupingByConcurrent(s -> !s.startsWith(\"p\")));\n9: System.out.println(data.get(false).size()+\" \"+data.get(true).size());\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      { "letter": "A", "text": "It outputs 3 4." },
+      { "letter": "B", "text": "It outputs 4 3." },
+      { "letter": "C", "text": "The code will not compile because of line 6." },
+      { "letter": "D", "text": "The code will not compile because of line 7." },
+      { "letter": "E", "text": "The code will not compile because of line 8." },
+      { "letter": "F", "text": "It compiles but throws an exception at runtime." },
+      { "letter": "G", "text": "The collect() operation is always executed in a single-threaded fashion." }
+    ]
+  },
+  {
+    "idx": 14,
+    "text": "What is the result of calling the following method?\n<pre>\n3: public void addAndPrintItems(BlockingDeque&lt;Integer&gt; deque) {\n4:   deque.offer(103);\n5:   deque.offerFirst(20, 1, TimeUnit.SECONDS);\n6:   deque.offerLast(85, 7, TimeUnit.HOURS);\n7:   System.out.print(deque.pollFirst(200, TimeUnit.NANOSECONDS));\n8:   System.out.print(\" \"+deque.pollLast(1, TimeUnit.MINUTES));\n9: }\n</pre>",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "It outputs 20 85." },
+      { "letter": "B", "text": "It outputs 103 85." },
+      { "letter": "C", "text": "It outputs 20 103." },
+      { "letter": "D", "text": "The code will not compile." },
+      { "letter": "E", "text": "It compiles but throws an exception at runtime." },
+      { "letter": "F", "text": "The output cannot be determined ahead of time." }
+    ]
+  },
+  {
+    "idx": 15,
+    "text": "Which of the following are valid Callable expressions? (Choose all that apply.)",
+    "select_type": "multiply",
+    "answers": [
+      { "letter": "A", "text": "<pre>a -> {return 10;}</pre>" },
+      { "letter": "B", "text": "<pre>() -> {String s = \"\";}</pre>" },
+      { "letter": "C", "text": "<pre>() -> 5</pre>" },
+      { "letter": "D", "text": "<pre>() -> {return null}</pre>" },
+      { "letter": "E", "text": "<pre>() -> \"The\" + \"Zoo\"</pre>" },
+      { "letter": "F", "text": "<pre>(int count) -> count+1</pre>" },
+      { "letter": "G", "text": "<pre>() -> {System.out.println(\"Giraffe\");\nreturn 10;}</pre>" }
+    ]
+  },
+  {
+    "idx": 16,
+    "text": "What is the result of executing the following application? (Choose all that apply.)\n<pre>\nimport java.util.concurrent.*;\nimport java.util.stream.*;\npublic class PrintConstants {\n  public static void main(String[] args) {\n    ExecutorService service = Executors.newScheduledThreadPool(10);\n    DoubleStream.of(3.14159,2.71828) // b1\n      .forEach(c -> service.submit( // b2\n        () -> System.out.println(10*c))); // b3\n    service.execute(() -> System.out.println(\"Printed\")); // b4\n  }\n}\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      { "letter": "A", "text": "It compiles and outputs the two numbers, followed by Printed." },
+      { "letter": "B", "text": "The code will not compile because of line b1." },
+      { "letter": "C", "text": "The code will not compile because of line b2." },
+      { "letter": "D", "text": "The code will not compile because of line b3." },
+      { "letter": "E", "text": "The code will not compile because of line b4." },
+      { "letter": "F", "text": "It compiles but the output cannot be determined ahead of time." },
+      { "letter": "G", "text": "It compiles but throws an exception at runtime." },
+      { "letter": "H", "text": "It compiles but waits forever at runtime." }
+    ]
+  },
+  {
+    "idx": 17,
+    "text": "Assuming 100 milliseconds is enough time for the tasks submitted to the thread executor to complete, what is the result of executing the following program? (Choose all that apply.)\n<pre>\nimport java.util.concurrent.*;\npublic class SheepManager {\n  private static AtomicInteger sheepCount1 = new AtomicInteger(0); // w1\n  private static int sheepCount2 = 0;\n  public static void main(String[] args) throws InterruptedException {\n    ExecutorService service = null;\n    try {\n      service = Executors.newSingleThreadExecutor(); // w2\n      for(int i=0; i&lt;100; i++)\n        service.execute(() ->\n          {sheepCount1.getAndIncrement(); sheepCount2++;}); // w3\n      Thread.sleep(100);\n      System.out.println(sheepCount1+\" \"+sheepCount2);\n    } finally {\n      if(service != null) service.shutdown();\n    }\n  }\n}\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      { "letter": "A", "text": "It outputs 100 99." },
+      { "letter": "B", "text": "It outputs 100 100." },
+      { "letter": "C", "text": "The output cannot be determined ahead of time." },
+      { "letter": "D", "text": "The code will not compile because of line w1." },
+      { "letter": "E", "text": "The code will not compile because of line w2." },
+      { "letter": "F", "text": "The code will not compile because of line w3." },
+      { "letter": "G", "text": "It compiles but throws an exception at runtime." }
+    ]
+  },
+  {
+    "idx": 18,
+    "text": "What is the result of executing the following application? (Choose all that apply.)\n<pre>\nimport java.util.concurrent.*;\nimport java.util.stream.*;\npublic class StockRoomTracker {\n  public static void await(CyclicBarrier cb) { // j1\n    try { cb.await();\n    } catch (InterruptedException | BrokenBarrierException e) {\n      // Handle exception\n    }\n  }\n  public static void main(String[] args) {\n    CyclicBarrier cb = new CyclicBarrier(10,\n      () -> System.out.println(\"Stock Room Full!\")); // j2\n    IntStream.iterate(1, i -> 1).limit(9)\n      .parallel().forEach(i -> await(cb)); // j3\n  }\n}\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      { "letter": "A", "text": "It outputs Stock Room Full!" },
+      { "letter": "B", "text": "The code will not compile because of line j1." },
+      { "letter": "C", "text": "The code will not compile because of line j2." },
+      { "letter": "D", "text": "The code will not compile because of line j3." },
+      { "letter": "E", "text": "It compiles but throws an exception at runtime." },
+      { "letter": "F", "text": "It compiles but waits forever at runtime." }
+    ]
+  },
+  {
+    "idx": 19,
+    "text": "What statements about the following class definition are true? (Choose all that apply.)\n<pre>\npublic class TicketManager {\n  private TicketManager() { super(); }\n  private static TicketManager instance;\n  public static synchronized TicketManager getInstance() { // k1\n    if (instance == null) instance = new TicketManager(); // k2\n    return instance;\n  }\n  private int tickets;\n  public int getTicketCount() { return tickets; }\n  public void makeTicketsAvailable(int value) { tickets += value; } // k3\n  public void sellTickets(int value) {\n    synchronized (this) { // k4\n      tickets -= value;\n    }\n  }\n}\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      { "letter": "A", "text": "It compiles without issue." },
+      { "letter": "B", "text": "The code will not compile because of line k2." },
+      { "letter": "C", "text": "The code will not compile because of line k3." },
+      { "letter": "D", "text": "The lock locks acquired on k1 and k4 are on the same object." },
+      { "letter": "E", "text": "The class correctly prevents concurrency issues for the value of tickets when accessed by multiple threads." },
+      { "letter": "F", "text": "At most one instance of TicketManager will be created in the application." }
+    ]
+  },
+  {
+    "idx": 20,
+    "text": "Which of the following properties of concurrency are true? (Choose all that apply.)",
+    "select_type": "multiply",
+    "answers": [
+      { "letter": "A", "text": "By itself, concurrency does not guarantee which task will be completed first." },
+      { "letter": "B", "text": "Concurrency always improves the performance of an application." },
+      { "letter": "C", "text": "Computers with a single processor do not benefit from concurrency." },
+      { "letter": "D", "text": "Applications with many resource-heavy tasks tend to benefit more from concurrency than ones with CPU-intensive tasks." },
+      { "letter": "E", "text": "Concurrent tasks do not share the same memory." }
+    ]
+  },
+  {
+    "idx": 21,
+    "text": "Assuming an implementation of the performCount() method is provided prior to runtime, which of the following are possible results of executing the following application? (Choose all that apply.)\n<pre>\nimport java.util.*;\nimport java.util.concurrent.*;\nimport java.util.stream.*;\npublic class CountZooAnimals {\n  public static Integer performCount(int exhibitNumber) {\n    // IMPLEMENTATION OMITTED\n  }\n  public static void printResults(Future&lt;?&gt; f) {\n    try {\n      System.out.println(f.get()); // o1\n    } catch (Exception e) {\n      System.out.println(\"Exception!\");\n    }\n  }\n  public static void main(String[] args) throws InterruptedException,\n    ExecutionException {\n    ExecutorService service = Executors.newSingleThreadExecutor();\n    final List&lt;Future&lt;?&gt;&gt; results = new ArrayList&lt;&gt;();\n    IntStream.range(0, 10)\n      .forEach(i -> results.add(\n        service.submit(() -> performCount(i)))); // o2\n    results.stream().forEach(f -> printResults(f));\n    service.shutdown();\n  }\n}\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      { "letter": "A", "text": "It outputs a number 10 times." },
+      { "letter": "B", "text": "It outputs a Boolean value 10 times." },
+      { "letter": "C", "text": "It outputs a null value 10 times." },
+      { "letter": "D", "text": "It outputs Exception! 10 times." },
+      { "letter": "E", "text": "It hangs indefinitely at runtime." },
+      { "letter": "F", "text": "It throws an unhandled exception at runtime." },
+      { "letter": "G", "text": "The code will not compile because of line o1." },
+      { "letter": "H", "text": "The code will not compile because of line o2." }
+    ]
+  },
+  {
+    "idx": 22,
+    "text": "What is the result of executing the following program?\n<pre>\nimport java.util.*;\nimport java.util.concurrent.*;\nimport java.util.stream.*;\npublic class PrintCounter {\n  static int counter = 0;\n  public static void main(String[] args) throws InterruptedException,\n    ExecutionException {\n    ExecutorService service = Executors.newSingleThreadExecutor();\n    List&lt;Future&lt;?&gt;&gt; results = new ArrayList&lt;&gt;();\n    IntStream.iterate(0,i -> i+1).limit(5).forEach(\n      i -> results.add(service.execute(() -> counter++)) // n1\n    );\n    for(Future&lt;?&gt; result : results) {\n      System.out.print(result.get()+\" \"); // n2\n    }\n    service.shutdown();\n  }\n}\n</pre>",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "It prints 0 1 2 3 4" },
+      { "letter": "B", "text": "It prints 1 2 3 4 5" },
+      { "letter": "C", "text": "It prints null null null null null" },
+      { "letter": "D", "text": "It hangs indefinitely at runtime." },
+      { "letter": "E", "text": "The output cannot be determined." },
+      { "letter": "F", "text": "The code will not compile because of line n1." },
+      { "letter": "G", "text": "The code will not compile because of line n2" }
+    ]
+  }
+]

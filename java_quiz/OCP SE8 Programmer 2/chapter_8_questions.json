@@ -1,0 +1,303 @@
+[
+  {
+    "idx": 1,
+    "text": "Which classes will allow the following to compile? (Choose all that apply.)\n<pre>\nInputStream is = new BufferedInputStream(new FileInputStream(\"zoo.txt\"));\nInputStream wrapper = new (is);\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      { "letter": "A", "text": "<pre>BufferedInputStream</pre>" },
+      { "letter": "B", "text": "<pre>FileInputStream</pre>" },
+      { "letter": "C", "text": "<pre>BufferedWriter</pre>" },
+      { "letter": "D", "text": "<pre>ObjectInputStream</pre>" },
+      { "letter": "E", "text": "<pre>ObjectOutputStream</pre>" },
+      { "letter": "F", "text": "<pre>BufferedReader</pre>" }
+    ]
+  },
+  {
+    "idx": 2,
+    "text": "Why does Console.readPassword() return a char[] array instead of a String object? (Choose all that apply.)",
+    "select_type": "multiply",
+    "answers": [
+      { "letter": "A", "text": "It improves performance." },
+      { "letter": "B", "text": "It is more secure." },
+      { "letter": "C", "text": "To encrypt the password data." },
+      { "letter": "D", "text": "To support all character encodings." },
+      { "letter": "E", "text": "Because Java puts all String values in a reusable pool." },
+      { "letter": "F", "text": "So that the value can be removed from memory immediately after use." }
+    ]
+  },
+  {
+    "idx": 3,
+    "text": "Which of the following are true? (Choose all that apply.)",
+    "select_type": "multiply",
+    "answers": [
+      { "letter": "A", "text": "A new Console object is created every time System.console() is called." },
+      { "letter": "B", "text": "Console can only be used for reading input and not writing output." },
+      { "letter": "C", "text": "Console is obtained using the singleton pattern." },
+      { "letter": "D", "text": "When getting a Console object, it might be null." },
+      { "letter": "E", "text": "When getting a Console object, it will never be null." }
+    ]
+  },
+  {
+    "idx": 4,
+    "text": "Which of the following can fill in the blank to make the code compile? (Choose all that apply.)\n<pre>\nConsole c = System.console();\nString s = ;\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      { "letter": "A", "text": "<pre>c.input()</pre>" },
+      { "letter": "B", "text": "<pre>c.read()</pre>" },
+      { "letter": "C", "text": "<pre>c.readLine()</pre>" },
+      { "letter": "D", "text": "<pre>c.readPassword()</pre>" },
+      { "letter": "E", "text": "<pre>c.readString()</pre>" },
+      { "letter": "F", "text": "None of the above" }
+    ]
+  },
+  {
+    "idx": 5,
+    "text": "What is the result of executing the following code? (Choose all that apply.)\n<pre>\nString line;\nConsole c = System.console();\nWriter w = c.writer();\nif ((line = c.readLine()) != null)\n  w.append(line);\nw.flush();\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      { "letter": "A", "text": "The code runs without error but prints nothing." },
+      { "letter": "B", "text": "The code prints what was entered by the user." },
+      { "letter": "C", "text": "An ArrayIndexOutOfBoundsException might be thrown." },
+      { "letter": "D", "text": "A NullPointerException might be thrown." },
+      { "letter": "E", "text": "An IOException might be thrown." },
+      { "letter": "F", "text": "The code does not compile." }
+    ]
+  },
+  {
+    "idx": 6,
+    "text": "Which of the following are true statements about serialization in Java? (Choose all that apply.)",
+    "select_type": "multiply",
+    "answers": [
+      { "letter": "A", "text": "The process of converting serialized data back into memory is called deserialization." },
+      { "letter": "B", "text": "All non-thread classes should be marked Serializable." },
+      { "letter": "C", "text": "The Serializable interface requires implementing serialize() and deserialize() methods." },
+      { "letter": "D", "text": "The Serializable interface is marked final and cannot be extended." },
+      { "letter": "E", "text": "The readObject() method of ObjectInputStream may throw a ClassNotFoundException even if the return object is not explicitly cast." }
+    ]
+  },
+  {
+    "idx": 7,
+    "text": "Fill in the blank: __________ is the topmost directory on a file system.",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "Absolute" },
+      { "letter": "B", "text": "Directory" },
+      { "letter": "C", "text": "Parent" },
+      { "letter": "D", "text": "Root" },
+      { "letter": "E", "text": "Top" }
+    ]
+  },
+  {
+    "idx": 8,
+    "text": "Assuming / is the root directory, which of the following are true statements? (Choose all that apply.)",
+    "select_type": "multiply",
+    "answers": [
+      { "letter": "A", "text": "/home/parrot is an absolute path." },
+      { "letter": "B", "text": "/home/parrot is a directory." },
+      { "letter": "C", "text": "/home/parrot is a relative path." },
+      { "letter": "D", "text": "The path pointed to from a File object must exist." },
+      { "letter": "E", "text": "The parent of the path pointed to by a File object must exist." }
+    ]
+  },
+  {
+    "idx": 9,
+    "text": "What are the requirements for a class that you want to serialize with ObjectOutputStream? (Choose all that apply.)",
+    "select_type": "multiply",
+    "answers": [
+      { "letter": "A", "text": "The class must implement the Serializable interface." },
+      { "letter": "B", "text": "The class must extend the Serializable class." },
+      { "letter": "C", "text": "The class must declare a static serialVersionUID variable." },
+      { "letter": "D", "text": "All instance members of the class must be Serializable." },
+      { "letter": "E", "text": "All instance members of the class must be marked transient." },
+      { "letter": "F", "text": "Any class can be serialized with ObjectOutputStream." }
+    ]
+  },
+  {
+    "idx": 10,
+    "text": "The following method is designed to delete a directory tree recursively. Which of the following properties reflect the method definition? (Choose all that apply.)\n<pre>\n1: public static void deleteTree(File file) {\n2:   if(!file.isFile())\n3:     for(File entry: file.listFiles())\n4:       deleteTree(entry);\n5:   else file.delete();\n6: }\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      { "letter": "A", "text": "It can delete a directory that contains only files." },
+      { "letter": "B", "text": "It can delete a directory tree of arbitrary length." },
+      { "letter": "C", "text": "It can delete a single file." },
+      { "letter": "D", "text": "The code will not compile because of line 2." },
+      { "letter": "E", "text": "The code will not compile because of line 3." },
+      { "letter": "F", "text": "It compiles but may throw an exception at runtime." }
+    ]
+  },
+  {
+    "idx": 11,
+    "text": "Which of the following are methods available to instances of the java.io.File class? (Choose all that apply.)",
+    "select_type": "multiply",
+    "answers": [
+      { "letter": "A", "text": "mv()" },
+      { "letter": "B", "text": "createDirectory()" },
+      { "letter": "C", "text": "mkdirs()" },
+      { "letter": "D", "text": "move()" },
+      { "letter": "E", "text": "renameTo()" },
+      { "letter": "F", "text": "copy()" },
+      { "letter": "G", "text": "mkdir()" }
+    ]
+  },
+  {
+    "idx": 12,
+    "text": "Suppose that the file c:\\book\\java exists. Which of the following lines of code creates an object that represents the file? (Choose all that apply.)",
+    "select_type": "multiply",
+    "answers": [
+      { "letter": "A", "text": "<pre>new File(\"c:\\book\\java\");</pre>" },
+      { "letter": "B", "text": "<pre>new File(\"c:\\\\book\\\\java\");</pre>" },
+      { "letter": "C", "text": "<pre>new File(\"c:/book/java\");</pre>" },
+      { "letter": "D", "text": "<pre>new File(\"c://book//java\");</pre>" },
+      { "letter": "E", "text": "None of the above" }
+    ]
+  },
+  {
+    "idx": 13,
+    "text": "Which of the following are built-in streams in Java? (Choose all that apply.)",
+    "select_type": "multiply",
+    "answers": [
+      { "letter": "A", "text": "<pre>System.err</pre>" },
+      { "letter": "B", "text": "<pre>System.error</pre>" },
+      { "letter": "C", "text": "<pre>System.in</pre>" },
+      { "letter": "D", "text": "<pre>System.input</pre>" },
+      { "letter": "E", "text": "<pre>System.out</pre>" },
+      { "letter": "F", "text": "<pre>System.output</pre>" }
+    ]
+  },
+  {
+    "idx": 14,
+    "text": "Which of the following are not java.io classes? (Choose all that apply.)",
+    "select_type": "multiply",
+    "answers": [
+      { "letter": "A", "text": "BufferedReader" },
+      { "letter": "B", "text": "BufferedWriter" },
+      { "letter": "C", "text": "FileReader" },
+      { "letter": "D", "text": "FileWriter" },
+      { "letter": "E", "text": "PrintReader" },
+      { "letter": "F", "text": "PrintWriter" }
+    ]
+  },
+  {
+    "idx": 15,
+    "text": "Assuming zoo-data.txt is a multiline text file, what is true of the following method?\n<pre>\nprivate void echo() throws IOException {\n  try (FileReader fileReader = new FileReader(\"zoo-data.txt\");\n    BufferedReader bufferedReader = new BufferedReader(fileReader)) {\n    System.out.println(bufferedReader.readLine());\n  }\n}\n</pre>",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "It prints the first line of the file to the console." },
+      { "letter": "B", "text": "It prints the entire contents of the file." },
+      { "letter": "C", "text": "The code does not compile because the reader is not closed." },
+      { "letter": "D", "text": "The code does compile, but the reader is not closed." },
+      { "letter": "E", "text": "The code does not compile for another reason." }
+    ]
+  },
+  {
+    "idx": 16,
+    "text": "Why shouldn’t every class be marked Serializable? (Choose all that apply.)",
+    "select_type": "multiply",
+    "answers": [
+      { "letter": "A", "text": "The compiler will throw an exception if certain classes are marked Serializable." },
+      { "letter": "B", "text": "Only final classes can be marked Serializable." },
+      { "letter": "C", "text": "Classes can implement only one interface, so marking them Serializable would prevent them from using any other interface." },
+      { "letter": "D", "text": "The data of some classes cannot be easily serialized, such as those managing threads or processes." },
+      { "letter": "E", "text": "Only concrete classes can be marked Serializable." },
+      { "letter": "F", "text": "Classes that store most of their data in static fields would not be easily serialized." }
+    ]
+  },
+  {
+    "idx": 17,
+    "text": "Which of the following stream classes are high-level? (Choose all that apply.)",
+    "select_type": "multiply",
+    "answers": [
+      { "letter": "A", "text": "ObjectInputStream" },
+      { "letter": "B", "text": "PrintStream" },
+      { "letter": "C", "text": "FileWriter" },
+      { "letter": "D", "text": "PrintWriter" },
+      { "letter": "E", "text": "OutputStream" },
+      { "letter": "F", "text": "FileInputStream" },
+      { "letter": "G", "text": "ObjectOutputStream" }
+    ]
+  },
+  {
+    "idx": 18,
+    "text": "Which values when inserted into the blank would allow the code to compile? (Choose all that apply.)\n<pre>\n1: Console console = System.console();\n2: String color = console.readLine(\"What is your favorite color? \");\n3: console. (\"Your favorite color is \"+color);\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      { "letter": "A", "text": "print" },
+      { "letter": "B", "text": "printf" },
+      { "letter": "C", "text": "println" },
+      { "letter": "D", "text": "format" },
+      { "letter": "E", "text": "writer().println" },
+      { "letter": "F", "text": "out" }
+    ]
+  },
+  {
+    "idx": 19,
+    "text": "Suppose that you need to write data that consists of int, double, boolean, and String values to a file that maintains the format of the original data. For performance reasons, you also want to buffer the data. Which three java.io classes can be chained together to best achieve this result?",
+    "select_type": "multiply",
+    "answers": [
+      { "letter": "A", "text": "FileWriter" },
+      { "letter": "B", "text": "FileOutputStream" },
+      { "letter": "C", "text": "BufferedOutputStream" },
+      { "letter": "D", "text": "ObjectOutputStream" },
+      { "letter": "E", "text": "DirectoryStream" },
+      { "letter": "F", "text": "PrintWriter" },
+      { "letter": "G", "text": "PipedOutputStream" }
+    ]
+  },
+  {
+    "idx": 20,
+    "text": "What are some reasons to use a character stream, such as Reader/Writer, over a byte stream, such as InputStream/OutputStream? (Choose all that apply.)",
+    "select_type": "multiply",
+    "answers": [
+      { "letter": "A", "text": "More convenient code syntax when working with String data" },
+      { "letter": "B", "text": "Improved performance" },
+      { "letter": "C", "text": "Automatic character encoding" },
+      { "letter": "D", "text": "Built-in serialization and deserialization" },
+      { "letter": "E", "text": "Character streams are high-level streams" },
+      { "letter": "F", "text": "Multi-threading support" }
+    ]
+  },
+  {
+    "idx": 21,
+    "text": "Assuming the following class has proper public getter/setter methods for all of its private fields, which of the following fields will always be null after an instance of the class is serialized and then deserialized? (Choose all that apply.)\n<pre>\npublic class Zebra implements Serializable {\n  private static final long serialUID = 1L;\n  private transient String name = \"George\";\n  private static String birthPlace = \"Africa\";\n  private transient Integer age;\n  private java.util.List&lt;Zebra&gt; friends = new java.util.ArrayList&lt;&gt;();\n  private Object tail = null;\n  { age = 10;}\n  public Zebra() {\n    this.name = \"Sophia\";\n  }\n}\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      { "letter": "A", "text": "name" },
+      { "letter": "B", "text": "tail" },
+      { "letter": "C", "text": "age" },
+      { "letter": "D", "text": "friends" },
+      { "letter": "E", "text": "birthPlace" },
+      { "letter": "F", "text": "The code does not compile." },
+      { "letter": "G", "text": "The code compiles but throws an exception at runtime." }
+    ]
+  },
+  {
+    "idx": 22,
+    "text": "What is the value of name after an instance of Eagle is serialized and then deserialized?\n<pre>\npublic class Bird implements Serializable {\n  protected transient String name = \"Bridget\";\n  public void setName(String name) { this.name = name; }\n  public String getName() { return name; }\n  public Bird() {\n    this.name = \"Matt\";\n  }\n}\npublic class Eagle extends Bird implements Serializable {\n  { this.name = \"Janette\"; }\n  public Eagle() {\n    this.name = \"Daniel\";\n  }\n}\n</pre>",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "Bridget" },
+      { "letter": "B", "text": "Matt" },
+      { "letter": "C", "text": "Janette" },
+      { "letter": "D", "text": "Daniel" },
+      { "letter": "E", "text": "null" },
+      { "letter": "F", "text": "The code does not compile." },
+      { "letter": "G", "text": "The code compiles but throws an exception at runtime." },
+      { "letter": "H", "text": "The value may not be known until runtime." }
+    ]
+  },
+  {
+    "idx": 23,
+    "text": "Assume that you have an InputStream whose next bytes are XYZABC. What is the result of calling the following method on the stream, using a count value of 3?\n<pre>\npublic static String pullBytes(InputStream is, int count) throws IOException {\n  is.mark(count);\n  final StringBuilder sb = new StringBuilder();\n  for(int i=0; i&lt;count; i++)\n    sb.append((char)is.read());\n  is.reset();\n  is.skip(1);\n  sb.append((char)is.read());\n  return sb.toString();\n}\n</pre>",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "It will return a String value of XYZ." },
+      { "letter": "B", "text": "It will return a String value of XYZA." },
+      { "letter": "C", "text": "It will return a String value of XYZX." },
+      { "letter": "D", "text": "It will return a String value of XYZB." },
+      { "letter": "E", "text": "It will return a String value of XYZY." },
+      { "letter": "F", "text": "The code does not compile." },
+      { "letter": "G", "text": "The code compiles but throws an exception at runtime." },
+      { "letter": "H", "text": "The result cannot be determined with the information given." }
+    ]
+  }
+]

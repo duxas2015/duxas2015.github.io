@@ -1,0 +1,695 @@
+[
+  {
+    "idx": 1,
+    "text": "Which interfaces or classes are in a database-specific JAR file? (Choose all that apply.)",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Driver"
+      },
+      {
+        "letter": "B",
+        "text": "Driver’s implementation"
+      },
+      {
+        "letter": "C",
+        "text": "DriverManager"
+      },
+      {
+        "letter": "D",
+        "text": "DriverManager’s implementation"
+      },
+      {
+        "letter": "E",
+        "text": "Statement"
+      },
+      {
+        "letter": "F",
+        "text": "Statement’s implementation"
+      }
+    ],
+    "correct": {
+      "letter": [
+        "B",
+        "F"
+      ],
+      "description": "The Driver, Connection, Statement, and ResultSet interfaces are part of the JDK, making choices A and E incorrect. The concrete DriverManager class is also part of the JDK, making choices C and D incorrect. Choices B and F are correct since the implementation of these interfaces is part of the database-specific driver JAR file."
+    }
+  },
+  {
+    "idx": 2,
+    "text": "Which are required parts of a JDBC URL? (Choose all that apply.)",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Connection parameters"
+      },
+      {
+        "letter": "B",
+        "text": "Database name"
+      },
+      {
+        "letter": "C",
+        "text": "jdbc"
+      },
+      {
+        "letter": "D",
+        "text": "Location of database"
+      },
+      {
+        "letter": "E",
+        "text": "Port"
+      },
+      {
+        "letter": "F",
+        "text": "Password"
+      }
+    ],
+    "correct": {
+      "letter": [
+        "B",
+        "C"
+      ],
+      "description": "A JDBC URL has three parts. The first part is the string jdbc, making choice C correct. The second part is the vendor/product name. The third part is database specific, but it includes a database name, making choice B correct as well. The location, such as IP address and port, is optional."
+    }
+  },
+  {
+    "idx": 3,
+    "text": "Which of the following is a valid JDBC URL?",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "jdbc:sybase:localhost:1234/db"
+      },
+      {
+        "letter": "B",
+        "text": "jdbc::sybase::localhost::/db"
+      },
+      {
+        "letter": "C",
+        "text": "jdbc::sybase:localhost::1234/db"
+      },
+      {
+        "letter": "D",
+        "text": "sybase:localhost:1234/db"
+      },
+      {
+        "letter": "E",
+        "text": "sybase::localhost::/db"
+      },
+      {
+        "letter": "F",
+        "text": "sybase::localhost::1234/db"
+      }
+    ],
+    "correct": {
+      "letter": [
+        "A"
+      ],
+      "description": "A JDBC URL has three main parts separated by single colons, making choices B, C, E, and F incorrect. The first part is always jdbc. Therefore, the correct answer is A. Notice that you can get this right even if you’ve never heard of the Sybase database before."
+    }
+  },
+  {
+    "idx": 4,
+    "text": "What file is required inside a JDBC 4.0+ driver JAR?",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "java.sql.Driver"
+      },
+      {
+        "letter": "B",
+        "text": "META-INF/java.sql.Driver"
+      },
+      {
+        "letter": "C",
+        "text": "META-INF/db/java.sql.Driver"
+      },
+      {
+        "letter": "D",
+        "text": "META-INF/database/java.sql.Driver"
+      },
+      {
+        "letter": "E",
+        "text": "META-INF/service/java.sql.Driver"
+      }
+    ],
+    "correct": {
+      "letter": [
+        "E"
+      ],
+      "description": "Starting with JDBC 4.0, driver implementations were required to provide the name of the class implementing Driver in a file named java.sql.Driver in the directory METAINF/service."
+    }
+  },
+  {
+    "idx": 5,
+    "text": "Suppose that you have a table named animal with two rows. What is the result of the following code?\n<pre>\n6: Connection conn = new Connection(url, userName, password);\n7: Statement stmt = conn.createStatement();\n8: ResultSet rs = stmt.executeQuery(\"select count(*) from animal\");\n9: if (rs.next())\n10:  System.out.println(rs.getInt(1));\n</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "2"
+      },
+      {
+        "letter": "B",
+        "text": "The code does not compile because of line 6."
+      },
+      {
+        "letter": "C",
+        "text": "The code does not compile because of line 7."
+      },
+      {
+        "letter": "D",
+        "text": "The code does not compile because of line 10."
+      },
+      {
+        "letter": "E",
+        "text": "A SQLException is thrown."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "C"
+      ],
+      "description": "A Connection is created using a static method on DriverManager. It does not use a constructor. Therefore, choice C is correct. If the Connection was created properly, the answer would be choice B."
+    }
+  },
+  {
+    "idx": 6,
+    "text": "Which of the following can be used to execute a query and return a ResultSet? (Choose all that apply.)",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "stmt.execute(sql)"
+      },
+      {
+        "letter": "B",
+        "text": "stmt.executeQuery(sql)"
+      },
+      {
+        "letter": "C",
+        "text": "stmt.executeUpdate(sql)"
+      },
+      {
+        "letter": "D",
+        "text": "All of the above"
+      },
+      {
+        "letter": "E",
+        "text": "None of the above"
+      }
+    ],
+    "correct": {
+      "letter": [
+        "B",
+        "E"
+      ],
+      "description": "Class.forName() was used with old JDBC drivers to load the driver. It is not needed in JDBC 4.0, making choice A incorrect. If it is called, it throws a ClassNotFoundException. By contrast, DriverManager.getConnection() throws a SQLException."
+    }
+  },
+  {
+    "idx": 7,
+    "text": "Which of the following are true about the getInt() method of the ResultSet interface? (Choose all that apply.)",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "It can take a column index starting at 0."
+      },
+      {
+        "letter": "B",
+        "text": "It can take a column index starting at 1."
+      },
+      {
+        "letter": "C",
+        "text": "It can take a column name."
+      },
+      {
+        "letter": "D",
+        "text": "It returns an Integer object."
+      },
+      {
+        "letter": "E",
+        "text": "It returns a primitive int."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "B",
+        "D"
+      ],
+      "description": "A Statement should be closed to prevent resource leaks, but it can be closed only once, making choice A incorrect. A Statement is created from a Connection object, not a DriverManager object, so choice C is incorrect. Any SQL query can be run with execute(), whereas only a query that returns a ResultSet can be run with executeQuery(), making choices B and D correct."
+    }
+  },
+  {
+    "idx": 8,
+    "text": "What is the result of the following? (Choose all that apply.)\n<pre>\ntry (Connection conn = DriverManager.getConnection(\"jdbc:derby:zoo\");\n  Statement stmt = conn.createStatement()) {\n  int result = stmt.executeUpdate(\"update animal set name = 'A' where name = 'B'\");\n  System.out.println(result);\n}\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "The code compiles and runs without error."
+      },
+      {
+        "letter": "B",
+        "text": "The number of rows updated is printed."
+      },
+      {
+        "letter": "C",
+        "text": "The number of rows updated + 1 is printed."
+      },
+      {
+        "letter": "D",
+        "text": "A boolean is printed."
+      },
+      {
+        "letter": "E",
+        "text": "The code will not compile."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "A",
+        "D"
+      ],
+      "description": "Choice A is a valid query. Choice B is incorrect because a ResultSet is not returned. Choice C is incorrect because there is no ResultSet to iterate through. Choice D is correct because execute() can run any SQL."
+    }
+  },
+  {
+    "idx": 9,
+    "text": "Given that the table species has 10 rows, what is the output of the following?\n<pre>\nString sql = \"select * from species\";\ntry (Connection conn = DriverManager.getConnection(\"jdbc:derby:zoo\");\n  Statement stmt = conn.createStatement();\n  ResultSet rs = stmt.executeQuery(sql)) {\n  while (rs.next()) {\n    System.out.println(rs.getObject(1));\n  }\n  System.out.println(rs.next());\n}\n</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "It prints 10 rows and then true."
+      },
+      {
+        "letter": "B",
+        "text": "It prints 10 rows and then false."
+      },
+      {
+        "letter": "C",
+        "text": "It prints 11 rows."
+      },
+      {
+        "letter": "D",
+        "text": "The code does not compile."
+      },
+      {
+        "letter": "E",
+        "text": "A SQLException is thrown."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "C"
+      ],
+      "description": "Choice C is correct because the update count is returned. Choice A is incorrect because executeUpdate() does not return a boolean. Choice B is incorrect because executeUpdate() does not return a ResultSet. Choice D is incorrect because executeUpdate() is used for data modification, not for queries."
+    }
+  },
+  {
+    "idx": 10,
+    "text": "Which of the following is the correct way to close a Connection, Statement, and ResultSet? (Choose all that apply.)",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Closing only the Connection will close the other two."
+      },
+      {
+        "letter": "B",
+        "text": "Closing only the Statement will close the other two."
+      },
+      {
+        "letter": "C",
+        "text": "Closing only the ResultSet will close the other two."
+      },
+      {
+        "letter": "D",
+        "text": "Using a try-with-resources statement will close them in the correct order."
+      },
+      {
+        "letter": "E",
+        "text": "None of the above"
+      }
+    ],
+    "correct": {
+      "letter": [
+        "B",
+        "C"
+      ],
+      "description": "Choices B and C are correct. Connection and Statement both have a close() method. Choices A and D are incorrect because ResultSet and DriverManager do not have a close() method that would be used in this context (DriverManager is a utility class, and while ResultSet has a close() method, closing the Statement automatically closes its ResultSet)."
+    }
+  },
+  {
+    "idx": 11,
+    "text": "A(n) _________________ResultSet is able to see data updated after the ResultSet was created.",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "FORWARD_ONLY"
+      },
+      {
+        "letter": "B",
+        "text": "SCROLL_INSENSITIVE"
+      },
+      {
+        "letter": "C",
+        "text": "SCROLL_SENSITIVE"
+      },
+      {
+        "letter": "D",
+        "text": "All of the above"
+      },
+      {
+        "letter": "E",
+        "text": "None of the above"
+      }
+    ],
+    "correct": {
+      "letter": [
+        "E"
+      ],
+      "description": "A ResultSet is similar to an Iterator, but the method to move to the next row is next(). Choice B is incorrect because it is for an Iterator. Choice C is incorrect because it is not a JDBC method."
+    }
+  },
+  {
+    "idx": 12,
+    "text": "Which of the following are true? (Choose all that apply.)",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "TYPE_FORWARD_ONLY is the default ResultSet type."
+      },
+      {
+        "letter": "B",
+        "text": "CONCUR_READ_ONLY is the default ResultSet concurrency mode."
+      },
+      {
+        "letter": "C",
+        "text": "TYPE_SCROLL_SENSITIVE is supported by all drivers."
+      },
+      {
+        "letter": "D",
+        "text": "A Scrollable ResultSet can move the cursor both forward and backward."
+      },
+      {
+        "letter": "E",
+        "text": "A SQLException is thrown if the driver does not support a requested type."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "C"
+      ],
+      "description": "The next() method must be called before attempting to access any data from the ResultSet. If it is not called, a SQLException is thrown."
+    }
+  },
+  {
+    "idx": 13,
+    "text": "What is the result of the following code?\n<pre>\ntry (Connection conn = DriverManager.getConnection(\"jdbc:derby:zoo\");\n  Statement stmt = conn.createStatement(\n    ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);\n  ResultSet rs = stmt.executeQuery(\"select name from animal\")) {\n  rs.next();\n  rs.previous();\n  rs.previous();\n  rs.next();\n  System.out.println(rs.getString(1));\n}\n</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "The name of the first animal is printed."
+      },
+      {
+        "letter": "B",
+        "text": "The name of the second animal is printed."
+      },
+      {
+        "letter": "C",
+        "text": "The code does not compile."
+      },
+      {
+        "letter": "D",
+        "text": "A SQLException is thrown."
+      },
+      {
+        "letter": "E",
+        "text": "A RuntimeException is thrown."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "B"
+      ],
+      "description": "JDBC uses 1-based indexing for columns, so choice B is correct. Choice A is incorrect because 0 is not a valid column index."
+    }
+  },
+  {
+    "idx": 14,
+    "text": "Which of the following methods can move the cursor of a Scrollable ResultSet? (Choose all that apply.)",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "<pre>absolute()</pre>"
+      },
+      {
+        "letter": "B",
+        "text": "<pre>afterLast()</pre>"
+      },
+      {
+        "letter": "C",
+        "text": "<pre>beforeFirst()</pre>"
+      },
+      {
+        "letter": "D",
+        "text": "<pre>first()</pre>"
+      },
+      {
+        "letter": "E",
+        "text": "<pre>last()</pre>"
+      },
+      {
+        "letter": "F",
+        "text": "<pre>relative()</pre>"
+      }
+    ],
+    "correct": {
+      "letter": [
+        "A",
+        "B",
+        "C"
+      ],
+      "description": "There are methods to get the column as a String or Object. However, choice D is incorrect because an Object cannot be assigned to a String without a cast."
+    }
+  },
+  {
+    "idx": 15,
+    "text": "What does the following code print, assuming the animal table has 10 rows?\n<pre>\nString sql = \"select name from animal\";\ntry (Connection conn = DriverManager.getConnection(\"jdbc:derby:zoo\");\n  Statement stmt = conn.createStatement(\n    ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);\n  ResultSet rs = stmt.executeQuery(sql)) {\n  rs.last();\n  rs.beforeFirst();\n  rs.absolute(5);\n  System.out.println(rs.getRow());\n}\n</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "0"
+      },
+      {
+        "letter": "B",
+        "text": "5"
+      },
+      {
+        "letter": "C",
+        "text": "10"
+      },
+      {
+        "letter": "D",
+        "text": "11"
+      },
+      {
+        "letter": "E",
+        "text": "A SQLException is thrown."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "F"
+      ],
+      "description": "Choices B, C, and D are incorrect because they are not JDBC methods. Choice A is incorrect because it outputs just the month, date, and year. Choice E is incorrect because it outputs just the hours, minutes, and seconds."
+    }
+  },
+  {
+    "idx": 16,
+    "text": "Which of the following can be thrown by the DriverManager.getConnection() method? (Choose all that apply.)",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "ConnectionException"
+      },
+      {
+        "letter": "B",
+        "text": "SQLException"
+      },
+      {
+        "letter": "C",
+        "text": "IOException"
+      },
+      {
+        "letter": "D",
+        "text": "DatabaseException"
+      },
+      {
+        "letter": "E",
+        "text": "None of the above"
+      }
+    ],
+    "correct": {
+      "letter": [
+        "E"
+      ],
+      "description": "By default, a Statement is not scrollable. The first call to previous() throws a SQLException because the ResultSet type is TYPE_FORWARD_ONLY."
+    }
+  },
+  {
+    "idx": 17,
+    "text": "What is the result of the following code?\n<pre>\nString sql = \"select name from animal order by name\";\ntry (Connection conn = DriverManager.getConnection(\"jdbc:derby:zoo\");\n  Statement stmt = conn.createStatement(\n    ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);\n  ResultSet rs = stmt.executeQuery(sql)) {\n  rs.absolute(0);\n  rs.next();\n  System.out.println(rs.getString(1));\n}\n</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "The first animal name in alphabetical order is printed."
+      },
+      {
+        "letter": "B",
+        "text": "The second animal name in alphabetical order is printed."
+      },
+      {
+        "letter": "C",
+        "text": "The code does not compile."
+      },
+      {
+        "letter": "D",
+        "text": "A SQLException is thrown."
+      },
+      {
+        "letter": "E",
+        "text": "The output is null."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "C",
+        "D"
+      ],
+      "description": "Choices B and E are incorrect because those methods don’t exist. Choices A and F are incorrect because these methods return a boolean. Choices C and D are correct."
+    }
+  },
+  {
+    "idx": 18,
+    "text": "Assuming the animal table contains names 'Anna', 'Betty', and 'Cat' in that order. What is the output of the following?\n<pre>\nString sql = \"select name from animal\";\ntry (Connection conn = DriverManager.getConnection(\"jdbc:derby:zoo\");\n  Statement stmt = conn.createStatement(\n    ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);\n  ResultSet rs = stmt.executeQuery(sql)) {\n  rs.absolute(0);\n  rs.next();\n  System.out.println(rs.getString(1));\n}\n</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Anna"
+      },
+      {
+        "letter": "B",
+        "text": "Betty"
+      },
+      {
+        "letter": "C",
+        "text": "Cat"
+      },
+      {
+        "letter": "D",
+        "text": "The code does not compile."
+      },
+      {
+        "letter": "E",
+        "text": "A SQLException is thrown."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "A"
+      ],
+      "description": "The call to absolute(0) moves the cursor to a location immediately before the results, and then next() goes to the first row, so the answer is choice A."
+    }
+  },
+  {
+    "idx": 19,
+    "text": "In a table animal with 10 rows, how many times does true get output by the following? (Choose all that apply.)\n<pre>\nString sql = \"select * from animal\";\ntry (Connection conn = DriverManager.getConnection(\"jdbc:derby:zoo\");\n  Statement stmt = conn.createStatement(\n    ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);\n  ResultSet rs = stmt.executeQuery(sql)) {\n  System.out.println(rs.absolute(0));\n  System.out.println(rs.absolute(5));\n  System.out.println(rs.previous());\n  System.out.println(rs.relative(2));\n  System.out.println(rs.relative(-100));\n}\n</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "One"
+      },
+      {
+        "letter": "B",
+        "text": "Two"
+      },
+      {
+        "letter": "C",
+        "text": "Three"
+      },
+      {
+        "letter": "D",
+        "text": "Four"
+      },
+      {
+        "letter": "E",
+        "text": "Five"
+      },
+      {
+        "letter": "F",
+        "text": "The code does not compile."
+      },
+      {
+        "letter": "G",
+        "text": "A SQLException is thrown."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "C"
+      ],
+      "description": "The first println outputs false because the cursor is immediately before the result. The second println outputs true because the cursor is pointing to the fifth row. The third println outputs true because the cursor is pointing to the fourth row. The fourth println outputs true because the cursor is pointing to the second row. The fifth println outputs false because the cursor is located before the beginning of the result."
+    }
+  },
+  {
+    "idx": 20,
+    "text": "In the table animal with 10 rows, how many times does true get output by the following? (Choose all that apply.)\n<pre>\nString sql = \"select * from animal\";\ntry (Connection conn = DriverManager.getConnection(\"jdbc:derby:zoo\");\n  Statement stmt = conn.createStatement(\n    ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);\n  ResultSet rs = stmt.executeQuery(sql)) {\n  // ... (some code execution involving relative and absolute)\n}\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "The results depend on the specific method calls in the code."
+      },
+      {
+        "letter": "B",
+        "text": "A SQLException is thrown if the cursor moves off the edge."
+      },
+      {
+        "letter": "C",
+        "text": "relative(0) returns true if the cursor is on a row."
+      },
+      {
+        "letter": "D",
+        "text": "absolute(1) returns true."
+      },
+      {
+        "letter": "E",
+        "text": "absolute(-1) returns true."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "F"
+      ],
+      "description": "The first and last println statements do not compile. The beforeFirst() and afterLast() methods have a void return type. Therefore, the code does not compile and choice F is correct."
+    }
+  }
+]

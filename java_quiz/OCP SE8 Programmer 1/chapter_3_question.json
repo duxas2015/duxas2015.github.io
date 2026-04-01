@@ -1,0 +1,434 @@
+[
+  {
+    "idx": 1,
+    "text": "What is output by the following code? (Choose all that apply)\n<pre>\n1: public class Fish {\n2:   public static void main(String[] args) {\n3:     int numFish = 4;\n4:     String fishType = \"tuna\";\n5:     String anotherFish = numFish + 1;\n6:     System.out.println(anotherFish + \" \" + fishType);\n7:     System.out.println(numFish + \" \" + 1);\n8:   } }\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      { "letter": "A", "text": "4 1" },
+      { "letter": "B", "text": "41" },
+      { "letter": "C", "text": "5" },
+      { "letter": "D", "text": "5 tuna" },
+      { "letter": "E", "text": "5tuna" },
+      { "letter": "F", "text": "51tuna" },
+      { "letter": "G", "text": "The code does not compile." }
+    ]
+  },
+  {
+    "idx": 2,
+    "text": "Which of the following are output by this code? (Choose all that apply)\n<pre>\n3: String s = \"Hello\";\n4: String t = new String(s);\n5: if (\"Hello\".equals(s)) System.out.println(\"one\");\n6: if (t == s) System.out.println(\"two\");\n7: if (t.equals(s)) System.out.println(\"three\");\n8: if (\"Hello\" == s) System.out.println(\"four\");\n9: if (\"Hello\" == t) System.out.println(\"five\");\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      { "letter": "A", "text": "one" },
+      { "letter": "B", "text": "two" },
+      { "letter": "C", "text": "three" },
+      { "letter": "D", "text": "four" },
+      { "letter": "E", "text": "five" },
+      { "letter": "F", "text": "The code does not compile." }
+    ]
+  },
+  {
+    "idx": 3,
+    "text": "Which are true statements? (Choose all that apply)",
+    "select_type": "multiply",
+    "answers": [
+      { "letter": "A", "text": "An immutable object can be modified." },
+      { "letter": "B", "text": "An immutable object cannot be modified." },
+      { "letter": "C", "text": "An immutable object can be garbage collected." },
+      { "letter": "D", "text": "An immutable object cannot be garbage collected." },
+      { "letter": "E", "text": "String is immutable." },
+      { "letter": "F", "text": "StringBuffer is immutable." },
+      { "letter": "G", "text": "StringBuilder is immutable." }
+    ]
+  },
+  {
+    "idx": 4,
+    "text": "What is the result of the following code?\n<pre>\n7: StringBuilder sb = new StringBuilder();\n8: sb.append(\"aaa\").insert(1, \"bb\").insert(4, \"ccc\");\n9: System.out.println(sb);\n</pre>",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "abbaaccc" },
+      { "letter": "B", "text": "abbaccca" },
+      { "letter": "C", "text": "bbaaaccc" },
+      { "letter": "D", "text": "bbaaccca" },
+      { "letter": "E", "text": "An exception is thrown." },
+      { "letter": "F", "text": "The code does not compile." }
+    ]
+  },
+  {
+    "idx": 5,
+    "text": "What is the result of the following code?\n<pre>\n2: String s1 = \"java\";\n3: StringBuilder s2 = new StringBuilder(\"java\");\n4: if (s1 == s2)\n5:   System.out.print(\"1\");\n6: if (s1.equals(s2))\n7:   System.out.print(\"2\");\n</pre>",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "1" },
+      { "letter": "B", "text": "2" },
+      { "letter": "C", "text": "12" },
+      { "letter": "D", "text": "No output is printed." },
+      { "letter": "E", "text": "An exception is thrown." },
+      { "letter": "F", "text": "The code does not compile." }
+    ]
+  },
+  {
+    "idx": 6,
+    "text": "What is the result of the following code?\n<pre>\npublic class Lion {\n  public void roar(String roar1, StringBuilder roar2) {\n    roar1.concat(\"!!!\");\n    roar2.append(\"!!!\");\n  }\n  public static void main(String[] args) {\n    String roar1 = \"roar\";\n    StringBuilder roar2 = new StringBuilder(\"roar\");\n    new Lion().roar(roar1, roar2);\n    System.out.println(roar1 + \" \" + roar2);\n  } }\n</pre>",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "roar roar" },
+      { "letter": "B", "text": "roar roar!!!" },
+      { "letter": "C", "text": "roar!!! roar" },
+      { "letter": "D", "text": "roar!!! roar!!!" },
+      { "letter": "E", "text": "An exception is thrown." },
+      { "letter": "F", "text": "The code does not compile." }
+    ]
+  },
+  {
+    "idx": 7,
+    "text": "Which are the results of the following code? (Choose all that apply)\n<pre>\nString letters = \"abcdef\";\nSystem.out.println(letters.length());\nSystem.out.println(letters.charAt(3));\nSystem.out.println(letters.charAt(6));\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      { "letter": "A", "text": "5" },
+      { "letter": "B", "text": "6" },
+      { "letter": "C", "text": "c" },
+      { "letter": "D", "text": "d" },
+      { "letter": "E", "text": "An exception is thrown." },
+      { "letter": "F", "text": "The code does not compile." }
+    ]
+  },
+  {
+    "idx": 8,
+    "text": "Which are the results of the following code? (Choose all that apply)\n<pre>\nString numbers = \"012345678\";\nSystem.out.println(numbers.substring(1, 3));\nSystem.out.println(numbers.substring(7, 7));\nSystem.out.println(numbers.substring(7));\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      { "letter": "A", "text": "12" },
+      { "letter": "B", "text": "123" },
+      { "letter": "C", "text": "7" },
+      { "letter": "D", "text": "78" },
+      { "letter": "E", "text": "A blank line." },
+      { "letter": "F", "text": "An exception is thrown." },
+      { "letter": "G", "text": "The code does not compile." }
+    ]
+  },
+  {
+    "idx": 9,
+    "text": "What is the result of the following code?\n<pre>\n3: String s = \"purr\";\n4: s.toUpperCase();\n5: s.trim();\n6: s.substring(1, 3);\n7: s += \" two\";\n8: System.out.println(s.length());\n</pre>",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "2" },
+      { "letter": "B", "text": "4" },
+      { "letter": "C", "text": "8" },
+      { "letter": "D", "text": "10" },
+      { "letter": "E", "text": "An exception is thrown." },
+      { "letter": "F", "text": "The code does not compile." }
+    ]
+  },
+  {
+    "idx": 10,
+    "text": "What is the result of the following code? (Choose all that apply)\n<pre>\n13: String a = \"\";\n14: a += 2;\n15: a += 'c';\n16: a += false;\n17: if ( a == \"2cfalse\") System.out.println(\"==\");\n18: if ( a.equals(\"2cfalse\")) System.out.println(\"equals\");\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      { "letter": "A", "text": "Compile error on line 14." },
+      { "letter": "B", "text": "Compile error on line 15." },
+      { "letter": "C", "text": "Compile error on line 16." },
+      { "letter": "D", "text": "Compile error on another line." },
+      { "letter": "E", "text": "==" },
+      { "letter": "F", "text": "equals" },
+      { "letter": "G", "text": "An exception is thrown." }
+    ]
+  },
+  {
+    "idx": 11,
+    "text": "What is the result of the following code?\n<pre>\n4: int total = 0;\n5: StringBuilder letters = new StringBuilder(\"abcdefg\");\n6: total += letters.substring(1, 2).length();\n7: total += letters.substring(6, 6).length();\n8: total += letters.substring(6, 5).length();\n9: System.out.println(total);\n</pre>",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "1" },
+      { "letter": "B", "text": "2" },
+      { "letter": "C", "text": "3" },
+      { "letter": "D", "text": "7" },
+      { "letter": "E", "text": "An exception is thrown." },
+      { "letter": "F", "text": "The code does not compile." }
+    ]
+  },
+  {
+    "idx": 12,
+    "text": "What is the result of the following code? (Choose all that apply)\n<pre>\nStringBuilder numbers = new StringBuilder(\"0123456789\");\nnumbers.delete(2, 8);\nnumbers.append(\"-\").insert(2, \"+\");\nSystem.out.println(numbers);\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      { "letter": "A", "text": "01+89–" },
+      { "letter": "B", "text": "012+9–" },
+      { "letter": "C", "text": "012+–9" },
+      { "letter": "D", "text": "0123456789" },
+      { "letter": "E", "text": "An exception is thrown." },
+      { "letter": "F", "text": "The code does not compile." }
+    ]
+  },
+  {
+    "idx": 13,
+    "text": "What is the result of the following code?\n<pre>\nStringBuilder b = \"rumble\";\nb.append(4).deleteCharAt(3).delete(3, b.length() - 1);\nSystem.out.println(b);\n</pre>",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "rum" },
+      { "letter": "B", "text": "rum4" },
+      { "letter": "C", "text": "rumb4" },
+      { "letter": "D", "text": "rumble4" },
+      { "letter": "E", "text": "An exception is thrown." },
+      { "letter": "F", "text": "The code does not compile." }
+    ]
+  },
+  {
+    "idx": 14,
+    "text": "Which of the following can replace line 4 to print \"avaJ\"? (Choose all that apply)\n<pre>\n3: StringBuilder puzzle = new StringBuilder(\"Java\");\n4: // INSERT CODE HERE\n5: System.out.println(puzzle);\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      { "letter": "A", "text": "puzzle.reverse();" },
+      { "letter": "B", "text": "puzzle.append(\"vaJ$\").substring(0, 4);" },
+      { "letter": "C", "text": "puzzle.append(\"vaJ$\").delete(0, 3).deleteCharAt(puzzle.length() - 1);" },
+      { "letter": "D", "text": "puzzle.append(\"vaJ$\").delete(0, 3).deleteCharAt(puzzle.length());" },
+      { "letter": "E", "text": "None of the above." }
+    ]
+  },
+  {
+    "idx": 15,
+    "text": "Which of these array declarations is not legal? (Choose all that apply)",
+    "select_type": "multiply",
+    "answers": [
+      { "letter": "A", "text": "int[][] scores = new int[5][];" },
+      { "letter": "B", "text": "Object[][][] cubbies = new Object[3][0][5];" },
+      { "letter": "C", "text": "String beans[] = new beans[6];" },
+      { "letter": "D", "text": "java.util.Date[] dates[] = new java.util.Date[2][];" },
+      { "letter": "E", "text": "int[][] types = new int[];" },
+      { "letter": "F", "text": "int[][] java = new int[][];" }
+    ]
+  },
+  {
+    "idx": 16,
+    "text": "Which of these compile when replacing line 8? (Choose all that apply)\n<pre>\n7: char[]c = new char[2];\n8: // INSERT CODE HERE\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      { "letter": "A", "text": "int length = c.capacity;" },
+      { "letter": "B", "text": "int length = c.capacity();" },
+      { "letter": "C", "text": "int length = c.length;" },
+      { "letter": "D", "text": "int length = c.length();" },
+      { "letter": "E", "text": "int length = c.size;" },
+      { "letter": "F", "text": "int length = c.size();" },
+      { "letter": "G", "text": "None of the above." }
+    ]
+  },
+  {
+    "idx": 17,
+    "text": "Which of these compile when replacing line 8? (Choose all that apply)\n<pre>\n7: ArrayList l = new ArrayList();\n8: // INSERT CODE HERE\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      { "letter": "A", "text": "int length = l.capacity;" },
+      { "letter": "B", "text": "int length = l.capacity();" },
+      { "letter": "C", "text": "int length = l.length;" },
+      { "letter": "D", "text": "int length = l.length();" },
+      { "letter": "E", "text": "int length = l.size;" },
+      { "letter": "F", "text": "int length = l.size();" },
+      { "letter": "G", "text": "None of the above." }
+    ]
+  },
+  {
+    "idx": 18,
+    "text": "Which of the following are true? (Choose all that apply)",
+    "select_type": "multiply",
+    "answers": [
+      { "letter": "A", "text": "An array has a fixed size." },
+      { "letter": "B", "text": "An ArrayList has a fixed size." },
+      { "letter": "C", "text": "An array allows multiple dimensions." },
+      { "letter": "D", "text": "An array is ordered." },
+      { "letter": "E", "text": "An ArrayList is ordered." },
+      { "letter": "F", "text": "An array is immutable." },
+      { "letter": "G", "text": "An ArrayList is immutable." }
+    ]
+  },
+  {
+    "idx": 19,
+    "text": "Which of the following are true? (Choose all that apply)",
+    "select_type": "multiply",
+    "answers": [
+      { "letter": "A", "text": "Two arrays with the same content are equal." },
+      { "letter": "B", "text": "Two ArrayLists with the same content are equal." },
+      { "letter": "C", "text": "If you call remove(0) using an empty ArrayList object, it will compile successfully." },
+      { "letter": "D", "text": "If you call remove(0) using an empty ArrayList object, it will run successfully." },
+      { "letter": "E", "text": "None of the above." }
+    ]
+  },
+  {
+    "idx": 20,
+    "text": "What is the result of the following statements?\n<pre>\n6: List&lt;String&gt; list = new ArrayList&lt;String&gt;();\n7: list.add(\"one\");\n8: list.add(\"two\");\n9: list.add(7);\n10: for(String s : list) System.out.print(s);\n</pre>",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "onetwo" },
+      { "letter": "B", "text": "onetwo7" },
+      { "letter": "C", "text": "onetwo followed by an exception" },
+      { "letter": "D", "text": "Compiler error on line 9." },
+      { "letter": "E", "text": "Compiler error on line 10." }
+    ]
+  },
+  {
+    "idx": 21,
+    "text": "What is the result of the following statements?\n<pre>\n3: ArrayList&lt;Integer&gt; values = new ArrayList&lt;&gt;();\n4: values.add(4);\n5: values.add(5);\n6: values.set(1, 6);\n7: values.remove(0);\n8: for (Integer v : values) System.out.print(v);\n</pre>",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "4" },
+      { "letter": "B", "text": "5" },
+      { "letter": "C", "text": "6" },
+      { "letter": "D", "text": "46" },
+      { "letter": "E", "text": "45" },
+      { "letter": "F", "text": "An exception is thrown." },
+      { "letter": "G", "text": "The code does not compile." }
+    ]
+  },
+  {
+    "idx": 22,
+    "text": "What is the result of the following?\n<pre>\nint[] random = { 6, -4, 12, 0, -10 };\nint x = 12;\nint y = Arrays.binarySearch(random, x);\nSystem.out.println(y);\n</pre>",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "2" },
+      { "letter": "B", "text": "4" },
+      { "letter": "C", "text": "6" },
+      { "letter": "D", "text": "The result is undefined." },
+      { "letter": "E", "text": "An exception is thrown." },
+      { "letter": "F", "text": "The code does not compile." }
+    ]
+  },
+  {
+    "idx": 23,
+    "text": "What is the result of the following?\n<pre>\n4: List&lt;Integer&gt; list = Arrays.asList(10, 4, -1, 5);\n5: Collections.sort(list);\n6: Integer array[] = list.toArray(new Integer[4]);\n7: System.out.println(array[0]);\n</pre>",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "–1" },
+      { "letter": "B", "text": "10" },
+      { "letter": "C", "text": "Compiler error on line 4." },
+      { "letter": "D", "text": "Compiler error on line 5." },
+      { "letter": "E", "text": "Compiler error on line 6." },
+      { "letter": "F", "text": "An exception is thrown." }
+    ]
+  },
+  {
+    "idx": 24,
+    "text": "What is the result of the following?\n<pre>\n6: String [] names = {\"Tom\", \"Dick\", \"Harry\"};\n7: List&lt;String&gt; list = names.asList();\n8: list.set(0, \"Sue\");\n9: System.out.println(names[0]);\n</pre>",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "Sue" },
+      { "letter": "B", "text": "Tom" },
+      { "letter": "C", "text": "Compiler error on line 7." },
+      { "letter": "D", "text": "Compiler error on line 8." },
+      { "letter": "E", "text": "An exception is thrown." }
+    ]
+  },
+  {
+    "idx": 25,
+    "text": "What is the result of the following?\n<pre>\nList&lt;String&gt; hex = Arrays.asList(\"30\", \"8\", \"3A\", \"FF\");\nCollections.sort(hex);\nint x = Collections.binarySearch(hex, \"8\");\nint y = Collections.binarySearch(hex, \"3A\");\nint z = Collections.binarySearch(hex, \"4F\");\nSystem.out.println(x + \" \" + y + \" \" + z);\n</pre>",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "0 1 –2" },
+      { "letter": "B", "text": "0 1 –3" },
+      { "letter": "C", "text": "2 1 –2" },
+      { "letter": "D", "text": "2 1 –3" },
+      { "letter": "E", "text": "None of the above." },
+      { "letter": "F", "text": "The code doesn’t compile." }
+    ]
+  },
+  {
+    "idx": 26,
+    "text": "Which of the following are true statements about the following code? (Choose all that apply)\n<pre>\n4: List&lt;Integer&gt; ages = new ArrayList&lt;&gt;();\n5: ages.add(Integer.parseInt(\"5\"));\n6: ages.add(Integer.valueOf(\"6\"));\n7: ages.add(7);\n8: ages.add(null);\n9: for (int age : ages) System.out.print(age);\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      { "letter": "A", "text": "The code compiles." },
+      { "letter": "B", "text": "The code throws a runtime exception." },
+      { "letter": "C", "text": "Exactly one of the add statements uses autoboxing." },
+      { "letter": "D", "text": "Exactly two of the add statements use autoboxing." },
+      { "letter": "E", "text": "Exactly three of the add statements use autoboxing." }
+    ]
+  },
+  {
+    "idx": 27,
+    "text": "What is the result of the following?\n<pre>\nList&lt;String&gt; one = new ArrayList&lt;String&gt;();\none.add(\"abc\");\nList&lt;String&gt; two = new ArrayList&lt;&gt;();\ntwo.add(\"abc\");\nif (one == two)\n  System.out.println(\"A\");\nelse if (one.equals(two))\n  System.out.println(\"B\");\nelse\n  System.out.println(\"C\");\n</pre>",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "A" },
+      { "letter": "B", "text": "B" },
+      { "letter": "C", "text": "C" },
+      { "letter": "D", "text": "An exception is thrown." },
+      { "letter": "E", "text": "The code does not compile." }
+    ]
+  },
+  {
+    "idx": 28,
+    "text": "Which of the following can be inserted into the blank to create a date of June 21, 2014? (Choose all that apply)\n<pre>\nimport java.time.*;\npublic class StartOfSummer {\n  public static void main(String[] args) {\n    LocalDate date = ____________________________\n  }\n}\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      { "letter": "A", "text": "new LocalDate(2014, 5, 21);" },
+      { "letter": "B", "text": "new LocalDate(2014, 6, 21);" },
+      { "letter": "C", "text": "LocalDate.of(2014, 5, 21);" },
+      { "letter": "D", "text": "LocalDate.of(2014, 6, 21);" },
+      { "letter": "E", "text": "LocalDate.of(2014, Calendar.JUNE, 21);" },
+      { "letter": "F", "text": "LocalDate.of(2014, Month.JUNE, 21);" }
+    ]
+  },
+  {
+    "idx": 29,
+    "text": "What is the output of the following code?\n<pre>\nLocalDate date = LocalDate.parse(\"2018-04-30\", DateTimeFormatter.ISO_LOCAL_DATE);\ndate.plusDays(2);\ndate.plusHours(3);\nSystem.out.println(date.getYear() + \" \" + date.getMonth() + \" \" + date.getDayOfMonth());\n</pre>",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "2018 APRIL 2" },
+      { "letter": "B", "text": "2018 APRIL 30" },
+      { "letter": "C", "text": "2018 MAY 2" },
+      { "letter": "D", "text": "The code does not compile." },
+      { "letter": "E", "text": "A runtime exception is thrown." }
+    ]
+  },
+  {
+    "idx": 30,
+    "text": "What is the output of the following code?\n<pre>\nLocalDate date = LocalDate.of(2018, Month.APRIL, 40);\nSystem.out.println(date.getYear() + \" \" + date.getMonth() + \" \" + date.getDayOfMonth());\n</pre>",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "2018 APRIL 4" },
+      { "letter": "B", "text": "2018 APRIL 30" },
+      { "letter": "C", "text": "2018 MAY 10" },
+      { "letter": "D", "text": "Another date." },
+      { "letter": "E", "text": "The code does not compile." },
+      { "letter": "F", "text": "A runtime exception is thrown." }
+    ]
+  },
+  {
+    "idx": 31,
+    "text": "What is the output of the following code?\n<pre>\nLocalDate date = LocalDate.of(2018, Month.APRIL, 30);\ndate.plusDays(2);\ndate.plusYears(3);\nSystem.out.println(date.getYear() + \" \" + date.getMonth() + \" \" + date.getDayOfMonth());\n</pre>",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "2018 APRIL 2" },
+      { "letter": "B", "text": "2018 APRIL 30" },
+      { "letter": "C", "text": "2018 MAY 2" },
+      { "letter": "D", "text": "2021 APRIL 2" },
+      { "letter": "E", "text": "2021 APRIL 30" },
+      { "letter": "F", "text": "2021 MAY 2" },
+      { "letter": "G", "text": "A runtime exception is thrown." }
+    ]
+  },
+  {
+    "idx": 32,
+    "text": "What is the output of the following code?\n<pre>\nLocalDateTime d = LocalDateTime.of(2015, 5, 10, 11, 22, 33);\nPeriod p = Period.of(1, 2, 3);\nd = d.minus(p);\nDateTimeFormatter f = DateTimeFormatter.ofLocalizedTime(FormatStyle.SHORT);\nSystem.out.println(d.format(f));\n</pre>",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "3/7/14 11:22 AM" },
+      { "letter": "B", "text": "5/10/15 11:22 AM" },
+      { "letter": "C", "text": "3/7/14" },
+      { "letter": "D", "text": "5/10/15" },
+      { "letter": "E", "text": "11:22 AM" },
+      { "letter": "F", "text": "The code does not compile." },
+      { "letter": "G", "text": "A runtime exception is thrown." }
+    ]
+  },
+  {
+    "idx": 33,
+    "text": "What is the output of the following code?\n<pre>\nLocalDateTime d = LocalDateTime.of(2015, 5, 10, 11, 22, 33);\nPeriod p = Period.ofDays(1).ofYears(2);\nd = d.minus(p);\nDateTimeFormatter f = DateTimeFormatter.ofLocalizedDateTime(FormatStyle.SHORT);\nSystem.out.println(f.format(d));\n</pre>",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "5/9/13 11:22 AM" },
+      { "letter": "B", "text": "5/10/13 11:22 AM" },
+      { "letter": "C", "text": "5/9/14" },
+      { "letter": "D", "text": "5/10/14" },
+      { "letter": "E", "text": "The code does not compile." },
+      { "letter": "F", "text": "A runtime exception is thrown." }
+    ]
+  }
+]

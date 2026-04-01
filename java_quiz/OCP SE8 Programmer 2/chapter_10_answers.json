@@ -1,0 +1,142 @@
+[
+  {
+    "idx": 1,
+    "correct": {
+      "letter": ["B", "F"],
+      "description": "The Driver, Connection, Statement, and ResultSet interfaces are part of the JDK, making choices A and E incorrect. The concrete DriverManager class is also part of the JDK, making choices C and D incorrect. Choices B and F are correct since the implementation of these interfaces is part of the database-specific driver JAR file."
+    }
+  },
+  {
+    "idx": 2,
+    "correct": {
+      "letter": ["B", "C"],
+      "description": "A JDBC URL has three parts. The first part is the string jdbc, making choice C correct. The second part is the vendor/product name. The third part is database specific, but it includes a database name, making choice B correct as well. The location, such as IP address and port, is optional."
+    }
+  },
+  {
+    "idx": 3,
+    "correct": {
+      "letter": ["A"],
+      "description": "A JDBC URL has three main parts separated by single colons, making choices B, C, E, and F incorrect. The first part is always jdbc. Therefore, the correct answer is A. Notice that you can get this right even if you’ve never heard of the Sybase database before."
+    }
+  },
+  {
+    "idx": 4,
+    "correct": {
+      "letter": ["E"],
+      "description": "Starting with JDBC 4.0, driver implementations were required to provide the name of the class implementing Driver in a file named java.sql.Driver in the directory METAINF/service."
+    }
+  },
+  {
+    "idx": 5,
+    "correct": {
+      "letter": ["C"],
+      "description": "A Connection is created using a static method on DriverManager. It does not use a constructor. Therefore, choice C is correct. If the Connection was created properly, the answer would be choice B."
+    }
+  },
+  {
+    "idx": 6,
+    "correct": {
+      "letter": ["B", "E"],
+      "description": "Class.forName() was used with old JDBC drivers to load the driver. It is not needed in JDBC 4.0, making choice A incorrect. If it is called, it throws a ClassNotFoundException. By contrast, DriverManager.getConnection() throws a SQLException."
+    }
+  },
+  {
+    "idx": 7,
+    "correct": {
+      "letter": ["B", "D"],
+      "description": "A Statement should be closed to prevent resource leaks, but it can be closed only once, making choice A incorrect. A Statement is created from a Connection object, not a DriverManager object, so choice C is incorrect. Any SQL query can be run with execute(), whereas only a query that returns a ResultSet can be run with executeQuery(), making choices B and D correct."
+    }
+  },
+  {
+    "idx": 8,
+    "correct": {
+      "letter": ["A", "D"],
+      "description": "Choice A is a valid query. Choice B is incorrect because a ResultSet is not returned. Choice C is incorrect because there is no ResultSet to iterate through. Choice D is correct because execute() can run any SQL."
+    }
+  },
+  {
+    "idx": 9,
+    "correct": {
+      "letter": ["C"],
+      "description": "Choice C is correct because the update count is returned. Choice A is incorrect because executeUpdate() does not return a boolean. Choice B is incorrect because executeUpdate() does not return a ResultSet. Choice D is incorrect because executeUpdate() is used for data modification, not for queries."
+    }
+  },
+  {
+    "idx": 10,
+    "correct": {
+      "letter": ["B", "C"],
+      "description": "Choices B and C are correct. Connection and Statement both have a close() method. Choices A and D are incorrect because ResultSet and DriverManager do not have a close() method that would be used in this context (DriverManager is a utility class, and while ResultSet has a close() method, closing the Statement automatically closes its ResultSet)."
+    }
+  },
+  {
+    "idx": 11,
+    "correct": {
+      "letter": ["E"],
+      "description": "A ResultSet is similar to an Iterator, but the method to move to the next row is next(). Choice B is incorrect because it is for an Iterator. Choice C is incorrect because it is not a JDBC method."
+    }
+  },
+  {
+    "idx": 12,
+    "correct": {
+      "letter": ["C"],
+      "description": "The next() method must be called before attempting to access any data from the ResultSet. If it is not called, a SQLException is thrown."
+    }
+  },
+  {
+    "idx": 13,
+    "correct": {
+      "letter": ["B"],
+      "description": "JDBC uses 1-based indexing for columns, so choice B is correct. Choice A is incorrect because 0 is not a valid column index."
+    }
+  },
+  {
+    "idx": 14,
+    "correct": {
+      "letter": ["A", "B", "C"],
+      "description": "There are methods to get the column as a String or Object. However, choice D is incorrect because an Object cannot be assigned to a String without a cast."
+    }
+  },
+  {
+    "idx": 15,
+    "correct": {
+      "letter": ["F"],
+      "description": "Choices B, C, and D are incorrect because they are not JDBC methods. Choice A is incorrect because it outputs just the month, date, and year. Choice E is incorrect because it outputs just the hours, minutes, and seconds."
+    }
+  },
+  {
+    "idx": 16,
+    "correct": {
+      "letter": ["E"],
+      "description": "By default, a Statement is not scrollable. The first call to previous() throws a SQLException because the ResultSet type is TYPE_FORWARD_ONLY."
+    }
+  },
+  {
+    "idx": 17,
+    "correct": {
+      "letter": ["C", "D"],
+      "description": "Choices B and E are incorrect because those methods don’t exist. Choices A and F are incorrect because these methods return a boolean. Choices C and D are correct."
+    }
+  },
+  {
+    "idx": 18,
+    "correct": {
+      "letter": ["A"],
+      "description": "The call to absolute(0) moves the cursor to a location immediately before the results, and then next() goes to the first row, so the answer is choice A."
+    }
+  },
+  {
+    "idx": 19,
+    "correct": {
+      "letter": ["C"],
+      "description": "The first println outputs false because the cursor is immediately before the result. The second println outputs true because the cursor is pointing to the fifth row. The third println outputs true because the cursor is pointing to the fourth row. The fourth println outputs true because the cursor is pointing to the second row. The fifth println outputs false because the cursor is located before the beginning of the result."
+    }
+  },
+  {
+    "idx": 20,
+    "correct": {
+      "letter": ["F"],
+      "description": "The first and last println statements do not compile. The beforeFirst() and afterLast() methods have a void return type. Therefore, the code does not compile and choice F is correct."
+    }
+  }
+]

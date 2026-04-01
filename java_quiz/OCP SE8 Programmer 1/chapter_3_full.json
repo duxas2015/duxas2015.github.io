@@ -1,0 +1,1253 @@
+[
+  {
+    "idx": 1,
+    "text": "What is output by the following code? (Choose all that apply)\n<pre>\n1: public class Fish {\n2:   public static void main(String[] args) {\n3:     int numFish = 4;\n4:     String fishType = \"tuna\";\n5:     String anotherFish = numFish + 1;\n6:     System.out.println(anotherFish + \" \" + fishType);\n7:     System.out.println(numFish + \" \" + 1);\n8:   } }\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "4 1"
+      },
+      {
+        "letter": "B",
+        "text": "41"
+      },
+      {
+        "letter": "C",
+        "text": "5"
+      },
+      {
+        "letter": "D",
+        "text": "5 tuna"
+      },
+      {
+        "letter": "E",
+        "text": "5tuna"
+      },
+      {
+        "letter": "F",
+        "text": "51tuna"
+      },
+      {
+        "letter": "G",
+        "text": "The code does not compile."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "G"
+      ],
+      "description": "Line 5 does not compile. This question is checking to see if you are paying attention to the types. numFish is an int and 1 is an int. Therefore, we use numeric addition and get 5. The problem is that we can’t store an int in a String variable. Supposing line 5 said String anotherFish = numFish + 1 + \"\";. In that case, the answer would be options A and D. The variable defined on line 5 would be the string \"5\", and both output statements would use concatenation."
+    }
+  },
+  {
+    "idx": 2,
+    "text": "Which of the following are output by this code? (Choose all that apply)\n<pre>\n3: String s = \"Hello\";\n4: String t = new String(s);\n5: if (\"Hello\".equals(s)) System.out.println(\"one\");\n6: if (t == s) System.out.println(\"two\");\n7: if (t.equals(s)) System.out.println(\"three\");\n8: if (\"Hello\" == s) System.out.println(\"four\");\n9: if (\"Hello\" == t) System.out.println(\"five\");\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "one"
+      },
+      {
+        "letter": "B",
+        "text": "two"
+      },
+      {
+        "letter": "C",
+        "text": "three"
+      },
+      {
+        "letter": "D",
+        "text": "four"
+      },
+      {
+        "letter": "E",
+        "text": "five"
+      },
+      {
+        "letter": "F",
+        "text": "The code does not compile."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "A",
+        "C",
+        "D"
+      ],
+      "description": "The code compiles fine. Line 3 points to the String in the string pool. Line 4 calls the String constructor explicitly and is therefore a different object than s. Lines 5 and 7 check for object equality, which is true, and so print one and three. Line 6 uses object reference equality, which is not true since we have different objects. Line 7 also compares references but is true since both references point to the object from the string pool. Finally, line 8 compares one object from the string pool with one that was explicitly constructed and returns false."
+    }
+  },
+  {
+    "idx": 3,
+    "text": "Which are true statements? (Choose all that apply)",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "An immutable object can be modified."
+      },
+      {
+        "letter": "B",
+        "text": "An immutable object cannot be modified."
+      },
+      {
+        "letter": "C",
+        "text": "An immutable object can be garbage collected."
+      },
+      {
+        "letter": "D",
+        "text": "An immutable object cannot be garbage collected."
+      },
+      {
+        "letter": "E",
+        "text": "String is immutable."
+      },
+      {
+        "letter": "F",
+        "text": "StringBuffer is immutable."
+      },
+      {
+        "letter": "G",
+        "text": "StringBuilder is immutable."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "B",
+        "C",
+        "E"
+      ],
+      "description": "Immutable means the state of an object cannot change once it is created. Immutable objects can be garbage collected just like mutable objects. String is immutable. StringBuilder can be mutated with methods like append(). Although StringBuffer isn’t on the exam, you should know about it anyway in case older questions haven’t been removed."
+    }
+  },
+  {
+    "idx": 4,
+    "text": "What is the result of the following code?\n<pre>\n7: StringBuilder sb = new StringBuilder();\n8: sb.append(\"aaa\").insert(1, \"bb\").insert(4, \"ccc\");\n9: System.out.println(sb);\n</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "abbaaccc"
+      },
+      {
+        "letter": "B",
+        "text": "abbaccca"
+      },
+      {
+        "letter": "C",
+        "text": "bbaaaccc"
+      },
+      {
+        "letter": "D",
+        "text": "bbaaccca"
+      },
+      {
+        "letter": "E",
+        "text": "An exception is thrown."
+      },
+      {
+        "letter": "F",
+        "text": "The code does not compile."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "B"
+      ],
+      "description": "This example uses method chaining. After the call to append(), sb contains \"aaa\". That result is passed to the first insert() call, which inserts at index 1. At this point sb contains abbbaa. That result is passed to the final insert(), which inserts at index 4, resulting in abbaccca."
+    }
+  },
+  {
+    "idx": 5,
+    "text": "What is the result of the following code?\n<pre>\n2: String s1 = \"java\";\n3: StringBuilder s2 = new StringBuilder(\"java\");\n4: if (s1 == s2)\n5:   System.out.print(\"1\");\n6: if (s1.equals(s2))\n7:   System.out.print(\"2\");\n</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "1"
+      },
+      {
+        "letter": "B",
+        "text": "2"
+      },
+      {
+        "letter": "C",
+        "text": "12"
+      },
+      {
+        "letter": "D",
+        "text": "No output is printed."
+      },
+      {
+        "letter": "E",
+        "text": "An exception is thrown."
+      },
+      {
+        "letter": "F",
+        "text": "The code does not compile."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "F"
+      ],
+      "description": "The question is trying to distract you into paying attention to logical equality versus object reference equality. It is hoping you will miss the fact that line 4 does not compile. Java does not allow you to compare String and StringBuilder using ==."
+    }
+  },
+  {
+    "idx": 6,
+    "text": "What is the result of the following code?\n<pre>\npublic class Lion {\n  public void roar(String roar1, StringBuilder roar2) {\n    roar1.concat(\"!!!\");\n    roar2.append(\"!!!\");\n  }\n  public static void main(String[] args) {\n    String roar1 = \"roar\";\n    StringBuilder roar2 = new StringBuilder(\"roar\");\n    new Lion().roar(roar1, roar2);\n    System.out.println(roar1 + \" \" + roar2);\n  } }\n</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "roar roar"
+      },
+      {
+        "letter": "B",
+        "text": "roar roar!!!"
+      },
+      {
+        "letter": "C",
+        "text": "roar!!! roar"
+      },
+      {
+        "letter": "D",
+        "text": "roar!!! roar!!!"
+      },
+      {
+        "letter": "E",
+        "text": "An exception is thrown."
+      },
+      {
+        "letter": "F",
+        "text": "The code does not compile."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "B"
+      ],
+      "description": "A String is immutable. Calling concat() returns a new String but does not change the original. A StringBuilder is mutable. Calling append() adds characters to the existing character sequence along with returning a reference to the same object."
+    }
+  },
+  {
+    "idx": 7,
+    "text": "Which are the results of the following code? (Choose all that apply)\n<pre>\nString letters = \"abcdef\";\nSystem.out.println(letters.length());\nSystem.out.println(letters.charAt(3));\nSystem.out.println(letters.charAt(6));\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "5"
+      },
+      {
+        "letter": "B",
+        "text": "6"
+      },
+      {
+        "letter": "C",
+        "text": "c"
+      },
+      {
+        "letter": "D",
+        "text": "d"
+      },
+      {
+        "letter": "E",
+        "text": "An exception is thrown."
+      },
+      {
+        "letter": "F",
+        "text": "The code does not compile."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "B",
+        "D",
+        "E"
+      ],
+      "description": "length() is simply a count of the number of characters in a String. In this case, there are six characters. charAt() returns the character at that index. Remember that indexes are zero based, which means that index 3 corresponds to d and index 6 corresponds to 1 past the end of the array. A StringIndexOutOfBoundsException is thrown for the last line."
+    }
+  },
+  {
+    "idx": 8,
+    "text": "Which are the results of the following code? (Choose all that apply)\n<pre>\nString numbers = \"012345678\";\nSystem.out.println(numbers.substring(1, 3));\nSystem.out.println(numbers.substring(7, 7));\nSystem.out.println(numbers.substring(7));\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "12"
+      },
+      {
+        "letter": "B",
+        "text": "123"
+      },
+      {
+        "letter": "C",
+        "text": "7"
+      },
+      {
+        "letter": "D",
+        "text": "78"
+      },
+      {
+        "letter": "E",
+        "text": "A blank line."
+      },
+      {
+        "letter": "F",
+        "text": "An exception is thrown."
+      },
+      {
+        "letter": "G",
+        "text": "The code does not compile."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "A",
+        "D",
+        "E"
+      ],
+      "description": "substring() has two forms. The first takes the index to start with and the index to stop immediately before. The second takes just the index to start with and goes to the end of the String. Remember that indexes are zero based. The first call starts at index 1 and ends with index 2 since it needs to stop before index 3. The second call starts at index 7 and ends in the same place, resulting in an empty String. This prints out a blank line. The final call starts at index 7 and goes to the end of the String."
+    }
+  },
+  {
+    "idx": 9,
+    "text": "What is the result of the following code?\n<pre>\n3: String s = \"purr\";\n4: s.toUpperCase();\n5: s.trim();\n6: s.substring(1, 3);\n7: s += \" two\";\n8: System.out.println(s.length());\n</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "2"
+      },
+      {
+        "letter": "B",
+        "text": "4"
+      },
+      {
+        "letter": "C",
+        "text": "8"
+      },
+      {
+        "letter": "D",
+        "text": "10"
+      },
+      {
+        "letter": "E",
+        "text": "An exception is thrown."
+      },
+      {
+        "letter": "F",
+        "text": "The code does not compile."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "C"
+      ],
+      "description": "This question is trying to see if you know that String objects are immutable. Line 4 returns \"PURR\" but the result is ignored and not stored in s. Line 5 returns \"purr\" since there is no whitespace present but the result is again ignored. Line 6 returns \"ur\" because it starts with index 1 and ends before index 3 using zero-based indexes. The result is ignored again. Finally, on line 6 something happens. We concatenate four new characters to s and now have a String of length 8."
+    }
+  },
+  {
+    "idx": 10,
+    "text": "What is the result of the following code? (Choose all that apply)\n<pre>\n13: String a = \"\";\n14: a += 2;\n15: a += 'c';\n16: a += false;\n17: if ( a == \"2cfalse\") System.out.println(\"==\");\n18: if ( a.equals(\"2cfalse\")) System.out.println(\"equals\");\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Compile error on line 14."
+      },
+      {
+        "letter": "B",
+        "text": "Compile error on line 15."
+      },
+      {
+        "letter": "C",
+        "text": "Compile error on line 16."
+      },
+      {
+        "letter": "D",
+        "text": "Compile error on another line."
+      },
+      {
+        "letter": "E",
+        "text": "=="
+      },
+      {
+        "letter": "F",
+        "text": "equals"
+      },
+      {
+        "letter": "G",
+        "text": "An exception is thrown."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "F"
+      ],
+      "description": "a += 2 expands to a = a + 2. A String concatenated with any other type gives a String. Lines 14, 15, and 16 all append to a, giving a result of \"2cfalse\". The if statement on line 18 returns false because the values of the two String objects are the same using object equality. The if statement on line 17 returns false because the two String objects are not the same in memory. One comes directly from the string pool and the other comes from building using String operations."
+    }
+  },
+  {
+    "idx": 11,
+    "text": "What is the result of the following code?\n<pre>\n4: int total = 0;\n5: StringBuilder letters = new StringBuilder(\"abcdefg\");\n6: total += letters.substring(1, 2).length();\n7: total += letters.substring(6, 6).length();\n8: total += letters.substring(6, 5).length();\n9: System.out.println(total);\n</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "1"
+      },
+      {
+        "letter": "B",
+        "text": "2"
+      },
+      {
+        "letter": "C",
+        "text": "3"
+      },
+      {
+        "letter": "D",
+        "text": "7"
+      },
+      {
+        "letter": "E",
+        "text": "An exception is thrown."
+      },
+      {
+        "letter": "F",
+        "text": "The code does not compile."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "E"
+      ],
+      "description": "Line 6 adds 1 to total because substring() includes the starting index but not the ending index. Line 7 adds 0 to total. Line 8 is a problem: Java does not allow the indexes to be specified in reverse order and the code throws a StringIndexOutOfBoundsException."
+    }
+  },
+  {
+    "idx": 12,
+    "text": "What is the result of the following code? (Choose all that apply)\n<pre>\nStringBuilder numbers = new StringBuilder(\"0123456789\");\nnumbers.delete(2, 8);\nnumbers.append(\"-\").insert(2, \"+\");\nSystem.out.println(numbers);\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "01+89–"
+      },
+      {
+        "letter": "B",
+        "text": "012+9–"
+      },
+      {
+        "letter": "C",
+        "text": "012+–9"
+      },
+      {
+        "letter": "D",
+        "text": "0123456789"
+      },
+      {
+        "letter": "E",
+        "text": "An exception is thrown."
+      },
+      {
+        "letter": "F",
+        "text": "The code does not compile."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "A"
+      ],
+      "description": "First, we delete the characters at index 2 until the character one before index 8. At this point, 0189 is in numbers. The following line uses method chaining. It appends a dash to the end of the characters sequence, resulting in 0189–, and then inserts a plus sign at index 2, resulting in 01+89–."
+    }
+  },
+  {
+    "idx": 13,
+    "text": "What is the result of the following code?\n<pre>\nStringBuilder b = \"rumble\";\nb.append(4).deleteCharAt(3).delete(3, b.length() - 1);\nSystem.out.println(b);\n</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "rum"
+      },
+      {
+        "letter": "B",
+        "text": "rum4"
+      },
+      {
+        "letter": "C",
+        "text": "rumb4"
+      },
+      {
+        "letter": "D",
+        "text": "rumble4"
+      },
+      {
+        "letter": "E",
+        "text": "An exception is thrown."
+      },
+      {
+        "letter": "F",
+        "text": "The code does not compile."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "F"
+      ],
+      "description": "This is a trick question. The first line does not compile because you cannot assign a String to a StringBuilder. If that line were StringBuilder b = new StringBuilder(\"rumble\"), the code would compile and print rum4. Watch out for this sort of trick on the exam. You could easily spend a minute working out the character positions for no reason at all."
+    }
+  },
+  {
+    "idx": 14,
+    "text": "Which of the following can replace line 4 to print \"avaJ\"? (Choose all that apply)\n<pre>\n3: StringBuilder puzzle = new StringBuilder(\"Java\");\n4: // INSERT CODE HERE\n5: System.out.println(puzzle);\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "puzzle.reverse();"
+      },
+      {
+        "letter": "B",
+        "text": "puzzle.append(\"vaJ$\").substring(0, 4);"
+      },
+      {
+        "letter": "C",
+        "text": "puzzle.append(\"vaJ$\").delete(0, 3).deleteCharAt(puzzle.length() - 1);"
+      },
+      {
+        "letter": "D",
+        "text": "puzzle.append(\"vaJ$\").delete(0, 3).deleteCharAt(puzzle.length());"
+      },
+      {
+        "letter": "E",
+        "text": "None of the above."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "A",
+        "C"
+      ],
+      "description": "The reverse() method is the easiest way of reversing the characters in a StringBuilder; therefore, option A is correct. Option B is a nice distraction—it does in fact return \"avaJ\". However, substring() returns a String, which is not stored anywhere. Option C uses method chaining. First it creates the value \"JavavaJ$\". Then it removes the first three characters, resulting in \"avaJ$\". Finally, it removes the last character, resulting in \"avaJ\". Option D throws an exception because you cannot delete the character after the last index. Remember that deleteCharAt() uses indexes that are zero based and length() counts starting with 1."
+    }
+  },
+  {
+    "idx": 15,
+    "text": "Which of these array declarations is not legal? (Choose all that apply)",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "int[][] scores = new int[5][];"
+      },
+      {
+        "letter": "B",
+        "text": "Object[][][] cubbies = new Object[3][0][5];"
+      },
+      {
+        "letter": "C",
+        "text": "String beans[] = new beans[6];"
+      },
+      {
+        "letter": "D",
+        "text": "java.util.Date[] dates[] = new java.util.Date[2][];"
+      },
+      {
+        "letter": "E",
+        "text": "int[][] types = new int[];"
+      },
+      {
+        "letter": "F",
+        "text": "int[][] java = new int[][];"
+      }
+    ],
+    "correct": {
+      "letter": [
+        "C",
+        "E",
+        "F"
+      ],
+      "description": "Option C uses the variable name as if it were a type, which is clearly illegal. Options E and F don’t specify any size. Although it is legal to leave out the size for later dimensions of a multidimensional array, the first one is required. Option A declares a legal 2D array. Option B declares a legal 3D array. Option D declares a legal 2D array. Remember that it is normal to see on the exam types you might not have learned. You aren’t expected to know anything about them."
+    }
+  },
+  {
+    "idx": 16,
+    "text": "Which of these compile when replacing line 8? (Choose all that apply)\n<pre>\n7: char[]c = new char[2];\n8: // INSERT CODE HERE\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "int length = c.capacity;"
+      },
+      {
+        "letter": "B",
+        "text": "int length = c.capacity();"
+      },
+      {
+        "letter": "C",
+        "text": "int length = c.length;"
+      },
+      {
+        "letter": "D",
+        "text": "int length = c.length();"
+      },
+      {
+        "letter": "E",
+        "text": "int length = c.size;"
+      },
+      {
+        "letter": "F",
+        "text": "int length = c.size();"
+      },
+      {
+        "letter": "G",
+        "text": "None of the above."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "C"
+      ],
+      "description": "Arrays define a property called length. It is not a method, so parentheses are not allowed."
+    }
+  },
+  {
+    "idx": 17,
+    "text": "Which of these compile when replacing line 8? (Choose all that apply)\n<pre>\n7: ArrayList l = new ArrayList();\n8: // INSERT CODE HERE\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "int length = l.capacity;"
+      },
+      {
+        "letter": "B",
+        "text": "int length = l.capacity();"
+      },
+      {
+        "letter": "C",
+        "text": "int length = l.length;"
+      },
+      {
+        "letter": "D",
+        "text": "int length = l.length();"
+      },
+      {
+        "letter": "E",
+        "text": "int length = l.size;"
+      },
+      {
+        "letter": "F",
+        "text": "int length = l.size();"
+      },
+      {
+        "letter": "G",
+        "text": "None of the above."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "F"
+      ],
+      "description": "The ArrayList class defines a method called size()."
+    }
+  },
+  {
+    "idx": 18,
+    "text": "Which of the following are true? (Choose all that apply)",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "An array has a fixed size."
+      },
+      {
+        "letter": "B",
+        "text": "An ArrayList has a fixed size."
+      },
+      {
+        "letter": "C",
+        "text": "An array allows multiple dimensions."
+      },
+      {
+        "letter": "D",
+        "text": "An array is ordered."
+      },
+      {
+        "letter": "E",
+        "text": "An ArrayList is ordered."
+      },
+      {
+        "letter": "F",
+        "text": "An array is immutable."
+      },
+      {
+        "letter": "G",
+        "text": "An ArrayList is immutable."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "A",
+        "C",
+        "D",
+        "E"
+      ],
+      "description": "An array is not able to change size and can have multiple dimensions. Both an array and ArrayList are ordered and have indexes. Neither is immutable. The elements can change in value."
+    }
+  },
+  {
+    "idx": 19,
+    "text": "Which of the following are true? (Choose all that apply)",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Two arrays with the same content are equal."
+      },
+      {
+        "letter": "B",
+        "text": "Two ArrayLists with the same content are equal."
+      },
+      {
+        "letter": "C",
+        "text": "If you call remove(0) using an empty ArrayList object, it will compile successfully."
+      },
+      {
+        "letter": "D",
+        "text": "If you call remove(0) using an empty ArrayList object, it will run successfully."
+      },
+      {
+        "letter": "E",
+        "text": "None of the above."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "B",
+        "C"
+      ],
+      "description": "An array does not override equals() and so uses object equality. ArrayList does override equals() and defines it as the same elements in the same order. The compiler does not know when an index is out of bounds and thus can’t give you a compiler error. The code will throw an exception at runtime, though."
+    }
+  },
+  {
+    "idx": 20,
+    "text": "What is the result of the following statements?\n<pre>\n6: List&lt;String&gt; list = new ArrayList&lt;String&gt;();\n7: list.add(\"one\");\n8: list.add(\"two\");\n9: list.add(7);\n10: for(String s : list) System.out.print(s);\n</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "onetwo"
+      },
+      {
+        "letter": "B",
+        "text": "onetwo7"
+      },
+      {
+        "letter": "C",
+        "text": "onetwo followed by an exception"
+      },
+      {
+        "letter": "D",
+        "text": "Compiler error on line 9."
+      },
+      {
+        "letter": "E",
+        "text": "Compiler error on line 10."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "D"
+      ],
+      "description": "The code does not compile because list is instantiated using generics. Only String objects can be added to list and 7 is an int."
+    }
+  },
+  {
+    "idx": 21,
+    "text": "What is the result of the following statements?\n<pre>\n3: ArrayList&lt;Integer&gt; values = new ArrayList&lt;&gt;();\n4: values.add(4);\n5: values.add(5);\n6: values.set(1, 6);\n7: values.remove(0);\n8: for (Integer v : values) System.out.print(v);\n</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "4"
+      },
+      {
+        "letter": "B",
+        "text": "5"
+      },
+      {
+        "letter": "C",
+        "text": "6"
+      },
+      {
+        "letter": "D",
+        "text": "46"
+      },
+      {
+        "letter": "E",
+        "text": "45"
+      },
+      {
+        "letter": "F",
+        "text": "An exception is thrown."
+      },
+      {
+        "letter": "G",
+        "text": "The code does not compile."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "C"
+      ],
+      "description": "After line 4, values has one element (4). After line 5, values has two elements (4, 5). After line 6, values has two elements (4, 6) because set() does a replace. After line 7, values has only one element (6)."
+    }
+  },
+  {
+    "idx": 22,
+    "text": "What is the result of the following?\n<pre>\nint[] random = { 6, -4, 12, 0, -10 };\nint x = 12;\nint y = Arrays.binarySearch(random, x);\nSystem.out.println(y);\n</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "2"
+      },
+      {
+        "letter": "B",
+        "text": "4"
+      },
+      {
+        "letter": "C",
+        "text": "6"
+      },
+      {
+        "letter": "D",
+        "text": "The result is undefined."
+      },
+      {
+        "letter": "E",
+        "text": "An exception is thrown."
+      },
+      {
+        "letter": "F",
+        "text": "The code does not compile."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "D"
+      ],
+      "description": "The code compiles and runs fine. However, an array must be sorted for binarySearch() to return a meaningful result."
+    }
+  },
+  {
+    "idx": 23,
+    "text": "What is the result of the following?\n<pre>\n4: List&lt;Integer&gt; list = Arrays.asList(10, 4, -1, 5);\n5: Collections.sort(list);\n6: Integer array[] = list.toArray(new Integer[4]);\n7: System.out.println(array[0]);\n</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "–1"
+      },
+      {
+        "letter": "B",
+        "text": "10"
+      },
+      {
+        "letter": "C",
+        "text": "Compiler error on line 4."
+      },
+      {
+        "letter": "D",
+        "text": "Compiler error on line 5."
+      },
+      {
+        "letter": "E",
+        "text": "Compiler error on line 6."
+      },
+      {
+        "letter": "F",
+        "text": "An exception is thrown."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "A"
+      ],
+      "description": "Line 4 creates a fixed size array of size 4. Line 5 sorts it. Line 6 converts it back to an array. The brackets aren’t in the traditional place, but they are still legal. Line 7 prints the first element, which is now –1."
+    }
+  },
+  {
+    "idx": 24,
+    "text": "What is the result of the following?\n<pre>\n6: String [] names = {\"Tom\", \"Dick\", \"Harry\"};\n7: List&lt;String&gt; list = names.asList();\n8: list.set(0, \"Sue\");\n9: System.out.println(names[0]);\n</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Sue"
+      },
+      {
+        "letter": "B",
+        "text": "Tom"
+      },
+      {
+        "letter": "C",
+        "text": "Compiler error on line 7."
+      },
+      {
+        "letter": "D",
+        "text": "Compiler error on line 8."
+      },
+      {
+        "letter": "E",
+        "text": "An exception is thrown."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "C"
+      ],
+      "description": "Converting from an array to an ArrayList uses Arrays.asList(names). There is no asList() method on an array instance. If this code were corrected to compile, the answer would be option A."
+    }
+  },
+  {
+    "idx": 25,
+    "text": "What is the result of the following?\n<pre>\nList&lt;String&gt; hex = Arrays.asList(\"30\", \"8\", \"3A\", \"FF\");\nCollections.sort(hex);\nint x = Collections.binarySearch(hex, \"8\");\nint y = Collections.binarySearch(hex, \"3A\");\nint z = Collections.binarySearch(hex, \"4F\");\nSystem.out.println(x + \" \" + y + \" \" + z);\n</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "0 1 –2"
+      },
+      {
+        "letter": "B",
+        "text": "0 1 –3"
+      },
+      {
+        "letter": "C",
+        "text": "2 1 –2"
+      },
+      {
+        "letter": "D",
+        "text": "2 1 –3"
+      },
+      {
+        "letter": "E",
+        "text": "None of the above."
+      },
+      {
+        "letter": "F",
+        "text": "The code doesn’t compile."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "D"
+      ],
+      "description": "After sorting, hex contains [30, 3A, 8, FF]. Remember that numbers sort before letters and strings sort alphabetically. This makes 30 come before 8. A binary search correctly finds 8 at index 2 and 3A at index 1. It cannot find 4F but notices it should be at index 2. The rule when an item isn’t found is to negate that index and subtract 1. Therefore, we get –2–1, which is –3."
+    }
+  },
+  {
+    "idx": 26,
+    "text": "Which of the following are true statements about the following code? (Choose all that apply)\n<pre>\n4: List&lt;Integer&gt; ages = new ArrayList&lt;&gt;();\n5: ages.add(Integer.parseInt(\"5\"));\n6: ages.add(Integer.valueOf(\"6\"));\n7: ages.add(7);\n8: ages.add(null);\n9: for (int age : ages) System.out.print(age);\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "The code compiles."
+      },
+      {
+        "letter": "B",
+        "text": "The code throws a runtime exception."
+      },
+      {
+        "letter": "C",
+        "text": "Exactly one of the add statements uses autoboxing."
+      },
+      {
+        "letter": "D",
+        "text": "Exactly two of the add statements use autoboxing."
+      },
+      {
+        "letter": "E",
+        "text": "Exactly three of the add statements use autoboxing."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "A",
+        "B",
+        "D"
+      ],
+      "description": "Lines 5 and 7 use autoboxing to convert an int to an Integer. Line 6 does not because valueOf() returns an Integer. Line 8 does not because null is not an int. The code does not compile. However, when the for loop tries to unbox null into an int, it fails and throws a NullPointerException."
+    }
+  },
+  {
+    "idx": 27,
+    "text": "What is the result of the following?\n<pre>\nList&lt;String&gt; one = new ArrayList&lt;String&gt;();\none.add(\"abc\");\nList&lt;String&gt; two = new ArrayList&lt;&gt;();\ntwo.add(\"abc\");\nif (one == two)\n  System.out.println(\"A\");\nelse if (one.equals(two))\n  System.out.println(\"B\");\nelse\n  System.out.println(\"C\");\n</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "A"
+      },
+      {
+        "letter": "B",
+        "text": "B"
+      },
+      {
+        "letter": "C",
+        "text": "C"
+      },
+      {
+        "letter": "D",
+        "text": "An exception is thrown."
+      },
+      {
+        "letter": "E",
+        "text": "The code does not compile."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "B"
+      ],
+      "description": "The first if statement is false because the variables do not point to the same object. The second if statement is true because ArrayList implements equality to mean the same elements in the same order."
+    }
+  },
+  {
+    "idx": 28,
+    "text": "Which of the following can be inserted into the blank to create a date of June 21, 2014? (Choose all that apply)\n<pre>\nimport java.time.*;\npublic class StartOfSummer {\n  public static void main(String[] args) {\n    LocalDate date = ____________________________\n  }\n}\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "new LocalDate(2014, 5, 21);"
+      },
+      {
+        "letter": "B",
+        "text": "new LocalDate(2014, 6, 21);"
+      },
+      {
+        "letter": "C",
+        "text": "LocalDate.of(2014, 5, 21);"
+      },
+      {
+        "letter": "D",
+        "text": "LocalDate.of(2014, 6, 21);"
+      },
+      {
+        "letter": "E",
+        "text": "LocalDate.of(2014, Calendar.JUNE, 21);"
+      },
+      {
+        "letter": "F",
+        "text": "LocalDate.of(2014, Month.JUNE, 21);"
+      }
+    ],
+    "correct": {
+      "letter": [
+        "D",
+        "F"
+      ],
+      "description": "Options A and B are incorrect because LocalDate does not have a public constructor. Option C is incorrect because months start counting with 1 rather than 0. Option E is incorrect because it uses the old pre–Java 8 way of counting months, again beginning with 0. Options D and F are both correct ways of specifying the desired date."
+    }
+  },
+  {
+    "idx": 29,
+    "text": "What is the output of the following code?\n<pre>\nLocalDate date = LocalDate.parse(\"2018-04-30\", DateTimeFormatter.ISO_LOCAL_DATE);\ndate.plusDays(2);\ndate.plusHours(3);\nSystem.out.println(date.getYear() + \" \" + date.getMonth() + \" \" + date.getDayOfMonth());\n</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "2018 APRIL 2"
+      },
+      {
+        "letter": "B",
+        "text": "2018 APRIL 30"
+      },
+      {
+        "letter": "C",
+        "text": "2018 MAY 2"
+      },
+      {
+        "letter": "D",
+        "text": "The code does not compile."
+      },
+      {
+        "letter": "E",
+        "text": "A runtime exception is thrown."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "D"
+      ],
+      "description": "A LocalDate does not have a time element. Therefore, it has no method to add hours and the code does not compile."
+    }
+  },
+  {
+    "idx": 30,
+    "text": "What is the output of the following code?\n<pre>\nLocalDate date = LocalDate.of(2018, Month.APRIL, 40);\nSystem.out.println(date.getYear() + \" \" + date.getMonth() + \" \" + date.getDayOfMonth());\n</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "2018 APRIL 4"
+      },
+      {
+        "letter": "B",
+        "text": "2018 APRIL 30"
+      },
+      {
+        "letter": "C",
+        "text": "2018 MAY 10"
+      },
+      {
+        "letter": "D",
+        "text": "Another date."
+      },
+      {
+        "letter": "E",
+        "text": "The code does not compile."
+      },
+      {
+        "letter": "F",
+        "text": "A runtime exception is thrown."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "F"
+      ],
+      "description": "Java throws an exception if invalid date values are passed. There is no 40th day in April—or any other month for that matter."
+    }
+  },
+  {
+    "idx": 31,
+    "text": "What is the output of the following code?\n<pre>\nLocalDate date = LocalDate.of(2018, Month.APRIL, 30);\ndate.plusDays(2);\ndate.plusYears(3);\nSystem.out.println(date.getYear() + \" \" + date.getMonth() + \" \" + date.getDayOfMonth());\n</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "2018 APRIL 2"
+      },
+      {
+        "letter": "B",
+        "text": "2018 APRIL 30"
+      },
+      {
+        "letter": "C",
+        "text": "2018 MAY 2"
+      },
+      {
+        "letter": "D",
+        "text": "2021 APRIL 2"
+      },
+      {
+        "letter": "E",
+        "text": "2021 APRIL 30"
+      },
+      {
+        "letter": "F",
+        "text": "2021 MAY 2"
+      },
+      {
+        "letter": "G",
+        "text": "A runtime exception is thrown."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "B"
+      ],
+      "description": "The date starts out as April 30, 2018. Since dates are immutable and the plus methods have their return values ignored, the result is unchanged. Therefore, option B is correct."
+    }
+  },
+  {
+    "idx": 32,
+    "text": "What is the output of the following code?\n<pre>\nLocalDateTime d = LocalDateTime.of(2015, 5, 10, 11, 22, 33);\nPeriod p = Period.of(1, 2, 3);\nd = d.minus(p);\nDateTimeFormatter f = DateTimeFormatter.ofLocalizedTime(FormatStyle.SHORT);\nSystem.out.println(d.format(f));\n</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "3/7/14 11:22 AM"
+      },
+      {
+        "letter": "B",
+        "text": "5/10/15 11:22 AM"
+      },
+      {
+        "letter": "C",
+        "text": "3/7/14"
+      },
+      {
+        "letter": "D",
+        "text": "5/10/15"
+      },
+      {
+        "letter": "E",
+        "text": "11:22 AM"
+      },
+      {
+        "letter": "F",
+        "text": "The code does not compile."
+      },
+      {
+        "letter": "G",
+        "text": "A runtime exception is thrown."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "E"
+      ],
+      "description": "Even though d has both date and time, the formatter only outputs time."
+    }
+  },
+  {
+    "idx": 33,
+    "text": "What is the output of the following code?\n<pre>\nLocalDateTime d = LocalDateTime.of(2015, 5, 10, 11, 22, 33);\nPeriod p = Period.ofDays(1).ofYears(2);\nd = d.minus(p);\nDateTimeFormatter f = DateTimeFormatter.ofLocalizedDateTime(FormatStyle.SHORT);\nSystem.out.println(f.format(d));\n</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "5/9/13 11:22 AM"
+      },
+      {
+        "letter": "B",
+        "text": "5/10/13 11:22 AM"
+      },
+      {
+        "letter": "C",
+        "text": "5/9/14"
+      },
+      {
+        "letter": "D",
+        "text": "5/10/14"
+      },
+      {
+        "letter": "E",
+        "text": "The code does not compile."
+      },
+      {
+        "letter": "F",
+        "text": "A runtime exception is thrown."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "B"
+      ],
+      "description": "Period does not allow chaining. Only the last Period method called counts, so only the two years are subtracted."
+    }
+  }
+]

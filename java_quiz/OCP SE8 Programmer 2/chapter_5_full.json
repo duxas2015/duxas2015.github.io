@@ -1,0 +1,743 @@
+[
+  {
+    "idx": 1,
+    "text": "Which of the following creates valid locales, assuming that the language and country codes follow standard conventions? (Choose all that apply.) [cite: 63, 64]",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "<pre>new Locale(\"hi\");</pre>"
+      },
+      {
+        "letter": "B",
+        "text": "<pre>new Locale(\"hi\", \"IN\");</pre>"
+      },
+      {
+        "letter": "C",
+        "text": "<pre>new Locale(\"IN\");</pre>"
+      },
+      {
+        "letter": "D",
+        "text": "<pre>new Locale(\"IN\", \"hi\");</pre>"
+      },
+      {
+        "letter": "E",
+        "text": "<pre>Locale.create(\"hi\");</pre>"
+      },
+      {
+        "letter": "F",
+        "text": "<pre>Locale.create(\"IN\");</pre> [cite: 65]"
+      }
+    ],
+    "correct": {
+      "letter": [
+        "A",
+        "B"
+      ],
+      "description": "Choices E and F are incorrect because a Locale is created using a constructor[cite: 64]. The convention is to use lowercase for a language code and uppercase for a country code[cite: 65]. The language is mandatory when using a constructor, which makes choices A and B correct[cite: 66]."
+    }
+  },
+  {
+    "idx": 2,
+    "text": "Which of the following are common types to localize? (Choose all that apply.) [cite: 65, 66]",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Booleans"
+      },
+      {
+        "letter": "B",
+        "text": "Class names"
+      },
+      {
+        "letter": "C",
+        "text": "Currency"
+      },
+      {
+        "letter": "D",
+        "text": "Dates"
+      },
+      {
+        "letter": "E",
+        "text": "Numbers"
+      },
+      {
+        "letter": "F",
+        "text": "Variable names"
+      }
+    ],
+    "correct": {
+      "letter": [
+        "C",
+        "D",
+        "E"
+      ],
+      "description": "Localization refers to user-facing elements that a user sees[cite: 67]. Currency, dates, and numbers are commonly used in different formats for different countries[cite: 68]. Class and variable names are internal to the application, so there is no need to translate them for users[cite: 69]. Booleans are true/false values with standard names[cite: 70]."
+    }
+  },
+  {
+    "idx": 3,
+    "text": "Which of the following are true? (Choose all that apply.) [cite: 66, 67]",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "All keys must be in the same resource bundle file to be used."
+      },
+      {
+        "letter": "B",
+        "text": "All resource bundles defined as Java classes can be expressed using the property file format instead. [cite: 68]"
+      },
+      {
+        "letter": "C",
+        "text": "All resource bundles defined as property files can be expressed using the Java class list bundle format instead. [cite: 69]"
+      },
+      {
+        "letter": "D",
+        "text": "Changing the default locale lasts for only a single run of the program. [cite: 70]"
+      },
+      {
+        "letter": "E",
+        "text": "It is forbidden to have both Props_en.java and Props_en.properties in the classpath of an application. [cite: 71]"
+      }
+    ],
+    "correct": {
+      "letter": [
+        "C",
+        "D"
+      ],
+      "description": "Choice A is incorrect because Java will look at parent bundles[cite: 70]. For example, Java will look at Props.properties if Props_en.properties does not contain the requested key[cite: 71]. Java class resource bundles can have non-String values while property files are limited to strings[cite: 72]. Therefore, choice B is incorrect and choice C is correct[cite: 73]. Choice D is correct because the locale is only changed in memory[cite: 74]. Choice E is incorrect because Java specifies that it will look for a Java class resource bundle before a property file of the same name[cite: 75]."
+    }
+  },
+  {
+    "idx": 4,
+    "text": "Assume that all bundles mentioned in the answers exist and define the same keys. Which one will be used to find the key in line 8? [cite: 72, 73]\n<pre>\n6: Locale.setDefault(new Locale(\"en\", \"US\"));\n7: ResourceBundle b = ResourceBundle.getBundle(\"Dolphins\");\n8: b.getString(\"name\");\n</pre> [cite: 74]",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Dolphins.properties"
+      },
+      {
+        "letter": "B",
+        "text": "Dolphins_en.java"
+      },
+      {
+        "letter": "C",
+        "text": "Dolphins_en.properties"
+      },
+      {
+        "letter": "D",
+        "text": "Whales.properties"
+      },
+      {
+        "letter": "E",
+        "text": "Whales_en_US.properties"
+      },
+      {
+        "letter": "F",
+        "text": "The code does not compile."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "B"
+      ],
+      "description": "Java will first look for the most specific matches it can find, starting with Dolphins_en_US.java and then Dolphins_en_US.properties[cite: 76]. Since neither is found, it drops the country and looks for Dolphins_en.java[cite: 77]. Since a match is found, there is no reason to go on to the next one, which is Dolphins_en.properties[cite: 78]."
+    }
+  },
+  {
+    "idx": 5,
+    "text": "Suppose that we have the following property files and code. Which bundles are used on lines 8 and 9 respectively? [cite: 75]\n\n<b>Dolphins.properties</b>\nname=The Dolphin\nage=0\n\n<b>Dolphins_en.properties</b>\nname=Dolly\nage=4\n\n<b>Dolphins_fr.properties</b>\nname=Dolly [cite: 76]\n\n<pre>\n5: Locale fr = new Locale(\"fr\");\n6: Locale.setDefault(new Locale(\"en\", \"US\"));\n7: ResourceBundle b = ResourceBundle.getBundle(\"Dolphins\", fr);\n8: b.getString(\"name\");\n9: b.getString(\"age\");\n</pre> [cite: 76, 77]",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Dolphins.properties and Dolphins.properties"
+      },
+      {
+        "letter": "B",
+        "text": "Dolphins.properties and Dolphins_en.properties"
+      },
+      {
+        "letter": "C",
+        "text": "Dolphins_en.properties and Dolphins_en.properties"
+      },
+      {
+        "letter": "D",
+        "text": "Dolphins_fr.properties and Dolphins.properties"
+      },
+      {
+        "letter": "E",
+        "text": "Dolphins_fr.properties and Dolphins_en.properties"
+      },
+      {
+        "letter": "F",
+        "text": "The code does not compile."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "D"
+      ],
+      "description": "Java will use Dolphins_fr.properties as the matching resource bundle on line 7 because it is an exact match on the language of the requested locale[cite: 79]. Line 8 finds a matching key in this file. Line 9 does not find a match in that file, and therefore it has to look higher up in the hierarchy[cite: 80]. Once a bundle is chosen, only resources in that hierarchy are allowed[cite: 81]."
+    }
+  },
+  {
+    "idx": 6,
+    "text": "Which of the following can be inserted into the blank to create a date of June 21, 2014? (Choose all that apply.) [cite: 78, 79]\n<pre>\nimport java.time.*;\npublic class StartOfSummer {\n  public static void main(String[] args) {\n    LocalDate date =\n  } }\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "<pre>new LocalDate(2014, 5, 21);</pre>"
+      },
+      {
+        "letter": "B",
+        "text": "<pre>new LocalDate(2014, 6, 21);</pre> [cite: 80]"
+      },
+      {
+        "letter": "C",
+        "text": "<pre>LocalDate.of(2014, 5, 21);</pre>"
+      },
+      {
+        "letter": "D",
+        "text": "<pre>LocalDate.of(2014, 6, 21);</pre>"
+      },
+      {
+        "letter": "E",
+        "text": "<pre>LocalDate.of(2014, Calendar.JUNE, 21);</pre>"
+      },
+      {
+        "letter": "F",
+        "text": "<pre>LocalDate.of(2014, Month.JUNE, 21);</pre> [cite: 81]"
+      }
+    ],
+    "correct": {
+      "letter": [
+        "D",
+        "F"
+      ],
+      "description": "Options A and B are incorrect because LocalDate does not have a public constructor[cite: 82]. Option C is incorrect because months start counting with 1 rather than 0. Option E is incorrect because it uses the old Calendar constants for months, which begin with 0. Options D and F are both correct ways of specifying the desired date[cite: 83]."
+    }
+  },
+  {
+    "idx": 7,
+    "text": "What is the output of the following code?\n<pre>\nLocalDate date = LocalDate.parse(\"2018–04–30\", DateTimeFormatter.ISO_LOCAL_DATE);\ndate.plusDays(2);\ndate.plusHours(3);\nSystem.out.println(date.getYear() + \" \" + date.getMonth() + \" \" + date.getDayOfMonth());\n</pre> [cite: 81, 82]",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "2018 APRIL 2"
+      },
+      {
+        "letter": "B",
+        "text": "2018 APRIL 30"
+      },
+      {
+        "letter": "C",
+        "text": "2018 MAY 2"
+      },
+      {
+        "letter": "D",
+        "text": "The code does not compile."
+      },
+      {
+        "letter": "E",
+        "text": "A runtime exception is thrown. [cite: 83]"
+      }
+    ],
+    "correct": {
+      "letter": [
+        "D"
+      ],
+      "description": "A LocalDate does not have a time element[cite: 84]. Therefore, it has no method to add hours, and the code does not compile[cite: 85]."
+    }
+  },
+  {
+    "idx": 8,
+    "text": "What is the output of the following code? [cite: 83]\n<pre>\nLocalDate date = LocalDate.of(2018, Month.APRIL, 40);\nSystem.out.println(date.getYear() + \" \" + date.getMonth() + \" \" + date.getDayOfMonth());\n</pre> [cite: 84]",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "2018 APRIL 4 [cite: 85]"
+      },
+      {
+        "letter": "B",
+        "text": "2018 APRIL 30"
+      },
+      {
+        "letter": "C",
+        "text": "2018 MAY 10"
+      },
+      {
+        "letter": "D",
+        "text": "Another date"
+      },
+      {
+        "letter": "E",
+        "text": "The code does not compile."
+      },
+      {
+        "letter": "F",
+        "text": "A runtime exception is thrown. [cite: 86]"
+      }
+    ],
+    "correct": {
+      "letter": [
+        "F"
+      ],
+      "description": "Java throws an exception if invalid date values are passed[cite: 86]. There is no 40th day in April—or any other month for that matter[cite: 87]."
+    }
+  },
+  {
+    "idx": 9,
+    "text": "What is the output of the following code? [cite: 86]\n<pre>\nLocalDate date = LocalDate.of(2018, Month.APRIL, 30);\ndate.plusDays(2);\ndate.plusYears(3);\nSystem.out.println(date.getYear() + \" \" + date.getMonth() + \" \" + date.getDayOfMonth());\n</pre> [cite: 87]",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "2018 APRIL 2 [cite: 88]"
+      },
+      {
+        "letter": "B",
+        "text": "2018 APRIL 30"
+      },
+      {
+        "letter": "C",
+        "text": "2018 MAY 2"
+      },
+      {
+        "letter": "D",
+        "text": "2021 APRIL 2"
+      },
+      {
+        "letter": "E",
+        "text": "2021 APRIL 30"
+      },
+      {
+        "letter": "F",
+        "text": "2021 MAY 2"
+      },
+      {
+        "letter": "G",
+        "text": "A runtime exception is thrown."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "B"
+      ],
+      "description": "The date starts out as April 30, 2018. Since dates are immutable and the plus methods have their return values ignored, the result is unchanged[cite: 88]. Therefore, Option B is correct[cite: 89]."
+    }
+  },
+  {
+    "idx": 10,
+    "text": "What is the output of the following code? [cite: 89]\n<pre>\nLocalDateTime d = LocalDateTime.of(2015, 5, 10, 11, 22, 33);\nPeriod p = Period.of(1, 2, 3);\nd = d.minus(p);\nDateTimeFormatter f = DateTimeFormatter.ofLocalizedTime(FormatStyle.SHORT);\nSystem.out.println(d.format(f));\n</pre> [cite: 90]",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "3/7/14 11:22 AM [cite: 91]"
+      },
+      {
+        "letter": "B",
+        "text": "5/10/15 11:22 AM"
+      },
+      {
+        "letter": "C",
+        "text": "3/7/14"
+      },
+      {
+        "letter": "D",
+        "text": "5/10/15"
+      },
+      {
+        "letter": "E",
+        "text": "11:22 AM"
+      },
+      {
+        "letter": "F",
+        "text": "The code does not compile."
+      },
+      {
+        "letter": "G",
+        "text": "A runtime exception is thrown. [cite: 92]"
+      }
+    ],
+    "correct": {
+      "letter": [
+        "E"
+      ],
+      "description": "Even though d has both date and time, the formatter only outputs time[cite: 89]."
+    }
+  },
+  {
+    "idx": 11,
+    "text": "What is the output of the following code? [cite: 92]\n<pre>\nLocalDateTime d = LocalDateTime.of(2015, 5, 10, 11, 22, 33);\nPeriod p = Period.ofDays(1).ofYears(2);\nd = d.minus(p);\nDateTimeFormatter f = DateTimeFormatter.ofLocalizedDateTime(FormatStyle.SHORT);\nSystem.out.println(f.format(d));\n</pre> [cite: 93, 94]",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "5/9/13 11:22 AM"
+      },
+      {
+        "letter": "B",
+        "text": "5/10/13 11:22 AM"
+      },
+      {
+        "letter": "C",
+        "text": "5/9/14"
+      },
+      {
+        "letter": "D",
+        "text": "5/10/14"
+      },
+      {
+        "letter": "E",
+        "text": "The code does not compile."
+      },
+      {
+        "letter": "G",
+        "text": "A runtime exception is thrown. [cite: 95]"
+      }
+    ],
+    "correct": {
+      "letter": [
+        "B"
+      ],
+      "description": "Period does not allow chaining. Only the last Period method called counts, so only the two years are subtracted[cite: 90]."
+    }
+  },
+  {
+    "idx": 12,
+    "text": "Which of the answer choices is true given the following code? (Choose all that apply.) [cite: 95, 96]\n<pre>\n2016–08–28T05:00 GMT-04:00\n2016–08–28T09:00 GMT-06:00\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "The first date/time is earlier."
+      },
+      {
+        "letter": "B",
+        "text": "The second date/time is earlier."
+      },
+      {
+        "letter": "C",
+        "text": "Both date/times are the same. [cite: 97]"
+      },
+      {
+        "letter": "D",
+        "text": "The date/times are 2 hours apart."
+      },
+      {
+        "letter": "E",
+        "text": "The date/times are 6 hours apart."
+      },
+      {
+        "letter": "F",
+        "text": "The date/times are 10 hours apart. [cite: 98]"
+      }
+    ],
+    "correct": {
+      "letter": [
+        "A",
+        "E"
+      ],
+      "description": "When dealing with time zones, it is best to convert to GMT first by subtracting the time zone[cite: 91]. The first date/time is 9:00 GMT, and the second is 15:00 GMT. Therefore, the first one is earlier by 6 hours[cite: 92]."
+    }
+  },
+  {
+    "idx": 13,
+    "text": "Note that March 13, 2016, is the weekend that clocks spring ahead for daylight savings time. What is the output of the following? [cite: 98, 99]\n<pre>\nLocalDate date = LocalDate.of(2016, Month.MARCH, 13);\nLocalTime time = LocalTime.of(1, 30);\nZoneId zone = ZoneId.of(\"US/Eastern\");\nZonedDateTime dateTime1 = ZonedDateTime.of(date, time, zone);\nZonedDateTime dateTime2 = dateTime1.plus(1, ChronoUnit.HOURS);\nlong hours = ChronoUnit.HOURS.between(dateTime1, dateTime2);\nint clock1 = dateTime1.getHour();\nint clock2 = dateTime2.getHour();\nSystem.out.println(hours + \",\" + clock1 + \",\" + clock2);\n</pre> [cite: 100, 101]",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "1,1,2 [cite: 102]"
+      },
+      {
+        "letter": "B",
+        "text": "1,1,3"
+      },
+      {
+        "letter": "C",
+        "text": "2,1,2"
+      },
+      {
+        "letter": "D",
+        "text": "2,1,3"
+      },
+      {
+        "letter": "E",
+        "text": "The code does not compile."
+      },
+      {
+        "letter": "F",
+        "text": "A runtime exception is thrown."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "B"
+      ],
+      "description": "dateTime1 is 2016–03–13T01:30–05:00[US/Eastern] and dateTime2 is 2016–03–13T03:30–04:00[US/Eastern]. While the values are two hours apart, the time zone offset changes as well, making it only change from 6:30 GMT to 7:30 GMT[cite: 93]."
+    }
+  },
+  {
+    "idx": 14,
+    "text": "Note that March 13, 2016, is the weekend that we spring forward, and November 6, 2016, is when we fall back for daylight savings time. Which of the following can fill in the blank without the code throwing an exception? [cite: 103, 104]\n<pre>\nZoneId zone = ZoneId.of(\"US/Eastern\");\nLocalDate date = ;\nLocalTime time1 = LocalTime.of(2, 15);\nZonedDateTime a = ZonedDateTime.of(date4, time1, zone);\n</pre> [cite: 105]",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "<pre>LocalDate.of(2016, 3, 13)</pre> [cite: 106]"
+      },
+      {
+        "letter": "B",
+        "text": "<pre>LocalDate.of(2016, 3, 40)</pre>"
+      },
+      {
+        "letter": "C",
+        "text": "<pre>LocalDate.of(2016, 11, 6)</pre>"
+      },
+      {
+        "letter": "D",
+        "text": "<pre>LocalDate.of(2016, 11, 7)</pre>"
+      },
+      {
+        "letter": "E",
+        "text": "<pre>LocalDate.of(2017, 2, 29)</pre>"
+      }
+    ],
+    "correct": {
+      "letter": [
+        "A",
+        "C",
+        "D"
+      ],
+      "description": "Option B is incorrect because there is no March 40th[cite: 94]. Option E is incorrect because 2017 isn’t a leap year and therefore has no February 29th[cite: 95]. Option D is correct because it is just a regular date and has nothing to do with daylight savings time[cite: 96]. Options A and C are correct because Java is smart enough to adjust for daylight savings time[cite: 97]."
+    }
+  },
+  {
+    "idx": 15,
+    "text": "Given the following code, which of the answer choices can fill in the blank to print true? (Choose all that apply.) [cite: 106, 107]\n<pre>\nString m1 = Duration.of(1, ChronoUnit.MINUTES).toString();\nString m2 = Duration.ofMinutes(1).toString();\nString s = Duration.of(60, ChronoUnit.SECONDS).toString();\nString d = Duration.ofDays(1).toString();\nString p = Period.ofDays(1).toString();\nSystem.out.println( );\n</pre> [cite: 108]",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "<pre>m1 == m2</pre> [cite: 109]"
+      },
+      {
+        "letter": "B",
+        "text": "<pre>m1.equals(m2)</pre>"
+      },
+      {
+        "letter": "C",
+        "text": "<pre>m1.equals(s)</pre>"
+      },
+      {
+        "letter": "D",
+        "text": "<pre>d == p</pre>"
+      },
+      {
+        "letter": "E",
+        "text": "<pre>d.equals(p)</pre>"
+      }
+    ],
+    "correct": {
+      "letter": [
+        "B",
+        "C"
+      ],
+      "description": "Options A and D are incorrect because the String references do not point to the same object[cite: 98]. Option E is incorrect because a Period format begins with a P and a Duration format begins with PT[cite: 99]. They are different types and do not represent the same value even though they are both a day[cite: 100]. Remember that Duration uses hours/minutes/seconds and Period uses years/months/days for measures[cite: 101]. Options B and C are correct because m1, m2, and s all represent a duration of the same length[cite: 102]."
+    }
+  },
+  {
+    "idx": 16,
+    "text": "Given the following, which answers can correctly fill in the blank? (Choose all that apply.) [cite: 109, 110]\n<pre>\nLocalDate date = LocalDate.now();\nLocalTime time = LocalTime.now();\nLocalDateTime dateTime = LocalDateTime.now();\nZoneId zoneId = ZoneId.systemDefault();\nZonedDateTime zonedDateTime = ZonedDateTime.of(dateTime, zoneId);\nlong epochSeconds = 0;\nInstant instant = ;\n</pre> [cite: 111]",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "<pre>Instant.now()</pre> [cite: 112]"
+      },
+      {
+        "letter": "B",
+        "text": "<pre>Instant.ofEpochSecond(epochSeconds)</pre>"
+      },
+      {
+        "letter": "C",
+        "text": "<pre>date.toInstant()</pre>"
+      },
+      {
+        "letter": "D",
+        "text": "<pre>dateTime.toInstant()</pre>"
+      },
+      {
+        "letter": "E",
+        "text": "<pre>time.toInstant()</pre>"
+      },
+      {
+        "letter": "F",
+        "text": "<pre>zonedDateTime.toInstant()</pre>"
+      }
+    ],
+    "correct": {
+      "letter": [
+        "A",
+        "B",
+        "F"
+      ],
+      "description": "Option A correctly creates the current instant. Option B correctly converts from seconds to an Instant[cite: 103]. Option F is also a proper conversion. Options C, D, and E are incorrect because the source object does not represent a point in time[cite: 104]. Without a time zone, Java doesn’t know what moment in time to use for the Instant[cite: 105]."
+    }
+  },
+  {
+    "idx": 17,
+    "text": "What is the output of the following method if props contains {veggies=brontosaurus, meat=velociraptor}? [cite: 112]\n<pre>\nprivate static void print(Properties props) {\n  System.out.println(props.get(\"veggies\", \"none\")\n    + \" \" + props.get(\"omni\", \"none\"));\n}\n</pre> [cite: 113, 114]",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "brontosaurus none"
+      },
+      {
+        "letter": "B",
+        "text": "brontosaurus null"
+      },
+      {
+        "letter": "C",
+        "text": "none none"
+      },
+      {
+        "letter": "D",
+        "text": "none null"
+      },
+      {
+        "letter": "E",
+        "text": "The code does not compile."
+      },
+      {
+        "letter": "F",
+        "text": "A runtime exception is thrown."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "E"
+      ],
+      "description": "The Properties class defines a get() method that does not allow for a default value[cite: 106]. It also has a getProperty() method, which returns the default value if the key is not provided[cite: 107]."
+    }
+  },
+  {
+    "idx": 18,
+    "text": "Which of the following prints out all of the values in props? [cite: 115]",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "<pre>props.keys().stream().map(k -&gt; k .forEach(System.out::println);</pre> [cite: 116]"
+      },
+      {
+        "letter": "B",
+        "text": "<pre>props.keys().stream().map(k -&gt; props.get(k)).forEach(System.out::println);</pre>"
+      },
+      {
+        "letter": "C",
+        "text": "<pre>props.keySet().stream().map(k -&gt; k) .forEach(System.out::println);</pre>"
+      },
+      {
+        "letter": "D",
+        "text": "<pre>props.keySet().stream().map(k -&gt; props.get(k)).forEach(System.out::println);</pre>"
+      },
+      {
+        "letter": "E",
+        "text": "<pre>props.stream().map(k -&gt; k) .forEach(System.out::println);</pre>"
+      },
+      {
+        "letter": "F",
+        "text": "<pre>props.stream().map(k -&gt; props.get(k)) .forEach(System.out::println);</pre>"
+      }
+    ],
+    "correct": {
+      "letter": [
+        "D"
+      ],
+      "description": "Options E and F do not compile because you can’t get a stream directly from a Properties object[cite: 108]. Options A and B do not compile because the method is keySet(), not keys()[cite: 109]. Option C outputs all of the keys, and Option D outputs all of the values[cite: 110]."
+    }
+  },
+  {
+    "idx": 19,
+    "text": "Which of the following are stored in a Period object? (Choose all that apply.)",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Year"
+      },
+      {
+        "letter": "B",
+        "text": "Month"
+      },
+      {
+        "letter": "C",
+        "text": "Day"
+      },
+      {
+        "letter": "D",
+        "text": "Hour"
+      },
+      {
+        "letter": "E",
+        "text": "Minute"
+      },
+      {
+        "letter": "F",
+        "text": "Second"
+      }
+    ],
+    "correct": {
+      "letter": [
+        "A",
+        "B",
+        "C"
+      ],
+      "description": "Remember that Duration uses hours/minutes/seconds and Period uses years/months/days for measures[cite: 111]."
+    }
+  },
+  {
+    "idx": 20,
+    "text": "Which of the following objects could contain the information “eastern standard time”? (Choose all that apply.)",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Instant"
+      },
+      {
+        "letter": "B",
+        "text": "LocalDate"
+      },
+      {
+        "letter": "C",
+        "text": "LocalDateTime"
+      },
+      {
+        "letter": "D",
+        "text": "LocalTime"
+      },
+      {
+        "letter": "E",
+        "text": "ZonedDateTime"
+      }
+    ],
+    "correct": {
+      "letter": [
+        "E"
+      ],
+      "description": "Local______ explicitly excludes time zones. Instant represents a point in time, but always uses GMT rather than the desired time zone[cite: 112]."
+    }
+  }
+]
