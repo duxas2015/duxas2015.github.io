@@ -596,26 +596,17 @@ window.onload = function() {
 			  
 			if ( isMobileVersion() ) {
 
-				// Создание кнопки Pause для мобильной панели
-				const pauseBtn = document.createElement('button');
-				pauseBtn.classList.add('clsButton');
-				pauseBtn.id = "idPauseVideo";
-				pauseBtn.innerText = "P";
-				// Добавляем кнопку в конец панели управления (предполагается наличие элемента с id 'controlPanel' или аналогичного)
-				const controlPanel = document.getElementById('controlPanel') || document.body; 
-				controlPanel.appendChild(pauseBtn);
-
-				pauseBtn.addEventListener('click', () => {
-					const v = document.getElementsByTagName('video')[0];
-					if (v.paused) { v.play(); } else { v.pause(); }
-				});
-
 			  // mobile	
 			  loadCSS('styles_mobile.css');
 			  
 			  document.getElementById("idRewind2Second").addEventListener('click', ( event ) => { backMoving (2); } );
 			  document.getElementById("idRewind3Second").addEventListener('click', ( event ) => { backMoving (3); } );
 			  document.getElementById("idRewindUntilNextSub").addEventListener('click', ( event ) => { getToTheClosestSubtitle(); } );
+
+    			document.getElementById('idPauseVideo').addEventListener('click', () => {
+					const v = document.getElementsByTagName('video')[0];
+					if (v.paused) { v.play(); } else { v.pause(); }
+				});
 			  
 			  // English Subtitle Shift Handlers
 			  document.getElementById("idMoveEngSubBackward").addEventListener('click', ( event ) => { 
