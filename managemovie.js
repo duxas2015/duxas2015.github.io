@@ -32,6 +32,10 @@ function handle(e) {
     else if ( e.code === 'Numpad2' ) { backMoving (3); }
 	else if ( e.code === 'Numpad3' ) { backMoving (4); }
 	else if ( e.code === 'Numpad4' ) { getToTheClosestSubtitle(); }
+	else if ( e.code === 'Numpad0' ) {
+		const v = document.getElementsByTagName('video')[0];		
+        if (v.paused) { v.play(); } else { v.pause(); }
+    }
 	else if ( e.code === 'Numpad9' ) { 
 	  video = document.getElementsByTagName('video')[0];
       //track = document.getElementsByTagName('video')[0].textTracks[findEnglishSubtitleTrackIndex()];
@@ -591,6 +595,21 @@ window.onload = function() {
 			  listen(player);
 			  
 			if ( isMobileVersion() ) {
+
+				// Создание кнопки Pause для мобильной панели
+				const pauseBtn = document.createElement('button');
+				pauseBtn.classList.add('clsButton');
+				pauseBtn.id = "idPauseVideo";
+				pauseBtn.innerText = "P";
+				// Добавляем кнопку в конец панели управления (предполагается наличие элемента с id 'controlPanel' или аналогичного)
+				const controlPanel = document.getElementById('controlPanel') || document.body; 
+				controlPanel.appendChild(pauseBtn);
+
+				pauseBtn.addEventListener('click', () => {
+					const v = document.getElementsByTagName('video')[0];
+					if (v.paused) { v.play(); } else { v.pause(); }
+				});
+
 			  // mobile	
 			  loadCSS('styles_mobile.css');
 			  
