@@ -102,3 +102,15 @@ async function saveChanges() {
     const res = await resp.json();
     alert(res.success ? "Сохранено" : "Ошибка: " + res.error);
 }
+
+function changeFontSize(multiplier) {
+    // Выбираем только ячейки с текстом (EN и RU)
+    const textCells = document.querySelectorAll('.val-en_text, .val-ru_text');
+    
+    textCells.forEach(cell => {
+        // Получаем текущий вычисленный размер шрифта
+        const currentSize = parseFloat(window.getComputedStyle(cell).fontSize);
+        // Устанавливаем новый размер
+        cell.style.fontSize = (currentSize * multiplier) + 'px';
+    });
+}
