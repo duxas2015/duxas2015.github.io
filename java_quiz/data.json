@@ -13665,111 +13665,6 @@
     }
   },
   {
-    "idx": 13,
-    "text": "Дан фрагмент кода с использованием ExecutorService. Какое утверждение верно относительно метода <pre>invokeAny()</pre>?",
-    "select_type": "single",
-    "answers": [
-      { "letter": "A", "text": "Метод возвращает <pre>List&lt;Future&gt;</pre> после завершения всех задач." },
-      { "letter": "B", "text": "Метод блокирует поток до завершения хотя бы одной задачи успешно (без исключения)." },
-      { "letter": "C", "text": "Метод не является блокирующим и сразу возвращает <pre>Future</pre>." },
-      { "letter": "D", "text": "Метод выбрасывает исключение, если хотя бы одна задача завершилась ошибкой." }
-    ],
-    "correct": {
-      "letter": ["B"],
-      "description": "Метод invokeAny является блокирующим. Он ожидает успешного завершения любой одной задачи из коллекции и возвращает её результат. Остальные задачи при этом отменяются."
-    }
-  },
-  {
-    "idx": 14,
-    "text": "В чем основное различие между методами <pre>submit()</pre> и <pre>execute()</pre> в интерфейсе ExecutorService?",
-    "select_type": "single",
-    "answers": [
-      { "letter": "A", "text": "<pre>execute()</pre> возвращает <pre>Future</pre>, а <pre>submit()</pre> ничего не возвращает." },
-      { "letter": "B", "text": "<pre>submit()</pre> может принимать только <pre>Callable</pre>, а <pre>execute()</pre> — только <pre>Runnable</pre>." },
-      { "letter": "C", "text": "<pre>submit()</pre> возвращает объект <pre>Future</pre>, позволяющий отслеживать результат и исключения, в отличие от <pre>execute()</pre>." },
-      { "letter": "D", "text": "Различий нет, это синонимы." }
-    ],
-    "correct": {
-      "letter": ["C"],
-      "description": "Метод submit возвращает Future, который позволяет проверить статус выполнения, получить результат или поймать исключение, возникшее внутри потока. execute возвращает void."
-    }
-  },
-  {
-    "idx": 15,
-    "text": "Какой метод <pre>ExecutorService</pre> следует использовать, если нужно отправить список задач и дождаться завершения ВСЕХ, чтобы получить результаты?",
-    "select_type": "single",
-    "answers": [
-      { "letter": "A", "text": "<pre>submitAll()</pre>" },
-      { "letter": "B", "text": "<pre>invokeAll()</pre>" },
-      { "letter": "C", "text": "<pre>executeAll()</pre>" },
-      { "letter": "D", "text": "<pre>joinAll()</pre>" }
-    ],
-    "correct": {
-      "letter": ["B"],
-      "description": "invokeAll() принимает коллекцию задач, блокирует выполнение до их завершения и возвращает список объектов Future."
-    }
-  },
-  {
-    "idx": 16,
-    "text": "Метод <pre>Future.get()</pre> был вызван для задачи, которая выбросила непроверяемое исключение (RuntimeExpression). Что произойдет в вызывающем потоке?",
-    "select_type": "single",
-    "answers": [
-      { "letter": "A", "text": "Метод <pre>get()</pre> выбросит это же RuntimeException напрямую." },
-      { "letter": "B", "text": "Метод <pre>get()</pre> выбросит <pre>ExecutionException</pre>, которое нужно обработать." },
-      { "letter": "C", "text": "Метод <pre>get()</pre> вернет <pre>null</pre>." },
-      { "letter": "D", "text": "Вызывающий поток будет бесконечно заблокирован." }
-    ],
-    "correct": {
-      "letter": ["B"],
-      "description": "Любое исключение (проверяемое или нет), возникшее во время выполнения задачи в ExecutorService, при вызове Future.get() оборачивается в ExecutionException."
-    }
-  },
-  {
-    "idx": 17,
-    "text": "Начиная с Java 19/21, появились методы <pre>resultNow()</pre> и <pre>exceptionNow()</pre> в интерфейсе Future. Какое утверждение об их поведении верно?",
-    "select_type": "multiply",
-    "answers": [
-      { "letter": "A", "text": "Метод <pre>resultNow()</pre> блокирует поток до завершения задачи, аналогично <pre>get()</pre>." },
-      { "letter": "B", "text": "Метод <pre>resultNow()</pre> выбрасывает <pre>IllegalStateException</pre>, если задача еще не завершена успешно." },
-      { "letter": "C", "text": "Метод <pre>exceptionNow()</pre> возвращает исключение без его оборачивания в <pre>ExecutionException</pre>." },
-      { "letter": "D", "text": "Оба метода являются неблокирующими." }
-    ],
-    "correct": {
-      "letter": ["B", "C", "D"],
-      "description": "В отличие от get(), методы resultNow() и exceptionNow() являются неблокирующими и предназначены для использования, когда вы точно знаете, что задача завершена (например, после invokeAll или в Structured Concurrency)."
-    }
-  },
-  {
-    "idx": 18,
-    "text": "Рассмотрите код:\n\n<pre>\n1  var executor = Executors.newFixedThreadPool(2);\n2  Future&lt;String&gt; future = executor.submit(() -&gt; \"Success\");\n3  // Какая строка позволит безопасно получить результат без Checked исключений, \n4  // если мы уверены в завершении задачи?\n</pre>",
-    "select_type": "single",
-    "answers": [
-      { "letter": "A", "text": "<pre>String res = future.get();</pre>" },
-      { "letter": "B", "text": "<pre>String res = future.resultNow();</pre>" },
-      { "letter": "C", "text": "<pre>String res = future.waitAndGet();</pre>" },
-      { "letter": "D", "text": "<pre>String res = future.join();</pre>" }
-    ],
-    "correct": {
-      "letter": ["B"],
-      "description": "Метод resultNow() (Java 19+) возвращает результат немедленно и не выбрасывает проверяемых исключений (Checked exceptions), но бросает IllegalStateException, если задача не завершена успешно."
-    }
-  },
-  {
-    "idx": 19,
-    "text": "Что произойдет, если вызвать <pre>invokeAll()</pre> с таймаутом, и время истечет до завершения некоторых задач?",
-    "select_type": "single",
-    "answers": [
-      { "letter": "A", "text": "Метод выбросит <pre>TimeoutException</pre>." },
-      { "letter": "B", "text": "Завершенные задачи вернут результат, а не завершенные — <pre>null</pre> в списке." },
-      { "letter": "C", "text": "Метод вернет список Future, где для незавершенных задач <pre>isCancelled()</pre> будет <pre>true</pre>." },
-      { "letter": "D", "text": "Программа зависнет до ручной отмены." }
-    ],
-    "correct": {
-      "letter": ["C"],
-      "description": "При использовании таймаута в invokeAll, те задачи, которые не успели выполниться, отменяются, и соответствующие им Future в возвращаемом списке помечаются как отмененные."
-    }
-  },
-  {
     "idx": 20,
     "text": "Какая область видимости НЕВОЗМОЖНА для объявления Java Record?",
     "select_type": "single",
@@ -14485,8 +14380,112 @@
       "letter": ["B", "C"],
       "description": "shutdown() инициирует закрытие, а awaitTermination() блокирует поток для ожидания. try-with-resources делает то же самое автоматически через вызов close(). shutdownNow() (A) пытается прервать задачи, что противоречит условию 'дождаться завершения'."
     }
+  },
+  {
+    "idx": 29,
+    "text": "Дан фрагмент кода с использованием ExecutorService. Какое утверждение верно относительно метода <pre>invokeAny()</pre>?",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "Метод возвращает <pre>List&lt;Future&gt;</pre> после завершения всех задач." },
+      { "letter": "B", "text": "Метод блокирует поток до завершения хотя бы одной задачи успешно (без исключения)." },
+      { "letter": "C", "text": "Метод не является блокирующим и сразу возвращает <pre>Future</pre>." },
+      { "letter": "D", "text": "Метод выбрасывает исключение, если хотя бы одна задача завершилась ошибкой." }
+    ],
+    "correct": {
+      "letter": ["B"],
+      "description": "Метод invokeAny является блокирующим. Он ожидает успешного завершения любой одной задачи из коллекции и возвращает её результат. Остальные задачи при этом отменяются."
+    }
+  },
+  {
+    "idx": 30,
+    "text": "В чем основное различие между методами <pre>submit()</pre> и <pre>execute()</pre> в интерфейсе ExecutorService?",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "<pre>execute()</pre> возвращает <pre>Future</pre>, а <pre>submit()</pre> ничего не возвращает." },
+      { "letter": "B", "text": "<pre>submit()</pre> может принимать только <pre>Callable</pre>, а <pre>execute()</pre> — только <pre>Runnable</pre>." },
+      { "letter": "C", "text": "<pre>submit()</pre> возвращает объект <pre>Future</pre>, позволяющий отслеживать результат и исключения, в отличие от <pre>execute()</pre>." },
+      { "letter": "D", "text": "Различий нет, это синонимы." }
+    ],
+    "correct": {
+      "letter": ["C"],
+      "description": "Метод submit возвращает Future, который позволяет проверить статус выполнения, получить результат или поймать исключение, возникшее внутри потока. execute возвращает void."
+    }
+  },
+  {
+    "idx": 31,
+    "text": "Какой метод <pre>ExecutorService</pre> следует использовать, если нужно отправить список задач и дождаться завершения ВСЕХ, чтобы получить результаты?",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "<pre>submitAll()</pre>" },
+      { "letter": "B", "text": "<pre>invokeAll()</pre>" },
+      { "letter": "C", "text": "<pre>executeAll()</pre>" },
+      { "letter": "D", "text": "<pre>joinAll()</pre>" }
+    ],
+    "correct": {
+      "letter": ["B"],
+      "description": "invokeAll() принимает коллекцию задач, блокирует выполнение до их завершения и возвращает список объектов Future."
+    }
+  },
+  {
+    "idx": 32,
+    "text": "Метод <pre>Future.get()</pre> был вызван для задачи, которая выбросила непроверяемое исключение (RuntimeExpression). Что произойдет в вызывающем потоке?",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "Метод <pre>get()</pre> выбросит это же RuntimeException напрямую." },
+      { "letter": "B", "text": "Метод <pre>get()</pre> выбросит <pre>ExecutionException</pre>, которое нужно обработать." },
+      { "letter": "C", "text": "Метод <pre>get()</pre> вернет <pre>null</pre>." },
+      { "letter": "D", "text": "Вызывающий поток будет бесконечно заблокирован." }
+    ],
+    "correct": {
+      "letter": ["B"],
+      "description": "Любое исключение (проверяемое или нет), возникшее во время выполнения задачи в ExecutorService, при вызове Future.get() оборачивается в ExecutionException."
+    }
+  },
+  {
+    "idx": 33,
+    "text": "Начиная с Java 19/21, появились методы <pre>resultNow()</pre> и <pre>exceptionNow()</pre> в интерфейсе Future. Какое утверждение об их поведении верно?",
+    "select_type": "multiply",
+    "answers": [
+      { "letter": "A", "text": "Метод <pre>resultNow()</pre> блокирует поток до завершения задачи, аналогично <pre>get()</pre>." },
+      { "letter": "B", "text": "Метод <pre>resultNow()</pre> выбрасывает <pre>IllegalStateException</pre>, если задача еще не завершена успешно." },
+      { "letter": "C", "text": "Метод <pre>exceptionNow()</pre> возвращает исключение без его оборачивания в <pre>ExecutionException</pre>." },
+      { "letter": "D", "text": "Оба метода являются неблокирующими." }
+    ],
+    "correct": {
+      "letter": ["B", "C", "D"],
+      "description": "В отличие от get(), методы resultNow() и exceptionNow() являются неблокирующими и предназначены для использования, когда вы точно знаете, что задача завершена (например, после invokeAll или в Structured Concurrency)."
+    }
+  },
+  {
+    "idx": 34,
+    "text": "Рассмотрите код:\n\n<pre>\n1  var executor = Executors.newFixedThreadPool(2);\n2  Future&lt;String&gt; future = executor.submit(() -&gt; \"Success\");\n3  // Какая строка позволит безопасно получить результат без Checked исключений, \n4  // если мы уверены в завершении задачи?\n</pre>",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "<pre>String res = future.get();</pre>" },
+      { "letter": "B", "text": "<pre>String res = future.resultNow();</pre>" },
+      { "letter": "C", "text": "<pre>String res = future.waitAndGet();</pre>" },
+      { "letter": "D", "text": "<pre>String res = future.join();</pre>" }
+    ],
+    "correct": {
+      "letter": ["B"],
+      "description": "Метод resultNow() (Java 19+) возвращает результат немедленно и не выбрасывает проверяемых исключений (Checked exceptions), но бросает IllegalStateException, если задача не завершена успешно."
+    }
+  },
+  {
+    "idx": 35,
+    "text": "Что произойдет, если вызвать <pre>invokeAll()</pre> с таймаутом, и время истечет до завершения некоторых задач?",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "Метод выбросит <pre>TimeoutException</pre>." },
+      { "letter": "B", "text": "Завершенные задачи вернут результат, а не завершенные — <pre>null</pre> в списке." },
+      { "letter": "C", "text": "Метод вернет список Future, где для незавершенных задач <pre>isCancelled()</pre> будет <pre>true</pre>." },
+      { "letter": "D", "text": "Программа зависнет до ручной отмены." }
+    ],
+    "correct": {
+      "letter": ["C"],
+      "description": "При использовании таймаута в invokeAll, те задачи, которые не успели выполниться, отменяются, и соответствующие им Future в возвращаемом списке помечаются как отмененные."
+    }
   }
-
   
   
   
