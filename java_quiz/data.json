@@ -13633,10 +13633,872 @@
       "letter": ["A", "B", "C", "D"],
       "description": "Record — это полноценный класс в плане возможностей поведения: он может реализовывать интерфейсы, иметь методы и аннотации."
     }
+  },
+  {
+    "idx": 11,
+    "text": "Какие утверждения верны относительно вложенных (nested) записей (records)?",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "Вложенная запись может быть объявлена как нестатическая (inner class)." },
+      { "letter": "B", "text": "Вложенная запись всегда неявно является статической." },
+      { "letter": "C", "text": "Вложенная запись имеет доступ к нестатическим полям внешнего класса." },
+      { "letter": "D", "text": "Вложенная запись не может быть объявлена с модификатором <pre>private</pre>." }
+    ],
+    "correct": {
+      "letter": ["B"],
+      "description": "Согласно спецификации Java, любые вложенные записи неявно являются статическими. Это гарантирует отсутствие неявной ссылки на экземпляр внешнего класса."
+    }
+  },
+  {
+    "idx": 12,
+    "text": "Вы пытаетесь переопределить метод доступа в публичной записи. Какой код скомпилируется успешно?\n\n<pre>\npublic record User(String name) {\n    // Варианты кода здесь\n}\n</pre>",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "<pre>protected String name() { return name; }</pre>" },
+      { "letter": "B", "text": "<pre>private String name() { return name; }</pre>" },
+      { "letter": "C", "text": "<pre>public String getName() { return name; }</pre>" },
+      { "letter": "D", "text": "<pre>public String name() { return name; }</pre>" }
+    ],
+    "correct": {
+      "letter": ["D"],
+      "description": "Методы доступа в records являются публичными по умолчанию. При переопределении нельзя сужать уровень доступа (нельзя использовать private или protected). Вариант C не является аксессором компонента name."
+    }
+  },
+  {
+    "idx": 13,
+    "text": "Дан фрагмент кода с использованием ExecutorService. Какое утверждение верно относительно метода <pre>invokeAny()</pre>?",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "Метод возвращает <pre>List&lt;Future&gt;</pre> после завершения всех задач." },
+      { "letter": "B", "text": "Метод блокирует поток до завершения хотя бы одной задачи успешно (без исключения)." },
+      { "letter": "C", "text": "Метод не является блокирующим и сразу возвращает <pre>Future</pre>." },
+      { "letter": "D", "text": "Метод выбрасывает исключение, если хотя бы одна задача завершилась ошибкой." }
+    ],
+    "correct": {
+      "letter": ["B"],
+      "description": "Метод invokeAny является блокирующим. Он ожидает успешного завершения любой одной задачи из коллекции и возвращает её результат. Остальные задачи при этом отменяются."
+    }
+  },
+  {
+    "idx": 14,
+    "text": "В чем основное различие между методами <pre>submit()</pre> и <pre>execute()</pre> в интерфейсе ExecutorService?",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "<pre>execute()</pre> возвращает <pre>Future</pre>, а <pre>submit()</pre> ничего не возвращает." },
+      { "letter": "B", "text": "<pre>submit()</pre> может принимать только <pre>Callable</pre>, а <pre>execute()</pre> — только <pre>Runnable</pre>." },
+      { "letter": "C", "text": "<pre>submit()</pre> возвращает объект <pre>Future</pre>, позволяющий отслеживать результат и исключения, в отличие от <pre>execute()</pre>." },
+      { "letter": "D", "text": "Различий нет, это синонимы." }
+    ],
+    "correct": {
+      "letter": ["C"],
+      "description": "Метод submit возвращает Future, который позволяет проверить статус выполнения, получить результат или поймать исключение, возникшее внутри потока. execute возвращает void."
+    }
+  },
+  {
+    "idx": 15,
+    "text": "Какой метод <pre>ExecutorService</pre> следует использовать, если нужно отправить список задач и дождаться завершения ВСЕХ, чтобы получить результаты?",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "<pre>submitAll()</pre>" },
+      { "letter": "B", "text": "<pre>invokeAll()</pre>" },
+      { "letter": "C", "text": "<pre>executeAll()</pre>" },
+      { "letter": "D", "text": "<pre>joinAll()</pre>" }
+    ],
+    "correct": {
+      "letter": ["B"],
+      "description": "invokeAll() принимает коллекцию задач, блокирует выполнение до их завершения и возвращает список объектов Future."
+    }
+  },
+  {
+    "idx": 16,
+    "text": "Метод <pre>Future.get()</pre> был вызван для задачи, которая выбросила непроверяемое исключение (RuntimeExpression). Что произойдет в вызывающем потоке?",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "Метод <pre>get()</pre> выбросит это же RuntimeException напрямую." },
+      { "letter": "B", "text": "Метод <pre>get()</pre> выбросит <pre>ExecutionException</pre>, которое нужно обработать." },
+      { "letter": "C", "text": "Метод <pre>get()</pre> вернет <pre>null</pre>." },
+      { "letter": "D", "text": "Вызывающий поток будет бесконечно заблокирован." }
+    ],
+    "correct": {
+      "letter": ["B"],
+      "description": "Любое исключение (проверяемое или нет), возникшее во время выполнения задачи в ExecutorService, при вызове Future.get() оборачивается в ExecutionException."
+    }
+  },
+  {
+    "idx": 17,
+    "text": "Начиная с Java 19/21, появились методы <pre>resultNow()</pre> и <pre>exceptionNow()</pre> в интерфейсе Future. Какое утверждение об их поведении верно?",
+    "select_type": "multiply",
+    "answers": [
+      { "letter": "A", "text": "Метод <pre>resultNow()</pre> блокирует поток до завершения задачи, аналогично <pre>get()</pre>." },
+      { "letter": "B", "text": "Метод <pre>resultNow()</pre> выбрасывает <pre>IllegalStateException</pre>, если задача еще не завершена успешно." },
+      { "letter": "C", "text": "Метод <pre>exceptionNow()</pre> возвращает исключение без его оборачивания в <pre>ExecutionException</pre>." },
+      { "letter": "D", "text": "Оба метода являются неблокирующими." }
+    ],
+    "correct": {
+      "letter": ["B", "C", "D"],
+      "description": "В отличие от get(), методы resultNow() и exceptionNow() являются неблокирующими и предназначены для использования, когда вы точно знаете, что задача завершена (например, после invokeAll или в Structured Concurrency)."
+    }
+  },
+  {
+    "idx": 18,
+    "text": "Рассмотрите код:\n\n<pre>\n1  var executor = Executors.newFixedThreadPool(2);\n2  Future&lt;String&gt; future = executor.submit(() -&gt; \"Success\");\n3  // Какая строка позволит безопасно получить результат без Checked исключений, \n4  // если мы уверены в завершении задачи?\n</pre>",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "<pre>String res = future.get();</pre>" },
+      { "letter": "B", "text": "<pre>String res = future.resultNow();</pre>" },
+      { "letter": "C", "text": "<pre>String res = future.waitAndGet();</pre>" },
+      { "letter": "D", "text": "<pre>String res = future.join();</pre>" }
+    ],
+    "correct": {
+      "letter": ["B"],
+      "description": "Метод resultNow() (Java 19+) возвращает результат немедленно и не выбрасывает проверяемых исключений (Checked exceptions), но бросает IllegalStateException, если задача не завершена успешно."
+    }
+  },
+  {
+    "idx": 19,
+    "text": "Что произойдет, если вызвать <pre>invokeAll()</pre> с таймаутом, и время истечет до завершения некоторых задач?",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "Метод выбросит <pre>TimeoutException</pre>." },
+      { "letter": "B", "text": "Завершенные задачи вернут результат, а не завершенные — <pre>null</pre> в списке." },
+      { "letter": "C", "text": "Метод вернет список Future, где для незавершенных задач <pre>isCancelled()</pre> будет <pre>true</pre>." },
+      { "letter": "D", "text": "Программа зависнет до ручной отмены." }
+    ],
+    "correct": {
+      "letter": ["C"],
+      "description": "При использовании таймаута в invokeAll, те задачи, которые не успели выполниться, отменяются, и соответствующие им Future в возвращаемом списке помечаются как отмененные."
+    }
+  },
+  {
+    "idx": 20,
+    "text": "Какая область видимости НЕВОЗМОЖНА для объявления Java Record?",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "Внутри другого класса как <pre>private static</pre>." },
+      { "letter": "B", "text": "Внутри интерфейса." },
+      { "letter": "C", "text": "Как нестатический внутренний класс другого класса." },
+      { "letter": "D", "text": "Внутри тела цикла <pre>for</pre> (как локальный record)." }
+    ],
+    "correct": {
+      "letter": ["C"],
+      "description": "Records не могут быть внутренними классами (inner classes), зависящими от экземпляра. Они всегда неявно статические, даже если модификатор static опущен во вложенном объявлении."
+    }
   }
 ]
 
 
-}]}
+}
+,{ "chapter_name":"FutureTask.cancel",
+  "questions" : 
+[
+  {
+    "idx": 1,
+    "text": "Объект FutureTask был создан, но еще не передан в Thread или ExecutorService. Каков будет результат вызова futureTask.cancel(false)?",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "Метод вернет false, так как задача еще не запущена." },
+      { "letter": "B", "text": "Метод вернет true, задача перейдет в состояние CANCELLED." },
+      { "letter": "C", "text": "Будет выброшено исключение IllegalStateException." },
+      { "letter": "D", "text": "Метод вернет true, но состояние задачи останется NEW." }
+    ],
+    "correct": {
+      "letter": ["B"],
+      "description": "Если задача находится в состоянии NEW (еще не запущена или не завершена), вызов cancel всегда переводит ее в состояние CANCELLED и возвращает true."
+    }
+  },
+  {
+    "idx": 2,
+    "text": "Задача выполняется в потоке. Вызван метод <pre>futureTask.cancel(true)</pre>. Что произойдет с исполняющим потоком?",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "Поток будет немедленно остановлен методом Thread.stop()." },
+      { "letter": "B", "text": "Потоку будет отправлен сигнал interrupt()." },
+      { "letter": "C", "text": "Поток продолжит работу без каких-либо изменений флагов." },
+      { "letter": "D", "text": "Поток будет приостановлен (suspend) до востребования." }
+    ],
+    "correct": {
+      "letter": ["B"],
+      "description": "Параметр mayInterruptIfRunning = true дает команду вызвать метод interrupt() у потока, который в данный момент выполняет задачу."
+    }
+  },
+  {
+    "idx": 3,
+    "text": "Задача выполняется. Вызван метод <pre>futureTask.cancel(false)</pre>. Какое значение вернет вызов <pre>futureTask.isCancelled()</pre> сразу после этого?",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "false, так как поток не был прерван." },
+      { "letter": "B", "text": "true, так как попытка отмены была инициирована." },
+      { "letter": "C", "text": "true только в том случае, если задача сама решит завершиться." }
+    ],
+    "correct": {
+      "letter": ["B"],
+      "description": "Метод isCancelled() возвращает true, если cancel() вернул true, независимо от того, был ли прерван поток или доработал до конца."
+    }
+  },
+  {
+    "idx": 4,
+    "text": "Внутри Callable выполняется следующий код:\n<pre>\n1  while (true) {\n2      if (Thread.currentThread().isInterrupted()) break;\n3      doWork();\n4  }\n</pre>\nЧто произойдет при вызове <pre>futureTask.cancel(true)</pre>?",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "Цикл прервется, поток завершит выполнение задачи." },
+      { "letter": "B", "text": "Цикл станет бесконечным, так как cancel не влияет на флаг." },
+      { "letter": "C", "text": "Будет выброшено InterruptedException в строке 2." }
+    ],
+    "correct": {
+      "letter": ["A"],
+      "description": "Код правильно проверяет флаг прерывания. cancel(true) устанавливает этот флаг, условие в строке 2 сработает."
+    }
+  },
+  {
+    "idx": 5,
+    "text": "Задача уже завершена успешно. Каков результат вызова <pre>futureTask.cancel(true)</pre>?",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "true, и результат задачи будет аннулирован." },
+      { "letter": "B", "text": "false, состояние задачи не изменится." },
+      { "letter": "C", "text": "true, но get() все равно вернет результат." }
+    ],
+    "correct": {
+      "letter": ["B"],
+      "description": "Нельзя отменить задачу, которая уже достигла финального состояния (с успехом или ошибкой)."
+    }
+  },
+  {
+    "idx": 6,
+    "text": "Что вернет <pre>futureTask.get()</pre>, если задача была отменена через <pre>cancel(anyBoolean)</pre>?",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "null" },
+      { "letter": "B", "text": "Выбросит InterruptedException" },
+      { "letter": "C", "text": "Выбросит CancellationException" },
+      { "letter": "D", "text": "Выбросит ExecutionException" }
+    ],
+    "correct": {
+      "letter": ["C"],
+      "description": "После успешной отмены любой вызов get() всегда приводит к CancellationException."
+    }
+  },
+  {
+    "idx": 7,
+    "text": "Внутри Callable вызван <pre>Thread.sleep(10000)</pre>. Вызывается <pre>futureTask.cancel(true)</pre>. Что произойдет?",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "Поток будет спать все 10 секунд, затем задача отменится." },
+      { "letter": "B", "text": "Thread.sleep немедленно выбросит InterruptedException." },
+      { "letter": "C", "text": "Метод cancel(true) вернет false, так как поток заблокирован." }
+    ],
+    "correct": {
+      "letter": ["B"],
+      "description": "Блокирующие методы, такие как sleep, чувствительны к прерыванию и немедленно просыпаются с исключением."
+    }
+  },
+  {
+    "idx": 8,
+    "text": "Внутри Callable вызван <pre>Thread.sleep(10000)</pre>. Вызывается <pre>futureTask.cancel(false)</pre>. Что произойдет?",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "Thread.sleep выбросит InterruptedException." },
+      { "letter": "B", "text": "Поток продолжит спать, но FutureTask будет помечен как отмененный." },
+      { "letter": "C", "text": "Задача будет немедленно удалена из потока выполнения." }
+    ],
+    "correct": {
+      "letter": ["B"],
+      "description": "При cancel(false) прерывание (interrupt) не вызывается, поэтому спящий поток ничего не заметит."
+    }
+  },
+  {
+    "idx": 9,
+    "text": "Какие методы интерфейса Future позволяют узнать, что задача не завершилась «естественным» путем (успех/ошибка)?",
+    "select_type": "multiply",
+    "answers": [
+      { "letter": "A", "text": "isDone()" },
+      { "letter": "B", "text": "isCancelled()" },
+      { "letter": "C", "text": "isTerminated()" }
+    ],
+    "correct": {
+      "letter": ["A", "B"],
+      "description": "isCancelled() прямо говорит об отмене. isDone() возвращает true и при успехе, и при ошибке, и при отмене."
+    }
+  },
+  {
+    "idx": 10,
+    "text": "Код в Callable:\n<pre>\n1  try {\n2      Thread.sleep(5000);\n3  } catch (InterruptedException e) {\n4      System.out.println(\"Error\");\n5  }\n6  System.out.println(\"Still alive\");\n</pre>\nПосле вызова <pre>cancel(true)</pre>, увидим ли мы фразу \"Still alive\"?",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "Нет, поток умрет на строке 3." },
+      { "letter": "B", "text": "Да, так как исключение поймано, и выполнение продолжается." },
+      { "letter": "C", "text": "Зависит от версии Java." }
+    ],
+    "correct": {
+      "letter": ["B"],
+      "description": "Исключение поймано в блоке catch, но выхода из метода (return) нет. Поток продолжит выполнение строки 6."
+    }
+  },
+  {
+    "idx": 11,
+    "text": "Метод <pre>cancel(true)</pre> возвращает true. Гарантирует ли это, что метод <pre>isDone()</pre> теперь тоже вернет true?",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "Да, отмена переводит задачу в финальное состояние." },
+      { "letter": "B", "text": "Нет, только после того как поток реально остановится." }
+    ],
+    "correct": {
+      "letter": ["A"],
+      "description": "Согласно документации, после того как cancel вернул true, isDone всегда будет возвращать true."
+    }
+  },
+  {
+    "idx": 12,
+    "text": "Если вызвать <pre>cancel(true)</pre> дважды для одного объекта, что вернет второй вызов?",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "true" },
+      { "letter": "B", "text": "false" },
+      { "letter": "C", "text": "Исключение" }
+    ],
+    "correct": {
+      "letter": ["B"],
+      "description": "Повторная отмена невозможна, так как состояние уже не NEW."
+    }
+  },
+  {
+    "idx": 13,
+    "text": "Какое состояние FutureTask НЕ является финальным?",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "CANCELLED" },
+      { "letter": "B", "text": "EXCEPTIONAL" },
+      { "letter": "C", "text": "COMPLETING" },
+      { "letter": "D", "text": "RAN" }
+    ],
+    "correct": {
+      "letter": ["C"],
+      "description": "COMPLETING — это переходное состояние, пока результат или исключение записываются в поле."
+    }
+  },
+  {
+    "idx": 14,
+    "text": "Выполняется <pre>cancel(true)</pre>. В потоке работает код, игнорирующий прерывания. Когда завершится поток?",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "Сразу после вызова cancel." },
+      { "letter": "B", "text": "Только когда выполнит весь свой код до конца." },
+      { "letter": "C", "text": "Когда его уничтожит сборщик мусора." }
+    ],
+    "correct": {
+      "letter": ["B"],
+      "description": "Если код не проверяет флаги и не вызывает блокирующие методы, он будет работать до естественного завершения."
+    }
+  },
+  {
+    "idx": 15,
+    "text": "Как ведут себя методы <pre>isCancelled()</pre> и <pre>isDone()</pre> после вызова <pre>cancel(true)</pre>, который вернул false?",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "Оба вернут true." },
+      { "letter": "B", "text": "Оба вернут false." },
+      { "letter": "C", "text": "isDone() вернет true, isCancelled() вернет false." }
+    ],
+    "correct": {
+      "letter": ["C"],
+      "description": "Если cancel вернул false, значит задача уже была завершена (isDone=true). Но она не была отменена (isCancelled=false)."
+    }
+  },
+  {
+    "idx": 16,
+    "text": "Может ли <pre>mayInterruptIfRunning = true</pre> прервать поток, который занят блокирующим вводом-выводом (IO) в старом java.io (напр. FileInputStream)?",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "Да, всегда." },
+      { "letter": "B", "text": "Нет, старое IO нечувствительно к прерываниям потока." },
+      { "letter": "C", "text": "Только если файл находится на сетевом диске." }
+    ],
+    "correct": {
+      "letter": ["B"],
+      "description": "Старые методы чтения/записи (IO) не выбрасывают InterruptedException и не реагируют на флаг прерывания."
+    }
+  },
+  {
+    "idx": 17,
+    "text": "Что произойдет, если вызвать <pre>futureTask.cancel(true)</pre> в тот момент, когда задача уже перешла в состояние EXCEPTIONAL (упала с ошибкой)?",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "cancel вернет false, состояние останется EXCEPTIONAL." },
+      { "letter": "B", "text": "cancel вернет true, состояние сменится на CANCELLED." },
+      { "letter": "C", "text": "Потоку все равно будет послан сигнал прерывания." }
+    ],
+    "correct": {
+      "letter": ["A"],
+      "description": "Если задача завершилась ошибкой, она считается выполненной (Done). Отмена невозможна."
+    }
+  },
+  {
+    "idx": 18,
+    "text": "В каком случае <pre>cancel(true)</pre> может привести к повреждению данных (data corruption)?",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "Никогда, Java безопасна." },
+      { "letter": "B", "text": "Если код в блоке catch(InterruptedException) не откатывает транзакцию/не закрывает ресурсы." },
+      { "letter": "C", "text": "Только при использовании ключевого слова volatile." }
+    ],
+    "correct": {
+      "letter": ["B"],
+      "description": "Прерывание может произойти в любой момент. Если код не готов к внезапному выходу, ресурсы могут остаться в промежуточном состоянии."
+    }
+  },
+  {
+    "idx": 19,
+    "text": "Связан ли метод <pre>futureTask.cancel()</pre> с методом <pre>thread.stop()</pre>?",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "Да, cancel вызывает stop() внутри." },
+      { "letter": "B", "text": "Нет, Thread.stop() давно устарел (deprecated) и не используется во FutureTask." }
+    ],
+    "correct": {
+      "letter": ["B"],
+      "description": "FutureTask использует только механизм прерываний (interrupt), который безопаснее принудительной остановки."
+    }
+  },
+  {
+    "idx": 20,
+    "text": "Если вы вызвали <pre>cancel(true)</pre> и поток поймал <pre>InterruptedException</pre>, очистится ли флаг <pre>isInterrupted</pre> у потока?",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "Нет, флаг останется true навсегда." },
+      { "letter": "B", "text": "Да, при генерации исключения флаг сбрасывается в false." },
+      { "letter": "C", "text": "Зависит от того, какой метод вызвал исключение." }
+    ],
+    "correct": {
+      "letter": ["B"],
+      "description": "Это стандартное поведение JVM: перед выбрасыванием InterruptedException флаг прерывания сбрасывается."
+    }
+  }
+]  
+  
+ }
+,{ "chapter_name":"ExecutorService",
+  "questions" : 
+[
+  {
+    "idx": 1,
+    "text": "Дан фрагмент кода:\n<pre>\n1  ExecutorService service = Executors.newFixedThreadPool(2);\n2  Future&lt;String&gt; future = service.submit(() -> \"Success\");\n3  // задача еще выполняется\n4  String result = future.resultNow();\n</pre>\nЧто произойдет при выполнении строки 4?",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "Поток заблокируется до завершения задачи." },
+      { "letter": "B", "text": "Метод вернет null." },
+      { "letter": "C", "text": "Будет выброшено исключение <pre>IllegalStateException</pre>." },
+      { "letter": "D", "text": "Будет выброшено исключение <pre>ExecutionException</pre>." }
+    ],
+    "correct": {
+      "letter": ["C"],
+      "description": "Метод resultNow() (Java 19+) является неблокирующим. Если задача не завершена (состояние не SUCCESS), он немедленно выбрасывает IllegalStateException."
+    }
+  },
+  {
+    "idx": 2,
+    "text": "Какие из перечисленных методов ExecutorService являются блокирующими (ожидают завершения задач перед возвратом управления)?",
+    "select_type": "multiply",
+    "answers": [
+      { "letter": "A", "text": "<pre>submit(Callable&lt;T&gt; task)</pre>" },
+      { "letter": "B", "text": "<pre>invokeAll(Collection&lt;? extends Callable&lt;T&gt;&gt; tasks)</pre>" },
+      { "letter": "C", "text": "<pre>invokeAny(Collection&lt;? extends Callable&lt;T&gt;&gt; tasks)</pre>" },
+      { "letter": "D", "text": "<pre>execute(Runnable command)</pre>" }
+    ],
+    "correct": {
+      "letter": ["B", "C"],
+      "description": "invokeAll ждет завершения всех задач, invokeAny ждет завершения хотя бы одной задачи. submit и execute только ставят задачу в очередь и возвращают управление немедленно."
+    }
+  },
+  {
+    "idx": 3,
+    "text": "Какое исключение будет выброшено методом <pre>future.get()</pre>, если внутри выполняемого Callable возникло неперехваченное исключение <pre>NullPointerException</pre>?",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "<pre>NullPointerException</pre>" },
+      { "letter": "B", "text": "<pre>ExecutionException</pre>" },
+      { "letter": "C", "text": "<pre>RuntimeException</pre>" },
+      { "letter": "D", "text": "<pre>InterruptedException</pre>" }
+    ],
+    "correct": {
+      "letter": ["B"],
+      "description": "Метод get() упаковывает любое исключение, возникшее в процессе выполнения задачи, в проверяемое исключение ExecutionException."
+    }
+  },
+  {
+    "idx": 4,
+    "text": "Имеется код:\n<pre>\nvar service = Executors.newSingleThreadExecutor();\nFuture&lt;Integer&gt; f = service.submit(() -> { throw new IOException(); });\n// ... ожидание завершения ...\nThrowable t = f.exceptionNow();\n</pre>\nОбъектом какого класса будет переменная t?",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "<pre>ExecutionException</pre>" },
+      { "letter": "B", "text": "<pre>IOException</pre>" },
+      { "letter": "C", "text": "<pre>IllegalStateException</pre>" },
+      { "letter": "D", "text": "<pre>RuntimeException</pre>" }
+    ],
+    "correct": {
+      "letter": ["B"],
+      "description": "Метод exceptionNow() возвращает оригинальное исключение задачи без обертки в ExecutionException."
+    }
+  },
+  {
+    "idx": 5,
+    "text": "В чем отличие метода <pre>Executors.newFixedThreadPool(int n)</pre> от <pre>Executors.newCachedThreadPool()</pre>?",
+    "select_type": "multiply",
+    "answers": [
+      { "letter": "A", "text": "FixedThreadPool имеет фиксированное количество потоков." },
+      { "letter": "B", "text": "CachedThreadPool создает новые потоки по мере необходимости и удаляет простаивающие." },
+      { "letter": "C", "text": "FixedThreadPool использует неограниченную очередь для задач." },
+      { "letter": "D", "text": "CachedThreadPool никогда не удаляет созданные потоки." }
+    ],
+    "correct": {
+      "letter": ["A", "B", "C"],
+      "description": "FixedThreadPool имеет лимит потоков и очередь LinkedBlockingQueue. CachedThreadPool создает потоки динамически и удаляет их после 60 секунд бездействия."
+    }
+  },
+  {
+    "idx": 6,
+    "text": "Что произойдет, если вызвать <pre>invokeAny()</pre> и одна из задач завершится успешно, а другие еще выполняются?",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "Метод будет ждать завершения всех задач." },
+      { "letter": "B", "text": "Метод вернет результат первой успешной задачи, остальные будут отменены." },
+      { "letter": "C", "text": "Метод вернет список результатов всех завершенных на этот момент задач." }
+    ],
+    "correct": {
+      "letter": ["B"],
+      "description": "invokeAny() возвращает результат первой успешно завершенной задачи и пытается отменить все остальные активные задачи в данной коллекции."
+    }
+  },
+  {
+    "idx": 7,
+    "text": "Какое проверяемое (checked) исключение ОБЯЗАН обработать программист при вызове <pre>future.get()</pre>?",
+    "select_type": "multiply",
+    "answers": [
+      { "letter": "A", "text": "<pre>InterruptedException</pre>" },
+      { "letter": "B", "text": "<pre>ExecutionException</pre>" },
+      { "letter": "C", "text": "<pre>CancellationException</pre>" },
+      { "letter": "D", "text": "<pre>TimeoutException</pre> (для версии с лимитом времени)" }
+    ],
+    "correct": {
+      "letter": ["A", "B", "D"],
+      "description": "InterruptedException, ExecutionException и TimeoutException являются проверяемыми. CancellationException является RuntimeException."
+    }
+  },
+  {
+    "idx": 8,
+    "text": "Объект какого типа возвращает метод <pre>Executors.newSingleThreadExecutor()</pre>?",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "<pre>Thread</pre>" },
+      { "letter": "B", "text": "<pre>ExecutorService</pre>" },
+      { "letter": "C", "text": "<pre>FutureTask</pre>" },
+      { "letter": "D", "text": "<pre>Runnable</pre>" }
+    ],
+    "correct": {
+      "letter": ["B"],
+      "description": "Все методы фабрики Executors (кроме callable/threadFactory) возвращают реализации интерфейса ExecutorService."
+    }
+  },
+  {
+    "idx": 9,
+    "text": "Дан код:\n<pre>\nFutureTask&lt;Integer&gt; task = new FutureTask&lt;&gt;(() -> 5);\nThread t = new Thread(task);\nt.start();\n</pre>\nКак получить результат выполнения?",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "Вызвать <pre>t.join()</pre> и взять значение из переменной." },
+      { "letter": "B", "text": "Вызвать <pre>task.get()</pre>." },
+      { "letter": "C", "text": "Результат автоматически вернется в метод start()." }
+    ],
+    "correct": {
+      "letter": ["B"],
+      "description": "FutureTask реализует Future, поэтому для получения результата используется метод get()."
+    }
+  },
+  {
+    "idx": 10,
+    "text": "Что делает метод <pre>shutdown()</pre> у ExecutorService?",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "Немедленно прерывает все работающие потоки." },
+      { "letter": "B", "text": "Запрещает прием новых задач, но позволяет доделать уже принятые." },
+      { "letter": "C", "text": "Очищает очередь задач и останавливает сервис." }
+    ],
+    "correct": {
+      "letter": ["B"],
+      "description": "shutdown() инициирует упорядоченное завершение: новые задачи не принимаются, старые (включая те, что в очереди) довыполняются."
+    }
+  },
+  {
+    "idx": 11,
+    "text": "Выберите верные утверждения о методе <pre>exceptionNow()</pre>:",
+    "select_type": "multiply",
+    "answers": [
+      { "letter": "A", "text": "Выбрасывает IllegalStateException, если задача завершилась успешно." },
+      { "letter": "B", "text": "Является неблокирующим." },
+      { "letter": "C", "text": "Был добавлен в Java 19." },
+      { "letter": "D", "text": "Ожидает завершения задачи, если она еще выполняется." }
+    ],
+    "correct": {
+      "letter": ["A", "B", "C"],
+      "description": "exceptionNow() не ждет выполнения (неблокирующий) и требует, чтобы задача была в состоянии FAILED."
+    }
+  },
+  {
+    "idx": 12,
+    "text": "Какое значение возвращает метод <pre>future.state()</pre>, если задача была отменена?",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "<pre>Future.State.CANCELLED</pre>" },
+      { "letter": "B", "text": "<pre>Future.State.FAILED</pre>" },
+      { "letter": "C", "text": "<pre>Future.State.RUNNING</pre>" },
+      { "letter": "D", "text": "<pre>Future.State.SUCCESS</pre>" }
+    ],
+    "correct": {
+      "letter": ["A"],
+      "description": "Для отмененных задач (через cancel) перечисление Future.State содержит значение CANCELLED."
+    }
+  },
+  {
+    "idx": 13,
+    "text": "Метод <pre>submit(Runnable task, T result)</pre> возвращает Future. Что вернет <pre>Future.get()</pre> после успешного завершения?",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "<pre>null</pre>" },
+      { "letter": "B", "text": "Объект типа Object." },
+      { "letter": "C", "text": "Объект <pre>result</pre>, переданный в метод submit." }
+    ],
+    "correct": {
+      "letter": ["C"],
+      "description": "Данная перегрузка submit позволяет получить заранее определенный результат после успешного завершения Runnable."
+    }
+  },
+  {
+    "idx": 14,
+    "text": "Какое исключение выбросит <pre>invokeAll</pre>, если коллекция задач или одна из задач в ней — <pre>null</pre>?",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "<pre>ExecutionException</pre>" },
+      { "letter": "B", "text": "<pre>NullPointerException</pre>" },
+      { "letter": "C", "text": "<pre>RejectedExecutionException</pre>" }
+    ],
+    "correct": {
+      "letter": ["B"],
+      "description": "Если список задач или любой его элемент равен null, выбрасывается NullPointerException."
+    }
+  },
+  {
+    "idx": 15,
+    "text": "Если вызвать <pre>future.cancel(true)</pre> для работающей задачи, которая игнорирует прерывания, что вернет <pre>future.isCancelled()</pre>?",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "<pre>false</pre>, так как поток не остановился." },
+      { "letter": "B", "text": "<pre>true</pre>, так как статус Future изменился на отмененный." },
+      { "letter": "C", "text": "Зависит от того, успеет ли задача завершиться до проверки." }
+    ],
+    "correct": {
+      "letter": ["B"],
+      "description": "isCancelled() отражает статус объекта Future, а не реальное состояние физического потока."
+    }
+  },
+  {
+    "idx": 16,
+    "text": "Метод <pre>Executors.newWorkStealingPool()</pre> создает пул на основе:",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "<pre>ThreadPoolExecutor</pre>" },
+      { "letter": "B", "text": "<pre>ForkJoinPool</pre>" },
+      { "letter": "C", "text": "<pre>ScheduledThreadPoolExecutor</pre>" }
+    ],
+    "correct": {
+      "letter": ["B"],
+      "description": "WorkStealingPool использует ForkJoinPool, что позволяет потокам 'красть' задачи у других потоков."
+    }
+  },
+  {
+    "idx": 17,
+    "text": "Каков результат вызова <pre>future.get(1, TimeUnit.SECONDS)</pre>, если задача не успела выполниться?",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "Возвращается <pre>null</pre>." },
+      { "letter": "B", "text": "Выбрасывается <pre>TimeoutException</pre>." },
+      { "letter": "C", "text": "Выбрасывается <pre>ExecutionException</pre>." }
+    ],
+    "correct": {
+      "letter": ["B"],
+      "description": "Метод get с таймаутом выбрасывает проверяемое исключение TimeoutException, если лимит времени превышен."
+    }
+  },
+  {
+    "idx": 18,
+    "text": "Можно ли переиспользовать объект <pre>FutureTask</pre> после того, как он один раз выполнился?",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "Да, вызвав метод <pre>run()</pre> снова." },
+      { "letter": "B", "text": "Нет, состояние переходит в финальное и повторный запуск невозможен." },
+      { "letter": "C", "text": "Да, если вызвать метод <pre>reset()</pre>." }
+    ],
+    "correct": {
+      "letter": ["B"],
+      "description": "FutureTask спроектирован как одноразовая задача. После завершения метод run() не будет выполнять вычисления при повторном вызове."
+    }
+  },
+  {
+    "idx": 19,
+    "text": "Какое исключение выбросит <pre>service.submit()</pre>, если вызвать его после <pre>service.shutdown()</pre>?",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "<pre>IllegalStateException</pre>" },
+      { "letter": "B", "text": "<pre>RejectedExecutionException</pre>" },
+      { "letter": "C", "text": "<pre>ExecutionException</pre>" }
+    ],
+    "correct": {
+      "letter": ["B"],
+      "description": "После закрытия сервиса любые попытки добавить задачу приводят к RejectedExecutionException."
+    }
+  },
+  {
+    "idx": 20,
+    "text": "Для чего используется метод <pre>future.state()</pre> в Java 19+?",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "Для изменения приоритета задачи." },
+      { "letter": "B", "text": "Для получения текущего состояния задачи (RUNNING, SUCCESS, FAILED, CANCELLED)." },
+      { "letter": "C", "text": "Для перезапуска задачи в случае ошибки." }
+    ],
+    "correct": {
+      "letter": ["B"],
+      "description": "state() возвращает перечисление Future.State, что позволяет безопасно использовать resultNow() и exceptionNow()."
+    }
+  },
+  {
+    "idx": 21,
+    "text": "Как изменится поведение программы, если заменить <pre>service.execute(runnable)</pre> на <pre>service.submit(runnable)</pre> в контексте обработки исключений?",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "Никак не изменится, исключения всегда выводятся в консоль." },
+      { "letter": "B", "text": "Исключения в <pre>submit</pre> будут игнорироваться, пока не будет вызван метод <pre>get()</pre> у возвращенного Future." },
+      { "letter": "C", "text": "Метод <pre>submit</pre> заставит компилятор требовать блок try-catch вокруг вызова самого метода." },
+      { "letter": "D", "text": "Поток пула немедленно завершится, если задача, переданная через <pre>submit</pre>, выбросит ошибку." }
+    ],
+    "correct": {
+      "letter": ["B"],
+      "description": "В методе execute исключение выбрасывается в стандартный обработчик ошибок потока. В submit исключение инкапсулируется в объект Future и проявляется только при попытке получить результат."
+    }
+  },
+  {
+    "idx": 22,
+    "text": "Какой метод позволяет передать задачу, которая возвращает вычисленное значение типа String?",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "Только <pre>execute(Runnable command)</pre>" },
+      { "letter": "B", "text": "Оба метода: и <pre>execute</pre>, и <pre>submit</pre>." },
+      { "letter": "C", "text": "Только <pre>submit(Callable&lt;T&gt; task)</pre>" },
+      { "letter": "D", "text": "Ни один из них, нужно использовать напрямую класс Thread." }
+    ],
+    "correct": {
+      "letter": ["C"],
+      "description": "Метод execute принимает только Runnable, который возвращает void. Метод submit имеет перегрузку для Callable<T>, что позволяет возвращать результат."
+    }
+  },
+  {
+    "idx": 23,
+    "text": "Что возвращает метод <pre>execute()</pre> интерфейса Executor?",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "Объект типа <pre>Future&lt;?&gt;</pre>" },
+      { "letter": "B", "text": "Логическое значение <pre>boolean</pre> (успешно ли добавлена задача)." },
+      { "letter": "C", "text": "Ссылку на поток (<pre>Thread</pre>), в котором будет запущена задача." },
+      { "letter": "D", "text": "Ничего (<pre>void</pre>)." }
+    ],
+    "correct": {
+      "letter": ["D"],
+      "description": "Метод execute работает по принципу 'выполнил и забыл', поэтому он не возвращает никаких данных вызывающему коду."
+    }
+  },
+  {
+    "idx": 24,
+    "text": "Программист хочет иметь возможность отменить задачу через 5 секунд после её старта. Какой метод ему следует использовать для отправки задачи в ExecutorService?",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "<pre>execute()</pre>" },
+      { "letter": "B", "text": "<pre>submit()</pre>" }
+    ],
+    "correct": {
+      "letter": ["B"],
+      "description": "Для отмены задачи необходим объект Future, который предоставляет метод cancel(). Этот объект возвращается только методом submit()."
+    }
+  },
+  {
+    "idx": 25,
+    "text": "Выберите верные утверждения о методах submit и execute:",
+    "select_type": "multiply",
+    "answers": [
+      { "letter": "A", "text": "Метод <pre>submit</pre> определен в интерфейсе <pre>ExecutorService</pre>." },
+      { "letter": "B", "text": "Метод <pre>execute</pre> определен в базовом интерфейсе <pre>Executor</pre>." },
+      { "letter": "C", "text": "Оба метода позволяют дождаться завершения задачи без использования дополнительных объектов." },
+      { "letter": "D", "text": "Метод <pre>submit</pre> может принимать как Runnable, так и Callable задачи." }
+    ],
+    "correct": {
+      "letter": ["A", "B", "D"],
+      "description": "submit — это расширение функционала ExecutorService. execute — базовый метод Executor. Оба метода асинхронны и не блокируют вызывающий поток сами по себе."
+    }
+  },
+  {
+    "idx": 26,
+    "text": "Рассмотрите следующий код (Java 21):\n\n<pre>\n1:  ExecutorService service = Executors.newFixedThreadPool(2);\n2:  service.submit(() -> { \n3:      try { Thread.sleep(1000); } catch (InterruptedException e) {} \n4:  });\n5:  service.shutdown();\n6:  System.out.print(service.isShutdown() + \" \" + service.isTerminated());\n</pre>\n\nЧто будет выведено на консоль сразу после выполнения строки 6?",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "<pre>false false</pre>" },
+      { "letter": "B", "text": "<pre>true false</pre>" },
+      { "letter": "C", "text": "<pre>true true</pre>" },
+      { "letter": "D", "text": "Будет выброшено исключение в строке 5." }
+    ],
+    "correct": {
+      "letter": ["B"],
+      "description": "Метод shutdown() немедленно переводит экзекутор в состояние 'isShutdown = true', но он не ждет завершения активных задач. Так как задача в строке 2 спит 1 секунду, на момент выполнения строки 6 пул еще не завершил работу (isTerminated = false)."
+    }
+  },
+  {
+    "idx": 27,
+    "text": "Какое утверждение верно описывает поведение метода <pre>close()</pre> в интерфейсе <pre>ExecutorService</pre>, начиная с Java 19?",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "Метод идентичен <pre>shutdownNow()</pre> и немедленно прерывает все задачи." },
+      { "letter": "B", "text": "Метод вызывает <pre>shutdown()</pre> и блокирует текущий поток, ожидая завершения задач." },
+      { "letter": "C", "text": "Метод нельзя вызывать вручную, он предназначен только для JVM." },
+      { "letter": "D", "text": "Метод не закрывает экзекутор, если в очереди остались задачи." }
+    ],
+    "correct": {
+      "letter": ["B"],
+      "description": "Согласно документации Java 19+, close() вызывает shutdown() и затем вызывает awaitTermination() с очень большим таймаутом. Это позволяет использовать экзекутор в блоке try-with-resources, гарантируя ожидание завершения задач."
+    }
+  },
+  {
+    "idx": 28,
+    "text": "Разработчик хочет гарантировать, что новые задачи больше не принимаются, но при этом необходимо дождаться завершения уже отправленных задач. Какие комбинации вызовов или конструкций позволят достичь этого? (Выберите все подходящие варианты)",
+    "select_type": "multiply",
+    "answers": [
+      { "letter": "A", "text": "<pre>service.shutdownNow();</pre>" },
+      { "letter": "B", "text": "<pre>service.shutdown(); service.awaitTermination(1, TimeUnit.MINUTES);</pre>" },
+      { "letter": "C", "text": "Использование <pre>try-with-resources</pre> с <pre>ExecutorService</pre> (для Java 19+)." },
+      { "letter": "D", "text": "Вызов только метода <pre>service.isTerminated();</pre>" }
+    ],
+    "correct": {
+      "letter": ["B", "C"],
+      "description": "shutdown() инициирует закрытие, а awaitTermination() блокирует поток для ожидания. try-with-resources делает то же самое автоматически через вызов close(). shutdownNow() (A) пытается прервать задачи, что противоречит условию 'дождаться завершения'."
+    }
+  }
+
+  
+  
+  
+  
+  
+  
+  
+  
+]
+
+} 
+
+]}
 
 ]
