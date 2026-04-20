@@ -5,12 +5,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && !empty($_POST['content'])) {
     $header = $_POST['header'];
     $header_code = bin2hex(random_bytes(5)); 
     
-    // 1. Убираем лишние пробелы по краям
     $content = trim($_POST['content']);
     
-    // 2. Сжимаем несколько пустых строк (переносов) в одну
-    // Регулярное выражение /[\r\n]{2,}/ заменяет 2 и более символа переноса на один \n
-    $content = preg_replace("/[\r\n]{2,}/", "\n", $content);
+    // 1. Сжимаем последовательности из 3 и более переносов до 2-х.
+    // Это оставит ровно одну пустую строку между текстовыми строками.
+    $content = preg_replace("/(\r?\n){3,}/", "\n\n", $content);
     
     $lines = explode("\n", $content);
 
@@ -28,10 +27,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && !empty($_POST['content'])) {
             $en = trim($parts[0] ?? '');
             $ru = trim($parts[1] ?? '');
             
-            // Сохраняем, если хотя бы одна из колонок не пуста
-            if ($en !== '' || $ru !== '') {
-                $stmtDetail->execute([$text_id, $index, $en, $ru]);
-            }
+            // 2. Убираем условие проверки на пустоту. 
+            // Теперь пустые строки (которые остались после preg_replace) тоже попадут в БД.
+            $stmtDetail->execute([$text_id, $index, $en, $ru]);
         }
 
         $pdo->commit();
