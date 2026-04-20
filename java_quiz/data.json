@@ -14496,7 +14496,315 @@
   
 ]
 
-} 
+}
+,{ "chapter_name":"Stream creation",
+  "questions" : 
+[
+  {
+    "idx": 1,
+    "text": "Какой результат выполнения следующего кода?\n<pre>\nint[] arr = {1, 2, 3};\nStream&lt;int[]&gt; stream = Stream.of(arr);\nSystem.out.println(stream.count());\n</pre>",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "3" },
+      { "letter": "B", "text": "1" },
+      { "letter": "C", "text": "Ошибка компиляции" },
+      { "letter": "D", "text": "Программа выбросит исключение во время выполнения" }
+    ],
+    "correct": {
+      "letter": ["B"],
+      "description": "Метод Stream.of(T t) при передаче массива объектов создает стрим из элементов, но при передаче массива примитивов воспринимает весь массив как один объект типа int[]. Поэтому в стриме будет ровно 1 элемент."
+    }
+  },
+  {
+    "idx": 2,
+    "text": "Выберите все корректные способы создания IntStream из массива <pre>int[] nums = {1, 2, 3};</pre>",
+    "select_type": "multiply",
+    "answers": [
+      { "letter": "A", "text": "<pre>IntStream.of(nums);</pre>" },
+      { "letter": "B", "text": "<pre>Arrays.stream(nums);</pre>" },
+      { "letter": "C", "text": "<pre>Stream.of(nums).mapToInt(i -&gt; i);</pre>" },
+      { "letter": "D", "text": "<pre>IntStream.builder().add(1).add(2).add(3).build();</pre>" }
+    ],
+    "correct": {
+      "letter": ["A", "B", "D"],
+      "description": "Вариант C неверен, так как Stream.of(nums) создаст Stream<int[]>, и попытка вызвать mapToInt на массиве как на Integer приведет к ошибке компиляции."
+    }
+  },
+  {
+    "idx": 3,
+    "text": "Что выведет данный фрагмент кода?\n<pre>\nDoubleStream s = DoubleStream.of(1.0, 2.0, 3.0);\nSystem.out.println(s.mapToInt(x -&gt; (int)x).average().getAsDouble());\n</pre>",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "2.0" },
+      { "letter": "B", "text": "2" },
+      { "letter": "C", "text": "6.0" },
+      { "letter": "D", "text": "Ошибка компиляции" }
+    ],
+    "correct": {
+      "letter": ["A"],
+      "description": "mapToInt преобразует DoubleStream в IntStream. Метод average() у IntStream возвращает OptionalDouble. Среднее значение (1+2+3)/3 = 2.0."
+    }
+  },
+  {
+    "idx": 4,
+    "text": "Какой метод следует использовать для превращения примитивного стрима в объектный?",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "<pre>toObject()</pre>" },
+      { "letter": "B", "text": "<pre>mapToObj()</pre>" },
+      { "letter": "C", "text": "<pre>boxed()</pre>" },
+      { "letter": "D", "text": "<pre>asObjectStream()</pre>" }
+    ],
+    "correct": {
+      "letter": ["C"],
+      "description": "Метод boxed() предназначен для преобразования примитивных стримов (IntStream, LongStream, DoubleStream) в соответствующие стримы оберток (Stream<Integer> и т.д.). mapToObj также возможен, но boxed() — это специализированный метод для этой задачи."
+    }
+  },
+  {
+    "idx": 5,
+    "text": "Дан код:\n<pre>\n10: IntStream is = IntStream.range(1, 5);\n11: long count = is.count();\n12: double avg = is.average().orElse(0.0);\n13: System.out.println(count + \" : \" + avg);\n</pre>\nКаков результат?",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "4 : 2.5" },
+      { "letter": "B", "text": "5 : 3.0" },
+      { "letter": "C", "text": "Ошибка компиляции в строке 10" },
+      { "letter": "D", "text": "Исключение во время выполнения в строке 12" }
+    ],
+    "correct": {
+      "letter": ["D"],
+      "description": "Стримы нельзя использовать повторно. После вызова терминальной операции count() в строке 11, стрим закрывается. Вызов average() в строке 12 приведет к IllegalStateException."
+    }
+  },
+  {
+    "idx": 6,
+    "text": "Чем отличается <pre>IntStream.range(1, 5)</pre> от <pre>IntStream.rangeClosed(1, 5)</pre>?",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "Ничем, это синонимы" },
+      { "letter": "B", "text": "range включает 5, rangeClosed — нет" },
+      { "letter": "C", "text": "range не включает 5, rangeClosed — включает" },
+      { "letter": "D", "text": "rangeClosed работает только с отрицательными числами" }
+    ],
+    "correct": {
+      "letter": ["C"],
+      "description": "range(start, end) создает поток от start до end исключительно. rangeClosed включает конечное значение."
+    }
+  },
+  {
+    "idx": 7,
+    "text": "Какой результат выполнения кода?\n<pre>\nStream&lt;String&gt; s = Stream.iterate(\"\", str -&gt; str + \"1\");\ns.limit(2).forEach(System.out::print);\n</pre>",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "111" },
+      { "letter": "B", "text": "1" },
+      { "letter": "C", "text": "Пустая строка и 1 (вывод: 1)" },
+      { "letter": "D", "text": "Ошибка компиляции" }
+    ],
+    "correct": {
+      "letter": ["C"],
+      "description": "Stream.iterate принимает начальное значение (seed). Первый элемент — \"\", второй — \"\" + \"1\". Метод limit(2) ограничивает поток этими двумя элементами."
+    }
+  },
+  {
+    "idx": 8,
+    "text": "У каких типов стримов есть метод <pre>summaryStatistics()</pre>?",
+    "select_type": "multiply",
+    "answers": [
+      { "letter": "A", "text": "<pre>Stream&lt;T&gt;</pre>" },
+      { "letter": "B", "text": "<pre>IntStream</pre>" },
+      { "letter": "C", "text": "<pre>LongStream</pre>" },
+      { "letter": "D", "text": "<pre>DoubleStream</pre>" }
+    ],
+    "correct": {
+      "letter": ["B", "C", "D"],
+      "description": "Метод summaryStatistics() доступен только в примитивных стримах. Он возвращает объект, содержащий count, sum, min, max и average."
+    }
+  },
+  {
+    "idx": 9,
+    "text": "Что выведет код?\n<pre>\nIntStream.empty().average().ifPresent(System.out::println);\n</pre>",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "0.0" },
+      { "letter": "B", "text": "Ничего не выведет" },
+      { "letter": "C", "text": "NullPointerException" },
+      { "letter": "D", "text": "0" }
+    ],
+    "correct": {
+      "letter": ["B"],
+      "description": "average() для пустого стрима возвращает пустой OptionalDouble. Метод ifPresent выполнит действие только если значение внутри есть."
+    }
+  },
+  {
+    "idx": 10,
+    "text": "Какой из методов создает бесконечный стрим?",
+    "select_type": "multiply",
+    "answers": [
+      { "letter": "A", "text": "<pre>Stream.generate(() -&gt; 1)</pre>" },
+      { "letter": "B", "text": "<pre>Stream.iterate(1, x -&gt; x + 1)</pre>" },
+      { "letter": "C", "text": "<pre>Stream.concat(s1, s2)</pre>" },
+      { "letter": "D", "text": "<pre>IntStream.range(1, 100)</pre>" }
+    ],
+    "correct": {
+      "letter": ["A", "B"],
+      "description": "generate и iterate создают потенциально бесконечные потоки, пока не будет вызван limit или другое условие прерывания."
+    }
+  },
+  {
+    "idx": 11,
+    "text": "Каков результат выполнения кода?\n<pre>\nList&lt;Integer&gt; list = Arrays.asList(1, 2);\nlist.stream().mapToInt(x -&gt; x).sum();\n</pre>",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "3" },
+      { "letter": "B", "text": "Ошибка компиляции" },
+      { "letter": "C", "text": "3.0" },
+      { "letter": "D", "text": "Исключение" }
+    ],
+    "correct": {
+      "letter": ["A"],
+      "description": "Метод mapToInt преобразует Stream<Integer> в IntStream, у которого есть метод sum(). Результат равен 1+2=3."
+    }
+  },
+  {
+    "idx": 12,
+    "text": "Что произойдет при попытке вызвать <pre>Stream.of(null)</pre>?",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "Будет создан пустой стрим" },
+      { "letter": "B", "text": "Будет создан стрим с одним элементом null" },
+      { "letter": "C", "text": "Выбросится NullPointerException" },
+      { "letter": "D", "text": "Ошибка компиляции" }
+    ],
+    "correct": {
+      "letter": ["B"],
+      "description": "Stream.of(T t) допускает null значение и создает стрим, содержащий этот единственный элемент null."
+    }
+  },
+  {
+    "idx": 13,
+    "text": "Какой интерфейс используется в качестве аргумента в <pre>Stream.generate()</pre>?",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "Function" },
+      { "letter": "B", "text": "Predicate" },
+      { "letter": "C", "text": "Supplier" },
+      { "letter": "D", "text": "Consumer" }
+    ],
+    "correct": {
+      "letter": ["C"],
+      "description": "Stream.generate принимает Supplier<T>, так как он не принимает входных данных, а только поставляет (генерирует) новые."
+    }
+  },
+  {
+    "idx": 14,
+    "text": "Как правильно создать стрим из строк файла?",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "<pre>File.getLines()</pre>" },
+      { "letter": "B", "text": "<pre>Files.lines(Path)</pre>" },
+      { "letter": "C", "text": "<pre>Stream.of(File)</pre>" },
+      { "letter": "D", "text": "<pre>new Stream(File)</pre>" }
+    ],
+    "correct": {
+      "letter": ["B"],
+      "description": "Метод Files.lines(Path) возвращает Stream<String>, где каждый элемент — это строка файла."
+    }
+  },
+  {
+    "idx": 15,
+    "text": "Каков результат?\n<pre>\nDoubleStream s = DoubleStream.of(1.2, 2.4);\nSystem.out.println(s.peek(System.out::print).count());\n</pre>",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "1.22.42" },
+      { "letter": "B", "text": "2" },
+      { "letter": "C", "text": "Ничего не выведется" },
+      { "letter": "D", "text": "1.22.4" }
+    ],
+    "correct": {
+      "letter": ["A"],
+      "description": "peek() выполняется для каждого элемента при прохождении. count() — терминальная операция. Выведутся элементы 1.2 и 2.4, а затем результат count(), который равен 2."
+    }
+  },
+  {
+    "idx": 16,
+    "text": "Какой из методов IntStream возвращает OptionalInt?",
+    "select_type": "multiply",
+    "answers": [
+      { "letter": "A", "text": "sum()" },
+      { "letter": "B", "text": "min()" },
+      { "letter": "C", "text": "max()" },
+      { "letter": "D", "text": "findFirst()" }
+    ],
+    "correct": {
+      "letter": ["B", "C", "D"],
+      "description": "sum() всегда возвращает 0 для пустого стрима (тип long/int), а min, max и findFirst возвращают Optional, так как значения может не быть."
+    }
+  },
+  {
+    "idx": 17,
+    "text": "Что делает метод <pre>flatMapToInt</pre> в <pre>Stream&lt;List&lt;Integer&gt;&gt;</pre>?",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "Превращает стрим списков в стрим Integer" },
+      { "letter": "B", "text": "Превращает стрим списков в IntStream примитивов" },
+      { "letter": "C", "text": "Складывает все числа в списках" },
+      { "letter": "D", "text": "Ошибка компиляции" }
+    ],
+    "correct": {
+      "letter": ["B"],
+      "description": "flatMapToInt разворачивает вложенные структуры данных и маппит их в плоский поток примитивов int."
+    }
+  },
+  {
+    "idx": 18,
+    "text": "Можно ли создать параллельный стрим из обычного?",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "Нет, тип стрима определяется при создании" },
+      { "letter": "B", "text": "Да, методом parallel()" },
+      { "letter": "C", "text": "Да, методом toParallel()" },
+      { "letter": "D", "text": "Только для коллекций" }
+    ],
+    "correct": {
+      "letter": ["B"],
+      "description": "Метод parallel() является промежуточной операцией, которая переключает стрим в параллельный режим."
+    }
+  },
+  {
+    "idx": 19,
+    "text": "Что будет выведено?\n<pre>\nIntStream is = IntStream.of(new int[]{1, 2});\nStream&lt;Integer&gt; si = is.mapToObj(x -&gt; x);\nSystem.out.println(si.getClass().getSimpleName());\n</pre>",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "IntStream" },
+      { "letter": "B", "text": "ReferencePipeline" },
+      { "letter": "C", "text": "IntegerStream" },
+      { "letter": "D", "text": "ArrayList" }
+    ],
+    "correct": {
+      "letter": ["B"],
+      "description": "Стримы объектов (Stream<T>) внутри JDK часто реализованы классом ReferencePipeline. Но даже если не знать точно имя класса, mapToObj возвращает объектный стрим."
+    }
+  },
+  {
+    "idx": 20,
+    "text": "Какой из конструкторов позволяет создать пустой примитивный стрим?",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "new IntStream()" },
+      { "letter": "B", "text": "IntStream.empty()" },
+      { "letter": "C", "text": "IntStream.none()" },
+      { "letter": "D", "text": "IntStream.of()" }
+    ],
+    "correct": {
+      "letter": ["B"],
+      "description": "IntStream — это интерфейс, его нельзя создать через new. Статический метод empty() возвращает пустой экземпляр."
+    }
+  }
+]  
+  
+}
+
+
 
 ]}
 
