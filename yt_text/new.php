@@ -3,19 +3,24 @@ require 'db.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && !empty($_POST['content'])) {
     $header = $_POST['header'];
-    $header_code = bin2hex(random_bytes(5)); // Генерируем случайный код для URL
+    $header_code = bin2hex(random_bytes(5)); 
+    
+    // 1. Убираем лишние пробелы по краям
     $content = trim($_POST['content']);
+    
+    // 2. Сжимаем несколько пустых строк (переносов) в одну
+    // Регулярное выражение /[\r\n]{2,}/ заменяет 2 и более символа переноса на один \n
+    $content = preg_replace("/[\r\n]{2,}/", "\n", $content);
+    
     $lines = explode("\n", $content);
 
     try {
         $pdo->beginTransaction();
 
-        // 1. Вставляем заголовок
         $stmt = $pdo->prepare("INSERT INTO text (header, header_code) VALUES (?, ?)");
         $stmt->execute([$header, $header_code]);
         $text_id = $pdo->lastInsertId();
 
-        // 2. Вставляем строки
         $stmtDetail = $pdo->prepare("INSERT INTO text_detail (id, idx, text_row_en, text_row_ru) VALUES (?, ?, ?, ?)");
         
         foreach ($lines as $index => $line) {
@@ -23,7 +28,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && !empty($_POST['content'])) {
             $en = trim($parts[0] ?? '');
             $ru = trim($parts[1] ?? '');
             
-            if ($en || $ru) {
+            // Сохраняем, если хотя бы одна из колонок не пуста
+            if ($en !== '' || $ru !== '') {
                 $stmtDetail->execute([$text_id, $index, $en, $ru]);
             }
         }
