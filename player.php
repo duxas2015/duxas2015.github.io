@@ -20,7 +20,7 @@ header("Pragma: no-cache");
 		<button class="clsButton" id="idRewindUntilNextSub" type="button">R</button>
 		<button class="clsButton" id="idRewind3Second" type="button">3</button>
 		<button class="clsButton" id="idRewind2Second" type="button">2</button>
-		<button class="clsButton" id="idPauseVideo" type="button">P</button>
+		<button class="clsButton" id="idPauseVideo" type="button">P</button>		
 	</div>
 </div>
 
