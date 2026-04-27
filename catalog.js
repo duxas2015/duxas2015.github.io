@@ -29,7 +29,6 @@ const movieCatalog = {
         "en_subtitle_directory": "",
         "ru_subtitle_directory": ""
     },
-	{
     "futurama": {
         "url": "https://api.domem.ws/embed/movie/309",
         "en_subtitle_directory": "./futurama_cc/en/",
@@ -60,7 +59,6 @@ const movieCatalog = {
         "en_subtitle_directory": "",
         "ru_subtitle_directory": ""
     },
-	{
     "southpark": {
         "url": "https://api.domem.ws/embed/movie/3366",
         "en_subtitle_directory": "./southpark_cc/en/",
@@ -96,6 +94,4 @@ const movieCatalog = {
         "en_subtitle_directory": "./firefly_cc/en/",
         "ru_subtitle_directory": ""
     }	
-}
-}
 };
