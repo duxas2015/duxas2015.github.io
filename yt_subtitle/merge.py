@@ -37,8 +37,8 @@ def merge():
         if file_format == "xlsx":
             result.to_excel(output_path, index=False)
         else:
-            # Сохраняем как текст с разделителем табуляцией
-            result.to_csv(output_path, sep='\t', index=False, encoding='utf-16')
+            # Сохраняем как текст с разделителем табуляцией в кодировке UTF-8 с BOM
+            result.to_csv(output_path, sep='\t', index=False, encoding='utf-8-sig')            
         
         # Выводим SUCCESS и имя файла для PHP
         print(f"SUCCESS: {output_filename}")
