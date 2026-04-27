@@ -1,13 +1,13 @@
 <?php
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['files'])) {
-    $uploadDir = "C:\\vhosts\\movie\\yt_subtitle\\downloads\\"; // Укажите ваш путь
+    $uploadDir = "C:\\vhosts\\movie\\yt_subtitle\\downloads\\"; 
     $pythonPath = "C:\\Python313\\python.exe";
     $scriptPath = "C:\\vhosts\\movie\\yt_subtitle\\merge.py";
 
+    $format = $_POST['format'] ?? 'xlsx'; // Получаем формат из радиокнопок
     $files = $_FILES['files'];
     $uploadedPaths = [];
 
-    // 1. Сохраняем загруженные файлы
     if (count($files['name']) >= 2) {
         for ($i = 0; $i < 2; $i++) {
             $tmpPath = $files['tmp_name'][$i];
@@ -22,36 +22,39 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['files'])) {
         $file1 = escapeshellarg($uploadedPaths[0]);
         $file2 = escapeshellarg($uploadedPaths[1]);
         $outDir = escapeshellarg($uploadDir);
+        $argFormat = escapeshellarg($format);
 
-        // 2. Запускаем Python-скрипт
-        $command = "$pythonPath $scriptPath $file1 $file2 $outDir 2>&1";
+        // Передаем 4-й аргумент (формат) в Python
+        $command = "$pythonPath $scriptPath $file1 $file2 $outDir $argFormat 2>&1";
         exec($command, $output, $returnCode);
 
-        // 3. Обрабатываем результат
         $resultLine = end($output);
         if ($returnCode === 0 && strpos($resultLine, "SUCCESS:") !== false) {
             $fileName = trim(str_replace("SUCCESS:", "", $resultLine));
             $fullPath = $uploadDir . $fileName;
 
             if (file_exists($fullPath)) {
-                // Автоматическая выгрузка в браузер
                 header('Content-Description: File Transfer');
-                header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
-                header('Content-Disposition: attachment; filename="merged_data.xlsx"');
+                
+                // Настройка MIME-типа в зависимости от расширения
+                if ($format === 'xlsx') {
+                    header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
+                } else {
+                    header('Content-Type: text/plain');
+                }
+                
+                header('Content-Disposition: attachment; filename="' . $fileName . '"');
                 header('Content-Length: ' . filesize($fullPath));
                 readfile($fullPath);
                 
-                // Удаляем временные файлы
                 unlink($uploadedPaths[0]);
                 unlink($uploadedPaths[1]);
                 unlink($fullPath);
                 exit;
             }
         } else {
-            echo "<h3>Ошибка при слиянии:</h3><pre>" . implode("\n", $output) . "</pre>";
+            echo "<h3>Ошибка:</h3><pre>" . implode("\n", $output) . "</pre>";
         }
-    } else {
-        echo "<h3>Пожалуйста, выберите 2 файла .xlsx</h3>";
     }
 }
 ?>
@@ -60,20 +63,29 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['files'])) {
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Merge Excel Files</title>
+    <title>Merge Files</title>
     <style>
         body { font-family: sans-serif; max-width: 500px; margin: 50px auto; border: 1px solid #ccc; padding: 20px; border-radius: 10px; }
-        input, button { width: 100%; margin: 10px 0; padding: 10px; }
-        button { background-color: #007bff; color: white; border: none; cursor: pointer; }
+        input[type="file"], button { width: 100%; margin: 10px 0; padding: 10px; }
+        button { background-color: #28a745; color: white; border: none; cursor: pointer; font-weight: bold; }
+        .radio-group { margin: 15px 0; border: 1px dashed #bbb; padding: 10px; }
     </style>
 </head>
 <body>
-    <h2>Слияние двух Excel файлов</h2>
+    <h2>Слияние файлов</h2>
     <form method="POST" enctype="multipart/form-data">
-        <label>Выберите два файла .xlsx одновременно:</label>
+        <label>Выберите два файла .xlsx:</label>
         <input type="file" name="files[]" multiple accept=".xlsx" required>
+        
+        <div class="radio-group">
+            <label>Формат результата:</label><br>
+            <input type="radio" name="format" value="xlsx" id="f_xlsx" checked>
+            <label for="f_xlsx">Excel (.xlsx)</label><br>
+            <input type="radio" name="format" value="txt" id="f_txt">
+            <label for="f_txt">Текст (Tab-separated .txt)</label>
+        </div>
+
         <button type="submit">Объединить и скачать</button>
     </form>
-    <p style="font-size: 0.8em; color: #666;">* Выберите два файла в окне выбора, зажав Ctrl или Shift.</p>
 </body>
 </html>
