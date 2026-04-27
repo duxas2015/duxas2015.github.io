@@ -1,0 +1,709 @@
+[
+  {
+    "idx": 1,
+    "text": "Which of the following Java operators can be used with boolean variables? (Choose all that apply)",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "=="
+      },
+      {
+        "letter": "B",
+        "text": "+"
+      },
+      {
+        "letter": "C",
+        "text": "--"
+      },
+      {
+        "letter": "D",
+        "text": "!"
+      },
+      {
+        "letter": "E",
+        "text": "%"
+      },
+      {
+        "letter": "F",
+        "text": "<="
+      }
+    ],
+    "correct": {
+      "letter": [
+        "A",
+        "D"
+      ],
+      "description": "Option A is the equality operator and can be used on numeric primitives, boolean values, and object references. Options B and C are both arithmetic operators and cannot be applied to a boolean value. Option D is the logical complement operator and is used exclusively with boolean values. Option E is the modulus operator, which can only be used with numeric primitives. Finally, option F is a relational operator that compares the values of two numbers."
+    }
+  },
+  {
+    "idx": 2,
+    "text": "What data type (or types) will allow the following code snippet to compile? (Choose all that apply)\n<pre>\nbyte x = 5;\nbyte y = 10;\n_____ z = x + y;\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "int"
+      },
+      {
+        "letter": "B",
+        "text": "long"
+      },
+      {
+        "letter": "C",
+        "text": "boolean"
+      },
+      {
+        "letter": "D",
+        "text": "double"
+      },
+      {
+        "letter": "E",
+        "text": "short"
+      },
+      {
+        "letter": "F",
+        "text": "byte"
+      }
+    ],
+    "correct": {
+      "letter": [
+        "A",
+        "B",
+        "D"
+      ],
+      "description": "The value x + y is automatically promoted to int, so int and data types that can be promoted automatically from int will work. Options A, B, D are such data types. Option C will not work because boolean is not a numeric data type. Options E and F will not work without an explicit cast to a smaller data type."
+    }
+  },
+  {
+    "idx": 3,
+    "text": "What is the output of the following application?\n<pre>\n1: public class CompareValues {\n2:   public static void main(String[] args) {\n3:     int x = 0;\n4:     while(x++ < 10) {}\n5:     String message = x > 10 ? \"Greater than\" : false;\n6:     System.out.println(message+\",\"+x);\n7:   }\n8: }\n</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Greater than,10"
+      },
+      {
+        "letter": "B",
+        "text": "false,10"
+      },
+      {
+        "letter": "C",
+        "text": "Greater than,11"
+      },
+      {
+        "letter": "D",
+        "text": "false,11"
+      },
+      {
+        "letter": "E",
+        "text": "The code will not compile because of line 4."
+      },
+      {
+        "letter": "F",
+        "text": "The code will not compile because of line 5."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "F"
+      ],
+      "description": "In this example, the ternary operator has two expressions, one of them a String and the other a boolean value. The ternary operator is permitted to have expressions that don’t have matching types, but the key here is the assignment to the String reference. The compiler knows how to assign the first expression value as a String, but the second boolean expression cannot be set as a String; therefore, this line will not compile."
+    }
+  },
+  {
+    "idx": 4,
+    "text": "What change would allow the following code snippet to compile? (Choose all that apply)\n<pre>\n3: long x = 10;\n4: int y = 2 * x;\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "No change; it compiles as is."
+      },
+      {
+        "letter": "B",
+        "text": "Cast x on line 4 to int."
+      },
+      {
+        "letter": "C",
+        "text": "Change the data type of x on line 3 to short."
+      },
+      {
+        "letter": "D",
+        "text": "Cast 2 * x on line 4 to int."
+      },
+      {
+        "letter": "E",
+        "text": "Change the data type of y on line 4 to long."
+      },
+      {
+        "letter": "F",
+        "text": "None of the above will allow the code to compile."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "B",
+        "C",
+        "D",
+        "F"
+      ],
+      "description": "The code will not compile as is, so option A is not correct. The value 2 * x is automatically promoted to long and cannot be automatically stored in y, which is in an int value. Options B, C, and D solve this problem by reducing the long value to a smaller data type."
+    }
+  },
+  {
+    "idx": 5,
+    "text": "What is the output of the following code snippet?\n<pre>\n3: java.util.List&lt;Integer&gt; list = new java.util.ArrayList&lt;&gt;();\n4: list.add(10);\n5: list.add(14);\n6: for(int x : list) {\n7:   System.out.print(x + \", \");\n8:   break;\n9: }\n</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "10,"
+      },
+      {
+        "letter": "B",
+        "text": "10, 14,"
+      },
+      {
+        "letter": "C",
+        "text": "14,"
+      },
+      {
+        "letter": "D",
+        "text": "The code will not compile because of line 8."
+      },
+      {
+        "letter": "E",
+        "text": "The code will not compile because of line 6."
+      },
+      {
+        "letter": "F",
+        "text": "The code contains an infinite loop and does not terminate."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "C"
+      ],
+      "description": "The code compiles and runs without issue. The post-increment operator (++) on line 4 returns the current value and then increments it, but the result is not assigned. On line 5, the pre-increment operator increments the value first and then returns it. The same logic applies to the decrement operators."
+    }
+  },
+  {
+    "idx": 6,
+    "text": "What is the output of the following code snippet?\n<pre>\n3: int x = 4;\n4: long y = x * 4 - x++;\n5: if(y &lt; 10) System.out.print(\"Too Low\");\n6: else System.out.print(\"Just Right\");\n7: else System.out.print(\"Too High\");\n</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Too Low"
+      },
+      {
+        "letter": "B",
+        "text": "Just Right"
+      },
+      {
+        "letter": "C",
+        "text": "Too High"
+      },
+      {
+        "letter": "D",
+        "text": "The code will not compile because of line 6."
+      },
+      {
+        "letter": "E",
+        "text": "The code will not compile because of line 7."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "F"
+      ],
+      "description": "The expression in the if statement must be a boolean. In this case, it is an assignment (x = 5), which returns the value 5 (an int). This causes a compilation error because an int cannot be converted to a boolean."
+    }
+  },
+  {
+    "idx": 7,
+    "text": "What is the output of the following code?\n<pre>\n1: public class TernaryTester {\n2:   public static void main(String[] args) {\n3:     int x = 5;\n4:     System.out.println(x &gt; 2 ? x &lt; 4 ? 10 : 8 : 7);\n5:   } }\n</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "5"
+      },
+      {
+        "letter": "B",
+        "text": "7"
+      },
+      {
+        "letter": "C",
+        "text": "8"
+      },
+      {
+        "letter": "D",
+        "text": "10"
+      },
+      {
+        "letter": "E",
+        "text": "The code will not compile because of line 4."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "D"
+      ],
+      "description": "The code uses the short-circuiting OR operator (||). Since the first expression (x > 2) is true, the second expression (y++ < 10) is never evaluated. Therefore, y remains 10."
+    }
+  },
+  {
+    "idx": 8,
+    "text": "What is the output of the following code snippet?\n<pre>\n3: boolean x = true, z = true;\n4: int y = 20;\n5: x = (y != 10) ^ (z=false);\n6: System.out.println(x+\", \"+y+\", \"+z);\n</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "true, 10, true"
+      },
+      {
+        "letter": "B",
+        "text": "true, 20, false"
+      },
+      {
+        "letter": "C",
+        "text": "false, 20, true"
+      },
+      {
+        "letter": "D",
+        "text": "false, 20, false"
+      },
+      {
+        "letter": "E",
+        "text": "false, 10, true"
+      },
+      {
+        "letter": "F",
+        "text": "The code will not compile because of line 5."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "B",
+        "D",
+        "E"
+      ],
+      "description": "A switch statement can accept primitive types like byte, short, char, and int, as well as their wrapper classes and Enums or Strings. It cannot accept long, float, double, or boolean."
+    }
+  },
+  {
+    "idx": 9,
+    "text": "How many times will the following code print \"Hello World\"?\n<pre>\n3: for(int i=0; i&lt;10; )\n4:   i = i++;\n5:   System.out.println(\"Hello World\");\n</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "9"
+      },
+      {
+        "letter": "B",
+        "text": "10"
+      },
+      {
+        "letter": "C",
+        "text": "11"
+      },
+      {
+        "letter": "D",
+        "text": "The code will not compile because of line 3."
+      },
+      {
+        "letter": "E",
+        "text": "The code contains an infinite loop and does not terminate."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "F"
+      ],
+      "description": "The loop will run indefinitely because the termination condition (i < 10) is never met. The variable i is decremented in each iteration."
+    }
+  },
+  {
+    "idx": 10,
+    "text": "What is the output of the following code?\n<pre>\n3: byte a = 40, b = 50;\n4: byte sum = (byte) a + b;\n5: System.out.println(sum);\n</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "40"
+      },
+      {
+        "letter": "B",
+        "text": "50"
+      },
+      {
+        "letter": "C",
+        "text": "90"
+      },
+      {
+        "letter": "D",
+        "text": "The code will not compile because of line 4."
+      },
+      {
+        "letter": "E",
+        "text": "An undefined value."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "A"
+      ],
+      "description": "The break statement exits the loop, and the program continues with the next statement after the loop. The continue statement stops the current iteration and goes to the next one."
+    }
+  },
+  {
+    "idx": 11,
+    "text": "What is the output of the following code?\n<pre>\n1: public class ArithmeticSample {\n2:   public static void main(String[] args) {\n3:     int x = 5 * 4 % 3;\n4:     System.out.println(x);\n5:   } }\n</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "0"
+      },
+      {
+        "letter": "B",
+        "text": "1"
+      },
+      {
+        "letter": "C",
+        "text": "2"
+      },
+      {
+        "letter": "D",
+        "text": "3"
+      },
+      {
+        "letter": "E",
+        "text": "5"
+      },
+      {
+        "letter": "F",
+        "text": "The code will not compile because of line 3."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "A",
+        "B",
+        "C"
+      ],
+      "description": "For a while loop, the condition is checked before the body is executed. For a do-while loop, the body is executed at least once before the condition is checked."
+    }
+  },
+  {
+    "idx": 12,
+    "text": "What is the output of the following code snippet?\n<pre>\n3: int x = 0;\n4: String s = null;\n5: if(x == s) System.out.println(\"Success\");\n6: else System.out.println(\"Failure\");\n</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Success"
+      },
+      {
+        "letter": "B",
+        "text": "Failure"
+      },
+      {
+        "letter": "C",
+        "text": "The code will not compile because of line 5."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "D"
+      ],
+      "description": "The nested loops iterate through the rows and columns. The if statement with the continue label affects the outer loop based on the values of row and col."
+    }
+  },
+  {
+    "idx": 13,
+    "text": "What is the output of the following code snippet?\n<pre>\n3: int x1 = 50, x2 = 75;\n4: boolean b = x1 &gt;= x2;\n5: if(b = true) System.out.println(\"Success\");\n6: else System.out.println(\"Failure\");\n</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Success"
+      },
+      {
+        "letter": "B",
+        "text": "Failure"
+      },
+      {
+        "letter": "C",
+        "text": "The code will not compile because of line 4."
+      },
+      {
+        "letter": "D",
+        "text": "The code will not compile because of line 5."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "A",
+        "D"
+      ],
+      "description": "These are the correct results for the given bitwise operations. Bitwise operators work on the individual bits of the integer values."
+    }
+  },
+  {
+    "idx": 14,
+    "text": "What is the output of the following code snippet?\n<pre>\n3: int c = 7;\n4: int result = 4;\n5: result += ++c * 5 / c-- + c;\n6: System.out.println(\"c = \" + c);\n7: System.out.println(\"result = \" + result);\n</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "c = 6\nresult = 16"
+      },
+      {
+        "letter": "B",
+        "text": "c = 7\nresult = 16"
+      },
+      {
+        "letter": "C",
+        "text": "c = 7\nresult = 17"
+      },
+      {
+        "letter": "D",
+        "text": "c = 8\nresult = 17"
+      },
+      {
+        "letter": "E",
+        "text": "c = 8\nresult = 18"
+      },
+      {
+        "letter": "F",
+        "text": "The code will not compile because of line 5."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "C"
+      ],
+      "description": "The code uses a label with a break statement to exit multiple levels of nested loops at once. This is a valid Java construct."
+    }
+  },
+  {
+    "idx": 15,
+    "text": "What is the output of the following code snippet?\n<pre>\n3: int x = 1, y = 15;\n4: while x &lt; 10\n5:   y--;\n6:   x++;\n7: System.out.println(x+\", \"+y);\n</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "10, 5"
+      },
+      {
+        "letter": "B",
+        "text": "10, 6"
+      },
+      {
+        "letter": "C",
+        "text": "11, 5"
+      },
+      {
+        "letter": "D",
+        "text": "The code will not compile because of line 4."
+      },
+      {
+        "letter": "E",
+        "text": "The code will not compile because of line 6."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "E"
+      ],
+      "description": "The code fails to compile because the variable declared in the for-each loop is already declared in the same scope."
+    }
+  },
+  {
+    "idx": 16,
+    "text": "What is the output of the following code snippet?\n<pre>\n3: do {\n4:   int y = 1;\n5:   System.out.print(y++ + \" \");\n6: } while(y &lt;= 10);\n</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "1 2 3 4 5 6 7 8 9 10"
+      },
+      {
+        "letter": "B",
+        "text": "1 2 3 4 5 6 7 8 9"
+      },
+      {
+        "letter": "C",
+        "text": "1 2 3 4 5 6 7 8 9 10 11"
+      },
+      {
+        "letter": "D",
+        "text": "The code will not compile because of line 6."
+      },
+      {
+        "letter": "E",
+        "text": "The code contains an infinite loop and does not terminate."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "C"
+      ],
+      "description": "The cast (byte) is required because adding two bytes results in an int. Without the cast, the code will not compile."
+    }
+  },
+  {
+    "idx": 17,
+    "text": "What is the output of the following code snippet?\n<pre>\n3: boolean keepGoing = true;\n4: int result = 15, i = 10;\n5: do {\n6:   i--;\n7:   if(i==8) keepGoing = false;\n8:   result -= 2;\n9: } while(keepGoing);\n10: System.out.println(result);\n</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "7"
+      },
+      {
+        "letter": "B",
+        "text": "9"
+      },
+      {
+        "letter": "C",
+        "text": "10"
+      },
+      {
+        "letter": "D",
+        "text": "11"
+      },
+      {
+        "letter": "E",
+        "text": "15"
+      },
+      {
+        "letter": "F",
+        "text": "The code will not compile because of line 8."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "D"
+      ],
+      "description": "The logical XOR operator (^) returns true only if exactly one of the operands is true. If both are true or both are false, it returns false."
+    }
+  },
+  {
+    "idx": 18,
+    "text": "What is the output of the following code snippet?\n<pre>\n3: int count = 0;\n4: ROW_LOOP: for(int row = 1; row &lt;=3; row++)\n5:   for(int col = 1; col &lt;=2 ; col++) {\n6:     if(row * col % 2 == 0) continue ROW_LOOP;\n7:     count++;\n8:   }\n9: System.out.println(count);\n</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "1"
+      },
+      {
+        "letter": "B",
+        "text": "2"
+      },
+      {
+        "letter": "C",
+        "text": "3"
+      },
+      {
+        "letter": "D",
+        "text": "4"
+      },
+      {
+        "letter": "E",
+        "text": "6"
+      },
+      {
+        "letter": "F",
+        "text": "The code will not compile because of line 6."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "B"
+      ],
+      "description": "On the third iteration, row = 2 and col = 2, so the expression on line 6 is true and the continue ends the outer loop with count still at 1. On the fourth iteration, row = 3 and col = 1, so the expression on line 6 is false, the continue is skipped, and count is incremented to 2. Finally, on the fifth and final iteration, row = 3 and col = 2, so the expression on line 6 is true and the continue ends the outer loop with count still at 2. The result of 2 is displayed, so the answer is option B."
+    }
+  },
+  {
+    "idx": 19,
+    "text": "What is the result of the following code snippet?\n<pre>\n3: int m = 9, n = 1, x = 0;\n4: while(m &gt; n) {\n5:   m--;\n6:   n += 2;\n7:   x += m + n;\n8: }\n9: System.out.println(x);\n</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "11"
+      },
+      {
+        "letter": "B",
+        "text": "13"
+      },
+      {
+        "letter": "C",
+        "text": "23"
+      },
+      {
+        "letter": "D",
+        "text": "36"
+      },
+      {
+        "letter": "E",
+        "text": "50"
+      },
+      {
+        "letter": "F",
+        "text": "The code will not compile because of line 7."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "D"
+      ],
+      "description": "Prior to the first iteration, m = 9, n = 1, and x = 0. After the iteration of the first loop, m is updated to 8, n to 3, and x to the sum of the new values for m + n, 0 + 11 = 11. After the iteration of the second loop, m is updated to 7, n to 5, and x to the sum of the new values for m + n, 11 + 12 = 23. After the iteration of the third loop, m is updated to 6, n to 7, and x to the sum of the new values for m + n, 23 + 13 = 36. On the fourth iteration of the loop, m > n evaluates to false, as 6 < 7 is not true. The loop ends and the most recent value of x, 36, is output, so the correct answer is option D."
+    }
+  },
+  {
+    "idx": 20,
+    "text": "What is the result of the following code snippet?\n<pre>\n3: final char a = 'A', d = 'D';\n4: char grade = 'B';\n5: switch(grade) {\n6:   case a:\n7:   case 'B': System.out.print(\"great \");\n8:   case 'C': System.out.print(\"good \"); break;\n9:   case d: \n10:  case 'F': System.out.print(\"not good \");\n11: }\n</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "great"
+      },
+      {
+        "letter": "B",
+        "text": "great good"
+      },
+      {
+        "letter": "C",
+        "text": "good"
+      },
+      {
+        "letter": "D",
+        "text": "not good"
+      },
+      {
+        "letter": "E",
+        "text": "The code will not compile because of line 3."
+      },
+      {
+        "letter": "F",
+        "text": "The code will not compile because of line 6."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "B"
+      ],
+      "description": "The code compiles and runs without issue. The value of the expression is calculated correctly using the rules of operator precedence (multiplication/division before addition/subtraction)."
+    }
+  }
+]

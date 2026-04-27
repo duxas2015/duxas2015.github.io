@@ -1,0 +1,142 @@
+[
+  {
+    "idx": 1,
+    "correct": {
+      "letter": ["F"],
+      "description": "The code snippet will not compile due to a bug on the first and second lines. The first line should use Paths.get(), because there is no method Path.get(). The second line passes a String to relativize() instead of a Path object. If both lines were corrected to use Paths.get(), then the correct answer would be A. Remember that the normalize() method, like most methods in the Path interface, does not modify the Path object, but instead it returns a new Path object. If it was corrected to reassign the new value to the existing path variable, then E would be correct."
+    }
+  },
+  {
+    "idx": 2,
+    "correct": {
+      "letter": ["B", "C"],
+      "description": "The code snippet compiles without issue, so F is incorrect. If the value refers to a regular file, isDirectory() will return false and the statement will be skipped, so A is incorrect. Likewise, if the directory does not exist, the method also returns false, so E is also incorrect. A symbolic link can point to a real directory, and by default isDirectory() follows links, so B is possible. In this case, the symbolic link, not the directory, would be deleted. C is also possible and is the simple case of deleting an empty directory. D would allow the code to reach the execution block of the if/then statement, but the method deleteIfExists() would throw a DirectoryNotEmptyException if it had contents."
+    }
+  },
+  {
+    "idx": 3,
+    "correct": {
+      "letter": ["D"],
+      "description": "The setTimes() method is available only on BasicFileAttributeView, not the readonly BasicFileAttributes class, so line 4 will not compile and D is correct. You need to retrieve an instance of BasicFileAttributeView from the Files class."
+    }
+  },
+  {
+    "idx": 4,
+    "correct": {
+      "letter": ["C"],
+      "description": "The relativize() method requires both paths to be either relative or absolute. In this case, one is relative and one is absolute, so the method throws an IllegalArgumentException at runtime. For this reason, C is correct and A and B are incorrect. D, E, and F are also incorrect because the code compiles without issue."
+    }
+  },
+  {
+    "idx": 5,
+    "correct": {
+      "letter": ["B", "C", "D"],
+      "description": "StandardCopyOption.REPLACE_EXISTING is a valid copy option, so B is correct. StandardCopyOption.COPY_ATTRIBUTES is also a valid copy option, so C is correct. Note that ATOMIC_MOVE is not a valid copy option, although it is a valid move option. LinkOption.NOFOLLOW_LINKS is a valid option for copying, so D is correct. StandardOpenOption.READ is not a valid option for copying, so A is incorrect. Finally, E is incorrect because FileVisitOption is used only when walking a directory tree."
+    }
+  },
+  {
+    "idx": 6,
+    "correct": {
+      "letter": ["A", "C"],
+      "description": "The resolve() method creates a new path by joining the current path with the provided path. The resolve() method does not normalize the result, so A is correct and B is incorrect. The relativize() method creates a path from the first path to the second path, which in this case is up one level and then into the sibling directory. Therefore, C is correct and D is incorrect. Finally, the code compiles and runs without issue, so E and F are incorrect."
+    }
+  },
+  {
+    "idx": 7,
+    "correct": {
+      "letter": ["A", "B", "D"],
+      "description": "The BasicFileAttributes class has three time methods: creationTime(), lastModifiedTime(), and lastAccessTime(). Therefore, A, B, and D are correct. E is incorrect because size() is a method, not a time method. C and F are incorrect because these methods are not defined in the BasicFileAttributes class."
+    }
+  },
+  {
+    "idx": 8,
+    "correct": {
+      "letter": ["C"],
+      "description": "The getName(0) method returns the first element in the path, so in this case, it is / (the root). Therefore, C is correct and A and B are incorrect. D, E, and F are also incorrect because the code compiles without issue."
+    }
+  },
+  {
+    "idx": 9,
+    "correct": {
+      "letter": ["C"],
+      "description": "Path.getNameCount() returns the number of elements in the path, not including the root. For an absolute path of the root directory, the name count is 0; therefore, C is correct. The rest of the answers are incorrect."
+    }
+  },
+  {
+    "idx": 10,
+    "correct": {
+      "letter": ["A"],
+      "description": "By default, move() does not follow symbolic links, it moves the link itself. Therefore A is correct and the rest of the answers are incorrect."
+    }
+  },
+  {
+    "idx": 11,
+    "correct": {
+      "letter": ["E"],
+      "description": "Files.find() requires a Path, an int (depth), and a BiPredicate. Therefore, the code compiles without issue, so G is incorrect. The find() method will find both regular files and directories, so the count is 2 and E is correct. A, B, C, D, and F are all incorrect."
+    }
+  },
+  {
+    "idx": 12,
+    "correct": {
+      "letter": ["A", "D"],
+      "description": "Option A is correct because the resolve() method with an absolute path as a parameter will return the absolute path. Option D is also correct because the relativize() method with the same path will return an empty path. The other options are either incorrect or do not result in the same path."
+    }
+  },
+  {
+    "idx": 13,
+    "correct": {
+      "letter": ["B", "D"],
+      "description": "Both paths refer to the same file in the file system, but they are not the same path object; therefore B is correct and A and C are incorrect. Option D is also correct since isSameFile() resolves the path within the file system and will return true. E and F are incorrect since the code compiles and runs without issue."
+    }
+  },
+  {
+    "idx": 14,
+    "correct": {
+      "letter": ["B", "D", "E"],
+      "description": "Options B, D, and E are all valid ways to create a Path object. Option A is incorrect because there is no Path() constructor. Option C is incorrect because File.toPath() is the correct way to convert a File to a Path. Option F is incorrect because Paths.get() is the correct way to create a Path from a String."
+    }
+  },
+  {
+    "idx": 15,
+    "correct": {
+      "letter": ["A", "D"],
+      "description": "Files.lines() returns a Stream<String>, so it may be used to read a large file without loading the entire thing into memory at once, so A is correct. Option D is also correct because it automatically handles closing the file resource when the stream is closed."
+    }
+  },
+  {
+    "idx": 16,
+    "correct": {
+      "letter": ["B", "C", "D", "F"],
+      "description": "The code compiles without issue, so G is incorrect. The walk() method will find all files and directories, including the starting directory. In this case, it will find four directories and two files, for a total of 6. Therefore, B, C, D, and F are correct. Since the program has access to read it, A and E are incorrect."
+    }
+  },
+  {
+    "idx": 17,
+    "correct": {
+      "letter": ["A", "G"],
+      "description": "The code compiles without issue, so B, C, and D are incorrect. The first line actually resolves to the root path since .. and getParent()are conceptually equivalent. Therefore, G is correct and E and F are incorrect. A is also correct since it may encounter a file that it does not have access to read, which is common when trying to read an entire file system."
+    }
+  },
+  {
+    "idx": 18,
+    "correct": {
+      "letter": ["D"],
+      "description": "The code compiles and runs without issue, so F is incorrect. The one thing to notice about these paths is that they represent the same path within the file system. Therefore, isSameFile() would return true and B and C are incorrect. The second output is false, because Path.equals() does not resolve the path within the file system, so A is incorrect. Finally, the normalized paths are equals(), since all extra symbols have been removed; therefore D is correct and E is incorrect."
+    }
+  },
+  {
+    "idx": 19,
+    "correct": {
+      "letter": ["A", "C", "E"],
+      "description": "While all of the answers are applicable to the NIO.2, only A, C, and E are options that are not supported by the legacy java.io.File class and therefore give NIO.2 an advantage over java.io.File."
+    }
+  },
+  {
+    "idx": 20,
+    "correct": {
+      "letter": ["B"],
+      "description": "The normalize() method does not convert a relative path into an absolute path; therefore, the path value after the first line is just the current directory symbol. The for() loop iterates the name values, but since there is only one entry, the loop terminates after a single iteration. Therefore, B is correct and the rest of the answers are incorrect."
+    }
+  }
+]

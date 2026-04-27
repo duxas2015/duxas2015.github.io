@@ -1,0 +1,156 @@
+[
+  {
+    "idx": 1,
+    "correct": {
+      "letter": ["D", "F"],
+      "description": "There is no such class as ParallelStream, so A and E are incorrect[cite: 162]. The method defined in the Stream class to create a parallel stream from an existing stream is parallel(); therefore F is correct and C is incorrect[cite: 163, 164]. The method defined in the Collection class to create a parallel stream from a collection is parallelStream(); therefore D is correct and B is incorrect[cite: 164, 165]."
+    }
+  },
+  {
+    "idx": 2,
+    "correct": {
+      "letter": ["A", "C", "D", "F"],
+      "description": "Runnable and Callable statements both take no method arguments as input, so B is incorrect[cite: 166]. Runnable returns void and Callable returns a generic type, so F is correct, and E and G are incorrect[cite: 166]. All methods are capable of throwing unchecked exceptions, so A is correct[cite: 167]. Only Callable is capable of throwing checked exceptions, so C is correct[cite: 168]. Both Runnable and Callable can be implemented with lambda expressions, so D is correct[cite: 169]."
+    }
+  },
+  {
+    "idx": 3,
+    "correct": {
+      "letter": ["B", "C"],
+      "description": "The code does not compile, so A and F are incorrect[cite: 170]. The first problem is that although a ScheduledExecutorService is created, it is assigned to an ExecutorService[cite: 171]. Since scheduleWithFixedDelay() does not exist in ExecutorService, line w1 will not compile, and B is correct[cite: 172]. The second problem is that scheduleWithFixedDelay() supports only Runnable, not Callable, and any attempt to return a value is invalid in a Runnable lambda expression; therefore line w2 will also not compile and C is correct[cite: 173, 174]. The rest of the lines compile without issue, so D and E are incorrect[cite: 175]."
+    }
+  },
+  {
+    "idx": 4,
+    "correct": {
+      "letter": ["C"],
+      "description": "The code compiles and runs without throwing an exception or entering an infinite loop, so D, E, and F are incorrect[cite: 176]. The key here is that the increment operator ++ is not atomic[cite: 177]. While the first part of the output will always be 100, the second part is nondeterministic[cite: 178]. It could output any value from 1 to 100, because the threads can overwrite each other’s work[cite: 179]. Therefore, C is the correct answer and A and B are incorrect[cite: 180]."
+    }
+  },
+  {
+    "idx": 5,
+    "correct": {
+      "letter": ["D"],
+      "description": "Livelock occurs when two or more threads are conceptually blocked forever, although they are each still active and trying to complete their task[cite: 181]. A race condition is an undesirable result that occurs when two tasks are completed at the same time, which should have been completed sequentially[cite: 182]. For these reasons, D is the only correct answer[cite: 183]."
+    }
+  },
+  {
+    "idx": 6,
+    "correct": {
+      "letter": ["B"],
+      "description": "If a task is submitted to a thread executor, and the thread executor does not have any available threads, the call to the task will return immediately with the task being queued internally by the thread executor[cite: 184]. For this reason, B is the only correct answer[cite: 184]."
+    }
+  },
+  {
+    "idx": 7,
+    "correct": {
+      "letter": ["A"],
+      "description": "The code compiles without issue, so D is incorrect[cite: 185]. The CopyOnWriteArrayList class is designed to preserve the original list on iteration, so the first loop will be executed exactly three times and E is incorrect[cite: 185]. The ConcurrentSkipListSet class allows modifications while iterating, so it is possible that the second loop could generate an infinite loop[cite: 186]. In this case, though, the second loop executes exactly four times, since elements in a set are unique and 5 can be added only once[cite: 187]. For these reasons, F and G are also incorrect[cite: 188]. Finally, despite using the elements of l1 to populate the collections, l2 and s3 are not backed by the original list, so the size of l1 is 3. Likewise, the size of l2 is 6 and the size of s3 is 4, so A is the correct answer[cite: 188]."
+    }
+  },
+  {
+    "idx": 8,
+    "correct": {
+      "letter": ["G"],
+      "description": "The code compiles and runs without issue, so C, D, E, F, and H are incorrect[cite: 189]. There are two important things to notice: first, synchronizing on the first output doesn’t actually impact the results of the code[cite: 190]. Second, sorting on a parallel stream does not mean that findAny() will return the first record[cite: 191]. The findAny() method will return the value from the first thread that retrieves a record[cite: 192]. Therefore, the output is not guaranteed for either serial or parallel stream[cite: 193]. Since the results cannot be predicted ahead of time, G is the correct answer[cite: 194]."
+    }
+  },
+  {
+    "idx": 9,
+    "correct": {
+      "letter": ["A", "C", "E"],
+      "description": "The code compiles without issue, so F is incorrect[cite: 195]. Note that the compute() method is protected in the parent class, although you can override it with public without issue since this is a more accessible modifier[cite: 196]. Since compute() returns a value, RecursiveTask must be inherited instead of RecursiveAction, so C is correct and B is incorrect[cite: 197]. The code does correctly find the minimum value on a non-empty array without entering an infinite loop, so A is correct and D is incorrect[cite: 198]. Finally, since the code calls join() immediately after fork(), causing the process to wait, it does not perform any faster if there are 100 threads versus 1 thread, so E is also correct[cite: 199]."
+    }
+  },
+  {
+    "idx": 10,
+    "correct": {
+      "letter": ["C"],
+      "description": "The code does not compile, so A and E are incorrect[cite: 200]. The problem here is that c1 is a String but c2 is an int, so the code fails to combine on line q2, since calling length() on an int is not allowed, and C is correct[cite: 201]. The rest of the lines compile without issue. Note that calling parallel() on an already parallel is allowed, and it may in fact return the same object[cite: 202]."
+    }
+  },
+  {
+    "idx": 11,
+    "correct": {
+      "letter": ["A", "F"],
+      "description": "The code compiles without issue, so D and E are incorrect[cite: 203]. Since both tasks are submitted to the same thread executor pool, the order cannot be determined, so B and C are incorrect and A is correct[cite: 204]. The key here is that the way the resources o1 and o2 are synchronized, a deadlock could appear if the first thread gets o1 and the second thread gets o2; therefore F is correct[cite: 205, 206]. The code cannot produce a livelock, since both threads are waiting, so G is incorrect[cite: 206]. Finally, if a deadlock does occur, an exception will not be thrown, so H is incorrect[cite: 207]."
+    }
+  },
+  {
+    "idx": 12,
+    "correct": {
+      "letter": ["E"],
+      "description": "The program compiles without issue, so B, C, and D are incorrect[cite: 208]. Lines m2 and m3 throw a compiler warning about generics but still compile[cite: 209]. Notice that RecursiveAction, unlike RecursiveTask, does not return a value. However, since we used a generic ForkJoinTask reference, the code still compiles[cite: 210]. The issue here is that the base condition is not reached since the numbers start/end are consistently positive[cite: 211]. This causes an infinite loop, although since memory is finite, Java detects this and throws a StackOverflowError, so E is correct[cite: 212]. In practice, this could also generate a locking exception before the StackOverflowError when the program runs out of memory, but in either circumstance, the program will exit[cite: 213]."
+    }
+  },
+  {
+    "idx": 13,
+    "correct": {
+      "letter": ["A", "G"],
+      "description": "The code compiles and runs without issue, so C, D, E, and F are incorrect[cite: 214]. The collect() operation groups the animals into those that do and do not start with the letter p[cite: 215]. Note that there are four animals that do not start with the letter p and three animals that do[cite: 216]. The negation operator ! before the startsWith() method means that results are reversed, so the output is 3 4 and A is correct, making B incorrect[cite: 217]. Finally, the stream created by flatMap() is a new stream that is not parallel by default, even though its elements are parallel streams[cite: 218]. Therefore, the performance will be single-threaded and G is correct[cite: 219]."
+    }
+  },
+  {
+    "idx": 14,
+    "correct": {
+      "letter": ["D"],
+      "description": "The methods on line 5, 6, 7, and 8 each throw InterruptedException, which is a checked exception; therefore the method does not compile and C is the only correct answer[cite: 220, 221]. If the method signature was updated to include throws InterruptedException, then the answer would be F, because the deque may be blocked at runtime when the offerFirst(), offerLast(), pollFirst(), and pollLast() operations are called[cite: 222]. Finally, if they were not blocked and there were no other operations on the deque, then the output would be 20 85, and the answer would be A[cite: 223]."
+    }
+  },
+  {
+    "idx": 15,
+    "correct": {
+      "letter": ["C", "E", "G"],
+      "description": "A Callable lambda expression takes no values and returns a generic type; therefore C, E, and G are correct[cite: 224]. A and F are incorrect because they both take an input parameter[cite: 224]. B is a Runnable lambda expression, because it does not return a value, but it is not a Callable one, so B is incorrect[cite: 225]. D is not a valid lambda expression, because it is missing a semicolon at the end of the return statement, which is required when inside braces {}[cite: 226]."
+    }
+  },
+  {
+    "idx": 16,
+    "correct": {
+      "letter": ["F", "H"],
+      "description": "The application compiles and does not throw an exception, so B, C, D, E, and G are incorrect[cite: 227]. Even though the stream is processed in sequential order, the tasks are submitted to a thread executor, which may complete the tasks in any order[cite: 228]. Therefore, the output cannot be determined ahead of time and F is correct, making A incorrect[cite: 229]. Finally, the thread executor is never shut down; therefore the code will run but it will never terminate, making H also correct[cite: 230]."
+    }
+  },
+  {
+    "idx": 17,
+    "correct": {
+      "letter": ["B"],
+      "description": "The code compiles and runs without issue, so D, E, F, and G are incorrect[cite: 231]. The key aspect to notice in the code is that a single-thread executor is used, meaning that no task will be executed concurrently[cite: 232]. Therefore, the results are valid and predictable with 100 100 being the output, and B is the correct answer[cite: 233]. If a pooled thread executor was used with at least two threads, then the sheepCount2++ operations could overwrite each other, making the second value indeterminate at the end of the program[cite: 234]. In this case, C would be the correct answer[cite: 235]."
+    }
+  },
+  {
+    "idx": 18,
+    "correct": {
+      "letter": ["F"],
+      "description": "The code compiles without issue, so B, C, and D are incorrect[cite: 236]. The limit on the cyclic barrier is 10, but the stream can generate only up to 9 threads that reach the barrier; therefore the limit can never be reached, and F is the correct answer, making A and E incorrect[cite: 237, 238]. Note that even if the limit(9) statement was changed to limit(10), the program could still hang, since the JVM might not allocate 10 threads to the parallel stream[cite: 238]."
+    }
+  },
+  {
+    "idx": 19,
+    "correct": {
+      "letter": ["A", "F"],
+      "description": "The class compiles without issue so A is correct, and B and C are incorrect[cite: 239]. The synchronized object on line k1 is TicketManager.class, while the synchronized object on line k4 is the instance of TicketManager[cite: 240]. The class is not thread-safe because the makeTicketsAvailable() method is not synchronized, and E is incorrect[cite: 241]. One thread could call sellTickets() while another thread has unblocked accessed to makeTicketsAvailable(), causing an invalid number of tickets to be reached as part of a race condition[cite: 242]. Finally, F is correct because the class synchronizes using a static getInstance() method, preventing more than one instance from being created[cite: 243]."
+    }
+  },
+  {
+    "idx": 20,
+    "correct": {
+      "letter": ["A", "D"],
+      "description": "By itself, concurrency does not guarantee which task will be completed first, so A is correct[cite: 244]. Furthermore, applications with numerous resource requests will often be stuck waiting for a resource, which allows other tasks to run[cite: 245]. Therefore, they tend to benefit more from concurrency than CPU-intensive tasks, so D is also correct[cite: 246]. B is incorrect because concurrency may in fact make an application slower if it is truly single-threaded in nature[cite: 247, 248]. C is incorrect because single-processor CPUs have been benefiting from concurrency for decades[cite: 249]. Finally, E is incorrect; there are numerous examples in this chapter of concurrent tasks sharing memory[cite: 250]."
+    }
+  },
+  {
+    "idx": 21,
+    "correct": {
+      "letter": ["A", "C", "D", "E"],
+      "description": "The code compiles and runs without issue, so G and H are incorrect[cite: 251]. The return type of performCount() is Integer, so the submit() is interpreted as being applied to a Callable<Integer> value[cite: 252]. In this manner, the Future<?> is really a Future<Integer> object[cite: 253]. One possible implementation of performCount() is just to return the input parameter; therefore A is a correct answer[cite: 253, 254]. B is incorrect, because the return type is Integer, not Boolean[cite: 254]. The performCount() method could just return null, so C is a correct choice[cite: 255]. The performCount() can also throw a runtime exception; therefore D is also a correct answer[cite: 256]. It is also possible for our performCount() to hang indefinitely, such as in a deadlock[cite: 257]. This would cause Future.get() to hang in printResults(), making E also a correct answer[cite: 258]. Finally, any exception thrown in performCount() will appear as an exception in the get() operation[cite: 259]. Since the get() operations are caught in a try/catch block in printResults(), none of them will be unhandled, and F is incorrect[cite: 260]."
+    }
+  },
+  {
+    "idx": 22,
+    "correct": {
+      "letter": ["F"],
+      "description": "The key to solving this question is to remember that the execute() method returns void, not a Future object[cite: 261]. Therefore, line n1 does not compile and F is the correct answer[cite: 262]. If the submit() method had been used instead of execute(), then C would have been the correct answer, as the output of submit(Runnable) task is a Future<?> object which can only return null on its get() method[cite: 263]."
+    }
+  }
+]

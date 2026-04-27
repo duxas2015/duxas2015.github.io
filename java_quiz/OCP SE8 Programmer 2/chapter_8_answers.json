@@ -1,0 +1,163 @@
+[
+  {
+    "idx": 1,
+    "correct": {
+      "letter": ["A", "D"],
+      "description": "The reference is for an InputStream object, so only a high-level input Stream class is permitted. B is incorrect because FileInputStream is a low-level stream that interacts directly with a file resource, not a stream resource. C and F are incorrect because you cannot use BufferedReader/BufferedWriter directly on a stream. E is incorrect because the reference is to an InputStream, not an OutputStream. A and D are the only correct options. Note that a BufferedInputStream can be wrapped twice, since high-level streams can take other high-level streams."
+    }
+  },
+  {
+    "idx": 2,
+    "correct": {
+      "letter": ["B", "E", "F"],
+      "description": "The method returns a char[] array so that the password value never enters the reusable String pool in memory, and the value can be immediately erased from memory after use. E and F support this principle. The result is that the value is more secure, so B is also correct. If the value did enter the reusable String pool, it might stay in memory long after the method using it completed, meaning that a memory dump of the application could retrieve it. A, C, and D are incorrect and not features of the readPassword() method."
+    }
+  },
+  {
+    "idx": 3,
+    "correct": {
+      "letter": ["C", "D"],
+      "description": "A Console object is created by the JVM. Since only one exists, it is a singleton, making option C correct. If the program is run in an environment without a console, System. console() returns null, making D also correct. The other statements about Console are incorrect."
+    }
+  },
+  {
+    "idx": 4,
+    "correct": {
+      "letter": ["C"],
+      "description": "The readLine() method returns a String and reads a line of input from the console. readPassword() returns a char[]. The others do not exist."
+    }
+  },
+  {
+    "idx": 5,
+    "correct": {
+      "letter": ["B", "D", "E"],
+      "description": "This is correct code for reading a line from the console and writing it back out to the console, making option B correct. Options D and E are also correct. If no console is available, a NullPointerException is thrown. The append() method throws an IOException."
+    }
+  },
+  {
+    "idx": 6,
+    "correct": {
+      "letter": ["A", "E"],
+      "description": "The first statement is the definition of deserialization, so A is correct. B is incorrect, because you may mark (or not mark) a class as serializable for a variety of reasons. C is incorrect because the Serializable interface has no method requirements, and any class can implement the interface. D is also incorrect, because the Serializable interface may be extended by your own interface. Finally, E is correct, because the exception may be thrown within the readObject() even if the result is not cast."
+    }
+  },
+  {
+    "idx": 7,
+    "correct": {
+      "letter": ["D"],
+      "description": "The root directory is the top-level directory; therefore D is correct. The rest of the statements are invalid or incorrect."
+    }
+  },
+  {
+    "idx": 8,
+    "correct": {
+      "letter": ["A"],
+      "description": "Paths that begin with the root directory are absolute paths, so A is correct and C is incorrect. B is incorrect because the path could be a file or directory within the file system. A File object may refer to a path that does not exist within the file system, so D and E are incorrect."
+    }
+  },
+  {
+    "idx": 9,
+    "correct": {
+      "letter": ["A"],
+      "description": "First, the class must implement the Serializable interface, so A is correct. Serializable is not a class; therefore B is incorrect. Creating a static serialVersionUID variable is optional and recommended, but it is not required for use with the ObjectOutputStream, so C is incorrect. Every instance variable must either be Serializable or be marked transient, but all variables are not required to be either, so D and E are incorrect. F is incorrect, because the class must be Serializable and have instance members that are Serializable or marked transient."
+    }
+  },
+  {
+    "idx": 10,
+    "correct": {
+      "letter": ["C", "F"],
+      "description": "The code compiles, so D and E are incorrect. There is a bug in the method in that file.delete() should be executed at the end of the method for both files and directories alike. As written, the method will delete all files within a directory but none of the directories themselves. Therefore, A and B are incorrect and C is correct. F is correct, because most methods in the File class that interact with the file system are capable of throwing an exception at runtime, such as when the directory does not exist."
+    }
+  },
+  {
+    "idx": 11,
+    "correct": {
+      "letter": ["C", "E", "G"],
+      "description": "To move a file using java.io.File, you should use the renameTo() method, since there are no move() or mv() methods. Therefore, E is correct, and A and D are incorrect. To create a directory or chain of directories using java.io.File, you should use mkdir() or mkdirs(), respectively, because there is no createDirectory() method. Therefore, C and G are correct, and B is incorrect. Finally, there is no copy() method in the java. io.File class, so F is incorrect. Copying a file with java.io would require reading the contents using a stream."
+    }
+  },
+  {
+    "idx": 12,
+    "correct": {
+      "letter": ["B", "C"],
+      "description": "Option B is correct because Java requires a backslash to be escaped with another backslash. Option C is also correct because Java will convert the slashes to the right one when working with paths."
+    }
+  },
+  {
+    "idx": 13,
+    "correct": {
+      "letter": ["A", "C", "E"],
+      "description": "The System class has three streams: in is for input, err is for error, and out is for output. Therefore A, C, and E are correct. The others do not exist."
+    }
+  },
+  {
+    "idx": 14,
+    "correct": {
+      "letter": ["E"],
+      "description": "PrintWriter is the only Writer class that you need to know that doesn’t have a complementary Reader class, so E is correct."
+    }
+  },
+  {
+    "idx": 15,
+    "correct": {
+      "letter": ["A"],
+      "description": "This code compiles and runs without issue, so C and E are incorrect. It uses a try-with-resource block to open the FileReader and BufferedReader objects. Therefore, both get closed automatically, and D is incorrect. The body of the try block reads in the first line of the file and outputs it to the user. Therefore, A is correct. Since the rest of the file is not read, B is incorrect."
+    }
+  },
+  {
+    "idx": 16,
+    "correct": {
+      "letter": ["D", "F"],
+      "description": "Any class, abstract, concrete, or final, can be marked Serializable, so A, B, and E are incorrect. Classes can implement multiple interfaces, so C is also incorrect. D is correct, because process-heavy classes would be difficult to serialize since it may involve managing multiple threads. F is also correct because serialization of an object stores only the instance variable data, not the static class data. In other words, serializing an object throws away the static class data."
+    }
+  },
+  {
+    "idx": 17,
+    "correct": {
+      "letter": ["A", "B", "D", "G"],
+      "description": "ObjectOutputStream and ObjectInputStream perform serialization and deserialization on a low-level stream, respectively, so A and G are correct. PrintStream and PrintWriter format text for a low-level OutputStream and Writer, respectively, so B and D are also correct. FileWriter and FileInputStream operate on a file directly and are low-level streams, so C and F are incorrect. Finally, OutputStream is an abstract parent class and is neither high-level nor low-level, so E is incorrect."
+    }
+  },
+  {
+    "idx": 18,
+    "correct": {
+      "letter": ["B", "D", "E"],
+      "description": "Console defines two output methods, format() and printf(), that are identical in function, so B and D are correct. A, C, and F are each incorrect, because there is no such method with that name defined in the Console class. You can also use the writer() method to gain access to the Console’s PrintWriter object, so E is correct."
+    }
+  },
+  {
+    "idx": 19,
+    "correct": {
+      "letter": ["B", "C", "D"],
+      "description": "Since you need to write primitives and String values, the OutputStream classes are appropriate. Therefore, you can eliminate A and F since they are not OutputStream classes. Next, DirectoryStream is not a java.io class, so E is incorrect. As you shall see in the next chapter, DirectoryStream is an NIO.2 class. The data should be written to the file directly using the FileOutputStream class, buffered with the BufferedOutputStream class and automatically serialized with the ObjectOutputStream class, so B, C, and D are correct. G is incorrect because it is not related to this task."
+    }
+  },
+  {
+    "idx": 20,
+    "correct": {
+      "letter": ["A", "C"],
+      "description": "Character stream classes often include built-in convenience methods for working with String data, so A is correct. They also handle character encoding automatically, so C is also correct. The rest of the statements are irrelevant or incorrect and are not properties of all character streams."
+    }
+  },
+  {
+    "idx": 21,
+    "correct": {
+      "letter": ["A", "C"],
+      "description": "The code compiles and runs without issue, so F and G are incorrect. Note that serialUID is not the same as serialVersionUID, although since serialVersionUID is recommended but not required, this does not pose any compilation issues. Just be aware that serialUID will not be used by the serialization process for version control. The name variable and age variable are both transient, which means that their values will not be saved upon serialization. Upon deserialization, the default initializations and constructor will be skipped, and they will both be null; therefore A and C are correct. B is incorrect because tail is not transient and could be set by a caller before being serialized. D is also incorrect because a serialized empty array is not the same as a null pointer. E is incorrect because the static value will not be serialized; it will be available on the class after deserialization."
+    }
+  },
+  {
+    "idx": 22,
+    "correct": {
+      "letter": ["E"],
+      "description": "First off, even though the Bird class implements Serializable, it does not define a static serialVersionUID variable, which is recommended but not required; therefore it compiles without issue and F is incorrect. The code also runs without issue, so G is incorrect. The key here is that Java will call the constructor for the first non-serializable no-argument parent class during deserialization, skipping any constructors and default initializations for serializable classes in between, including Eagle and Bird itself. Therefore, Object() is the first constructor called. All default initializations are skipped, so A, B, C, and D are all incorrect. Since the name is marked transient, the deserialized value is null and E is correct. H is also incorrect, because the caller cannot change the serialized value of name with setName(), since name is marked transient."
+    }
+  },
+  {
+    "idx": 23,
+    "correct": {
+      "letter": ["H"],
+      "description": "Not all java.io streams support the mark() operation; therefore, without calling markSupported() on the stream, the result is unknown until runtime. If the stream does support the mark() operation, then the result would be XYZY, because the reset() operation puts the stream back in the position before the mark() was called, and skip(1) will skip X, and E would be correct. If the stream does not support the mark() operation, a runtime exception would likely be thrown, and G would be correct. Since you don’t know if the input stream supports the mark() operation, H is the only correct choice."
+    }
+  }
+]

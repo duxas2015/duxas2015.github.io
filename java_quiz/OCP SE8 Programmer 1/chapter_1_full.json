@@ -1,0 +1,922 @@
+[
+  {
+    "idx": 1,
+    "text": "Which of the following are valid Java identifiers? (Choose all that apply)",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "A$B"
+      },
+      {
+        "letter": "B",
+        "text": "_helloWorld"
+      },
+      {
+        "letter": "C",
+        "text": "true"
+      },
+      {
+        "letter": "D",
+        "text": "java.lang"
+      },
+      {
+        "letter": "E",
+        "text": "Public"
+      },
+      {
+        "letter": "F",
+        "text": "1980_s"
+      }
+    ],
+    "correct": {
+      "letter": [
+        "A",
+        "B",
+        "E"
+      ],
+      "description": "Option A is valid because you can use the dollar sign in identifiers. Option B is valid because you can use an underscore in identifiers. Option C is not a valid identifier because true is a Java reserved word. Option D is not valid because the dot (.) is not allowed in identifiers. Option E is valid because Java is case sensitive, so Public is not a reserved word and therefore a valid identifier. Option F is not valid because the first character is not a letter, $, or _."
+    }
+  },
+  {
+    "idx": 2,
+    "text": "What is the output of the following program?\n<pre>\n1: public class WaterBottle {\n2:   private String brand;\n3:   private boolean empty;\n4:   public static void main(String[] args) {\n5:     WaterBottle wb = new WaterBottle();\n6:     System.out.print(\"Empty = \" + wb.empty);\n7:     System.out.print(\", Brand = \" + wb.brand);\n8:   } }\n</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Line 6 generates a compiler error."
+      },
+      {
+        "letter": "B",
+        "text": "Line 7 generates a compiler error."
+      },
+      {
+        "letter": "C",
+        "text": "There is no output."
+      },
+      {
+        "letter": "D",
+        "text": "Empty = false, Brand = null"
+      },
+      {
+        "letter": "E",
+        "text": "Empty = false, Brand ="
+      },
+      {
+        "letter": "F",
+        "text": "Empty = null, Brand = null"
+      }
+    ],
+    "correct": {
+      "letter": [
+        "D"
+      ],
+      "description": "Boolean fields initialize to false and references initialize to null, so empty is false and brand is null. Brand = null is output."
+    }
+  },
+  {
+    "idx": 3,
+    "text": "Which of the following are true? (Choose all that apply)\n<pre>\n4: short numPets = 5;\n5: int numGrains = 5.6;\n6: String name = \"Scruffy\";\n7: numPets.length();\n8: numGrains.length();\n9: name.length();\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Line 4 generates a compiler error."
+      },
+      {
+        "letter": "B",
+        "text": "Line 5 generates a compiler error."
+      },
+      {
+        "letter": "C",
+        "text": "Line 6 generates a compiler error."
+      },
+      {
+        "letter": "D",
+        "text": "Line 7 generates a compiler error."
+      },
+      {
+        "letter": "E",
+        "text": "Line 8 generates a compiler error."
+      },
+      {
+        "letter": "F",
+        "text": "Line 9 generates a compiler error."
+      },
+      {
+        "letter": "G",
+        "text": "The code compiles as is."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "B",
+        "D",
+        "E"
+      ],
+      "description": "Option A (line 4) compiles because short is an integral type. Option B (line 5) generates a compiler error because int is an integral type, but 5.6 is a floating-point type. Option C (line 6) compiles because it is assigned a String. Options D and E (lines 7 and 8) do not compile because short and int are primitives. Primitives do not allow methods to be called on them. Option F (line 9) compiles because length() is defined on String."
+    }
+  },
+  {
+    "idx": 4,
+    "text": "Given the following class, which of the following is true? (Choose all that apply)\n<pre>\n1: public class Snake {\n2:\n3:   public void shed(boolean time) {\n4:\n5:     if (time) {\n6:\n7:     }\n8:     System.out.println(result);\n9:\n10:  }\n11: }\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "If <pre>String result = \"done\";</pre> is inserted on line 2, the code will compile."
+      },
+      {
+        "letter": "B",
+        "text": "If <pre>String result = \"done\";</pre> is inserted on line 4, the code will compile."
+      },
+      {
+        "letter": "C",
+        "text": "If <pre>String result = \"done\";</pre> is inserted on line 6, the code will compile."
+      },
+      {
+        "letter": "D",
+        "text": "If <pre>String result = \"done\";</pre> is inserted on line 9, the code will compile."
+      },
+      {
+        "letter": "E",
+        "text": "None of the above changes will make the code compile."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "A",
+        "B"
+      ],
+      "description": "Adding the variable at line 2 makes result an instance variable. Since instance variables are in scope for the entire life of the object, option A is correct. Option B is correct because adding the variable at line 4 makes result a local variable with a scope of the whole method. Adding the variable at line 6 makes result a local variable with a scope of lines 6–7. Since it is out of scope on line 8, it doesn’t compile. Line 9 is even more restrictive; it is in scope only for the loop, so option C is incorrect."
+    }
+  },
+  {
+    "idx": 5,
+    "text": "Given the following classes, which of the following can independently replace INSERT IMPORTS HERE to make the code compile? (Choose all that apply)\n<pre>\npackage aquarium;\npublic class Tank { }\n\npackage aquarium.jellies;\npublic class Jelly { }\n\npackage visitor;\nINSERT IMPORTS HERE\npublic class AquariumVisitor {\n  public void admire(Jelly jelly) { } }\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "<pre>import aquarium.*;</pre>"
+      },
+      {
+        "letter": "B",
+        "text": "<pre>import aquarium.*.Jelly;</pre>"
+      },
+      {
+        "letter": "C",
+        "text": "<pre>import aquarium.jellies.Jelly;</pre>"
+      },
+      {
+        "letter": "D",
+        "text": "<pre>import aquarium.jellies.*;</pre>"
+      },
+      {
+        "letter": "E",
+        "text": "<pre>import aquarium.jellies.Jelly.*;</pre>"
+      },
+      {
+        "letter": "F",
+        "text": "None of these can make the code compile."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "A",
+        "B",
+        "D"
+      ],
+      "description": "Options A and B are correct because they import all the classes in the package. Option D is correct because it imports a specific class. Option C is incorrect because you cannot have a wildcard in the middle of an import statement. Option E is incorrect because you cannot import a package. Option F is incorrect because you cannot have two wildcards in an import statement."
+    }
+  },
+  {
+    "idx": 6,
+    "text": "Given the following classes, what is the maximum number of imports that can be removed and have the code still compile?\n<pre>\npackage aquarium; public class Water { }\n\npackage aquarium;\nimport java.lang.*;\nimport java.lang.System;\nimport aquarium.Water;\nimport aquarium.*;\npublic class Tank {\n  public void print(Water water) {\n    System.out.println(water); } }\n</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "0"
+      },
+      {
+        "letter": "B",
+        "text": "1"
+      },
+      {
+        "letter": "C",
+        "text": "2"
+      },
+      {
+        "letter": "D",
+        "text": "3"
+      },
+      {
+        "letter": "E",
+        "text": "4"
+      },
+      {
+        "letter": "F",
+        "text": "Does not compile."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "E"
+      ],
+      "description": "Option E is the correct order for the elements in a Java class. Note that the package and import statements are optional."
+    }
+  },
+  {
+    "idx": 7,
+    "text": "Given the following classes, which of the following snippets can be inserted in place of INSERT IMPORTS HERE and have the code compile? (Choose all that apply)\n<pre>\npackage aquarium;\npublic class Water {\n  boolean salty = false;\n}\n\npackage aquarium.jellies;\npublic class Water {\n  boolean salty = true;\n}\n\npackage employee;\nINSERT IMPORTS HERE\npublic class WaterFiller {\n  Water water;\n}\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "<pre>import aquarium.*;</pre>"
+      },
+      {
+        "letter": "B",
+        "text": "<pre>import aquarium.Water;\nimport aquarium.jellies.*;</pre>"
+      },
+      {
+        "letter": "C",
+        "text": "<pre>import aquarium.*;\nimport aquarium.jellies.Water;</pre>"
+      },
+      {
+        "letter": "D",
+        "text": "<pre>import aquarium.*;\nimport aquarium.jellies.*;</pre>"
+      },
+      {
+        "letter": "E",
+        "text": "<pre>import aquarium.Water;\nimport aquarium.jellies.Water;</pre>"
+      },
+      {
+        "letter": "F",
+        "text": "None of these imports can make the code compile."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "A",
+        "B",
+        "C"
+      ],
+      "description": "The command to compile Java is javac. You pass the name of the file you want to compile, including the extension. Therefore, options A and B are correct. Option C is correct because the wildcard (*) can be used to compile all the Java files in the directory. Options D, E, and F are incorrect because java is the command to run a Java program, not compile it."
+    }
+  },
+  {
+    "idx": 8,
+    "text": "Given the following class, which of the following calls print out Blue Jay? (Choose all that apply)\n<pre>\npublic class BirdDisplay {\n  public static void main(String[] name) {\n    System.out.println(name[1]);\n  } }\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "<pre>java BirdDisplay Sparrow Blue Jay</pre>"
+      },
+      {
+        "letter": "B",
+        "text": "<pre>java BirdDisplay Sparrow \"Blue Jay\"</pre>"
+      },
+      {
+        "letter": "C",
+        "text": "<pre>java BirdDisplay Blue Jay Sparrow</pre>"
+      },
+      {
+        "letter": "D",
+        "text": "<pre>java BirdDisplay \"Blue Jay\" Sparrow</pre>"
+      },
+      {
+        "letter": "E",
+        "text": "<pre>java BirdDisplay.class Sparrow \"Blue Jay\"</pre>"
+      },
+      {
+        "letter": "F",
+        "text": "<pre>java BirdDisplay.class \"Blue Jay\" Sparrow</pre>"
+      },
+      {
+        "letter": "G",
+        "text": "Does not compile."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "A",
+        "D",
+        "E"
+      ],
+      "description": "An instance variable is in scope as long as the object it is part of exists. A static variable is in scope as long as the class it is part of exists. A local variable is in scope from the time it is declared until the end of the block in which it is declared."
+    }
+  },
+  {
+    "idx": 9,
+    "text": "Which of the following legally fill in the blank so you can run the main() method from the command line?\n<pre>\npublic static void main( ) \n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "<pre>String[] _names</pre>"
+      },
+      {
+        "letter": "B",
+        "text": "<pre>String[] 123</pre>"
+      },
+      {
+        "letter": "C",
+        "text": "<pre>String abc[]</pre>"
+      },
+      {
+        "letter": "D",
+        "text": "<pre>String _Names[]</pre>"
+      },
+      {
+        "letter": "E",
+        "text": "<pre>String... $n</pre>"
+      },
+      {
+        "letter": "F",
+        "text": "<pre>String names</pre>"
+      },
+      {
+        "letter": "G",
+        "text": "None of the above."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "A",
+        "B",
+        "E"
+      ],
+      "description": "Option A is a valid main() method. Option B is also a valid main() method because the order of the public and static modifiers does not matter. Option E is also valid because the square brackets can come after the variable name."
+    }
+  },
+  {
+    "idx": 10,
+    "text": "Which of the following are legal entry point methods that can be run from the command line? (Choose all that apply)",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "<pre>private static void main(String[] args)</pre>"
+      },
+      {
+        "letter": "B",
+        "text": "<pre>public static final main(String[] args)</pre>"
+      },
+      {
+        "letter": "C",
+        "text": "<pre>public void main(String[] args)</pre>"
+      },
+      {
+        "letter": "D",
+        "text": "<pre>public static void test(String[] args)</pre>"
+      },
+      {
+        "letter": "E",
+        "text": "<pre>public static void main(String[] args)</pre>"
+      },
+      {
+        "letter": "F",
+        "text": "<pre>public static main(String[] args)</pre>"
+      },
+      {
+        "letter": "G",
+        "text": "None of the above."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "B"
+      ],
+      "description": "Java is not required to run the garbage collector. While you can suggest that it run with System.gc(), it is not a guarantee. Objects are eligible for garbage collection when they are no longer reachable. An object can become eligible for garbage collection even if the program is still running."
+    }
+  },
+  {
+    "idx": 11,
+    "text": "Which of the following are true? (Choose all that apply)",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "An instance variable of type double defaults to null."
+      },
+      {
+        "letter": "B",
+        "text": "An instance variable of type int defaults to null."
+      },
+      {
+        "letter": "C",
+        "text": "An instance variable of type String defaults to null."
+      },
+      {
+        "letter": "D",
+        "text": "An instance variable of type double defaults to 0.0."
+      },
+      {
+        "letter": "E",
+        "text": "An instance variable of type int defaults to 0.0."
+      },
+      {
+        "letter": "F",
+        "text": "An instance variable of type String defaults to 0.0."
+      },
+      {
+        "letter": "G",
+        "text": "None of the above."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "C",
+        "D"
+      ],
+      "description": "Option C is correct because the package name must match the directory structure. Option D is correct because the import statement is required to use a class from another package."
+    }
+  },
+  {
+    "idx": 12,
+    "text": "Which of the following are true? (Choose all that apply)",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "A local variable of type boolean defaults to null."
+      },
+      {
+        "letter": "B",
+        "text": "A local variable of type float defaults to 0."
+      },
+      {
+        "letter": "C",
+        "text": "A local variable of type Object defaults to null."
+      },
+      {
+        "letter": "D",
+        "text": "A local variable of type boolean defaults to false."
+      },
+      {
+        "letter": "E",
+        "text": "A local variable of type boolean defaults to true."
+      },
+      {
+        "letter": "F",
+        "text": "A local variable of type float defaults to 0.0."
+      },
+      {
+        "letter": "G",
+        "text": "None of the above."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "G"
+      ],
+      "description": "The code does not compile because of line 5. You cannot use an underscore at the beginning or end of a literal, or adjacent to a decimal point."
+    }
+  },
+  {
+    "idx": 13,
+    "text": "Which of the following are true? (Choose all that apply)",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "An instance variable of type boolean defaults to false."
+      },
+      {
+        "letter": "B",
+        "text": "An instance variable of type boolean defaults to true."
+      },
+      {
+        "letter": "C",
+        "text": "An instance variable of type boolean defaults to null."
+      },
+      {
+        "letter": "D",
+        "text": "An instance variable of type int defaults to 0."
+      },
+      {
+        "letter": "E",
+        "text": "An instance variable of type int defaults to 0.0."
+      },
+      {
+        "letter": "F",
+        "text": "An instance variable of type int defaults to null."
+      },
+      {
+        "letter": "G",
+        "text": "None of the above."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "A",
+        "D"
+      ],
+      "description": "An object can become eligible for garbage collection when it is no longer reachable. This happens if the reference to the object is set to null or if the reference goes out of scope."
+    }
+  },
+  {
+    "idx": 14,
+    "text": "Given the following class in the file /my/directory/named/A/Bird.java:\n<pre>\nINSERT CODE HERE\npublic class Bird { }\n</pre>\nWhich of the following replaces INSERT CODE HERE if we compile from /my/directory? (Choose all that apply)",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "<pre>package my.directory.named.a;</pre>"
+      },
+      {
+        "letter": "B",
+        "text": "<pre>package my.directory.named.A;</pre>"
+      },
+      {
+        "letter": "C",
+        "text": "<pre>package named.a;</pre>"
+      },
+      {
+        "letter": "D",
+        "text": "<pre>package named.A;</pre>"
+      },
+      {
+        "letter": "E",
+        "text": "<pre>package a;</pre>"
+      },
+      {
+        "letter": "F",
+        "text": "<pre>package A;</pre>"
+      },
+      {
+        "letter": "G",
+        "text": "Does not compile."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "D"
+      ],
+      "description": "The code does not compile because of line 4. The variable result is declared inside the if block, so it is out of scope on line 6."
+    }
+  },
+  {
+    "idx": 15,
+    "text": "Which of the following lines of code compile? (Choose all that apply)",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "<pre>int i1 = 1_234;</pre>"
+      },
+      {
+        "letter": "B",
+        "text": "<pre>double d1 = 1_234_.0;</pre>"
+      },
+      {
+        "letter": "C",
+        "text": "<pre>double d2 = 1_234._0;</pre>"
+      },
+      {
+        "letter": "D",
+        "text": "<pre>double d3 = 1_234.0_;</pre>"
+      },
+      {
+        "letter": "E",
+        "text": "<pre>double d4 = 1_234.0;</pre>"
+      },
+      {
+        "letter": "F",
+        "text": "None of the above."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "A",
+        "E"
+      ],
+      "description": "Option A is correct because it is a valid way to run a Java class. Option E is correct because it is a valid way to run a Java class from a package."
+    }
+  },
+  {
+    "idx": 16,
+    "text": "Given the following class, which of the following lines of code can replace INSERT CODE HERE to make the code compile? (Choose all that apply)\n<pre>\npublic class Price {\n  public void admission() {\n    INSERT CODE HERE\n    System.out.println(amount);\n  } }\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "<pre>int amount = 9L;</pre>"
+      },
+      {
+        "letter": "B",
+        "text": "<pre>int amount = 0b101;</pre>"
+      },
+      {
+        "letter": "C",
+        "text": "<pre>int amount = 0xE;</pre>"
+      },
+      {
+        "letter": "D",
+        "text": "<pre>double amount = 0xE;</pre>"
+      },
+      {
+        "letter": "E",
+        "text": "<pre>double amount = 1_2_.0_0;</pre>"
+      },
+      {
+        "letter": "F",
+        "text": "<pre>int amount = 1_2_;</pre>"
+      },
+      {
+        "letter": "G",
+        "text": "None of the above."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "B",
+        "C",
+        "D"
+      ],
+      "description": "Option B is correct because the name of the file must match the name of the public class. Option C is correct because the code will compile. Option D is correct because the code will run, but it won't do anything because there is no main() method."
+    }
+  },
+  {
+    "idx": 17,
+    "text": "Which of the following are true? (Choose all that apply)\n<pre>\npublic class Bunny {\n  public static void main(String[] args) {\n    Bunny bun = new Bunny();\n  } }\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Bunny is a class."
+      },
+      {
+        "letter": "B",
+        "text": "bun is a class."
+      },
+      {
+        "letter": "C",
+        "text": "main is a class."
+      },
+      {
+        "letter": "D",
+        "text": "Bunny is a reference to an object."
+      },
+      {
+        "letter": "E",
+        "text": "bun is a reference to an object."
+      },
+      {
+        "letter": "F",
+        "text": "main is a reference to an object."
+      },
+      {
+        "letter": "G",
+        "text": "None of the above."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "A",
+        "E"
+      ],
+      "description": "A is correct because it is a valid multi-line comment. E is correct because it is a valid single-line comment."
+    }
+  },
+  {
+    "idx": 18,
+    "text": "Which represent the order in which the following statements can be assembled into a program that will compile successfully? (Choose all that apply)\n<pre>\nA: class Rabbit {}\nB: import java.util.*;\nC: package animals;\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "A, B, C"
+      },
+      {
+        "letter": "B",
+        "text": "B, C, A"
+      },
+      {
+        "letter": "C",
+        "text": "C, B, A"
+      },
+      {
+        "letter": "D",
+        "text": "B, A"
+      },
+      {
+        "letter": "E",
+        "text": "C, A"
+      },
+      {
+        "letter": "F",
+        "text": "A, C"
+      },
+      {
+        "letter": "G",
+        "text": "A, B"
+      }
+    ],
+    "correct": {
+      "letter": [
+        "C",
+        "D",
+        "E"
+      ],
+      "description": "The order of the elements in a Java file is: package, imports, and then the class. All of these elements are optional."
+    }
+  },
+  {
+    "idx": 19,
+    "text": "Suppose we have a class named Rabbit. Which of the following statements are true? (Choose all that apply)\n<pre>\n1:  public class Rabbit {\n2:    public static void main(String[] args) {\n3:      Rabbit one = new Rabbit();\n4:      Rabbit two = new Rabbit();\n5:      Rabbit three = one;\n6:      one = null;\n7:      Rabbit four = one;\n8:      three = null;\n9:      two = null;\n10:     two = new Rabbit();\n11:     System.gc();\n12:   } }\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "The Rabbit object from line 3 is first eligible for garbage collection immediately following line 6."
+      },
+      {
+        "letter": "B",
+        "text": "The Rabbit object from line 3 is first eligible for garbage collection immediately following line 8."
+      },
+      {
+        "letter": "C",
+        "text": "The Rabbit object from line 3 is first eligible for garbage collection immediately following line 12."
+      },
+      {
+        "letter": "D",
+        "text": "The Rabbit object from line 4 is first eligible for garbage collection immediately following line 9."
+      },
+      {
+        "letter": "E",
+        "text": "The Rabbit object from line 4 is first eligible for garbage collection immediately following line 11."
+      },
+      {
+        "letter": "F",
+        "text": "The Rabbit object from line 4 is first eligible for garbage collection immediately following line 12."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "A",
+        "D"
+      ],
+      "description": "Setting a reference to null means it has no effect on garbage collection. The Rabbit object from line 4 only has a single reference to it: two. Option D is correct because this single reference becomes null on line 9. The Rabbit object declared on line 10 becomes eligible for garbage collection at the end of the method on line 12. Calling System.gc() has no effect on eligibility for garbage collection."
+    }
+  },
+  {
+    "idx": 20,
+    "text": "What is true about the following code? (Choose all that apply)\n<pre>\npublic class Bear {\n  protected void finalize() {\n    System.out.println(\"Roar!\");\n  }\n  public static void main(String[] args) {\n    Bear bear = new Bear();\n    bear = null;\n    System.gc();\n  } }\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "finalize() is guaranteed to be called."
+      },
+      {
+        "letter": "B",
+        "text": "finalize() might or might not be called"
+      },
+      {
+        "letter": "C",
+        "text": "finalize() is guaranteed not to be called."
+      },
+      {
+        "letter": "D",
+        "text": "Garbage collection is guaranteed to run."
+      },
+      {
+        "letter": "E",
+        "text": "Garbage collection might or might not run."
+      },
+      {
+        "letter": "F",
+        "text": "Garbage collection is guaranteed not to run."
+      },
+      {
+        "letter": "G",
+        "text": "The code does not compile."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "B",
+        "E"
+      ],
+      "description": "Calling System.gc() suggests that Java might wish to run the garbage collector. Java is free to ignore the request, making option E correct. finalize() runs if an object attempts to be garbage collected, making option B correct."
+    }
+  },
+  {
+    "idx": 21,
+    "text": "What does the following code output?\n<pre>\n1: public class Salmon {\n2:   int count;\n3:   public void Salmon() {\n4:     count = 4;\n5:   }\n6:   public static void main(String[] args) {\n7:     Salmon s = new Salmon();\n8:     System.out.println(s.count);\n9:   } }\n</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "0"
+      },
+      {
+        "letter": "B",
+        "text": "4"
+      },
+      {
+        "letter": "C",
+        "text": "Compilation fails on line 3."
+      },
+      {
+        "letter": "D",
+        "text": "Compilation fails on line 4."
+      },
+      {
+        "letter": "E",
+        "text": "Compilation fails on line 7."
+      },
+      {
+        "letter": "F",
+        "text": "Compilation fails on line 8."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "A"
+      ],
+      "description": "While the code on line 3 does compile, it is not a constructor because it has a return type. It is a method that happens to have the same name as the class. When the code runs, the default constructor is called and count has the default value (0) for an int."
+    }
+  },
+  {
+    "idx": 22,
+    "text": "Which of the following are true statements? (Choose all that apply)",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Java allows operator overloading."
+      },
+      {
+        "letter": "B",
+        "text": "Java code compiled on Windows can run on Linux."
+      },
+      {
+        "letter": "C",
+        "text": "Java has pointers to specific locations in memory."
+      },
+      {
+        "letter": "D",
+        "text": "Java is a procedural language."
+      },
+      {
+        "letter": "E",
+        "text": "Java is an object-oriented language."
+      },
+      {
+        "letter": "F",
+        "text": "Java is a functional programming language."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "B",
+        "E"
+      ],
+      "description": "C++ has operator overloading and pointers. Java made a point of not having either. Java does have references to objects, but these are pointing to an object that can move around in memory. Option B is correct because Java is platform independent. Option E is correct because Java is object oriented. While it does support some parts of functional programming, these occur within a class."
+    }
+  },
+  {
+    "idx": 23,
+    "text": "Which of the following are true? (Choose all that apply)",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "javac compiles a .class file into a .java file."
+      },
+      {
+        "letter": "B",
+        "text": "javac compiles a .java file into a .bytecode file."
+      },
+      {
+        "letter": "C",
+        "text": "javac compiles a .java file into a .class file."
+      },
+      {
+        "letter": "D",
+        "text": "Java takes the name of the class as a parameter."
+      },
+      {
+        "letter": "E",
+        "text": "Java takes the name of the .bytecode file as a parameter."
+      },
+      {
+        "letter": "F",
+        "text": "Java takes the name of the .class file as a parameter."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "C",
+        "D"
+      ],
+      "description": "Java puts source code in .java files and bytecode in .class files. It does not use a .bytecode file. When running a Java program, you pass just the name of the class without the .class extension."
+    }
+  }
+]

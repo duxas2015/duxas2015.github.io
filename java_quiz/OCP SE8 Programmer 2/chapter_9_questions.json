@@ -1,0 +1,263 @@
+[
+  {
+    "idx": 1,
+    "text": "What is the output of the following code?\n<pre>\nPath path = Path.get(\"/user/.././root\",\"../kodiacbear.txt\");\npath.normalize().relativize(\"/lion\");\nSystem.out.println(path);\n</pre>",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "/user/.././root/../kodiacbear.txt" },
+      { "letter": "B", "text": "/user/./root/kodiacbear.txt/lion" },
+      { "letter": "C", "text": "/kodiacbear.txt" },
+      { "letter": "D", "text": "kodiacbear.txt" },
+      { "letter": "E", "text": "../lion" },
+      { "letter": "F", "text": "The code does not compile." }
+    ]
+  },
+  {
+    "idx": 2,
+    "text": "For which values of path inserted on the blank line would it be possible for the following code to output Success? (Choose all that apply.)\n<pre>\nPath path = ____________________;\nif(Files.isDirectory(path))\n  System.out.println(Files.deleteIfExists(path) ? \"Success\": \"Try Again\");\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      { "letter": "A", "text": "path refers to a regular file in the file system." },
+      { "letter": "B", "text": "path refers to a symbolic link in the file system." },
+      { "letter": "C", "text": "path refers to an empty directory in the file system." },
+      { "letter": "D", "text": "path refers to a directory with content in the file system." },
+      { "letter": "E", "text": "path does not refer to a record that exists within the file system." },
+      { "letter": "F", "text": "The code does not compile." }
+    ]
+  },
+  {
+    "idx": 3,
+    "text": "What is the result of executing the following code? (Choose all that apply.)\n<pre>\n1: Path path = Paths.get(\"sloth.schedule\");\n2: BasicFileAttributes attributes = Files.readAttributes(path, BasicFileAttributes.class);\n3: if(attributes.size()>0 && attributes.creationTime().toMillis()>0) {\n4:   attributes.setTimes(null,null,null);\n5: }\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      { "letter": "A", "text": "It compiles and runs without issue." },
+      { "letter": "B", "text": "The code will not compile because of line 2." },
+      { "letter": "C", "text": "The code will not compile because of line 3." },
+      { "letter": "D", "text": "The code will not compile because of line 4." },
+      { "letter": "E", "text": "The code compiles but throws an exception at runtime." }
+    ]
+  },
+  {
+    "idx": 4,
+    "text": "If the current working directory is /user/home, then what is the output of the following code?\n<pre>\nPath path = Paths.get(\"/zoo/animals/bear/koala/food.txt\");\nSystem.out.println(path.subpath(1,3).getName(1).toAbsolutePath());\n</pre>",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "animals/bear" },
+      { "letter": "B", "text": "koala" },
+      { "letter": "C", "text": "/user/home/bear" },
+      { "letter": "D", "text": "/user/home/koala/koala" },
+      { "letter": "E", "text": "/user/home/food.txt" },
+      { "letter": "F", "text": "/user/home/koala/food.txt" },
+      { "letter": "G", "text": "The code does not compile." }
+    ]
+  },
+  {
+    "idx": 5,
+    "text": "Assume /kang exists as a symbolic link to the directory /mammal/kangaroo within the file system. Which of the following statements are correct about this code snippet? (Choose all that apply.)\n<pre>\nPath path = Paths.get(\"/kang\");\nif(Files.isDirectory(path) && Files.isSymbolicLink(path))\n  Files.createDirectory(path.resolve(\"joey\"));\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      { "letter": "A", "text": "A new directory will always be created." },
+      { "letter": "B", "text": "A new directory will be created only if /mammal/kangaroo exists." },
+      { "letter": "C", "text": "If the code creates a directory, it will be reachable at /kang/joey." },
+      { "letter": "D", "text": "If the code creates a directory, it will be reachable at /mammal/kangaroo/joey." },
+      { "letter": "E", "text": "The code does not compile." },
+      { "letter": "F", "text": "The code will compile but always throws an exception at runtime." }
+    ]
+  },
+  {
+    "idx": 6,
+    "text": "Given that /animals is a directory that exists and it is empty, what is the result of the following code?\n<pre>\nPath path = Paths.get(\"/animals\");\nboolean myBoolean = Files.walk(path)\n  .filter((p,a) -> a.isDirectory() && !path.equals(p)) // w1\n  .findFirst().isPresent();\n// w2\nSystem.out.println(myBoolean ? \"No Sub-directory\": \"Has Sub-directory\");\n</pre>",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "It prints No Sub-directory." },
+      { "letter": "B", "text": "It prints Has Sub-directory." },
+      { "letter": "C", "text": "The code will not compile because of line w1." },
+      { "letter": "D", "text": "The code will not compile because of line w2." },
+      { "letter": "E", "text": "The output cannot be determined." },
+      { "letter": "F", "text": "It produces an infinite loop at runtime." }
+    ]
+  },
+  {
+    "idx": 7,
+    "text": "If the current working directory is /zoo, and the path /zoo/turkey does not exist, then what is the result of executing the following code? (Choose all that apply.)\n<pre>\nPath path = Paths.get(\"turkey\");\nif(Files.isSameFile(path,Paths.get(\"/zoo/turkey\"))) // x1\n  Files.createDirectory(path.resolve(\"info\"));\n// x2\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      { "letter": "A", "text": "The code compiles and runs without issue, but it does not create any directories." },
+      { "letter": "B", "text": "The directory /zoo/turkey is created." },
+      { "letter": "C", "text": "The directory /zoo/turkey/info is created." },
+      { "letter": "D", "text": "The code will not compile because of line x1." },
+      { "letter": "E", "text": "The code will not compile because of line x2." },
+      { "letter": "F", "text": "It compiles but throws an exception at runtime." }
+    ]
+  },
+  {
+    "idx": 8,
+    "text": "What is the output of the following code?\n<pre>\nPath path1 = Paths.get(\"/pets/../cat.txt\");\nPath path2 = Paths.get(\"./dog.txt\");\nSystem.out.println(path1.resolve(path2));\nSystem.out.println(path2.resolve(path1));\n</pre>",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "/pets/../cat.txt/./dog.txt\n/pets/../cat.txt" },
+      { "letter": "B", "text": "/pets/../cat.txt/./dog.txt\n./dog.txt/pets/../cat.txt" },
+      { "letter": "C", "text": "/cats.txt\n/dog.txt" },
+      { "letter": "D", "text": "/cats.txt/dog.txt\n/cat.txt" },
+      { "letter": "E", "text": "It compiles but throws an exception at runtime." }
+    ]
+  },
+  {
+    "idx": 9,
+    "text": "What are some advantages of using Files.lines() over Files.readAllLines()? (Choose all that apply.)",
+    "select_type": "multiply",
+    "answers": [
+      { "letter": "A", "text": "It is often faster." },
+      { "letter": "B", "text": "It can be run on large files with very little memory available." },
+      { "letter": "C", "text": "It can be chained with stream methods directly." },
+      { "letter": "D", "text": "It does not modify the contents of the file." },
+      { "letter": "E", "text": "It ensures the file is not read-locked by the file system." },
+      { "letter": "F", "text": "There are no differences, because one method is a pointer to the other." }
+    ]
+  },
+  {
+    "idx": 10,
+    "text": "What is correct about the following code snippet? (Choose all that apply.)\n<pre>\nFiles.move(Paths.get(\"monkey.txt\"), Paths.get(\"/animals\"),\n  StandardCopyOption.ATOMIC_MOVE,\n  LinkOption.NOFOLLOW_LINKS);\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      { "letter": "A", "text": "If /animals exists, it will be overwritten at runtime." },
+      { "letter": "B", "text": "If monkey.txt is a symbolic link, the file it points to will be moved at runtime." },
+      { "letter": "C", "text": "If another process is monitoring the file system, it will not see an incomplete file at runtime." },
+      { "letter": "D", "text": "The code will always throw an exception, since no filename is specified in the target folder path." },
+      { "letter": "E", "text": "The metadata of the monkey.txt will be moved along with the file." }
+    ]
+  },
+  {
+    "idx": 11,
+    "text": "For the copy() method shown here, assume that the source exists as regular file and that the target does not. What is the result of the following code?\n<pre>\nPath path1 = Paths.get(\"./goat.txt\").normalize(); // k1\nPath path2 = Paths.get(\"mule.png\");\nFiles.copy(path1,path2,StandardCopyOption.COPY_ATTRIBUTES); //k2\nSystem.out.println(Files.isSameFile(path1, path2));\n//k3\n</pre>",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "It will output false." },
+      { "letter": "B", "text": "It will output true." },
+      { "letter": "C", "text": "It does not compile because of line k1." },
+      { "letter": "D", "text": "It does not compile because of line k2." },
+      { "letter": "E", "text": "It does not compile because of line k3." },
+      { "letter": "F", "text": "It compiles but throws an exception at runtime." }
+    ]
+  },
+  {
+    "idx": 12,
+    "text": "Which of the following methods cannot be used to obtain a Path instance? (Choose all that apply.)",
+    "select_type": "multiply",
+    "answers": [
+      { "letter": "A", "text": "<pre>new Path(\"jaguar.txt\")</pre>" },
+      { "letter": "B", "text": "<pre>FileSystems.getDefault().getPath(\"puma.txt\")</pre>" },
+      { "letter": "C", "text": "<pre>Paths.get(new URI(\"cheetah.txt\"))</pre>" },
+      { "letter": "D", "text": "<pre>Paths.get(\"cats\",\"lynx.txt\")</pre>" },
+      { "letter": "E", "text": "<pre>new java.io.File(\"tiger.txt\").toPath()</pre>" },
+      { "letter": "F", "text": "<pre>new FileSystem().getPath(\"leopard\")</pre>" },
+      { "letter": "G", "text": "<pre>Paths.getPath(\"ocelot.txt\")</pre>" }
+    ]
+  },
+  {
+    "idx": 13,
+    "text": "Assume /monkeys exists as a regular directory containing multiple files, symbolic links, and subdirectories. What is true about the following code? (Choose all that apply.)\n<pre>\nPath path = Paths.get(\"/monkeys\");\nFiles.find(path, 0, (p,a) -> a.isSymbolicLink()).map(p -> p.toString()) // y1\n  .collect(Collectors.toList()) // y2\n  .stream() // y3\n  .filter(x -> x.toString().endsWith(\".txt\")) // y4\n  .forEach(System.out::println);\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      { "letter": "A", "text": "It will print all symbolic links in the directory tree ending in .txt." },
+      { "letter": "B", "text": "It will print nothing." },
+      { "letter": "C", "text": "It does not compile because of line y1." },
+      { "letter": "D", "text": "It does not compile because of line y2." },
+      { "letter": "E", "text": "It does not compile because of line y3." },
+      { "letter": "F", "text": "It does not compile because of line y4." },
+      { "letter": "G", "text": "It compiles but throws an exception at runtime." }
+    ]
+  },
+  {
+    "idx": 14,
+    "text": "Which NIO.2 method is most similar to the legacy java.io.File.listFiles() method?",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "Path.listFiles()" },
+      { "letter": "B", "text": "Files.walk()" },
+      { "letter": "C", "text": "Files.find()" },
+      { "letter": "D", "text": "Files.files()" },
+      { "letter": "E", "text": "Files.list()" },
+      { "letter": "F", "text": "Files.lines()" }
+    ]
+  },
+  {
+    "idx": 15,
+    "text": "What are some advantages of using NIO.2 views to read metadata rather than individually from java.nio.Files methods? (Choose all that apply.)",
+    "select_type": "multiply",
+    "answers": [
+      { "letter": "A", "text": "It can be used on both files and directories." },
+      { "letter": "B", "text": "For reading a single attribute, it is often more performant." },
+      { "letter": "C", "text": "It allows you to read symbolic links." },
+      { "letter": "D", "text": "It makes fewer round-trips to the file system." },
+      { "letter": "E", "text": "It can be used to access file system–dependent attributes." },
+      { "letter": "F", "text": "For reading multiple attributes, it is often more performant." }
+    ]
+  },
+  {
+    "idx": 16,
+    "text": "Assuming /squid/food-schedule.csv exists as a regular non-empty file that a program has access to read, what is correct about the following code snippet? (Choose all that apply.)\n<pre>\nPath path = Paths.get(\"/squid/food-schedule.csv\");\nFiles.lines(path) // r1\n  .flatMap(p -> Stream.of(p.split(\",\"))) // r2\n  .map(s -> s.toUpperCase()) // r3\n  .forEach(System.out::println);\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      { "letter": "A", "text": "It compiles but may throw an exception at runtime." },
+      { "letter": "B", "text": "The code will not compile because of line r1." },
+      { "letter": "C", "text": "The code will not compile because of line r2." },
+      { "letter": "D", "text": "The code will not compile because of line r3." },
+      { "letter": "E", "text": "It may not print anything at runtime." },
+      { "letter": "F", "text": "If it prints anything, it will not include commas." }
+    ]
+  },
+  {
+    "idx": 17,
+    "text": "Assuming the current directory is /animals/cute, which are possible results of executing the following code? (Choose all that apply.)\n<pre>\nFiles.walk(Paths.get(\"..\").toRealPath().getParent()) // u1\n  .map(p -> p.toAbsolutePath().toString()) // u2\n  .filter(s -> s.endsWith(\".java\")) // u3\n  .collect(Collectors.toList())\n  .forEach(System.out::println);\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      { "letter": "A", "text": "It compiles but may throw an exception at runtime." },
+      { "letter": "B", "text": "The code will not compile because of line u1." },
+      { "letter": "C", "text": "The code will not compile because of line u2." },
+      { "letter": "D", "text": "The code will not compile because of line u3." },
+      { "letter": "E", "text": "It prints all .java files in the /animals directory tree." },
+      { "letter": "F", "text": "It prints all .java files in the /animals/cute directory tree." },
+      { "letter": "G", "text": "It prints all .java files in the root directory tree." }
+    ]
+  },
+  {
+    "idx": 18,
+    "text": "Assuming the directories and files referenced here all exist and are accessible within the file system, what is the result of the following code?\n<pre>\nPath path1 = Paths.get(\"/lizard/./\").resolve(Paths.get(\"walking.txt\"));\nPath path2 = new File(\"/lizard/././actions/../walking.txt\").toPath();\nSystem.out.print(Files.isSameFile(path1,path2));\nSystem.out.print(\" \"+path1.equals(path2));\nSystem.out.print(\" \"+path1.normalize().equals(path2.normalize()));\n</pre>",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "true true true" },
+      { "letter": "B", "text": "false false false" },
+      { "letter": "C", "text": "false true false" },
+      { "letter": "D", "text": "true false true" },
+      { "letter": "E", "text": "true false false" },
+      { "letter": "F", "text": "The code does not compile." }
+    ]
+  },
+  {
+    "idx": 19,
+    "text": "What are three advantages of the NIO.2 API over the legacy java.io.File class for working with files?",
+    "select_type": "multiply",
+    "answers": [
+      { "letter": "A", "text": "NIO.2 supports file system–dependent attributes." },
+      { "letter": "B", "text": "NIO.2 can be used to list all the files within a single directory." },
+      { "letter": "C", "text": "NIO.2 allows you to traverse a directory tree directly." },
+      { "letter": "D", "text": "NIO.2 can be used to delete files and non-empty directories." },
+      { "letter": "E", "text": "NIO.2 supports symbolic links." },
+      { "letter": "F", "text": "NIO.2 can be used to read the last-modified time." }
+    ]
+  },
+  {
+    "idx": 20,
+    "text": "Assuming the current directory is /seals/harp/food, what is the result of executing the following code?\n<pre>\nfinal Path path = Paths.get(\".\").normalize();\n// h1\nint count = 0;\nfor(int i=0; i&lt;path.getNameCount(); ++i) {\n  count++;\n}\nSystem.out.println(count);\n</pre>",
+    "select_type": "single",
+    "answers": [
+      { "letter": "A", "text": "0" },
+      { "letter": "B", "text": "1" },
+      { "letter": "C", "text": "2" },
+      { "letter": "D", "text": "3" },
+      { "letter": "E", "text": "4" },
+      { "letter": "F", "text": "The code throws a runtime exception because of line h1." }
+    ]
+  }
+]

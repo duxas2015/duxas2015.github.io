@@ -1,0 +1,317 @@
+[
+  {
+    "idx": 1,
+    "correct": {
+      "letter": [
+        "G"
+      ],
+      "description": "Line 5 does not compile. This question is checking to see if you are paying attention to the types. numFish is an int and 1 is an int. Therefore, we use numeric addition and get 5. The problem is that we can’t store an int in a String variable. Supposing line 5 said String anotherFish = numFish + 1 + \"\";. In that case, the answer would be options A and D. The variable defined on line 5 would be the string \"5\", and both output statements would use concatenation."
+    }
+  },
+  {
+    "idx": 2,
+    "correct": {
+      "letter": [
+        "A",
+        "C",
+        "D"
+      ],
+      "description": "The code compiles fine. Line 3 points to the String in the string pool. Line 4 calls the String constructor explicitly and is therefore a different object than s. Lines 5 and 7 check for object equality, which is true, and so print one and three. Line 6 uses object reference equality, which is not true since we have different objects. Line 7 also compares references but is true since both references point to the object from the string pool. Finally, line 8 compares one object from the string pool with one that was explicitly constructed and returns false."
+    }
+  },
+  {
+    "idx": 3,
+    "correct": {
+      "letter": [
+        "B",
+        "C",
+        "E"
+      ],
+      "description": "Immutable means the state of an object cannot change once it is created. Immutable objects can be garbage collected just like mutable objects. String is immutable. StringBuilder can be mutated with methods like append(). Although StringBuffer isn’t on the exam, you should know about it anyway in case older questions haven’t been removed."
+    }
+  },
+  {
+    "idx": 4,
+    "correct": {
+      "letter": [
+        "B"
+      ],
+      "description": "This example uses method chaining. After the call to append(), sb contains \"aaa\". That result is passed to the first insert() call, which inserts at index 1. At this point sb contains abbbaa. That result is passed to the final insert(), which inserts at index 4, resulting in abbaccca."
+    }
+  },
+  {
+    "idx": 5,
+    "correct": {
+      "letter": [
+        "F"
+      ],
+      "description": "The question is trying to distract you into paying attention to logical equality versus object reference equality. It is hoping you will miss the fact that line 4 does not compile. Java does not allow you to compare String and StringBuilder using ==."
+    }
+  },
+  {
+    "idx": 6,
+    "correct": {
+      "letter": [
+        "B"
+      ],
+      "description": "A String is immutable. Calling concat() returns a new String but does not change the original. A StringBuilder is mutable. Calling append() adds characters to the existing character sequence along with returning a reference to the same object."
+    }
+  },
+  {
+    "idx": 7,
+    "correct": {
+      "letter": [
+        "B",
+        "D",
+        "E"
+      ],
+      "description": "length() is simply a count of the number of characters in a String. In this case, there are six characters. charAt() returns the character at that index. Remember that indexes are zero based, which means that index 3 corresponds to d and index 6 corresponds to 1 past the end of the array. A StringIndexOutOfBoundsException is thrown for the last line."
+    }
+  },
+  {
+    "idx": 8,
+    "correct": {
+      "letter": [
+        "A",
+        "D",
+        "E"
+      ],
+      "description": "substring() has two forms. The first takes the index to start with and the index to stop immediately before. The second takes just the index to start with and goes to the end of the String. Remember that indexes are zero based. The first call starts at index 1 and ends with index 2 since it needs to stop before index 3. The second call starts at index 7 and ends in the same place, resulting in an empty String. This prints out a blank line. The final call starts at index 7 and goes to the end of the String."
+    }
+  },
+  {
+    "idx": 9,
+    "correct": {
+      "letter": [
+        "C"
+      ],
+      "description": "This question is trying to see if you know that String objects are immutable. Line 4 returns \"PURR\" but the result is ignored and not stored in s. Line 5 returns \"purr\" since there is no whitespace present but the result is again ignored. Line 6 returns \"ur\" because it starts with index 1 and ends before index 3 using zero-based indexes. The result is ignored again. Finally, on line 6 something happens. We concatenate four new characters to s and now have a String of length 8."
+    }
+  },
+  {
+    "idx": 10,
+    "correct": {
+      "letter": [
+        "F"
+      ],
+      "description": "a += 2 expands to a = a + 2. A String concatenated with any other type gives a String. Lines 14, 15, and 16 all append to a, giving a result of \"2cfalse\". The if statement on line 18 returns false because the values of the two String objects are the same using object equality. The if statement on line 17 returns false because the two String objects are not the same in memory. One comes directly from the string pool and the other comes from building using String operations."
+    }
+  },
+  {
+    "idx": 11,
+    "correct": {
+      "letter": [
+        "E"
+      ],
+      "description": "Line 6 adds 1 to total because substring() includes the starting index but not the ending index. Line 7 adds 0 to total. Line 8 is a problem: Java does not allow the indexes to be specified in reverse order and the code throws a StringIndexOutOfBoundsException."
+    }
+  },
+  {
+    "idx": 12,
+    "correct": {
+      "letter": [
+        "A"
+      ],
+      "description": "First, we delete the characters at index 2 until the character one before index 8. At this point, 0189 is in numbers. The following line uses method chaining. It appends a dash to the end of the characters sequence, resulting in 0189–, and then inserts a plus sign at index 2, resulting in 01+89–."
+    }
+  },
+  {
+    "idx": 13,
+    "correct": {
+      "letter": [
+        "F"
+      ],
+      "description": "This is a trick question. The first line does not compile because you cannot assign a String to a StringBuilder. If that line were StringBuilder b = new StringBuilder(\"rumble\"), the code would compile and print rum4. Watch out for this sort of trick on the exam. You could easily spend a minute working out the character positions for no reason at all."
+    }
+  },
+  {
+    "idx": 14,
+    "correct": {
+      "letter": [
+        "A",
+        "C"
+      ],
+      "description": "The reverse() method is the easiest way of reversing the characters in a StringBuilder; therefore, option A is correct. Option B is a nice distraction—it does in fact return \"avaJ\". However, substring() returns a String, which is not stored anywhere. Option C uses method chaining. First it creates the value \"JavavaJ$\". Then it removes the first three characters, resulting in \"avaJ$\". Finally, it removes the last character, resulting in \"avaJ\". Option D throws an exception because you cannot delete the character after the last index. Remember that deleteCharAt() uses indexes that are zero based and length() counts starting with 1."
+    }
+  },
+  {
+    "idx": 15,
+    "correct": {
+      "letter": [
+        "C",
+        "E",
+        "F"
+      ],
+      "description": "Option C uses the variable name as if it were a type, which is clearly illegal. Options E and F don’t specify any size. Although it is legal to leave out the size for later dimensions of a multidimensional array, the first one is required. Option A declares a legal 2D array. Option B declares a legal 3D array. Option D declares a legal 2D array. Remember that it is normal to see on the exam types you might not have learned. You aren’t expected to know anything about them."
+    }
+  },
+  {
+    "idx": 16,
+    "correct": {
+      "letter": [
+        "C"
+      ],
+      "description": "Arrays define a property called length. It is not a method, so parentheses are not allowed."
+    }
+  },
+  {
+    "idx": 17,
+    "correct": {
+      "letter": [
+        "F"
+      ],
+      "description": "The ArrayList class defines a method called size()."
+    }
+  },
+  {
+    "idx": 18,
+    "correct": {
+      "letter": [
+        "A",
+        "C",
+        "D",
+        "E"
+      ],
+      "description": "An array is not able to change size and can have multiple dimensions. Both an array and ArrayList are ordered and have indexes. Neither is immutable. The elements can change in value."
+    }
+  },
+  {
+    "idx": 19,
+    "correct": {
+      "letter": [
+        "B",
+        "C"
+      ],
+      "description": "An array does not override equals() and so uses object equality. ArrayList does override equals() and defines it as the same elements in the same order. The compiler does not know when an index is out of bounds and thus can’t give you a compiler error. The code will throw an exception at runtime, though."
+    }
+  },
+  {
+    "idx": 20,
+    "correct": {
+      "letter": [
+        "D"
+      ],
+      "description": "The code does not compile because list is instantiated using generics. Only String objects can be added to list and 7 is an int."
+    }
+  },
+  {
+    "idx": 21,
+    "correct": {
+      "letter": [
+        "C"
+      ],
+      "description": "After line 4, values has one element (4). After line 5, values has two elements (4, 5). After line 6, values has two elements (4, 6) because set() does a replace. After line 7, values has only one element (6)."
+    }
+  },
+  {
+    "idx": 22,
+    "correct": {
+      "letter": [
+        "D"
+      ],
+      "description": "The code compiles and runs fine. However, an array must be sorted for binarySearch() to return a meaningful result."
+    }
+  },
+  {
+    "idx": 23,
+    "correct": {
+      "letter": [
+        "A"
+      ],
+      "description": "Line 4 creates a fixed size array of size 4. Line 5 sorts it. Line 6 converts it back to an array. The brackets aren’t in the traditional place, but they are still legal. Line 7 prints the first element, which is now –1."
+    }
+  },
+  {
+    "idx": 24,
+    "correct": {
+      "letter": [
+        "C"
+      ],
+      "description": "Converting from an array to an ArrayList uses Arrays.asList(names). There is no asList() method on an array instance. If this code were corrected to compile, the answer would be option A."
+    }
+  },
+  {
+    "idx": 25,
+    "correct": {
+      "letter": [
+        "D"
+      ],
+      "description": "After sorting, hex contains [30, 3A, 8, FF]. Remember that numbers sort before letters and strings sort alphabetically. This makes 30 come before 8. A binary search correctly finds 8 at index 2 and 3A at index 1. It cannot find 4F but notices it should be at index 2. The rule when an item isn’t found is to negate that index and subtract 1. Therefore, we get –2–1, which is –3."
+    }
+  },
+  {
+    "idx": 26,
+    "correct": {
+      "letter": [
+        "A",
+        "B",
+        "D"
+      ],
+      "description": "Lines 5 and 7 use autoboxing to convert an int to an Integer. Line 6 does not because valueOf() returns an Integer. Line 8 does not because null is not an int. The code does not compile. However, when the for loop tries to unbox null into an int, it fails and throws a NullPointerException."
+    }
+  },
+  {
+    "idx": 27,
+    "correct": {
+      "letter": [
+        "B"
+      ],
+      "description": "The first if statement is false because the variables do not point to the same object. The second if statement is true because ArrayList implements equality to mean the same elements in the same order."
+    }
+  },
+  {
+    "idx": 28,
+    "correct": {
+      "letter": [
+        "D",
+        "F"
+      ],
+      "description": "Options A and B are incorrect because LocalDate does not have a public constructor. Option C is incorrect because months start counting with 1 rather than 0. Option E is incorrect because it uses the old pre–Java 8 way of counting months, again beginning with 0. Options D and F are both correct ways of specifying the desired date."
+    }
+  },
+  {
+    "idx": 29,
+    "correct": {
+      "letter": [
+        "D"
+      ],
+      "description": "A LocalDate does not have a time element. Therefore, it has no method to add hours and the code does not compile."
+    }
+  },
+  {
+    "idx": 30,
+    "correct": {
+      "letter": [
+        "F"
+      ],
+      "description": "Java throws an exception if invalid date values are passed. There is no 40th day in April—or any other month for that matter."
+    }
+  },
+  {
+    "idx": 31,
+    "correct": {
+      "letter": [
+        "B"
+      ],
+      "description": "The date starts out as April 30, 2018. Since dates are immutable and the plus methods have their return values ignored, the result is unchanged. Therefore, option B is correct."
+    }
+  },
+  {
+    "idx": 32,
+    "correct": {
+      "letter": [
+        "E"
+      ],
+      "description": "Even though d has both date and time, the formatter only outputs time."
+    }
+  },
+  {
+    "idx": 33,
+    "correct": {
+      "letter": [
+        "B"
+      ],
+      "description": "Period does not allow chaining. Only the last Period method called counts, so only the two years are subtracted."
+    }
+  }
+]

@@ -1,0 +1,163 @@
+[
+  {
+    "idx": 1,
+    "correct": {
+      "letter": ["A", "B", "E"],
+      "description": "Option A is valid because you can use the dollar sign in identifiers. Option B is valid because you can use an underscore in identifiers. Option C is not a valid identifier because true is a Java reserved word. Option D is not valid because the dot (.) is not allowed in identifiers. Option E is valid because Java is case sensitive, so Public is not a reserved word and therefore a valid identifier. Option F is not valid because the first character is not a letter, $, or _."
+    }
+  },
+  {
+    "idx": 2,
+    "correct": {
+      "letter": ["D"],
+      "description": "Boolean fields initialize to false and references initialize to null, so empty is false and brand is null. Brand = null is output."
+    }
+  },
+  {
+    "idx": 3,
+    "correct": {
+      "letter": ["B", "D", "E"],
+      "description": "Option A (line 4) compiles because short is an integral type. Option B (line 5) generates a compiler error because int is an integral type, but 5.6 is a floating-point type. Option C (line 6) compiles because it is assigned a String. Options D and E (lines 7 and 8) do not compile because short and int are primitives. Primitives do not allow methods to be called on them. Option F (line 9) compiles because length() is defined on String."
+    }
+  },
+  {
+    "idx": 4,
+    "correct": {
+      "letter": ["A", "B"],
+      "description": "Adding the variable at line 2 makes result an instance variable. Since instance variables are in scope for the entire life of the object, option A is correct. Option B is correct because adding the variable at line 4 makes result a local variable with a scope of the whole method. Adding the variable at line 6 makes result a local variable with a scope of lines 6–7. Since it is out of scope on line 8, it doesn’t compile. Line 9 is even more restrictive; it is in scope only for the loop, so option C is incorrect."
+    }
+  },
+  {
+    "idx": 5,
+    "correct": {
+      "letter": ["A", "B", "D"],
+      "description": "Options A and B are correct because they import all the classes in the package. Option D is correct because it imports a specific class. Option C is incorrect because you cannot have a wildcard in the middle of an import statement. Option E is incorrect because you cannot import a package. Option F is incorrect because you cannot have two wildcards in an import statement."
+    }
+  },
+  {
+    "idx": 6,
+    "correct": {
+      "letter": ["E"],
+      "description": "Option E is the correct order for the elements in a Java class. Note that the package and import statements are optional."
+    }
+  },
+  {
+    "idx": 7,
+    "correct": {
+      "letter": ["A", "B", "C"],
+      "description": "The command to compile Java is javac. You pass the name of the file you want to compile, including the extension. Therefore, options A and B are correct. Option C is correct because the wildcard (*) can be used to compile all the Java files in the directory. Options D, E, and F are incorrect because java is the command to run a Java program, not compile it."
+    }
+  },
+  {
+    "idx": 8,
+    "correct": {
+      "letter": ["A", "D", "E"],
+      "description": "An instance variable is in scope as long as the object it is part of exists. A static variable is in scope as long as the class it is part of exists. A local variable is in scope from the time it is declared until the end of the block in which it is declared."
+    }
+  },
+  {
+    "idx": 9,
+    "correct": {
+      "letter": ["A", "B", "E"],
+      "description": "Option A is a valid main() method. Option B is also a valid main() method because the order of the public and static modifiers does not matter. Option E is also valid because the square brackets can come after the variable name."
+    }
+  },
+  {
+    "idx": 10,
+    "correct": {
+      "letter": ["B"],
+      "description": "Java is not required to run the garbage collector. While you can suggest that it run with System.gc(), it is not a guarantee. Objects are eligible for garbage collection when they are no longer reachable. An object can become eligible for garbage collection even if the program is still running."
+    }
+  },
+  {
+    "idx": 11,
+    "correct": {
+      "letter": ["C", "D"],
+      "description": "Option C is correct because the package name must match the directory structure. Option D is correct because the import statement is required to use a class from another package."
+    }
+  },
+  {
+    "idx": 12,
+    "correct": {
+      "letter": ["G"],
+      "description": "The code does not compile because of line 5. You cannot use an underscore at the beginning or end of a literal, or adjacent to a decimal point."
+    }
+  },
+  {
+    "idx": 13,
+    "correct": {
+      "letter": ["A", "D"],
+      "description": "An object can become eligible for garbage collection when it is no longer reachable. This happens if the reference to the object is set to null or if the reference goes out of scope."
+    }
+  },
+  {
+    "idx": 14,
+    "correct": {
+      "letter": ["D"],
+      "description": "The code does not compile because of line 4. The variable result is declared inside the if block, so it is out of scope on line 6."
+    }
+  },
+  {
+    "idx": 15,
+    "correct": {
+      "letter": ["A", "E"],
+      "description": "Option A is correct because it is a valid way to run a Java class. Option E is correct because it is a valid way to run a Java class from a package."
+    }
+  },
+  {
+    "idx": 16,
+    "correct": {
+      "letter": ["B", "C", "D"],
+      "description": "Option B is correct because the name of the file must match the name of the public class. Option C is correct because the code will compile. Option D is correct because the code will run, but it won't do anything because there is no main() method."
+    }
+  },
+  {
+    "idx": 17,
+    "correct": {
+      "letter": ["A", "E"],
+      "description": "A is correct because it is a valid multi-line comment. E is correct because it is a valid single-line comment."
+    }
+  },
+  {
+    "idx": 18,
+    "correct": {
+      "letter": ["C", "D", "E"],
+      "description": "The order of the elements in a Java file is: package, imports, and then the class. All of these elements are optional."
+    }
+  },
+  {
+    "idx": 19,
+    "correct": {
+      "letter": ["A", "D"],
+      "description": "Setting a reference to null means it has no effect on garbage collection. The Rabbit object from line 4 only has a single reference to it: two. Option D is correct because this single reference becomes null on line 9. The Rabbit object declared on line 10 becomes eligible for garbage collection at the end of the method on line 12. Calling System.gc() has no effect on eligibility for garbage collection."
+    }
+  },
+  {
+    "idx": 20,
+    "correct": {
+      "letter": ["B", "E"],
+      "description": "Calling System.gc() suggests that Java might wish to run the garbage collector. Java is free to ignore the request, making option E correct. finalize() runs if an object attempts to be garbage collected, making option B correct."
+    }
+  },
+  {
+    "idx": 21,
+    "correct": {
+      "letter": ["A"],
+      "description": "While the code on line 3 does compile, it is not a constructor because it has a return type. It is a method that happens to have the same name as the class. When the code runs, the default constructor is called and count has the default value (0) for an int."
+    }
+  },
+  {
+    "idx": 22,
+    "correct": {
+      "letter": ["B", "E"],
+      "description": "C++ has operator overloading and pointers. Java made a point of not having either. Java does have references to objects, but these are pointing to an object that can move around in memory. Option B is correct because Java is platform independent. Option E is correct because Java is object oriented. While it does support some parts of functional programming, these occur within a class."
+    }
+  },
+  {
+    "idx": 23,
+    "correct": {
+      "letter": ["C", "D"],
+      "description": "Java puts source code in .java files and bytecode in .class files. It does not use a .bytecode file. When running a Java program, you pass just the name of the class without the .class extension."
+    }
+  }
+]

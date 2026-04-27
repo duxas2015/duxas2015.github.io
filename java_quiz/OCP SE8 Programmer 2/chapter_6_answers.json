@@ -1,0 +1,142 @@
+[
+  {
+    "idx": 1,
+    "correct": {
+      "letter": ["C"],
+      "description": "The method should declare that it throws an exception and the body of the method actually would throw it[cite: 113]. Options E and F are incorrect because both checked and unchecked (runtime) exceptions can be declared in a method signature[cite: 114]. Also, option F is incorrect because SQLException is a checked exception[cite: 115]."
+    }
+  },
+  {
+    "idx": 2,
+    "correct": {
+      "letter": ["B", "C"],
+      "description": "Option A is incorrect because it will move the compilation error to the close() method since it does throw an exception that must be handled or declared[cite: 116]. Option B is correct because the unhandled exception becomes declared[cite: 117]. Option C is correct because the exception becomes handled[cite: 117]. Option D is incorrect because the exception remains unhandled[cite: 118]."
+    }
+  },
+  {
+    "idx": 3,
+    "correct": {
+      "letter": ["E"],
+      "description": "Options B, D, and F are incorrect because only one variable name is allowed in a multi-catch block[cite: 118]. Option A is incorrect because FileNotFoundException is a subclass of IOException[cite: 119]. A multi-catch statement does not allow redundancy, and just catching IOException would have been equivalent[cite: 120]. Option C is incorrect because the IOException that is thrown is not handled[cite: 121]."
+    }
+  },
+  {
+    "idx": 4,
+    "correct": {
+      "letter": ["A", "B"],
+      "description": "A try-with-resources statement does not require a catch or finally block[cite: 122]. A traditional try statement requires at least one of the two[cite: 123]."
+    }
+  },
+  {
+    "idx": 5,
+    "correct": {
+      "letter": ["C"],
+      "description": "After opening both resources in the try-with-resources statement, T is printed[cite: 124]. Then the try-with-resource completes and closes the resources in reverse order from which they were opened[cite: 125]. After W is printed, an exception is thrown; however, the remaining resource is still closed and D is printed[cite: 126]. The exception thrown is then caught and E is printed[cite: 127]. Last, the finally block is run, printing F. Therefore the answer is TWDEF[cite: 128]."
+    }
+  },
+  {
+    "idx": 6,
+    "correct": {
+      "letter": ["G"],
+      "description": "A try-with-resources statement uses parentheses rather than brackets for the try section[cite: 129]. This is likely subtler than a question that you’ll get on the exam, but it is still important to be on alert for details[cite: 130]."
+    }
+  },
+  {
+    "idx": 7,
+    "correct": {
+      "letter": ["C"],
+      "description": "The code compiles fine, so option E is incorrect[cite: 131]. The command line has only two arguments, so args.length is 2 and the if statement is true[cite: 132]. However, because assertions are not enabled, it does not throw an AssertionError, so option B is incorrect[cite: 133]. The println attempts to print args[2], which generates an ArrayIndexOutOfBoundsException, so the answer is option C[cite: 134]."
+    }
+  },
+  {
+    "idx": 8,
+    "correct": {
+      "letter": ["B", "C"],
+      "description": "Java uses the flags –ea or –enableassertions to turn on assertions[cite: 134]. –da or –disableassertions turns off assertions; the colon indicates for a specific class[cite: 135]. Choice B is correct because it turns on assertions for all code[cite: 136]. Choice C is correct because it disables assertions but then turns them back on for this class[cite: 137]."
+    }
+  },
+  {
+    "idx": 9,
+    "correct": {
+      "letter": ["A", "D"],
+      "description": "An assertion consists of a boolean expression followed by an optional colon and message[cite: 138]. The boolean expression is allowed to be in parenthesis, but this is not required. Therefore A and D are correct[cite: 139]."
+    }
+  },
+  {
+    "idx": 10,
+    "correct": {
+      "letter": ["A", "E"],
+      "description": "Line 5 does not compile because assert is a reserved word making Choice A correct[cite: 140]. B and C are incorrect because the parenthesis and message are both optional[cite: 141]. D is incorrect because assertions should not have side effects[cite: 142]. E is correct because checking an argument passed from elsewhere in the program is an appropriate use of an assertion[cite: 142]."
+    }
+  },
+  {
+    "idx": 11,
+    "correct": {
+      "letter": ["B", "D", "E"],
+      "description": "You need to memorize the contents of Table 6.2 and Table 6.3 before the exam[cite: 143]."
+    }
+  },
+  {
+    "idx": 12,
+    "correct": {
+      "letter": ["A", "D", "E"],
+      "description": "Since a single exception type is caught, only the same type of exception or a subclass is allowed to be assigned to the variable in the catch block[cite: 144]. Therefore D and E are correct[cite: 145]. Additionally A is correct because there are no changes to the variable[cite: 145]."
+    }
+  },
+  {
+    "idx": 13,
+    "correct": {
+      "letter": ["A"],
+      "description": "Since a multi-catch is used, the variable in the catch block is effectively final and cannot be reassigned[cite: 146]."
+    }
+  },
+  {
+    "idx": 14,
+    "correct": {
+      "letter": ["F"],
+      "description": "A multi-catch cannot catch both a superclass and subclass[cite: 147]. Notice how similar questions can be while testing something that is entirely different[cite: 148]."
+    }
+  },
+  {
+    "idx": 15,
+    "correct": {
+      "letter": ["B", "E"],
+      "description": "A checked exception extends Exception but not RuntimeException[cite: 149]. The entire hierarchy counts, so B and E are both correct[cite: 150]."
+    }
+  },
+  {
+    "idx": 16,
+    "correct": {
+      "letter": ["C"],
+      "description": "The exception inside the try block becomes the primary exception since it is thrown first[cite: 151]. Then two suppressed exceptions are added to it when trying to close the AutoCloseable resources[cite: 152]."
+    }
+  },
+  {
+    "idx": 17,
+    "correct": {
+      "letter": ["A", "B"],
+      "description": "Closeable was the original interface for IO classes[cite: 153]. AutoCloseable was added in Java 7 along with try-with-resources[cite: 153]. Closeable extends AutoCloseable for backward compatibility[cite: 154]."
+    }
+  },
+  {
+    "idx": 18,
+    "correct": {
+      "letter": ["B"],
+      "description": "The main difference between AutoCloseable and Closeable is that AutoCloseable has Exception in the signature and Closeable has only IOException in the signature[cite: 154]. Since IllegalStateException is a runtime exception, it can be thrown by any method[cite: 155]."
+    }
+  },
+  {
+    "idx": 19,
+    "correct": {
+      "letter": ["D"],
+      "description": "Choice A is allowed because Java 7 and later “translates” Exception in a catch block to the correct one[cite: 156]. Choices C and E are allowed because they actually catch a SQLException[cite: 157]. Choice D is not allowed because there is no IOException declared[cite: 158]. Choice B is allowed because a method does not have to handle an exception if it declares it[cite: 159]."
+    }
+  },
+  {
+    "idx": 20,
+    "correct": {
+      "letter": ["E"],
+      "description": "You can create checked or unchecked exceptions[cite: 160]. The default constructor is used if one is not supplied[cite: 160]. There is no requirement to implement specific methods[cite: 161]."
+    }
+  }
+]

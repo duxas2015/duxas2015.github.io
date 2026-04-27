@@ -1,0 +1,737 @@
+[
+  {
+    "idx": 1,
+    "text": "Which of the following pairs fills in the blanks to make this code compile?\n<pre>\n5: public void read() ___________ SQLException {\n6: ___________ new SQLException();\n7: }\n</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "throw on line 5 and throw on line 6"
+      },
+      {
+        "letter": "B",
+        "text": "throw on line 5 and throws on line 6"
+      },
+      {
+        "letter": "C",
+        "text": "throws on line 5 and throw on line 6"
+      },
+      {
+        "letter": "D",
+        "text": "throws on line 5 and throws on line 6"
+      },
+      {
+        "letter": "E",
+        "text": "None of the above. SQLException is a checked exception and cannot be thrown."
+      },
+      {
+        "letter": "F",
+        "text": "None of the above. SQLException is a runtime exception and cannot be thrown."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "C"
+      ],
+      "description": "The method should declare that it throws an exception and the body of the method actually would throw it[cite: 113]. Options E and F are incorrect because both checked and unchecked (runtime) exceptions can be declared in a method signature[cite: 114]. Also, option F is incorrect because SQLException is a checked exception[cite: 115]."
+    }
+  },
+  {
+    "idx": 2,
+    "text": "Which of the following changes when made independently would make this code compile? (Choose all that apply.)\n<pre>\n1: public class StuckTurkeyCage implements AutoCloseable {\n2:   public void close() throws Exception {\n3:     throw new Exception(\"Cage door does not close\");\n4:   }\n5:   public static void main(String[] args) {\n6:     try (StuckTurkeyCage t = new StuckTurkeyCage()) {\n7:       System.out.println(\"put turkeys in\");\n8:     }\n9:   }\n10: }\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Remove throws Exception from the declaration on line 2."
+      },
+      {
+        "letter": "B",
+        "text": "Add throws Exception to the declaration on line 5."
+      },
+      {
+        "letter": "C",
+        "text": "Change line 8 to <pre>} catch (Exception e) {}</pre>."
+      },
+      {
+        "letter": "D",
+        "text": "Change line 8 to <pre>} finally {}</pre>."
+      },
+      {
+        "letter": "E",
+        "text": "None of the above will make the code compile."
+      },
+      {
+        "letter": "F",
+        "text": "The code already compiles as is."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "B",
+        "C"
+      ],
+      "description": "Option A is incorrect because it will move the compilation error to the close() method since it does throw an exception that must be handled or declared[cite: 116]. Option B is correct because the unhandled exception becomes declared[cite: 117]. Option C is correct because the exception becomes handled[cite: 117]. Option D is incorrect because the exception remains unhandled[cite: 118]."
+    }
+  },
+  {
+    "idx": 3,
+    "text": "Which of the following fills in the blank to make the code compile? (Choose all that apply)\n<pre>\npublic static void main(String[] args) {\n  try {\n    throw new IOException();\n  } catch (__________________________) { }\n}\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "<pre>FileNotFoundException | IOException e</pre>"
+      },
+      {
+        "letter": "B",
+        "text": "<pre>FileNotFoundException e | IOException e</pre>"
+      },
+      {
+        "letter": "C",
+        "text": "<pre>FileNotFoundException | RuntimeException e</pre>"
+      },
+      {
+        "letter": "D",
+        "text": "<pre>FileNotFoundException e | RuntimeException e</pre>"
+      },
+      {
+        "letter": "E",
+        "text": "<pre>IOException | RuntimeException e</pre>"
+      },
+      {
+        "letter": "F",
+        "text": "<pre>IOException e | RuntimeException e</pre>"
+      }
+    ],
+    "correct": {
+      "letter": [
+        "E"
+      ],
+      "description": "Options B, D, and F are incorrect because only one variable name is allowed in a multi-catch block[cite: 118]. Option A is incorrect because FileNotFoundException is a subclass of IOException[cite: 119]. A multi-catch statement does not allow redundancy, and just catching IOException would have been equivalent[cite: 120]. Option C is incorrect because the IOException that is thrown is not handled[cite: 121]."
+    }
+  },
+  {
+    "idx": 4,
+    "text": "Which of the following are true statements? (Choose all that apply.)",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "A traditional try statement without a catch block requires a finally block."
+      },
+      {
+        "letter": "B",
+        "text": "A traditional try statement without a finally block requires a catch block."
+      },
+      {
+        "letter": "C",
+        "text": "A traditional try statement with only one statement can omit the {}."
+      },
+      {
+        "letter": "D",
+        "text": "A try-with-resources statement without a catch block requires a finally block."
+      },
+      {
+        "letter": "E",
+        "text": "A try-with-resources statement without a finally block requires a catch block."
+      },
+      {
+        "letter": "F",
+        "text": "A try-with-resources statement with only one statement can omit the {}."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "A",
+        "B"
+      ],
+      "description": "A try-with-resources statement does not require a catch or finally block[cite: 122]. A traditional try statement requires at least one of the two[cite: 123]."
+    }
+  },
+  {
+    "idx": 5,
+    "text": "What is the output of the following code?\n<pre>\nimport java.io.*;\npublic class AutocloseableFlow {\n  static class Door implements AutoCloseable {\n    public void close() {\n      System.out.print(\"D\");\n    } }\n  static class Window implements Closeable {\n    public void close() {\n      System.out.print(\"W\");\n      throw new RuntimeException();\n    } }\n  public static void main(String[] args) {\n    try (Door d = new Door(); Window w = new Window()) {\n      System.out.print(\"T\");\n    } catch (Exception e) {\n      System.out.print(\"E\");\n    } finally {\n      System.out.print(\"F\");\n    } } }\n</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "TWF"
+      },
+      {
+        "letter": "B",
+        "text": "TWDF"
+      },
+      {
+        "letter": "C",
+        "text": "TWDEF"
+      },
+      {
+        "letter": "D",
+        "text": "TWF followed by an exception"
+      },
+      {
+        "letter": "E",
+        "text": "TWDF followed by an exception"
+      },
+      {
+        "letter": "F",
+        "text": "TWEF followed by an exception"
+      },
+      {
+        "letter": "G",
+        "text": "The code does not compile."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "C"
+      ],
+      "description": "After opening both resources in the try-with-resources statement, T is printed[cite: 124]. Then the try-with-resource completes and closes the resources in reverse order from which they were opened[cite: 125]. After W is printed, an exception is thrown; however, the remaining resource is still closed and D is printed[cite: 126]. The exception thrown is then caught and E is printed[cite: 127]. Last, the finally block is run, printing F. Therefore the answer is TWDEF[cite: 128]."
+    }
+  },
+  {
+    "idx": 6,
+    "text": "What is the output of the following code?\n<pre>\nimport java.io.*;\npublic class AutocloseableFlow {\n  static class Door implements AutoCloseable {\n    public void close() {\n      System.out.print(\"D\");\n      throw new RuntimeException();\n    } }\n  static class Window implements Closeable {\n    public void close() {\n      System.out.print(\"W\");\n      throw new RuntimeException();\n    } }\n  public static void main(String[] args) {\n    try {\n      Door d = new Door(); Window w = new Window()\n    }\n    {\n      System.out.print(\"T\");\n    } catch (Exception e) {\n      System.out.print(\"E\");\n    } finally {\n      System.out.print(\"F\");\n    } } }\n</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "TWF"
+      },
+      {
+        "letter": "B",
+        "text": "TWDF"
+      },
+      {
+        "letter": "C",
+        "text": "TWDEF"
+      },
+      {
+        "letter": "D",
+        "text": "TWF followed by an exception"
+      },
+      {
+        "letter": "E",
+        "text": "TWDF followed by an exception"
+      },
+      {
+        "letter": "F",
+        "text": "TWEF followed by an exception"
+      },
+      {
+        "letter": "G",
+        "text": "The code does not compile."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "G"
+      ],
+      "description": "A try-with-resources statement uses parentheses rather than brackets for the try section[cite: 129]. This is likely subtler than a question that you’ll get on the exam, but it is still important to be on alert for details[cite: 130]."
+    }
+  },
+  {
+    "idx": 7,
+    "text": "What is the result of running <pre>java EchoInput hi there</pre> with the following code?\n<pre>\npublic class EchoInput {\n  public static void main(String [] args) {\n    if(args.length &lt;= 3) assert false;\n    System.out.println(args[0] + args[1] + args[2]);\n  }\n}\n</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "hithere"
+      },
+      {
+        "letter": "B",
+        "text": "The assert statement throws an AssertionError."
+      },
+      {
+        "letter": "C",
+        "text": "The code throws an ArrayIndexOutOfBoundsException."
+      },
+      {
+        "letter": "D",
+        "text": "The code compiles and runs successfully, but there is no output."
+      },
+      {
+        "letter": "E",
+        "text": "The code does not compile."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "C"
+      ],
+      "description": "The code compiles fine, so option E is incorrect[cite: 131]. The command line has only two arguments, so args.length is 2 and the if statement is true[cite: 132]. However, because assertions are not enabled, it does not throw an AssertionError, so option B is incorrect[cite: 133]. The println attempts to print args[2], which generates an ArrayIndexOutOfBoundsException, so the answer is option C[cite: 134]."
+    }
+  },
+  {
+    "idx": 8,
+    "text": "Which of the following command lines cause this program to fail on the assertion? (Choose all that apply.)\n<pre>\npublic class On {\n  public static void main(String[] args) {\n    String s = null;\n    assert s != null;\n  }\n}\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "java –da On"
+      },
+      {
+        "letter": "B",
+        "text": "java –ea On"
+      },
+      {
+        "letter": "C",
+        "text": "java -da -ea:On On"
+      },
+      {
+        "letter": "D",
+        "text": "java -ea -da:On On"
+      },
+      {
+        "letter": "E",
+        "text": "The code does not compile."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "B",
+        "C"
+      ],
+      "description": "Java uses the flags –ea or –enableassertions to turn on assertions[cite: 134]. –da or –disableassertions turns off assertions; the colon indicates for a specific class[cite: 135]. Choice B is correct because it turns on assertions for all code[cite: 136]. Choice C is correct because it disables assertions but then turns them back on for this class[cite: 137]."
+    }
+  },
+  {
+    "idx": 9,
+    "text": "Which of the following prints OhNo with the assertion failure when the number is negative? (Choose all that apply.)",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "<pre>assert n &lt; 0: \"OhNo\";</pre>"
+      },
+      {
+        "letter": "B",
+        "text": "<pre>assert n &lt; 0, \"OhNo\";</pre>"
+      },
+      {
+        "letter": "C",
+        "text": "<pre>assert n &lt; 0 (\"OhNo\");</pre>"
+      },
+      {
+        "letter": "D",
+        "text": "<pre>assert(n &lt; 0): \"OhNo\";</pre>"
+      },
+      {
+        "letter": "E",
+        "text": "<pre>assert(n &lt; 0, \"OhNo\");</pre>"
+      }
+    ],
+    "correct": {
+      "letter": [
+        "A",
+        "D"
+      ],
+      "description": "An assertion consists of a boolean expression followed by an optional colon and message[cite: 138]. The boolean expression is allowed to be in parenthesis, but this is not required. Therefore A and D are correct[cite: 139]."
+    }
+  },
+  {
+    "idx": 10,
+    "text": "Which of the following are true of the code? (Choose all that apply.)\n<pre>\n4: private int addPlusOne(int a, int b) {\n5:   boolean assert = false;\n6:   assert a++ &gt; 0;\n7:   assert b &gt; 0;\n8:   return a + b;\n9: }\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Line 5 does not compile."
+      },
+      {
+        "letter": "B",
+        "text": "Lines 6 and 7 do not compile because they are missing the String message."
+      },
+      {
+        "letter": "C",
+        "text": "Lines 6 and 7 do not compile because they are missing parentheses."
+      },
+      {
+        "letter": "D",
+        "text": "Line 6 is an appropriate use of an assertion."
+      },
+      {
+        "letter": "E",
+        "text": "Line 7 is an appropriate use of an assertion."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "A",
+        "E"
+      ],
+      "description": "Line 5 does not compile because assert is a reserved word making Choice A correct[cite: 140]. B and C are incorrect because the parenthesis and message are both optional[cite: 141]. D is incorrect because assertions should not have side effects[cite: 142]. E is correct because checking an argument passed from elsewhere in the program is an appropriate use of an assertion[cite: 142]."
+    }
+  },
+  {
+    "idx": 11,
+    "text": "Which of the following are runtime exceptions? (Choose all that apply.)",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Exception"
+      },
+      {
+        "letter": "B",
+        "text": "IllegalStateException"
+      },
+      {
+        "letter": "C",
+        "text": "IOException"
+      },
+      {
+        "letter": "D",
+        "text": "MissingResourceException"
+      },
+      {
+        "letter": "E",
+        "text": "DateTimeParseException"
+      },
+      {
+        "letter": "F",
+        "text": "SQLException"
+      }
+    ],
+    "correct": {
+      "letter": [
+        "B",
+        "D",
+        "E"
+      ],
+      "description": "You need to memorize the contents of Table 6.2 and Table 6.3 before the exam[cite: 143]."
+    }
+  },
+  {
+    "idx": 12,
+    "text": "Which of the following can legally fill in the blank? (Choose all that apply.)\n<pre>\npublic class AhChoo {\n  static class SneezeException extends Exception { }\n  static class SniffleException extends SneezeException { }\n  public static void main(String[] args) throws SneezeException {\n    try {\n      throw new SneezeException();\n    } catch (SneezeException e) {\n      ______________\n      throw e;\n    } } }\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "// leave line blank"
+      },
+      {
+        "letter": "B",
+        "text": "<pre>e = new Exception();</pre>"
+      },
+      {
+        "letter": "C",
+        "text": "<pre>e = new RuntimeException();</pre>"
+      },
+      {
+        "letter": "D",
+        "text": "<pre>e = new SneezeException();</pre>"
+      },
+      {
+        "letter": "E",
+        "text": "<pre>e = new SniffleException();</pre>"
+      },
+      {
+        "letter": "F",
+        "text": "None of the above; the code does not compile."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "A",
+        "D",
+        "E"
+      ],
+      "description": "Since a single exception type is caught, only the same type of exception or a subclass is allowed to be assigned to the variable in the catch block[cite: 144]. Therefore D and E are correct[cite: 145]. Additionally A is correct because there are no changes to the variable[cite: 145]."
+    }
+  },
+  {
+    "idx": 13,
+    "text": "Which of the following can legally fill in the blank? (Choose all that apply.)\n<pre>\npublic class AhChoo {\n  static class SneezeException extends Exception { }\n  static class SniffleException extends SneezeException { }\n  public static void main(String[] args) throws SneezeException {\n    try {\n      throw new SneezeException();\n    } catch (SneezeException | RuntimeException e) {\n      _________________\n      throw e;\n    } } }\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "// leave line blank"
+      },
+      {
+        "letter": "B",
+        "text": "<pre>e = new Exception();</pre>"
+      },
+      {
+        "letter": "C",
+        "text": "<pre>e = new RuntimeException();</pre>"
+      },
+      {
+        "letter": "D",
+        "text": "<pre>e = new SneezeException();</pre>"
+      },
+      {
+        "letter": "E",
+        "text": "<pre>e = new SniffleException();</pre>"
+      },
+      {
+        "letter": "F",
+        "text": "None of the above; the code does not compile."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "A"
+      ],
+      "description": "Since a multi-catch is used, the variable in the catch block is effectively final and cannot be reassigned[cite: 146]."
+    }
+  },
+  {
+    "idx": 14,
+    "text": "Which of the following can legally fill in the blank? (Choose all that apply.)\n<pre>\npublic class AhChoo {\n  static class SneezeException extends Exception { }\n  static class SniffleException extends SneezeException { }\n  public static void main(String[] args) throws SneezeException {\n    try {\n      throw new SneezeException();\n    } catch (SneezeException | SniffleException e) {\n      _________________\n      throw e;\n    } } }\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "// leave line blank"
+      },
+      {
+        "letter": "B",
+        "text": "<pre>e = new Exception();</pre>"
+      },
+      {
+        "letter": "C",
+        "text": "<pre>e = new RuntimeException();</pre>"
+      },
+      {
+        "letter": "D",
+        "text": "<pre>e = new SneezeException();</pre>"
+      },
+      {
+        "letter": "E",
+        "text": "<pre>e = new SniffleException();</pre>"
+      },
+      {
+        "letter": "F",
+        "text": "None of the above; the code does not compile."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "F"
+      ],
+      "description": "A multi-catch cannot catch both a superclass and subclass[cite: 147]. Notice how similar questions can be while testing something that is entirely different[cite: 148]."
+    }
+  },
+  {
+    "idx": 15,
+    "text": "Which of the following are checked exceptions? (Choose all that apply.)\n<pre>\nclass One extends RuntimeException{}\nclass Two extends Exception{}\nclass Three extends Error{}\nclass Four extends One{}\nclass Five extends Two{}\nclass Six extends Three{}\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "One"
+      },
+      {
+        "letter": "B",
+        "text": "Two"
+      },
+      {
+        "letter": "C",
+        "text": "Three"
+      },
+      {
+        "letter": "D",
+        "text": "Four"
+      },
+      {
+        "letter": "E",
+        "text": "Five"
+      },
+      {
+        "letter": "F",
+        "text": "Six"
+      }
+    ],
+    "correct": {
+      "letter": [
+        "B",
+        "E"
+      ],
+      "description": "A checked exception extends Exception but not RuntimeException[cite: 149]. The entire hierarchy counts, so B and E are both correct[cite: 150]."
+    }
+  },
+  {
+    "idx": 16,
+    "text": "What is the output of the following?\n<pre>\npublic class SnowStorm {\n  static class Walk implements AutoCloseable {\n    public void close() {\n      throw new RuntimeException(\"snow\");\n    }\n  }\n  public static void main(String[] args) {\n    try (Walk walk1 = new Walk(); Walk walk2 = new Walk();) {\n      throw new RuntimeException(\"rain\");\n    } catch(Exception e) {\n      System.out.println(e.getMessage() + \" \" + e.getSuppressed().length);\n    } } }\n</pre>",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "rain 0"
+      },
+      {
+        "letter": "B",
+        "text": "rain 1"
+      },
+      {
+        "letter": "C",
+        "text": "rain 2"
+      },
+      {
+        "letter": "D",
+        "text": "show 0"
+      },
+      {
+        "letter": "E",
+        "text": "snow 1"
+      },
+      {
+        "letter": "F",
+        "text": "snow 2"
+      },
+      {
+        "letter": "G",
+        "text": "The code does not compile."
+      }
+    ],
+    "correct": {
+      "letter": [
+        "C"
+      ],
+      "description": "The exception inside the try block becomes the primary exception since it is thrown first[cite: 151]. Then two suppressed exceptions are added to it when trying to close the AutoCloseable resources[cite: 152]."
+    }
+  },
+  {
+    "idx": 17,
+    "text": "Fill in the blank: A class that implements _________________may be in a try-with-resource statement. (Choose all that apply.)",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "AutoCloseable"
+      },
+      {
+        "letter": "B",
+        "text": "Closeable"
+      },
+      {
+        "letter": "C",
+        "text": "Exception"
+      },
+      {
+        "letter": "D",
+        "text": "RuntimeException"
+      },
+      {
+        "letter": "E",
+        "text": "Serializable"
+      }
+    ],
+    "correct": {
+      "letter": [
+        "A",
+        "B"
+      ],
+      "description": "Closeable was the original interface for IO classes[cite: 153]. AutoCloseable was added in Java 7 along with try-with-resources[cite: 153]. Closeable extends AutoCloseable for backward compatibility[cite: 154]."
+    }
+  },
+  {
+    "idx": 18,
+    "text": "Which pairs fill in the blanks? The close() method is not allowed to throw a(n) _________________in a class that implements _________________. (Choose all that apply.)",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Exception, AutoCloseable"
+      },
+      {
+        "letter": "B",
+        "text": "Exception, Closeable"
+      },
+      {
+        "letter": "C",
+        "text": "IllegalStateException, AutoCloseable"
+      },
+      {
+        "letter": "D",
+        "text": "IllegalStateException, Closeable"
+      },
+      {
+        "letter": "E",
+        "text": "IOException, AutoCloseable"
+      },
+      {
+        "letter": "F",
+        "text": "IOException, Closeable"
+      }
+    ],
+    "correct": {
+      "letter": [
+        "B"
+      ],
+      "description": "The main difference between AutoCloseable and Closeable is that AutoCloseable has Exception in the signature and Closeable has only IOException in the signature[cite: 154]. Since IllegalStateException is a runtime exception, it can be thrown by any method[cite: 155]."
+    }
+  },
+  {
+    "idx": 19,
+    "text": "Which of the following cannot fill in the blank? (Choose all that apply.)\n<pre>\npublic void read() throws SQLException {\n  try {\n    readFromDatabase();\n  } catch (_________________ e) {\n    throw e;\n  }\n}\nprivate void readFromDatabase() throws SQLException { }\n</pre>",
+    "select_type": "multiply",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "Exception"
+      },
+      {
+        "letter": "B",
+        "text": "RuntimeException"
+      },
+      {
+        "letter": "C",
+        "text": "SQLException"
+      },
+      {
+        "letter": "D",
+        "text": "SQLException | IOException"
+      },
+      {
+        "letter": "E",
+        "text": "SQLException | RuntimeException"
+      }
+    ],
+    "correct": {
+      "letter": [
+        "D"
+      ],
+      "description": "Choice A is allowed because Java 7 and later “translates” Exception in a catch block to the correct one[cite: 156]. Choices C and E are allowed because they actually catch a SQLException[cite: 157]. Choice D is not allowed because there is no IOException declared[cite: 158]. Choice B is allowed because a method does not have to handle an exception if it declares it[cite: 159]."
+    }
+  },
+  {
+    "idx": 20,
+    "text": "Which of the following is true when creating your own exception class?",
+    "select_type": "single",
+    "answers": [
+      {
+        "letter": "A",
+        "text": "One or more constructors must be coded."
+      },
+      {
+        "letter": "B",
+        "text": "Only checked exceptions may be created."
+      },
+      {
+        "letter": "C",
+        "text": "Only unchecked exceptions may be created."
+      },
+      {
+        "letter": "D",
+        "text": "The toString() method must be coded."
+      },
+      {
+        "letter": "E",
+        "text": "None of the above"
+      }
+    ],
+    "correct": {
+      "letter": [
+        "E"
+      ],
+      "description": "You can create checked or unchecked exceptions[cite: 160]. The default constructor is used if one is not supplied[cite: 160]. There is no requirement to implement specific methods[cite: 161]."
+    }
+  }
+]
