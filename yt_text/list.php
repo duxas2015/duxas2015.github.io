@@ -19,5 +19,6 @@ $texts = $stmt->fetchAll();
         <?php endforeach; ?>
     </ul>
     <a href="new.php">+ Добавить новый</a>
+    <a href="upload_excel.php">+ Добавить новый из файла</a>
 </body>
 </html>
