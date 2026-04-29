@@ -396,7 +396,8 @@ function getMobileParam() {
 
 function isMobileVersion(){
 	//if ( (typeof versionMobile !== 'undefined') && versionMobile === true ) { return true; } else { return false; }
-	if ( getDeviceType() === 'mobile' || getMobileParam() === "1" ) return true; else return false;
+//	if ( getDeviceType() === 'mobile' || getMobileParam() === "1" ) return true; else return false;
+return true;
 }
 
 function removeNodeById(id) {
@@ -677,7 +678,8 @@ window.onload = function() {
 					const v = document.getElementsByTagName('video')[0];
 					if (v.paused) { v.play(); } else { v.pause(); }
 				});
-			  
+
+/*			  
 			  // English Subtitle Shift Handlers
 			  document.getElementById("idMoveEngSubBackward").addEventListener('click', ( event ) => { 
 				  shiftTextTrack(findEnglishSubtitleTrack(), -0.2 );
@@ -701,7 +703,7 @@ window.onload = function() {
 				  shiftRussianSubtitle+= 0.2;
 				  console.log(shiftRussianSubtitle.toFixed(2));
 				} );
-				
+*/				
 				// Внутри .then(data => { ... }) после создания плеера
 				const btnAutoForward = document.getElementById('idAutoForward');
 				if (btnAutoForward) {
