@@ -2,6 +2,73 @@ var video;
 var track;
 var shiftEnglishSubtitle = 0;
 var shiftRussianSubtitle = 0;
+var subtitleIntervals = []; // Структура: { start: float, end: float, isGap: boolean }
+var autoForwardTimer = null;
+
+function buildSubtitleMap(textTrack) {
+    subtitleIntervals = [];
+    if (!textTrack || !textTrack.cues || textTrack.cues.length === 0) return;
+
+    const cues = Array.from(textTrack.cues).sort((a, b) => a.startTime - b.startTime);
+    let lastEndTime = 0;
+
+    cues.forEach(cue => {
+        // Если есть промежуток между предыдущим субтитром и текущим
+        if (cue.startTime > lastEndTime) {
+            subtitleIntervals.push({ start: lastEndTime, end: cue.startTime, isGap: true });
+        }
+        // Добавляем сам интервал субтитра
+        subtitleIntervals.push({ start: cue.startTime, end: cue.endTime, isGap: false });
+        lastEndTime = cue.endTime;
+    });
+    
+    // Добавляем финальный интервал до конца видео (условно)
+    subtitleIntervals.push({ start: lastEndTime, end: 100000, isGap: true });
+}
+
+function getNextSubtitleInterval(currentTime) {
+    // Ищем интервал, в который попадает текущее время
+    const interval = subtitleIntervals.find(i => currentTime >= i.start && currentTime < i.end);
+
+    if (interval && interval.isGap) {
+        const diffFromStart = currentTime - interval.start;
+        const diffFromEnd = interval.end - currentTime;
+
+        // Если мы в пустом интервале и от границ больше 0.5 сек
+        if (diffFromStart > 1 && diffFromEnd > 1) {
+            return interval.end - 1;
+        }
+    }
+    return null;
+}
+
+
+function turnOnOffAutoForward( isMobile ) {
+	if (autoForwardTimer) {
+		// Выключаем
+		clearInterval(autoForwardTimer);
+		autoForwardTimer = null;
+		if ( isMobile ) btnAutoForward.classList.remove('active'); // Опционально для стилизации
+		console.log("Auto-forward OFF");
+	} else {
+		// Включаем
+		const v = document.getElementsByTagName('video')[0];
+		const engTrack = findEnglishSubtitleTrack();
+		
+		// Строим карту, если она еще не построена
+		if (subtitleIntervals.length === 0) buildSubtitleMap(engTrack);
+
+		autoForwardTimer = setInterval(() => {
+			const jumpTo = getNextSubtitleInterval(v.currentTime);
+			if (jumpTo !== null) {
+				v.currentTime = jumpTo;
+			}
+		}, 500);
+		
+		if ( isMobile ) btnAutoForward.classList.add('active');
+		console.log("Auto-forward ON");
+	}	
+}	
 
 function findClosestSubtitle ( video, track ) {
     var foundTime;
@@ -32,9 +99,12 @@ function handle(e) {
     else if ( e.code === 'Numpad2' ) { backMoving (3); }
 	else if ( e.code === 'Numpad3' ) { backMoving (4); }
 	else if ( e.code === 'Numpad4' ) { getToTheClosestSubtitle(); }
-	else if ( e.code === 'Numpad0' ) {
+	else if ( e.code === 'Numpad0' && !e.altKey ) {
 		const v = document.getElementsByTagName('video')[0];		
         if (v.paused) { v.play(); } else { v.pause(); }
+    }
+	else if ( e.code === 'Numpad0' && e.altKey ) {
+		turnOnOffAutoForward( false );
     }
 	else if ( e.code === 'Numpad9' ) { 
 	  video = document.getElementsByTagName('video')[0];
@@ -631,6 +701,14 @@ window.onload = function() {
 				  shiftRussianSubtitle+= 0.2;
 				  console.log(shiftRussianSubtitle.toFixed(2));
 				} );
+				
+				// Внутри .then(data => { ... }) после создания плеера
+				const btnAutoForward = document.getElementById('idAutoForward');
+				if (btnAutoForward) {
+					btnAutoForward.addEventListener('click', () => {
+						turnOnOffAutoForward( true );
+					});
+				}
 
 			} else {
 				// desktop
