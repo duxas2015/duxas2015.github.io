@@ -17,10 +17,12 @@ header("Pragma: no-cache");
 	<div id="player"></div>
 	<div id="controlPanel">
 		<button class="clsButton" id="idSetRusSub" type="button">S</button>
+		<button class="clsButton" id="idAutoForward" type="button">A</button>
 		<button class="clsButton" id="idRewindUntilNextSub" type="button">R</button>
 		<button class="clsButton" id="idRewind3Second" type="button">3</button>
 		<button class="clsButton" id="idRewind2Second" type="button">2</button>
 		<button class="clsButton" id="idPauseVideo" type="button">P</button>		
+
 	</div>
 </div>
 
