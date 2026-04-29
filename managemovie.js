@@ -396,8 +396,7 @@ function getMobileParam() {
 
 function isMobileVersion(){
 	//if ( (typeof versionMobile !== 'undefined') && versionMobile === true ) { return true; } else { return false; }
-//	if ( getDeviceType() === 'mobile' || getMobileParam() === "1" ) return true; else return false;
-return true;
+	if ( getDeviceType() === 'mobile' || getMobileParam() === "1" ) return true; else return false;
 }
 
 function removeNodeById(id) {
