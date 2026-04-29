@@ -246,6 +246,7 @@ function listen(player) {
 	  if ( findRussianSubtitleTrackIndex() >= 0 ) {
 		document.getElementsByTagName('video')[0].textTracks[findRussianSubtitleTrackIndex()].oncuechange = f;
 	  }	
+	  subtitleIntervals = [];
 	});
 }
 
