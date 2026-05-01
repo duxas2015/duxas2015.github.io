@@ -47,7 +47,7 @@ header("Pragma: no-cache");
     if (movieSettings) {
         var urlData = parseUrl(movieSettings.url);
 		//var url = externalMap[urlData.host] + urlData.path;
-		var url = 'external.api.embr.ws' + urlData.path;
+		var url = 'external.api.kinogram.best' + urlData.path;
 		
         var en_subtitle_directory = movieSettings.en_subtitle_directory;
         var ru_subtitle_directory = movieSettings.ru_subtitle_directory;
