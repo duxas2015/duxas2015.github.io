@@ -1,0 +1,29 @@
+body {
+  overflow: hidden;
+  margin: 0px;
+  padding: 0px;
+}
+#player {
+    width:960px!important;
+    height:540px!important;
+}
+
+#player_iframe
+{
+	width: 100%;
+	height: 100%;
+	border: none;
+}
+
+
+.subtitleContainerCls {
+	padding: 10px;
+	font-size:x-large;
+}
+
+.subtitleOuterContainerCls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:960px!important;	
+}
