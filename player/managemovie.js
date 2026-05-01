@@ -12,8 +12,9 @@ function assignGlobalVariables(){
 }
 
 function buildSubtitleMap(textTrack) {
+	console.log("Build Subtitle Map event");
     subtitleIntervals = [];
-    if (!textTrack || !textTrack.cues || textTrack.cues.length === 0) return;
+	if (!textTrack || !textTrack.cues || textTrack.cues.length === 0) return;
 
     const cues = Array.from(textTrack.cues).sort((a, b) => a.startTime - b.startTime);
     let lastEndTime = 0;
@@ -219,13 +220,13 @@ function findActiveSubtitleTrack(){
 }
 
 var f = function ( event ) { 
- console.log('f event. refresh ru subtitles'); 
+ //console.log('f event. refresh ru subtitles'); 
  if ( event.currentTarget.activeCues[0] !== undefined ) { document.getElementById("subtitleContainerId").innerText = event.currentTarget.activeCues[0].text; } 
  else { document.getElementById("subtitleContainerId").innerHtml = "";}
  }
 
 var f_eng = function ( event ) {
- console.log('f_eng event. refresh ru subtitles');
+ //console.log('f_eng event. refresh ru subtitles');
  if ( event.currentTarget.activeCues[0] !== undefined ) { document.getElementById("engSubtitleContainerId").innerText = event.currentTarget.activeCues[0].text; } 
  else { document.getElementById("engSubtitleContainerId").innerHtml = "";}
  }
@@ -253,8 +254,16 @@ function listen(player) {
 	  }
 	  if ( findRussianSubtitleTrackIndex() >= 0 ) {
 		video.textTracks[findRussianSubtitleTrackIndex()].oncuechange = f;
-	  }	
+	  }
+
+      clearInterval(autoForwardTimer);
+	  autoForwardTimer = null;
 	  subtitleIntervals = [];
+	  if ( isMobileVersion() ) btnAutoForward.classList.remove('active'); // Опционально для стилизации
+	  
+	  // Rebuild Eng Subtitle Map if autoForwardMode enabled	
+  	  //if ( autoForwardTimer !== null ) buildSubtitleMap( video.textTracks[findEnglishSubtitleTrackIndex()] );
+	  
 	});
 }
 
