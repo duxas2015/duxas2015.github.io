@@ -8,52 +8,57 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['files'])) {
     $files = $_FILES['files'];
     $totalFiles = count($files['name']);
     
-    $processedFiles = [];
-
-    // Идем по файлам с шагом 2
-    for ($i = 0; $i < $totalFiles; $i += 2) {
-        // Проверяем, есть ли пара для текущего файла
-        if (isset($files['name'][$i+1])) {
-            $pair = [];
+    // 1. Загружаем все файлы и группируем их по префиксу имени (до первой точки)
+    $groups = [];
+    for ($i = 0; $i < $totalFiles; $i++) {
+        if ($files['error'][$i] === UPLOAD_ERR_OK) {
+            $originalName = $files['name'][$i];
             
-            // Загружаем два файла текущей пары
-            for ($j = 0; $j < 2; $j++) {
-                $idx = $i + $j;
-                $tmpPath = $files['tmp_name'][$idx];
-                $originalName = basename($files['name'][$idx]);
-                $targetPath = $uploadDir . time() . "_" . $originalName; // Добавляем время, чтобы избежать конфликтов имен
-                
-                if (move_uploaded_file($tmpPath, $targetPath)) {
-                    $pair[] = $targetPath;
-                }
-            }
-
-            // Если пара успешно загружена на сервер, запускаем Python
-            if (count($pair) === 2) {
-                $file1 = escapeshellarg($pair[0]);
-                $file2 = escapeshellarg($pair[1]);
-                $outDir = escapeshellarg($uploadDir);
-                $argFormat = escapeshellarg($format);
-
-                $command = "$pythonPath $scriptPath $file1 $file2 $outDir $argFormat 2>&1";
-                exec($command, $output, $returnCode);
-
-                $resultLine = end($output);
-                if ($returnCode === 0 && strpos($resultLine, "SUCCESS:") !== false) {
-                    $fileName = trim(str_replace("SUCCESS:", "", $resultLine));
-                    $processedFiles[] = $fileName;
-                }
-                
-                // Удаляем временные исходные файлы сразу после обработки пары
-                unlink($pair[0]);
-                unlink($pair[1]);
+            // Извлекаем префикс до первой точки
+            $dotPos = strpos($originalName, '.');
+            $prefix = ($dotPos !== false) ? substr($originalName, 0, $dotPos) : $originalName;
+            
+            $tmpPath = $files['tmp_name'][$i];
+            $targetPath = $uploadDir . time() . "_" . $i . "_" . $originalName;
+            
+            if (move_uploaded_file($tmpPath, $targetPath)) {
+                $groups[$prefix][] = $targetPath;
             }
         }
     }
 
-    // Если обработали файлы, отдаем их пользователю через JS (так как header() сработает только для одного файла)
+    $processedFiles = [];
+
+    // 2. Обрабатываем сформированные группы
+    foreach ($groups as $prefix => $paths) {
+        // Проверяем, что в группе ровно два файла для слияния
+        if (count($paths) === 2) {
+            $file1 = escapeshellarg($paths[0]);
+            $file2 = escapeshellarg($paths[1]);
+            $outDir = escapeshellarg($uploadDir);
+            $argFormat = escapeshellarg($format);
+
+            // Запуск Python-скрипта для пары
+            $command = "$pythonPath $scriptPath $file1 $file2 $outDir $argFormat 2>&1";
+            exec($command, $output, $returnCode);
+
+            $resultLine = end($output);
+            if ($returnCode === 0 && strpos($resultLine, "SUCCESS:") !== false) {
+                $fileName = trim(str_replace("SUCCESS:", "", $resultLine));
+                $processedFiles[] = $fileName;
+            }
+            
+            // Удаляем временные исходные файлы
+            foreach ($paths as $p) { unlink($p); }
+        } else {
+            // Если файлов в группе не два, просто удаляем их (не пара)
+            foreach ($paths as $p) { unlink($p); }
+        }
+    }
+
+    // 3. Выдача результатов
     if (!empty($processedFiles)) {
-        echo "<h3>Готово! Файлы объединены:</h3>";
+        echo "<h3>Готово! Пары объединены по именам:</h3>";
         echo "<script>";
         foreach ($processedFiles as $fName) {
             $fileUrl = "downloads/" . $fName;
@@ -74,7 +79,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['files'])) {
         echo "<p><a href='merge.php'>Назад</a></p>";
         exit;
     } else {
-        echo "<h3>Ошибка: не удалось обработать ни одной пары файлов.</h3>";
+        echo "<h3>Ошибка: не найдено подходящих пар файлов с одинаковыми именами.</h3>";
         echo "<p><a href='merge.php'>Попробовать снова</a></p>";
         exit;
     }
@@ -85,21 +90,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['files'])) {
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Merge Multiple Pairs</title>
+    <title>Merge Pairs by Name</title>
     <style>
         body { font-family: sans-serif; max-width: 500px; margin: 50px auto; border: 1px solid #ccc; padding: 20px; border-radius: 10px; background: #f4f4f9; }
         .container { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
         input[type="file"], button { width: 100%; margin: 10px 0; padding: 12px; box-sizing: border-box; }
-        button { background-color: #007bff; color: white; border: none; cursor: pointer; font-weight: bold; border-radius: 4px; }
-        button:hover { background-color: #0056b3; }
-        .radio-group { margin: 15px 0; border: 1px dashed #bbb; padding: 15px; border-radius: 4px; background: #fff; }
-        .info { font-size: 0.9em; color: #666; margin-bottom: 10px; }
+        button { background-color: #28a745; color: white; border: none; cursor: pointer; font-weight: bold; border-radius: 4px; }
+        .radio-group { margin: 15px 0; border: 1px dashed #bbb; padding: 15px; border-radius: 4px; }
+        .info { font-size: 0.9em; color: #666; margin-bottom: 15px; background: #e7f3fe; padding: 10px; border-left: 4px solid #2196F3; }
     </style>
 </head>
 <body>
     <div class="container">
-        <h2>Слияние пар файлов</h2>
-        <p class="info">Выберите четное количество файлов. Скрипт объединит их попарно (1 со 2, 3 с 4 и т.д.)</p>
+        <h2>Слияние пар по имени</h2>
+        <p class="info">Скрипт автоматически найдет пары файлов, у которых совпадает название до первой точки (например, <b>video1</b>.ru.xlsx и <b>video1</b>.en.xlsx).</p>
         
         <form method="POST" enctype="multipart/form-data">
             <label>Выберите файлы .xlsx:</label>
@@ -113,7 +117,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['files'])) {
                 <label for="f_txt">Текст (TSV .txt)</label>
             </div>
 
-            <button type="submit">Объединить все пары</button>
+            <button type="submit">Найти пары и объединить</button>
         </form>
     </div>
 </body>
