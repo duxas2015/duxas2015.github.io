@@ -246,7 +246,11 @@ function listen(player) {
 	  if ( findRussianSubtitleTrackIndex() >= 0 ) {
 		document.getElementsByTagName('video')[0].textTracks[findRussianSubtitleTrackIndex()].oncuechange = f;
 	  }	
-	  subtitleIntervals = [];
+	  
+      clearInterval(autoForwardTimer);
+      autoForwardTimer = null;
+      subtitleIntervals = [];
+      if ( isMobileVersion() ) btnAutoForward.classList.remove('active'); // Опционально для стилизации	  
 	});
 }
 
