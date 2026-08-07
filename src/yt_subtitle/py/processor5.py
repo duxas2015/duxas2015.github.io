@@ -66,11 +66,11 @@ def main():
     output_base_path = Path(args.output_dir) / video_id
     temp_vtt_base = f"/tmp/{video_id}_temp"
 
-    # 1. Скачивание субтитров
+    # 1. Скачивание субтитров (адаптировано под Linux / Docker)
     command = [
-        r"C:\Python313\Scripts\yt-dlp.exe",
+        "yt-dlp",
         "--write-auto-subs",
-        "--sub-langs", args.langs,  # Используем второй параметр командной строки
+        "--sub-langs", args.langs,
         "--sub-format", "vtt",
         "--skip-download",
         args.youtube_url,
