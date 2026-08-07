@@ -1,13 +1,20 @@
 var video;
+var player;
 var track;
 var shiftEnglishSubtitle = 0;
 var shiftRussianSubtitle = 0;
 var subtitleIntervals = []; // Структура: { start: float, end: float, isGap: boolean }
 var autoForwardTimer = null;
 
+function assignGlobalVariables(){
+	player = window.frames[0].window.app;
+	video = window.frames[0].document.getElementsByTagName('video')[0];
+}
+
 function buildSubtitleMap(textTrack) {
+	console.log("Build Subtitle Map event");
     subtitleIntervals = [];
-    if (!textTrack || !textTrack.cues || textTrack.cues.length === 0) return;
+	if (!textTrack || !textTrack.cues || textTrack.cues.length === 0) return;
 
     const cues = Array.from(textTrack.cues).sort((a, b) => a.startTime - b.startTime);
     let lastEndTime = 0;
@@ -52,16 +59,16 @@ function turnOnOffAutoForward( isMobile ) {
 		console.log("Auto-forward OFF");
 	} else {
 		// Включаем
-		const v = document.getElementsByTagName('video')[0];
 		const engTrack = findEnglishSubtitleTrack();
 		
 		// Строим карту, если она еще не построена
 		if (subtitleIntervals.length === 0) buildSubtitleMap(engTrack);
 
 		autoForwardTimer = setInterval(() => {
-			const jumpTo = getNextSubtitleInterval(v.currentTime);
+			console.log('setInterval');
+			const jumpTo = getNextSubtitleInterval(video.currentTime);
 			if (jumpTo !== null) {
-				v.currentTime = jumpTo;
+				video.currentTime = jumpTo;
 			}
 		}, 500);
 		
@@ -89,8 +96,7 @@ function findClosestSubtitle ( video, track ) {
 }
 
 function getToTheClosestSubtitle() { 
-  var video = document.getElementsByTagName('video')[0];
-  video.currentTime = findClosestSubtitle (video, track) - 0.5; 
+    video.currentTime = findClosestSubtitle (video, track) - 0.5; 
   }
 
 function handle(e) {
@@ -100,18 +106,16 @@ function handle(e) {
 	else if ( e.code === 'Numpad3' ) { backMoving (4); }
 	else if ( e.code === 'Numpad4' ) { getToTheClosestSubtitle(); }
 	else if ( e.code === 'Numpad0' && !e.altKey ) {
-		const v = document.getElementsByTagName('video')[0];		
-        if (v.paused) { v.play(); } else { v.pause(); }
+        if (video.paused) { video.play(); } else { video.pause(); }
     }
 	else if ( e.code === 'Numpad0' && e.altKey ) {
 		turnOnOffAutoForward( false );
     }
 	else if ( e.code === 'Numpad9' ) { 
-	  video = document.getElementsByTagName('video')[0];
-      //track = document.getElementsByTagName('video')[0].textTracks[findEnglishSubtitleTrackIndex()];
 	  //track.mode = "showing";
-      document.getElementsByTagName('video')[0].textTracks[findRussianSubtitleTrackIndex()].oncuechange = f;
-      document.getElementsByTagName('video')[0].textTracks[findEnglishSubtitleTrackIndex()].oncuechange = f_eng;
+	  console.log('Numpad9 pressed. Assigned events on Ru and En texttracks.');
+      video.textTracks[findRussianSubtitleTrackIndex()].oncuechange = f;
+      video.textTracks[findEnglishSubtitleTrackIndex()].oncuechange = f_eng;
 	}
 	else if ( e.code === 'Numpad5' && !e.altKey ) { 
   	  shiftTextTrack(findEnglishSubtitleTrack(), -0.2 );
@@ -124,10 +128,10 @@ function handle(e) {
 	  console.log(shiftEnglishSubtitle.toFixed(2));
 	}
 	else if ( e.code === 'Numpad7' && !e.altKey ) { 
-	  downloadSubtitlesAsVTT( document.getElementsByTagName('video')[0], document.getElementsByTagName('video')[0].textTracks[findEnglishSubtitleTrackIndex()] );
+	  downloadSubtitlesAsVTT( video, video.textTracks[findEnglishSubtitleTrackIndex()] );
 	}
 	else if ( e.code === 'Numpad7' && e.altKey ) { 
-	  downloadSubtitlesAsVTT( document.getElementsByTagName('video')[0], document.getElementsByTagName('video')[0].textTracks[findRussianSubtitleTrackIndex()] );
+	  downloadSubtitlesAsVTT( video, video.textTracks[findRussianSubtitleTrackIndex()] );
 	}
 	else if ( e.code === 'Numpad5' && e.altKey ) { 
   	  shiftTextTrack(findRussianSubtitleTrack(), -0.2 );
@@ -142,15 +146,14 @@ function handle(e) {
 	  e.stopImmediatePropagation();
 	}
 	else if ( e.code === 'Numpad8' && !e.altKey ) { 
-	  syncSubtitles( document.getElementsByTagName('video')[0], findEnglishSubtitleTrackIndex(), findRussianSubtitleTrackIndex(), true );
+	  syncSubtitles( video, findEnglishSubtitleTrackIndex(), findRussianSubtitleTrackIndex(), true );
 	}
 	else if ( e.code === 'Numpad8' && e.altKey ) { 
-	  syncSubtitles( document.getElementsByTagName('video')[0], findEnglishSubtitleTrackIndex(), findRussianSubtitleTrackIndex(), false );
+	  syncSubtitles( video, findEnglishSubtitleTrackIndex(), findRussianSubtitleTrackIndex(), false );
 	}
 }
 
 function backMoving( shift ){
-	var video = document.getElementsByTagName('video')[0];
 	video.currentTime = video.currentTime - shift;
 }
 
@@ -175,7 +178,6 @@ function shiftTextTrackSmoothly ( textTrack, shiftPerSecond ) {
 }
 
 function findEnglishSubtitleTrackIndex(){
-	var video = document.getElementsByTagName('video')[0];
 	var choosenTrackIndex;
 	Array.from(video.textTracks).forEach( function ( item, index ) {
 		if ( item.label.search('Eng') === 0 && choosenTrackIndex === undefined ) {
@@ -186,11 +188,10 @@ function findEnglishSubtitleTrackIndex(){
 }
 
 function findEnglishSubtitleTrack(){
-	return document.getElementsByTagName('video')[0].textTracks[findEnglishSubtitleTrackIndex()];
+	return video.textTracks[findEnglishSubtitleTrackIndex()];
 }
 
 function findRussianSubtitleTrackIndex(){
-	var video = document.getElementsByTagName('video')[0];
 	var choosenTrackIndex;
 	Array.from(video.textTracks).forEach( function ( item, index ) {
 		if ( ( item.label.search('Rus') === 0 || item.label.search('Рус') === 0 ) && item.label.search('форс') === -1 && choosenTrackIndex === undefined ) {
@@ -201,30 +202,31 @@ function findRussianSubtitleTrackIndex(){
 }
 
 function findRussianSubtitleTrack(){
-	return document.getElementsByTagName('video')[0].textTracks[findRussianSubtitleTrackIndex()];
+	return video.textTracks[findRussianSubtitleTrackIndex()];
 }
 
 function findActiveSubtitleTrackIndex(){
-	var video = document.getElementsByTagName('video')[0];
 	var choosenTrack;
 	Array.from(video.textTracks).forEach( function ( item, index ) {
 		if ( item.mode === "showing" ) {
-			choosenTrack = document.getElementsByTagName('video')[0].textTracks[index];
+			choosenTrack = video.textTracks[index];
 		}
 	} )
 	return choosenTrack;
 }
 
 function findActiveSubtitleTrack(){
-	return document.getElementsByTagName('video')[0].textTracks[findActiveSubtitleTrackIndex()];
+	return video.textTracks[findActiveSubtitleTrackIndex()];
 }
 
 var f = function ( event ) { 
+ //console.log('f event. refresh ru subtitles'); 
  if ( event.currentTarget.activeCues[0] !== undefined ) { document.getElementById("subtitleContainerId").innerText = event.currentTarget.activeCues[0].text; } 
  else { document.getElementById("subtitleContainerId").innerHtml = "";}
  }
 
 var f_eng = function ( event ) {
+ //console.log('f_eng event. refresh ru subtitles');
  if ( event.currentTarget.activeCues[0] !== undefined ) { document.getElementById("engSubtitleContainerId").innerText = event.currentTarget.activeCues[0].text; } 
  else { document.getElementById("engSubtitleContainerId").innerHtml = "";}
  }
@@ -232,7 +234,14 @@ var f_eng = function ( event ) {
 
 function listen(player) {
 	player.once('ready', () => {
-      track = document.getElementsByTagName('video')[0].textTracks[findEnglishSubtitleTrackIndex()];
+	  console.log('player.once event');
+	  
+	  assignGlobalVariables();
+	  
+	  document.getElementById("engSubtitleContainerId").innerText =	'';  
+	  document.getElementById("subtitleContainerId").innerText = '';
+	  
+      track = video.textTracks[findEnglishSubtitleTrackIndex()];
 	  shiftEnglishSubtitle = 0;
 	  shiftRussianSubtitle = 0;
 	  if ( isMobileVersion() === true ) { // mobile mode
@@ -241,12 +250,20 @@ function listen(player) {
 		//track.mode = "showing";
 	  }
 	  if ( findEnglishSubtitleTrackIndex() >= 0 ) {
-		document.getElementsByTagName('video')[0].textTracks[findEnglishSubtitleTrackIndex()].oncuechange = f_eng;
+		video.textTracks[findEnglishSubtitleTrackIndex()].oncuechange = f_eng;
 	  }
 	  if ( findRussianSubtitleTrackIndex() >= 0 ) {
-		document.getElementsByTagName('video')[0].textTracks[findRussianSubtitleTrackIndex()].oncuechange = f;
-	  }	
+		video.textTracks[findRussianSubtitleTrackIndex()].oncuechange = f;
+	  }
+
+      clearInterval(autoForwardTimer);
+	  autoForwardTimer = null;
 	  subtitleIntervals = [];
+	  if ( isMobileVersion() ) btnAutoForward.classList.remove('active'); // Опционально для стилизации
+	  
+	  // Rebuild Eng Subtitle Map if autoForwardMode enabled	
+  	  //if ( autoForwardTimer !== null ) buildSubtitleMap( video.textTracks[findEnglishSubtitleTrackIndex()] );
+	  
 	});
 }
 
@@ -597,7 +614,7 @@ function getUrlParameter(name) {
 }
 
 window.onload = function() {
-
+/*
 	fetch(url)
 		.then(response => {
 			if (!response.ok) {
@@ -661,6 +678,9 @@ window.onload = function() {
 			return true;
 		})
 		.then(data => {
+*/			
+			  console.log ('window.onload event');
+			  assignGlobalVariables();
 			  window.onkeydown = handle;
 			  player.onRenew = listen;
 			  listen(player);
@@ -675,8 +695,7 @@ window.onload = function() {
 			  document.getElementById("idRewindUntilNextSub").addEventListener('click', ( event ) => { getToTheClosestSubtitle(); } );
 
     			document.getElementById('idPauseVideo').addEventListener('click', () => {
-					const v = document.getElementsByTagName('video')[0];
-					if (v.paused) { v.play(); } else { v.pause(); }
+					if (video.paused) { video.play(); } else { video.pause(); }
 				});
 
 /*			  
@@ -717,10 +736,57 @@ window.onload = function() {
 			    removeNodeById('controlPanel');
 			    loadCSS('styles.css');
 			}
-		})
+/*
+		}
+		)
 		.catch(error => {
 			console.error('Ошибка AJAX-запроса:', error.message);
 			// Вызываем handle с ошибкой
 			//handle(null, error.message);
 		});
+*/		
 };
+
+function parseUrl(urlString) {
+  try {
+    const url = new URL(urlString);
+    return {
+      host: url.hostname,
+      path: url.pathname
+    };
+  } catch (error) {
+    console.error("Некорректный URL:", error);
+    return null;
+  }
+}
+
+/**
+ * Создает iframe внутри указанного контейнера
+ * @param {string} containerId - ID родительского div
+ * @param {string} src - Ссылка для iframe
+ * @param {string} iframeId - (Опционально) ID для самого iframe
+ */
+function createPlayerIframe(containerId, src, iframeId = 'player_iframe') {
+  const container = document.getElementById(containerId);
+
+  if (!container) {
+    console.error(`Контейнер с id "${containerId}" не найден.`);
+    return;
+  }
+
+  // Создаем элемент iframe
+  const iframe = document.createElement('iframe');
+
+  // Устанавливаем атрибуты
+  iframe.id = iframeId;
+  iframe.src = src;
+  
+  // Разрешаем полноэкранный режим (актуально для плееров)
+  iframe.allowFullscreen = true;
+
+  // Очищаем контейнер перед добавлением, если там что-то было
+  container.innerHTML = '';
+
+  // Добавляем iframe в div
+  container.appendChild(iframe);
+}

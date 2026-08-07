@@ -1,0 +1,53 @@
+body {
+  overflow: hidden;
+  margin: 0px;
+  padding: 0px;
+  width:100%;  
+}
+
+#outerContainer{
+	display:flex; 
+	flex-wrap:wrap;
+}
+
+#player {
+	flex:1;
+	max-width:90%;
+}
+
+#controlPanel {
+	flex:1;
+	max-width:10%;
+    /* Добавляем display:flex и flex-direction: column, 
+       чтобы кнопки занимали всю доступную вертикальную высоту */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Высота 20% для 5 логических элементов */
+.clsButton {
+	width:100%;
+	height:16%; 
+}
+
+/* Удален неиспользуемый .clsSmallButton */
+/* .clsSmallButton {
+	width:100%;
+	height:12.5%;
+} */
+
+.subtitleContainerCls {
+	padding: 10px;
+	font-size: 200%;
+	height:100px;
+}
+
+.subtitleOuterContainerCls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+video::-webkit-media-text-track-display {
+  font-size: 200%;
+}

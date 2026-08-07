@@ -1,21 +1,29 @@
 <?php
-$host = 'localhost';
-$db   = 'javaquiz';
-$user = 'root';
-$pass = 'mysql'; 
-$charset = 'utf8mb4';
+// 1. Загружаем настройки подключения из отдельного файла
+$config = require_once __DIR__ . '/config.php';
 
-$dsn = "mysql:host=$host;dbname=$db;charset=$charset";
+// 2. Формируем DSN из загруженного массива
+$dsn = sprintf(
+    "mysql:host=%s;port=%s;dbname=%s;charset=%s",
+    $config['host'],
+    $config['port'],
+    $config['db'],
+    $config['charset']
+);
+
 $options = [
     PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
     PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
 ];
 
+$fullData = [];
+
 try {
-    $pdo = new PDO($dsn, $user, $pass, $options);
+    $pdo = new PDO($dsn, $config['user'], $config['pass'], $options);
 } catch (\PDOException $e) {
     die("Ошибка подключения: " . $e->getMessage());
 }
+
 
 $message = "";
 

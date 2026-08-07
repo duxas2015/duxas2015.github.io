@@ -1,10 +1,10 @@
 <?php
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['files'])) {
-    $uploadDir = "C:\\vhosts\\movie\\yt_subtitle\\downloads\\"; 
-    $pythonPath = "C:\\Python313\\python.exe";
-    $scriptPath = "C:\\vhosts\\movie\\yt_subtitle\\merge.py";
+    $uploadDir = "/var/www/html/yt_subtitle/downloads/"; 
+    $pythonPath = "/usr/bin/python3";
+    $scriptPath = "/var/www/html/yt_subtitle/py/merge.py";
 
-    $format = $_POST['format'] ?? 'xlsx'; // Получаем формат из радиокнопок
+    $format = $_POST['format'] ?? 'xlsx';
     $files = $_FILES['files'];
     $uploadedPaths = [];
 
@@ -24,7 +24,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['files'])) {
         $outDir = escapeshellarg($uploadDir);
         $argFormat = escapeshellarg($format);
 
-        // Передаем 4-й аргумент (формат) в Python
         $command = "$pythonPath $scriptPath $file1 $file2 $outDir $argFormat 2>&1";
         exec($command, $output, $returnCode);
 
@@ -36,7 +35,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['files'])) {
             if (file_exists($fullPath)) {
                 header('Content-Description: File Transfer');
                 
-                // Настройка MIME-типа в зависимости от расширения
                 if ($format === 'xlsx') {
                     header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
                 } else {

@@ -1,19 +1,17 @@
 <?php
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $url = $_POST['url'];
-    // Получаем выбранный язык из выпадающего списка
     $selectedLang = $_POST['lang_choice'] ?? 'ru';
     
-    $pythonPath = "C:\\Python313\\python.exe";
-    $scriptPath = "C:\\vhosts\\movie\\yt_subtitle\\processor5.py";
-    $outputDir = "C:\\vhosts\\movie\\yt_subtitle\\downloads";
+    $pythonPath = "/usr/bin/python3";
+    $scriptPath = "/var/www/html/yt_subtitle/py/processor5.py";
+    $outputDir = "/var/www/html/yt_subtitle/downloads";
 
     $escapedUrl = escapeshellarg($url);
-    $escapedLangs = escapeshellarg($selectedLang); // Передаем только один выбранный язык
+    $escapedLangs = escapeshellarg($selectedLang);
     $escapedOut = escapeshellarg($outputDir);
 
-    // Установка кодировки и запуск
-    $command = "set PYTHONIOENCODING=utf-8 && $pythonPath $scriptPath $escapedUrl $escapedLangs --output-dir $escapedOut 2>&1";
+    $command = "$pythonPath $scriptPath $escapedUrl $escapedLangs --output-dir $escapedOut 2>&1";
     
     exec($command, $output, $returnCode);
 
