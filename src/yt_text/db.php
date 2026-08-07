@@ -1,5 +1,5 @@
 <?php
-$host = 'localhost';
+$host = 'db';
 $db   = 'yt_text';
 $user = 'subtitle';
 $pass = 'Subtitle@2026';
