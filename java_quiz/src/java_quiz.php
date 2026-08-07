@@ -1,12 +1,16 @@
 <?php
-// 1. Подключение к БД
-$host = 'localhost';
-$db   = 'javaquiz';
-$user = 'root';
-$pass = 'mysql'; // Ваш пароль
-$charset = 'utf8mb4';
+// 1. Загружаем настройки подключения из отдельного файла
+$config = require_once __DIR__ . '/config.php';
 
-$dsn = "mysql:host=$host;dbname=$db;charset=$charset";
+// 2. Формируем DSN из загруженного массива
+$dsn = sprintf(
+    "mysql:host=%s;port=%s;dbname=%s;charset=%s",
+    $config['host'],
+    $config['port'],
+    $config['db'],
+    $config['charset']
+);
+
 $options = [
     PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
     PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
@@ -15,7 +19,7 @@ $options = [
 $fullData = [];
 
 try {
-    $pdo = new PDO($dsn, $user, $pass, $options);
+    $pdo = new PDO($dsn, $config['user'], $config['pass'], $options);
 
     // 2. Сбор данных в структуру, идентичную вашему JSON
     $booksStmt = $pdo->query("SELECT id, title FROM books");
@@ -199,7 +203,7 @@ function renderQuestions(questions) {
             <div class="answers-list" id="answers-container-${q.idx}">`;
         
         q.answers.forEach(ans => {
-            const type = q.select_type === 'multiply' ? 'checkbox' : 'radio';
+            const type = q.select_type === 'multiple' ? 'checkbox' : 'radio';
             const formattedAns = ans.text.replace(/<pre>/g, '<code class="language-java">').replace(/<\/pre>/g, '</code>');
             html += `
                 <label class="answer-item">

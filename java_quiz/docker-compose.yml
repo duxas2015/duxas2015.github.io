@@ -1,0 +1,33 @@
+version: '3.8'
+name: javaquiz_compose
+
+services:
+  # Веб-сервер: Apache + PHP
+  web:
+    container_name: javaquiz_web
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8100:80"
+    volumes:
+      # Подмонтируем локальную папку ./src к файлам сайта
+      - ./src:/var/www/html
+    depends_on:
+      - db
+
+# База данных: MySQL
+  db:
+    container_name: javaquiz_mysql
+    image: mysql:8.0
+    restart: always
+    environment:
+      MYSQL_DATABASE: javaquiz
+      MYSQL_USER: javaquiz
+      MYSQL_PASSWORD: javaquiz
+      MYSQL_ROOT_PASSWORD: rootpassword
+    ports:
+      - "3307:3306"
+    volumes:
+      # Подмонтируем локальную папку ./mysql_data для внешнего хранения БД
+      - ./mysql_data:/var/lib/mysql
