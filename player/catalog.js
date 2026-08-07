@@ -1,3 +1,11 @@
+const externalMap = {
+	 "api.kinogram.best":"external.api.kinogram.best"
+	,"api.embr.ws":"external.api.embr.ws"
+	,"api.linktodo.ws":"external.api.linktodo.ws"
+	,"api.domem.ws":"external.api.domem.ws"
+	,"api.atomics.ws":"external.api.atomics.ws"
+}
+
 const movieCatalog = {
     "foundation": {
         "url": "https://api.kinogram.best/embed/movie/34964",

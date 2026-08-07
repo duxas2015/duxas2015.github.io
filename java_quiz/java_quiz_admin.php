@@ -69,18 +69,34 @@ if (isset($_POST['import_json_questions'])) {
     }
 }
 
-// 4. Сохранение вопроса
+// 4. Сохранение вопроса и ответов
 if (isset($_POST['save_question'])) {
+    $questionId = $_POST['question_id'];
+    
     $stmt = $pdo->prepare("UPDATE questions SET question_text = ?, select_type = ?, explanation = ? WHERE id = ?");
-    $stmt->execute([$_POST['question_text'], $_POST['select_type'], $_POST['explanation'], $_POST['question_id']]);
-    if (isset($_POST['answers'])) {
-        foreach ($_POST['answers'] as $ansId => $ansData) {
-            $isCorrect = isset($ansData['is_correct']) ? 1 : 0;
-            $stmt = $pdo->prepare("UPDATE answers SET answer_text = ?, is_correct = ? WHERE id = ?");
-            $stmt->execute([$ansData['text'], $isCorrect, $ansId]);
+    $stmt->execute([$_POST['question_text'], $_POST['select_type'], $_POST['explanation'], $questionId]);
+    
+    if (isset($_POST['ans_ids'])) {
+        $correctAnswers = $_POST['ans_corrects'] ?? [];
+        foreach ($_POST['ans_ids'] as $ansId) {
+            $newText = $_POST['ans_texts'][$ansId];
+            $isCorrect = in_array($ansId, $correctAnswers) ? 1 : 0;
+            $stmtA = $pdo->prepare("UPDATE answers SET answer_text = ?, is_correct = ? WHERE id = ?");
+            $stmtA->execute([$newText, $isCorrect, $ansId]);
         }
     }
-    $message = "Вопрос сохранен!";
+
+    // Если это AJAX-запрос, просто завершаем выполнение
+    if (!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest' || isset($_POST['save_question'])) {
+        // Если запрос пришел от нашего JS fetch, можно вывести "ok" и выйти
+        // Но для простоты, если мы не хотим делать редирект:
+        if (isset($_POST['save_question']) && !isset($_POST['ajax_manual_flag'])) {
+             // Если вы хотите оставить поддержку обычной отправки формы (без JS),
+             // закомментируйте строку ниже. 
+             // exit; 
+        }
+    }
+    $message = "Вопрос обновлен!";
 }
 
 $books = $pdo->query("SELECT * FROM books")->fetchAll();
@@ -105,6 +121,26 @@ $selectedBookId = $_GET['edit_book'] ?? null;
         .chapter-section { border-left: 4px solid #1a73e8; padding-left: 20px; margin-top: 30px; }
         .alert { background: #e6f4ea; color: #137333; padding: 15px; border-radius: 5px; margin-bottom: 20px; border: 1px solid #34a853; }
         details { background: #f9f9f9; padding: 10px; border-radius: 5px; }
+		
+		/* Обновленные стили для полей ввода */
+		.form-group-admin {
+			display: flex;
+			flex-direction: column;
+			margin-bottom: 15px;
+		}
+		.form-group-admin label {
+			font-weight: bold;
+			margin-bottom: 5px;
+			font-size: 14px;
+		}
+		.auto-resize {
+			width: 100%;
+			min-height: 100px;
+			resize: vertical; /* Позволяет пользователю растягивать вручную, если нужно */
+			padding: 10px;
+			box-sizing: border-box;
+		}
+		
     </style>
 </head>
 <body>
@@ -169,29 +205,137 @@ $selectedBookId = $_GET['edit_book'] ?? null;
                             $c = $pdo->prepare("SELECT COUNT(*) FROM questions WHERE chapter_id = ?");
                             $c->execute([$ch['id']]); echo $c->fetchColumn(); 
                         ?>)</summary>
-                        <?php
-                        $stmtQ = $pdo->prepare("SELECT * FROM questions WHERE chapter_id = ? ORDER BY idx");
-                        $stmtQ->execute([$ch['id']]);
-                        while ($q = $stmtQ->fetch()):
-                        ?>
-                            <div style="border:1px solid #ddd; padding:15px; margin-top:10px; background:white;">
-                                <form method="post">
-                                    <input type="hidden" name="question_id" value="<?= $q['id'] ?>">
-                                    <textarea name="question_text"><?= htmlspecialchars($q['question_text']) ?></textarea>
-                                    <textarea name="explanation" placeholder="Пояснение"><?= htmlspecialchars($q['explanation']) ?></textarea>
-                                    <select name="select_type">
-                                        <option value="single" <?= $q['select_type']=='single'?'selected':'' ?>>single</option>
-                                        <option value="multiply" <?= $q['select_type']=='multiply'?'selected':'' ?>>multiply</option>
-                                    </select>
-                                    <button type="submit" name="save_question" class="btn btn-green">Сохранить</button>
-                                </form>
-                            </div>
-                        <?php endwhile; ?>
+							<?php
+							$stmtQ = $pdo->prepare("SELECT * FROM questions WHERE chapter_id = ? ORDER BY idx");
+							$stmtQ->execute([$ch['id']]);
+							while ($q = $stmtQ->fetch()):
+							?>
+<div style="border:1px solid #ddd; padding:15px; margin-top:10px; background:white; border-radius: 8px;">
+    <form method="post">
+        <input type="hidden" name="question_id" value="<?= $q['id'] ?>">
+        
+        <div class="form-group-admin">
+            <label>Текст вопроса:</label>
+            <textarea name="question_text" class="auto-resize" oninput="this.style.height = ''; this.style.height = this.scrollHeight + 'px'"><?= htmlspecialchars($q['question_text']) ?></textarea>
+        </div>
+        
+        <label>Варианты ответов:</label>
+        <div style="margin: 10px 0; padding: 10px; background: #f1f3f4; border-radius: 5px;">
+            <?php
+            $stmtA = $pdo->prepare("SELECT * FROM answers WHERE question_id = ? ORDER BY letter");
+            $stmtA->execute([$q['id']]);
+            while ($ans = $stmtA->fetch()):
+            ?>
+                <div style="display: flex; gap: 10px; align-items: center; margin-bottom: 8px;">
+                    <input type="hidden" name="ans_ids[]" value="<?= $ans['id'] ?>">
+                    <strong style="width: 20px;"><?= $ans['letter'] ?>:</strong>
+                    <input type="text" name="ans_texts[<?= $ans['id'] ?>]" value="<?= htmlspecialchars($ans['answer_text']) ?>" style="flex-grow: 1;">
+                    <label style="white-space: nowrap; font-size: 0.9em; margin-bottom: 0;">
+                        <input type="checkbox" name="ans_corrects[]" value="<?= $ans['id'] ?>" <?= $ans['is_correct'] ? 'checked' : '' ?>>
+                        Верный
+                    </label>
+                </div>
+            <?php endwhile; ?>
+        </div>
+
+        <div class="form-group-admin">
+            <label>Пояснение (Explanation):</label>
+            <textarea name="explanation" class="auto-resize" placeholder="Пояснение" oninput="this.style.height = ''; this.style.height = this.scrollHeight + 'px'"><?= htmlspecialchars($q['explanation']) ?></textarea>
+        </div>
+        
+        <div style="display: flex; gap: 15px; align-items: center;">
+            <select name="select_type" style="width: auto; flex-grow: 0;">
+                <option value="single" <?= $q['select_type']=='single'?'selected':'' ?>>single</option>
+                <option value="multiply" <?= $q['select_type']=='multiply'?'selected':'' ?>>multiply</option>
+            </select>
+            <button type="submit" name="save_question" class="btn btn-green">Сохранить изменения</button>
+        </div>
+    </form>
+</div>
+							<?php endwhile; ?>
                     </details>
                 </div>
             <?php endwhile; ?>
         </div>
     <?php endif; ?>
 </div>
+
+<script>
+// Функция для инициализации высоты всех textarea с классом auto-resize
+function adjustAllTextareas() {
+    document.querySelectorAll('.auto-resize').forEach(el => {
+        el.style.height = '';
+        el.style.height = el.scrollHeight + 'px';
+    });
+}
+
+// Запускаем при клике на <details>, так как скрытые элементы имеют scrollHeight = 0
+document.querySelectorAll('details').forEach(det => {
+    det.addEventListener('toggle', () => {
+        if (det.open) adjustAllTextareas();
+    });
+});
+
+// На всякий случай при загрузке страницы
+window.addEventListener('load', adjustAllTextareas);
+</script>
+
+<script>
+document.addEventListener('submit', async function(e) {
+    // Проверяем, что нажата кнопка сохранения вопроса
+    if (e.target.closest('form') && e.target.querySelector('button[name="save_question"]')) {
+        e.preventDefault();
+        
+        const form = e.target;
+        const formData = new FormData(form);
+        // Добавляем флаг, чтобы сервер понял, что это сохранение
+        formData.append('save_question', '1');
+
+        try {
+            const response = await fetch(window.location.href, {
+                method: 'POST',
+                body: formData
+            });
+
+            if (response.ok) {
+                const btn = form.querySelector('button[name="save_question"]');
+                const originalText = btn.innerText;
+                
+                // Визуальная индикация успеха
+                btn.innerText = '✅ Сохранено!';
+                btn.classList.replace('btn-green', 'btn-blue');
+                
+                setTimeout(() => {
+                    btn.innerText = originalText;
+                    btn.classList.replace('btn-blue', 'btn-green');
+                }, 2000);
+            } else {
+                alert('Ошибка при сохранении');
+            }
+        } catch (error) {
+            console.error('Error:', error);
+            alert('Произошла ошибка соединения');
+        }
+    }
+});
+
+// Ваш предыдущий код для авто-размера textarea и раскрытия details
+function adjustAllTextareas() {
+    document.querySelectorAll('.auto-resize').forEach(el => {
+        el.style.height = '';
+        el.style.height = el.scrollHeight + 'px';
+    });
+}
+
+document.querySelectorAll('details').forEach(det => {
+    det.addEventListener('toggle', () => {
+        if (det.open) adjustAllTextareas();
+    });
+});
+
+window.addEventListener('load', adjustAllTextareas);
+</script>
+
+
 </body>
 </html>
