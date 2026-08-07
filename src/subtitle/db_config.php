@@ -1,7 +1,7 @@
 <?php
 // db_config.php
 
-define('DB_HOST', 'localhost');
+define('DB_HOST', 'db');
 define('DB_USER', 'subtitle');
 define('DB_PASS', 'Subtitle@2026');
 define('DB_NAME', 'subtitle');
